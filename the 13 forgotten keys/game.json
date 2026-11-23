@@ -1,0 +1,3087 @@
+{
+ "title": "The 13 Forgotten Keys",
+ "config": {
+  "timerSeconds": 600,
+  "hintsPerGame": 3,
+  "hintCost": 25,
+  "idleSeconds": 40,
+  "blurPx": 6,
+  "sharpenMs": 1200,
+  "points": {
+   "item": 5,
+   "secret": 5,
+   "keyB": 15,
+   "keyA": 30,
+   "final": 50,
+   "wrong": 10,
+   "wrongCapPerPuzzle": 30,
+   "wrongLockoutMs": 3000
+  },
+  "sight": {
+   "yaw": -129,
+   "pitch": 24,
+   "toleranceDeg": 3,
+   "holdMs": 1000,
+   "rangeDeg": 45
+  },
+  "particleCap": {
+   "phone": 60,
+   "desktop": 120
+  },
+  "hfov": 85
+ },
+ "characters": {
+  "mara": {
+   "name": "Mara",
+   "pitch": 1.0,
+   "rate": 1.0,
+   "gender": "f",
+   "moods": [
+    "calm",
+    "worried",
+    "determined",
+    "smile"
+   ],
+   "initial": "M",
+   "color": "#C8A24A"
+  },
+  "teo": {
+   "name": "Teo",
+   "pitch": 1.15,
+   "rate": 1.05,
+   "gender": "m",
+   "moods": [
+    "joking",
+    "scared",
+    "curious",
+    "relieved"
+   ],
+   "initial": "T",
+   "color": "#3E8E85"
+  },
+  "warden": {
+   "name": "The Warden",
+   "pitch": 0.5,
+   "rate": 0.85,
+   "gender": "m",
+   "volume": 0.6,
+   "color": "#8B6FD6"
+  },
+  "odette": {
+   "name": "Odette",
+   "pitch": 0.85,
+   "rate": 0.9,
+   "gender": "f",
+   "moods": [
+    "warm",
+    "serious"
+   ],
+   "initial": "O",
+   "color": "#C9A77C"
+  },
+  "narrator": {
+   "name": "Narrator",
+   "pitch": 0.95,
+   "rate": 0.9,
+   "gender": "m",
+   "color": "#E8DCC0"
+  },
+  "wren": {
+   "name": "Lady Wren",
+   "pitch": 1.4,
+   "rate": 0.9,
+   "gender": "f",
+   "initial": "W",
+   "color": "#B7A1E8"
+  },
+  "brine": {
+   "name": "Captain Brine",
+   "pitch": 0.7,
+   "rate": 0.9,
+   "gender": "m",
+   "initial": "B",
+   "color": "#B7A1E8"
+  },
+  "pell": {
+   "name": "Dr. Pell",
+   "pitch": 0.9,
+   "rate": 0.9,
+   "gender": "m",
+   "initial": "P",
+   "color": "#B7A1E8"
+  },
+  "ashby": {
+   "name": "Miss Ashby",
+   "pitch": 1.25,
+   "rate": 0.9,
+   "gender": "f",
+   "initial": "A",
+   "color": "#B7A1E8"
+  },
+  "quill": {
+   "name": "Mr. Quill",
+   "pitch": 1.05,
+   "rate": 0.9,
+   "gender": "m",
+   "initial": "Q",
+   "color": "#B7A1E8"
+  }
+ },
+ "missionInfo": {
+  "heading": "Wardlow House",
+  "button": "Begin",
+  "paragraphs": [
+   "Wardlow House clings to a cliff above a hungry sea. Its first owner, a locksmith, hid thirteen keys in its walls.",
+   "Your grandmother Odette has died. Her family forgot the keys, but a voice in the old keyholes has not forgotten them.",
+   "You are Mara Wardlow, with your brother Teo. Find the keys and reach the cliff cave before the tide covers it. You have 10:00."
+  ],
+  "audioFile": "assets/audio/voice/mission_0.mp3"
+ },
+ "tutorial": [
+  {
+   "target": "#pano",
+   "title": "Look around",
+   "text": "Drag to look around the room. Glowing things can be tapped."
+  },
+  {
+   "target": "#btn-book",
+   "title": "Tap and take",
+   "text": "Tap an object to inspect or take it. Items go into your Book."
+  },
+  {
+   "target": "#btn-keys",
+   "title": "Keys",
+   "text": "Open the Key Ring to see your keys. Every key has a power."
+  },
+  {
+   "target": "#btn-pause",
+   "title": "Puzzles",
+   "text": "Every puzzle has an X to close it and a Pause button. Closing keeps your progress."
+  },
+  {
+   "target": "#hud-top",
+   "title": "Wards, hints, clock",
+   "text": "You earn Wards for finds and keys. A wrong answer costs 10. You have 3 hints, 25 Wards each. The clock is 10:00 and keeps running while a hint is spoken."
+  }
+ ],
+ "opening": [
+  {
+   "speaker": "narrator",
+   "mood": "",
+   "text": "Night. The tide is coming in. Mara and Teo stand inside the doors of Wardlow House.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/opening_0.mp3"
+  },
+  {
+   "speaker": "teo",
+   "mood": "joking",
+   "text": "Grandma left us a house full of locks. Of course she did.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/opening_1.mp3"
+  },
+  {
+   "speaker": "mara",
+   "mood": "calm",
+   "text": "She left a letter too. \"Find the keys before the tide.\"",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/opening_2.mp3"
+  },
+  {
+   "speaker": "teo",
+   "mood": "scared",
+   "text": "Which keys? And why does that keyhole feel like it is listening?",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/opening_3.mp3"
+  },
+  {
+   "speaker": "warden",
+   "mood": "",
+   "text": "Come in, Mara. Come in, Teo. Quickly. I will help you.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/opening_4.mp3"
+  },
+  {
+   "speaker": "mara",
+   "mood": "determined",
+   "text": "Let's find the first key.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/opening_5.mp3"
+  }
+ ],
+ "idle": [
+  {
+   "speaker": "teo",
+   "mood": "curious",
+   "text": "Try turning around. Drag to look around.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/idle_0.mp3"
+  }
+ ],
+ "ui": {
+  "tapToStart": "Tap to start",
+  "noHints": "No hints left",
+  "saved": "Saved to your notes",
+  "paused": "Paused",
+  "timeUpLine": "The tide covered the cave, and the house forgot again.",
+  "timeUpAudioFile": "assets/audio/voice/timeup_0.mp3"
+ },
+ "keys": [
+  {
+   "id": "k_lantern",
+   "name": "Lantern Key",
+   "type": "B",
+   "room": 1,
+   "color": "#F2B24A",
+   "power": "Shows what hides in the dark.",
+   "flashback": "lantern"
+  },
+  {
+   "id": "k_hall",
+   "name": "Hall Key",
+   "type": "A",
+   "room": 1,
+   "color": "#C8A24A",
+   "power": "Opens the door to the Library."
+  },
+  {
+   "id": "k_mirror",
+   "name": "Mirror Key",
+   "type": "B",
+   "room": 2,
+   "color": "#8FB4D9",
+   "power": "Makes backwards things read true.",
+   "flashback": "mirror"
+  },
+  {
+   "id": "k_reading",
+   "name": "Reading Key",
+   "type": "A",
+   "room": 2,
+   "color": "#C8A24A",
+   "power": "Opens the door to the Dining Hall."
+  },
+  {
+   "id": "k_guest",
+   "name": "Guest Key",
+   "type": "B",
+   "room": 3,
+   "color": "#B7A1E8",
+   "power": "Lets the old guests of the house appear and speak.",
+   "flashback": "guest"
+  },
+  {
+   "id": "k_banquet",
+   "name": "Banquet Key",
+   "type": "A",
+   "room": 3,
+   "color": "#C8A24A",
+   "power": "Opens the door to the Clock Cellar."
+  },
+  {
+   "id": "k_quiet",
+   "name": "Quiet Key",
+   "type": "B",
+   "room": 4,
+   "color": "#9AA0A8",
+   "power": "Stops every ticking clock.",
+   "flashback": "quiet"
+  },
+  {
+   "id": "k_clock",
+   "name": "Clock Key",
+   "type": "A",
+   "room": 4,
+   "color": "#C8A24A",
+   "power": "Opens the door to the Well House."
+  },
+  {
+   "id": "k_tide",
+   "name": "Tide Key",
+   "type": "B",
+   "room": 5,
+   "color": "#3E8E85",
+   "power": "Lowers the water.",
+   "flashback": "tide"
+  },
+  {
+   "id": "k_well",
+   "name": "Well Key",
+   "type": "A",
+   "room": 5,
+   "color": "#6E8B5A",
+   "power": "Opens the door to the Study."
+  },
+  {
+   "id": "k_memory",
+   "name": "Memory Key",
+   "type": "B",
+   "room": 6,
+   "color": "#E8DCC0",
+   "power": "Shows what was forgotten.",
+   "flashback": "memory"
+  },
+  {
+   "id": "k_vault",
+   "name": "Vault Key",
+   "type": "A",
+   "room": 6,
+   "color": "#5A5560",
+   "power": "Opens the door to the Cliff Cave."
+  },
+  {
+   "id": "k_master",
+   "name": "Master Key",
+   "type": "M",
+   "room": 7,
+   "color": "#8B6FD6",
+   "power": "Locks the Warden away, or lets it out."
+  }
+ ],
+ "items": {
+  "lantern_shell": {
+   "title": "Brass Lantern",
+   "text": "An old lantern with no flame. It needs something special to light it."
+  },
+  "pin_rods": {
+   "title": "Pin Rods",
+   "text": "Five brass rods of different lengths. They fit a pin lock."
+  },
+  "key_blank": {
+   "title": "Key Blank",
+   "text": "A plain key with eight teeth. It can be filed to fit a lock."
+  },
+  "steel_file": {
+   "title": "Steel File",
+   "text": "A small file. It can cut away the teeth of a key."
+  },
+  "place_cards": {
+   "title": "Place Cards",
+   "text": "Five faded name cards. They were made for a dinner table."
+  },
+  "silver_bell": {
+   "title": "Silver Bell",
+   "text": "A small dinner bell. It has a clear, sweet ring."
+  },
+  "oil_can": {
+   "title": "Oil Can",
+   "text": "An old can of oil. Good for stiff, rusty parts."
+  },
+  "brass_crank": {
+   "title": "Brass Crank",
+   "text": "A winding crank. It might open a stuck panel."
+  },
+  "bucket5": {
+   "title": "Big Bucket",
+   "text": "A wooden bucket with a 5 painted on it. It holds five measures."
+  },
+  "bucket3": {
+   "title": "Small Bucket",
+   "text": "A wooden bucket with a 3 painted on it. It holds three measures."
+  },
+  "safe_crank": {
+   "title": "Safe Crank",
+   "text": "A heavy iron handle. It fits a safe."
+  },
+  "loupe": {
+   "title": "Loupe",
+   "text": "A brass magnifying glass. Faint ink might show up under it."
+  }
+ },
+ "flashbacks": {
+  "lantern": {
+   "caption": "A little girl holds a lantern in the hall.",
+   "lines": [
+    {
+     "speaker": "odette",
+     "mood": "warm",
+     "text": "Dark does not hide things. It keeps them safe until you are ready.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_lantern_0.mp3"
+    }
+   ],
+   "captionAudioFile": "assets/audio/voice/fbcap_lantern.mp3"
+  },
+  "mirror": {
+   "caption": "A little girl reads the diary in the mirror, laughing.",
+   "lines": [
+    {
+     "speaker": "odette",
+     "mood": "warm",
+     "text": "Some truths only face you in reflection.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_mirror_0.mp3"
+    }
+   ],
+   "captionAudioFile": "assets/audio/voice/fbcap_mirror.mp3"
+  },
+  "guest": {
+   "caption": "A little boy hides under the table while ghosts sit down.",
+   "lines": [
+    {
+     "speaker": "odette",
+     "mood": "serious",
+     "text": "They sit so the door stays shut.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_guest_0.mp3"
+    }
+   ],
+   "captionAudioFile": "assets/audio/voice/fbcap_guest.mp3"
+  },
+  "quiet": {
+   "caption": "Odette stops every clock in the cellar.",
+   "lines": [
+    {
+     "speaker": "odette",
+     "mood": "serious",
+     "text": "It moves between the ticks, children. Hold your breath.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_quiet_0.mp3"
+    }
+   ],
+   "captionAudioFile": "assets/audio/voice/fbcap_quiet.mp3"
+  },
+  "tide": {
+   "caption": "The children watch the tide climb the well wall. Odette marks the line.",
+   "lines": [
+    {
+     "speaker": "odette",
+     "mood": "serious",
+     "text": "The sea is its door, and I closed it.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_tide_0.mp3"
+    }
+   ],
+   "captionAudioFile": "assets/audio/voice/fbcap_tide.mp3"
+  },
+  "memory": {
+   "caption": "The study, on the night of the high tide.",
+   "long": true,
+   "lines": [
+    {
+     "speaker": "odette",
+     "mood": "serious",
+     "text": "Fifteen years ago, on the night of the high tide.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_memory_0.mp3"
+    },
+    {
+     "speaker": "odette",
+     "mood": "serious",
+     "text": "The first lock slipped. The Warden spoke through every keyhole in this house.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_memory_1.mp3"
+    },
+    {
+     "speaker": "odette",
+     "mood": "warm",
+     "text": "Mara held the lantern. Teo rang the bell. Together you helped me seal it.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_memory_2.mp3"
+    },
+    {
+     "speaker": "odette",
+     "mood": "serious",
+     "text": "But it asked what you missed most. And you both said, \"Mum.\"",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_memory_3.mp3"
+    },
+    {
+     "speaker": "odette",
+     "mood": "warm",
+     "text": "So I used this key to make you forget. Forgive me.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_memory_4.mp3"
+    },
+    {
+     "speaker": "odette",
+     "mood": "serious",
+     "text": "It will offer you everything you miss. Never believe the voice.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/fb_memory_5.mp3"
+    }
+   ],
+   "captionAudioFile": "assets/audio/voice/fbcap_memory.mp3"
+  }
+ },
+ "puzzles": {
+  "pins": {
+   "answer": [
+    4,
+    2,
+    5,
+    1,
+    3
+   ],
+   "evidence": {
+    "1": 4,
+    "2": 2,
+    "4": 1
+   },
+   "middleTallest": true
+  },
+  "filing": {
+   "teeth": 8,
+   "thumb": 8,
+   "plates": [
+    [
+     2,
+     5
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   "answer": [
+    1,
+    2,
+    5,
+    7
+   ]
+  },
+  "seats": {
+   "chairs": 5,
+   "answer": {
+    "wren": 1,
+    "ashby": 2,
+    "brine": 3,
+    "pell": 4,
+    "quill": 5
+   },
+   "constraints": [
+    [
+     "at",
+     "wren",
+     1
+    ],
+    [
+     "at",
+     "brine",
+     3
+    ],
+    [
+     "beside",
+     "pell",
+     "brine"
+    ],
+    [
+     "nearer",
+     "ashby",
+     "pell"
+    ]
+   ],
+   "guests": [
+    {
+     "id": "wren",
+     "name": "Wren"
+    },
+    {
+     "id": "brine",
+     "name": "Brine"
+    },
+    {
+     "id": "pell",
+     "name": "Pell"
+    },
+    {
+     "id": "ashby",
+     "name": "Ashby"
+    },
+    {
+     "id": "quill",
+     "name": "Quill"
+    }
+   ]
+  },
+  "levers": {
+   "start": [
+    0,
+    0,
+    1,
+    0
+   ],
+   "slipPresses": 8
+  },
+  "basin": {
+   "capA": 5,
+   "capB": 3,
+   "target": 4
+  },
+  "safe": {
+   "symbols": [
+    "moon",
+    "key",
+    "wave",
+    "flame",
+    "leaf",
+    "eye"
+   ],
+   "answer": [
+    "eye",
+    "moon",
+    "key"
+   ],
+   "cards": [
+    {
+     "syms": [
+      "moon",
+      "wave",
+      "flame"
+     ],
+     "right": 0,
+     "wrong": 1
+    },
+    {
+     "syms": [
+      "eye",
+      "key",
+      "leaf"
+     ],
+     "right": 1,
+     "wrong": 1
+    },
+    {
+     "syms": [
+      "key",
+      "moon",
+      "wave"
+     ],
+     "right": 1,
+     "wrong": 1
+    },
+    {
+     "syms": [
+      "eye",
+      "flame",
+      "key"
+     ],
+     "right": 2,
+     "wrong": 0
+    }
+   ]
+  },
+  "locks": {
+   "answer": [
+    "k_lantern",
+    "k_mirror",
+    "k_guest",
+    "k_quiet",
+    "k_tide"
+   ],
+   "inscriptions": [
+    "It hides in the dark. Show it the light.",
+    "It speaks backwards. Make it read true.",
+    "It wears a guest's welcome. Let the guests speak.",
+    "It moves between the ticks. Stop the clocks.",
+    "It rises with the sea. Lower the water."
+   ]
+  },
+  "turn": {
+   "right": "cliff"
+  }
+ },
+ "rooms": [
+  {
+   "id": "r1",
+   "startYaw": 90,
+   "n": 1,
+   "name": "Entrance Hall",
+   "panorama": "assets/rooms/room1.webp",
+   "accent": "#F2B24A",
+   "objective": "Find a way to open the Library door.",
+   "intro": "Wardlow House is dark and silent. Look around the hall. Find what you need to open the big lock on the Library door.",
+   "dialogue": {
+    "enter": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "So many keyholes. Every door, every chest.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1_enter_0.mp3"
+     },
+     {
+      "speaker": "teo",
+      "mood": "joking",
+      "text": "Somebody really liked locks. And hid something behind the portrait, I bet.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1_enter_1.mp3"
+     }
+    ],
+    "d_page1": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "Tall in the middle. That is a rule for the pins.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1_d_page1_0.mp3"
+     }
+    ],
+    "d_sweep": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "The marks stop at three pins. Someone scraped the rest.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1_d_sweep_0.mp3"
+     }
+    ],
+    "wrong1": [
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "Nope. That pin sticks. Check the marks again?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_wrong1_0.mp3"
+     }
+    ],
+    "wrong2": [
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "The scratches only cover some pins. Odette's page covers the rest.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_wrong2_0.mp3"
+     }
+    ],
+    "wrong3": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "We know three heights. The page says the middle one is tallest.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_wrong3_0.mp3"
+     }
+    ],
+    "hint1": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "The lantern might show something on that dark wall.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_hint1_0.mp3"
+     }
+    ],
+    "hint2": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Read the diary page, then count the tally marks.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_hint2_0.mp3"
+     }
+    ],
+    "hint3": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "Heights 4, 2 and 1 are known. The middle pin is the tallest of all.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_hint3_0.mp3"
+     }
+    ],
+    "right": [
+     {
+      "speaker": "mara",
+      "mood": "smile",
+      "text": "The lock turned.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1_right_0.mp3"
+     },
+     {
+      "speaker": "teo",
+      "mood": "relieved",
+      "text": "And there is a key in it. The Hall Key.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1_right_1.mp3"
+     }
+    ],
+    "s_key": [
+     {
+      "speaker": "warden",
+      "mood": "",
+      "text": "Well done. Quickly now. The Library is waiting.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_s_key_0.mp3"
+     }
+    ]
+   },
+   "hotspots": [
+    {
+     "id": "r1_letter",
+     "kind": "LEARN",
+     "name": "Odette's letter",
+     "yaw": -26,
+     "pitch": -2,
+     "after": [],
+     "note": {
+      "title": "Odette's Letter",
+      "text": "\"Find the keys before the tide.\" Odette left this for her grandchildren.",
+      "tag": "clue"
+     },
+     "icon": "letter"
+    },
+    {
+     "id": "r1_lantern",
+     "kind": "FIND",
+     "name": "Brass lantern",
+     "yaw": 170,
+     "pitch": 18,
+     "after": [],
+     "item": "lantern_shell",
+     "icon": "lantern"
+    },
+    {
+     "id": "r1_portrait",
+     "kind": "INSPECT",
+     "name": "Portrait of Ambrose",
+     "yaw": 61,
+     "pitch": 24,
+     "after": [],
+     "img": "insp_portrait",
+     "title": "Portrait of Ambrose",
+     "text1": "Ambrose Wardlow, the locksmith who built this house. He holds a big key in his hand.",
+     "text2": "The frame is hollow at the back! Carved inside: \"13 keys, 13 hooks.\"",
+     "zoom": [
+      50,
+      78,
+      2.2
+     ],
+     "secret": "13 keys, 13 hooks"
+    },
+    {
+     "id": "r1_k_lantern",
+     "kind": "FIND",
+     "name": "Lantern Key",
+     "yaw": 68,
+     "pitch": 4,
+     "after": [
+      "r1_portrait"
+     ],
+     "key": "k_lantern",
+     "icon": "key",
+     "text": "It was hidden behind the portrait. Hold it, then use it on the lantern in your Book."
+    },
+    {
+     "id": "r1_light",
+     "kind": "USE",
+     "name": "Light the lantern",
+     "yaw": 0,
+     "pitch": 0,
+     "after": [
+      "r1_k_lantern",
+      "r1_lantern"
+     ],
+     "combine": {
+      "hold": "k_lantern",
+      "target": "lantern_shell"
+     },
+     "bookOnly": true,
+     "result": {
+      "title": "The Lantern Lights",
+      "text": "The key's power wakes the lantern. A warm light shines. Maybe it can show something on the dark wall."
+     }
+    },
+    {
+     "id": "r1_drawer",
+     "kind": "FIND",
+     "name": "Side table drawer",
+     "yaw": -36,
+     "pitch": -17,
+     "after": [],
+     "item": "pin_rods",
+     "icon": "rods"
+    },
+    {
+     "id": "r1_page1",
+     "kind": "LEARN",
+     "name": "Diary page 1",
+     "yaw": -54,
+     "pitch": -4,
+     "after": [],
+     "note": {
+      "title": "Diary Page 1",
+      "text": "Pins rise as the family does. Tall in the middle, short at the end.",
+      "tag": "diary"
+     },
+     "then": [
+      "d_page1"
+     ],
+     "icon": "page"
+    },
+    {
+     "id": "r1_darkwall",
+     "kind": "PANEL",
+     "name": "Dark wall",
+     "yaw": -148,
+     "pitch": 14,
+     "after": [
+      "r1_light"
+     ],
+     "panel": "torch",
+     "then": [
+      "d_sweep"
+     ],
+     "needsItem": null,
+     "text": "The wall is too dark to see. A light might help."
+    },
+    {
+     "id": "r1_lock",
+     "kind": "PANEL",
+     "name": "Brass lock plate",
+     "yaw": 122,
+     "pitch": 6,
+     "after": [
+      "r1_darkwall",
+      "r1_drawer",
+      "r1_page1"
+     ],
+     "panel": "pins",
+     "puzzle": "pins",
+     "needs": [
+      "pin_rods"
+     ],
+     "final": true,
+     "right": "right",
+     "wrongKey": "wrong"
+    },
+    {
+     "id": "r1_hallkey",
+     "kind": "AUTO",
+     "name": "Hall Key",
+     "yaw": 122,
+     "pitch": 4,
+     "after": [
+      "r1_lock"
+     ],
+     "key": "k_hall",
+     "points": "keyA",
+     "then": [
+      "s_key"
+     ],
+     "text": "The lock turned and the Hall Key was waiting inside. The Library door is open to you now."
+    },
+    {
+     "id": "r1_door",
+     "kind": "USE",
+     "name": "Library door",
+     "yaw": 126,
+     "pitch": -20,
+     "after": [
+      "r1_hallkey"
+     ],
+     "needs": "k_hall",
+     "goto": 1,
+     "useHint": "The door to the Library is locked. You need a key.",
+     "result": {
+      "title": "The Door Opens",
+      "text": "The Hall Key turns. The door swings open to the Library."
+     }
+    }
+   ]
+  },
+  {
+   "id": "r2",
+   "startYaw": 80,
+   "n": 2,
+   "name": "Library",
+   "panorama": "assets/rooms/room2.webp",
+   "accent": "#8FB4D9",
+   "objective": "Make a key that fits the Dining Hall door.",
+   "intro": "Odette's library holds many secrets. Find a key blank and a file, and learn which teeth must be cut away.",
+   "dialogue": {
+    "enter": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Books everywhere. And a mirror the size of a door.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_enter_0.mp3"
+     },
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "Odette's desk. Let's see what she read.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_enter_1.mp3"
+     }
+    ],
+    "d_mirror": [
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "Whoa. The writing flips. It reads fine in the mirror.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_d_mirror_0.mp3"
+     }
+    ],
+    "d_page2": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "File the blocked teeth. Keep the thumb tooth.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_d_page2_0.mp3"
+     }
+    ],
+    "wrong1": [
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "The key jammed. We filed a wrong tooth, or missed one.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_wrong1_0.mp3"
+     }
+    ],
+    "wrong2": [
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "Check all three plates. A tooth is blocked if any plate blocks it.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_wrong2_0.mp3"
+     }
+    ],
+    "wrong3": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Tooth 5 shows up on two plates. Count each place once.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_wrong3_0.mp3"
+     }
+    ],
+    "hint1": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "That mirror looks awake. What does it show on the plates?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_hint1_0.mp3"
+     }
+    ],
+    "hint2": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "Read the page again. File only the teeth that a plate blocks.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_hint2_0.mp3"
+     }
+    ],
+    "hint3": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Plates block 1, 2, 5 and 7. Leave the thumb tooth alone.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_hint3_0.mp3"
+     }
+    ],
+    "right": [
+     {
+      "speaker": "mara",
+      "mood": "smile",
+      "text": "It slides through every ward.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_right_0.mp3"
+     },
+     {
+      "speaker": "teo",
+      "mood": "relieved",
+      "text": "Odette wrote her warnings backwards. Smart.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_right_1.mp3"
+     }
+    ],
+    "s_key": [
+     {
+      "speaker": "warden",
+      "mood": "",
+      "text": "Good. The Dining Hall next. Quickly.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_s_key_0.mp3"
+     }
+    ]
+   },
+   "hotspots": [
+    {
+     "id": "r2_blank",
+     "kind": "FIND",
+     "name": "Key blank",
+     "yaw": 77,
+     "pitch": -34,
+     "after": [],
+     "item": "key_blank",
+     "icon": "blank"
+    },
+    {
+     "id": "r2_file",
+     "kind": "FIND",
+     "name": "Steel file",
+     "yaw": 62,
+     "pitch": -39,
+     "after": [],
+     "item": "steel_file",
+     "icon": "file"
+    },
+    {
+     "id": "r2_globe",
+     "kind": "INSPECT",
+     "name": "Globe",
+     "yaw": -36,
+     "pitch": -10,
+     "after": [],
+     "img": "insp_globe",
+     "title": "The Globe",
+     "text1": "An old globe on a brass stand. Seas and coasts are painted in faded ink.",
+     "text2": "A tiny red pin sits on the sea. It marks a cave under the cliff.",
+     "zoom": [
+      62,
+      60,
+      2.4
+     ],
+     "secret": "A red pin marks the sea cave"
+    },
+    {
+     "id": "r2_book",
+     "kind": "INSPECT",
+     "name": "Hollow book",
+     "yaw": -89,
+     "pitch": 21,
+     "after": [],
+     "img": "insp_hollow_book",
+     "title": "\"Coastal Locks\"",
+     "text1": "A thick old book called \"Coastal Locks\". It looks odd.",
+     "text2": "The pages are cut out. Something is hidden in the hollow!",
+     "zoom": [
+      50,
+      55,
+      2.2
+     ]
+    },
+    {
+     "id": "r2_k_mirror",
+     "kind": "FIND",
+     "name": "Mirror Key",
+     "yaw": -97,
+     "pitch": 13,
+     "after": [
+      "r2_book"
+     ],
+     "key": "k_mirror",
+     "icon": "key",
+     "text": "It was hidden in the hollow book. Use it on the dusty wall mirror."
+    },
+    {
+     "id": "r2_mirror",
+     "kind": "USE",
+     "name": "Wall mirror",
+     "yaw": -132,
+     "pitch": 14,
+     "after": [
+      "r2_k_mirror"
+     ],
+     "needs": "k_mirror",
+     "useHint": "A huge mirror, dull with dust. It looks asleep. Something here could wake it.",
+     "result": {
+      "title": "The Mirror Wakes",
+      "text": "The glass clears and glows. The room shows backwards in it, and old writing turns the right way round."
+     },
+     "then": [
+      "d_mirror"
+     ]
+    },
+    {
+     "id": "r2_page2",
+     "kind": "LEARN",
+     "name": "Diary page 2",
+     "yaw": 40,
+     "pitch": -41,
+     "after": [
+      "r2_mirror"
+     ],
+     "note": {
+      "title": "Diary Page 2",
+      "text": "A key must pass every ward. File away any tooth a plate blocks. Never file the thumb tooth, number 8.",
+      "tag": "diary"
+     },
+     "then": [
+      "d_page2"
+     ],
+     "icon": "page"
+    },
+    {
+     "id": "r2_plates",
+     "kind": "PANEL",
+     "name": "Ward plates",
+     "yaw": 103,
+     "pitch": 28,
+     "after": [
+      "r2_mirror"
+     ],
+     "panel": "plates",
+     "once": true
+    },
+    {
+     "id": "r2_filing",
+     "kind": "PANEL",
+     "name": "Key blank filing",
+     "yaw": 12,
+     "pitch": -38,
+     "after": [
+      "r2_plates",
+      "r2_page2",
+      "r2_blank",
+      "r2_file"
+     ],
+     "panel": "filing",
+     "puzzle": "filing",
+     "needs": [
+      "key_blank",
+      "steel_file"
+     ],
+     "final": true,
+     "right": "right",
+     "wrongKey": "wrong"
+    },
+    {
+     "id": "r2_readingkey",
+     "kind": "AUTO",
+     "name": "Reading Key",
+     "yaw": 12,
+     "pitch": -38,
+     "after": [
+      "r2_filing"
+     ],
+     "key": "k_reading",
+     "points": "keyA",
+     "then": [
+      "s_key"
+     ],
+     "text": "The filed key slid through every ward and became the Reading Key. The Dining Hall door is open to you now."
+    },
+    {
+     "id": "r2_door",
+     "kind": "USE",
+     "name": "Dining Hall door",
+     "yaw": 148,
+     "pitch": -2,
+     "after": [
+      "r2_readingkey"
+     ],
+     "needs": "k_reading",
+     "goto": 2,
+     "useHint": "The door to the Dining Hall is locked.",
+     "result": {
+      "title": "The Door Opens",
+      "text": "The Reading Key turns. The heavy oak door opens."
+     }
+    }
+   ]
+  },
+  {
+   "id": "r3",
+   "startYaw": -20,
+   "n": 3,
+   "name": "Dining Hall",
+   "panorama": "assets/rooms/room3.webp",
+   "accent": "#B7A1E8",
+   "objective": "Find out where the five guests sit.",
+   "intro": "A dining table is laid for five. Find the guests' memory, make them speak, and seat each one in the right chair.",
+   "dialogue": {
+    "enter": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "A table laid for five. Nobody has eaten here in years.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3_enter_0.mp3"
+     },
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "The chairs have brass teeth under the seats. It is a lock.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3_enter_1.mp3"
+     }
+    ],
+    "d_ghosts": [
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "Ghosts. Great. At least they are polite.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3_d_ghosts_0.mp3"
+     }
+    ],
+    "d_clues": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "Two of them told us exactly where they sit.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3_d_clues_0.mp3"
+     }
+    ],
+    "wrong1": [
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "A ghost frowned at us. That seat is not theirs.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_wrong1_0.mp3"
+     }
+    ],
+    "wrong2": [
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "Start with the two who said exactly where they sit.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_wrong2_0.mp3"
+     }
+    ],
+    "wrong3": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Pell sits beside the Captain. Ashby is nearer the fire than Pell.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_wrong3_0.mp3"
+     }
+    ],
+    "hint1": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "Ring the bell and listen to every guest.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_hint1_0.mp3"
+     }
+    ],
+    "hint2": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Wren and Brine tell us their seats outright. Place them first.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_hint2_0.mp3"
+     }
+    ],
+    "hint3": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "Wren is 1 and Brine is 3. That leaves Pell, Ashby and Quill for 2, 4 and 5.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_hint3_0.mp3"
+     }
+    ],
+    "right": [
+     {
+      "speaker": "teo",
+      "mood": "relieved",
+      "text": "They all sat down at once. The teeth lined up.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3_right_0.mp3"
+     },
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "Odette's memory said the guests keep a door shut. I wonder which door.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3_right_1.mp3"
+     }
+    ],
+    "s_key": [
+     {
+      "speaker": "warden",
+      "mood": "",
+      "text": "Lovely. The cellar next. Quickly, the tide will not wait.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_s_key_0.mp3"
+     }
+    ]
+   },
+   "hotspots": [
+    {
+     "id": "r3_cards",
+     "kind": "FIND",
+     "name": "Sideboard drawer",
+     "yaw": -86,
+     "pitch": -9,
+     "after": [],
+     "item": "place_cards",
+     "icon": "cards"
+    },
+    {
+     "id": "r3_bell",
+     "kind": "FIND",
+     "name": "Silver bell",
+     "yaw": -98,
+     "pitch": -3,
+     "after": [],
+     "item": "silver_bell",
+     "icon": "bell"
+    },
+    {
+     "id": "r3_decanter",
+     "kind": "INSPECT",
+     "name": "Glass decanter",
+     "yaw": 158,
+     "pitch": -8,
+     "after": [],
+     "img": "insp_decanter",
+     "title": "Glass Decanter",
+     "text1": "A fine glass decanter. Something small glints inside.",
+     "text2": "A key is lying at the bottom of the glass!",
+     "zoom": [
+      50,
+      62,
+      2.2
+     ]
+    },
+    {
+     "id": "r3_k_guest",
+     "kind": "FIND",
+     "name": "Guest Key",
+     "yaw": 162,
+     "pitch": -19,
+     "after": [
+      "r3_decanter"
+     ],
+     "key": "k_guest",
+     "icon": "key",
+     "text": "It was inside the decanter. Use it on the long table."
+    },
+    {
+     "id": "r3_fire",
+     "kind": "INSPECT",
+     "name": "Fireplace",
+     "yaw": -134,
+     "pitch": 2,
+     "after": [],
+     "img": "insp_fireplace",
+     "title": "The Fireplace",
+     "text1": "A huge stone fireplace. The fire still burns, though nobody lit it.",
+     "text2": "Words are carved in the lintel: \"Mind the tide.\"",
+     "zoom": [
+      50,
+      22,
+      2.4
+     ],
+     "secret": "Mind the tide"
+    },
+    {
+     "id": "r3_page3",
+     "kind": "LEARN",
+     "name": "Diary page 3",
+     "yaw": -128,
+     "pitch": 22,
+     "after": [],
+     "note": {
+      "title": "Diary Page 3",
+      "text": "The guests sit by the fire's rule. Closer to the fire is higher in rank.",
+      "tag": "diary"
+     },
+     "icon": "page"
+    },
+    {
+     "id": "r3_table",
+     "kind": "USE",
+     "name": "Long table",
+     "yaw": 0,
+     "pitch": -24,
+     "after": [
+      "r3_k_guest"
+     ],
+     "needs": "k_guest",
+     "useHint": "A long table laid for five. Someone should be sitting here.",
+     "result": {
+      "title": "The Guests Appear",
+      "text": "Five pale ghosts sit down at the table. They are silent. They look like they want to talk."
+     },
+     "then": [
+      "d_ghosts"
+     ]
+    },
+    {
+     "id": "r3_ring",
+     "kind": "USE",
+     "name": "Ring the bell",
+     "yaw": 0,
+     "pitch": -24,
+     "after": [
+      "r3_table",
+      "r3_bell"
+     ],
+     "needs": "silver_bell",
+     "useHint": "The ghosts are silent. Maybe a bell would make them speak.",
+     "result": {
+      "title": "The Bell Rings",
+      "text": "A clear ring fills the hall. The ghosts turn their heads. Now each one will speak."
+     }
+    },
+    {
+     "id": "r3_clue_wren",
+     "kind": "LEARN",
+     "name": "Lady Wren",
+     "yaw": -46,
+     "pitch": 2,
+     "after": [
+      "r3_ring"
+     ],
+     "ghost": "wren",
+     "note": {
+      "title": "Lady Wren",
+      "text": "\"I am warming my hands at the fire.\"",
+      "tag": "clue"
+     },
+     "icon": "ghost",
+     "audioFile": "assets/audio/voice/ghost_r3_clue_wren.mp3"
+    },
+    {
+     "id": "r3_clue_brine",
+     "kind": "LEARN",
+     "name": "Captain Brine",
+     "yaw": -33,
+     "pitch": 2,
+     "after": [
+      "r3_clue_wren"
+     ],
+     "ghost": "brine",
+     "note": {
+      "title": "Captain Brine",
+      "text": "\"I sit in the middle. I always sit in the middle.\"",
+      "tag": "clue"
+     },
+     "icon": "ghost",
+     "audioFile": "assets/audio/voice/ghost_r3_clue_brine.mp3"
+    },
+    {
+     "id": "r3_clue_pell",
+     "kind": "LEARN",
+     "name": "Dr. Pell",
+     "yaw": -22,
+     "pitch": 2,
+     "after": [
+      "r3_clue_brine"
+     ],
+     "ghost": "pell",
+     "note": {
+      "title": "Dr. Pell",
+      "text": "\"I sit beside the Captain. His stories need a doctor.\"",
+      "tag": "clue"
+     },
+     "icon": "ghost",
+     "audioFile": "assets/audio/voice/ghost_r3_clue_pell.mp3"
+    },
+    {
+     "id": "r3_clue_ashby",
+     "kind": "LEARN",
+     "name": "Miss Ashby",
+     "yaw": 24,
+     "pitch": 2,
+     "after": [
+      "r3_clue_pell"
+     ],
+     "ghost": "ashby",
+     "note": {
+      "title": "Miss Ashby",
+      "text": "\"I sit nearer the fire than Dr. Pell.\"",
+      "tag": "clue"
+     },
+     "icon": "ghost",
+     "audioFile": "assets/audio/voice/ghost_r3_clue_ashby.mp3"
+    },
+    {
+     "id": "r3_clue_quill",
+     "kind": "LEARN",
+     "name": "Mr. Quill",
+     "yaw": 46,
+     "pitch": 2,
+     "after": [
+      "r3_clue_ashby"
+     ],
+     "ghost": "quill",
+     "note": {
+      "title": "Mr. Quill",
+      "text": "\"I am left with whatever seat remains.\"",
+      "tag": "clue"
+     },
+     "icon": "ghost",
+     "then": [
+      "d_clues"
+     ],
+     "audioFile": "assets/audio/voice/ghost_r3_clue_quill.mp3"
+    },
+    {
+     "id": "r3_seats",
+     "kind": "PANEL",
+     "name": "Chairs and table",
+     "yaw": 0,
+     "pitch": -30,
+     "after": [
+      "r3_clue_wren",
+      "r3_clue_brine",
+      "r3_clue_pell",
+      "r3_clue_ashby",
+      "r3_clue_quill",
+      "r3_cards"
+     ],
+     "panel": "seats",
+     "puzzle": "seats",
+     "needs": [
+      "place_cards"
+     ],
+     "final": true,
+     "right": "right",
+     "wrongKey": "wrong"
+    },
+    {
+     "id": "r3_banquetkey",
+     "kind": "AUTO",
+     "name": "Banquet Key",
+     "yaw": 0,
+     "pitch": -30,
+     "after": [
+      "r3_seats"
+     ],
+     "key": "k_banquet",
+     "points": "keyA",
+     "then": [
+      "s_key"
+     ],
+     "text": "The guests sat down and the brass teeth lined up. The Banquet Key rose from the table. The cellar door is open to you now."
+    },
+    {
+     "id": "r3_door",
+     "kind": "USE",
+     "name": "Cellar door",
+     "yaw": 132,
+     "pitch": 0,
+     "after": [
+      "r3_banquetkey"
+     ],
+     "needs": "k_banquet",
+     "goto": 3,
+     "useHint": "The iron-bound door is locked.",
+     "result": {
+      "title": "The Door Opens",
+      "text": "The Banquet Key turns. The iron door swings open."
+     }
+    }
+   ]
+  },
+  {
+   "id": "r4",
+   "startYaw": 40,
+   "n": 4,
+   "name": "Clock Cellar",
+   "panorama": "assets/rooms/room4.webp",
+   "accent": "#C8A24A",
+   "objective": "Quiet the clocks and fix the chime levers.",
+   "intro": "The cellar is full of ticking clocks. Silence them, free the stuck levers, and put them all in the right position.",
+   "dialogue": {
+    "enter": [
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "It is so loud in here. All those clocks ticking.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4_enter_0.mp3"
+     },
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "I cannot hear myself think. Or panic.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4_enter_1.mp3"
+     }
+    ],
+    "d_silence": [
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "Silence. That is worse.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4_d_silence_0.mp3"
+     }
+    ],
+    "d_page4": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "Each lever wakes its neighbours. Think of it as a chain.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4_d_page4_0.mp3"
+     }
+    ],
+    "wrong1": [
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "That made it worse. Each lever wakes its neighbours.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_wrong1_0.mp3"
+     }
+    ],
+    "wrong2": [
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "The end levers only wake one neighbour. Start from the right end.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_wrong2_0.mp3"
+     }
+    ],
+    "wrong3": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Pressing a lever twice undoes it. Fewer presses, please.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_wrong3_0.mp3"
+     }
+    ],
+    "hint1": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "Page four says each lever wakes its neighbours too.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_hint1_0.mp3"
+     }
+    ],
+    "hint2": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Work from the right. Only lever 4 can fix lever 4 and 3 together.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_hint2_0.mp3"
+     }
+    ],
+    "hint3": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "Two presses. Lever 2, then lever 4.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_hint3_0.mp3"
+     }
+    ],
+    "right": [
+     {
+      "speaker": "teo",
+      "mood": "relieved",
+      "text": "The case sleeps. And a key fell out of it.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4_right_0.mp3"
+     },
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "Hold your breath, she said. The Warden moves between the ticks.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4_right_1.mp3"
+     }
+    ],
+    "s_pendulum": [
+     {
+      "speaker": "warden",
+      "mood": "",
+      "text": "Leave the pendulum. Pull the levers. Quickly.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_s_pendulum_0.mp3"
+     }
+    ],
+    "s_key": [
+     {
+      "speaker": "warden",
+      "mood": "",
+      "text": "The well next. Mind the tide. Quickly.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_s_key_0.mp3"
+     }
+    ]
+   },
+   "hotspots": [
+    {
+     "id": "r4_oil",
+     "kind": "FIND",
+     "name": "Oil can",
+     "yaw": 71,
+     "pitch": -8,
+     "after": [],
+     "item": "oil_can",
+     "icon": "oilcan"
+    },
+    {
+     "id": "r4_crank",
+     "kind": "FIND",
+     "name": "Brass crank",
+     "yaw": 90,
+     "pitch": -24,
+     "after": [],
+     "item": "brass_crank",
+     "icon": "crank"
+    },
+    {
+     "id": "r4_shelf",
+     "kind": "INSPECT",
+     "name": "Stopped clock",
+     "yaw": -60,
+     "pitch": -5,
+     "after": [],
+     "img": "insp_stopped_clock",
+     "title": "A Stopped Clock",
+     "text1": "One clock on the bench has stopped. Its back looks loose.",
+     "text2": "The back is hollow. A key is hidden inside!",
+     "zoom": [
+      50,
+      55,
+      2.2
+     ]
+    },
+    {
+     "id": "r4_k_quiet",
+     "kind": "FIND",
+     "name": "Quiet Key",
+     "yaw": -68,
+     "pitch": -16,
+     "after": [
+      "r4_shelf"
+     ],
+     "key": "k_quiet",
+     "icon": "key",
+     "text": "It was inside the stopped clock. Use it on the swinging pendulum."
+    },
+    {
+     "id": "r4_clockface",
+     "kind": "INSPECT",
+     "name": "Big clock face",
+     "yaw": -20,
+     "pitch": 36,
+     "after": [],
+     "img": "insp_clock_face",
+     "title": "The Big Clock Face",
+     "text1": "The great clock's hands are stuck near midnight.",
+     "text2": "Five minutes to twelve. Scratched below: \"Hold your breath.\"",
+     "zoom": [
+      50,
+      50,
+      2.0
+     ],
+     "secret": "Hold your breath"
+    },
+    {
+     "id": "r4_pendulum",
+     "kind": "USE",
+     "name": "Pendulum",
+     "yaw": -19,
+     "pitch": -24,
+     "after": [
+      "r4_k_quiet"
+     ],
+     "needs": "k_quiet",
+     "useHint": "The pendulum swings and ticks, loud and steady.",
+     "result": {
+      "title": "The Ticking Stops",
+      "text": "The pendulum slows and stops. The cellar goes quiet. The levers on the case stop shaking."
+     },
+     "then": [
+      "s_pendulum",
+      "d_silence"
+     ]
+    },
+    {
+     "id": "r4_panelcrank",
+     "kind": "USE",
+     "name": "Stuck panel",
+     "yaw": 9,
+     "pitch": 13,
+     "after": [
+      "r4_pendulum",
+      "r4_crank"
+     ],
+     "needs": "brass_crank",
+     "useHint": "A brass panel is stuck shut. Something could wind it open.",
+     "result": {
+      "title": "The Panel Opens",
+      "text": "The crank turns. The panel slides open. Four chime levers are inside, but they are stiff."
+     }
+    },
+    {
+     "id": "r4_oiling",
+     "kind": "USE",
+     "name": "Stiff levers",
+     "yaw": 9,
+     "pitch": 13,
+     "after": [
+      "r4_panelcrank",
+      "r4_oil"
+     ],
+     "needs": "oil_can",
+     "useHint": "The levers are rusty and will not move.",
+     "result": {
+      "title": "The Levers Move",
+      "text": "A little oil, and the levers swing freely."
+     }
+    },
+    {
+     "id": "r4_page4",
+     "kind": "LEARN",
+     "name": "Diary page 4",
+     "yaw": 80,
+     "pitch": -40,
+     "after": [],
+     "note": {
+      "title": "Diary Page 4",
+      "text": "Each chime lever wakes its neighbours too. Leave every lever up and the case sleeps.",
+      "tag": "diary"
+     },
+     "then": [
+      "d_page4"
+     ],
+     "icon": "page"
+    },
+    {
+     "id": "r4_levers",
+     "kind": "PANEL",
+     "name": "Chime levers",
+     "yaw": 9,
+     "pitch": 13,
+     "after": [
+      "r4_oiling",
+      "r4_page4"
+     ],
+     "panel": "levers",
+     "puzzle": "levers",
+     "final": true,
+     "right": "right",
+     "wrongKey": "wrong"
+    },
+    {
+     "id": "r4_clockkey",
+     "kind": "AUTO",
+     "name": "Clock Key",
+     "yaw": 0,
+     "pitch": -10,
+     "after": [
+      "r4_levers"
+     ],
+     "key": "k_clock",
+     "points": "keyA",
+     "then": [
+      "s_key"
+     ],
+     "text": "The case fell asleep and the Clock Key dropped out. The iron door is open to you now."
+    },
+    {
+     "id": "r4_door",
+     "kind": "USE",
+     "name": "Iron door",
+     "yaw": 130,
+     "pitch": 0,
+     "after": [
+      "r4_clockkey"
+     ],
+     "needs": "k_clock",
+     "goto": 4,
+     "useHint": "The iron door with the clock face is locked.",
+     "result": {
+      "title": "The Door Opens",
+      "text": "The Clock Key turns. The iron door opens onto a stairway."
+     }
+    }
+   ]
+  },
+  {
+   "id": "r5",
+   "startYaw": 60,
+   "n": 5,
+   "name": "Well House",
+   "panorama": "assets/rooms/room5.webp",
+   "accent": "#3E8E85",
+   "objective": "Lower the water to the fourth notch.",
+   "intro": "The sea is right outside. Find two buckets, lower the water, and measure out exactly four.",
+   "dialogue": {
+    "enter": [
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "The sea is right outside. You can feel it in the stones.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_enter_0.mp3"
+     },
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Four notches. Is that a tide chart or a ladder to nowhere?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_enter_1.mp3"
+     }
+    ],
+    "d_water": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "There is a lock in the grate. And a basin.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_d_water_0.mp3"
+     }
+    ],
+    "d_page5": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Four, with a five and a three. That is a puzzle, not a poem.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_d_page5_0.mp3"
+     }
+    ],
+    "wrong1": [
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "Not four. The basin wants exactly the fourth notch.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_wrong1_0.mp3"
+     }
+    ],
+    "wrong2": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "We only measure with these two buckets. Fill, pour, empty.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_wrong2_0.mp3"
+     }
+    ],
+    "wrong3": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "Fill the five and pour it into the three. See what is left in the five.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_wrong3_0.mp3"
+     }
+    ],
+    "hint1": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Page five says five buckets, then three. The tide stops at four.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_hint1_0.mp3"
+     }
+    ],
+    "hint2": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "Pour from the big bucket into the small one and look at what remains.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_hint2_0.mp3"
+     }
+    ],
+    "hint3": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Fill five, pour into three, empty three, pour the two across, fill five, top up three.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_hint3_0.mp3"
+     }
+    ],
+    "right": [
+     {
+      "speaker": "mara",
+      "mood": "smile",
+      "text": "Four, exactly. The grate clicked open.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_right_0.mp3"
+     },
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "The sea is a door. I do not like that.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_right_1.mp3"
+     }
+    ],
+    "s_well": [
+     {
+      "speaker": "warden",
+      "mood": "",
+      "text": "The tide is rising. Quickly, quickly. Lower the water.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_s_well_0.mp3"
+     }
+    ],
+    "s_key": [
+     {
+      "speaker": "warden",
+      "mood": "",
+      "text": "Only the Study left, and then the cave. Quickly.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_s_key_0.mp3"
+     }
+    ]
+   },
+   "hotspots": [
+    {
+     "id": "r5_b5",
+     "kind": "FIND",
+     "name": "Large bucket",
+     "yaw": 122,
+     "pitch": 8,
+     "after": [],
+     "item": "bucket5",
+     "icon": "bucket5"
+    },
+    {
+     "id": "r5_b3",
+     "kind": "FIND",
+     "name": "Small bucket",
+     "yaw": 134,
+     "pitch": -4,
+     "after": [],
+     "item": "bucket3",
+     "icon": "bucket3"
+    },
+    {
+     "id": "r5_crabpot",
+     "kind": "INSPECT",
+     "name": "Crab pot",
+     "yaw": 146,
+     "pitch": 1,
+     "after": [],
+     "img": "insp_crab_pot",
+     "title": "The Crab Pot",
+     "text1": "A wooden crab pot, wet with sea water. Something shines inside.",
+     "text2": "A key is caught in the wicker. It must have been here a long time.",
+     "zoom": [
+      50,
+      55,
+      2.2
+     ]
+    },
+    {
+     "id": "r5_k_tide",
+     "kind": "FIND",
+     "name": "Tide Key",
+     "yaw": 150,
+     "pitch": -10,
+     "after": [
+      "r5_crabpot"
+     ],
+     "key": "k_tide",
+     "icon": "key",
+     "text": "It was caught in the crab pot. Use it on the well."
+    },
+    {
+     "id": "r5_notches",
+     "kind": "INSPECT",
+     "name": "Notch wall",
+     "yaw": -59,
+     "pitch": 24,
+     "after": [],
+     "img": "insp_notch_wall",
+     "title": "The Notch Wall",
+     "text1": "A carved wall with four notches at rising heights. A tide chart!",
+     "text2": "The fourth notch has the Wardlow mark. The tide must stop there.",
+     "zoom": [
+      50,
+      30,
+      2.2
+     ],
+     "secret": "The 4th notch has the Wardlow mark"
+    },
+    {
+     "id": "r5_well",
+     "kind": "USE",
+     "name": "The well",
+     "yaw": 0,
+     "pitch": -36,
+     "after": [
+      "r5_k_tide"
+     ],
+     "needs": "k_tide",
+     "useHint": "The well is full to the brim. A rusted grate lies under the water.",
+     "result": {
+      "title": "The Water Drops",
+      "text": "The water sinks. A rusty grate lock and a stone basin show."
+     },
+     "then": [
+      "s_well",
+      "d_water"
+     ]
+    },
+    {
+     "id": "r5_page5",
+     "kind": "LEARN",
+     "name": "Diary page 5",
+     "yaw": -22,
+     "pitch": 28,
+     "after": [],
+     "note": {
+      "title": "Diary Page 5",
+      "text": "The tide stops at the fourth notch. Five buckets I had, then three.",
+      "tag": "diary"
+     },
+     "then": [
+      "d_page5"
+     ],
+     "icon": "page"
+    },
+    {
+     "id": "r5_basin",
+     "kind": "PANEL",
+     "name": "Basin and buckets",
+     "yaw": 0,
+     "pitch": -40,
+     "after": [
+      "r5_well",
+      "r5_b5",
+      "r5_b3",
+      "r5_page5"
+     ],
+     "panel": "basin",
+     "puzzle": "basin",
+     "needs": [
+      "bucket5",
+      "bucket3"
+     ],
+     "final": true,
+     "right": "right",
+     "wrongKey": "wrong"
+    },
+    {
+     "id": "r5_wellkey",
+     "kind": "AUTO",
+     "name": "Well Key",
+     "yaw": 0,
+     "pitch": -40,
+     "after": [
+      "r5_basin"
+     ],
+     "key": "k_well",
+     "points": "keyA",
+     "then": [
+      "s_key"
+     ],
+     "text": "Exactly four. The grate clicked open and the Well Key rose from the water. The Study door is open to you now."
+    },
+    {
+     "id": "r5_door",
+     "kind": "USE",
+     "name": "Study door",
+     "yaw": -162,
+     "pitch": 4,
+     "after": [
+      "r5_wellkey"
+     ],
+     "needs": "k_well",
+     "goto": 5,
+     "useHint": "The mossy oak door is locked.",
+     "result": {
+      "title": "The Door Opens",
+      "text": "The Well Key turns. The mossy door creaks open."
+     }
+    }
+   ]
+  },
+  {
+   "id": "r6",
+   "startYaw": -10,
+   "n": 6,
+   "name": "Locksmith's Study",
+   "panorama": "assets/rooms/room6.webp",
+   "accent": "#A8423C",
+   "objective": "Crack the safe code.",
+   "intro": "This was Odette's study. Find a crank for the safe, wake the hidden clue cards, and work out the secret code.",
+   "dialogue": {
+    "enter": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "This was Odette's study. I remember the smell of ink.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_enter_0.mp3"
+     },
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "I remember nothing. Is that normal?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_enter_1.mp3"
+     }
+    ],
+    "d_flash": [
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "We helped her. We were there.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_d_flash_0.mp3"
+     },
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "And the voice has been helping us ever since. I think it is the Warden.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_d_flash_1.mp3"
+     }
+    ],
+    "d_cards": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "Odette kept old guesses. We can work out the code.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_d_cards_0.mp3"
+     }
+    ],
+    "wrong1": [
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "The safe grumbled. Some symbols were right, some were not.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_wrong1_0.mp3"
+     }
+    ],
+    "wrong2": [
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "Compare the cards. One card has no symbol in the right place.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_wrong2_0.mp3"
+     }
+    ],
+    "wrong3": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Card four has two symbols in place. Start there.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_wrong3_0.mp3"
+     }
+    ],
+    "hint1": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "The Memory Key made the cards readable. Read them all.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_hint1_0.mp3"
+     }
+    ],
+    "hint2": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Card four has two in place and one that is not in the code.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_hint2_0.mp3"
+     }
+    ],
+    "hint3": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "Eye is first. Key is last. Moon is in the middle.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_hint3_0.mp3"
+     }
+    ],
+    "right": [
+     {
+      "speaker": "mara",
+      "mood": "smile",
+      "text": "It opened. Eye, Moon, Key. She hid it in the oldest riddle.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_right_0.mp3"
+     },
+     {
+      "speaker": "teo",
+      "mood": "relieved",
+      "text": "One more key. And a very big door.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_right_1.mp3"
+     }
+    ],
+    "s_cards": [
+     {
+      "speaker": "warden",
+      "mood": "",
+      "text": "Do not bother with the cards. Try every combination. Quickly.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_s_cards_0.mp3"
+     }
+    ],
+    "s_key": [
+     {
+      "speaker": "warden",
+      "mood": "",
+      "text": "The cave. Bring everything. Quickly, quickly.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_s_key_0.mp3"
+     }
+    ]
+   },
+   "hotspots": [
+    {
+     "id": "r6_crank",
+     "kind": "FIND",
+     "name": "Safe crank",
+     "yaw": -156,
+     "pitch": 20,
+     "after": [],
+     "item": "safe_crank",
+     "icon": "crank"
+    },
+    {
+     "id": "r6_loupe",
+     "kind": "FIND",
+     "name": "Loupe",
+     "yaw": 67,
+     "pitch": -41,
+     "after": [],
+     "item": "loupe",
+     "icon": "loupe"
+    },
+    {
+     "id": "r6_drawer",
+     "kind": "INSPECT",
+     "name": "Small brass box",
+     "yaw": 57,
+     "pitch": -31,
+     "after": [],
+     "img": "insp_desk_drawer",
+     "title": "The Brass Box",
+     "text1": "A small brass box sits on the desk. Its lid has a strange little lock-plate with no keyhole.",
+     "text2": "The lid slides open. A pale key lies inside, wrapped in cloth.",
+     "zoom": [
+      50,
+      55,
+      2.2
+     ]
+    },
+    {
+     "id": "r6_k_memory",
+     "kind": "FIND",
+     "name": "Memory Key",
+     "yaw": 69,
+     "pitch": -26,
+     "after": [
+      "r6_drawer"
+     ],
+     "key": "k_memory",
+     "icon": "key",
+     "text": "It was in the brass box. Use it on the four blank cards.",
+     "then": [
+      "d_flash"
+     ]
+    },
+    {
+     "id": "r6_blotter",
+     "kind": "INSPECT",
+     "name": "Ink blotter",
+     "yaw": 20,
+     "pitch": -37,
+     "after": [],
+     "img": "insp_blotter",
+     "title": "The Ink Blotter",
+     "text1": "An old ink blotter. Faint marks are pressed into it.",
+     "text2": "Held up to a mirror in your mind, it reads: \"The 13th hook stays empty.\"",
+     "zoom": [
+      50,
+      50,
+      2.0
+     ],
+     "secret": "The 13th hook stays empty"
+    },
+    {
+     "id": "r6_cards",
+     "kind": "USE",
+     "name": "Blank cards",
+     "yaw": 0,
+     "pitch": -43,
+     "after": [
+      "r6_k_memory"
+     ],
+     "needs": "k_memory",
+     "useHint": "Four blank cards are pinned on the desk. They look empty.",
+     "result": {
+      "title": "Ghost Ink Appears",
+      "text": "Pale writing rises on the cards: symbols and tiny marks. It is too faint to read without help."
+     },
+     "then": [
+      "s_cards"
+     ]
+    },
+    {
+     "id": "r6_card1",
+     "kind": "LEARN",
+     "name": "Clue card 1",
+     "yaw": -33,
+     "pitch": -43,
+     "after": [
+      "r6_cards"
+     ],
+     "needs": "loupe",
+     "cardSyms": [
+      "moon",
+      "wave",
+      "flame"
+     ],
+     "cardRight": 0,
+     "cardWrong": 1,
+     "text": "The ink is too faint to read. You need something to magnify it.",
+     "note": {
+      "title": "Clue Card 1",
+      "text": "Card 1: Moon, Wave, Flame. 0 in the right place, 1 in the wrong place.",
+      "tag": "clue"
+     },
+     "icon": "card"
+    },
+    {
+     "id": "r6_card2",
+     "kind": "LEARN",
+     "name": "Clue card 2",
+     "yaw": -11,
+     "pitch": -43,
+     "after": [
+      "r6_cards"
+     ],
+     "needs": "loupe",
+     "cardSyms": [
+      "eye",
+      "key",
+      "leaf"
+     ],
+     "cardRight": 1,
+     "cardWrong": 1,
+     "text": "The ink is too faint to read. You need something to magnify it.",
+     "note": {
+      "title": "Clue Card 2",
+      "text": "Card 2: Eye, Key, Leaf. 1 in the right place, 1 in the wrong place.",
+      "tag": "clue"
+     },
+     "icon": "card"
+    },
+    {
+     "id": "r6_card3",
+     "kind": "LEARN",
+     "name": "Clue card 3",
+     "yaw": 11,
+     "pitch": -43,
+     "after": [
+      "r6_cards"
+     ],
+     "needs": "loupe",
+     "cardSyms": [
+      "key",
+      "moon",
+      "wave"
+     ],
+     "cardRight": 1,
+     "cardWrong": 1,
+     "text": "The ink is too faint to read. You need something to magnify it.",
+     "note": {
+      "title": "Clue Card 3",
+      "text": "Card 3: Key, Moon, Wave. 1 in the right place, 1 in the wrong place.",
+      "tag": "clue"
+     },
+     "icon": "card"
+    },
+    {
+     "id": "r6_card4",
+     "kind": "LEARN",
+     "name": "Clue card 4",
+     "yaw": 34,
+     "pitch": -43,
+     "after": [
+      "r6_cards"
+     ],
+     "needs": "loupe",
+     "cardSyms": [
+      "eye",
+      "flame",
+      "key"
+     ],
+     "cardRight": 2,
+     "cardWrong": 0,
+     "text": "The ink is too faint to read. You need something to magnify it.",
+     "note": {
+      "title": "Clue Card 4",
+      "text": "Card 4: Eye, Flame, Key. 2 in the right place, 0 in the wrong place.",
+      "tag": "clue"
+     },
+     "icon": "card",
+     "then": [
+      "d_cards"
+     ]
+    },
+    {
+     "id": "r6_page6",
+     "kind": "LEARN",
+     "name": "Diary page 6",
+     "yaw": -84,
+     "pitch": -32,
+     "after": [
+      "r6_cards"
+     ],
+     "note": {
+      "title": "Diary Page 6",
+      "text": "Eye, Moon, Key. I hid my answer in the order of the oldest riddle. Do not trust the voice that asks you to hurry.",
+      "tag": "diary"
+     },
+     "icon": "page"
+    },
+    {
+     "id": "r6_safe",
+     "kind": "PANEL",
+     "name": "Iron safe",
+     "yaw": -90,
+     "pitch": 20,
+     "after": [
+      "r6_card1",
+      "r6_card2",
+      "r6_card3",
+      "r6_card4",
+      "r6_crank"
+     ],
+     "panel": "safe",
+     "puzzle": "safe",
+     "needs": [
+      "safe_crank"
+     ],
+     "final": true,
+     "right": "right",
+     "wrongKey": "wrong"
+    },
+    {
+     "id": "r6_vaultkey",
+     "kind": "AUTO",
+     "name": "Vault Key",
+     "yaw": -90,
+     "pitch": 18,
+     "after": [
+      "r6_safe"
+     ],
+     "key": "k_vault",
+     "points": "keyA",
+     "then": [
+      "s_key"
+     ],
+     "text": "The safe swung open and the Vault Key lay inside. The Cliff Cave door is open to you now."
+    },
+    {
+     "id": "r6_door",
+     "kind": "USE",
+     "name": "Cliff Cave door",
+     "yaw": 152,
+     "pitch": 8,
+     "after": [
+      "r6_vaultkey"
+     ],
+     "needs": "k_vault",
+     "goto": 6,
+     "useHint": "The iron door with the fish-scale lock is shut tight.",
+     "result": {
+      "title": "The Door Opens",
+      "text": "The Vault Key turns. Cold sea air blows in. The cave is waiting."
+     }
+    }
+   ]
+  },
+  {
+   "id": "r7",
+   "startYaw": 40,
+   "n": 7,
+   "name": "Cliff Cave",
+   "panorama": "assets/rooms/room7.webp",
+   "accent": "#8B6FD6",
+   "objective": "Find the lock, open it, then decide the Master Key's turn.",
+   "intro": "The tide is rising in the cave. Find the sightline to the hidden lock, open its five small locks with the right keys, and turn the Master Key.",
+   "phases": [
+    "sight",
+    "locks",
+    "locks"
+   ],
+   "dialogue": {
+    "enter": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "The cave. Odette's red pin on the globe was right.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_enter_0.mp3"
+     },
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "Is the sea always this loud, or is it hurrying us?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_enter_1.mp3"
+     }
+    ],
+    "d_note": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "Line up the posts and the lighthouse. Like a ship's sightline.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_d_note_0.mp3"
+     }
+    ],
+    "wrong1": [
+     {
+      "speaker": "mara",
+      "mood": "worried",
+      "text": "That key does not fit. Read the inscription again.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_wrong1_0.mp3"
+     }
+    ],
+    "wrong2": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Every key has one power. Match the power to the words.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_wrong2_0.mp3"
+     }
+    ],
+    "wrong3": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "Dark, backwards, guests, ticking, tide. Five powers, five locks.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_wrong3_0.mp3"
+     }
+    ],
+    "hint1": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Turn until the two posts and the lighthouse stack up like a line.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_hint1_0.mp3"
+     }
+    ],
+    "hint2": [
+     {
+      "speaker": "mara",
+      "mood": "calm",
+      "text": "Think back to what each power did in its room.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_hint2_0.mp3"
+     }
+    ],
+    "hint3": [
+     {
+      "speaker": "teo",
+      "mood": "curious",
+      "text": "Lantern for dark, Mirror for backwards, Guest for guests, Quiet for ticks, Tide for the sea.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_hint3_0.mp3"
+     }
+    ],
+    "right1": [
+     {
+      "speaker": "mara",
+      "mood": "smile",
+      "text": "There. The beam found the lock.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_right1_0.mp3"
+     }
+    ],
+    "right2": [
+     {
+      "speaker": "teo",
+      "mood": "relieved",
+      "text": "All five hold. And the thirteenth key came up out of the lock.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_right2_0.mp3"
+     }
+    ],
+    "right3": [
+     {
+      "speaker": "teo",
+      "mood": "relieved",
+      "text": "It is quiet. I think it is gone.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_right3_0.mp3"
+     }
+    ],
+    "s_warden": [
+     {
+      "speaker": "warden",
+      "mood": "",
+      "text": "I only wanted to help. Turn it toward the sea, Mara. I will give you your mother. Quickly.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_s_warden_0.mp3"
+     }
+    ],
+    "s_reply": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "No. Odette told us never to believe the voice.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_s_reply_0.mp3"
+     }
+    ],
+    "s_sea": [
+     {
+      "speaker": "teo",
+      "mood": "scared",
+      "text": "It is lying! Pull it back, Mara!",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_s_sea_0.mp3"
+     }
+    ],
+    "s_seal": [
+     {
+      "speaker": "mara",
+      "mood": "determined",
+      "text": "Toward the cliff. Together, Teo.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_s_seal_0.mp3"
+     }
+    ]
+   },
+   "hotspots": [
+    {
+     "id": "r7_note",
+     "kind": "LEARN",
+     "name": "Carved note",
+     "yaw": -112,
+     "pitch": -3,
+     "after": [],
+     "note": {
+      "title": "Carved Note",
+      "text": "\"Face the lamp, line the posts, and the door shows itself.\"",
+      "tag": "clue"
+     },
+     "then": [
+      "d_note"
+     ],
+     "icon": "note"
+    },
+    {
+     "id": "r7_sights",
+     "kind": "PANEL",
+     "name": "Sightline",
+     "yaw": -129,
+     "pitch": 24,
+     "after": [
+      "r7_note"
+     ],
+     "panel": "sight",
+     "noTap": true,
+     "final": true,
+     "right": "right1",
+     "points": "final"
+    },
+    {
+     "id": "r7_lock",
+     "kind": "PANEL",
+     "name": "The great lock",
+     "yaw": 0,
+     "pitch": 14,
+     "after": [
+      "r7_sights"
+     ],
+     "panel": "locks",
+     "puzzle": "locks",
+     "final": true,
+     "right": "right2",
+     "points": "final",
+     "wrongKey": "wrong"
+    },
+    {
+     "id": "r7_master",
+     "kind": "AUTO",
+     "name": "Master Key",
+     "yaw": 0,
+     "pitch": 14,
+     "after": [
+      "r7_lock"
+     ],
+     "key": "k_master",
+     "points": null,
+     "text": "The five small locks hold. The great lock hums, and the thirteenth key rises to the centre keyhole: the Master Key."
+    },
+    {
+     "id": "r7_turn",
+     "kind": "PANEL",
+     "name": "The Master Key",
+     "yaw": 0,
+     "pitch": 14,
+     "after": [
+      "r7_master"
+     ],
+     "panel": "turn",
+     "puzzle": "turn",
+     "final": true,
+     "right": "right3",
+     "preRight": [
+      "s_seal"
+     ],
+     "points": "final"
+    },
+    {
+     "id": "r7_choice",
+     "kind": "PANEL",
+     "name": "Closing choice",
+     "yaw": 0,
+     "pitch": 14,
+     "after": [
+      "r7_turn"
+     ],
+     "panel": "choice"
+    }
+   ]
+  }
+ ],
+ "endings": {
+  "L": {
+   "name": "The Tide Took the House",
+   "choice": "",
+   "fx": "tide",
+   "lines": [
+    {
+     "speaker": "narrator",
+     "mood": "",
+     "text": "The Master Key turned toward the sea. The great lock groaned, and every hook on it went dark.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_L_0.mp3"
+    },
+    {
+     "speaker": "warden",
+     "mood": "",
+     "text": "Thank you, Mara. Thirteen doors, and not one of them can hold me now.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_L_1.mp3"
+    },
+    {
+     "speaker": "teo",
+     "mood": "scared",
+     "text": "No. No, no. Mara, the water is coming in!",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_L_2.mp3"
+    },
+    {
+     "speaker": "narrator",
+     "mood": "",
+     "text": "Ink poured out of every keyhole in Wardlow House. The tide climbed the cliff, and the lamps went out one by one.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_L_3.mp3"
+    },
+    {
+     "speaker": "narrator",
+     "mood": "",
+     "text": "By morning the manor stood empty. Only the sound of the sea remained, and a voice in the keyholes, quietly laughing.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_L_4.mp3"
+    }
+   ]
+  },
+  "A": {
+   "name": "The Door Held",
+   "choice": "Lock it all away",
+   "fx": "choiceA",
+   "lines": [
+    {
+     "speaker": "narrator",
+     "mood": "",
+     "text": "The Master Key turned. All thirteen hooks glowed. The Warden's whispers faded into the sea.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_A_0.mp3"
+    },
+    {
+     "speaker": "mara",
+     "mood": "calm",
+     "text": "We should let the house sleep now.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_A_1.mp3"
+    },
+    {
+     "speaker": "teo",
+     "mood": "joking",
+     "text": "Next time we inherit a house, I want one with fewer keyholes.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_A_2.mp3"
+    },
+    {
+     "speaker": "narrator",
+     "mood": "",
+     "text": "The siblings climbed back to the hall, and the door was locked behind them.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_A_3.mp3"
+    },
+    {
+     "speaker": "narrator",
+     "mood": "",
+     "text": "But out on the cliff, in the dark, a fourteenth keyhole opened its eye.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_A_4.mp3"
+    }
+   ]
+  },
+  "B": {
+   "name": "The Hook That Stayed Empty",
+   "choice": "Keep the Memory Key",
+   "fx": "choiceB",
+   "lines": [
+    {
+     "speaker": "narrator",
+     "mood": "",
+     "text": "The Master Key turned. Twelve hooks glowed. One stayed empty.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_B_0.mp3"
+    },
+    {
+     "speaker": "mara",
+     "mood": "smile",
+     "text": "I remember her laugh. I will keep that, whatever it costs.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_B_1.mp3"
+    },
+    {
+     "speaker": "teo",
+     "mood": "relieved",
+     "text": "Then we keep watch together.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_B_2.mp3"
+    },
+    {
+     "speaker": "narrator",
+     "mood": "",
+     "text": "The Warden was sealed, but a thin line of violet light still showed beneath the door.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_B_3.mp3"
+    },
+    {
+     "speaker": "narrator",
+     "mood": "",
+     "text": "And out on the cliff, in the dark, a fourteenth keyhole opened its eye.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/end_B_4.mp3"
+    }
+   ]
+  }
+ }
+}
