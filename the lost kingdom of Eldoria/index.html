@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="description" content="A dark high-fantasy 360-degree quest. Seven rooms, ten minutes, one throne.">
+<meta name="theme-color" content="#1a1f28">
+<meta property="og:title" content="The Lost Kingdom of Eldoria">
+<meta property="og:description" content="A dark high-fantasy 360-degree quest. Seven rooms, ten minutes, one throne.">
+<title>The Lost Kingdom of Eldoria</title>
+<link rel="stylesheet" href="vendor/pannellum.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage"><div id="pano"></div><div id="spots"></div><div id="fx"></div></div>
+<div id="frost"></div><div id="flash"></div><div id="hurt"></div>
+
+<div id="hud" hidden>
+  <button id="bookBtn" class="btn hudbtn" data-u="book"></button>
+  <div id="hudRight">
+    <button id="pauseBtn" class="btn hudbtn" aria-label="Pause">II</button>
+    <button id="hintBtn" class="btn hudbtn"><span data-u="hint"></span> <b id="hintN">3</b></button>
+    <div id="renown" class="stat"><small data-u="renown"></small><b id="scoreN">0</b></div>
+    <div id="clock" class="stat"><small data-u="clock"></small><b id="timeN">10:00</b></div>
+  </div>
+  <div id="objective"></div>
+  <div id="strip"></div>
+</div>
+
+<div id="battleHud" hidden></div>
+<div id="s7hud" hidden></div>
+<button id="next" class="btn big" hidden></button>
+<button id="choiceBtn" class="btn big" hidden></button>
+<button id="courtBtn" class="btn big" hidden></button>
+
+<div id="catch" hidden></div>
+<div id="speech" hidden>
+  <div class="port"></div>
+  <div class="said"><div class="who"></div><div class="line"></div><div class="tap"></div></div>
+  <button class="btn skip" data-u="skip"></button>
+</div>
+
+<div id="panel" hidden><div class="pbox"><button class="x" aria-label="Close">&#10005;</button><h2 id="ptitle"></h2><div id="pbody"></div></div></div>
+<div id="book" hidden><div class="pbox"><button class="x" aria-label="Close">&#10005;</button><h2 data-u="book"></h2><div id="tabs"></div><div id="bookBody"></div></div></div>
+
+<div id="tut" hidden><div class="card"><h3></h3><p></p><div class="row"><button class="btn" id="tutSkip" data-u="skip"></button><span class="dots"></span><button class="btn primary" id="tutNext"></button></div></div></div>
+
+<div id="info" hidden><div class="infoText"><h1></h1><div class="paras"></div><button class="btn primary big" id="infoGo"></button></div></div>
+<div id="choiceScreen" hidden><button class="x" aria-label="Close">&#10005;</button><div class="cs-in"><h2></h2><p></p><div class="cs-cards"></div></div><div class="cs-wipe"></div></div>
+<div id="cine" hidden><div class="fxlayer"></div><div class="beat"></div><div class="tap"></div><button class="btn skip" data-u="skip"></button></div>
+<div id="heroes" hidden><div class="hero l"></div><div class="hero r"></div></div>
+
+<div id="pausemenu" hidden><div class="pbox">
+  <h2 data-u="paused"></h2>
+  <button class="btn big" id="pmResume"></button><button class="btn big" id="pmBook"></button>
+  <button class="btn big" id="pmMusic"></button><button class="btn big" id="pmFx"></button><button class="btn big" id="pmVoice"></button><button class="btn big" id="pmRestart"></button>
+</div></div>
+<div id="oathScreen" hidden><div class="beam"></div><div class="mast"><div class="pole"><i class="fin"></i></div><div class="flag"></div></div><div class="words"><h2></h2><p></p></div><small class="tap"></small></div>
+<div id="end" hidden><div class="endbox"></div></div>
+<div id="start"><div class="startText"><h1 id="gameTitle"></h1><p id="tapText"></p></div></div>
+<div id="toast" hidden></div>
+<div id="fade"></div>
+<div id="dbg" hidden></div>
+
+<script src="vendor/pannellum.js"></script>
+<script src="rules.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

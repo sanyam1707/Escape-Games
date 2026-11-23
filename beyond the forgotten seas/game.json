@@ -1,0 +1,2872 @@
+{
+ "config": {
+  "timerSeconds": 420,
+  "lockoutMs": 3000,
+  "scores": {
+   "item": 5,
+   "secret": 5,
+   "room": 30,
+   "lock": 50,
+   "perSecond": 1,
+   "wrong": 10,
+   "hint": 25
+  },
+  "hintsPerRoom": 2,
+  "idleSeconds": [
+   20,
+   40
+  ],
+  "blurPx": 6,
+  "sharpenMs": 1200,
+  "accents": {
+   "amber": "#E8A33D",
+   "rust": "#B5523B",
+   "inkBlue": "#3E5C8A",
+   "violet": "#7A5CD6",
+   "cyan": "#4FB8B0",
+   "coral": "#E86F8A",
+   "paleGold": "#F2E3A2"
+  },
+  "inkMs": 2500,
+  "flashMs": 600,
+  "flyMs": 700,
+  "fadeMs": 450,
+  "chord": [
+   262,
+   330,
+   392,
+   523
+  ],
+  "knockHz": 110,
+  "knockGap": 0.28,
+  "knockPause": 0.6,
+  "jigsawOrder": [
+   3,
+   0,
+   5,
+   2,
+   4,
+   1
+  ],
+  "musicVolume": 0.22,
+  "musicDuck": 0.22
+ },
+ "speakers": {
+  "juno": {
+   "name": "Juno",
+   "pitch": 1.2,
+   "rate": 1.05,
+   "color": "#2F8F8A"
+  },
+  "pip": {
+   "name": "Pip",
+   "pitch": 1.4,
+   "rate": 1.15,
+   "color": "#C9A24B"
+  },
+  "vask": {
+   "name": "Vask",
+   "pitch": 0.7,
+   "rate": 0.9,
+   "color": "#6B6F7A",
+   "bust": "vask_calm"
+  },
+  "harl": {
+   "name": "Harl",
+   "pitch": 0.85,
+   "rate": 0.95,
+   "color": "#3E5C8A",
+   "bust": "harl_strict"
+  },
+  "narrator": {
+   "name": "",
+   "pitch": 1.0,
+   "rate": 0.95,
+   "color": "#0F2233"
+  }
+ },
+ "ui": {
+  "title": "Beyond the Forgotten Seas",
+  "tapToStart": "Tap to start",
+  "mission": {
+   "kicker": "THE PALE EDGE",
+   "heading": "Beyond the Forgotten Seas",
+   "paragraphs": [
+    "Every sea chart in the Brightwater ends at the same blank band, the Pale Edge.",
+    "Juno Tidewell's grandmother left her a chart that is still blank. Pip says it is a Living Chart, and it inks itself when its owner understands the sea.",
+    "You sail beside Juno and Pip. Solve each place, redraw the chart and open the Edge Gate before the tide turns. You have seven minutes."
+   ],
+   "button": "Begin",
+   "audioFile": "assets/audio/voice/mission_0.mp3"
+  },
+  "tutorial": [
+   {
+    "target": null,
+    "text": "Drag to look all the way around. Every room is a full circle."
+   },
+   {
+    "target": null,
+    "text": "Tap objects to look at them. Listen to Pip and Juno, they drop hints. Things you pick up go into your Book."
+   },
+   {
+    "target": "#btn-book",
+    "text": "This is your Book. It holds the Chart and Rules, Clues and the tools for this room."
+   },
+   {
+    "target": "#compass",
+    "text": "The Drift Compass needle swings toward the next thing to do. It is free."
+   },
+   {
+    "target": "#btn-pause",
+    "text": "Every room has one puzzle. A wrong answer costs a few Fortune and a short wait. Close any puzzle with the X. Closing is free."
+   },
+   {
+    "target": "#hud-top",
+    "text": "Fortune is your score. Each room has two hints. A hint costs Fortune and the clock keeps running while it is spoken. You have seven minutes in all. Pause stops the clock."
+   }
+  ],
+  "buttons": {
+   "next": "Next",
+   "skip": "Skip",
+   "close": "Close",
+   "resume": "Resume",
+   "quit": "Quit",
+   "playAgain": "Play again",
+   "tryAgain": "Try again"
+  },
+  "hud": {
+   "fortune": "Fortune",
+   "book": "Book",
+   "chart": "Chart",
+   "pause": "Pause"
+  },
+  "pause": {
+   "title": "Paused",
+   "narrationOn": "Narration: on",
+   "narrationOff": "Narration: off",
+   "musicOn": "Music: on",
+   "musicOff": "Music: off"
+  },
+  "toasts": {
+   "turnAround": "Try turning around. Drag to look around.",
+   "saved": "Saved to your notes",
+   "savedItem": "Saved to your Items",
+   "wayForward": "A way forward",
+   "soon": "This part is built in milestone 2.",
+   "noHold": "Hold the right tool from your Book first.",
+   "wrongTarget": "Nothing happens.",
+   "noHints": "No hints left in this room.",
+   "lockOpen": "The Book is closed while you choose.",
+   "ring": [
+    "The first ring glows. The gate bells ring.",
+    "The second ring glows. The ship settles higher.",
+    "The third ring glows. A beam bends through the arch."
+   ],
+   "holdSet": "Holding",
+   "full": "The hold is full.",
+   "noFortune": "Not enough Fortune for a hint."
+  },
+  "end": {
+   "timeUp": {
+    "title": "The tide turned too soon",
+    "lines": [
+     {
+      "who": "pip",
+      "text": "We were so close."
+     },
+     {
+      "who": "juno",
+      "text": "Let's try again, faster."
+     }
+    ],
+    "rules": "Sea Rules learned",
+    "fortune": "Fortune so far"
+   },
+   "win": {
+    "title": "You sailed beyond the Forgotten Seas",
+    "items": "Items",
+    "secrets": "Secret details",
+    "rooms": "Room rewards",
+    "locks": "Final locks",
+    "time": "Time bonus",
+    "penalties": "Penalties",
+    "total": "Fortune",
+    "timeLeft": "Time left",
+    "close": "Close"
+   }
+  },
+  "labels": {
+   "findStrip": "Find in this room",
+   "hint": "Hint",
+   "holding": "Holding",
+   "noItems": "Nothing here yet.",
+   "noClues": "Nothing read yet.",
+   "noRules": "No Sea Rules written yet.",
+   "tabs": [
+    "Chart and Rules",
+    "Clues",
+    "Items"
+   ],
+   "tapRule": "Tap a Rule to hear it read.",
+   "chooseRule": "Choose a Rule",
+   "answer": "Answer",
+   "replay": "Replay",
+   "clear": "Clear",
+   "confirm": "Confirm",
+   "setSail": "Set Sail",
+   "fire": "Fire Beacon",
+   "markMode": "Mark stones",
+   "turn": "Turn over",
+   "secret": "Secret found",
+   "weight": "Weight",
+   "water": "Water days",
+   "food": "Food days",
+   "oil": "Lamp oil",
+   "slots": "Pieces placed",
+   "lockWait": "Wait...",
+   "gate": "The gate says:",
+   "cont": "Continue",
+   "paleEdge": "The Pale Edge",
+   "yourWord": "Your word",
+   "seaRules": "Sea Rules",
+   "rulesLearned": "Sea Rules learned",
+   "openBook": "Open your Book to read it.",
+   "tray": "Torn pieces",
+   "signal": "The light shows",
+   "tapContinue": "Tap to continue",
+   "tapClose": "Tap to close"
+  }
+ },
+ "rooms": [
+  {
+   "id": "r1",
+   "name": "The Gull's Promise",
+   "panorama": "assets/rooms/room1.webp",
+   "accent": "#E8A33D",
+   "objective": "Answer the light on the rock.",
+   "enter": "r1.enter",
+   "idle": "r1.idle",
+   "right": "r1.right",
+   "bank": "r1",
+   "find": [
+    "r1_spyglass",
+    "r1_rope"
+   ],
+   "items": [
+    {
+     "id": "spyglass",
+     "name": "Brass spyglass",
+     "art": "item_spyglass"
+    },
+    {
+     "id": "fuse",
+     "name": "Fuse cord",
+     "art": "item_fuse"
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "r1_dory",
+     "kind": "LEARN",
+     "yaw": -139,
+     "pitch": 17,
+     "after": [],
+     "lines": [
+      "r1.dory"
+     ],
+     "card": {
+      "title": "Dory the figurehead",
+      "text": "A carved gull with a chipped wing and amber eyes. She nods when you are right."
+     },
+     "hint": "Say hello to Dory at the bow first.",
+     "hintAudio": "assets/audio/voice/hint_r1_dory.mp3"
+    },
+    {
+     "id": "r1_spyglass",
+     "kind": "FIND",
+     "yaw": -70,
+     "pitch": 9,
+     "after": [
+      "r1_dory"
+     ],
+     "lines": [
+      "r1.findSpyglass"
+     ],
+     "card": {
+      "title": "Brass spyglass",
+      "text": "It brings far things close. Hold it from your Book to use it."
+     },
+     "item": "spyglass",
+     "hint": "A brass spyglass hangs on a hook by the mast.",
+     "hintAudio": "assets/audio/voice/hint_r1_spyglass.mp3"
+    },
+    {
+     "id": "r1_bellInspect",
+     "kind": "INSPECT",
+     "yaw": -22,
+     "pitch": 42,
+     "after": [
+      "r1_spyglass"
+     ],
+     "lines": [
+      "r1.inspectBells"
+     ],
+     "card": {
+      "title": "Bell rack",
+      "text": ""
+     },
+     "views": [
+      {
+       "art": "ins_bells_1",
+       "title": "Bell rack",
+       "text": "Three bells: low with an amber ribbon, middle with green, high with red."
+      },
+      {
+       "art": "ins_bells_2",
+       "title": "Brass plate",
+       "text": "Answer as you are answered.",
+       "plate": true
+      }
+     ],
+     "secret": {
+      "line": "r1.secretPlate"
+     },
+     "hint": "Take a close look at the bell rack on the mast.",
+     "hintAudio": "assets/audio/voice/hint_r1_bellInspect.mp3"
+    },
+    {
+     "id": "r1_rope",
+     "kind": "FIND",
+     "yaw": 65,
+     "pitch": -51,
+     "after": [
+      "r1_bellInspect"
+     ],
+     "lines": [
+      "r1.findFuse"
+     ],
+     "card": {
+      "title": "Fuse cord",
+      "text": "A short coil of fuse cord. Hold it from your Book to use it."
+     },
+     "item": "fuse",
+     "hint": "The coiled ropes by the rail might hide a fuse cord.",
+     "hintAudio": "assets/audio/voice/hint_r1_rope.mp3"
+    },
+    {
+     "id": "r1_light",
+     "kind": "USE",
+     "yaw": 176,
+     "pitch": 11,
+     "after": [
+      "r1_rope"
+     ],
+     "lines": [
+      "r1.light"
+     ],
+     "card": {
+      "title": "The distant light",
+      "text": "Through the spyglass the light flashes five times: amber, red, red, green, amber."
+     },
+     "use": "spyglass",
+     "effect": "flashes",
+     "hint": "Open the Book, hold the spyglass, then tap that blinking light.",
+     "hintAudio": "assets/audio/voice/hint_r1_light.mp3"
+    },
+    {
+     "id": "r1_cannon",
+     "kind": "USE",
+     "yaw": 108,
+     "pitch": -26,
+     "after": [
+      "r1_light"
+     ],
+     "lines": [
+      "r1.cannonArmed"
+     ],
+     "card": {
+      "title": "Signal cannon",
+      "text": "The fuse is set. The old cannon is armed."
+     },
+     "use": "fuse",
+     "hint": "Open the Book, hold the fuse cord, then tap the old cannon.",
+     "hintAudio": "assets/audio/voice/hint_r1_cannon.mp3"
+    },
+    {
+     "id": "r1_bells",
+     "kind": "PANEL",
+     "yaw": -22,
+     "pitch": 22,
+     "after": [
+      "r1_light",
+      "r1_cannon"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Bell rack puzzle",
+      "text": ""
+     },
+     "panel": "pp_bells",
+     "solve": {
+      "reward": true
+     },
+     "hint": "The bell rack is ready. Tap it and answer the light.",
+     "hintAudio": "assets/audio/voice/hint_r1_bells.mp3"
+    }
+   ],
+   "exit": {
+    "id": "ex1",
+    "yaw": -166,
+    "pitch": -24,
+    "to": "r2",
+    "hint": "The way out is open. Head for the exit.",
+    "hintAudio": "assets/audio/voice/hint_ex1.mp3"
+   }
+  },
+  {
+   "id": "r2",
+   "name": "The Drowned Anchor",
+   "panorama": "assets/rooms/room2.webp",
+   "accent": "#B5523B",
+   "objective": "Stock the hold for the voyage.",
+   "enter": "r2.enter",
+   "idle": "r2.idle",
+   "right": "r2.right",
+   "bank": "r2",
+   "find": [
+    "r2_ledger",
+    "r2_slate"
+   ],
+   "items": [
+    {
+     "id": "ledger",
+     "name": "Ship's ledger",
+     "art": "item_ledger"
+    },
+    {
+     "id": "slate",
+     "name": "Tally slate",
+     "art": "item_slate"
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "r2_posters",
+     "kind": "LEARN",
+     "yaw": 73,
+     "pitch": 27,
+     "after": [],
+     "lines": [
+      "r2.posters",
+      "r2.vaskPoster"
+     ],
+     "card": {
+      "title": "Wanted posters",
+      "text": "Juno's poster reads: sails without a permit. Vask's reads: wanted for borrowing three lighthouses."
+     },
+     "hint": "The wanted posters on the wall are worth a read.",
+     "hintAudio": "assets/audio/voice/hint_r2_posters.mp3"
+    },
+    {
+     "id": "r2_chalkboard",
+     "kind": "INSPECT",
+     "yaw": 73,
+     "pitch": 3,
+     "after": [
+      "r2_posters"
+     ],
+     "lines": [
+      "r2.chalkboard"
+     ],
+     "card": {
+      "title": "Chalkboard",
+      "text": ""
+     },
+     "views": [
+      {
+       "art": "ins_chalkboard",
+       "title": "The Pale Road, Voyage Needs",
+       "text": "6 days at sea.\nEach day needs 1 water and 1 food.\nThe dark road needs 2 lamp oil.\nThe hold carries 20 weight, no more."
+      }
+     ],
+     "hint": "There is a chalkboard behind the bar. It lists what the voyage needs.",
+     "hintAudio": "assets/audio/voice/hint_r2_chalkboard.mp3"
+    },
+    {
+     "id": "r2_ledger",
+     "kind": "FIND",
+     "yaw": -22,
+     "pitch": 10,
+     "after": [
+      "r2_chalkboard"
+     ],
+     "lines": [
+      "r2.ledger"
+     ],
+     "card": {
+      "title": "Ship's ledger",
+      "text": "A worn ledger from behind the bar. Open your Book and tap it to read it."
+     },
+     "item": "ledger",
+     "hint": "Something is tucked behind the bar. A ledger, I think.",
+     "hintAudio": "assets/audio/voice/hint_r2_ledger.mp3"
+    },
+    {
+     "id": "r2_ledgerPage",
+     "kind": "INSPECT",
+     "yaw": null,
+     "pitch": null,
+     "after": [
+      "r2_ledger"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Ship's ledger",
+      "text": ""
+     },
+     "fromItem": "ledger",
+     "views": [
+      {
+       "art": "ins_ledger_1",
+       "title": "Ledger cover",
+       "text": "The hold is stamped 20."
+      },
+      {
+       "art": "ins_ledger_2",
+       "title": "Ledger page",
+       "text": "Salt fish keeps. Biscuits crumble.",
+       "plate": true
+      }
+     ],
+     "secret": {
+      "line": "r2.secretNote"
+     }
+    },
+    {
+     "id": "r2_crates",
+     "kind": "INSPECT",
+     "yaw": 120,
+     "pitch": -13,
+     "after": [
+      "r2_ledgerPage"
+     ],
+     "lines": [
+      "r2.crates"
+     ],
+     "card": {
+      "title": "Crates",
+      "text": ""
+     },
+     "views": [
+      {
+       "art": "ins_crates",
+       "title": "Crate tags",
+       "text": "Water barrel: weight 3, gives 2 days of water.\nSalt-fish crate: weight 3, gives 2 days of food.\nBiscuit sack: weight 2, gives 1 day of food.\nLamp oil flask: weight 1, gives 1 lamp oil.\nRum barrel: weight 4, nothing the road needs.\nSpare anchor: weight 5, nothing the road needs."
+      }
+     ],
+     "hint": "Open the Book and read the ledger, then check the crates by the door.",
+     "hintAudio": "assets/audio/voice/hint_r2_crates.mp3"
+    },
+    {
+     "id": "r2_slate",
+     "kind": "FIND",
+     "yaw": 160,
+     "pitch": -40,
+     "after": [
+      "r2_crates"
+     ],
+     "lines": [
+      "r2.findSlate"
+     ],
+     "card": {
+      "title": "Tally slate",
+      "text": "A slate with chalk. Hold it from your Book to use it."
+     },
+     "item": "slate",
+     "hint": "A tally slate sits on a barrel nearby.",
+     "hintAudio": "assets/audio/voice/hint_r2_slate.mp3"
+    },
+    {
+     "id": "r2_hold",
+     "kind": "PANEL",
+     "yaw": 98,
+     "pitch": -22,
+     "after": [
+      "r2_slate"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Pack the hold",
+      "text": ""
+     },
+     "panel": "pp_hold",
+     "use": "slate",
+     "solve": {
+      "reward": true
+     },
+     "hint": "Open the Book, hold the slate, then tap the crates.",
+     "hintAudio": "assets/audio/voice/hint_r2_hold.mp3"
+    }
+   ],
+   "exit": {
+    "id": "ex2",
+    "yaw": 142,
+    "pitch": 12,
+    "to": "r3",
+    "hint": "The way out is open. Head for the exit.",
+    "hintAudio": "assets/audio/voice/hint_ex2.mp3"
+   }
+  },
+  {
+   "id": "r3",
+   "name": "The chart house",
+   "panorama": "assets/rooms/room3.webp",
+   "accent": "#3E5C8A",
+   "objective": "Rebuild the torn chart and find the true route.",
+   "enter": "r3.enter",
+   "idle": "r3.idle",
+   "right": "r3.right",
+   "bank": "r3",
+   "find": [
+    "r3_drawer",
+    "r3_pen"
+   ],
+   "items": [
+    {
+     "id": "pieces",
+     "name": "Torn chart pieces",
+     "art": "item_pieces"
+    },
+    {
+     "id": "pen",
+     "name": "Ink pen",
+     "art": "item_pen"
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "r3_drawer",
+     "kind": "FIND",
+     "yaw": 23,
+     "pitch": -51,
+     "after": [],
+     "lines": [
+      "r3.findPieces"
+     ],
+     "card": {
+      "title": "Torn chart pieces",
+      "text": "Six torn pieces of one chart."
+     },
+     "item": "pieces",
+     "hint": "Check the drawer for torn paper.",
+     "hintAudio": "assets/audio/voice/hint_r3_drawer.mp3"
+    },
+    {
+     "id": "r3_pen",
+     "kind": "FIND",
+     "yaw": 76,
+     "pitch": -18,
+     "after": [
+      "r3_drawer"
+     ],
+     "lines": [
+      "r3.findPen"
+     ],
+     "card": {
+      "title": "Ink pen",
+      "text": "A black pen with a feather quill. Hold it from your Book to use it."
+     },
+     "item": "pen",
+     "hint": "There is an ink pen by the inkwell.",
+     "hintAudio": "assets/audio/voice/hint_r3_pen.mp3"
+    },
+    {
+     "id": "r3_table",
+     "kind": "INSPECT",
+     "yaw": 30,
+     "pitch": -13,
+     "after": [
+      "r3_pen"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Drafting table",
+      "text": ""
+     },
+     "views": [
+      {
+       "art": "ins_table",
+       "title": "Drafting table",
+       "text": "A blank table top with brass dividers and a pencil."
+      },
+      {
+       "art": "ins_table",
+       "title": "Under the dividers",
+       "text": "Rumours float. Truth is inked.",
+       "plate": true
+      }
+     ],
+     "secret": {
+      "line": "r3.secretNote"
+     },
+     "hint": "Look closely at the drafting table.",
+     "hintAudio": "assets/audio/voice/hint_r3_table.mp3"
+    },
+    {
+     "id": "r3_legend",
+     "kind": "LEARN",
+     "yaw": 56,
+     "pitch": 34,
+     "after": [
+      "r3_table"
+     ],
+     "lines": [
+      "r3.legend"
+     ],
+     "card": {
+      "title": "Legend scroll",
+      "text": "Solid ink: a true line.\nDotted ink: a rumour.\nThe true line visits every island once and ends at the Pale Edge."
+     },
+     "hint": "A legend scroll is pinned beside the table.",
+     "hintAudio": "assets/audio/voice/hint_r3_legend.mp3"
+    },
+    {
+     "id": "r3_jigsaw",
+     "kind": "PANEL",
+     "yaw": -5,
+     "pitch": -16,
+     "after": [
+      "r3_legend"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Rebuild the chart",
+      "text": ""
+     },
+     "panel": "pp_jigsaw",
+     "solve": {
+      "line": "r3.jigsawDone"
+     },
+     "hint": "Tap the chart on the table and piece it together.",
+     "hintAudio": "assets/audio/voice/hint_r3_jigsaw.mp3"
+    },
+    {
+     "id": "r3_route",
+     "kind": "PANEL",
+     "yaw": 50,
+     "pitch": -22,
+     "after": [
+      "r3_jigsaw"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Trace the true line",
+      "text": ""
+     },
+     "panel": "pp_route",
+     "use": "pen",
+     "solve": {
+      "reward": true
+     },
+     "hint": "Open the Book, hold the ink pen, then tap the rebuilt chart.",
+     "hintAudio": "assets/audio/voice/hint_r3_route.mp3"
+    }
+   ],
+   "exit": {
+    "id": "ex3",
+    "yaw": -172,
+    "pitch": -8,
+    "to": "r4",
+    "hint": "The way out is open. Head for the exit.",
+    "hintAudio": "assets/audio/voice/hint_ex3.mp3"
+   }
+  },
+  {
+   "id": "r4",
+   "name": "Stormwatch lighthouse",
+   "panorama": "assets/rooms/room4.webp",
+   "accent": "#7A5CD6",
+   "objective": "Light the lamp and send the beam to the beacon window.",
+   "enter": "r4.enter",
+   "idle": "r4.idle",
+   "right": "r4.right",
+   "bank": "r4",
+   "find": [
+    "r4_cloth",
+    "r4_chest"
+   ],
+   "items": [
+    {
+     "id": "cloth",
+     "name": "Lens cloth",
+     "art": "item_cloth"
+    },
+    {
+     "id": "key",
+     "name": "Lamp key",
+     "art": "item_key"
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "r4_cloth",
+     "kind": "FIND",
+     "yaw": -138,
+     "pitch": 20,
+     "after": [],
+     "lines": [
+      "r4.findCloth"
+     ],
+     "card": {
+      "title": "Lens cloth",
+      "text": "A folded cloth for polishing glass."
+     },
+     "item": "cloth",
+     "hint": "A lens cloth hangs on a hook by the wall.",
+     "hintAudio": "assets/audio/voice/hint_r4_cloth.mp3"
+    },
+    {
+     "id": "r4_chest",
+     "kind": "FIND",
+     "yaw": 168,
+     "pitch": -31,
+     "after": [
+      "r4_cloth"
+     ],
+     "lines": [
+      "r4.findKey"
+     ],
+     "card": {
+      "title": "Lamp key",
+      "text": "An old brass lamp key from the sea-chest."
+     },
+     "item": "key",
+     "hint": "That sea-chest might hold the lamp key.",
+     "hintAudio": "assets/audio/voice/hint_r4_chest.mp3"
+    },
+    {
+     "id": "r4_lamp",
+     "kind": "USE",
+     "yaw": -165,
+     "pitch": 13,
+     "after": [
+      "r4_chest"
+     ],
+     "lines": [
+      "r4.lampLit"
+     ],
+     "card": {
+      "title": "The great lamp",
+      "text": "The key turns. The lamp lights and its beam runs along the middle row, then stops at the fallen pillar."
+     },
+     "use": "key",
+     "hint": "Open the Book, hold the lamp key, then tap the great lamp.",
+     "hintAudio": "assets/audio/voice/hint_r4_lamp.mp3"
+    },
+    {
+     "id": "r4_window",
+     "kind": "USE",
+     "yaw": 106,
+     "pitch": 30,
+     "after": [
+      "r4_lamp"
+     ],
+     "lines": [
+      "r4.window"
+     ],
+     "card": {
+      "title": "Beacon window",
+      "text": "The glass clears. This is where the beam must go."
+     },
+     "use": "cloth",
+     "hint": "Open the Book, hold the lens cloth, then tap the beacon window.",
+     "hintAudio": "assets/audio/voice/hint_r4_window.mp3"
+    },
+    {
+     "id": "r4_logbook",
+     "kind": "INSPECT",
+     "yaw": 148,
+     "pitch": 5,
+     "after": [
+      "r4_window"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Keeper's logbook",
+      "text": ""
+     },
+     "views": [
+      {
+       "art": "ins_logbook",
+       "title": "Keeper's logbook",
+       "text": "Pages of weather notes and tide times."
+      },
+      {
+       "art": "ins_logbook",
+       "title": "Last page",
+       "text": "Stone does not bend light. Only mirrors do.",
+       "plate": true
+      }
+     ],
+     "secret": {
+      "line": "r4.secretNote"
+     },
+     "hint": "The keeper's logbook lies on the desk.",
+     "hintAudio": "assets/audio/voice/hint_r4_logbook.mp3"
+    },
+    {
+     "id": "r4_diagram",
+     "kind": "LEARN",
+     "yaw": 155,
+     "pitch": 34,
+     "after": [
+      "r4_logbook"
+     ],
+     "lines": [
+      "r4.diagram"
+     ],
+     "card": {
+      "title": "Keeper's wall diagram",
+      "text": "A slash mirror turns right-moving light up, and up-moving light right.\nA backslash mirror turns right-moving light down, and down-moving light right."
+     },
+     "hint": "There is a diagram painted on the wall.",
+     "hintAudio": "assets/audio/voice/hint_r4_diagram.mp3"
+    },
+    {
+     "id": "r4_mirrors",
+     "kind": "PANEL",
+     "yaw": 0,
+     "pitch": -45,
+     "after": [
+      "r4_diagram"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Mirror floor",
+      "text": ""
+     },
+     "panel": "pp_mirrors",
+     "solve": {
+      "reward": true
+     },
+     "hint": "Tap the mirrors on the floor to turn the beam.",
+     "hintAudio": "assets/audio/voice/hint_r4_mirrors.mp3"
+    }
+   ],
+   "exit": {
+    "id": "ex4",
+    "yaw": 95,
+    "pitch": -55,
+    "to": "r5",
+    "hint": "The way out is open. Head for the exit.",
+    "hintAudio": "assets/audio/voice/hint_ex4.mp3"
+   }
+  },
+  {
+   "id": "r5",
+   "name": "The whale-bone cave",
+   "panorama": "assets/rooms/room5.webp",
+   "accent": "#4FB8B0",
+   "objective": "Open the sealed exit.",
+   "enter": "r5.enter",
+   "idle": "r5.idle",
+   "right": "r5.right",
+   "bank": "r5",
+   "find": [
+    "r5_chime",
+    "r5_shells"
+   ],
+   "items": [
+    {
+     "id": "bead",
+     "name": "Sea-glass bead",
+     "art": "item_bead"
+    },
+    {
+     "id": "shells",
+     "name": "Letter shells",
+     "art": "item_shell"
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "r5_stone",
+     "kind": "LEARN",
+     "yaw": -8,
+     "pitch": 10,
+     "after": [],
+     "lines": [
+      "r5.knockStone"
+     ],
+     "card": {
+      "title": "The knocking stone",
+      "text": "It knocks: four, three, one, two. Four groups."
+     },
+     "effect": "knocks",
+     "hint": "Tap the knocking stone and count the groups.",
+     "hintAudio": "assets/audio/voice/hint_r5_stone.mp3"
+    },
+    {
+     "id": "r5_chime",
+     "kind": "FIND",
+     "yaw": -159,
+     "pitch": 30,
+     "after": [
+      "r5_stone"
+     ],
+     "lines": [
+      "r5.findBead"
+     ],
+     "card": {
+      "title": "Sea-glass bead",
+      "text": "A bead of sea glass on a thread. Hold it from your Book to use it."
+     },
+     "item": "bead",
+     "hint": "A sea-glass bead hangs on a thread.",
+     "hintAudio": "assets/audio/voice/hint_r5_chime.mp3"
+    },
+    {
+     "id": "r5_shells",
+     "kind": "FIND",
+     "yaw": -82,
+     "pitch": -4,
+     "after": [
+      "r5_chime"
+     ],
+     "lines": [
+      "r5.findShells"
+     ],
+     "card": {
+      "title": "Four letter shells",
+      "text": "Four shells marked D, E, I and T."
+     },
+     "item": "shells",
+     "hint": "Four letter shells sit on the shelf.",
+     "hintAudio": "assets/audio/voice/hint_r5_shells.mp3"
+    },
+    {
+     "id": "r5_slab",
+     "kind": "INSPECT",
+     "yaw": 65,
+     "pitch": 0,
+     "after": [
+      "r5_shells"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Carved bone slab",
+      "text": ""
+     },
+     "views": [
+      {
+       "art": "ins_slab_1",
+       "title": "Carved slab",
+       "text": "1 = D\n2 = E\n3 = I\n4 = T"
+      },
+      {
+       "art": "ins_slab_2",
+       "title": "Side carving",
+       "text": "First the ear, then the hand.",
+       "plate": true
+      }
+     ],
+     "secret": {
+      "line": "r5.secretCarving"
+     },
+     "hint": "Study the carved bone slab.",
+     "hintAudio": "assets/audio/voice/hint_r5_slab.mp3"
+    },
+    {
+     "id": "r5_chalk",
+     "kind": "LEARN",
+     "yaw": 120,
+     "pitch": -1,
+     "after": [
+      "r5_slab"
+     ],
+     "lines": [
+      "r5.vaskNote"
+     ],
+     "card": {
+      "title": "Vask's shortcut",
+      "text": "Chalked on the rock: 1 = T, 2 = I, 3 = D, 4 = E."
+     },
+     "hint": "There is chalk writing on a rock.",
+     "hintAudio": "assets/audio/voice/hint_r5_chalk.mp3"
+    },
+    {
+     "id": "r5_pool",
+     "kind": "USE",
+     "yaw": -54,
+     "pitch": -57,
+     "after": [
+      "r5_chime"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Tide pool",
+      "text": "The bead sinks. The knock groups shine as rings on the water. A free aid."
+     },
+     "use": "bead",
+     "effect": "pool",
+     "optional": true
+    },
+    {
+     "id": "r5_lock",
+     "kind": "PANEL",
+     "yaw": -8,
+     "pitch": 10,
+     "after": [
+      "r5_stone",
+      "r5_slab",
+      "r5_shells"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Knock lock",
+      "text": ""
+     },
+     "panel": "pp_knock",
+     "solve": {
+      "reward": true
+     },
+     "hint": "Tap the round door and answer the knocks.",
+     "hintAudio": "assets/audio/voice/hint_r5_lock.mp3"
+    }
+   ],
+   "exit": {
+    "id": "ex5",
+    "yaw": -8,
+    "pitch": 10,
+    "to": "r6",
+    "hint": "The way out is open. Head for the exit.",
+    "hintAudio": "assets/audio/voice/hint_ex5.mp3"
+   }
+  },
+  {
+   "id": "r6",
+   "name": "The coral bridge market",
+   "panorama": "assets/rooms/room6.webp",
+   "accent": "#E86F8A",
+   "objective": "Cross the coral bridge to the far side.",
+   "enter": "r6.enter",
+   "idle": "r6.idle",
+   "right": "r6.right",
+   "bank": "r6",
+   "find": [
+    "r6_lantern",
+    "r6_chalk"
+   ],
+   "items": [
+    {
+     "id": "lantern",
+     "name": "Market lantern",
+     "art": "item_lantern"
+    },
+    {
+     "id": "chalk",
+     "name": "Coral chalk",
+     "art": "item_chalk"
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "r6_lantern",
+     "kind": "FIND",
+     "yaw": -51,
+     "pitch": 40,
+     "after": [],
+     "lines": [
+      "r6.findLantern"
+     ],
+     "card": {
+      "title": "Market lantern",
+      "text": "A small lantern with a loop. Hold it from your Book to use it."
+     },
+     "item": "lantern",
+     "hint": "A market lantern hangs by the stalls.",
+     "hintAudio": "assets/audio/voice/hint_r6_lantern.mp3"
+    },
+    {
+     "id": "r6_chalk",
+     "kind": "FIND",
+     "yaw": 143,
+     "pitch": -11,
+     "after": [
+      "r6_lantern"
+     ],
+     "lines": [
+      "r6.findChalk"
+     ],
+     "card": {
+      "title": "Coral chalk",
+      "text": "A stick of coral-pink chalk."
+     },
+     "item": "chalk",
+     "hint": "Coral chalk lies on the stall.",
+     "hintAudio": "assets/audio/voice/hint_r6_chalk.mp3"
+    },
+    {
+     "id": "r6_signpost",
+     "kind": "INSPECT",
+     "yaw": -58,
+     "pitch": 52,
+     "after": [
+      "r6_chalk"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Signpost",
+      "text": ""
+     },
+     "views": [
+      {
+       "art": "ins_sign_1",
+       "title": "Signpost front",
+       "text": "A verse is carved here."
+      },
+      {
+       "art": "ins_sign_2",
+       "title": "Signpost back",
+       "text": "Every row holds a shell, a star, a fish and a wave, once each.",
+       "plate": true
+      }
+     ],
+     "secret": {
+      "line": "r6.secretCarving"
+     },
+     "hint": "Read the signpost by the bridge.",
+     "hintAudio": "assets/audio/voice/hint_r6_signpost.mp3"
+    },
+    {
+     "id": "r6_verse",
+     "kind": "LEARN",
+     "yaw": -45,
+     "pitch": 42,
+     "after": [
+      "r6_signpost"
+     ],
+     "lines": [
+      "r6.versePlate"
+     ],
+     "card": {
+      "title": "The Coral Verse",
+      "text": "One line for each stone.\n\n1 Begin where neither star nor fish nor wave will do.\n2 Then lean to the right, though not toward shell or fish.\n3 Walk straight ahead, but the star is not your friend.\n4 At the end, step left to the sleeping shell."
+     },
+     "hint": "Tap the signpost again for the verse.",
+     "hintAudio": "assets/audio/voice/hint_r6_verse.mp3"
+    },
+    {
+     "id": "r6_glow",
+     "kind": "USE",
+     "yaw": -10,
+     "pitch": -42,
+     "after": [
+      "r6_verse"
+     ],
+     "lines": [
+      "r6.glow"
+     ],
+     "card": {
+      "title": "The stones",
+      "text": "The lantern light wakes the symbols. All sixteen can be read now."
+     },
+     "use": "lantern",
+     "effect": "glow",
+     "hint": "Open the Book, hold the lantern, then tap the stones.",
+     "hintAudio": "assets/audio/voice/hint_r6_glow.mp3"
+    },
+    {
+     "id": "r6_mark",
+     "kind": "USE",
+     "yaw": 12,
+     "pitch": -44,
+     "after": [
+      "r6_glow"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Mark the stones",
+      "text": "With the chalk you can mark stones you trust. Look for the Mark button on the bridge."
+     },
+     "use": "chalk",
+     "effect": "chalk",
+     "optional": true
+    },
+    {
+     "id": "r6_bridge",
+     "kind": "PANEL",
+     "yaw": 0,
+     "pitch": -20,
+     "after": [
+      "r6_verse",
+      "r6_glow"
+     ],
+     "lines": [],
+     "card": {
+      "title": "The coral bridge",
+      "text": ""
+     },
+     "panel": "pp_bridge",
+     "solve": {
+      "reward": true
+     },
+     "hint": "Tap the bridge and choose your stones.",
+     "hintAudio": "assets/audio/voice/hint_r6_bridge.mp3"
+    }
+   ],
+   "exit": {
+    "id": "ex6",
+    "yaw": 100,
+    "pitch": 0,
+    "to": "r7",
+    "hint": "The way out is open. Head for the exit.",
+    "hintAudio": "assets/audio/voice/hint_ex6.mp3"
+   }
+  },
+  {
+   "id": "r7",
+   "name": "The Edge Gate",
+   "panorama": "assets/rooms/room7.webp",
+   "accent": "#F2E3A2",
+   "objective": "Open the Edge Gate.",
+   "enter": "r7.enter",
+   "idle": "r7.idle",
+   "right": "r7.right",
+   "bank": "r7",
+   "find": [],
+   "items": [],
+   "hotspots": [
+    {
+     "id": "r7_inscription",
+     "kind": "LEARN",
+     "yaw": 47,
+     "pitch": 40,
+     "after": [],
+     "lines": [
+      "r7.inscription"
+     ],
+     "card": {
+      "title": "Gate inscription",
+      "text": "Three locks. Three questions. Answer with what the sea taught you."
+     },
+     "hint": "Read the inscription on the gate.",
+     "hintAudio": "assets/audio/voice/hint_r7_inscription.mp3"
+    },
+    {
+     "id": "r7_chart",
+     "kind": "LEARN",
+     "yaw": -107,
+     "pitch": -26,
+     "after": [
+      "r7_inscription"
+     ],
+     "lines": [
+      "r7.chart"
+     ],
+     "card": {
+      "title": "The Living Chart",
+      "text": "The chart on its stand. Your Book will open on it."
+     },
+     "effect": "openChart",
+     "optional": true
+    },
+    {
+     "id": "r7_lock1",
+     "kind": "PANEL",
+     "yaw": 16,
+     "pitch": 28,
+     "after": [
+      "r7_inscription"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Lock ring 1",
+      "text": ""
+     },
+     "panel": "pp_lock1",
+     "solve": {
+      "lock": 1
+     },
+     "hint": "Tap the first lock ring.",
+     "hintAudio": "assets/audio/voice/hint_r7_lock1.mp3"
+    },
+    {
+     "id": "r7_lock2",
+     "kind": "PANEL",
+     "yaw": 47,
+     "pitch": 61,
+     "after": [
+      "r7_lock1"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Lock ring 2",
+      "text": ""
+     },
+     "panel": "pp_lock2",
+     "solve": {
+      "lock": 2
+     },
+     "hint": "Tap the second lock ring.",
+     "hintAudio": "assets/audio/voice/hint_r7_lock2.mp3"
+    },
+    {
+     "id": "r7_lock3",
+     "kind": "PANEL",
+     "yaw": 72,
+     "pitch": 28,
+     "after": [
+      "r7_lock2"
+     ],
+     "lines": [],
+     "card": {
+      "title": "Lock ring 3",
+      "text": ""
+     },
+     "panel": "pp_lock3",
+     "solve": {
+      "lock": 3,
+      "reward": true
+     },
+     "hint": "Tap the third lock ring.",
+     "hintAudio": "assets/audio/voice/hint_r7_lock3.mp3"
+    }
+   ]
+  }
+ ],
+ "panels": {
+  "pp_bells": {
+   "type": "bells",
+   "title": "The bell rack",
+   "bank": "r1",
+   "bells": [
+    "low",
+    "middle",
+    "high"
+   ],
+   "colors": {
+    "low": "#E8A33D",
+    "middle": "#4FA866",
+    "high": "#D8443A"
+   },
+   "freq": {
+    "low": 220,
+    "middle": 330,
+    "high": 494
+   },
+   "flashes": [
+    "low",
+    "high",
+    "high",
+    "middle",
+    "low"
+   ],
+   "answer": [
+    "low",
+    "high",
+    "high",
+    "middle",
+    "low"
+   ]
+  },
+  "pp_hold": {
+   "type": "hold",
+   "title": "Pack the hold",
+   "bank": "r2",
+   "limit": 20,
+   "needs": {
+    "water": 6,
+    "food": 6,
+    "oil": 2
+   },
+   "crates": [
+    {
+     "id": "water",
+     "name": "Water barrel",
+     "weight": 3,
+     "water": 2
+    },
+    {
+     "id": "fish",
+     "name": "Salt-fish crate",
+     "weight": 3,
+     "food": 2
+    },
+    {
+     "id": "biscuit",
+     "name": "Biscuit sack",
+     "weight": 2,
+     "food": 1
+    },
+    {
+     "id": "oil",
+     "name": "Lamp oil flask",
+     "weight": 1,
+     "oil": 1
+    },
+    {
+     "id": "rum",
+     "name": "Rum barrel",
+     "weight": 4
+    },
+    {
+     "id": "anchor",
+     "name": "Spare anchor",
+     "weight": 5
+    }
+   ],
+   "answer": {
+    "water": 3,
+    "fish": 3,
+    "oil": 2
+   }
+  },
+  "pp_jigsaw": {
+   "type": "jigsaw",
+   "title": "Rebuild the chart",
+   "bank": "r3",
+   "image": "assets/sheets/chart_map.jpg",
+   "cols": 2,
+   "rows": 3
+  },
+  "pp_route": {
+   "type": "route",
+   "title": "Trace the true line",
+   "bank": "r3",
+   "islands": [
+    {
+     "id": "saltmere",
+     "name": "Saltmere",
+     "x": 150,
+     "y": 340
+    },
+    {
+     "id": "gullrock",
+     "name": "Gullrock",
+     "x": 60,
+     "y": 250
+    },
+    {
+     "id": "ember",
+     "name": "Ember Cay",
+     "x": 240,
+     "y": 230
+    },
+    {
+     "id": "mist",
+     "name": "Mist Reef",
+     "x": 130,
+     "y": 150
+    },
+    {
+     "id": "hollow",
+     "name": "Hollow Atoll",
+     "x": 240,
+     "y": 90
+    },
+    {
+     "id": "edge",
+     "name": "Pale Edge",
+     "x": 90,
+     "y": 30
+    }
+   ],
+   "solid": [
+    [
+     "saltmere",
+     "gullrock"
+    ],
+    [
+     "gullrock",
+     "mist"
+    ],
+    [
+     "gullrock",
+     "ember"
+    ],
+    [
+     "ember",
+     "mist"
+    ],
+    [
+     "mist",
+     "hollow"
+    ],
+    [
+     "hollow",
+     "edge"
+    ]
+   ],
+   "dotted": [
+    [
+     "saltmere",
+     "ember"
+    ],
+    [
+     "ember",
+     "hollow"
+    ],
+    [
+     "gullrock",
+     "hollow"
+    ],
+    [
+     "mist",
+     "edge"
+    ]
+   ],
+   "answer": [
+    "saltmere",
+    "gullrock",
+    "ember",
+    "mist",
+    "hollow",
+    "edge"
+   ]
+  },
+  "pp_mirrors": {
+   "type": "mirrors",
+   "title": "The mirror floor",
+   "bank": "r4",
+   "cols": 4,
+   "rows": 5,
+   "lamp": 3,
+   "window": 3,
+   "pillar": [
+    3,
+    3
+   ],
+   "mirrors": [
+    {
+     "id": "M1",
+     "col": 2,
+     "row": 3,
+     "start": "\\"
+    },
+    {
+     "id": "M2",
+     "col": 2,
+     "row": 1,
+     "start": "\\"
+    },
+    {
+     "id": "M3",
+     "col": 4,
+     "row": 1,
+     "start": "/"
+    },
+    {
+     "id": "M4",
+     "col": 4,
+     "row": 3,
+     "start": "/"
+    }
+   ],
+   "answer": {
+    "M1": "/",
+    "M2": "/",
+    "M3": "\\",
+    "M4": "\\"
+   }
+  },
+  "pp_knock": {
+   "type": "knock",
+   "title": "The knock lock",
+   "bank": "r5",
+   "groups": [
+    4,
+    3,
+    1,
+    2
+   ],
+   "letters": [
+    "D",
+    "E",
+    "I",
+    "T"
+   ],
+   "answer": "TIDE"
+  },
+  "pp_bridge": {
+   "type": "bridge",
+   "title": "The coral bridge",
+   "bank": "r6",
+   "symbols": [
+    "star",
+    "shell",
+    "wave",
+    "fish"
+   ],
+   "rows": [
+    [
+     "star",
+     "shell",
+     "wave",
+     "fish"
+    ],
+    [
+     "fish",
+     "wave",
+     "star",
+     "shell"
+    ],
+    [
+     "shell",
+     "fish",
+     "wave",
+     "star"
+    ],
+    [
+     "wave",
+     "shell",
+     "star",
+     "fish"
+    ]
+   ],
+   "answer": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "pp_lock1": {
+   "type": "lock",
+   "title": "Lock ring 1",
+   "bank": "r7.lock1",
+   "lock": 1,
+   "says": "A deep bell tolls from the gate and waits for your reply. How do you reply?",
+   "answer": 0
+  },
+  "pp_lock2": {
+   "type": "lock",
+   "title": "Lock ring 2",
+   "bank": "r7.lock2",
+   "lock": 2,
+   "says": "The gate's weighing stone says your ship is too heavy for the road. What do you do?",
+   "answer": 1
+  },
+  "pp_lock3": {
+   "type": "lock",
+   "title": "Lock ring 3",
+   "bank": "r7.lock3",
+   "lock": 3,
+   "says": "A storm hides the road. The gate wants the road lit and turned the right way. What do you do?",
+   "answer": 3
+  }
+ },
+ "rules": [
+  "Answer the sea in its own rhythm.",
+  "Take only what the sea can carry.",
+  "Every torn map has one true line.",
+  "Light only travels where you turn it.",
+  "Listen before you decode.",
+  "Step only where the verse says."
+ ],
+ "dialogue": {
+  "opening": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Juno, it is blank. Your grandmother's chart is just blank paper.",
+     "action": "Pip holds up the chart. Lantern light sways.",
+     "audioFile": "assets/audio/voice/opening_0.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "Blank means ready. The sea is just waiting for us.",
+     "action": "Juno grins and points at the horizon.",
+     "audioFile": "assets/audio/voice/opening_1.mp3"
+    },
+    {
+     "who": "pip",
+     "text": "The Drift Compass is spinning toward the Pale Edge. It never does that.",
+     "action": "The compass needle wobbles and locks.",
+     "audioFile": "assets/audio/voice/opening_2.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "Then we sail past the edge. One flag, one dream, Pip.",
+     "action": "Juno raises a small patched flag.",
+     "audioFile": "assets/audio/voice/opening_3.mp3"
+    },
+    {
+     "who": "pip",
+     "text": "One flag, one dream. And one very nervous navigator.",
+     "action": "Pip raises his hand next to hers. The crew pact glows on the chart.",
+     "audioFile": "assets/audio/voice/opening_4.mp3"
+    },
+    {
+     "who": "harl",
+     "text": "Harbor Watch! A girl without a sailing permit! Stand still!",
+     "action": "A patrol lamp sweeps across the screen.",
+     "audioFile": "assets/audio/voice/opening_5.mp3"
+    },
+    {
+     "who": "pip",
+     "text": "That is us. Run for the ship!",
+     "action": "The camera swings toward the ship.",
+     "audioFile": "assets/audio/voice/opening_6.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "Come on, Dory. Let's go beyond the forgotten seas.",
+     "action": "Juno touches the figurehead. The blur sharpens.",
+     "audioFile": "assets/audio/voice/opening_7.mp3"
+    }
+   ]
+  },
+  "r1.enter": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The light on that rock is blinking at us. It wants an answer.",
+     "audioFile": "assets/audio/voice/r1_enter_0.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "Then we answer. Let's work out how.",
+     "audioFile": "assets/audio/voice/r1_enter_1.mp3"
+    }
+   ]
+  },
+  "r1.dory": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Dory nodded. I think she is judging the crew. Her eyes keep drifting to the mast.",
+     "audioFile": "assets/audio/voice/r1_dory_0.mp3"
+    }
+   ]
+  },
+  "r1.findSpyglass": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "A spyglass! And those bells on the mast keep looking at me.",
+     "audioFile": "assets/audio/voice/r1_findSpyglass_0.mp3"
+    }
+   ]
+  },
+  "r1.inspectBells": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Three bells, three ribbons. Amber, green and red. That is not an accident.",
+     "audioFile": "assets/audio/voice/r1_inspectBells_0.mp3"
+    }
+   ]
+  },
+  "r1.secretPlate": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "\"Answer as you are answered.\" Someone wanted us to find that.",
+     "audioFile": "assets/audio/voice/r1_secretPlate_0.mp3"
+    }
+   ]
+  },
+  "r1.findFuse": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "Rope and a fuse. Perfect for waking the old cannon.",
+     "audioFile": "assets/audio/voice/r1_findFuse_0.mp3"
+    }
+   ]
+  },
+  "r1.cannonArmed": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Armed. Now answer them on the bells.",
+     "audioFile": "assets/audio/voice/r1_cannonArmed_0.mp3"
+    }
+   ]
+  },
+  "r1.wrong1": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "That did not match. Watch the light again, slowly.",
+     "audioFile": "assets/audio/voice/r1_wrong1_0.mp3"
+    }
+   ]
+  },
+  "r1.wrong2": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "The ribbons, Pip! Each bell wears a colour that matches the light.",
+     "audioFile": "assets/audio/voice/r1_wrong2_0.mp3"
+    }
+   ]
+  },
+  "r1.wrong3": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Amber is the low bell, green the middle, red the high one. Match all five flashes.",
+     "audioFile": "assets/audio/voice/r1_wrong3_0.mp3"
+    }
+   ]
+  },
+  "r1.right": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "That's it! The sea answered us.",
+     "audioFile": "assets/audio/voice/r1_right_0.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "The first ink leg! And it wrote a rule. Answer the sea in its own rhythm.",
+     "audioFile": "assets/audio/voice/r1_right_1.mp3"
+    }
+   ]
+  },
+  "r1.idle": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Try the spyglass on that light.",
+     "audioFile": "assets/audio/voice/r1_idle_0.mp3"
+    }
+   ]
+  },
+  "r2.enter": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "harl",
+     "text": "(outside) Harbor Watch! Has anyone seen a girl with a blank chart and no permit?",
+     "audioFile": "assets/audio/voice/r2_enter_0.mp3"
+    },
+    {
+     "who": "pip",
+     "text": "Quiet. We stock the hold before he comes in.",
+     "audioFile": "assets/audio/voice/r2_enter_1.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "Twenty weight, six days. Let's pack smart.",
+     "audioFile": "assets/audio/voice/r2_enter_2.mp3"
+    }
+   ]
+  },
+  "r2.posters": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "Fifty coins for me? I thought I was worth more.",
+     "audioFile": "assets/audio/voice/r2_posters_0.mp3"
+    }
+   ]
+  },
+  "r2.vaskPoster": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Vask Orrin. Three lighthouses. That is the man behind us. Someone chalked our whole trip on that board.",
+     "audioFile": "assets/audio/voice/r2_vaskPoster_0.mp3"
+    }
+   ]
+  },
+  "r2.findSlate": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "A tally slate. It will add up those crates for us.",
+     "audioFile": "assets/audio/voice/r2_findSlate_0.mp3"
+    }
+   ]
+  },
+  "r2.secretNote": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Salt fish keeps. Good to know. Those crates by the door must weigh a ton.",
+     "audioFile": "assets/audio/voice/r2_secretNote_0.mp3"
+    }
+   ]
+  },
+  "r2.wrong1": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Not quite. Check the chalkboard and count what we really need.",
+     "audioFile": "assets/audio/voice/r2_wrong1_0.mp3"
+    }
+   ]
+  },
+  "r2.wrong2": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "The tags! Every crate shows its weight and how many days it gives.",
+     "audioFile": "assets/audio/voice/r2_wrong2_0.mp3"
+    }
+   ]
+  },
+  "r2.wrong3": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Three barrels cover the water. Salt fish gives food with the least weight. Add two lamp oil.",
+     "audioFile": "assets/audio/voice/r2_wrong3_0.mp3"
+    }
+   ]
+  },
+  "r2.right": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Exactly twenty, not a pinch more.",
+     "audioFile": "assets/audio/voice/r2_right_0.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "And the chart inked a new leg. Take only what the sea can carry. Quick, out the back door!",
+     "audioFile": "assets/audio/voice/r2_right_1.mp3"
+    }
+   ]
+  },
+  "r2.idle": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Try the tally slate on the crates.",
+     "audioFile": "assets/audio/voice/r2_idle_0.mp3"
+    }
+   ]
+  },
+  "r3.enter": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "vask",
+     "text": "A chart is only useful if you can read it, little captain. Good luck.",
+     "audioFile": "assets/audio/voice/r3_enter_0.mp3"
+    },
+    {
+     "who": "pip",
+     "text": "That was Vask. He is ahead of us. We must be quick and careful.",
+     "audioFile": "assets/audio/voice/r3_enter_1.mp3"
+    }
+   ]
+  },
+  "r3.findPieces": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "Torn in six. Someone did not want this chart read. I wonder where the pen is.",
+     "audioFile": "assets/audio/voice/r3_findPieces_0.mp3"
+    }
+   ]
+  },
+  "r3.secretNote": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Rumours float. Truth is inked. Remember that. What is that scroll pinned by the table?",
+     "audioFile": "assets/audio/voice/r3_secretNote_0.mp3"
+    }
+   ]
+  },
+  "r3.legend": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Solid is true. Dotted is rumour. Every island once.",
+     "audioFile": "assets/audio/voice/r3_legend_0.mp3"
+    }
+   ]
+  },
+  "r3.jigsawDone": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "There it is, the whole sea! Now we trace it.",
+     "audioFile": "assets/audio/voice/r3_jigsawDone_0.mp3"
+    }
+   ]
+  },
+  "r3.wrong1": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "That route breaks a rule. Read the legend again.",
+     "audioFile": "assets/audio/voice/r3_wrong1_0.mp3"
+    }
+   ]
+  },
+  "r3.wrong2": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "Dotted lines are rumours. Only solid ink counts, and we must visit every island.",
+     "audioFile": "assets/audio/voice/r3_wrong2_0.mp3"
+    }
+   ]
+  },
+  "r3.wrong3": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Start at Saltmere, then Gullrock. Follow solid lines only, and do not skip any island before the Edge.",
+     "audioFile": "assets/audio/voice/r3_wrong3_0.mp3"
+    }
+   ]
+  },
+  "r3.right": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Every island, once, in solid ink.",
+     "audioFile": "assets/audio/voice/r3_right_0.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "The chart inked leg three. Every torn map has one true line.",
+     "audioFile": "assets/audio/voice/r3_right_1.mp3"
+    },
+    {
+     "who": "vask",
+     "text": "(off-screen) Interesting. The ink answers you. I will be watching.",
+     "audioFile": "assets/audio/voice/r3_right_2.mp3"
+    }
+   ]
+  },
+  "r3.idle": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Try the ink pen on the chart.",
+     "audioFile": "assets/audio/voice/r3_idle_0.mp3"
+    }
+   ]
+  },
+  "r4.enter": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The lamp is dead and the window is fogged. The storm is winning.",
+     "audioFile": "assets/audio/voice/r4_enter_0.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "Then we light it and send the beam where it needs to go.",
+     "audioFile": "assets/audio/voice/r4_enter_1.mp3"
+    }
+   ]
+  },
+  "r4.findCloth": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "A lens cloth. That beacon window is filthy. And that sea-chest looks heavy.",
+     "audioFile": "assets/audio/voice/r4_findCloth_0.mp3"
+    }
+   ]
+  },
+  "r4.findKey": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The lamp key! The keeper hid it well.",
+     "audioFile": "assets/audio/voice/r4_findKey_0.mp3"
+    }
+   ]
+  },
+  "r4.lampLit": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "The beam stops at that pillar! And the window is still fogged.",
+     "audioFile": "assets/audio/voice/r4_lampLit_0.mp3"
+    }
+   ]
+  },
+  "r4.secretNote": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Stone does not bend light. Mirrors do. The wall diagram might say how.",
+     "audioFile": "assets/audio/voice/r4_secretNote_0.mp3"
+    }
+   ]
+  },
+  "r4.diagram": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "A slash turns right into up, and up into right. A backslash turns right into down, and down into right.",
+     "audioFile": "assets/audio/voice/r4_diagram_0.mp3"
+    }
+   ]
+  },
+  "r4.wrong1": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The beam never reached the window. Watch where it goes after each mirror.",
+     "audioFile": "assets/audio/voice/r4_wrong1_0.mp3"
+    }
+   ]
+  },
+  "r4.wrong2": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "The keeper's drawing shows how each mirror turns the beam. Follow it one mirror at a time.",
+     "audioFile": "assets/audio/voice/r4_wrong2_0.mp3"
+    }
+   ]
+  },
+  "r4.wrong3": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Mirror one sends it up. Mirror two sends it right. Mirror three sends it down. Mirror four sends it right into the window.",
+     "audioFile": "assets/audio/voice/r4_wrong3_0.mp3"
+    }
+   ]
+  },
+  "r4.right": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "It's blazing! Straight through the window!",
+     "audioFile": "assets/audio/voice/r4_right_0.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "The storm is parting. Light only travels where you turn it.",
+     "audioFile": "assets/audio/voice/r4_right_1.mp3"
+    }
+   ]
+  },
+  "r4.idle": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Light the lamp with the key first.",
+     "audioFile": "assets/audio/voice/r4_idle_0.mp3"
+    }
+   ]
+  },
+  "r5.enter": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The exit is sealed. And something is knocking behind it.",
+     "audioFile": "assets/audio/voice/r5_enter_0.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "Then we listen first. Let's count.",
+     "audioFile": "assets/audio/voice/r5_enter_1.mp3"
+    }
+   ]
+  },
+  "r5.knockStone": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "Four, three, one, two. Four groups. Something glints by the water.",
+     "audioFile": "assets/audio/voice/r5_knockStone_0.mp3"
+    }
+   ]
+  },
+  "r5.secretCarving": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "First the ear, then the hand. Listen before you act. Is that chalk on the rock?",
+     "audioFile": "assets/audio/voice/r5_secretCarving_0.mp3"
+    }
+   ]
+  },
+  "r5.vaskNote": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "vask",
+     "text": "(echoing in the cave) I left you a shortcut, little captain. It is so kind of me.",
+     "audioFile": "assets/audio/voice/r5_vaskNote_0.mp3"
+    },
+    {
+     "who": "pip",
+     "text": "That table spells nonsense. He is trying to trick us.",
+     "audioFile": "assets/audio/voice/r5_vaskNote_1.mp3"
+    }
+   ]
+  },
+  "r5.wrong1": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "That is not a word. Check which table you are using.",
+     "audioFile": "assets/audio/voice/r5_wrong1_0.mp3"
+    }
+   ]
+  },
+  "r5.wrong2": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "The carved slab is the real key. Match each knock group to its letter.",
+     "audioFile": "assets/audio/voice/r5_wrong2_0.mp3"
+    }
+   ]
+  },
+  "r5.wrong3": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The groups are four, three, one, two. On the slab that is T, I, D, E.",
+     "audioFile": "assets/audio/voice/r5_wrong3_0.mp3"
+    }
+   ]
+  },
+  "r5.right": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Tide! The cave was asking for the tide.",
+     "audioFile": "assets/audio/voice/r5_right_0.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "The door is open and the chart inked leg five. Listen before you decode.",
+     "audioFile": "assets/audio/voice/r5_right_1.mp3"
+    }
+   ]
+  },
+  "r5.idle": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Tap the knocking stone and count carefully.",
+     "audioFile": "assets/audio/voice/r5_idle_0.mp3"
+    }
+   ]
+  },
+  "r6.enter": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "harl",
+     "text": "(far side) Market permits, citizens! And mind the coral. It bites.",
+     "audioFile": "assets/audio/voice/r6_enter_0.mp3"
+    },
+    {
+     "who": "pip",
+     "text": "A verse and sixteen stones. One wrong step and we swim.",
+     "audioFile": "assets/audio/voice/r6_enter_1.mp3"
+    }
+   ]
+  },
+  "r6.findLantern": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "Lantern first. I want to see every stone.",
+     "audioFile": "assets/audio/voice/r6_findLantern_0.mp3"
+    }
+   ]
+  },
+  "r6.findChalk": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Chalk. I will mark the stones I trust. What does that signpost say?",
+     "audioFile": "assets/audio/voice/r6_findChalk_0.mp3"
+    }
+   ]
+  },
+  "r6.secretCarving": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Every row has a shell, a star, a fish and a wave. Once each.",
+     "audioFile": "assets/audio/voice/r6_secretCarving_0.mp3"
+    }
+   ]
+  },
+  "r6.versePlate": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "One line for each stone. So the verse is the path.",
+     "audioFile": "assets/audio/voice/r6_versePlate_0.mp3"
+    }
+   ]
+  },
+  "r6.wrong1": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The stone cracked. Read the verse again, one line for each step.",
+     "audioFile": "assets/audio/voice/r6_wrong1_0.mp3"
+    }
+   ]
+  },
+  "r6.wrong2": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "Each line gives one step. Use only the line you are on, and step forward.",
+     "audioFile": "assets/audio/voice/r6_wrong2_0.mp3"
+    }
+   ]
+  },
+  "r6.wrong3": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Shell in row one, then right to the star, then straight to the wave, then left to the shell.",
+     "audioFile": "assets/audio/voice/r6_wrong3_0.mp3"
+    }
+   ]
+  },
+  "r6.right": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "We crossed without a splash!",
+     "audioFile": "assets/audio/voice/r6_right_0.mp3"
+    },
+    {
+     "who": "harl",
+     "text": "(far side) That bridge is not on my patrol map!",
+     "audioFile": "assets/audio/voice/r6_right_1.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "The chart inked its last leg. Step only where the verse says.",
+     "audioFile": "assets/audio/voice/r6_right_2.mp3"
+    }
+   ]
+  },
+  "r6.idle": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Light the stones with the lantern.",
+     "audioFile": "assets/audio/voice/r6_idle_0.mp3"
+    }
+   ]
+  },
+  "r7.enter": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The Pale Edge. It is more beautiful than any map.",
+     "audioFile": "assets/audio/voice/r7_enter_0.mp3"
+    },
+    {
+     "who": "vask",
+     "text": "(far away) Charts are for sharing, Captain Tidewell. Do open the gate for me.",
+     "audioFile": "assets/audio/voice/r7_enter_1.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "He will not like the gate's questions. Let's answer first.",
+     "audioFile": "assets/audio/voice/r7_enter_2.mp3"
+    }
+   ]
+  },
+  "r7.chart": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Six rules. We have lived every one.",
+     "audioFile": "assets/audio/voice/r7_chart_0.mp3"
+    }
+   ]
+  },
+  "r7.right": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Three rings, three answers!",
+     "audioFile": "assets/audio/voice/r7_right_0.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "The last leg is inked. The sea is ours, Pip. Look!",
+     "audioFile": "assets/audio/voice/r7_right_1.mp3"
+    }
+   ]
+  },
+  "r7.idle": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Open the Book and reread the Sea Rules, then pick.",
+     "audioFile": "assets/audio/voice/r7_idle_0.mp3"
+    }
+   ]
+  },
+  "r7.lock1.wrong1": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "That Rule does not fit a bell. Check the Book.",
+     "audioFile": "assets/audio/voice/r7_lock1_wrong1_0.mp3"
+    }
+   ]
+  },
+  "r7.lock1.wrong2": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "The bell wants a reply. Think about room one.",
+     "audioFile": "assets/audio/voice/r7_lock1_wrong2_0.mp3"
+    }
+   ]
+  },
+  "r7.lock1.wrong3": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The deck. The bells. Reply in the sea's own rhythm.",
+     "audioFile": "assets/audio/voice/r7_lock1_wrong3_0.mp3"
+    }
+   ]
+  },
+  "r7.lock2.wrong1": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "That Rule does not help with weight. Check the Book.",
+     "audioFile": "assets/audio/voice/r7_lock2_wrong1_0.mp3"
+    }
+   ]
+  },
+  "r7.lock2.wrong2": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "The weighing stone is about being too heavy. Think about the tavern.",
+     "audioFile": "assets/audio/voice/r7_lock2_wrong2_0.mp3"
+    }
+   ]
+  },
+  "r7.lock2.wrong3": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The hold. Twenty weight. Take only what the sea can carry.",
+     "audioFile": "assets/audio/voice/r7_lock2_wrong3_0.mp3"
+    }
+   ]
+  },
+  "r7.lock3.wrong1": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "That Rule does not fit a hidden road. Check the Book.",
+     "audioFile": "assets/audio/voice/r7_lock3_wrong1_0.mp3"
+    }
+   ]
+  },
+  "r7.lock3.wrong2": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "The road needs light, and light needs turning. Think about the lighthouse.",
+     "audioFile": "assets/audio/voice/r7_lock3_wrong2_0.mp3"
+    }
+   ]
+  },
+  "r7.lock3.wrong3": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "The mirrors. Light only travels where you turn it.",
+     "audioFile": "assets/audio/voice/r7_lock3_wrong3_0.mp3"
+    }
+   ]
+  },
+  "ending": {
+   "pausesTimer": true,
+   "lines": [
+    {
+     "who": "narrator",
+     "text": "The arch hums. White-gold light pours through it.",
+     "action": "Three rings blaze. The blank band on the Chart fills with a glowing road.",
+     "audioFile": "assets/audio/voice/ending_0.mp3"
+    },
+    {
+     "who": "pip",
+     "text": "The Forgotten Seas. They were never lost. They were hidden.",
+     "action": "The Compass locks and points through the arch.",
+     "audioFile": "assets/audio/voice/ending_1.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "Hidden for those who can listen, pack, read, turn and step.",
+     "action": "Juno touches Dory. Dory's wing lifts.",
+     "audioFile": "assets/audio/voice/ending_2.mp3"
+    },
+    {
+     "who": "vask",
+     "text": "The ink obeys you, Captain Tidewell. I will follow. Roads are for everyone.",
+     "action": "The Iron Tide glides close, then stops. Vask tips his hat.",
+     "audioFile": "assets/audio/voice/ending_3.mp3"
+    },
+    {
+     "who": "juno",
+     "text": "Then keep up!",
+     "action": "The Gull's Promise sails through the arch.",
+     "audioFile": "assets/audio/voice/ending_4.mp3"
+    },
+    {
+     "who": "pip",
+     "text": "One flag, one dream, one very nervous navigator.",
+     "action": "Pip grips the rail and grins.",
+     "audioFile": "assets/audio/voice/ending_5.mp3"
+    },
+    {
+     "who": "narrator",
+     "text": "Far ahead a light blinks in a rhythm no one has heard before.",
+     "action": "The Chart shows a new blank corner. Fade to the end card.",
+     "audioFile": "assets/audio/voice/ending_6.mp3"
+    }
+   ]
+  },
+  "r1.light": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Amber, red, red, green, amber. I'll remember that.",
+     "audioFile": "assets/audio/voice/r1_light_0.mp3"
+    }
+   ]
+  },
+  "r2.chalkboard": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "Six days, twenty weight, and the dark road eats lamp oil.",
+     "audioFile": "assets/audio/voice/r2_chalkboard_0.mp3"
+    }
+   ]
+  },
+  "r2.ledger": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "A ledger from behind the bar. It is stamped. Let's read it in the Book.",
+     "audioFile": "assets/audio/voice/r2_ledger_0.mp3"
+    }
+   ]
+  },
+  "r2.crates": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Every crate has a tag. Heavy, light, it all adds up.",
+     "audioFile": "assets/audio/voice/r2_crates_0.mp3"
+    }
+   ]
+  },
+  "r3.findPen": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "An ink pen. Good for tracing, once we have a chart to trace.",
+     "audioFile": "assets/audio/voice/r3_findPen_0.mp3"
+    }
+   ]
+  },
+  "r4.window": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "Clear glass. That is where the beam has to land.",
+     "audioFile": "assets/audio/voice/r4_window_0.mp3"
+    }
+   ]
+  },
+  "r5.findBead": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "A sea-glass bead. It may do something with the tide pool.",
+     "audioFile": "assets/audio/voice/r5_findBead_0.mp3"
+    }
+   ]
+  },
+  "r5.findShells": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "D, E, I, T. Four shells, four letters.",
+     "audioFile": "assets/audio/voice/r5_findShells_0.mp3"
+    }
+   ]
+  },
+  "r6.glow": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "pip",
+     "text": "Now every stone shows its symbol. All sixteen.",
+     "audioFile": "assets/audio/voice/r6_glow_0.mp3"
+    }
+   ]
+  },
+  "r7.inscription": {
+   "pausesTimer": false,
+   "lines": [
+    {
+     "who": "juno",
+     "text": "Three locks. Three questions.",
+     "audioFile": "assets/audio/voice/r7_inscription_0.mp3"
+    }
+   ]
+  }
+ },
+ "chart": {
+  "points": [
+   [
+    150,
+    365
+   ],
+   [
+    70,
+    310
+   ],
+   [
+    210,
+    255
+   ],
+   [
+    80,
+    200
+   ],
+   [
+    215,
+    150
+   ],
+   [
+    100,
+    100
+   ],
+   [
+    190,
+    55
+   ],
+   [
+    150,
+    10
+   ]
+  ],
+  "band": "The Pale Edge"
+ },
+ "audio": {
+  "rule_0": "assets/audio/voice/rule_0.mp3",
+  "rule_1": "assets/audio/voice/rule_1.mp3",
+  "rule_2": "assets/audio/voice/rule_2.mp3",
+  "rule_3": "assets/audio/voice/rule_3.mp3",
+  "rule_4": "assets/audio/voice/rule_4.mp3",
+  "rule_5": "assets/audio/voice/rule_5.mp3",
+  "turnAround": "assets/audio/voice/turn_around.mp3"
+ }
+}

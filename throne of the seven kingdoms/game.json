@@ -1,0 +1,2516 @@
+{
+ "config": {
+  "timerSeconds": 600,
+  "hintsPerGame": 3,
+  "hintCost": 25,
+  "wrongCost": 10,
+  "lockoutSeconds": 3,
+  "idleSeconds": 40,
+  "blurPx": 6,
+  "sharpenMs": 1200,
+  "finalMistakes": 3,
+  "rewardMistakeCost": 10,
+  "score": {
+   "item": 5,
+   "secret": 5,
+   "reward": 30,
+   "finalStep": 50,
+   "timePerSecond": 1,
+   "finalMistake": 10
+  },
+  "sfx": {
+   "enabled": true
+  },
+  "bgm": "assets/audio/bgm.mp3",
+  "bgmVolume": 0.2,
+  "bgmDuck": 0.2,
+  "fx": {
+   "camera": {
+    "1": [
+     -2,
+     0,
+     84
+    ],
+    "2": [
+     2,
+     0,
+     76
+    ],
+    "3": [
+     14,
+     0,
+     62
+    ],
+    "4": [
+     3,
+     0,
+     100
+    ]
+   },
+   "cameraMs": 1500
+  }
+ },
+ "ui": {
+  "title": "Throne of the Seven Kingdoms",
+  "tapStart": "Tap to Start",
+  "mission": {
+   "kicker": "Valdoria, the last night",
+   "heading": "The Night Before Dawn",
+   "paras": [
+    "King Aldric Stormhart is dead, and the Throne of Blades stands empty. The court swears Lord Brannoch Greywind poisoned him.",
+    "At dawn, the council will crown the boy Prince Tomm under Regent Maric Veyl. Brannoch waits in chains below, and no one will listen to a Greywind.",
+    "You are Edda, his daughter. Creep through ruined Kingsmoor, win the houses to your side and prove the truth. You have ten minutes before dawn."
+   ],
+   "begin": "Begin",
+   "audioFile": "assets/audio/voice/mission_0.mp3"
+  },
+  "tutorial": [
+   {
+    "title": "Look",
+    "text": "Drag the screen to look around the room.",
+    "target": null
+   },
+   {
+    "title": "Tap",
+    "text": "Tap objects to pick them up, inspect them or use them. Everything you can tap matters.",
+    "target": null
+   },
+   {
+    "title": "Proof Book",
+    "text": "Clues and items go into your Proof Book. Open it any time.",
+    "target": "book"
+   },
+   {
+    "title": "Banners",
+    "text": "Solve each room's puzzle to win a house to your side. Its banner rises at the top.",
+    "target": "banners"
+   },
+   {
+    "title": "Score, hints and clock",
+    "text": "Renown is your score. Good finds earn it. Wrong answers and hints cost it. You have 3 hints. The clock starts at 10:00 and keeps running while you solve puzzles.",
+    "target": "stats"
+   }
+  ],
+  "next": "Next",
+  "skip": "Skip",
+  "done": "Got it",
+  "tap": "Tap to continue",
+  "close": "Close",
+  "ok": "OK",
+  "renown": "Renown",
+  "hints": "Hints",
+  "hintBtn": "Hint",
+  "noHints": "No hints left",
+  "hintsOff": "No hints here",
+  "savedNotes": "Saved to your notes",
+  "addedBook": "Added to your Proof Book",
+  "secretFound": "Secret detail found",
+  "findStrip": "Find in this room",
+  "objective": "Objective",
+  "lockout": "Wait...",
+  "confirm": "Confirm",
+  "lock": "Lock",
+  "clear": "Clear",
+  "wrong": "Not quite. -{n} Renown",
+  "toastReward": "A banner rises: House {house}",
+  "toastProof": "Proof added",
+  "toastExit": "A way onward opens",
+  "pause": "Paused",
+  "resume": "Resume",
+  "restart": "Restart game",
+  "soundOn": "Sound: On",
+  "soundOff": "Sound: Off",
+  "voiceOn": "Voice: On",
+  "voiceOff": "Voice: Off",
+  "quit": "Quit",
+  "bookTitle": "Proof Book",
+  "tabItems": "Items",
+  "tabProofs": "Proofs",
+  "tabProgress": "Progress",
+  "noProofs": "No proofs yet. Solve a room's puzzle.",
+  "notes": "Notes",
+  "banners": "Banners won",
+  "roomsDone": "Rooms done",
+  "gameOver": "Dawn has come too soon",
+  "tryAgain": "Try Again",
+  "playAgain": "Play Again",
+  "winJustice": "Justice",
+  "winWar": "War",
+  "winHeading": "{name} ending",
+  "timeBonus": "Time bonus",
+  "total": "Total Renown",
+  "proofsHeading": "What you proved",
+  "weigh": "Weigh",
+  "left": "Left pan",
+  "right": "Right pan",
+  "floor": "On the floor",
+  "balanced": "The scales balance.",
+  "leftHeavier": "The left pan sinks. It is heavier.",
+  "rightHeavier": "The right pan sinks. It is heavier.",
+  "weighLeft": "Weighings left",
+  "itsSack": "It is sack {n}",
+  "testRat": "Test with a rat",
+  "ratsLeft": "Rats left",
+  "ratFine": "The rat is fine.",
+  "ratDead": "The rat curls up and does not wake.",
+  "poisoned": "Name as poisoned",
+  "noTests": "No rats left.",
+  "slot": "Place",
+  "fromPlaced": "Placed",
+  "pick": "Choose",
+  "sequelHeading": "To be continued",
+  "doorWarnTitle": "The Throne Hall",
+  "introClose": "Start",
+  "idle": "idle",
+  "pressed": "Pressed",
+  "tapOrder": "Tap in order",
+  "lysaHint": "",
+  "dayText": "Day",
+  "debugHint": "debug",
+  "pickBoth": "Put sacks on both pans.",
+  "placeBusts": "Place every bust first.",
+  "placeSix": "Place all six houses first.",
+  "kingsmoor": "Kingsmoor",
+  "camp": "Redhand camp",
+  "notch": "Notch on ring {ring}: Year {year}",
+  "realLetter": "Brannoch's letter",
+  "treasonLetter": "The treason letter",
+  "real": "Real",
+  "treason": "Treason",
+  "scaleSteps": [
+   "1. Tap sacks to pick them.",
+   "2. Tap Left pan or Right pan to put them there.",
+   "3. Press Weigh. The heavier side sinks. The short sack is the lighter one."
+  ],
+  "putLeft": "Put on left pan",
+  "putRight": "Put on right pan",
+  "emptyPans": "Empty both pans",
+  "floorSacks": "Sacks on the floor",
+  "weighLog": "Weighings",
+  "logLine": "{n}. Left {l} against right {r}: {res}",
+  "nameHeading": "Which sack is short?",
+  "nameHelp": "Name it when you are sure. A wrong answer resets your weighings.",
+  "resBalanced": "balanced",
+  "resLeftHeavy": "left sinks",
+  "resRightHeavy": "right sinks",
+  "pickFirst": "Pick at least one sack first.",
+  "noneLeft": "No weighings left. Name the short sack, or empty the pans and think again.",
+  "feudTouch": "{a} and {b} are enemies, but they touch.",
+  "rowNorth": "{a} must stand in the north row.",
+  "rowSouth": "{a} must stand in the south row.",
+  "sideBy": "{a} must touch both {b} and {c}, side by side (not at a corner).",
+  "seated": "Seated",
+  "boardOk": "No feud touches. Press Confirm.",
+  "ringStatus": "Dark ring is on {d}. Thin ring is on {t}.",
+  "ringNeed": "Needed: {d} and {t}.",
+  "bustsRight": "{n} of {total} busts are in the right place.",
+  "liarsIf": "If poisoned, liars: {l}",
+  "liarsNone": "no liar",
+  "splash1": "The Regent is named",
+  "splash2": "The chain is complete",
+  "splash3": "The Oath-Lock opens",
+  "splash1Sub": "The hall falls silent.",
+  "splash2Sub": "Every link holds.",
+  "splash3Sub": "Six houses answer the call.",
+  "revealSub": "Accused before the council"
+ },
+ "speakers": {
+  "narrator": {
+   "name": "Narrator",
+   "rate": 0.9,
+   "pitch": 0.8,
+   "gender": "m",
+   "slot": null,
+   "color": "#7C1D2A"
+  },
+  "edda": {
+   "name": "Edda",
+   "rate": 1.0,
+   "pitch": 1.1,
+   "gender": "f",
+   "slot": "edda",
+   "color": "#6F8FB5"
+  },
+  "oswin": {
+   "name": "Oswin",
+   "rate": 1.1,
+   "pitch": 1.0,
+   "gender": "m",
+   "slot": "oswin",
+   "color": "#8B6B4A"
+  },
+  "veyl": {
+   "name": "Maric Veyl",
+   "rate": 0.85,
+   "pitch": 0.7,
+   "gender": "m",
+   "slot": "veyl",
+   "color": "#7C1D2A"
+  },
+  "tomm": {
+   "name": "Prince Tomm",
+   "rate": 1.1,
+   "pitch": 1.5,
+   "gender": "f",
+   "slot": "tomm",
+   "color": "#C9A23E"
+  },
+  "brannoch": {
+   "name": "Brannoch",
+   "rate": 0.95,
+   "pitch": 0.75,
+   "gender": "m",
+   "slot": "brannoch",
+   "color": "#8A939C"
+  }
+ },
+ "houses": [
+  {
+   "id": "dawnspire",
+   "name": "Dawnspire",
+   "color": "#D6A53A",
+   "slot": "dawnspire"
+  },
+  {
+   "id": "greywind",
+   "name": "Greywind",
+   "color": "#8A939C",
+   "slot": "greywind"
+  },
+  {
+   "id": "stormhart",
+   "name": "Stormhart",
+   "color": "#B8892F",
+   "slot": "stormhart"
+  },
+  {
+   "id": "thornrose",
+   "name": "Thornrose",
+   "color": "#B04A6A",
+   "slot": "thornrose"
+  },
+  {
+   "id": "goldmane",
+   "name": "Goldmane",
+   "color": "#E0B840",
+   "slot": "goldmane"
+  },
+  {
+   "id": "ironmaw",
+   "name": "Ironmaw",
+   "color": "#3F7F8F",
+   "slot": "ironmaw"
+  },
+  {
+   "id": "ashvane",
+   "name": "Ashvane",
+   "color": "#C8CCD2",
+   "slot": "ashvane"
+  }
+ ],
+ "items": {
+  "tube": [
+   "Raven tube",
+   "Father's last message tube. Sealed, and never sent.",
+   "#B87333"
+  ],
+  "lens": [
+   "Oswin's lens",
+   "A brass lens. It shows what forgers hide.",
+   "#C9A23E"
+  ],
+  "branch": [
+   "Branch slice",
+   "A slice of branch with nine rings. Each ring is one year.",
+   "#8B6B4A"
+  ],
+  "coin": [
+   "Warden's coin",
+   "An old gold coin stamped with the Warden's mark.",
+   "#C9A23E"
+  ],
+  "will": [
+   "The king's will",
+   "A torn page. It names Maric Veyl Regent until Tomm turns sixteen.",
+   "#D8C9A0"
+  ],
+  "rhea_letter": [
+   "Rhea's letter",
+   "Rhea writes from across the Narrow Sea. She has wed there.",
+   "#B23A48"
+  ],
+  "note": [
+   "Healer's note",
+   "Exactly one goblet is poisoned. Exactly one cupbearer lied.",
+   "#6FA24F"
+  ],
+  "rats": [
+   "Two rats",
+   "Two rats. Two taste-tests. There is no third.",
+   "#8A8A8A"
+  ],
+  "ledger": [
+   "Treasury ledger",
+   "A year of withdrawals, all approved by the Warden of Coin.",
+   "#6B4A2A"
+  ],
+  "payslips": [
+   "Redhand pay-slips",
+   "Pay for the Redhand Company, a band of sellswords.",
+   "#D8C9A0"
+  ],
+  "token": [
+   "Ironmaw token",
+   "An iron banner token with a sea monster.",
+   "#3F7F8F"
+  ],
+  "dispatch": [
+   "Scout dispatch",
+   "Two Redhand camps were set up three days before the feast.",
+   "#D8C9A0"
+  ]
+ },
+ "dialogue": {
+  "open1": {
+   "s": "narrator",
+   "t": "Kingsmoor sleeps beneath a dying moon. Somewhere below, a chained man waits for dawn.",
+   "p": true,
+   "audioFile": "assets/audio/voice/open1.mp3"
+  },
+  "open2": {
+   "s": "edda",
+   "t": "Hold on, Father. I'm coming.",
+   "p": true,
+   "audioFile": "assets/audio/voice/open2.mp3"
+  },
+  "open3": {
+   "s": "oswin",
+   "t": "Lady Edda, I am a scribe. I record heroics. I do not commit them.",
+   "p": true,
+   "audioFile": "assets/audio/voice/open3.mp3"
+  },
+  "open4": {
+   "s": "edda",
+   "t": "Then write fast, Oswin. We have until the candle burns out.",
+   "p": true,
+   "audioFile": "assets/audio/voice/open4.mp3"
+  },
+  "open5": {
+   "s": "oswin",
+   "t": "Wonderful. A deadline and a death sentence.",
+   "p": true,
+   "audioFile": "assets/audio/voice/open5.mp3"
+  },
+  "open6": {
+   "s": "narrator",
+   "t": "The Rookery is the first door. Beyond it, the night begins.",
+   "p": true,
+   "audioFile": "assets/audio/voice/open6.mp3"
+  },
+  "idle1": {
+   "s": "oswin",
+   "t": "Try turning around. Drag to look around.",
+   "p": false,
+   "audioFile": "assets/audio/voice/idle1.mp3"
+  },
+  "r1_enter1": {
+   "s": "oswin",
+   "t": "Ravens. Hundreds of them. Every one knows something it won't say.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r1_enter1.mp3"
+  },
+  "r1_enter2": {
+   "s": "edda",
+   "t": "Father's last letter left from here. We find it.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r1_enter2.mp3"
+  },
+  "r1_enter3": {
+   "s": "oswin",
+   "t": "We? I'll find it eventually. Do ravens bite?",
+   "p": true,
+   "audioFile": "assets/audio/voice/r1_enter3.mp3"
+  },
+  "r1_find_tube": {
+   "s": "edda",
+   "t": "Father's tube. Sealed, and never sent.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r1_find_tube.mp3"
+  },
+  "r1_insp_real": {
+   "s": "oswin",
+   "t": "That's his hand. I'd know that wolf-headed \"g\" anywhere.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r1_insp_real.mp3"
+  },
+  "r1_find_lens": {
+   "s": "oswin",
+   "t": "Careful with that. It's my life savings.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r1_find_lens.mp3"
+  },
+  "r1_discuss": {
+   "s": "edda",
+   "t": "Two letters. One of them is a lie.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r1_discuss.mp3"
+  },
+  "r1_w1": {
+   "s": "oswin",
+   "t": "Put the letters side by side. Do they really match?",
+   "p": false,
+   "audioFile": "assets/audio/voice/r1_w1.mp3"
+  },
+  "r1_w2": {
+   "s": "oswin",
+   "t": "Use the lens on the ink and the seal. Forgers get lazy there.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r1_w2.mp3"
+  },
+  "r1_w3": {
+   "s": "oswin",
+   "t": "Four things differ: the lean, the \"g\", the ink and the seal.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r1_w3.mp3"
+  },
+  "r1_right1": {
+   "s": "edda",
+   "t": "Green ink. A left-leaning hand. My father never wrote this.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r1_right1.mp3"
+  },
+  "r1_right2": {
+   "s": "oswin",
+   "t": "Green ink belongs to the treasury, my lady. Someone down there writes treason to order.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r1_right2.mp3"
+  },
+  "r1_right3": {
+   "s": "edda",
+   "t": "Then Dawnspire never got his answer. Let's make sure they do.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r1_right3.mp3"
+  },
+  "r2_enter1": {
+   "s": "edda",
+   "t": "The heart tree. Father swore his oath under these leaves.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r2_enter1.mp3"
+  },
+  "r2_enter2": {
+   "s": "oswin",
+   "t": "Lovely. It's watching us.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r2_enter2.mp3"
+  },
+  "r2_enter3": {
+   "s": "edda",
+   "t": "It's a tree, Oswin.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r2_enter3.mp3"
+  },
+  "r2_enter4": {
+   "s": "oswin",
+   "t": "A tree with a face.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r2_enter4.mp3"
+  },
+  "r2_find_branch": {
+   "s": "edda",
+   "t": "A slice of branch. Look at the rings.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r2_find_branch.mp3"
+  },
+  "r2_insp_carv": {
+   "s": "oswin",
+   "t": "Three carvings. One calls your house traitors.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r2_insp_carv.mp3"
+  },
+  "r2_find_coin": {
+   "s": "oswin",
+   "t": "A Warden's coin. Someone knelt here and dropped their pay.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r2_find_coin.mp3"
+  },
+  "r2_discuss": {
+   "s": "edda",
+   "t": "The tree remembers every hard year. So can we.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r2_discuss.mp3"
+  },
+  "r2_wl1": {
+   "s": "oswin",
+   "t": "Trees remember hard years. Which rings look unusual?",
+   "p": false,
+   "audioFile": "assets/audio/voice/r2_wl1.mp3"
+  },
+  "r2_wl2": {
+   "s": "oswin",
+   "t": "Match the dark ring to the Great Frost and the thin ring to the Dry Summer.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r2_wl2.mp3"
+  },
+  "r2_wl3": {
+   "s": "oswin",
+   "t": "Slide until the dark ring sits on 305 and the thin ring on 309.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r2_wl3.mp3"
+  },
+  "r2_wc1": {
+   "s": "oswin",
+   "t": "Read each notch against the years. Which cut is the newest?",
+   "p": false,
+   "audioFile": "assets/audio/voice/r2_wc1.mp3"
+  },
+  "r2_wc2": {
+   "s": "oswin",
+   "t": "Old cuts have bark grown over them. The newest has none.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r2_wc2.mp3"
+  },
+  "r2_wc3": {
+   "s": "oswin",
+   "t": "The carving on the outermost ring was cut in 312.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r2_wc3.mp3"
+  },
+  "r2_right1": {
+   "s": "edda",
+   "t": "The oath and the names are old. The one that blames us is new.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r2_right1.mp3"
+  },
+  "r2_right2": {
+   "s": "oswin",
+   "t": "And still raw. A grieving tree didn't carve that, my lady. A chisel did.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r2_right2.mp3"
+  },
+  "r2_right3": {
+   "s": "edda",
+   "t": "And whoever held it dropped a Warden's coin. Greywind will hear of this.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r2_right3.mp3"
+  },
+  "r3_enter1": {
+   "s": "oswin",
+   "t": "Kings sleep down here, and so do the draughts.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r3_enter1.mp3"
+  },
+  "r3_enter2": {
+   "s": "edda",
+   "t": "The Stormhart dead. And that wall is the Stormhart living.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r3_enter2.mp3"
+  },
+  "r3_enter3": {
+   "s": "oswin",
+   "t": "Mostly living. Let's not check.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r3_enter3.mp3"
+  },
+  "r3_insp_heirs": {
+   "s": "edda",
+   "t": "Five busts, five claims. Who stands in line for the crown?",
+   "p": false,
+   "audioFile": "assets/audio/voice/r3_insp_heirs.mp3"
+  },
+  "r3_find_will1": {
+   "s": "oswin",
+   "t": "The king's will, torn. It names a Regent: Maric Veyl.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r3_find_will1.mp3"
+  },
+  "r3_find_will2": {
+   "s": "edda",
+   "t": "Regent until Tomm turns sixteen. Seven years.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r3_find_will2.mp3"
+  },
+  "r3_find_letter": {
+   "s": "edda",
+   "t": "Rhea's letter. She married across the Narrow Sea.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r3_find_letter.mp3"
+  },
+  "r3_insp_lysa1": {
+   "s": "oswin",
+   "t": "Fresh flowers on a grave a year old. Someone still visits.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r3_insp_lysa1.mp3"
+  },
+  "r3_insp_lysa2": {
+   "s": "edda",
+   "t": "Someone who loved her. Or someone who is nervous.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r3_insp_lysa2.mp3"
+  },
+  "r3_discuss": {
+   "s": "edda",
+   "t": "Four laws. Five busts. Someone has to be first in line.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r3_discuss.mp3"
+  },
+  "r3_w1": {
+   "s": "oswin",
+   "t": "Read the four laws in order. Apply each one to each bust.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r3_w1.mp3"
+  },
+  "r3_w2": {
+   "s": "oswin",
+   "t": "Two of them are dead. One married beyond the sea. The letter says which.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r3_w2.mp3"
+  },
+  "r3_w3": {
+   "s": "oswin",
+   "t": "Tomm is first. Lysa, Daven and Rhea are barred. Who is left for Slot 2?",
+   "p": false,
+   "audioFile": "assets/audio/voice/r3_w3.mp3"
+  },
+  "r3_right1": {
+   "s": "edda",
+   "t": "Tomm first. And if Tomm dies, the Regent takes the crown.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r3_right1.mp3"
+  },
+  "r3_right2": {
+   "s": "oswin",
+   "t": "A very convenient law for a very convenient Regent.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r3_right2.mp3"
+  },
+  "r3_right3": {
+   "s": "edda",
+   "t": "Stormhart will want to hear it. Let's go.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r3_right3.mp3"
+  },
+  "r4_enter1": {
+   "s": "oswin",
+   "t": "A garden at night. I distrust anything that glows.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r4_enter1.mp3"
+  },
+  "r4_enter2": {
+   "s": "edda",
+   "t": "The king's last cup was poured at that table.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r4_enter2.mp3"
+  },
+  "r4_enter3": {
+   "s": "oswin",
+   "t": "Then everything here is a suspect. Including me, probably.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r4_enter3.mp3"
+  },
+  "r4_find_note": {
+   "s": "oswin",
+   "t": "A healer's note. Thornrose. Very tidy handwriting.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r4_find_note.mp3"
+  },
+  "r4_find_rats": {
+   "s": "edda",
+   "t": "Two rats. Brave little tasters.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r4_find_rats.mp3"
+  },
+  "r4_find_rats2": {
+   "s": "oswin",
+   "t": "I volunteer them. Politely.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r4_find_rats2.mp3"
+  },
+  "r4_insp_gate1": {
+   "s": "edda",
+   "t": "Veyl's seal on the lock. Nightbloom grows behind it.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r4_insp_gate1.mp3"
+  },
+  "r4_insp_gate2": {
+   "s": "oswin",
+   "t": "And a petal in the lock. Someone walked in and out.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r4_insp_gate2.mp3"
+  },
+  "r4_discuss": {
+   "s": "edda",
+   "t": "Five cupbearers swore statements. Exactly one lied.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r4_discuss.mp3"
+  },
+  "r4_w1": {
+   "s": "oswin",
+   "t": "Only one cupbearer lied. Try each one as the liar.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r4_w1.mp3"
+  },
+  "r4_w2": {
+   "s": "oswin",
+   "t": "Assume a cupbearer lied, then check the other four still agree. Two goblets survive.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r4_w2.mp3"
+  },
+  "r4_w3": {
+   "s": "oswin",
+   "t": "Only goblets 1 and 2 can hold the poison. Let a rat tell you which.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r4_w3.mp3"
+  },
+  "r4_right1": {
+   "s": "edda",
+   "t": "Goblet two. And cupbearer three was the liar.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r4_right1.mp3"
+  },
+  "r4_right2": {
+   "s": "oswin",
+   "t": "Nightbloom, from a gate only one man holds the key to.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r4_right2.mp3"
+  },
+  "r4_right3": {
+   "s": "edda",
+   "t": "Thornrose will say his name for us.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r4_right3.mp3"
+  },
+  "r5_enter1": {
+   "s": "oswin",
+   "t": "Gold. Chests of it. I could weep.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r5_enter1.mp3"
+  },
+  "r5_enter2": {
+   "s": "edda",
+   "t": "Focus. A king's money ends up somewhere.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r5_enter2.mp3"
+  },
+  "r5_enter3": {
+   "s": "oswin",
+   "t": "Or stops arriving somewhere.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r5_enter3.mp3"
+  },
+  "r5_find_ledger1": {
+   "s": "edda",
+   "t": "A year of withdrawals, all in one name.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r5_find_ledger1.mp3"
+  },
+  "r5_find_ledger2": {
+   "s": "oswin",
+   "t": "\"Approved by the Warden of Coin.\" Charming.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r5_find_ledger2.mp3"
+  },
+  "r5_find_slips": {
+   "s": "oswin",
+   "t": "Slips for the Redhand Company. Sellswords. Expensive ones.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r5_find_slips.mp3"
+  },
+  "r5_insp_door": {
+   "s": "edda",
+   "t": "Veyl's wax seal. Unbroken since the feast.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r5_insp_door.mp3"
+  },
+  "r5_discuss": {
+   "s": "edda",
+   "t": "Nine sacks, one of them short. Two weighings.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r5_discuss.mp3"
+  },
+  "r5_w1": {
+   "s": "oswin",
+   "t": "You get two weighings only. Weigh groups, not single sacks.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r5_w1.mp3"
+  },
+  "r5_w2": {
+   "s": "oswin",
+   "t": "Three against three. If they balance, the short sack is in the three you left out.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r5_w2.mp3"
+  },
+  "r5_w3": {
+   "s": "oswin",
+   "t": "Then weigh two of those three. The lighter one is short. If they balance, it's the third.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r5_w3.mp3"
+  },
+  "r5_right1": {
+   "s": "edda",
+   "t": "Sack seven. Lead discs, painted gold.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r5_right1.mp3"
+  },
+  "r5_right2": {
+   "s": "oswin",
+   "t": "With Veyl's seal on the tag. A year of the king's gold, spent on hired swords.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r5_right2.mp3"
+  },
+  "r5_right3": {
+   "s": "edda",
+   "t": "Goldmane will want to know where their loan went.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r5_right3.mp3"
+  },
+  "r6_enter1": {
+   "s": "oswin",
+   "t": "A map of the whole valley, painted by someone who loved candles.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r6_enter1.mp3"
+  },
+  "r6_enter2": {
+   "s": "edda",
+   "t": "The war table. Every house musters here.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r6_enter2.mp3"
+  },
+  "r6_enter3": {
+   "s": "oswin",
+   "t": "And every house hates another house here.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r6_enter3.mp3"
+  },
+  "r6_learn_rules": {
+   "s": "edda",
+   "t": "Feuds can't touch, even at a corner. Greywind north, Dawnspire south.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r6_learn_rules.mp3"
+  },
+  "r6_find_token": {
+   "s": "oswin",
+   "t": "The leviathan token. A sea-lord dropped it. Typical.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r6_find_token.mp3"
+  },
+  "r6_find_dispatch": {
+   "s": "edda",
+   "t": "A scout's dispatch. Two camps, set up three days before the feast.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r6_find_dispatch.mp3"
+  },
+  "r6_insp_pins1": {
+   "s": "oswin",
+   "t": "Redhand pins. The same company as the treasury slips.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r6_insp_pins1.mp3"
+  },
+  "r6_insp_pins2": {
+   "s": "edda",
+   "t": "And Veyl's mark in the wax.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r6_insp_pins2.mp3"
+  },
+  "r6_discuss": {
+   "s": "edda",
+   "t": "Six houses, six free estates. Nobody beside an enemy.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r6_discuss.mp3"
+  },
+  "r6_w1": {
+   "s": "oswin",
+   "t": "Ironmaw and Greywind are seated for you. Goldmane must touch Ironmaw side by side. Only the west-middle estate does.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r6_w1.mp3"
+  },
+  "r6_w2": {
+   "s": "oswin",
+   "t": "Dawnspire stands in the south row and must not touch Goldmane. South-middle touches Goldmane at a corner, so Dawnspire takes the south-east corner.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r6_w2.mp3"
+  },
+  "r6_w3": {
+   "s": "oswin",
+   "t": "Stormhart goes east-middle, far from Goldmane. Thornrose takes the last free estate, south-middle.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r6_w3.mp3"
+  },
+  "r6_right1": {
+   "s": "edda",
+   "t": "Every house in place, and the Redhand camps sit on either side of Kingsmoor.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r6_right1.mp3"
+  },
+  "r6_right2": {
+   "s": "oswin",
+   "t": "Camped three days before the feast. That was planned, my lady.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r6_right2.mp3"
+  },
+  "r6_right3": {
+   "s": "edda",
+   "t": "Ironmaw sails with us.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r6_right3.mp3"
+  },
+  "door_w1": {
+   "s": "oswin",
+   "t": "Lady Edda, stop. Three mistakes in there and the blades will have us.",
+   "p": true,
+   "audioFile": "assets/audio/voice/door_w1.mp3"
+  },
+  "door_w2": {
+   "s": "edda",
+   "t": "Then we make none.",
+   "p": true,
+   "audioFile": "assets/audio/voice/door_w2.mp3"
+  },
+  "door_w3": {
+   "s": "oswin",
+   "t": "I admire the confidence. I'll hold your cloak.",
+   "p": true,
+   "audioFile": "assets/audio/voice/door_w3.mp3"
+  },
+  "r7_enter1": {
+   "s": "veyl",
+   "t": "Lady Edda Greywind. A traitor's daughter, walking in on the king's own council.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_enter1.mp3"
+  },
+  "r7_enter2": {
+   "s": "tomm",
+   "t": "Edda? You came.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_enter2.mp3"
+  },
+  "r7_s1_start": {
+   "s": "edda",
+   "t": "Someone in this hall killed the king. I know who.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r7_s1_start.mp3"
+  },
+  "r7_s1_m1": {
+   "s": "veyl",
+   "t": "You accuse the wrong man, child. How sad.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_s1_m1.mp3"
+  },
+  "r7_s1_m2": {
+   "s": "veyl",
+   "t": "Guards. She is making a scene.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_s1_m2.mp3"
+  },
+  "r7_s1_right": {
+   "s": "veyl",
+   "t": "A bold name, child. Prove it.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_s1_right.mp3"
+  },
+  "r7_s2_start": {
+   "s": "edda",
+   "t": "Here is how it was done.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r7_s2_start.mp3"
+  },
+  "r7_s2_m1": {
+   "s": "oswin",
+   "t": "That's not the order of events. Check the dates.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_s2_m1.mp3"
+  },
+  "r7_s2_m2": {
+   "s": "oswin",
+   "t": "Edda. One more mistake and we are finished.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_s2_m2.mp3"
+  },
+  "r7_s2_right": {
+   "s": "veyl",
+   "t": "Stop. That is enough. Seal the doors.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_s2_right.mp3"
+  },
+  "r7_s3_start": {
+   "s": "oswin",
+   "t": "The throne! Its blades answer to the six houses, in the order they swore.",
+   "p": true,
+   "audioFile": "assets/audio/voice/r7_s3_start.mp3"
+  },
+  "r7_s3_m1": {
+   "s": "oswin",
+   "t": "Wrong blade. Look at the banners on the wall.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_s3_m1.mp3"
+  },
+  "r7_s3_m2": {
+   "s": "oswin",
+   "t": "The banners, Edda. Left to right.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_s3_m2.mp3"
+  },
+  "r7_s3_right": {
+   "s": "tomm",
+   "t": "They came. They really came.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_s3_right.mp3"
+  },
+  "r7_s4_start": {
+   "s": "veyl",
+   "t": "You think banners will save you?",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_s4_start.mp3"
+  },
+  "r7_whisper1": {
+   "s": "oswin",
+   "t": "They've noticed us. Careful.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_whisper1.mp3"
+  },
+  "r7_whisper2": {
+   "s": "oswin",
+   "t": "Edda. One more and we are dead.",
+   "p": false,
+   "audioFile": "assets/audio/voice/r7_whisper2.mp3"
+  },
+  "death_blade": {
+   "s": "narrator",
+   "t": "Veyl smiled. The blade was quick, and Edda never saw it.",
+   "p": true,
+   "audioFile": "assets/audio/voice/death_blade.mp3"
+  },
+  "death_cup": {
+   "s": "narrator",
+   "t": "A cup of nightbloom, offered with courtesy. The Greywind line ended in the dark.",
+   "p": true,
+   "audioFile": "assets/audio/voice/death_cup.mp3"
+  },
+  "death_wyrmfire": {
+   "s": "narrator",
+   "t": "The wrong blade sang, and fire answered.",
+   "p": true,
+   "audioFile": "assets/audio/voice/death_wyrmfire.mp3"
+  },
+  "death_frost": {
+   "s": "narrator",
+   "t": "The candle guttered. Dawn came, and with it the cold.",
+   "p": true,
+   "audioFile": "assets/audio/voice/death_frost.mp3"
+  },
+  "end_j1": {
+   "s": "narrator",
+   "t": "The six banners filled the hall, and the council could not look away.",
+   "p": true,
+   "audioFile": "assets/audio/voice/end_j1.mp3"
+  },
+  "end_j2": {
+   "s": "narrator",
+   "t": "They heard the proof. The guard took Veyl without a single blow.",
+   "p": true,
+   "audioFile": "assets/audio/voice/end_j2.mp3"
+  },
+  "end_j3": {
+   "s": "narrator",
+   "t": "Tomm was crowned with a new Regent from the sworn houses. Brannoch was carried up from the dungeons, and Edda knelt beside him.",
+   "p": true,
+   "audioFile": "assets/audio/voice/end_j3.mp3"
+  },
+  "end_j4": {
+   "s": "narrator",
+   "t": "The throne was won by proof, not by swords.",
+   "p": true,
+   "audioFile": "assets/audio/voice/end_j4.mp3"
+  },
+  "end_w1": {
+   "s": "narrator",
+   "t": "A silver wyrm tore the roof open, and fire fell on Veyl's hired swords.",
+   "p": true,
+   "audioFile": "assets/audio/voice/end_w1.mp3"
+  },
+  "end_w2": {
+   "s": "narrator",
+   "t": "Veyl fell in the flames. The houses fought over the ashes while Tomm was crowned.",
+   "p": true,
+   "audioFile": "assets/audio/voice/end_w2.mp3"
+  },
+  "end_w3": {
+   "s": "narrator",
+   "t": "Brannoch was freed, and the realm bled.",
+   "p": true,
+   "audioFile": "assets/audio/voice/end_w3.mp3"
+  },
+  "end_w4": {
+   "s": "narrator",
+   "t": "The throne was won by fire, and fire is a hard thing to put out.",
+   "p": true,
+   "audioFile": "assets/audio/voice/end_w4.mp3"
+  },
+  "end_hook": {
+   "s": "narrator",
+   "t": "Far to the north, a horn sounded from the Frostwall. Then again. Then seven times.",
+   "p": true,
+   "audioFile": "assets/audio/voice/end_hook.mp3"
+  }
+ },
+ "rooms": [
+  {
+   "n": 1,
+   "id": "r1",
+   "name": "The Rookery",
+   "accent": "#6F8FB5",
+   "banner": "dawnspire",
+   "objective": "Find Father's letter and expose the forgery.",
+   "panorama": "assets/rooms/room1.webp",
+   "enter": [
+    "r1_enter1",
+    "r1_enter2",
+    "r1_enter3"
+   ],
+   "discuss": [
+    "r1_discuss"
+   ],
+   "right": [
+    "r1_right1",
+    "r1_right2",
+    "r1_right3"
+   ],
+   "bank": [
+    "r1_w1",
+    "r1_w2",
+    "r1_w3"
+   ],
+   "proof": "The treason letter is forged. It is written in green treasury ink by a left-handed hand.",
+   "intro": null,
+   "items": [
+    "tube",
+    "lens"
+   ],
+   "hotspots": [
+    {
+     "id": "r1_tube",
+     "kind": "FIND",
+     "label": "Raven tube",
+     "yaw": 152.6,
+     "pitch": -5.0,
+     "after": [],
+     "item": "tube",
+     "lines": [
+      "r1_find_tube"
+     ]
+    },
+    {
+     "id": "r1_real",
+     "kind": "INSPECT",
+     "label": "A spilled letter",
+     "yaw": 26.8,
+     "pitch": -28.8,
+     "after": [
+      "r1_tube"
+     ],
+     "lines": [
+      "r1_insp_real"
+     ],
+     "views": [
+      {
+       "slot": "real_letter",
+       "title": "Brannoch's letter",
+       "text": "A letter in Lord Brannoch's own hand. The letters lean to the right and the \"g\" has an open loop. The ink is black-brown.",
+       "teach": "Learn his hand."
+      },
+      {
+       "slot": "real_letter",
+       "title": "The seal",
+       "text": "A black wolf-head seal. The wolf faces left."
+      }
+     ]
+    },
+    {
+     "id": "r1_lens",
+     "kind": "FIND",
+     "label": "Oswin's lens",
+     "yaw": 66.0,
+     "pitch": -28.8,
+     "after": [],
+     "item": "lens",
+     "lines": [
+      "r1_find_lens"
+     ]
+    },
+    {
+     "id": "r1_treason",
+     "kind": "INSPECT",
+     "label": "The treason letter",
+     "yaw": 45.0,
+     "pitch": -35.1,
+     "after": [
+      "r1_lens",
+      "r1_real"
+     ],
+     "views": [
+      {
+       "slot": "treason_letter",
+       "title": "The treason letter",
+       "text": "A second letter in the same name. The letters lean to the left and the \"g\" loop is closed. Look closer with the lens.",
+       "secret": {
+        "id": "green_ink",
+        "label": "Use the lens on the ink",
+        "text": "Under the lens the ink is green, a treasury ink. Saved to your notes."
+       }
+      },
+      {
+       "slot": "treason_letter",
+       "title": "The seal",
+       "text": "A wolf-head seal in red wax. The wolf faces right."
+      }
+     ]
+    },
+    {
+     "id": "r1_desk",
+     "kind": "PANEL",
+     "label": "Comparison desk",
+     "yaw": 7.3,
+     "pitch": -34.4,
+     "after": [
+      "r1_tube",
+      "r1_real",
+      "r1_lens",
+      "r1_treason"
+     ],
+     "panel": "r1_desk"
+    },
+    {
+     "id": "r1_exit",
+     "kind": "AUTO",
+     "label": "Heavy door",
+     "yaw": 0.3,
+     "pitch": -0.8,
+     "after": [
+      "r1_reward"
+     ],
+     "opens": "r2"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "id": "r2",
+   "name": "The Godswood",
+   "accent": "#B23A48",
+   "banner": "greywind",
+   "objective": "Date the carvings on the heart tree.",
+   "panorama": "assets/rooms/room2.webp",
+   "enter": [
+    "r2_enter1",
+    "r2_enter2",
+    "r2_enter3",
+    "r2_enter4"
+   ],
+   "discuss": [
+    "r2_discuss"
+   ],
+   "right": [
+    "r2_right1",
+    "r2_right2",
+    "r2_right3"
+   ],
+   "bank": [
+    "r2_wl1",
+    "r2_wl2",
+    "r2_wl3"
+   ],
+   "proof": "The carving that blames the Greywinds was cut within days of the king's death. A coin stamped with the Warden's mark lay beneath it.",
+   "intro": null,
+   "items": [
+    "branch",
+    "coin"
+   ],
+   "hotspots": [
+    {
+     "id": "r2_stones",
+     "kind": "LEARN",
+     "label": "Year-stones",
+     "yaw": -131.1,
+     "pitch": -35.8,
+     "after": [],
+     "lines": [],
+     "title": "The year-stones",
+     "text": "Each stone is one year, 304 to 312. Three are marked: 305, the Great Frost. 309, the Dry Summer. 312, the year King Aldric died."
+    },
+    {
+     "id": "r2_branch",
+     "kind": "FIND",
+     "label": "Fallen branch",
+     "yaw": 57.6,
+     "pitch": -55.3,
+     "after": [],
+     "item": "branch",
+     "lines": [
+      "r2_find_branch"
+     ]
+    },
+    {
+     "id": "r2_carvings",
+     "kind": "INSPECT",
+     "label": "The three carvings",
+     "yaw": 1.7,
+     "pitch": 17.3,
+     "after": [
+      "r2_stones"
+     ],
+     "lines": [
+      "r2_insp_carv"
+     ],
+     "views": [
+      {
+       "slot": "carving_a",
+       "title": "Carving A: two crowns",
+       "text": "Two crowns side by side. The bark has grown over the cuts."
+      },
+      {
+       "slot": "carving_b",
+       "title": "Carving B: a list of names",
+       "text": "A list of names. The edges are weathered and soft."
+      },
+      {
+       "slot": "carving_c",
+       "title": "Carving C: a wolf and a stag",
+       "text": "A wolf biting a stag. The cut is sharp.",
+       "secret": {
+        "id": "raw_sap",
+        "label": "Touch the cut",
+        "text": "Raw sap, still sticky. Saved to your notes."
+       }
+      }
+     ]
+    },
+    {
+     "id": "r2_coin",
+     "kind": "FIND",
+     "label": "Warden's coin",
+     "yaw": -12.3,
+     "pitch": -35.8,
+     "after": [
+      "r2_carvings"
+     ],
+     "item": "coin",
+     "lines": [
+      "r2_find_coin"
+     ]
+    },
+    {
+     "id": "r2_rings",
+     "kind": "PANEL",
+     "label": "Ring dating",
+     "yaw": 96.7,
+     "pitch": -35.8,
+     "after": [
+      "r2_stones",
+      "r2_branch",
+      "r2_carvings"
+     ],
+     "panel": "r2_rings"
+    },
+    {
+     "id": "r2_exit",
+     "kind": "AUTO",
+     "label": "Path out of the grove",
+     "yaw": 145.6,
+     "pitch": -7.8,
+     "after": [
+      "r2_reward"
+     ],
+     "opens": "r3"
+    }
+   ],
+   "bank2": [
+    "r2_wc1",
+    "r2_wc2",
+    "r2_wc3"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "r3",
+   "name": "The Crypts",
+   "accent": "#5F8F8A",
+   "banner": "stormhart",
+   "objective": "Find who is first in line for the crown.",
+   "panorama": "assets/rooms/room3.webp",
+   "enter": [
+    "r3_enter1",
+    "r3_enter2",
+    "r3_enter3"
+   ],
+   "discuss": [
+    "r3_discuss"
+   ],
+   "right": [
+    "r3_right1",
+    "r3_right2",
+    "r3_right3"
+   ],
+   "bank": [
+    "r3_w1",
+    "r3_w2",
+    "r3_w3"
+   ],
+   "proof": "Prince Tomm is the lawful heir. If Tomm dies, the law gives the crown to the Regent.",
+   "intro": null,
+   "items": [
+    "will",
+    "rhea_letter"
+   ],
+   "hotspots": [
+    {
+     "id": "r3_laws",
+     "kind": "LEARN",
+     "label": "Four law tablets",
+     "yaw": 92.5,
+     "pitch": 28.5,
+     "after": [],
+     "title": "The four laws",
+     "text": "1. The crown passes to the king's eldest living child.\n2. If the king has no living child, it passes to the eldest living child of the king's brother.\n3. A claimant who weds beyond the Narrow Sea forfeits the crown.\n4. If no eligible Stormhart lives, the Regent holds the crown."
+    },
+    {
+     "id": "r3_heirs",
+     "kind": "INSPECT",
+     "label": "The Heirs' Wall",
+     "yaw": -1.1,
+     "pitch": 14.5,
+     "after": [
+      "r3_laws"
+     ],
+     "lines": [
+      "r3_insp_heirs"
+     ],
+     "views": [
+      {
+       "slot": "bust_tomm",
+       "title": "Prince Tomm",
+       "text": "The king's son. Nine years old. Living."
+      },
+      {
+       "slot": "bust_veyl",
+       "title": "Maric Veyl",
+       "text": "Regent by the king's will. Not a Stormhart."
+      },
+      {
+       "slot": "bust_lysa",
+       "title": "Princess Lysa",
+       "text": "The king's eldest child. Died of fever in Year 311."
+      },
+      {
+       "slot": "bust_daven",
+       "title": "Daven Stormhart",
+       "text": "The king's nephew. Fell at the Frost Pass in Year 305."
+      },
+      {
+       "slot": "bust_rhea",
+       "title": "Rhea Stormhart",
+       "text": "The king's niece. Living. Where she is wed is not written here."
+      }
+     ]
+    },
+    {
+     "id": "r3_will",
+     "kind": "FIND",
+     "label": "Torn will",
+     "yaw": 117.7,
+     "pitch": -33.0,
+     "after": [
+      "r3_heirs"
+     ],
+     "item": "will",
+     "lines": [
+      "r3_find_will1",
+      "r3_find_will2"
+     ]
+    },
+    {
+     "id": "r3_letter",
+     "kind": "FIND",
+     "label": "Rhea's letter",
+     "yaw": -142.3,
+     "pitch": -12.0,
+     "after": [
+      "r3_heirs"
+     ],
+     "item": "rhea_letter",
+     "lines": [
+      "r3_find_letter"
+     ]
+    },
+    {
+     "id": "r3_lysa",
+     "kind": "INSPECT",
+     "label": "Princess Lysa's tomb",
+     "yaw": -1.1,
+     "pitch": -13.4,
+     "after": [
+      "r3_heirs"
+     ],
+     "views": [
+      {
+       "slot": "lysa_tomb",
+       "title": "Princess Lysa's tomb",
+       "text": "A year-old tomb.",
+       "line": "r3_insp_lysa1"
+      },
+      {
+       "slot": "lysa_tomb",
+       "title": "The flowers",
+       "text": "The flowers are fresh, no more than a day old.",
+       "line": "r3_insp_lysa2",
+       "secret": {
+        "id": "lysa_flowers",
+        "label": "Look at the flowers",
+        "text": "Fresh flowers. Someone visits the grave. Saved to your notes."
+       }
+      }
+     ]
+    },
+    {
+     "id": "r3_line",
+     "kind": "PANEL",
+     "label": "Line of the Crown",
+     "yaw": -90.6,
+     "pitch": -19.0,
+     "after": [
+      "r3_laws",
+      "r3_heirs",
+      "r3_will",
+      "r3_letter"
+     ],
+     "panel": "r3_line"
+    },
+    {
+     "id": "r3_exit",
+     "kind": "AUTO",
+     "label": "Stair up",
+     "yaw": 140.0,
+     "pitch": 3.4,
+     "after": [
+      "r3_reward"
+     ],
+     "opens": "r4"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "id": "r4",
+   "name": "The Poison Garden",
+   "accent": "#6FA24F",
+   "banner": "thornrose",
+   "objective": "Find which goblet held the king's poison.",
+   "panorama": "assets/rooms/room4.webp",
+   "enter": [
+    "r4_enter1",
+    "r4_enter2",
+    "r4_enter3"
+   ],
+   "discuss": [
+    "r4_discuss"
+   ],
+   "right": [
+    "r4_right1",
+    "r4_right2",
+    "r4_right3"
+   ],
+   "bank": [
+    "r4_w1",
+    "r4_w2",
+    "r4_w3"
+   ],
+   "proof": "The king was poisoned with nightbloom, which grows only in Veyl's private plot.",
+   "intro": null,
+   "items": [
+    "note",
+    "rats"
+   ],
+   "hotspots": [
+    {
+     "id": "r4_note",
+     "kind": "FIND",
+     "label": "Healer's note",
+     "yaw": -17.9,
+     "pitch": -36.5,
+     "after": [],
+     "item": "note",
+     "lines": [
+      "r4_find_note"
+     ]
+    },
+    {
+     "id": "r4_rats",
+     "kind": "FIND",
+     "label": "Cage with two rats",
+     "yaw": 106.5,
+     "pitch": -16.9,
+     "after": [],
+     "item": "rats",
+     "lines": [
+      "r4_find_rats",
+      "r4_find_rats2"
+     ]
+    },
+    {
+     "id": "r4_cards",
+     "kind": "LEARN",
+     "label": "Sworn cards",
+     "yaw": 38.0,
+     "pitch": -52.5,
+     "after": [
+      "r4_note"
+     ],
+     "title": "The cupbearers' oaths",
+     "text": "Cupbearer 1: The poison is in goblet 1 or goblet 2.\nCupbearer 2: The poison is in goblet 2 or goblet 4.\nCupbearer 3: The poison is in an odd-numbered goblet.\nCupbearer 4: The poison is not in goblet 5.\nCupbearer 5: The poison is not in goblet 3 or goblet 4."
+    },
+    {
+     "id": "r4_gate",
+     "kind": "INSPECT",
+     "label": "Iron gate",
+     "yaw": -40.2,
+     "pitch": 3.4,
+     "after": [
+      "r4_note"
+     ],
+     "views": [
+      {
+       "slot": null,
+       "title": "The iron gate",
+       "text": "A walled plot behind an iron gate. Veyl's wax seal is on the lock.",
+       "line": "r4_insp_gate1"
+      },
+      {
+       "slot": null,
+       "title": "The lock",
+       "text": "A small shape is caught in the lock.",
+       "line": "r4_insp_gate2",
+       "secret": {
+        "id": "petal",
+        "label": "Look in the lock",
+        "text": "A nightbloom petal. Someone walked in and out. Saved to your notes."
+       }
+      }
+     ]
+    },
+    {
+     "id": "r4_goblets",
+     "kind": "PANEL",
+     "label": "Taster's goblets",
+     "yaw": 56.2,
+     "pitch": -37.9,
+     "after": [
+      "r4_note",
+      "r4_rats",
+      "r4_cards"
+     ],
+     "panel": "r4_goblets"
+    },
+    {
+     "id": "r4_exit",
+     "kind": "AUTO",
+     "label": "Glass door",
+     "yaw": 149.8,
+     "pitch": 6.1,
+     "after": [
+      "r4_reward"
+     ],
+     "opens": "r5"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "id": "r5",
+   "name": "The Treasury",
+   "accent": "#C9A23E",
+   "banner": "goldmane",
+   "objective": "Find the counterfeit sack.",
+   "panorama": "assets/rooms/room5.webp",
+   "enter": [
+    "r5_enter1",
+    "r5_enter2",
+    "r5_enter3"
+   ],
+   "discuss": [
+    "r5_discuss"
+   ],
+   "right": [
+    "r5_right1",
+    "r5_right2",
+    "r5_right3"
+   ],
+   "bank": [
+    "r5_w1",
+    "r5_w2",
+    "r5_w3"
+   ],
+   "proof": "A year of the king's gold was siphoned away to hire sellswords. Every short sack carries Veyl's seal.",
+   "intro": null,
+   "items": [
+    "ledger",
+    "payslips"
+   ],
+   "hotspots": [
+    {
+     "id": "r5_ledger",
+     "kind": "FIND",
+     "label": "Treasury ledger",
+     "yaw": -108.7,
+     "pitch": -9.9,
+     "after": [],
+     "item": "ledger",
+     "lines": [
+      "r5_find_ledger1",
+      "r5_find_ledger2"
+     ]
+    },
+    {
+     "id": "r5_slips",
+     "kind": "FIND",
+     "label": "Pay-slips",
+     "yaw": 85.5,
+     "pitch": -17.6,
+     "after": [],
+     "item": "payslips",
+     "lines": [
+      "r5_find_slips"
+     ]
+    },
+    {
+     "id": "r5_door",
+     "kind": "INSPECT",
+     "label": "Vault door",
+     "yaw": 140.0,
+     "pitch": 3.4,
+     "after": [],
+     "views": [
+      {
+       "slot": null,
+       "title": "The vault door",
+       "text": "A heavy vault door with a wax seal.",
+       "line": "r5_insp_door",
+       "secret": {
+        "id": "vault_seal",
+        "label": "Read the seal",
+        "text": "It is Veyl's seal, unbroken. Saved to your notes."
+       }
+      }
+     ]
+    },
+    {
+     "id": "r5_scales",
+     "kind": "PANEL",
+     "label": "Counterfeit scales",
+     "yaw": -23.5,
+     "pitch": 17.3,
+     "after": [
+      "r5_ledger",
+      "r5_slips"
+     ],
+     "panel": "r5_scales"
+    },
+    {
+     "id": "r5_exit",
+     "kind": "AUTO",
+     "label": "Stair to the war room",
+     "yaw": 68.8,
+     "pitch": 6.1,
+     "after": [
+      "r5_reward"
+     ],
+     "opens": "r6"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "id": "r6",
+   "name": "The War Room",
+   "accent": "#D9772B",
+   "banner": "ironmaw",
+   "objective": "Seat the six houses so no feud touches.",
+   "panorama": "assets/rooms/room6.webp",
+   "enter": [
+    "r6_enter1",
+    "r6_enter2",
+    "r6_enter3"
+   ],
+   "discuss": [
+    "r6_discuss"
+   ],
+   "right": [
+    "r6_right1",
+    "r6_right2",
+    "r6_right3"
+   ],
+   "bank": [
+    "r6_w1",
+    "r6_w2",
+    "r6_w3"
+   ],
+   "proof": "Hired sellswords were camped around Kingsmoor three days before the king died.",
+   "intro": null,
+   "items": [
+    "token",
+    "dispatch"
+   ],
+   "hotspots": [
+    {
+     "id": "r6_rules",
+     "kind": "LEARN",
+     "label": "Rules of Muster",
+     "yaw": -40.2,
+     "pitch": -40.0,
+     "after": [],
+     "lines": [
+      "r6_learn_rules"
+     ],
+     "title": "Rules of Muster",
+     "text": "1. Feuding houses may not touch, even at a corner: Goldmane and Dawnspire, Greywind and Dawnspire, Stormhart and Goldmane.\n2. Greywind musters in the north row. Dawnspire musters in the south row.\n3. Ironmaw must touch both Greywind and Goldmane, side by side.\n4. No token on Kingsmoor or a camp."
+    },
+    {
+     "id": "r6_token",
+     "kind": "FIND",
+     "label": "Ironmaw token",
+     "yaw": 113.5,
+     "pitch": -58.8,
+     "after": [],
+     "item": "token",
+     "lines": [
+      "r6_find_token"
+     ]
+    },
+    {
+     "id": "r6_dispatch",
+     "kind": "FIND",
+     "label": "Scout dispatch",
+     "yaw": -79.4,
+     "pitch": -28.8,
+     "after": [
+      "r6_rules"
+     ],
+     "item": "dispatch",
+     "lines": [
+      "r6_find_dispatch"
+     ]
+    },
+    {
+     "id": "r6_pins",
+     "kind": "INSPECT",
+     "label": "The camp pins",
+     "yaw": -2.5,
+     "pitch": -5.0,
+     "after": [
+      "r6_dispatch"
+     ],
+     "views": [
+      {
+       "slot": null,
+       "title": "The camp pins",
+       "text": "Two pins on the map, each with a date. The Redhand Company.",
+       "line": "r6_insp_pins1"
+      },
+      {
+       "slot": null,
+       "title": "The wax",
+       "text": "A mark is pressed into the wax of the pins.",
+       "line": "r6_insp_pins2",
+       "secret": {
+        "id": "pin_wax",
+        "label": "Look at the wax",
+        "text": "Veyl's mark in the wax. Saved to your notes."
+       }
+      }
+     ]
+    },
+    {
+     "id": "r6_board",
+     "kind": "PANEL",
+     "label": "Banner feud board",
+     "yaw": 29.6,
+     "pitch": -26.0,
+     "after": [
+      "r6_rules",
+      "r6_token",
+      "r6_dispatch"
+     ],
+     "panel": "r6_board"
+    },
+    {
+     "id": "r6_exit",
+     "kind": "AUTO",
+     "label": "Great doors to the hall",
+     "yaw": 123.3,
+     "pitch": 22.9,
+     "after": [
+      "r6_reward"
+     ],
+     "opens": "r7"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "id": "r7",
+   "name": "The Throne Hall of Blades",
+   "accent": "#8E1B25",
+   "banner": null,
+   "objective": "Name the killer before the blades fall.",
+   "panorama": "assets/rooms/room7.webp",
+   "enter": [
+    "r7_enter1",
+    "r7_enter2"
+   ],
+   "discuss": [],
+   "right": [],
+   "bank": [],
+   "proof": null,
+   "intro": null,
+   "items": [],
+   "hotspots": [
+    {
+     "id": "r7_accuse",
+     "kind": "PANEL",
+     "label": "Step 1: Accuse",
+     "yaw": 0.3,
+     "pitch": -49.8,
+     "after": [],
+     "panel": "r7_accuse",
+     "step": 1
+    },
+    {
+     "id": "r7_chain",
+     "kind": "PANEL",
+     "label": "Step 2: Chain of Guilt",
+     "yaw": 0.3,
+     "pitch": -49.8,
+     "after": [
+      "r7_accuse"
+     ],
+     "panel": "r7_chain",
+     "step": 2
+    },
+    {
+     "id": "r7_lock",
+     "kind": "PANEL",
+     "label": "Step 3: The Oath-Lock",
+     "yaw": 0.3,
+     "pitch": 11.7,
+     "after": [
+      "r7_chain"
+     ],
+     "panel": "r7_lock",
+     "step": 3
+    },
+    {
+     "id": "r7_call",
+     "kind": "PANEL",
+     "label": "Step 4: Call the Houses",
+     "yaw": 0.3,
+     "pitch": -30.2,
+     "after": [
+      "r7_lock"
+     ],
+     "panel": "r7_call",
+     "step": 4
+    }
+   ]
+  }
+ ],
+ "panels": {
+  "r1_desk": {
+   "title": "Compare the letters",
+   "help": "Tap each trait where the two letters differ, then Confirm.",
+   "traits": [
+    {
+     "name": "Lean of the letters",
+     "real": "Right",
+     "treason": "Left"
+    },
+    {
+     "name": "Loop of the \"g\"",
+     "real": "Open",
+     "treason": "Closed"
+    },
+    {
+     "name": "Crossbar of the \"t\"",
+     "real": "Long and rising",
+     "treason": "Long and rising"
+    },
+    {
+     "name": "Ink colour",
+     "real": "Black-brown",
+     "treason": "Green"
+    },
+    {
+     "name": "Wax seal",
+     "real": "Wolf faces left",
+     "treason": "Wolf faces right"
+    },
+    {
+     "name": "Spacing between words",
+     "real": "Wide",
+     "treason": "Wide"
+    }
+   ]
+  },
+  "r2_rings": {
+   "title": "Date the carvings",
+   "help1": "Slide the strip until the dark ring sits on the Great Frost and the thin ring on the Dry Summer. Then Lock.",
+   "help2": "Which carving was cut in the year the king died? Tap it.",
+   "rings": 9,
+   "dark": [
+    2
+   ],
+   "thin": [
+    6
+   ],
+   "yearFrom": 304,
+   "yearTo": 312,
+   "marks": {
+    "305": "Great Frost",
+    "309": "Dry Summer",
+    "312": "King Aldric dies"
+   },
+   "startOffset": 2,
+   "darkMark": 305,
+   "thinMark": 309,
+   "deathYear": 312,
+   "carvings": [
+    {
+     "id": "A",
+     "ring": 2,
+     "title": "Oath of the Two Crowns"
+    },
+    {
+     "id": "B",
+     "ring": 5,
+     "title": "Names of the Fallen"
+    },
+    {
+     "id": "C",
+     "ring": 9,
+     "title": "The Wolf Betrayed the Stag"
+    }
+   ]
+  },
+  "r3_line": {
+   "title": "Line of the Crown",
+   "help": "Tap a bust, then tap a place for it. Then Confirm.",
+   "laws": [
+    "1. The crown passes to the king's eldest living child.",
+    "2. If the king has no living child, it passes to the eldest living child of the king's brother.",
+    "3. A claimant who weds beyond the Narrow Sea forfeits the crown.",
+    "4. If no eligible Stormhart lives, the Regent holds the crown."
+   ],
+   "busts": [
+    {
+     "id": "tomm",
+     "name": "Prince Tomm",
+     "fact": "King's son, nine, living",
+     "slot": "bust_tomm"
+    },
+    {
+     "id": "veyl",
+     "name": "Maric Veyl",
+     "fact": "Regent by the king's will, not Stormhart",
+     "slot": "bust_veyl"
+    },
+    {
+     "id": "lysa",
+     "name": "Princess Lysa",
+     "fact": "King's eldest child, died of fever in Year 311",
+     "slot": "bust_lysa"
+    },
+    {
+     "id": "daven",
+     "name": "Daven Stormhart",
+     "fact": "King's nephew, fell at the Frost Pass, Year 305",
+     "slot": "bust_daven"
+    },
+    {
+     "id": "rhea",
+     "name": "Rhea Stormhart",
+     "fact": "King's niece, living. Her letter says whom she wed.",
+     "slot": "bust_rhea"
+    }
+   ],
+   "places": [
+    {
+     "id": "slot1",
+     "name": "Slot 1"
+    },
+    {
+     "id": "slot2",
+     "name": "Slot 2"
+    },
+    {
+     "id": "barred",
+     "name": "Barred"
+    }
+   ],
+   "answer": {
+    "slot1": [
+     "tomm"
+    ],
+    "slot2": [
+     "veyl"
+    ],
+    "barred": [
+     "daven",
+     "lysa",
+     "rhea"
+    ]
+   }
+  },
+  "r4_goblets": {
+   "title": "Taster's goblets",
+   "help": "Exactly one goblet is poisoned and exactly one cupbearer lied. Under each goblet you see who would be lying if it held the poison. Only goblets with exactly one liar can be poisoned. Then use a rat to choose.",
+   "goblets": 5,
+   "statements": [
+    {
+     "t": "The poison is in goblet 1 or goblet 2.",
+     "true": [
+      1,
+      2
+     ]
+    },
+    {
+     "t": "The poison is in goblet 2 or goblet 4.",
+     "true": [
+      2,
+      4
+     ]
+    },
+    {
+     "t": "The poison is in an odd-numbered goblet.",
+     "true": [
+      1,
+      3,
+      5
+     ]
+    },
+    {
+     "t": "The poison is not in goblet 5.",
+     "true": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "The poison is not in goblet 3 or goblet 4.",
+     "true": [
+      1,
+      2,
+      5
+     ]
+    }
+   ],
+   "poisoned": 2,
+   "tests": 2,
+   "answer": 2
+  },
+  "r5_scales": {
+   "title": "Counterfeit scales",
+   "help": "One of the nine sacks is short: it weighs less than the others. You may weigh only twice.",
+   "sacks": 9,
+   "normal": 10,
+   "shortSack": 7,
+   "shortWeight": 7,
+   "weighings": 2,
+   "answer": 7
+  },
+  "r6_board": {
+   "title": "Banner feud board",
+   "help": "Ironmaw and Greywind are already seated. Tap a house, then tap an empty estate. Red warnings tell you what is wrong.",
+   "size": 3,
+   "kingsmoor": [
+    1,
+    1
+   ],
+   "camps": [
+    [
+     0,
+     2
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "houses": [
+    "dawnspire",
+    "greywind",
+    "stormhart",
+    "thornrose",
+    "goldmane",
+    "ironmaw"
+   ],
+   "feuds": [
+    [
+     "goldmane",
+     "dawnspire"
+    ],
+    [
+     "greywind",
+     "dawnspire"
+    ],
+    [
+     "stormhart",
+     "goldmane"
+    ]
+   ],
+   "northRow": "greywind",
+   "southRow": "dawnspire",
+   "sideBy": [
+    "ironmaw",
+    "greywind",
+    "goldmane"
+   ],
+   "answer": {
+    "0,0": "ironmaw",
+    "0,1": "greywind",
+    "1,0": "goldmane",
+    "1,2": "stormhart",
+    "2,1": "thornrose",
+    "2,2": "dawnspire"
+   },
+   "prefill": {
+    "0,0": "ironmaw",
+    "0,1": "greywind"
+   }
+  },
+  "r7_accuse": {
+   "title": "Step 1: Accuse",
+   "help": "Who killed King Aldric?",
+   "cards": [
+    {
+     "id": "isolde",
+     "name": "Queen Dowager Isolde",
+     "slot": "isolde"
+    },
+    {
+     "id": "voss",
+     "name": "Ser Harlan Voss",
+     "slot": "voss"
+    },
+    {
+     "id": "veyl",
+     "name": "Regent Maric Veyl",
+     "slot": "veyl"
+    },
+    {
+     "id": "pike",
+     "name": "Master Corvin Pike",
+     "slot": "pike"
+    }
+   ],
+   "answer": "veyl"
+  },
+  "r7_chain": {
+   "title": "Step 2: Chain of Guilt",
+   "help": "Tap the cards in the order it happened, first to last.",
+   "cards": [
+    {
+     "id": "D",
+     "t": "The Greywinds are framed with a forged letter and a fresh carving."
+    },
+    {
+     "id": "B",
+     "t": "Sellswords camp around Kingsmoor."
+    },
+    {
+     "id": "A",
+     "t": "Gold is siphoned from the treasury to hire sellswords."
+    },
+    {
+     "id": "C",
+     "t": "The king is poisoned with nightbloom at the feast."
+    }
+   ],
+   "answer": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  "r7_lock": {
+   "title": "Step 3: The Oath-Lock",
+   "help": "Press six sigil blades in the order the houses swore, then Confirm.",
+   "blades": [
+    "ashvane",
+    "ironmaw",
+    "dawnspire",
+    "goldmane",
+    "greywind",
+    "thornrose",
+    "stormhart"
+   ],
+   "answer": [
+    "dawnspire",
+    "greywind",
+    "stormhart",
+    "thornrose",
+    "goldmane",
+    "ironmaw"
+   ]
+  },
+  "r7_call": {
+   "title": "Step 4: Call the Houses",
+   "help": "The hall waits. What will you do?",
+   "choices": [
+    {
+     "id": "justice",
+     "t": "Let the six sworn houses stand witness"
+    },
+    {
+     "id": "war",
+     "t": "Call the six houses and the wyrms of Ashvane"
+    }
+   ]
+  }
+ },
+ "death": {
+  "blade": {
+   "still": "assets/stills/death_blade.jpg",
+   "line": "death_blade"
+  },
+  "cup": {
+   "still": "assets/stills/death_cup.jpg",
+   "line": "death_cup"
+  },
+  "wyrmfire": {
+   "still": "assets/stills/death_wyrmfire.jpg",
+   "line": "death_wyrmfire"
+  },
+  "frost": {
+   "still": "assets/stills/death_frost.jpg",
+   "line": "death_frost"
+  },
+  "stepDeath": {
+   "1": "blade",
+   "2": "cup",
+   "3": "wyrmfire"
+  }
+ },
+ "endings": {
+  "justice": {
+   "name": "Justice",
+   "still": "assets/stills/ending_justice.jpg",
+   "lines": [
+    "end_j1",
+    "end_j2",
+    "end_j3",
+    "end_j4",
+    "end_hook"
+   ]
+  },
+  "war": {
+   "name": "War",
+   "still": "assets/stills/ending_war.jpg",
+   "lines": [
+    "end_w1",
+    "end_w2",
+    "end_w3",
+    "end_w4",
+    "end_hook"
+   ]
+  }
+ },
+ "sheets": {
+  "sheet_items_a": [
+   "tube",
+   "lens",
+   "branch",
+   "coin",
+   "will",
+   "rhea_letter"
+  ],
+  "sheet_items_b": [
+   "note",
+   "rats",
+   "ledger",
+   "payslips",
+   "token",
+   "dispatch"
+  ],
+  "sheet_inspect": [
+   "real_letter",
+   "treason_letter",
+   "carving_a",
+   "carving_b",
+   "carving_c",
+   "lysa_tomb"
+  ],
+  "sheet_heirs": [
+   "bust_tomm",
+   "bust_lysa",
+   "bust_daven",
+   "bust_rhea",
+   "bust_veyl"
+  ],
+  "sheet_portraits": [
+   "edda",
+   "oswin",
+   "veyl",
+   "tomm",
+   "brannoch"
+  ],
+  "sheet_suspects": [
+   "isolde",
+   "voss",
+   "pike"
+  ],
+  "sheet_sigils": [
+   "dawnspire",
+   "greywind",
+   "stormhart",
+   "thornrose",
+   "goldmane",
+   "ironmaw",
+   "ashvane"
+  ],
+  "sheet_ui_icons": [
+   "book",
+   "hint",
+   "pause",
+   "close",
+   "sound",
+   "voice"
+  ]
+ },
+ "backdrops": {
+  "start": "assets/sheets/tap_to_start.jpg",
+  "mission": "assets/sheets/briefing_bg.jpg"
+ },
+ "opening": [
+  "open1",
+  "open2",
+  "open3",
+  "open4",
+  "open5",
+  "open6"
+ ],
+ "idleLine": "idle1",
+ "doorWarning": [
+  "door_w1",
+  "door_w2",
+  "door_w3"
+ ],
+ "whispers": [
+  "r7_whisper1",
+  "r7_whisper2"
+ ],
+ "stepLines": {
+  "1": "r7_s1",
+  "2": "r7_s2",
+  "3": "r7_s3",
+  "4": "r7_s4"
+ }
+}

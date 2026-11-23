@@ -1,0 +1,3115 @@
+{
+  "meta": {
+    "title": "THE CURSED CASTLE",
+    "subtitle": "Thornveil Castle",
+    "description": "A 360-degree escape adventure. Two apprentices, seven rooms, six seals and one final riddle."
+  },
+  "timer": 420,
+  "scoring": {
+    "find": 5,
+    "learn": 0,
+    "seal": 30,
+    "final": 50,
+    "wrong": 10,
+    "hint": 25,
+    "perSecond": 1,
+    "lockout": 3,
+    "finalLockout": 5
+  },
+  "timedDialogues": [
+    "idle",
+    "r2_zoom",
+    "r2_wrong1",
+    "r2_wrong2",
+    "r2_wrong3",
+    "r1_riddle_wrong1",
+    "r1_riddle_wrong2",
+    "r3_wrong1",
+    "r3_wrong2",
+    "r3_wrong3",
+    "r3_wrong_symbol",
+    "r4_wrong1",
+    "r4_wrong2",
+    "r4_wrong3",
+    "r4_dragon",
+    "r5_wrong1",
+    "r5_wrong2",
+    "r5_wrong3",
+    "r6_stuck1",
+    "r6_stuck2",
+    "r7_wrong1",
+    "r7_wrong2",
+    "h_r1_1",
+    "h_r1_2",
+    "h_r1_2a",
+    "h_r1_2b",
+    "h_r1_2c",
+    "h_r1_2d",
+    "h_r2_1",
+    "h_r2_2",
+    "h_r3_1",
+    "h_r3_2",
+    "h_r4_1",
+    "h_r4_2",
+    "h_r5_1",
+    "h_r5_2",
+    "h_r6_1",
+    "h_r6_2",
+    "h_r7_1",
+    "h_r7_2",
+    "h_r2_0",
+    "h_r3_0",
+    "h_r3_2b",
+    "h_r4_0",
+    "h_r4_1b",
+    "h_r4_1c",
+    "h_r4_1d",
+    "h_r5_0",
+    "h_r5_0b",
+    "h_r5_0c",
+    "h_r6_0g",
+    "h_r6_0r",
+    "h_r6_2r"
+  ],
+  "idle": {
+    "seconds": 40,
+    "say": "idle"
+  },
+  "ui": {
+    "tapToStart": "Tap to start",
+    "begin": "Begin",
+    "skip": "Skip",
+    "next": "Next",
+    "continue": "Continue",
+    "close": "Close",
+    "tapContinue": "Tap to continue",
+    "pause": "Pause",
+    "hint": "Hint",
+    "hintLeft": "{n} left",
+    "noHints": "none left",
+    "notebook": "Notebook",
+    "resume": "Resume",
+    "soundOn": "Sound: on",
+    "soundOff": "Sound: off",
+    "voiceOn": "Voice: on",
+    "voiceOff": "Voice: off",
+    "restart": "Restart",
+    "paused": "Paused",
+    "howToTitle": "How to play",
+    "howTo": "Drag to look around. Pinch or scroll to zoom. Tap glowing things to read clues. Solve each room to win its seal. You have seven minutes.",
+    "tabs": [
+      "Items",
+      "Notes",
+      "Progress"
+    ],
+    "emptyItems": "Nothing collected yet.",
+    "emptyNotes": "No notes yet. Tap clues to save them here.",
+    "savedNotes": "Saved to your notes.",
+    "savedNotebook": "Saved to your notebook.",
+    "newWay": "A new way opened.",
+    "goNext": "Next room",
+    "goBack": "Back",
+    "somethingOpened": "Something opened.",
+    "findStrip": "Find in this room",
+    "merit": "Merit",
+    "sealsWon": "Seals won",
+    "roomsDone": "Rooms done",
+    "hintsUsed": "Hints used",
+    "lessonComplete": "Lesson {n} complete. You earned the {seal}.",
+    "incantation": "Nira whispers: {word}",
+    "wait": "Wait {n}…",
+    "check": "Check",
+    "open": "Open",
+    "reset": "Reset",
+    "recipe": "Recipe",
+    "notes": "Look at my notes",
+    "chooseSeal": "Pick a seal, then tap its slot.",
+    "beam": "Tap a mirror to turn it.",
+    "wordStrip": "Tap letters to fill the strip.",
+    "dragHint": "Drag to look around",
+    "keeperNumber": "{name}'s number: {n}",
+    "overlayError": "The game data has a problem. Fix game.json and reload.",
+    "winTitle": "THE CURSED CASTLE. CHAPTER ONE COMPLETE.",
+    "winText": "You are now a Keeper of the Seven Seals.",
+    "timeLeft": "Time left",
+    "playAgain": "Play again",
+    "loseTitle": "THE CASTLE SLEEPS AGAIN.",
+    "loseText": "The curse closes over Thornveil. Try again.",
+    "meritSoFar": "Merit so far",
+    "tryAgain": "Try again",
+    "notesRoom": "Room {n}",
+    "regrets": "The Keepers' regrets",
+    "numbers": "The Keepers' numbers",
+    "titleCard": "THE CURSED CASTLE",
+    "hotspotHint": "Look here"
+  },
+  "about": {
+    "title": "Your mission",
+    "text": [
+      "Thornveil Castle was once a school of magic. It forgot why magic exists, and that forgetting is the curse.",
+      "You are Kael and Nira. The door has sealed behind you. Win a Seal in each of the rooms, then wake the Guardian and answer its one question.",
+      "You have seven minutes. Look around, tap the glowing things, read the clues and solve each puzzle."
+    ]
+  },
+  "tutorial": [
+    {
+      "target": "timer",
+      "text": "This is your time. You have seven minutes. The clock stops while Kael and Nira talk. Merit is your score."
+    },
+    {
+      "target": "pause",
+      "text": "Pause stops the clock. It also has sound settings."
+    },
+    {
+      "target": "hint",
+      "text": "Stuck? Nira can give two hints in each room. Each hint costs 25 Merit."
+    },
+    {
+      "target": "notebook",
+      "text": "Nira's notebook keeps your items, notes and progress."
+    },
+    {
+      "target": "seals",
+      "text": "Win a seal in every room. Seven seals open the way out."
+    }
+  ],
+  "intro": [
+    {
+      "say": "intro_a"
+    },
+    {
+      "say": "intro_b"
+    },
+    {
+      "slam": true,
+      "say": "intro_c"
+    },
+    {
+      "title": true
+    }
+  ],
+  "speakers": {
+    "narrator": {
+      "name": "Narrator",
+      "voice": {
+        "pitch": 1,
+        "rate": 0.95
+      }
+    },
+    "kael": {
+      "name": "Kael",
+      "art": "kael",
+      "voice": {
+        "pitch": 0.75,
+        "rate": 1.1
+      }
+    },
+    "nira": {
+      "name": "Nira",
+      "art": "nira",
+      "voice": {
+        "pitch": 1.3,
+        "rate": 1
+      }
+    },
+    "guardian": {
+      "name": "The Guardian",
+      "art": "guardian_awake",
+      "voice": {
+        "pitch": 0.2,
+        "rate": 0.7
+      }
+    },
+    "king": {
+      "name": "The King",
+      "art": "keeper_king",
+      "voice": {
+        "pitch": 0.55,
+        "rate": 0.9
+      }
+    },
+    "scholar": {
+      "name": "The Scholar",
+      "art": "keeper_scholar",
+      "voice": {
+        "pitch": 0.9,
+        "rate": 0.95
+      }
+    },
+    "lady": {
+      "name": "The Lady",
+      "art": "keeper_lady",
+      "voice": {
+        "pitch": 1.5,
+        "rate": 0.9
+      }
+    },
+    "knight": {
+      "name": "The Knight",
+      "art": "keeper_knight",
+      "voice": {
+        "pitch": 0.7,
+        "rate": 1.05
+      }
+    }
+  },
+  "dialogues": {
+    "idle": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Try turning around. Drag to look around.",
+        "audioFile": "assets/audio/voice/idle_0.mp3"
+      }
+    ],
+    "intro_a": [
+      {
+        "speaker": "narrator",
+        "mood": "neutral",
+        "text": "Past the last village, at the edge of every map, stands a castle no one remembers.",
+        "audioFile": "assets/audio/voice/intro_a_0.mp3"
+      }
+    ],
+    "intro_b": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "Thornveil. The masters say it's forbidden.",
+        "audioFile": "assets/audio/voice/intro_b_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "Which is why my notebook has a whole page about it.",
+        "audioFile": "assets/audio/voice/intro_b_1.mp3"
+      }
+    ],
+    "intro_c": [
+      {
+        "speaker": "narrator",
+        "mood": "neutral",
+        "text": "They step inside, and the door slams shut behind them.",
+        "audioFile": "assets/audio/voice/intro_c_0.mp3"
+      }
+    ],
+    "r1_enter": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "The door just vanished behind us!",
+        "audioFile": "assets/audio/voice/r1_enter_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Sealed, not broken. Someone wanted this place to keep its secrets.",
+        "audioFile": "assets/audio/voice/r1_enter_1.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "Then let's find the first one.",
+        "audioFile": "assets/audio/voice/r1_enter_2.mp3"
+      }
+    ],
+    "r1_inscription": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "A riddle. Teeth that can't bite, opens doors with no hands.",
+        "audioFile": "assets/audio/voice/r1_inscription_0.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "A very polite dragon?",
+        "audioFile": "assets/audio/voice/r1_inscription_1.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Think smaller, Kael.",
+        "audioFile": "assets/audio/voice/r1_inscription_2.mp3"
+      }
+    ],
+    "r1_riddle_wrong1": [
+      {
+        "speaker": "kael",
+        "mood": "thinking",
+        "text": "A comb? It doesn't open much.",
+        "audioFile": "assets/audio/voice/r1_riddle_wrong1_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Teeth, yes. But which one opens doors?",
+        "audioFile": "assets/audio/voice/r1_riddle_wrong1_1.mp3"
+      }
+    ],
+    "r1_riddle_wrong2": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Think about what you hold to open a door.",
+        "audioFile": "assets/audio/voice/r1_riddle_wrong2_0.mp3"
+      }
+    ],
+    "r1_riddle_right": [
+      {
+        "speaker": "nira",
+        "mood": "excited",
+        "text": "A key! It must be hidden somewhere in this room.",
+        "audioFile": "assets/audio/voice/r1_riddle_right_0.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "thinking",
+        "text": "Where do you hide a key in a place where time stopped?",
+        "audioFile": "assets/audio/voice/r1_riddle_right_1.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "That clock. It stopped at midnight. Let's take a closer look.",
+        "audioFile": "assets/audio/voice/r1_riddle_right_2.mp3"
+      }
+    ],
+    "r1_clock": [
+      {
+        "speaker": "kael",
+        "mood": "thinking",
+        "text": "Stopped at midnight. Everything here stopped at once.",
+        "audioFile": "assets/audio/voice/r1_clock_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "excited",
+        "text": "Wait. There's paper behind the cracked glass.",
+        "audioFile": "assets/audio/voice/r1_clock_1.mp3"
+      }
+    ],
+    "r1_paper": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Three symbols: moon, sun, star.",
+        "audioFile": "assets/audio/voice/r1_paper_0.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "The statues each hold one.",
+        "audioFile": "assets/audio/voice/r1_paper_1.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "In a place like this, that's never a coincidence.",
+        "audioFile": "assets/audio/voice/r1_paper_2.mp3"
+      }
+    ],
+    "r1_statues_wrong": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "Oops.",
+        "audioFile": "assets/audio/voice/r1_statues_wrong_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Read the paper again. Left to right, as written.",
+        "audioFile": "assets/audio/voice/r1_statues_wrong_1.mp3"
+      }
+    ],
+    "r1_statues_right": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "The table! Something moved!",
+        "audioFile": "assets/audio/voice/r1_statues_right_0.mp3"
+      }
+    ],
+    "r1_key": [
+      {
+        "speaker": "kael",
+        "mood": "neutral",
+        "text": "Heavy. Old.",
+        "audioFile": "assets/audio/voice/r1_key_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Try the door.",
+        "audioFile": "assets/audio/voice/r1_key_1.mp3"
+      }
+    ],
+    "r1_sigil": [
+      {
+        "speaker": "nira",
+        "mood": "excited",
+        "text": "The Moon Sigil. Selvai. One of seven, I think.",
+        "audioFile": "assets/audio/voice/r1_sigil_0.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "Seven? That's six more rooms.",
+        "audioFile": "assets/audio/voice/r1_sigil_1.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "Then we should hurry.",
+        "audioFile": "assets/audio/voice/r1_sigil_2.mp3"
+      }
+    ],
+    "r2_enter": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "Four portraits. They're all watching us.",
+        "audioFile": "assets/audio/voice/r2_enter_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Paintings don't watch.",
+        "audioFile": "assets/audio/voice/r2_enter_1.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "That one just blinked.",
+        "audioFile": "assets/audio/voice/r2_enter_2.mp3"
+      }
+    ],
+    "r2_plate": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Each frame has a number, but I can't read them from here.",
+        "audioFile": "assets/audio/voice/r2_plate_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "We should look closely. First we need to know who's who.",
+        "audioFile": "assets/audio/voice/r2_plate_1.mp3"
+      }
+    ],
+    "r2_first_keeper": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "A talking portrait. Rude, but talking.",
+        "audioFile": "assets/audio/voice/r2_first_keeper_0.mp3"
+      }
+    ],
+    "r2_knight": [
+      {
+        "speaker": "knight",
+        "mood": "neutral",
+        "text": "I am younger than everyone in this hall.",
+        "audioFile": "assets/audio/voice/r2_knight_0.mp3"
+      },
+      {
+        "speaker": "knight",
+        "mood": "worried",
+        "text": "I was brave, but I faced the dark alone.",
+        "audioFile": "assets/audio/voice/r2_knight_1.mp3"
+      }
+    ],
+    "r2_scholar": [
+      {
+        "speaker": "scholar",
+        "mood": "neutral",
+        "text": "The King is older than I am.",
+        "audioFile": "assets/audio/voice/r2_scholar_0.mp3"
+      },
+      {
+        "speaker": "scholar",
+        "mood": "worried",
+        "text": "I chased power and forgot my friends.",
+        "audioFile": "assets/audio/voice/r2_scholar_1.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "He chased power and forgot his friends. I'm writing that down.",
+        "audioFile": "assets/audio/voice/r2_scholar_2.mp3"
+      }
+    ],
+    "r2_king": [
+      {
+        "speaker": "king",
+        "mood": "neutral",
+        "text": "The Lady is older than I am.",
+        "audioFile": "assets/audio/voice/r2_king_0.mp3"
+      },
+      {
+        "speaker": "king",
+        "mood": "worried",
+        "text": "I hoarded gold until my halls grew cold.",
+        "audioFile": "assets/audio/voice/r2_king_1.mp3"
+      }
+    ],
+    "r2_lady": [
+      {
+        "speaker": "lady",
+        "mood": "neutral",
+        "text": "I am the oldest of the four.",
+        "audioFile": "assets/audio/voice/r2_lady_0.mp3"
+      },
+      {
+        "speaker": "lady",
+        "mood": "worried",
+        "text": "I feared losing everything, so I locked every door.",
+        "audioFile": "assets/audio/voice/r2_lady_1.mp3"
+      }
+    ],
+    "r2_zoom": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "I can't read that from here.",
+        "audioFile": "assets/audio/voice/r2_zoom_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Move closer. There's a tiny number on each nameplate.",
+        "audioFile": "assets/audio/voice/r2_zoom_1.mp3"
+      }
+    ],
+    "r2_discuss": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Let's line them up. Who's the youngest?",
+        "audioFile": "assets/audio/voice/r2_discuss_0.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "The Knight. He said so himself.",
+        "audioFile": "assets/audio/voice/r2_discuss_1.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "Good. Work out the rest, then read each Keeper's number in that order.",
+        "audioFile": "assets/audio/voice/r2_discuss_2.mp3"
+      }
+    ],
+    "r2_wrong1": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "Nothing. Did we mix up who's older, or misread a number?",
+        "audioFile": "assets/audio/voice/r2_wrong1_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Check what each Keeper said, then the numbers in my notes.",
+        "audioFile": "assets/audio/voice/r2_wrong1_1.mp3"
+      }
+    ],
+    "r2_wrong2": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Youngest first. What number is on that Keeper's frame?",
+        "audioFile": "assets/audio/voice/r2_wrong2_0.mp3"
+      }
+    ],
+    "r2_wrong3": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Knight, Scholar, King, Lady. Read each frame's number in that order.",
+        "audioFile": "assets/audio/voice/r2_wrong3_0.mp3"
+      }
+    ],
+    "r2_right": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "One, five, eight, three. It's open!",
+        "audioFile": "assets/audio/voice/r2_right_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "The Time Sigil. Chronith. Their words lined up like a clock.",
+        "audioFile": "assets/audio/voice/r2_right_1.mp3"
+      }
+    ],
+    "r3_enter": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "The books are flying. Can we borrow one?",
+        "audioFile": "assets/audio/voice/r3_enter_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "worried",
+        "text": "Kael.",
+        "audioFile": "assets/audio/voice/r3_enter_1.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "neutral",
+        "text": "A very short loan.",
+        "audioFile": "assets/audio/voice/r3_enter_2.mp3"
+      }
+    ],
+    "r3_note": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "The beginning of every line holds the truth. There must be lines to read.",
+        "audioFile": "assets/audio/voice/r3_note_0.mp3"
+      }
+    ],
+    "r3_book4": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "Found one drifting up here near the ceiling!",
+        "audioFile": "assets/audio/voice/r3_book4_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "Of course it was the one we'd never look for.",
+        "audioFile": "assets/audio/voice/r3_book4_1.mp3"
+      }
+    ],
+    "r3_discuss": [
+      {
+        "speaker": "kael",
+        "mood": "thinking",
+        "text": "Four books, four sentences. Now what?",
+        "audioFile": "assets/audio/voice/r3_discuss_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "The note says the beginning. What's at the beginning of a sentence?",
+        "audioFile": "assets/audio/voice/r3_discuss_1.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "The first letter!",
+        "audioFile": "assets/audio/voice/r3_discuss_2.mp3"
+      }
+    ],
+    "r3_wrong1": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "That doesn't spell anything.",
+        "audioFile": "assets/audio/voice/r3_wrong1_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Take the very first letter of each sentence.",
+        "audioFile": "assets/audio/voice/r3_wrong1_1.mp3"
+      }
+    ],
+    "r3_wrong2": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Keep them in book order, one to four.",
+        "audioFile": "assets/audio/voice/r3_wrong2_0.mp3"
+      }
+    ],
+    "r3_wrong3": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "M, then O, O, N. Does it remind you of anything?",
+        "audioFile": "assets/audio/voice/r3_wrong3_0.mp3"
+      }
+    ],
+    "r3_wrong_symbol": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "The word and the symbol need to match.",
+        "audioFile": "assets/audio/voice/r3_wrong_symbol_0.mp3"
+      }
+    ],
+    "r3_right": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "Moon! Again!",
+        "audioFile": "assets/audio/voice/r3_right_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "The moon is everywhere in this castle. It must matter. Sapiel.",
+        "audioFile": "assets/audio/voice/r3_right_1.mp3"
+      }
+    ],
+    "r4_enter": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "Finally, something that bubbles! Let's mix everything and see.",
+        "audioFile": "assets/audio/voice/r4_enter_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "worried",
+        "text": "Kael, no. Potions go by instructions, not by feel.",
+        "audioFile": "assets/audio/voice/r4_enter_1.mp3"
+      }
+    ],
+    "r4_cabinet": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "The Elixir of Memory. Remembering again. This castle really can't stop.",
+        "audioFile": "assets/audio/voice/r4_cabinet_0.mp3"
+      }
+    ],
+    "r4_recipe": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "First, awaken the water. Then the breath of the forest.",
+        "audioFile": "assets/audio/voice/r4_recipe_0.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "Poetry that is also homework. My two worst things.",
+        "audioFile": "assets/audio/voice/r4_recipe_1.mp3"
+      }
+    ],
+    "r4_bottles": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "This red one looks the coolest.",
+        "audioFile": "assets/audio/voice/r4_bottles_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Cool isn't in the recipe.",
+        "audioFile": "assets/audio/voice/r4_bottles_1.mp3"
+      }
+    ],
+    "r4_wrong1": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Order matters. Each step changes the next.",
+        "audioFile": "assets/audio/voice/r4_wrong1_0.mp3"
+      }
+    ],
+    "r4_wrong2": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Read the recipe one line at a time. What is the first line asking for?",
+        "audioFile": "assets/audio/voice/r4_wrong2_0.mp3"
+      }
+    ],
+    "r4_wrong3": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Water first. Then think about what 'the breath of the forest' could be.",
+        "audioFile": "assets/audio/voice/r4_wrong3_0.mp3"
+      }
+    ],
+    "r4_dragon": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "Whoa! Smoke!",
+        "audioFile": "assets/audio/voice/r4_dragon_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "worried",
+        "text": "It isn't in the recipe. If it isn't written, it stays in the bottle.",
+        "audioFile": "assets/audio/voice/r4_dragon_1.mp3"
+      }
+    ],
+    "r4_right": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "It's turning gold. It's turning silver!",
+        "audioFile": "assets/audio/voice/r4_right_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "That's the Elixir of Memory. Now, the cabinet. Aequa.",
+        "audioFile": "assets/audio/voice/r4_right_1.mp3"
+      }
+    ],
+    "r5_enter": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "The whole sky is inside this tower!",
+        "audioFile": "assets/audio/voice/r5_enter_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Not the sky. A map of it. Look, four constellations.",
+        "audioFile": "assets/audio/voice/r5_enter_1.mp3"
+      }
+    ],
+    "r5_plate": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "An ancient crown, made of stars. And we begin with the brightest.",
+        "audioFile": "assets/audio/voice/r5_plate_0.mp3"
+      }
+    ],
+    "r5_telescope": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "That one is blazing!",
+        "audioFile": "assets/audio/voice/r5_telescope_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "The Silver Star. That's where we start.",
+        "audioFile": "assets/audio/voice/r5_telescope_1.mp3"
+      }
+    ],
+    "r5_map": [
+      {
+        "speaker": "nira",
+        "mood": "excited",
+        "text": "A path of light joining the stars. It does look like a crown.",
+        "audioFile": "assets/audio/voice/r5_map_0.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "thinking",
+        "text": "And every star has a number.",
+        "audioFile": "assets/audio/voice/r5_map_1.mp3"
+      }
+    ],
+    "r5_wrong1": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "Click. Nothing.",
+        "audioFile": "assets/audio/voice/r5_wrong1_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Follow the path and read the numbers in order.",
+        "audioFile": "assets/audio/voice/r5_wrong1_1.mp3"
+      }
+    ],
+    "r5_wrong2": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Start at the brightest star. What is its number?",
+        "audioFile": "assets/audio/voice/r5_wrong2_0.mp3"
+      }
+    ],
+    "r5_wrong3": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Silver, North, Crown, Falling. Read their numbers in that order.",
+        "audioFile": "assets/audio/voice/r5_wrong3_0.mp3"
+      }
+    ],
+    "r5_right": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "One, three, four, two. It's open!",
+        "audioFile": "assets/audio/voice/r5_right_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "The Star Sigil. The stars point the way. Astrel.",
+        "audioFile": "assets/audio/voice/r5_right_1.mp3"
+      }
+    ],
+    "r6_enter": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "I can't see my own boots.",
+        "audioFile": "assets/audio/voice/r6_enter_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Then we follow the light. That beam, there.",
+        "audioFile": "assets/audio/voice/r6_enter_1.mp3"
+      }
+    ],
+    "r6_gate": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "One light, three mirrors, one destination.",
+        "audioFile": "assets/audio/voice/r6_gate_0.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "thinking",
+        "text": "The destination has to be that crystal.",
+        "audioFile": "assets/audio/voice/r6_gate_1.mp3"
+      }
+    ],
+    "r6_runes": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Mirrors bend light a quarter turn. Edge-on, they let it through.",
+        "audioFile": "assets/audio/voice/r6_runes_0.mp3"
+      }
+    ],
+    "r6_panel": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "Okay. Twist, twist, twist and hope?",
+        "audioFile": "assets/audio/voice/r6_panel_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Twist and watch where the beam goes.",
+        "audioFile": "assets/audio/voice/r6_panel_1.mp3"
+      }
+    ],
+    "r6_stuck1": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Where does the beam stop? That's the mirror to change.",
+        "audioFile": "assets/audio/voice/r6_stuck1_0.mp3"
+      }
+    ],
+    "r6_stuck2": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Start with the mirror nearest the light.",
+        "audioFile": "assets/audio/voice/r6_stuck2_0.mp3"
+      }
+    ],
+    "r6_right": [
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "It's glowing! The gate is moving!",
+        "audioFile": "assets/audio/voice/r6_right_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "The Light Sigil. Light defeats the shadow. Illura.",
+        "audioFile": "assets/audio/voice/r6_right_1.mp3"
+      }
+    ],
+    "r7_enter": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "This is it. It's enormous.",
+        "audioFile": "assets/audio/voice/r7_enter_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "Six slots. Six seals. We've earned every one.",
+        "audioFile": "assets/audio/voice/r7_enter_1.mp3"
+      }
+    ],
+    "r7_guardian": [
+      {
+        "speaker": "guardian",
+        "mood": "neutral",
+        "text": "Only those who carry six seals may wake me.",
+        "audioFile": "assets/audio/voice/r7_guardian_0.mp3"
+      }
+    ],
+    "r7_before": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Each Keeper told us what went wrong. Check your notes before you answer.",
+        "audioFile": "assets/audio/voice/r7_before_0.mp3"
+      }
+    ],
+    "r7_wrong1": [
+      {
+        "speaker": "kael",
+        "mood": "worried",
+        "text": "The statue's eyes flickered. That wasn't it.",
+        "audioFile": "assets/audio/voice/r7_wrong1_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Think about what the Keepers lost.",
+        "audioFile": "assets/audio/voice/r7_wrong1_1.mp3"
+      }
+    ],
+    "r7_wrong2": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Wealth, power and fear are already ruled out.",
+        "audioFile": "assets/audio/voice/r7_wrong2_0.mp3"
+      }
+    ],
+    "r7_guardian_a": [
+      {
+        "speaker": "guardian",
+        "mood": "neutral",
+        "text": "Long ago the Keepers forgot why Thornveil held magic.",
+        "audioFile": "assets/audio/voice/r7_guardian_a_0.mp3"
+      },
+      {
+        "speaker": "guardian",
+        "mood": "neutral",
+        "text": "Gold, power and fear filled their hearts, and the magic had no purpose left.",
+        "audioFile": "assets/audio/voice/r7_guardian_a_1.mp3"
+      },
+      {
+        "speaker": "guardian",
+        "mood": "neutral",
+        "text": "You came in anyway, together, and not too afraid to go on.",
+        "audioFile": "assets/audio/voice/r7_guardian_a_2.mp3"
+      },
+      {
+        "speaker": "guardian",
+        "mood": "neutral",
+        "text": "Magic is not for owning or hiding. It is for the brave to share with friends.",
+        "audioFile": "assets/audio/voice/r7_guardian_a_3.mp3"
+      }
+    ],
+    "r7_guardian_b": [
+      {
+        "speaker": "guardian",
+        "mood": "neutral",
+        "text": "Take the Crown, Keepers. The castle remembers.",
+        "audioFile": "assets/audio/voice/r7_guardian_b_0.mp3"
+      }
+    ],
+    "r7_final_a": [
+      {
+        "speaker": "kael",
+        "mood": "proud",
+        "text": "Seven rooms. Seven seals. And a castle that forgot why it was magic.",
+        "audioFile": "assets/audio/voice/r7_final_a_0.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "It didn't need gold or power. It needed someone to be brave first.",
+        "audioFile": "assets/audio/voice/r7_final_a_1.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "excited",
+        "text": "Even you, after reading the instructions three times?",
+        "audioFile": "assets/audio/voice/r7_final_a_2.mp3"
+      }
+    ],
+    "r7_final_b": [
+      {
+        "speaker": "nira",
+        "mood": "proud",
+        "text": "Especially then. Courage isn't not being scared. It's opening the door anyway.",
+        "audioFile": "assets/audio/voice/r7_final_b_0.mp3"
+      },
+      {
+        "speaker": "kael",
+        "mood": "proud",
+        "text": "That was the best thing you've ever said. Don't tell anyone I said so.",
+        "audioFile": "assets/audio/voice/r7_final_b_1.mp3"
+      },
+      {
+        "speaker": "nira",
+        "mood": "excited",
+        "text": "I'll write it in my notebook.",
+        "audioFile": "assets/audio/voice/r7_final_b_2.mp3"
+      }
+    ],
+    "h_r2_0": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Look at the brass plate on the far door first.",
+        "audioFile": "assets/audio/voice/h_r2_0_0.mp3"
+      }
+    ],
+    "h_r3_0": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Start with the note on the reading desk.",
+        "audioFile": "assets/audio/voice/h_r3_0_0.mp3"
+      }
+    ],
+    "h_r3_2b": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Find the rest of the books first. Look up as well as around.",
+        "audioFile": "assets/audio/voice/h_r3_2b_0.mp3"
+      }
+    ],
+    "h_r4_0": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Look at the locked cabinet first.",
+        "audioFile": "assets/audio/voice/h_r4_0_0.mp3"
+      }
+    ],
+    "h_r4_1c": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Check the bottles on the long table.",
+        "audioFile": "assets/audio/voice/h_r4_1c_0.mp3"
+      }
+    ],
+    "h_r4_1d": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Try the cauldron.",
+        "audioFile": "assets/audio/voice/h_r4_1d_0.mp3"
+      }
+    ],
+    "h_r4_1b": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Read the recipe on the lectern.",
+        "audioFile": "assets/audio/voice/h_r4_1b_0.mp3"
+      }
+    ],
+    "h_r5_0": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Read the plate on the metal box.",
+        "audioFile": "assets/audio/voice/h_r5_0_0.mp3"
+      }
+    ],
+    "h_r5_0b": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Look through the brass telescope.",
+        "audioFile": "assets/audio/voice/h_r5_0b_0.mp3"
+      }
+    ],
+    "h_r5_0c": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Study the star map on the table.",
+        "audioFile": "assets/audio/voice/h_r5_0c_0.mp3"
+      }
+    ],
+    "h_r6_0g": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Read the carving on the gate.",
+        "audioFile": "assets/audio/voice/h_r6_0g_0.mp3"
+      }
+    ],
+    "h_r6_0r": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Touch the glowing runes on the floor.",
+        "audioFile": "assets/audio/voice/h_r6_0r_0.mp3"
+      }
+    ],
+    "h_r6_2r": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "The runes explain how mirrors work. Read all three.",
+        "audioFile": "assets/audio/voice/h_r6_2r_0.mp3"
+      }
+    ],
+    "h_r1_1": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Look at the glowing spot. We need to find out what that is.",
+        "audioFile": "assets/audio/voice/h_r1_1_0.mp3"
+      }
+    ],
+    "h_r1_2": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Read the inscription again, then pick the answer that opens doors.",
+        "audioFile": "assets/audio/voice/h_r1_2_0.mp3"
+      }
+    ],
+    "h_r1_2a": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Look behind the glass.",
+        "audioFile": "assets/audio/voice/h_r1_2a_0.mp3"
+      }
+    ],
+    "h_r1_2b": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Read the paper again, left to right.",
+        "audioFile": "assets/audio/voice/h_r1_2b_0.mp3"
+      }
+    ],
+    "h_r1_2c": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Something on the table changed. Take a good look.",
+        "audioFile": "assets/audio/voice/h_r1_2c_0.mp3"
+      }
+    ],
+    "h_r1_2d": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Use the key on the great door.",
+        "audioFile": "assets/audio/voice/h_r1_2d_0.mp3"
+      }
+    ],
+    "h_r2_1": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Who is the youngest? Look at the Knight.",
+        "audioFile": "assets/audio/voice/h_r2_1_0.mp3"
+      }
+    ],
+    "h_r2_2": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Youngest to oldest: Knight, Scholar, King, Lady. Zoom in on every frame to read its number.",
+        "audioFile": "assets/audio/voice/h_r2_2_0.mp3"
+      }
+    ],
+    "h_r3_1": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "There are four books to find. Look high and low.",
+        "audioFile": "assets/audio/voice/h_r3_1_0.mp3"
+      }
+    ],
+    "h_r3_2": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Look at the first letter of each sentence.",
+        "audioFile": "assets/audio/voice/h_r3_2_0.mp3"
+      }
+    ],
+    "h_r4_1": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "The recipe tells us what to do. Read it.",
+        "audioFile": "assets/audio/voice/h_r4_1_0.mp3"
+      }
+    ],
+    "h_r4_2": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "The first line asks for water. Take the clear blue flask first.",
+        "audioFile": "assets/audio/voice/h_r4_2_0.mp3"
+      }
+    ],
+    "h_r5_1": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Look at the glowing spot. The next clue is there.",
+        "audioFile": "assets/audio/voice/h_r5_1_0.mp3"
+      }
+    ],
+    "h_r5_2": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "The path goes Silver, North, Crown, Falling.",
+        "audioFile": "assets/audio/voice/h_r5_2_0.mp3"
+      }
+    ],
+    "h_r6_1": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Try one of the mirrors.",
+        "audioFile": "assets/audio/voice/h_r6_1_0.mp3"
+      }
+    ],
+    "h_r6_2": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Start with the mirror nearest the light.",
+        "audioFile": "assets/audio/voice/h_r6_2_0.mp3"
+      }
+    ],
+    "h_r7_1": [
+      {
+        "speaker": "nira",
+        "mood": "thinking",
+        "text": "Open your notes and read the Keepers' regrets.",
+        "audioFile": "assets/audio/voice/h_r7_1_0.mp3"
+      }
+    ],
+    "h_r7_2": [
+      {
+        "speaker": "nira",
+        "mood": "neutral",
+        "text": "Three of the four answers are already ruled out.",
+        "audioFile": "assets/audio/voice/h_r7_2_0.mp3"
+      }
+    ]
+  },
+  "clues": {
+    "r1_inscription": {
+      "title": "The inscription",
+      "text": "I have teeth, but I cannot bite. I open doors, but I have no hands. What am I?",
+      "audioFile": "assets/audio/voice/clue_r1_inscription.mp3"
+    },
+    "r1_clock": {
+      "title": "The clock",
+      "text": "Stopped at midnight. Something is folded behind the glass.",
+      "audioFile": "assets/audio/voice/clue_r1_clock.mp3"
+    },
+    "r2_plate": {
+      "title": "The door plate",
+      "text": "The Keepers hang here in order of age. Each frame carries a number, too small to read from far away. Look closely at every frame. Read the numbers from the youngest Keeper to the oldest.",
+      "audioFile": "assets/audio/voice/clue_r2_plate.mp3"
+    },
+    "r3_note": {
+      "title": "The note on the desk",
+      "text": "The beginning of every line holds the truth. Read carefully, and the hidden word shall reveal itself.",
+      "audioFile": "assets/audio/voice/clue_r3_note.mp3"
+    },
+    "r3_book1": {
+      "title": "Book I of IV",
+      "text": "Many secrets sleep beneath the stars.",
+      "sort": 1,
+      "audioFile": "assets/audio/voice/clue_r3_book1.mp3"
+    },
+    "r3_book2": {
+      "title": "Book II of IV",
+      "text": "Only the patient can find the truth.",
+      "sort": 2,
+      "audioFile": "assets/audio/voice/clue_r3_book2.mp3"
+    },
+    "r3_book3": {
+      "title": "Book III of IV",
+      "text": "Open your mind to the ancient light.",
+      "sort": 3,
+      "audioFile": "assets/audio/voice/clue_r3_book3.mp3"
+    },
+    "r3_book4": {
+      "title": "Book IV of IV",
+      "text": "Never trust the darkness alone.",
+      "sort": 4,
+      "audioFile": "assets/audio/voice/clue_r3_book4.mp3"
+    },
+    "r4_cabinet": {
+      "title": "The locked cabinet",
+      "text": "This lock has forgotten how to open. Only the Elixir of Memory will wake it.",
+      "audioFile": "assets/audio/voice/clue_r4_cabinet.mp3"
+    },
+    "r4_recipe": {
+      "title": "The recipe",
+      "text": "First, awaken the water. Then add the breath of the forest. Next, invite the light of the sun. Finally, seal the mixture with the dust of the moon.",
+      "audioFile": "assets/audio/voice/clue_r4_recipe.mp3"
+    },
+    "r5_plate": {
+      "title": "The clue plate",
+      "text": "Find the stars that form the ancient crown. Begin with the brightest. Follow the path until the final star completes the shape.",
+      "audioFile": "assets/audio/voice/clue_r5_plate.mp3"
+    },
+    "r5_telescope": {
+      "title": "The telescope",
+      "text": "The Silver Star is the brightest.",
+      "visual": {
+        "type": "silver"
+      },
+      "audioFile": "assets/audio/voice/clue_r5_telescope.mp3"
+    },
+    "r5_map": {
+      "title": "The star map",
+      "text": "A dotted path joins the stars of the crown: the Silver Star, the North Star, the Crown Star and the Falling Star.",
+      "visual": {
+        "type": "starmap",
+        "stars": [
+          {
+            "name": "Silver Star",
+            "n": 1,
+            "x": 0.18,
+            "y": 0.7
+          },
+          {
+            "name": "North Star",
+            "n": 3,
+            "x": 0.4,
+            "y": 0.28
+          },
+          {
+            "name": "Crown Star",
+            "n": 4,
+            "x": 0.68,
+            "y": 0.34
+          },
+          {
+            "name": "Falling Star",
+            "n": 2,
+            "x": 0.84,
+            "y": 0.74
+          }
+        ]
+      },
+      "audioFile": "assets/audio/voice/clue_r5_map.mp3"
+    },
+    "r6_gate": {
+      "title": "The carved gate",
+      "text": "One light. Three mirrors. One destination. Turn what is hidden toward what is seen. Only when the light touches the heart shall the gate awaken.",
+      "audioFile": "assets/audio/voice/clue_r6_gate.mp3"
+    },
+    "r6_rune1": {
+      "title": "Rune of the Turn",
+      "text": "A mirror bends light a quarter turn.",
+      "audioFile": "assets/audio/voice/clue_r6_rune1.mp3"
+    },
+    "r6_rune2": {
+      "title": "Rune of the Edge",
+      "text": "A mirror seen edge-on lets light pass.",
+      "audioFile": "assets/audio/voice/clue_r6_rune2.mp3"
+    },
+    "r6_rune3": {
+      "title": "Rune of the Heart",
+      "text": "The crystal wakes when light touches it.",
+      "audioFile": "assets/audio/voice/clue_r6_rune3.mp3"
+    },
+    "r7_guardian": {
+      "title": "The Guardian",
+      "text": "Only those who carry six seals may wake me.",
+      "audioFile": "assets/audio/voice/clue_r7_guardian.mp3"
+    },
+    "k_knight": {
+      "title": "The Knight",
+      "text": "I was brave, but I faced the dark alone.",
+      "audioFile": "assets/audio/voice/clue_k_knight.mp3"
+    },
+    "k_scholar": {
+      "title": "The Scholar",
+      "text": "I chased power and forgot my friends.",
+      "audioFile": "assets/audio/voice/clue_k_scholar.mp3"
+    },
+    "k_king": {
+      "title": "The King",
+      "text": "I hoarded gold until my halls grew cold.",
+      "audioFile": "assets/audio/voice/clue_k_king.mp3"
+    },
+    "k_lady": {
+      "title": "The Lady",
+      "text": "I feared losing everything, so I locked every door.",
+      "audioFile": "assets/audio/voice/clue_k_lady.mp3"
+    }
+  },
+  "items": {
+    "paper": {
+      "name": "Folded paper",
+      "art": "items_02_folded_paper",
+      "visual": "symbols",
+      "text": "Three symbols in a row: Moon, Sun, Star.",
+      "purpose": "Shows the order to touch the statues.",
+      "audioFile": "assets/audio/voice/item_paper.mp3"
+    },
+    "iron_key": {
+      "name": "Iron key",
+      "art": "items_01_iron_key",
+      "text": "An iron key. It looks like it fits the great door.",
+      "purpose": "Opens the great door.",
+      "audioFile": "assets/audio/voice/item_iron_key.mp3"
+    },
+    "bottles": {
+      "name": "Five bottles",
+      "visual": "bottles",
+      "text": "Water: clear spring water. Forest Essence: green, smells of pine. Sun Dust: golden powder, warm to the touch. Moon Dust: silver powder, cool to the touch. Dragon Ash: black powder that smells of smoke.",
+      "purpose": "Ingredients for the Elixir of Memory.",
+      "audioFile": "assets/audio/voice/item_bottles.mp3"
+    },
+    "crown": {
+      "name": "Guardian's Crown",
+      "art": "items_03_guardians_crown",
+      "text": "The Guardian's Crown, given to those who were brave together.",
+      "purpose": "Proof that the curse is broken.",
+      "audioFile": "assets/audio/voice/item_crown.mp3"
+    },
+    "sigil_moon": {
+      "name": "Moon Sigil",
+      "art": "sigil_moon",
+      "text": "The Moon Sigil. Seal of the Art of the Moon.",
+      "purpose": "One of the seven seals.",
+      "audioFile": "assets/audio/voice/item_sigil_moon.mp3"
+    },
+    "sigil_time": {
+      "name": "Time Sigil",
+      "art": "sigil_time",
+      "text": "The Time Sigil. Seal of the Art of Time.",
+      "purpose": "One of the seven seals.",
+      "audioFile": "assets/audio/voice/item_sigil_time.mp3"
+    },
+    "sigil_knowledge": {
+      "name": "Knowledge Sigil",
+      "art": "sigil_knowledge",
+      "text": "The Knowledge Sigil. Seal of the Art of Knowledge.",
+      "purpose": "One of the seven seals.",
+      "audioFile": "assets/audio/voice/item_sigil_knowledge.mp3"
+    },
+    "sigil_balance": {
+      "name": "Balance Sigil",
+      "art": "sigil_balance",
+      "text": "The Balance Sigil. Seal of the Art of Balance.",
+      "purpose": "One of the seven seals.",
+      "audioFile": "assets/audio/voice/item_sigil_balance.mp3"
+    },
+    "sigil_star": {
+      "name": "Star Sigil",
+      "art": "sigil_star",
+      "text": "The Star Sigil. Seal of the Art of Stars.",
+      "purpose": "One of the seven seals.",
+      "audioFile": "assets/audio/voice/item_sigil_star.mp3"
+    },
+    "sigil_light": {
+      "name": "Light Sigil",
+      "art": "sigil_light",
+      "text": "The Light Sigil. Seal of the Art of Light.",
+      "purpose": "One of the seven seals.",
+      "audioFile": "assets/audio/voice/item_sigil_light.mp3"
+    },
+    "sigil_seventh": {
+      "name": "Seventh Seal",
+      "art": "sigil_seventh",
+      "text": "The seventh seal, shown by the Guardian.",
+      "purpose": "The seal of Courage.",
+      "audioFile": "assets/audio/voice/item_sigil_seventh.mp3"
+    }
+  },
+  "panels": {
+    "riddle_choice": {
+      "type": "choice",
+      "title": "The inscription",
+      "prompt": "I have teeth, but I cannot bite. I open doors, but I have no hands. What am I?",
+      "choices": [
+        "Key",
+        "Comb",
+        "Saw"
+      ],
+      "answer": "Key",
+      "penalty": false,
+      "wrong": [
+        "r1_riddle_wrong1",
+        "r1_riddle_wrong2"
+      ],
+      "right": "r1_riddle_right",
+      "emits": [
+        "riddle_solved"
+      ]
+    },
+    "dial_room2": {
+      "type": "dial",
+      "title": "The dial lock",
+      "prompt": "Turn the four wheels, then press Open.",
+      "count": 4,
+      "min": 0,
+      "max": 9,
+      "answerFrom": "room2",
+      "wrong": [
+        "r2_wrong1",
+        "r2_wrong2",
+        "r2_wrong3"
+      ],
+      "right": "r2_right",
+      "emits": [
+        "lock_solved"
+      ],
+      "notes": true
+    },
+    "letters": {
+      "type": "letters",
+      "title": "The reading desk",
+      "prompt": "Take the first letter of each sentence, in book order.",
+      "books": [
+        "r3_book1",
+        "r3_book2",
+        "r3_book3",
+        "r3_book4"
+      ],
+      "letters": {
+        "books": [
+          "r3_book1",
+          "r3_book2",
+          "r3_book3",
+          "r3_book4"
+        ]
+      },
+      "word": "MOON",
+      "symbols": [
+        "Moon",
+        "Sun",
+        "Star",
+        "Flame"
+      ],
+      "symbol": "Moon",
+      "symbolPrompt": "A symbol lock. Which symbol matches the word?",
+      "symbolArt": {
+        "Moon": "sym_moon",
+        "Sun": "sym_sun",
+        "Star": "sym_star",
+        "Flame": "sym_flame"
+      },
+      "wrong": [
+        "r3_wrong1",
+        "r3_wrong2",
+        "r3_wrong3"
+      ],
+      "wrongSymbol": "r3_wrong_symbol",
+      "right": "r3_right",
+      "emits": [
+        "desk_solved"
+      ]
+    },
+    "cauldron": {
+      "type": "cauldron",
+      "title": "The cauldron",
+      "prompt": "Add the ingredients in the order of the recipe.",
+      "bottles": [
+        "sun",
+        "dragon",
+        "water",
+        "moon",
+        "forest"
+      ],
+      "seq": [
+        "water",
+        "forest",
+        "sun",
+        "moon"
+      ],
+      "decoy": "dragon",
+      "names": {
+        "water": "Water",
+        "forest": "Forest Essence",
+        "sun": "Sun Dust",
+        "moon": "Moon Dust",
+        "dragon": "Dragon Ash"
+      },
+      "art": {
+        "sun": "bottle_sun",
+        "dragon": "bottle_dragon",
+        "water": "bottle_water",
+        "moon": "bottle_moon",
+        "forest": "bottle_forest"
+      },
+      "desc": {
+        "water": "clear spring water",
+        "forest": "green, smells of pine",
+        "sun": "golden powder, warm",
+        "moon": "silver powder, cool",
+        "dragon": "black powder, smells of smoke"
+      },
+      "liquid": [
+        "#8fd3ff",
+        "#3fae5a",
+        "#e3b53a",
+        "#cfd8ea"
+      ],
+      "wrong": [
+        "r4_wrong1",
+        "r4_wrong2",
+        "r4_wrong3"
+      ],
+      "wrongDecoy": "r4_dragon",
+      "right": "r4_right",
+      "emits": [
+        "elixir_done"
+      ],
+      "recipeClue": "r4_recipe"
+    },
+    "dial_room5": {
+      "type": "dial",
+      "title": "The celestial wheel",
+      "prompt": "Turn the four rings, then press Open.",
+      "count": 4,
+      "min": 1,
+      "max": 4,
+      "answerFrom": "stars:r5_map",
+      "wrong": [
+        "r5_wrong1",
+        "r5_wrong2",
+        "r5_wrong3"
+      ],
+      "right": "r5_right",
+      "emits": [
+        "wheel_solved"
+      ]
+    },
+    "light_table": {
+      "type": "lighttable",
+      "title": "The Light Table",
+      "prompt": "Tap a mirror to turn it. Guide the beam to the crystal.",
+      "penalty": false,
+      "layout": {
+        "size": 5,
+        "source": {
+          "row": 0
+        },
+        "crystal": {
+          "side": "top",
+          "index": 4
+        },
+        "mirrors": [
+          {
+            "r": 0,
+            "c": 2
+          },
+          {
+            "r": 4,
+            "c": 2
+          },
+          {
+            "r": 4,
+            "c": 4
+          }
+        ]
+      },
+      "stuck": [
+        {
+          "after": 40,
+          "say": "r6_stuck1"
+        },
+        {
+          "after": 90,
+          "say": "r6_stuck2"
+        }
+      ],
+      "open": "r6_panel",
+      "right": "r6_right",
+      "emits": [
+        "light_solved"
+      ]
+    },
+    "seal_slots": {
+      "type": "seals",
+      "title": "The great door",
+      "prompt": "Pick a seal, then tap its slot.",
+      "slots": [
+        "sigil_moon",
+        "sigil_time",
+        "sigil_knowledge",
+        "sigil_balance",
+        "sigil_star",
+        "sigil_light"
+      ],
+      "emits": [
+        "seals_placed"
+      ]
+    },
+    "riddle_final": {
+      "type": "choice",
+      "title": "The Guardian's question",
+      "prompt": "The moon remembers. Time reveals. Knowledge guides. Balance sustains. The stars point the way. Light defeats the shadow. But what gives magic its purpose?",
+      "choices": [
+        "Power",
+        "Wealth",
+        "Courage",
+        "Fear"
+      ],
+      "answer": "Courage",
+      "lockout": "final",
+      "wrong": [
+        "r7_wrong1",
+        "r7_wrong2"
+      ],
+      "emits": [
+        "riddle_solved"
+      ],
+      "finalAnswer": true,
+      "notesButton": true
+    }
+  },
+  "rooms": [
+    {
+      "id": "room1",
+      "n": 1,
+      "title": "The Forgotten Entrance",
+      "lesson": "Lesson 1: the Art of the Moon",
+      "panorama": "assets/rooms/room1.webp",
+      "fallback": [
+        "#3a352c",
+        "#17140f"
+      ],
+      "start": {
+        "yaw": 0,
+        "pitch": 20,
+        "hfov": 100
+      },
+      "objective": {
+        "card": "Find a way to open the great door.",
+        "hud": "Find how to open the great door.",
+        "audioFile": "assets/audio/voice/obj_1.mp3"
+      },
+      "enter": "r1_enter",
+      "complete": "r1_sigil",
+      "seal": {
+        "item": "sigil_moon",
+        "name": "Moon Sigil",
+        "incantation": "Selvai",
+        "art": "sigil_moon",
+        "audioFile": "assets/audio/voice/inc_1.mp3"
+      },
+      "exit": {
+        "yaw": 0,
+        "pitch": 0,
+        "size": 34
+      },
+      "hints": [
+        {
+          "flash": "next",
+          "say": "h_r1_1"
+        },
+        {
+          "flash": "next",
+          "say": "h_r1_2",
+          "sayIf": {
+            "clock": "h_r1_2a",
+            "statue_moon": "h_r1_2b",
+            "drawer": "h_r1_2c",
+            "door_great": "h_r1_2d"
+          }
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "inscription",
+          "kind": "LEARN",
+          "label": "Carved lettering",
+          "yaw": 0,
+          "pitch": 36,
+          "size": 14,
+          "glow": true,
+          "clue": "r1_inscription",
+          "say": "r1_inscription",
+          "panel": "riddle_choice"
+        },
+        {
+          "id": "clock",
+          "kind": "LEARN",
+          "label": "Cracked clock",
+          "yaw": 98,
+          "pitch": 24,
+          "size": 15,
+          "glow": true,
+          "after": [
+            "riddle_solved"
+          ],
+          "strip": [
+            "paper"
+          ],
+          "clue": "r1_clock",
+          "say": "r1_clock",
+          "then": {
+            "give": "paper",
+            "say": "r1_paper"
+          }
+        },
+        {
+          "id": "statue_moon",
+          "kind": "PANEL",
+          "label": "Statue of the Moon",
+          "yaw": -137,
+          "pitch": 14,
+          "size": 14,
+          "glow": true,
+          "after": [
+            "paper"
+          ],
+          "order": {
+            "seq": [
+              "statue_moon",
+              "statue_sun",
+              "statue_star"
+            ],
+            "event": "statues_done",
+            "wrongSay": "r1_statues_wrong",
+            "rightSay": "r1_statues_right",
+            "toast": "somethingOpened"
+          }
+        },
+        {
+          "id": "statue_sun",
+          "kind": "PANEL",
+          "label": "Statue of the Sun",
+          "yaw": -108,
+          "pitch": 14,
+          "size": 14,
+          "glow": true,
+          "after": [
+            "paper"
+          ],
+          "order": {
+            "seq": [
+              "statue_moon",
+              "statue_sun",
+              "statue_star"
+            ],
+            "event": "statues_done",
+            "wrongSay": "r1_statues_wrong",
+            "rightSay": "r1_statues_right",
+            "toast": "somethingOpened"
+          }
+        },
+        {
+          "id": "statue_star",
+          "kind": "PANEL",
+          "label": "Statue of the Star",
+          "yaw": -80,
+          "pitch": 14,
+          "size": 14,
+          "glow": true,
+          "after": [
+            "paper"
+          ],
+          "order": {
+            "seq": [
+              "statue_moon",
+              "statue_sun",
+              "statue_star"
+            ],
+            "event": "statues_done",
+            "wrongSay": "r1_statues_wrong",
+            "rightSay": "r1_statues_right",
+            "toast": "somethingOpened"
+          }
+        },
+        {
+          "id": "drawer",
+          "kind": "FIND",
+          "label": "Table drawer",
+          "yaw": 94,
+          "pitch": -17,
+          "size": 9,
+          "after": [
+            "statues_done"
+          ],
+          "strip": [
+            "riddle_solved"
+          ],
+          "give": "iron_key",
+          "art": "items_01_iron_key",
+          "say": "r1_key"
+        },
+        {
+          "id": "door_great",
+          "kind": "AUTO",
+          "tap": true,
+          "label": "The great door",
+          "glow": true,
+          "size": 26,
+          "yaw": 0,
+          "pitch": 0,
+          "after": [
+            "iron_key"
+          ],
+          "auto": [
+            {
+              "fx": "key"
+            },
+            {
+              "fx": "vault"
+            },
+            {
+              "exit": true
+            },
+            {
+              "seal": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room2",
+      "n": 2,
+      "title": "The Hall of Portraits",
+      "lesson": "Lesson 2: the Art of Time",
+      "panorama": "assets/rooms/room2.webp",
+      "fallback": [
+        "#4a1f26",
+        "#170a0d"
+      ],
+      "start": {
+        "yaw": 0,
+        "pitch": 8,
+        "hfov": 110
+      },
+      "objective": {
+        "card": "The exit is locked. Find out what the portraits know.",
+        "hud": "Read the number on each Keeper's frame.",
+        "audioFile": "assets/audio/voice/obj_2.mp3"
+      },
+      "enter": "r2_enter",
+      "seal": {
+        "item": "sigil_time",
+        "name": "Time Sigil",
+        "incantation": "Chronith",
+        "art": "sigil_time",
+        "audioFile": "assets/audio/voice/inc_2.mp3"
+      },
+      "back": {
+        "yaw": -136,
+        "pitch": 5,
+        "size": 18
+      },
+      "exit": {
+        "yaw": 137,
+        "pitch": 2,
+        "size": 20
+      },
+      "nudge": {
+        "afterDone": "door_plate",
+        "seconds": 25,
+        "say": "r2_zoom",
+        "cancelOnAny": [
+          "portrait_king",
+          "portrait_knight",
+          "portrait_lady",
+          "portrait_scholar"
+        ]
+      },
+      "groups": {
+        "keepers": {
+          "firstSay": "r2_first_keeper"
+        }
+      },
+      "hints": [
+        {
+          "flash": "portrait_knight",
+          "say": "h_r2_1",
+          "sayIf": {
+            "door_plate": "h_r2_0"
+          }
+        },
+        {
+          "flash": "next",
+          "say": "h_r2_2",
+          "sayIf": {
+            "door_plate": "h_r2_0"
+          }
+        }
+      ],
+      "portraits": [
+        {
+          "id": "king",
+          "keeper": "king",
+          "age": 60,
+          "yaw": -56,
+          "pitch": 21,
+          "plaqueYaw": -56,
+          "plaquePitch": -5.5,
+          "digit": 8
+        },
+        {
+          "id": "knight",
+          "keeper": "knight",
+          "age": 28,
+          "yaw": -19.6,
+          "pitch": 21,
+          "plaqueYaw": -19.6,
+          "plaquePitch": -5.5,
+          "digit": 1
+        },
+        {
+          "id": "lady",
+          "keeper": "lady",
+          "age": 75,
+          "yaw": 19.4,
+          "pitch": 21,
+          "plaqueYaw": 19.4,
+          "plaquePitch": -5.5,
+          "digit": 3
+        },
+        {
+          "id": "scholar",
+          "keeper": "scholar",
+          "age": 45,
+          "yaw": 55.6,
+          "pitch": 21,
+          "plaqueYaw": 55.6,
+          "plaquePitch": -5.5,
+          "digit": 5
+        }
+      ],
+      "order": [
+        "knight",
+        "scholar",
+        "king",
+        "lady"
+      ],
+      "events": [
+        {
+          "id": "keepers_heard",
+          "allOf": [
+            "portrait_king",
+            "portrait_knight",
+            "portrait_lady",
+            "portrait_scholar"
+          ],
+          "say": "r2_discuss"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "door_plate",
+          "kind": "LEARN",
+          "label": "Brass plate on the door",
+          "yaw": 137,
+          "pitch": 15,
+          "size": 11,
+          "glow": true,
+          "clue": "r2_plate",
+          "say": "r2_plate"
+        },
+        {
+          "id": "portrait_king",
+          "kind": "LEARN",
+          "label": "Portrait of the King",
+          "yaw": -56,
+          "pitch": 21,
+          "size": 17,
+          "glow": true,
+          "after": [
+            "door_plate"
+          ],
+          "portrait": "king",
+          "group": "keepers",
+          "say": "r2_king",
+          "note": "k_king"
+        },
+        {
+          "id": "portrait_knight",
+          "kind": "LEARN",
+          "label": "Portrait of the Knight",
+          "yaw": -19.6,
+          "pitch": 21,
+          "size": 17,
+          "glow": true,
+          "after": [
+            "door_plate"
+          ],
+          "portrait": "knight",
+          "group": "keepers",
+          "say": "r2_knight",
+          "note": "k_knight"
+        },
+        {
+          "id": "portrait_lady",
+          "kind": "LEARN",
+          "label": "Portrait of the Lady",
+          "yaw": 19.4,
+          "pitch": 21,
+          "size": 17,
+          "glow": true,
+          "after": [
+            "door_plate"
+          ],
+          "portrait": "lady",
+          "group": "keepers",
+          "say": "r2_lady",
+          "note": "k_lady"
+        },
+        {
+          "id": "portrait_scholar",
+          "kind": "LEARN",
+          "label": "Portrait of the Scholar",
+          "yaw": 55.6,
+          "pitch": 21,
+          "size": 17,
+          "glow": true,
+          "after": [
+            "door_plate"
+          ],
+          "portrait": "scholar",
+          "group": "keepers",
+          "say": "r2_scholar",
+          "note": "k_scholar"
+        },
+        {
+          "id": "lock",
+          "kind": "PANEL",
+          "label": "Dial lock",
+          "yaw": 137,
+          "pitch": 1,
+          "size": 11,
+          "glow": true,
+          "after": [
+            "door_plate",
+            "keepers_heard"
+          ],
+          "panel": "dial_room2"
+        },
+        {
+          "id": "door_exit",
+          "kind": "AUTO",
+          "yaw": 137,
+          "pitch": 2,
+          "after": [
+            "lock_solved"
+          ],
+          "auto": [
+            {
+              "fx": "vault"
+            },
+            {
+              "exit": true
+            },
+            {
+              "seal": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room3",
+      "n": 3,
+      "title": "The Enchanted Library",
+      "lesson": "Lesson 3: the Art of Knowledge",
+      "panorama": "assets/rooms/room3.webp",
+      "fallback": [
+        "#5a3a12",
+        "#1b1106"
+      ],
+      "start": {
+        "yaw": -115,
+        "pitch": -8,
+        "hfov": 100
+      },
+      "objective": {
+        "card": "Something is hidden in the words.",
+        "hud": "Find what is hidden in the words.",
+        "audioFile": "assets/audio/voice/obj_3.mp3"
+      },
+      "enter": "r3_enter",
+      "seal": {
+        "item": "sigil_knowledge",
+        "name": "Knowledge Sigil",
+        "incantation": "Sapiel",
+        "art": "sigil_knowledge",
+        "audioFile": "assets/audio/voice/inc_3.mp3"
+      },
+      "back": {
+        "yaw": 180,
+        "pitch": -5,
+        "size": 18
+      },
+      "exit": {
+        "yaw": 0,
+        "pitch": -10,
+        "size": 26
+      },
+      "hints": [
+        {
+          "flash": "next",
+          "say": "h_r3_1",
+          "sayIf": {
+            "note_desk": "h_r3_0"
+          }
+        },
+        {
+          "flash": "next",
+          "say": "h_r3_2",
+          "sayIf": {
+            "note_desk": "h_r3_0",
+            "book1": "h_r3_2b",
+            "book2": "h_r3_2b",
+            "book3": "h_r3_2b",
+            "book4": "h_r3_2b"
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "books_read",
+          "allOf": [
+            "book1",
+            "book2",
+            "book3",
+            "book4"
+          ],
+          "say": "r3_discuss"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "note_desk",
+          "kind": "LEARN",
+          "label": "Note on the desk",
+          "yaw": -140,
+          "pitch": -41,
+          "size": 11,
+          "glow": true,
+          "clue": "r3_note",
+          "say": "r3_note"
+        },
+        {
+          "id": "book1",
+          "kind": "LEARN",
+          "label": "Book I",
+          "yaw": -140,
+          "pitch": 2,
+          "size": 9,
+          "after": [
+            "note_desk"
+          ],
+          "clue": "r3_book1"
+        },
+        {
+          "id": "book2",
+          "kind": "LEARN",
+          "label": "Book II",
+          "yaw": 82,
+          "pitch": 61,
+          "size": 11,
+          "after": [
+            "note_desk"
+          ],
+          "clue": "r3_book2"
+        },
+        {
+          "id": "book3",
+          "kind": "LEARN",
+          "label": "Book III",
+          "yaw": -41,
+          "pitch": 15,
+          "size": 11,
+          "after": [
+            "note_desk"
+          ],
+          "clue": "r3_book3"
+        },
+        {
+          "id": "book4",
+          "kind": "LEARN",
+          "label": "Book IV",
+          "yaw": 37,
+          "pitch": 41,
+          "size": 11,
+          "after": [
+            "note_desk"
+          ],
+          "clue": "r3_book4",
+          "say": "r3_book4"
+        },
+        {
+          "id": "desk_panel",
+          "kind": "PANEL",
+          "label": "Reading desk",
+          "yaw": -110,
+          "pitch": -33,
+          "size": 13,
+          "glow": true,
+          "after": [
+            "books_read"
+          ],
+          "panel": "letters"
+        },
+        {
+          "id": "compartment",
+          "kind": "AUTO",
+          "yaw": -165,
+          "pitch": 18,
+          "after": [
+            "desk_solved"
+          ],
+          "auto": [
+            {
+              "fx": "grind"
+            },
+            {
+              "exit": true
+            },
+            {
+              "seal": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room4",
+      "n": 4,
+      "title": "The Potion Laboratory",
+      "lesson": "Lesson 4: the Art of Balance",
+      "panorama": "assets/rooms/room4.webp",
+      "fallback": [
+        "#1f3a2a",
+        "#150e24"
+      ],
+      "start": {
+        "yaw": -45,
+        "pitch": 0,
+        "hfov": 100
+      },
+      "objective": {
+        "card": "Open the locked cabinet.",
+        "hud": "Open the locked cabinet.",
+        "audioFile": "assets/audio/voice/obj_4.mp3"
+      },
+      "enter": "r4_enter",
+      "seal": {
+        "item": "sigil_balance",
+        "name": "Balance Sigil",
+        "incantation": "Aequa",
+        "art": "sigil_balance",
+        "audioFile": "assets/audio/voice/inc_4.mp3"
+      },
+      "back": {
+        "yaw": 45,
+        "pitch": 12,
+        "size": 18
+      },
+      "exit": {
+        "yaw": -78,
+        "pitch": 12,
+        "size": 28
+      },
+      "hints": [
+        {
+          "flash": "next",
+          "say": "h_r4_1",
+          "sayIf": {
+            "cabinet": "h_r4_0",
+            "table": "h_r4_1c",
+            "cauldron": "h_r4_1d"
+          }
+        },
+        {
+          "flash": "next",
+          "say": "h_r4_2",
+          "sayIf": {
+            "cabinet": "h_r4_0",
+            "recipe": "h_r4_1b",
+            "table": "h_r4_1c"
+          }
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "cabinet",
+          "kind": "LEARN",
+          "label": "Locked cabinet",
+          "yaw": -78,
+          "pitch": 14,
+          "size": 18,
+          "glow": true,
+          "clue": "r4_cabinet",
+          "say": "r4_cabinet",
+          "hud": "Brew the Elixir of Memory."
+        },
+        {
+          "id": "recipe",
+          "kind": "LEARN",
+          "label": "Recipe on the lectern",
+          "yaw": 99,
+          "pitch": 0,
+          "size": 15,
+          "glow": true,
+          "after": [
+            "cabinet"
+          ],
+          "clue": "r4_recipe",
+          "say": "r4_recipe"
+        },
+        {
+          "id": "table",
+          "kind": "FIND",
+          "label": "Bottles on the table",
+          "yaw": -118,
+          "pitch": -8,
+          "size": 20,
+          "glow": true,
+          "after": [
+            "recipe"
+          ],
+          "give": "bottles",
+          "say": "r4_bottles"
+        },
+        {
+          "id": "cauldron",
+          "kind": "PANEL",
+          "label": "Cauldron",
+          "yaw": 3,
+          "pitch": -11,
+          "size": 22,
+          "glow": true,
+          "after": [
+            "bottles"
+          ],
+          "panel": "cauldron"
+        },
+        {
+          "id": "cabinet_open",
+          "kind": "AUTO",
+          "yaw": -78,
+          "pitch": 14,
+          "after": [
+            "elixir_done"
+          ],
+          "auto": [
+            {
+              "fx": "bubble"
+            },
+            {
+              "fx": "grind"
+            },
+            {
+              "exit": true
+            },
+            {
+              "seal": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room5",
+      "n": 5,
+      "title": "The Astronomy Tower",
+      "lesson": "Lesson 5: the Art of Stars",
+      "panorama": "assets/rooms/room5.webp",
+      "fallback": [
+        "#111a3d",
+        "#050814"
+      ],
+      "start": {
+        "yaw": 115,
+        "pitch": 0,
+        "hfov": 100
+      },
+      "objective": {
+        "card": "Read the plate on the metal box.",
+        "hud": "Read the plate on the metal box.",
+        "audioFile": "assets/audio/voice/obj_5.mp3"
+      },
+      "enter": "r5_enter",
+      "seal": {
+        "item": "sigil_star",
+        "name": "Star Sigil",
+        "incantation": "Astrel",
+        "art": "sigil_star",
+        "audioFile": "assets/audio/voice/inc_5.mp3"
+      },
+      "back": {
+        "yaw": 45,
+        "pitch": 12,
+        "size": 18
+      },
+      "exit": {
+        "yaw": -41,
+        "pitch": 15,
+        "size": 24
+      },
+      "hints": [
+        {
+          "flash": "next",
+          "say": "h_r5_1"
+        },
+        {
+          "flash": "next",
+          "say": "h_r5_2",
+          "sayIf": {
+            "plate": "h_r5_0",
+            "telescope": "h_r5_0b",
+            "star_map": "h_r5_0c"
+          }
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "plate",
+          "kind": "LEARN",
+          "label": "Clue plate on the box",
+          "yaw": 153,
+          "pitch": -30,
+          "size": 11,
+          "glow": true,
+          "clue": "r5_plate",
+          "say": "r5_plate"
+        },
+        {
+          "id": "telescope",
+          "kind": "LEARN",
+          "label": "Brass telescope",
+          "yaw": -108,
+          "pitch": 22,
+          "size": 16,
+          "glow": true,
+          "after": [
+            "plate"
+          ],
+          "clue": "r5_telescope",
+          "say": "r5_telescope"
+        },
+        {
+          "id": "star_map",
+          "kind": "LEARN",
+          "label": "Star map table",
+          "yaw": 100,
+          "pitch": -34,
+          "size": 20,
+          "glow": true,
+          "after": [
+            "telescope"
+          ],
+          "clue": "r5_map",
+          "say": "r5_map"
+        },
+        {
+          "id": "wheel",
+          "kind": "PANEL",
+          "label": "Celestial wheel",
+          "yaw": 0,
+          "pitch": 2,
+          "size": 22,
+          "glow": true,
+          "after": [
+            "star_map"
+          ],
+          "panel": "dial_room5"
+        },
+        {
+          "id": "box_open",
+          "kind": "AUTO",
+          "yaw": 153,
+          "pitch": -25,
+          "after": [
+            "wheel_solved"
+          ],
+          "auto": [
+            {
+              "fx": "chime"
+            },
+            {
+              "exit": true
+            },
+            {
+              "seal": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room6",
+      "n": 6,
+      "title": "The Chamber of Shadows",
+      "lesson": "Lesson 6: the Art of Light",
+      "panorama": "assets/rooms/room6.webp",
+      "fallback": [
+        "#1a1410",
+        "#030303"
+      ],
+      "start": {
+        "yaw": 0,
+        "pitch": 5,
+        "hfov": 100
+      },
+      "objective": {
+        "card": "Read the carving on the gate.",
+        "hud": "Read the carving on the gate.",
+        "audioFile": "assets/audio/voice/obj_6.mp3"
+      },
+      "enter": "r6_enter",
+      "seal": {
+        "item": "sigil_light",
+        "name": "Light Sigil",
+        "incantation": "Illura",
+        "art": "sigil_light",
+        "audioFile": "assets/audio/voice/inc_6.mp3"
+      },
+      "back": {
+        "yaw": 70,
+        "pitch": 15,
+        "size": 18
+      },
+      "exit": {
+        "yaw": 2,
+        "pitch": 22,
+        "size": 30
+      },
+      "hints": [
+        {
+          "flash": "next",
+          "say": "h_r6_1",
+          "sayIf": {
+            "gate": "h_r6_0g",
+            "rune1": "h_r6_0r",
+            "rune2": "h_r6_0r",
+            "rune3": "h_r6_0r"
+          }
+        },
+        {
+          "flash": "next",
+          "say": "h_r6_2",
+          "sayIf": {
+            "gate": "h_r6_0g",
+            "rune1": "h_r6_2r",
+            "rune2": "h_r6_2r",
+            "rune3": "h_r6_2r"
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "runes_read",
+          "allOf": [
+            "rune1",
+            "rune2",
+            "rune3"
+          ],
+          "say": "r6_runes"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "gate",
+          "kind": "LEARN",
+          "label": "Carved gate",
+          "yaw": 2,
+          "pitch": 22,
+          "size": 22,
+          "glow": true,
+          "clue": "r6_gate",
+          "say": "r6_gate"
+        },
+        {
+          "id": "rune1",
+          "kind": "LEARN",
+          "label": "Glowing rune",
+          "yaw": -94,
+          "pitch": -35,
+          "size": 14,
+          "glow": true,
+          "after": [
+            "gate"
+          ],
+          "clue": "r6_rune1"
+        },
+        {
+          "id": "rune2",
+          "kind": "LEARN",
+          "label": "Glowing rune",
+          "yaw": 97,
+          "pitch": -35,
+          "size": 14,
+          "glow": true,
+          "after": [
+            "gate"
+          ],
+          "clue": "r6_rune2"
+        },
+        {
+          "id": "rune3",
+          "kind": "LEARN",
+          "label": "Glowing rune",
+          "yaw": 2,
+          "pitch": -59,
+          "size": 16,
+          "glow": true,
+          "after": [
+            "gate"
+          ],
+          "clue": "r6_rune3"
+        },
+        {
+          "id": "mirror_a",
+          "kind": "PANEL",
+          "label": "Mirror",
+          "yaw": -132,
+          "pitch": 27,
+          "size": 16,
+          "glow": true,
+          "after": [
+            "runes_read"
+          ],
+          "panel": "light_table"
+        },
+        {
+          "id": "mirror_b",
+          "kind": "PANEL",
+          "label": "Mirror",
+          "yaw": -63,
+          "pitch": 27,
+          "size": 16,
+          "glow": true,
+          "after": [
+            "runes_read"
+          ],
+          "panel": "light_table"
+        },
+        {
+          "id": "mirror_c",
+          "kind": "PANEL",
+          "label": "Mirror",
+          "yaw": 135,
+          "pitch": 25,
+          "size": 16,
+          "glow": true,
+          "after": [
+            "runes_read"
+          ],
+          "panel": "light_table"
+        },
+        {
+          "id": "crystal",
+          "kind": "AUTO",
+          "yaw": 2,
+          "pitch": -11,
+          "after": [
+            "light_solved"
+          ],
+          "auto": [
+            {
+              "fx": "beam"
+            },
+            {
+              "fx": "grind"
+            },
+            {
+              "exit": true
+            },
+            {
+              "seal": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room7",
+      "n": 7,
+      "title": "The Guardian's Vault",
+      "lesson": "Lesson 7: the seventh Art",
+      "panorama": "assets/rooms/room7.webp",
+      "fallback": [
+        "#3a3012",
+        "#0b2a2c"
+      ],
+      "start": {
+        "yaw": -70,
+        "pitch": 5,
+        "hfov": 100
+      },
+      "objective": {
+        "card": "Place the six seals in the great door.",
+        "hud": "Place the six seals in the great door.",
+        "audioFile": "assets/audio/voice/obj_7.mp3"
+      },
+      "enter": "r7_enter",
+      "seal": {
+        "item": "crown",
+        "name": "Guardian's Crown",
+        "incantation": "Valorin",
+        "art": "sigil_seventh",
+        "finale": true,
+        "audioFile": "assets/audio/voice/inc_7.mp3"
+      },
+      "back": {
+        "yaw": 95,
+        "pitch": 10,
+        "size": 18
+      },
+      "exit": {
+        "yaw": 180,
+        "pitch": 2,
+        "size": 30
+      },
+      "hints": [
+        {
+          "flash": "none",
+          "say": "h_r7_1"
+        },
+        {
+          "flash": "none",
+          "say": "h_r7_2"
+        }
+      ],
+      "events": [
+        {
+          "id": "seals_all",
+          "allOf": [
+            "door_slots"
+          ],
+          "say": "r7_before"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "guardian",
+          "kind": "LEARN",
+          "label": "The Guardian",
+          "yaw": -113,
+          "pitch": 36,
+          "size": 24,
+          "glow": true,
+          "clue": "r7_guardian",
+          "say": "r7_guardian"
+        },
+        {
+          "id": "door_slots",
+          "kind": "PANEL",
+          "label": "The great door",
+          "yaw": 0,
+          "pitch": 28,
+          "size": 30,
+          "glow": true,
+          "after": [
+            "guardian"
+          ],
+          "panel": "seal_slots"
+        },
+        {
+          "id": "riddle",
+          "kind": "PANEL",
+          "label": "The Guardian's question",
+          "yaw": 0,
+          "pitch": 28,
+          "size": 30,
+          "glow": true,
+          "after": [
+            "seals_placed",
+            "seals_all"
+          ],
+          "panel": "riddle_final",
+          "autoOpen": true
+        },
+        {
+          "id": "pedestal",
+          "kind": "AUTO",
+          "yaw": 0,
+          "pitch": -22,
+          "after": [
+            "riddle_solved"
+          ],
+          "auto": [
+            {
+              "fx": "chime"
+            },
+            {
+              "show": "sigil_seventh"
+            },
+            {
+              "say": "r7_guardian_a"
+            },
+            {
+              "say": "r7_guardian_b",
+              "emit": "guardian_spoke"
+            }
+          ]
+        },
+        {
+          "id": "throne",
+          "kind": "AUTO",
+          "yaw": 124,
+          "pitch": 5,
+          "after": [
+            "guardian_spoke"
+          ],
+          "auto": [
+            {
+              "fx": "chime"
+            },
+            {
+              "give": "crown"
+            },
+            {
+              "seal": true
+            }
+          ]
+        },
+        {
+          "id": "entrance_exit",
+          "kind": "AUTO",
+          "yaw": 180,
+          "pitch": 2,
+          "after": [
+            "crown"
+          ],
+          "auto": [
+            {
+              "fx": "vault"
+            },
+            {
+              "exit": true
+            },
+            {
+              "say": "r7_final_a"
+            },
+            {
+              "say": "r7_final_b"
+            },
+            {
+              "win": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

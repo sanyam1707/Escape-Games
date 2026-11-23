@@ -1,0 +1,2349 @@
+{
+  "title": "The Enigma Protocol",
+  "config": {
+    "timerSeconds": 600,
+    "idleSeconds": 25,
+    "hintsMax": 3,
+    "points": {
+      "find": 10,
+      "learn": 5,
+      "roomPuzzle": 30,
+      "casePage": 10,
+      "vaultLock": 20,
+      "timeBonusPerSeconds": 10
+    },
+    "penalties": {
+      "wrongAnswer": 5,
+      "wrongCapPerPuzzle": 15,
+      "hint": 25,
+      "finalLockoutSeconds": 3
+    },
+    "blur": {
+      "px": 6,
+      "sharpenSeconds": 1.2,
+      "zoomFrom": 1.06
+    },
+    "panorama": {
+      "hfov": 100,
+      "minHfov": 60,
+      "maxHfov": 120,
+      "startPitch": 0,
+      "startYaw": 0
+    },
+    "toastSeconds": 1.6,
+    "minTapPx": 44,
+    "bgm": {
+      "file": "assets/audio/bgm.ogg",
+      "volume": 0.22
+    }
+  },
+  "art": {
+    "title": "assets/sheets/keyart_title.jpg",
+    "briefing": "assets/sheets/briefing_bg.jpg",
+    "cutDir": "assets/cut/",
+    "icons": {
+      "casebook": "icon_casebook",
+      "hint": "icon_hint_lantern",
+      "purse": "icon_purse",
+      "coin": "icon_coin"
+    }
+  },
+  "ui": {
+    "tapToStart": "Tap to Start",
+    "begin": "Begin",
+    "next": "Next",
+    "skip": "Skip",
+    "close": "Close",
+    "done": "Done",
+    "tapContinue": "Tap to continue",
+    "pause": "Pause",
+    "resume": "Resume",
+    "soundOn": "Sound: on",
+    "soundOff": "Sound: off",
+    "narrationOn": "Narration: on",
+    "narrationOff": "Narration: off",
+    "restartRoom": "Restart room",
+    "quit": "Quit to start screen",
+    "quitConfirm": "Leave this case and go back to the start?",
+    "yes": "Yes",
+    "no": "No",
+    "casebook": "Casebook",
+    "hint": "Hint",
+    "hintsLeft": "Hints",
+    "guineas": "Guineas",
+    "savedToNotes": "Saved to your notes",
+    "newWay": "A new way opened.",
+    "caseClosed": "Case Closed",
+    "timeUp": "Time Up",
+    "timeUpText": "The clock tower strikes and the inspectors seal the doors.",
+    "noHints": "No hints left.",
+    "tabs": [
+      "Pages",
+      "Evidence",
+      "Items",
+      "Progress"
+    ],
+    "emptyTab": "Nothing here yet.",
+    "findInRoom": "Find in this room",
+    "objectiveLabel": "Objective",
+    "dragHint": "Drag to look around",
+    "turn": "Turn it over",
+    "replay": "Replay",
+    "reset": "Reset",
+    "lockMirrors": "Lock Mirrors",
+    "hintInPanel": "Hint",
+    "casePage": "Case Page",
+    "casePageSaved": "Case Page saved to your Casebook.",
+    "itemAdded": "Added to your Casebook.",
+    "itemUsed": "Used: ",
+    "playAgain": "Play Again",
+    "finalScore": "Final score",
+    "timeLeft": "Time left",
+    "roomReached": "Room reached",
+    "tryAgain": "Try Again",
+    "titleCard": "The Enigma Protocol. Case closed, for now.",
+    "page": "Page",
+    "noPagesYet": "No Case Pages yet.",
+    "tapKey": "Tap or hold the key",
+    "round": "Round",
+    "lampWatch": "Watch the lamp",
+    "yourTurn": "Your turn",
+    "pickTrain": "1. Pick the train that fits the telegram.",
+    "pickLocker": "2. Tap the locker the rule gives.",
+    "lockerWord": "Locker",
+    "platformWord": "Platform",
+    "carriagesWord": "carriages",
+    "telegramWindow": "The telegram says: after ten and before eleven.",
+    "dragHelp": "Drag a piece onto its place, or tap a piece and then a place.",
+    "ruleLine": "Locker number = platform number x number of carriages.",
+    "mirrorHelp": "Tap a mirror to change its lean. The beam shows where the light goes.",
+    "lamp": "Lamp",
+    "sign": "Sign",
+    "letterHelp": "Read the large first letters. Then choose the door.",
+    "lockWait": "Locked for a moment.",
+    "locksOpen": "locks open",
+    "evidenceEmpty": "No clues found yet.",
+    "itemsEmpty": "No items yet.",
+    "roomsDone": "Rooms done",
+    "pagesWord": "Case Pages",
+    "caughtTitle": "Caught",
+    "caughtText": "Too many wrong guesses. The Bureau doors close and the Protocol is lost."
+  },
+  "mission": {
+    "heading": "The Enigma Protocol",
+    "paragraphs": [
+      "Larkhaven is a fog-covered city of gaslight and telegraphs. The Code Bureau, beside the clock tower, guards the secrets of the whole city.",
+      "Tonight, Professor Alder Voss vanished from his study. His sealed plan, the Enigma Protocol, is missing from his desk.",
+      "You are Wren Ashby, his apprentice, with your friend Tobias Finch. Find out who took the Protocol before the clock tower strikes. You have ten minutes."
+    ],
+    "button": "Begin",
+    "narrator": "wren",
+    "audioFile": "assets/audio/voice/mission_0.mp3"
+  },
+  "speakers": {
+    "wren": {
+      "name": "Wren",
+      "pitch": 1.05,
+      "rate": 1.0,
+      "badge": "W",
+      "bust": "wren_neutral",
+      "gender": "male"
+    },
+    "tobias": {
+      "name": "Tobias",
+      "pitch": 1.15,
+      "rate": 1.1,
+      "badge": "T",
+      "bust": "tobias_neutral",
+      "gender": "male"
+    },
+    "voss": {
+      "name": "Professor Voss",
+      "pitch": 0.85,
+      "rate": 0.9,
+      "badge": "V",
+      "bust": "voss",
+      "gender": "male"
+    },
+    "hale": {
+      "name": "Mr. Hale",
+      "pitch": 0.75,
+      "rate": 0.95,
+      "badge": "H",
+      "bust": "hale_smooth",
+      "gender": "male"
+    }
+  },
+  "tutorial": {
+    "steps": [
+      {
+        "id": "look",
+        "target": "view",
+        "text": "Drag to look around the room.",
+        "ask": "Drag the view once.",
+        "needs": [
+          "drag"
+        ]
+      },
+      {
+        "id": "inspect",
+        "target": "sampleObject",
+        "text": "Tap an object to look closer.",
+        "ask": "Tap the lamp, then close it with X.",
+        "needs": [
+          "sampleOpen",
+          "sampleClose"
+        ]
+      },
+      {
+        "id": "glow",
+        "target": "sampleGlow",
+        "text": "Tap glowing objects. Pick up the others.",
+        "ask": "Tap the glow, then the key.",
+        "needs": [
+          "sampleGlow",
+          "sampleItem"
+        ]
+      },
+      {
+        "id": "book",
+        "target": "casebook",
+        "text": "The Casebook holds your clues.",
+        "ask": "Open the Casebook, then close it.",
+        "needs": [
+          "bookOpen",
+          "bookClose"
+        ]
+      },
+      {
+        "id": "pause",
+        "target": "pause",
+        "text": "Pause freezes the clock.",
+        "ask": "Open Pause, then Resume.",
+        "needs": [
+          "pauseOpen",
+          "pauseResume"
+        ]
+      },
+      {
+        "id": "score",
+        "target": "multi",
+        "text": "",
+        "ask": "",
+        "needs": [],
+        "parts": [
+          {
+            "target": "purse",
+            "text": "Clues and solved puzzles earn Guineas. A wrong answer costs 5."
+          },
+          {
+            "target": "hints",
+            "text": "You have 3 hints. Each costs 25."
+          },
+          {
+            "target": "timer",
+            "text": "The clock stops only while Wren and Tobias talk."
+          }
+        ]
+      }
+    ],
+    "sample": {
+      "objectLabel": "Brass lamp",
+      "objectCard": "Tapping an object opens a closer look. Close it with X, it costs nothing.",
+      "glowLabel": "Glowing clue",
+      "glowCard": "Gold glow means you can learn something here. Saved to your notes.",
+      "itemLabel": "Old key",
+      "itemCard": "Other objects are picked up. They go in your Casebook."
+    }
+  },
+  "dialogue": {
+    "opening": [
+      {
+        "speaker": "wren",
+        "text": "Tobias, the Professor's note said nine o'clock. The lamp is lit, but he isn't here.",
+        "pausesTimer": true,
+        "audioFile": "assets/audio/voice/opening_0.mp3"
+      },
+      {
+        "speaker": "tobias",
+        "text": "He never leaves his study open. Not even for tea.",
+        "pausesTimer": true,
+        "audioFile": "assets/audio/voice/opening_1.mp3"
+      },
+      {
+        "speaker": "wren",
+        "text": "The window is wide open too. Someone was here before us.",
+        "pausesTimer": true,
+        "audioFile": "assets/audio/voice/opening_2.mp3"
+      },
+      {
+        "speaker": "tobias",
+        "text": "The Enigma Protocol is kept in that desk. It is the Bureau's biggest secret.",
+        "pausesTimer": true,
+        "audioFile": "assets/audio/voice/opening_3.mp3"
+      },
+      {
+        "speaker": "wren",
+        "text": "Then we find it before the clock tower strikes. That gives us ten minutes.",
+        "pausesTimer": true,
+        "audioFile": "assets/audio/voice/opening_4.mp3"
+      },
+      {
+        "speaker": "tobias",
+        "text": "Why ten? Oh. After that, the inspectors seal every door.",
+        "pausesTimer": true,
+        "audioFile": "assets/audio/voice/opening_5.mp3"
+      },
+      {
+        "speaker": "wren",
+        "text": "Exactly. Let's look around.",
+        "pausesTimer": true,
+        "audioFile": "assets/audio/voice/opening_6.mp3"
+      }
+    ],
+    "idle": [
+      {
+        "speaker": "tobias",
+        "text": "Try turning around. Drag to look around.",
+        "pausesTimer": false,
+        "audioFile": "assets/audio/voice/idle_0.mp3"
+      }
+    ]
+  },
+  "rooms": [
+    {
+      "id": "room1",
+      "name": "Voss's Study",
+      "accent": "#7A2230",
+      "panorama": "assets/rooms/room1.webp",
+      "fallback": [
+        "#4a1c26",
+        "#14202E"
+      ],
+      "objective": "Find out who took the Protocol.",
+      "objectiveCard": {
+        "title": "Voss's Study",
+        "text": "Find out who took the Protocol."
+      },
+      "discussAt": "r1_board",
+      "reward": {
+        "page": 0,
+        "item": "token"
+      },
+      "dialogue": {
+        "enter": [
+          {
+            "speaker": "wren",
+            "text": "Look closely. Small things tell big stories.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r1_enter_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "Only four people hold Bureau passes. Mr. Hale, Mrs. Pell, Mr. Dunmore and Dr. Quill.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r1_enter_1.mp3"
+          }
+        ],
+        "discuss": [
+          {
+            "speaker": "wren",
+            "text": "Three clues, three facts about the thief.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r1_discuss_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "So we match each clue to what it proves?",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r1_discuss_1.mp3"
+          },
+          {
+            "speaker": "wren",
+            "text": "Yes. Use the Professor's board.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r1_discuss_2.mp3"
+          }
+        ],
+        "right": [
+          {
+            "speaker": "wren",
+            "text": "The thief came in by the garden window. A left-handed writer who works inside the Bureau.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r1_right_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "That could be one of four people. We need more.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r1_right_1.mp3"
+          },
+          {
+            "speaker": "wren",
+            "text": "The Professor's drawer holds a telegraph token. Next door is the telegraph office.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r1_right_2.mp3"
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "id": "r1_sill",
+          "kind": [
+            "INSPECT",
+            "FIND"
+          ],
+          "label": "Windowsill clay",
+          "yaw": 37.1,
+          "pitch": -1.1,
+          "after": [],
+          "tag": "E1",
+          "card": {
+            "title": "Windowsill clay",
+            "text": "",
+            "views": [
+              "Red clay is smeared across the sill. It is still damp.",
+              "Gritty garden mud, not carpet dust. Someone climbed in here."
+            ]
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "Red clay on the sill. That is garden mud.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r1_r1_sill_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Clay. Garden. Window.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r1_r1_sill_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r1_glove",
+          "kind": [
+            "INSPECT",
+            "FIND"
+          ],
+          "label": "Left glove",
+          "yaw": -107.5,
+          "pitch": -45.4,
+          "after": [],
+          "sprite": "glove",
+          "tag": "E2",
+          "card": {
+            "title": "Left glove",
+            "text": "",
+            "views": [
+              "A glove for the left hand. The fingertips are stained with ink.",
+              "The cuff is stained too. Its owner writes with this hand."
+            ]
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "A left glove with ink on the fingertips.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r1_r1_glove_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Left. Ink.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r1_r1_glove_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r1_note",
+          "kind": [
+            "INSPECT",
+            "FIND"
+          ],
+          "label": "Torn note",
+          "yaw": -88.9,
+          "pitch": -42.8,
+          "after": [],
+          "sprite": "torn_note",
+          "tag": "E3",
+          "card": {
+            "title": "Torn note",
+            "text": "",
+            "views": [
+              "A torn note lies by the fireplace.",
+              "Unfolded, it carries a round Bureau stamp in the corner."
+            ]
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "A Bureau stamp. This note came from inside.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r1_r1_note_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Stamp. Inside.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r1_r1_note_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r1_drawer",
+          "kind": [
+            "LEARN"
+          ],
+          "label": "Open desk drawer",
+          "yaw": 46.1,
+          "pitch": -29.2,
+          "after": [],
+          "card": {
+            "title": "The desk drawer",
+            "text": "The drawer is empty. The Protocol is gone."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "The drawer is empty. The Protocol is gone.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r1_r1_drawer_0.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r1_board",
+          "kind": [
+            "PANEL"
+          ],
+          "label": "Corkboard",
+          "yaw": 165.4,
+          "pitch": 27.0,
+          "after": [
+            "r1_sill",
+            "r1_glove",
+            "r1_note"
+          ],
+          "panel": "r1_board"
+        },
+        {
+          "id": "r1_exit",
+          "kind": [
+            "AUTO"
+          ],
+          "label": "Side door",
+          "yaw": 128.2,
+          "pitch": 6.8,
+          "after": [
+            "r1_board"
+          ],
+          "useItem": "token"
+        }
+      ]
+    },
+    {
+      "id": "room2",
+      "name": "Telegraph Office",
+      "accent": "#C68A2E",
+      "panorama": "assets/rooms/room2.webp",
+      "fallback": [
+        "#4a3414",
+        "#14202E"
+      ],
+      "objective": "Open the message drawer.",
+      "objectiveCard": {
+        "title": "Telegraph Office",
+        "text": "Someone sent a message here tonight. Open the message drawer."
+      },
+      "discussAt": "r2_key",
+      "reward": {
+        "page": 1,
+        "item": "street_key"
+      },
+      "dialogue": {
+        "enter": [
+          {
+            "speaker": "wren",
+            "text": "A telegraph office. Someone sent a message here tonight.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r2_enter_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "The drawer has a signal lock. It only listens to the key.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r2_enter_1.mp3"
+          }
+        ],
+        "discuss": [
+          {
+            "speaker": "wren",
+            "text": "The lamp flashes a pattern. We copy it on the key.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r2_discuss_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "Short flash, quick tap. Long flash, long press.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r2_discuss_1.mp3"
+          }
+        ],
+        "right": [
+          {
+            "speaker": "wren",
+            "text": "A telegram. The thief sent a decoy trunk by train.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r2_right_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "After ten and before eleven, to send the Inspector the wrong way.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r2_right_1.mp3"
+          },
+          {
+            "speaker": "wren",
+            "text": "The street key is here. The chemist on Fenwick Row is still open.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r2_right_2.mp3"
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "id": "r2_morse",
+          "kind": [
+            "LEARN"
+          ],
+          "label": "Morse card",
+          "yaw": -47.2,
+          "pitch": 3.4,
+          "after": [],
+          "card": {
+            "title": "The Morse card",
+            "text": "A quick tap is short. A long press is long."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "A quick tap is short. A long press is long.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r2_r2_morse_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Quick and long. Got it.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r2_r2_morse_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r2_drawer",
+          "kind": [
+            "LEARN"
+          ],
+          "label": "Locked message drawer",
+          "yaw": 93.4,
+          "pitch": -37.1,
+          "after": [],
+          "card": {
+            "title": "The message drawer",
+            "text": "The drawer opens only to a signal copied from the lamp."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "The drawer opens only to a signal copied from the lamp.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r2_r2_drawer_0.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r2_key",
+          "kind": [
+            "PANEL"
+          ],
+          "label": "Telegraph key",
+          "yaw": -64.1,
+          "pitch": -27.0,
+          "after": [
+            "r2_morse",
+            "r2_drawer"
+          ],
+          "panel": "r2_key"
+        },
+        {
+          "id": "r2_telegram",
+          "kind": [
+            "INSPECT",
+            "FIND"
+          ],
+          "label": "Telegram",
+          "yaw": 93.4,
+          "pitch": -37.1,
+          "after": [
+            "r2_key"
+          ],
+          "sprite": "telegram",
+          "card": {
+            "title": "Telegram",
+            "text": "",
+            "views": [
+              "A telegram was folded inside the drawer.",
+              "\"Send the decoy trunk by the train after ten and before eleven. The Inspector will chase it.\""
+            ]
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "Send the decoy trunk by the train after ten and before eleven.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r2_r2_telegram_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "A decoy! So the Inspector gets sent the wrong way.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r2_r2_telegram_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r2_exit",
+          "kind": [
+            "AUTO"
+          ],
+          "label": "Street door",
+          "yaw": 19.1,
+          "pitch": 0.0,
+          "after": [
+            "r2_telegram"
+          ],
+          "useItem": "street_key"
+        }
+      ]
+    },
+    {
+      "id": "room3",
+      "name": "Chemist's Shop",
+      "accent": "#2F7F6F",
+      "panorama": "assets/rooms/room3.webp",
+      "fallback": [
+        "#123a34",
+        "#14202E"
+      ],
+      "objective": "Clean the four stains.",
+      "objectiveCard": {
+        "title": "Chemist's Shop",
+        "text": "Clean the four stains from the study. Read the chart first."
+      },
+      "discussAt": "r3_tray",
+      "reward": {
+        "page": 2,
+        "item": "platform_pass"
+      },
+      "dialogue": {
+        "enter": [
+          {
+            "speaker": "wren",
+            "text": "A chemist's shop. We have four samples from the study on this cloth.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r3_enter_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "Ink, clay, soot and wax. What do we do with them?",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r3_enter_1.mp3"
+          }
+        ],
+        "discuss": [
+          {
+            "speaker": "wren",
+            "text": "Read the chart, then try a liquid on each stain.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r3_discuss_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "Let's start with the ink.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r3_discuss_1.mp3"
+          }
+        ],
+        "right": [
+          {
+            "speaker": "wren",
+            "text": "The ink is violet. That is the Bureau's own colour.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r3_right_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "The ledger says only the Archive Office buys it, signed C. Hale.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r3_right_1.mp3"
+          },
+          {
+            "speaker": "wren",
+            "text": "A left hand, a Bureau pass and violet ink all point to Hale. We still need proof.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r3_right_2.mp3"
+          },
+          {
+            "speaker": "wren",
+            "text": "The chemist lends us a platform pass. The decoy trunk went by train.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r3_right_3.mp3"
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "id": "r3_chart",
+          "kind": [
+            "LEARN"
+          ],
+          "label": "Wall chart",
+          "yaw": 25.9,
+          "pitch": 27.0,
+          "after": [],
+          "card": {
+            "title": "The wall chart",
+            "text": "Lemon juice turns violet ink pale yellow.\nVinegar makes red clay fizz.\nSoda water lifts soot into grey streaks.\nHot water melts candle wax away."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "Each liquid works on only one stain.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r3_r3_chart_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Four liquids, four stains. No guessing.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r3_r3_chart_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r3_cloth",
+          "kind": [
+            "INSPECT"
+          ],
+          "label": "Test cloth",
+          "yaw": -27.0,
+          "pitch": -14.0,
+          "after": [],
+          "card": {
+            "title": "The test cloth",
+            "text": "Four stains from the study: ink, clay, soot and wax."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "Four stains from the study: ink, clay, soot and wax.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r3_r3_cloth_0.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r3_tray",
+          "kind": [
+            "PANEL"
+          ],
+          "label": "Test tray with bottles",
+          "yaw": 18.0,
+          "pitch": -4.5,
+          "after": [
+            "r3_chart",
+            "r3_cloth"
+          ],
+          "panel": "r3_tray"
+        },
+        {
+          "id": "r3_ledger",
+          "kind": [
+            "INSPECT",
+            "FIND"
+          ],
+          "label": "Ledger",
+          "yaw": 51.8,
+          "pitch": -14.6,
+          "after": [
+            "r3_tray"
+          ],
+          "sprite": "ledger",
+          "card": {
+            "title": "The ledger",
+            "text": "",
+            "views": [
+              "A heavy ledger lies open on the counter.",
+              "\"Violet ink. Sold only to the Archive Office. Signed for: C. Hale.\""
+            ]
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "Violet ink. Sold only to the Archive Office. Signed for: C. Hale.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r3_r3_ledger_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Mr. Hale is the archivist. And he writes with his left hand.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r3_r3_ledger_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r3_exit",
+          "kind": [
+            "AUTO"
+          ],
+          "label": "Back door",
+          "yaw": 139.5,
+          "pitch": 15.8,
+          "after": [
+            "r3_ledger"
+          ],
+          "useItem": "platform_pass"
+        }
+      ]
+    },
+    {
+      "id": "room4",
+      "name": "Railway Left-Luggage",
+      "accent": "#3F6F95",
+      "panorama": "assets/rooms/room4.webp",
+      "fallback": [
+        "#1b3248",
+        "#14202E"
+      ],
+      "objective": "Find the decoy trunk's locker.",
+      "objectiveCard": {
+        "title": "Left-Luggage",
+        "text": "Find the locker the decoy trunk went into."
+      },
+      "discussAt": "r4_lockers",
+      "reward": {
+        "page": 3,
+        "item": "stage_door_card"
+      },
+      "dialogue": {
+        "enter": [
+          {
+            "speaker": "wren",
+            "text": "The railway left-luggage hall. The decoy trunk started here.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r4_enter_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "Twenty lockers. I can count that high, but I am already worried.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r4_enter_1.mp3"
+          }
+        ],
+        "discuss": [
+          {
+            "speaker": "wren",
+            "text": "The telegram said after ten and before eleven. Which train is that?",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r4_discuss_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "Then we multiply for that train only.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r4_discuss_1.mp3"
+          }
+        ],
+        "right": [
+          {
+            "speaker": "wren",
+            "text": "Five times three is fifteen. The locker opens.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r4_right_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "A receipt signed C. Hale, and a stage-door card for the opera.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r4_right_1.mp3"
+          },
+          {
+            "speaker": "wren",
+            "text": "Hale paid to send the decoy. Why does he need the opera? Let's find out.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r4_right_2.mp3"
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "id": "r4_board",
+          "kind": [
+            "INSPECT",
+            "LEARN"
+          ],
+          "label": "Departure board",
+          "yaw": 0.0,
+          "pitch": 31.5,
+          "after": [],
+          "card": {
+            "title": "The departure board",
+            "text": "9:40  Platform 3  4 carriages\n10:15  Platform 5  3 carriages\n11:05  Platform 2  6 carriages\n11:50  Platform 4  5 carriages"
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "Four trains tonight. Each shows its platform and its carriages.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r4_r4_board_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Platform and carriages. Carriages and platform.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r4_r4_board_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r4_sign",
+          "kind": [
+            "INSPECT",
+            "LEARN"
+          ],
+          "label": "Rule sign",
+          "yaw": -109.8,
+          "pitch": 23.2,
+          "after": [],
+          "card": {
+            "title": "The rule sign",
+            "text": "Locker number = platform number x number of carriages."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "Locker number equals platform number times number of carriages.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r4_r4_sign_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Multiplying. I brought my notebook.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r4_r4_sign_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r4_lockers",
+          "kind": [
+            "PANEL"
+          ],
+          "label": "Locker wall",
+          "yaw": 101.2,
+          "pitch": -10.1,
+          "after": [
+            "r4_board",
+            "r4_sign"
+          ],
+          "panel": "r4_lockers"
+        },
+        {
+          "id": "r4_hatbox",
+          "kind": [
+            "INSPECT",
+            "FIND"
+          ],
+          "label": "Hatbox in locker 15",
+          "yaw": 122.6,
+          "pitch": -19.1,
+          "after": [
+            "r4_lockers"
+          ],
+          "sprite": "receipt",
+          "card": {
+            "title": "The hatbox",
+            "text": "",
+            "views": [
+              "A hatbox sits inside locker 15, with a stage-door card on top.",
+              "\"Left-luggage receipt, one trunk, platform 5. Signed: C. Hale.\""
+            ]
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "A receipt, signed C. Hale. And a stage-door card.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r4_r4_hatbox_0.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r4_exit",
+          "kind": [
+            "AUTO"
+          ],
+          "label": "Stage Door Lane door",
+          "yaw": 164.2,
+          "pitch": -6.8,
+          "after": [
+            "r4_hatbox"
+          ],
+          "useItem": "stage_door_card"
+        }
+      ]
+    },
+    {
+      "id": "room5",
+      "name": "Opera Backstage",
+      "accent": "#5A2D6E",
+      "panorama": "assets/rooms/room5.webp",
+      "fallback": [
+        "#2d1a3b",
+        "#14202E"
+      ],
+      "objective": "Light the blank wall.",
+      "objectiveCard": {
+        "title": "Opera Backstage",
+        "text": "Send the lamp's light to the blank wall."
+      },
+      "discussAt": "r5_rig",
+      "reward": {
+        "page": 4,
+        "item": null
+      },
+      "dialogue": {
+        "enter": [
+          {
+            "speaker": "wren",
+            "text": "The opera backstage. Mirrors, ropes and one very large lamp.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r5_enter_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "Why would a thief send us here?",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r5_enter_1.mp3"
+          }
+        ],
+        "discuss": [
+          {
+            "speaker": "wren",
+            "text": "We turn the mirrors until the beam reaches the wall.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r5_discuss_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "A lean right sends light up. A lean left sends it down.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r5_discuss_1.mp3"
+          }
+        ],
+        "right": [
+          {
+            "speaker": "wren",
+            "text": "The false Bureau passes were printed at Marrow and Sons.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r5_right_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "So the thief wanted into somewhere the Bureau guards.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r5_right_1.mp3"
+          },
+          {
+            "speaker": "wren",
+            "text": "Cobb Street. Quick.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r5_right_2.mp3"
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "id": "r5_lamp",
+          "kind": [
+            "LEARN"
+          ],
+          "label": "Stage lamp",
+          "yaw": -150.8,
+          "pitch": 29.2,
+          "after": [],
+          "card": {
+            "title": "The stage lamp",
+            "text": "The lamp shines east along the third row."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "The lamp shines east along the third row.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r5_r5_lamp_0.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r5_wall",
+          "kind": [
+            "LEARN"
+          ],
+          "label": "Blank wall panel",
+          "yaw": 153.0,
+          "pitch": 27.0,
+          "after": [],
+          "card": {
+            "title": "The blank wall",
+            "text": "The east wall is blank. Paint that waits for light."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "The east wall is blank.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r5_r5_wall_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Paint that waits for light. Clever.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r5_r5_wall_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r5_rig",
+          "kind": [
+            "PANEL"
+          ],
+          "label": "Mirror rig",
+          "yaw": 0.0,
+          "pitch": -42.8,
+          "after": [
+            "r5_lamp",
+            "r5_wall"
+          ],
+          "panel": "r5_rig"
+        },
+        {
+          "id": "r5_sign",
+          "kind": [
+            "INSPECT",
+            "FIND"
+          ],
+          "label": "Glowing sign",
+          "yaw": 153.0,
+          "pitch": 27.0,
+          "after": [
+            "r5_rig"
+          ],
+          "card": {
+            "title": "The glowing sign",
+            "text": "",
+            "views": [
+              "Light reaches the wall and a painted sign glows.",
+              "\"Marrow and Sons, Print Shop, Cobb Street. The false Bureau passes are printed here.\" It is in Voss's handwriting."
+            ]
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "Marrow and Sons, Print Shop, Cobb Street. Passes printed here.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r5_r5_sign_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "That is the Professor's handwriting. He left us a trail.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r5_r5_sign_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r5_exit",
+          "kind": [
+            "AUTO"
+          ],
+          "label": "Back door",
+          "yaw": 6.8,
+          "pitch": 6.8,
+          "after": [
+            "r5_sign"
+          ],
+          "useItem": null
+        }
+      ]
+    },
+    {
+      "id": "room6",
+      "name": "Print Shop",
+      "accent": "#B5532A",
+      "panorama": "assets/rooms/room6.webp",
+      "fallback": [
+        "#4a2210",
+        "#14202E"
+      ],
+      "objective": "Rebuild the torn letter.",
+      "objectiveCard": {
+        "title": "Print Shop",
+        "text": "Rebuild the torn letter and read what it says."
+      },
+      "discussAt": null,
+      "reward": {
+        "page": 5,
+        "item": "voss_seal"
+      },
+      "dialogue": {
+        "enter": [
+          {
+            "speaker": "wren",
+            "text": "A print shop. Fresh ink and a very long night.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r6_enter_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "The press is still warm.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r6_enter_1.mp3"
+          }
+        ],
+        "discuss": [],
+        "right": [
+          {
+            "speaker": "wren",
+            "text": "Vault. The Professor is in the vault below the Bureau.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r6_right_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "And his seal opens the door.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r6_right_1.mp3"
+          },
+          {
+            "speaker": "wren",
+            "text": "Hale has false passes but no seal. We can get there first.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r6_right_2.mp3"
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "id": "r6_passes",
+          "kind": [
+            "INSPECT",
+            "LEARN"
+          ],
+          "label": "Passes on the press",
+          "yaw": -2.2,
+          "pitch": -10.1,
+          "after": [],
+          "card": {
+            "title": "Fresh passes",
+            "text": "Dozens of Bureau passes, still wet. All false."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "Dozens of Bureau passes, still wet. All false.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r6_r6_passes_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Hale made these to fool the guards.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r6_r6_passes_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r6_strips",
+          "kind": [
+            "FIND"
+          ],
+          "label": "Pile of torn strips",
+          "yaw": -146.2,
+          "pitch": -29.2,
+          "after": [],
+          "card": {
+            "title": "Torn strips",
+            "text": "Six strips of a letter, torn apart. They are in Voss's hand."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "A letter, torn in strips. It is in Voss's hand.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r6_r6_strips_0.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "Six pieces. Let's put it back together.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r6_r6_strips_1.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r6_table",
+          "kind": [
+            "PANEL"
+          ],
+          "label": "Worktable",
+          "yaw": -146.2,
+          "pitch": -29.2,
+          "after": [
+            "r6_passes",
+            "r6_strips"
+          ],
+          "panel": "r6_table"
+        },
+        {
+          "id": "r6_letter",
+          "kind": [
+            "PANEL"
+          ],
+          "label": "The rebuilt letter",
+          "yaw": -146.2,
+          "pitch": -29.2,
+          "after": [
+            "r6_table"
+          ],
+          "panel": "r6_letter",
+          "preLines": [
+            {
+              "speaker": "voss",
+              "text": "Very soon, someone will come for the Protocol.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r6_r6_letter_pre_0.mp3"
+            },
+            {
+              "speaker": "voss",
+              "text": "And I cannot let them have it.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r6_r6_letter_pre_1.mp3"
+            },
+            {
+              "speaker": "voss",
+              "text": "Under the Bureau, behind the old press room, I made a safe place.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r6_r6_letter_pre_2.mp3"
+            },
+            {
+              "speaker": "voss",
+              "text": "Look for the door that my seal opens.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r6_r6_letter_pre_3.mp3"
+            },
+            {
+              "speaker": "voss",
+              "text": "Trust Tobias; he reads more than he says.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r6_r6_letter_pre_4.mp3"
+            },
+            {
+              "speaker": "tobias",
+              "text": "He wrote those big first letters on purpose. An acrostic is a message hidden in first letters.",
+              "pausesTimer": true,
+              "audioFile": "assets/audio/voice/r6_r6_letter_pre_5.mp3"
+            },
+            {
+              "speaker": "wren",
+              "text": "Read them down.",
+              "pausesTimer": true,
+              "audioFile": "assets/audio/voice/r6_r6_letter_pre_6.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r6_exit",
+          "kind": [
+            "AUTO"
+          ],
+          "label": "Stair door",
+          "yaw": 121.5,
+          "pitch": 4.5,
+          "after": [
+            "r6_letter"
+          ],
+          "useItem": "voss_seal"
+        }
+      ]
+    },
+    {
+      "id": "room7",
+      "name": "The Sealed Vault",
+      "accent": "#D4A93A",
+      "panorama": "assets/rooms/room7.webp",
+      "fallback": [
+        "#2a2208",
+        "#07080a"
+      ],
+      "objective": "Open the brass-bound case.",
+      "objectiveCard": {
+        "title": "The Sealed Vault",
+        "text": "Answer the four locks to open the case."
+      },
+      "discussAt": "r7_locks",
+      "reward": null,
+      "dialogue": {
+        "enter": [
+          {
+            "speaker": "wren",
+            "text": "The vault. The Professor must be near.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r7_enter_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "Four locks on that case. I hope we have the answers.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r7_enter_1.mp3"
+          }
+        ],
+        "discuss": [
+          {
+            "speaker": "wren",
+            "text": "Each lock is a sentence.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r7_discuss_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "Our pages are in the Casebook. Let's read them first.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r7_discuss_1.mp3"
+          }
+        ],
+        "right": [
+          {
+            "speaker": "wren",
+            "text": "Hale, the garden window, the 10:15 and Marrow and Sons.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r7_right_0.mp3"
+          },
+          {
+            "speaker": "tobias",
+            "text": "That is the whole case. The case opens with a click.",
+            "pausesTimer": true,
+            "audioFile": "assets/audio/voice/r7_right_1.mp3"
+          }
+        ]
+      },
+      "hotspots": [
+        {
+          "id": "r7_case",
+          "kind": [
+            "LEARN"
+          ],
+          "label": "Brass-bound case",
+          "yaw": -2.2,
+          "pitch": -9.0,
+          "after": [],
+          "card": {
+            "title": "The brass-bound case",
+            "text": "Each lock is a sentence. Answer all four to open the case."
+          },
+          "lines": [
+            {
+              "speaker": "wren",
+              "text": "Each lock is a sentence. Answer all four to open the case.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/r7_r7_case_0.mp3"
+            }
+          ],
+          "noPoints": true
+        },
+        {
+          "id": "r7_locks",
+          "kind": [
+            "PANEL"
+          ],
+          "label": "The four locks",
+          "yaw": -2.2,
+          "pitch": -9.0,
+          "after": [
+            "r7_case"
+          ],
+          "panel": "r7_locks"
+        }
+      ]
+    }
+  ],
+  "items": {
+    "token": {
+      "name": "Telegraph token",
+      "sprite": "token",
+      "text": "A brass token for the telegraph office side door."
+    },
+    "street_key": {
+      "name": "Street key",
+      "sprite": "street_key",
+      "text": "Opens the telegraph office street door."
+    },
+    "platform_pass": {
+      "name": "Platform pass",
+      "sprite": "platform_pass",
+      "text": "Lets you through to the railway platforms."
+    },
+    "stage_door_card": {
+      "name": "Stage-door card",
+      "sprite": "stage_door_card",
+      "text": "A card that opens the opera stage door."
+    },
+    "voss_seal": {
+      "name": "Voss's seal",
+      "sprite": "voss_seal",
+      "text": "Professor Voss's wax seal. It opens the stair to the vault."
+    }
+  },
+  "casePages": [
+    "The thief came in by the garden window, writes with the left hand, and works inside the Bureau.",
+    "A telegram says a decoy trunk goes on a train after ten and before eleven.",
+    "The ink on the glove is violet. The ledger shows only the Archive Office buys violet ink, signed C. Hale.",
+    "The 10:15 train from platform 5 carried the decoy trunk. The receipt in locker 15 is signed C. Hale.",
+    "The false Bureau passes were printed at Marrow and Sons Print Shop on Cobb Street.",
+    "Voss's letter says the real Protocol is safe in the vault below the Bureau, and his seal opens the door."
+  ],
+  "puzzles": {
+    "r1_board": {
+      "type": "match",
+      "title": "The Professor's board",
+      "hotspot": "r1_board",
+      "points": "roomPuzzle",
+      "help": "Drag each evidence tag onto the one card it proves.",
+      "items": [
+        {
+          "id": "E1",
+          "label": "E1  Red clay on the windowsill"
+        },
+        {
+          "id": "E2",
+          "label": "E2  Ink-stained left glove"
+        },
+        {
+          "id": "E3",
+          "label": "E3  Bureau stamp on the note"
+        }
+      ],
+      "targets": [
+        {
+          "id": "c_chimney",
+          "label": "Came in down the chimney.",
+          "answer": null
+        },
+        {
+          "id": "c_left",
+          "label": "Writes with the left hand.",
+          "answer": "E2"
+        },
+        {
+          "id": "c_never",
+          "label": "Has never been to the Bureau.",
+          "answer": null
+        },
+        {
+          "id": "c_window",
+          "label": "Came in through the garden window.",
+          "answer": "E1"
+        },
+        {
+          "id": "c_inside",
+          "label": "Works inside the Bureau.",
+          "answer": "E3"
+        },
+        {
+          "id": "c_right",
+          "label": "Writes with the right hand.",
+          "answer": null
+        }
+      ],
+      "hints": [
+        {
+          "speaker": "tobias",
+          "text": "Hmm. Think about what each clue could only mean.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r1_board_0.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Open your Casebook. Read each tag, then ask what it proves.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r1_board_1.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Clay means the window. Ink on a left glove means the left hand. A stamp means the Bureau.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r1_board_2.mp3"
+        }
+      ]
+    },
+    "r2_key": {
+      "type": "rhythm",
+      "title": "The telegraph key",
+      "hotspot": "r2_key",
+      "points": "roomPuzzle",
+      "help": "Watch the lamp, then copy it on the key.",
+      "shortFlash": 0.3,
+      "longFlash": 0.9,
+      "gap": 0.4,
+      "tapMax": 0.4,
+      "holdMin": 0.6,
+      "rounds": [
+        [
+          "s",
+          "l",
+          "s"
+        ],
+        [
+          "l",
+          "l",
+          "s",
+          "s"
+        ],
+        [
+          "s",
+          "l",
+          "l",
+          "s",
+          "l"
+        ]
+      ],
+      "hints": [
+        {
+          "speaker": "tobias",
+          "text": "Not quite. Watch the lamp again and count the flashes.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r2_key_0.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Press Replay and compare each flash with the card on the wall.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r2_key_1.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Short flash means a quick tap. Long flash means holding the key a moment. Copy them in order.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r2_key_2.mp3"
+        }
+      ]
+    },
+    "r3_tray": {
+      "type": "match",
+      "title": "The test tray",
+      "hotspot": "r3_tray",
+      "points": "roomPuzzle",
+      "kind": "bottles",
+      "help": "Drag each bottle onto the stain it works on.",
+      "items": [
+        {
+          "id": "lemon_juice",
+          "label": "Lemon juice",
+          "sprite": "lemon_juice"
+        },
+        {
+          "id": "vinegar",
+          "label": "Vinegar",
+          "sprite": "vinegar"
+        },
+        {
+          "id": "soda_water",
+          "label": "Soda water",
+          "sprite": "soda_water"
+        },
+        {
+          "id": "hot_water",
+          "label": "Hot water",
+          "sprite": "hot_water"
+        }
+      ],
+      "targets": [
+        {
+          "id": "s_clay",
+          "label": "Red clay",
+          "answer": "vinegar",
+          "swatch": "#9c4a32"
+        },
+        {
+          "id": "s_ink",
+          "label": "Violet ink",
+          "answer": "lemon_juice",
+          "swatch": "#5b3a8c"
+        },
+        {
+          "id": "s_wax",
+          "label": "Candle wax",
+          "answer": "hot_water",
+          "swatch": "#d8cfa8"
+        },
+        {
+          "id": "s_soot",
+          "label": "Soot",
+          "answer": "soda_water",
+          "swatch": "#2b2b2b"
+        }
+      ],
+      "hints": [
+        {
+          "speaker": "tobias",
+          "text": "Oh dear, it smudged. Check the chart again.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r3_tray_0.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "The wall chart says what each liquid does. Match the effect to the stain.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r3_tray_1.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Lemon juice for the ink, vinegar for the clay, soda water for the soot, hot water for the wax.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r3_tray_2.mp3"
+        }
+      ]
+    },
+    "r4_lockers": {
+      "type": "lockers",
+      "title": "The locker wall",
+      "hotspot": "r4_lockers",
+      "points": "roomPuzzle",
+      "window": {
+        "from": "10:00",
+        "to": "11:00"
+      },
+      "trains": [
+        {
+          "time": "9:40",
+          "platform": 3,
+          "carriages": 4
+        },
+        {
+          "time": "10:15",
+          "platform": 5,
+          "carriages": 3
+        },
+        {
+          "time": "11:05",
+          "platform": 2,
+          "carriages": 6
+        },
+        {
+          "time": "11:50",
+          "platform": 4,
+          "carriages": 5
+        }
+      ],
+      "lockers": 20,
+      "perRow": 5,
+      "hints": [
+        {
+          "speaker": "tobias",
+          "text": "That locker won't open. Check which train leaves after ten and before eleven.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r4_lockers_0.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Pick the train first. Then read the rule on the sign and multiply its platform by its carriages.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r4_lockers_1.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "The 10:15 is the only train in the window. It uses platform 5 and has 3 carriages.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r4_lockers_2.mp3"
+        }
+      ]
+    },
+    "r5_rig": {
+      "type": "rig",
+      "title": "The mirror rig",
+      "hotspot": "r5_rig",
+      "points": "roomPuzzle",
+      "size": 5,
+      "lampRow": 3,
+      "signRow": 3,
+      "mirrors": [
+        {
+          "id": "M1",
+          "col": 2,
+          "row": 3,
+          "answer": "/"
+        },
+        {
+          "id": "M2",
+          "col": 2,
+          "row": 1,
+          "answer": "/"
+        },
+        {
+          "id": "M3",
+          "col": 4,
+          "row": 1,
+          "answer": "\\"
+        },
+        {
+          "id": "M4",
+          "col": 4,
+          "row": 3,
+          "answer": "\\"
+        }
+      ],
+      "hints": [
+        {
+          "speaker": "tobias",
+          "text": "The sign is still dark. Watch where the beam goes.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r5_rig_0.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Follow the beam. It must end on the east wall, in row three.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r5_rig_1.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Mirrors one and two lean right. Mirrors three and four lean left.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r5_rig_2.mp3"
+        }
+      ]
+    },
+    "r6_table": {
+      "type": "match",
+      "title": "The torn letter",
+      "hotspot": "r6_table",
+      "points": null,
+      "kind": "strips",
+      "slots": true,
+      "help": "Drag the strips into places 1 to 6, top to bottom. A strip only fits where its torn edge matches.",
+      "items": [
+        {
+          "id": "s1",
+          "top": "Straight",
+          "bottom": "Zigzag",
+          "cap": "V",
+          "text": "ery soon, someone will come for the Protocol."
+        },
+        {
+          "id": "s2",
+          "top": "Zigzag",
+          "bottom": "Wave",
+          "cap": "A",
+          "text": "nd I cannot let them have it."
+        },
+        {
+          "id": "s3",
+          "top": "Wave",
+          "bottom": "Notch",
+          "cap": "U",
+          "text": "nder the Bureau, behind the old press room, I made a safe place."
+        },
+        {
+          "id": "s4",
+          "top": "Notch",
+          "bottom": "Teeth",
+          "cap": "L",
+          "text": "ook for the door that my seal opens."
+        },
+        {
+          "id": "s5",
+          "top": "Teeth",
+          "bottom": "Scallop",
+          "cap": "T",
+          "text": "rust Tobias; he reads more than he says."
+        },
+        {
+          "id": "s6",
+          "top": "Scallop",
+          "bottom": "Straight",
+          "cap": "",
+          "text": "A. Voss"
+        }
+      ],
+      "order": [
+        3,
+        0,
+        5,
+        2,
+        4,
+        1
+      ],
+      "targets": [
+        {
+          "id": "slot1",
+          "label": "1",
+          "answer": "s1"
+        },
+        {
+          "id": "slot2",
+          "label": "2",
+          "answer": "s2"
+        },
+        {
+          "id": "slot3",
+          "label": "3",
+          "answer": "s3"
+        },
+        {
+          "id": "slot4",
+          "label": "4",
+          "answer": "s4"
+        },
+        {
+          "id": "slot5",
+          "label": "5",
+          "answer": "s5"
+        },
+        {
+          "id": "slot6",
+          "label": "6",
+          "answer": "s6"
+        }
+      ],
+      "hints": [
+        {
+          "speaker": "tobias",
+          "text": "They don't fit yet. Look at the torn edges.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r6_table_0.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Each piece has a matching torn edge. The top piece has a straight edge on top.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r6_table_1.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Start with the straight top edge. Then match zigzag, wave, notch, teeth and scallop.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r6_table_2.mp3"
+        }
+      ]
+    },
+    "r6_letter": {
+      "type": "choice",
+      "title": "The Professor's letter",
+      "hotspot": "r6_letter",
+      "points": "roomPuzzle",
+      "final": false,
+      "letter": [
+        {
+          "cap": "V",
+          "text": "ery soon, someone will come for the Protocol."
+        },
+        {
+          "cap": "A",
+          "text": "nd I cannot let them have it."
+        },
+        {
+          "cap": "U",
+          "text": "nder the Bureau, behind the old press room, I made a safe place."
+        },
+        {
+          "cap": "L",
+          "text": "ook for the door that my seal opens."
+        },
+        {
+          "cap": "T",
+          "text": "rust Tobias; he reads more than he says."
+        },
+        {
+          "cap": "",
+          "text": "A. Voss"
+        }
+      ],
+      "help": "Read the large first letters. Then choose the door.",
+      "questions": [
+        {
+          "id": "r6_letter",
+          "sentence": "The first letters spell the name of the door.",
+          "cards": [
+            "Vault",
+            "Cellar",
+            "Archive",
+            "Stage Door"
+          ],
+          "answer": "Vault"
+        }
+      ],
+      "hints": [
+        {
+          "speaker": "tobias",
+          "text": "Those big first letters look odd. Read them down.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r6_letter_0.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Read the large first letter of each line, from the top.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r6_letter_1.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "The first letters are V, A, U, L, T.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/hint_r6_letter_2.mp3"
+        }
+      ]
+    },
+    "r7_locks": {
+      "type": "choice",
+      "title": "The four locks",
+      "hotspot": "r7_locks",
+      "points": "vaultLock",
+      "final": true,
+      "perQuestion": true,
+      "help": "Each lock is a sentence. Pick the card that finishes it. Your clues are in the Casebook.",
+      "questions": [
+        {
+          "id": "r7_lock1",
+          "sentence": "The thief is...",
+          "cards": [
+            "Mrs. Odile Pell",
+            "Mr. Rafe Dunmore",
+            "Mr. Corvin Hale",
+            "Dr. Imre Quill"
+          ],
+          "answer": "Mr. Corvin Hale",
+          "hints": [
+            {
+              "speaker": "tobias",
+              "text": "Think about who matches every clue.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q1_0.mp3"
+            },
+            {
+              "speaker": "wren",
+              "text": "Read Casebook pages 1, 3 and 4.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q1_1.mp3"
+            },
+            {
+              "speaker": "wren",
+              "text": "A left hand, violet ink and a receipt signed C. Hale.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q1_2.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r7_lock2",
+          "sentence": "He got into the study through...",
+          "cards": [
+            "The chimney",
+            "The front door with a key",
+            "The garden window",
+            "The cellar hatch"
+          ],
+          "answer": "The garden window",
+          "hints": [
+            {
+              "speaker": "tobias",
+              "text": "How would the thief reach the study unseen?",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q2_0.mp3"
+            },
+            {
+              "speaker": "wren",
+              "text": "Read Casebook page 1.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q2_1.mp3"
+            },
+            {
+              "speaker": "wren",
+              "text": "The clay on the sill points to the garden window.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q2_2.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r7_lock3",
+          "sentence": "The decoy trunk left on...",
+          "cards": [
+            "The 9:40 from platform 3",
+            "The 11:05 from platform 2",
+            "The 10:15 from platform 5",
+            "The 11:50 from platform 4"
+          ],
+          "answer": "The 10:15 from platform 5",
+          "hints": [
+            {
+              "speaker": "tobias",
+              "text": "Which train fits the telegram?",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q3_0.mp3"
+            },
+            {
+              "speaker": "wren",
+              "text": "Read Casebook pages 2 and 4.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q3_1.mp3"
+            },
+            {
+              "speaker": "wren",
+              "text": "After ten and before eleven is the 10:15 from platform 5.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q3_2.mp3"
+            }
+          ]
+        },
+        {
+          "id": "r7_lock4",
+          "sentence": "The false passes were printed at...",
+          "cards": [
+            "Cobb Street Bakery",
+            "Larkhaven Opera",
+            "Marrow and Sons Print Shop",
+            "The chemist on Fenwick Row"
+          ],
+          "answer": "Marrow and Sons Print Shop",
+          "hints": [
+            {
+              "speaker": "tobias",
+              "text": "Who printed the false passes?",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q4_0.mp3"
+            },
+            {
+              "speaker": "wren",
+              "text": "Read Casebook page 5.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q4_1.mp3"
+            },
+            {
+              "speaker": "wren",
+              "text": "The Professor's sign named Marrow and Sons on Cobb Street.",
+              "pausesTimer": false,
+              "audioFile": "assets/audio/voice/hint_r7_locks_q4_2.mp3"
+            }
+          ]
+        }
+      ],
+      "threat": [
+        {
+          "speaker": "tobias",
+          "text": "Careful! Hurry, we only have a few guesses left.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/threat_r7_0.mp3"
+        },
+        {
+          "speaker": "wren",
+          "text": "Two wrong. Footsteps on the stairs. One more mistake and we are caught.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/threat_r7_1.mp3"
+        },
+        {
+          "speaker": "hale",
+          "text": "Three wrong guesses. The Protocol is mine now, and you are done.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/threat_r7_2.mp3"
+        }
+      ]
+    }
+  },
+  "ending": [
+    {
+      "speaker": "voss",
+      "text": "Well done, Wren. I knew you would follow the trail.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_0.mp3"
+    },
+    {
+      "speaker": "wren",
+      "text": "Professor! You are safe.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_1.mp3"
+    },
+    {
+      "speaker": "voss",
+      "text": "Safe, and so is the Protocol. I hid here when I saw Hale watching my desk.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_2.mp3"
+    },
+    {
+      "speaker": "hale",
+      "text": "Professor. Wren. How very inconvenient.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_3.mp3"
+    },
+    {
+      "speaker": "wren",
+      "text": "Hale. You came through the garden window and sent a decoy trunk on the 10:15.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_4.mp3"
+    },
+    {
+      "speaker": "hale",
+      "text": "And you followed a trail of mirrors and ink. Impressive.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_5.mp3"
+    },
+    {
+      "speaker": "wren",
+      "text": "Your false passes got you to the door, not through it.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_6.mp3"
+    },
+    {
+      "speaker": "hale",
+      "text": "You think I worked alone?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_7.mp3"
+    },
+    {
+      "speaker": "tobias",
+      "text": "The clock tower is striking. The inspectors' lanterns are on the stairs.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_8.mp3"
+    },
+    {
+      "speaker": "voss",
+      "text": "The Protocol is safe. But this arrived at the Bureau tonight, addressed to you, Wren.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_9.mp3"
+    },
+    {
+      "speaker": "wren",
+      "text": "A black wax seal. A gear with one tooth missing.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_10.mp3"
+    },
+    {
+      "speaker": "voss",
+      "text": "Then there is a second lock.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/ending_11.mp3"
+    }
+  ]
+}

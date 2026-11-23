@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>The Cursed Hunter</title>
+<meta name="description" content="A dark fantasy 360 escape game. Break the thorn curse in seven minutes.">
+<meta property="og:title" content="The Cursed Hunter">
+<meta property="og:description" content="A dark fantasy 360 escape game. Break the thorn curse in seven minutes.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#14110F">
+<link rel="stylesheet" href="vendor/pannellum.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="pano"></div>
+  <canvas id="fx"></canvas>
+  <div id="vignette"></div>
+
+  <!-- HUD -->
+  <div id="hud" hidden>
+    <div id="topbar">
+      <div id="timer" aria-label="Thorn timer">
+        <span id="clock">7:00</span>
+      </div>
+      <div id="crowns" aria-label="Crowns"><span class="coin">♛</span><b id="crownN">0</b></div>
+    </div>
+    <div id="goal"><span id="roomName"></span><em id="goalText"></em></div>
+    <div id="findStrip" aria-label="Find in this room"></div>
+    <div id="side">
+      <button id="bCase" class="rbtn" aria-label="Casebook"><i class="ico" data-ico="casebook">📖</i><span>Casebook</span></button>
+      <button id="bHint" class="rbtn" aria-label="Hint"><i class="ico" data-ico="hint">🕯</i><span>Hint</span><b id="hintN">3</b></button>
+      <button id="bPause" class="rbtn" aria-label="Pause"><i class="ico" data-ico="pause">⏸</i><span>Pause</span></button>
+    </div>
+    <div id="held" hidden></div>
+  </div>
+
+  <div id="toasts"></div>
+  <div id="panelLayer"></div>
+  <div id="cardLayer"></div>
+  <div id="bookLayer"></div>
+
+  <!-- dialogue -->
+  <div id="dlg" hidden>
+    <div class="dlg-in">
+      <div class="bust" id="dBust"></div>
+      <div class="dtext">
+        <div class="dname" id="dName"></div>
+        <div class="dline" id="dLine"></div>
+        <div class="dtap" id="dTap">Tap to continue ▸</div>
+      </div>
+      <button class="skip" id="dSkip">Skip</button>
+    </div>
+  </div>
+
+  <div id="modalLayer"></div>
+
+  <!-- intro screens -->
+  <section id="sTitle" class="screen" hidden>
+    <div class="bgart" id="titleBg"></div>
+    <div class="fallbackArt"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice"><circle cx="300" cy="70" r="26" fill="#e8dfc8" opacity=".85"/><path d="M0 300V230c40-10 70-30 110-20s60 20 100 10 90-30 190-20v100z" fill="#0c0a09"/><g fill="#0c0a09"><path d="M170 220l6-70 6 70zM176 150l-20-30M176 150l22-34M176 165l-26-16M176 165l28-18"/></g><path d="M90 230c4-30 8-50 8-60 6 10 6 20 6 60z" fill="#050403"/></svg></div>
+    <div class="titleBox">
+      <h1 id="tTitle">THE CURSED HUNTER</h1>
+      <p id="tTag">A 360 escape game</p>
+      <button id="btnStart" class="seal big">TAP TO START</button>
+    </div>
+  </section>
+
+  <section id="sMission" class="screen" hidden>
+    <div class="bgart" id="missionBg"></div>
+    <div class="missionShade"></div>
+    <div class="missionText">
+      <h2 id="mHead"></h2>
+      <div id="mParas"></div>
+      <button id="btnBegin" class="seal big">BEGIN</button>
+    </div>
+  </section>
+
+  <div id="tutorial" hidden>
+    <div id="spot"></div>
+    <div id="tCard"><div class="tstep" id="tStep"></div><h3 id="tTitleC"></h3><p id="tText"></p>
+      <div class="trow"><button id="tSkip" class="ghost">Skip</button><button id="tNext" class="seal">Next</button></div></div>
+  </div>
+
+  <button id="skipIntro" class="ghost skipTop" hidden>Skip intro</button>
+  <div id="fade"></div>
+  <div id="debug" hidden></div>
+</div>
+<script src="vendor/pannellum.js"></script>
+<script src="fx.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,1965 @@
+{
+  "title": "The Otherworld Files",
+  "tagline": "Marrow Creek, 1986",
+  "config": {
+    "timerSeconds": 420,
+    "sparks": 4,
+    "hintsPerRoom": 2,
+    "idleSeconds": 40,
+    "signal": {
+      "find": 5,
+      "learn": 5,
+      "filePage": 30,
+      "finalSentences": 50,
+      "closeRift": 50,
+      "timePerSecond": 1,
+      "wrong": -10,
+      "hint": -25
+    },
+    "lockoutSeconds": {
+      "panel": 3,
+      "room7": 5
+    },
+    "blurPx": 6,
+    "unblurSeconds": 1.2,
+    "seqStepSeconds": 0.8,
+    "crankSeconds": {
+      "slow": 4,
+      "fast": 1.5
+    },
+    "veilSeconds": 45,
+    "powerRadius": 12,
+    "maxPanoramaWidth": 4096,
+    "pauseSpeakers": [
+      "juno",
+      "otto"
+    ]
+  },
+  "characters": {
+    "juno": {
+      "name": "Juno",
+      "portrait": "port_juno",
+      "color": "#FFB347",
+      "pitch": 1.15,
+      "rate": 1.1
+    },
+    "otto": {
+      "name": "Otto",
+      "portrait": "port_otto",
+      "color": "#3DA5FF",
+      "pitch": 1.3,
+      "rate": 1.0
+    },
+    "wren": {
+      "name": "Wren",
+      "portrait": "port_wren",
+      "color": "#9aa4b8",
+      "pitch": 0.9,
+      "rate": 0.85
+    },
+    "walkie": {
+      "name": "Wren (walkie)",
+      "portrait": "port_wren_walkie",
+      "color": "#9aa4b8",
+      "pitch": 0.9,
+      "rate": 0.85,
+      "radio": true
+    },
+    "ines": {
+      "name": "Ines Corvane",
+      "portrait": "port_ines",
+      "color": "#c9b79c",
+      "pitch": 0.85,
+      "rate": 0.9
+    },
+    "callum": {
+      "name": "Callum",
+      "portrait": "port_callum",
+      "color": "#FF6B6B",
+      "pitch": 0.8,
+      "rate": 0.95
+    },
+    "narrator": {
+      "name": "",
+      "portrait": null,
+      "color": "#F2E9D8",
+      "pitch": 1.0,
+      "rate": 1.0
+    }
+  },
+  "opening": [
+    {
+      "who": "juno",
+      "text": "Marrow Creek, 1986. The night the lights went out.",
+      "audioFile": "assets/audio/voice/opening_0.mp3"
+    },
+    {
+      "who": "otto",
+      "text": "The power has been out for an hour. My watch says 11:48.",
+      "audioFile": "assets/audio/voice/opening_1.mp3"
+    },
+    {
+      "who": "juno",
+      "text": "Callum's jacket is still on the hook. But he is gone.",
+      "audioFile": "assets/audio/voice/opening_2.mp3"
+    },
+    {
+      "who": "otto",
+      "text": "The basement lights are blinking by themselves. That is not the storm.",
+      "audioFile": "assets/audio/voice/opening_3.mp3"
+    },
+    {
+      "who": "juno",
+      "text": "Callum always said lights can talk. Let's go down.",
+      "audioFile": "assets/audio/voice/opening_4.mp3"
+    }
+  ],
+  "tutorial": [
+    {
+      "target": "#pano",
+      "title": "Look around",
+      "text": "Drag the picture to turn around. Look closely: tiny golden sparkles mark things you can tap, and a blue-green sparkle means a puzzle is ready. Real-looking objects can be picked up.",
+      "action": "Try it: drag the picture."
+    },
+    {
+      "target": "#st-time",
+      "title": "The timer",
+      "text": "You have 7:00 for the whole game. The clock stops only while Juno and Otto talk, in this tutorial and in the pause menu."
+    },
+    {
+      "target": "#st-signal",
+      "title": "Signal",
+      "text": "Signal is your score. Finding clues and solving rooms earns it. Wrong answers and hints cost it."
+    },
+    {
+      "target": "#sparks",
+      "title": "Sparks",
+      "grant": true,
+      "text": "Wren, your helper on the walkie-talkie, gives you 4 Sparks for the whole game. Each power you use spends one, and they never come back."
+    },
+    {
+      "target": "#powers",
+      "title": "Powers",
+      "text": "Flicker wakes one dead light or machine. Push moves one heavy thing. Veil calms flickering shadows. Tap a power to read it, then tap what to use it on. A power used in the wrong place is wasted."
+    },
+    {
+      "target": "#btn-hint",
+      "title": "Hints",
+      "text": "The walkie-talkie gives 2 hints in each room. Each one costs Signal but never a Spark.",
+      "action": "Tap Hint once. This one is free."
+    },
+    {
+      "target": "#btn-book",
+      "title": "The Casebook",
+      "text": "Everything you find is saved here: items, notes and File pages.",
+      "action": "Open it, then close it."
+    },
+    {
+      "target": "#btn-pause",
+      "title": "Pause",
+      "text": "Pause stops the clock and hides the puzzle. Resume puts you back exactly where you were."
+    },
+    {
+      "target": null,
+      "title": "Ready",
+      "text": "Sparkles are small on purpose. Look around, think, and follow the hum."
+    }
+  ],
+  "tutorialFreeHint": "Free hint: look at the note on the corkboard.",
+  "skipToast": "Wren gave you 4 Sparks. Tap a power icon to read what it does.",
+  "idle": [
+    {
+      "who": "otto",
+      "text": "Try turning around. Drag to look around.",
+      "audioFile": "assets/audio/voice/idle_0.mp3"
+    },
+    {
+      "who": "otto",
+      "text": "What have we not looked at yet?",
+      "audioFile": "assets/audio/voice/idle_1.mp3"
+    },
+    {
+      "who": "otto",
+      "text": "Open the Casebook. Maybe something fits.",
+      "audioFile": "assets/audio/voice/idle_2.mp3"
+    }
+  ],
+  "ui": {
+    "start": "Tap to Start",
+    "exitToast": "A new way opened.",
+    "noHints": "No hints left in this room.",
+    "noSparks": "No Sparks left.",
+    "saved": "Saved to your notes",
+    "toBook": "Added to your Casebook",
+    "armed": "Tap the thing you want to use it on.",
+    "useTape": "Pick a tape in the Casebook, then tap the recorder.",
+    "findStrip": "Find in this room",
+    "objective": "Objective",
+    "dragHint": "Drag to look around",
+    "noSignal": "Not enough Signal for a hint. A hint costs {n}. Earn more by finding clues.",
+    "wallWatch": "WATCH the bulbs",
+    "wallTurn": "YOUR TURN: tap the same bulbs in the same order",
+    "wallRound": "Round {r} of {n}",
+    "triesLeft": "Light left"
+  },
+  "fizzle": [
+    {
+      "who": "walkie",
+      "text": "Not here.",
+      "audioFile": "assets/audio/voice/fizzle_0.mp3"
+    },
+    {
+      "who": "walkie",
+      "text": "Nothing happened.",
+      "audioFile": "assets/audio/voice/fizzle_1.mp3"
+    },
+    {
+      "who": "walkie",
+      "text": "That did nothing.",
+      "audioFile": "assets/audio/voice/fizzle_2.mp3"
+    }
+  ],
+  "powers": {
+    "flicker": {
+      "name": "Flicker",
+      "icon": "icon_flicker",
+      "desc": "Wakes up one dead light, screen or machine you point at."
+    },
+    "push": {
+      "name": "Push",
+      "icon": "icon_push",
+      "desc": "Shoves one heavy or stuck object out of the way."
+    },
+    "veil": {
+      "name": "Veil",
+      "icon": "icon_veil",
+      "desc": "Calms flickering lights and shadows around you for a short time."
+    }
+  },
+  "powerToasts": {
+    "r2_board": "The scoreboard flickers on.",
+    "r4_radio": "The radio crackles to life.",
+    "r3_toolbox": "The toolbox scrapes aside.",
+    "r5_cabinet": "The cabinet slides away.",
+    "r6_floor": "The glow steadies."
+  },
+  "items": {
+    "flyer": {
+      "name": "Callum's flyer",
+      "sprite": "item_flyer",
+      "desc": "A flyer for the Starlight Arcade. Callum drew on the back. Tap to look at both sides.",
+      "inspect": "flyer"
+    },
+    "tape_a": {
+      "name": "Tape A",
+      "sprite": "item_cassette",
+      "label": "A",
+      "desc": "A cassette. Use it on the recorder to hear it.",
+      "tape": "A"
+    },
+    "tape_b": {
+      "name": "Tape B",
+      "sprite": "item_cassette",
+      "label": "B",
+      "desc": "A cassette. Use it on the recorder to hear it.",
+      "tape": "B"
+    },
+    "tape_c": {
+      "name": "Tape C",
+      "sprite": "item_cassette",
+      "label": "C",
+      "desc": "A cassette. Use it on the recorder to hear it.",
+      "tape": "C"
+    },
+    "tape_d": {
+      "name": "Tape D",
+      "sprite": "item_cassette",
+      "label": "D",
+      "desc": "A cassette. Use it on the recorder to hear it.",
+      "tape": "D"
+    },
+    "slip_s1": {
+      "name": "Slip S1",
+      "sprite": "item_paper_slip",
+      "slip": "S1",
+      "desc": "A slip of paper. It belongs to somebody."
+    },
+    "slip_s2": {
+      "name": "Slip S2",
+      "sprite": "item_paper_slip",
+      "slip": "S2",
+      "desc": "A slip of paper. It belongs to somebody."
+    },
+    "slip_s3": {
+      "name": "Slip S3",
+      "sprite": "item_paper_slip",
+      "slip": "S3",
+      "desc": "A slip of paper. It belongs to somebody."
+    },
+    "slip_s4": {
+      "name": "Slip S4",
+      "sprite": "item_paper_slip",
+      "slip": "S4",
+      "desc": "A slip of paper. It belongs to somebody."
+    },
+    "slip_s5": {
+      "name": "Slip S5",
+      "sprite": "item_paper_slip",
+      "slip": "S5",
+      "desc": "A slip of paper. It belongs to somebody."
+    },
+    "slip_s6": {
+      "name": "Slip S6",
+      "sprite": "item_paper_slip",
+      "slip": "S6",
+      "desc": "A slip of paper. It belongs to somebody."
+    },
+    "hatch_key": {
+      "name": "Hatch key",
+      "sprite": "item_hatch_key",
+      "desc": "A brass key. It opened the hatch in the basement floor."
+    },
+    "staff_token": {
+      "name": "Staff token",
+      "sprite": "item_staff_token",
+      "desc": "A brass token stamped CARETAKER. Someone from the station was here."
+    },
+    "channel_key": {
+      "name": "Radio channel key",
+      "sprite": "item_channel_key",
+      "desc": "A small steel key from the radio hut."
+    },
+    "lab_keycard": {
+      "name": "Lab keycard",
+      "sprite": "item_lab_keycard",
+      "desc": "A plastic keycard. It opens the hatch to the tunnels."
+    },
+    "child_drawing": {
+      "name": "Child's drawing",
+      "sprite": "item_child_drawing",
+      "desc": "A drawing of a girl and a woman. It says: Mama's lullaby."
+    }
+  },
+  "slips": {
+    "S1": {
+      "text": "Badge 03 out, 9:40 p.m.",
+      "owner": "finch"
+    },
+    "S2": {
+      "text": "Flight ticket, departs 11:15 p.m., passenger A. Finch",
+      "owner": "finch"
+    },
+    "S3": {
+      "text": "Badge 11 out, 6:00 p.m.",
+      "owner": "harlow"
+    },
+    "S4": {
+      "text": "Sick note: G. Harlow, flu, home all night",
+      "owner": "harlow"
+    },
+    "S5": {
+      "text": "Badge 07 in, gate room, 10:44 p.m.",
+      "hiddenText": "Badge 07 in, gate room, █████ p.m.",
+      "owner": "corvane"
+    },
+    "S6": {
+      "text": "Gate room cleaning rota: caretaker only, Thursday night",
+      "owner": "corvane"
+    }
+  },
+  "pages": [
+    {
+      "n": 1,
+      "title": "Page 1: Follow the hum",
+      "text": "The wall in Juno's basement flashed FOLLOW THE HUM. Callum left it for us."
+    },
+    {
+      "n": 2,
+      "title": "Page 2: The staff token",
+      "text": "A brass token stamped CARETAKER was locked in the arcade. Someone from the station was here that night."
+    },
+    {
+      "n": 3,
+      "title": "Page 3: The Static",
+      "text": "The Static follows loud sounds, cannot stand steady bright light, cannot cross a line of salt and feeds on live electricity."
+    },
+    {
+      "n": 4,
+      "title": "Page 4: The hum and the time",
+      "text": "A woman hummed a lullaby into the radio line at 10:44 p.m., three minutes before the lights failed at 10:47."
+    },
+    {
+      "n": 5,
+      "title": "Page 5: The badges",
+      "text": "Badge 07 entered the gate room at 10:44 p.m. Badge 07 is Ines Corvane, the caretaker. Aldous Finch (03) left at 9:40. Gus Harlow (11) went home at 6:00."
+    },
+    {
+      "n": 6,
+      "title": "Page 6: Why",
+      "text": "A child's drawing of a girl and a woman. It says: Mama's lullaby. The music box lid has a name scratched in it: Mira."
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room1",
+      "name": "Basement Alphabet Wall",
+      "accent": "#FFB347",
+      "panorama": "assets/rooms/room1.webp",
+      "objective": "Find out what the lights on the wall are saying.",
+      "enter": [],
+      "hotspots": [
+        {
+          "id": "r1_note",
+          "kind": "LEARN",
+          "name": "Corkboard note",
+          "yaw": 129.6,
+          "pitch": 27,
+          "after": [],
+          "card": {
+            "title": "Corkboard note",
+            "text": "\"Bulbs talk. Watch the whole thing first, then copy it back.\""
+          },
+          "note": "Callum's note: Bulbs talk. Watch the whole thing first, then copy it back.",
+          "line": {
+            "who": "juno",
+            "text": "Callum's writing. He says to watch first.",
+            "audioFile": "assets/audio/voice/rooms_room1_hotspots_r1_note_line.mp3"
+          }
+        },
+        {
+          "id": "r1_flyer",
+          "kind": "FIND",
+          "name": "Callum's jacket pocket",
+          "yaw": 103.7,
+          "pitch": 12,
+          "after": [],
+          "sprite": "item_flyer",
+          "items": [
+            "flyer"
+          ],
+          "card": {
+            "title": "Callum's flyer",
+            "text": "A flyer for the Starlight Arcade. Callum drew something on the back. It is saved in your Casebook."
+          },
+          "line": {
+            "who": "otto",
+            "text": "Starlight Arcade. Callum was there last Friday.",
+            "audioFile": "assets/audio/voice/rooms_room1_hotspots_r1_flyer_line.mp3"
+          }
+        },
+        {
+          "id": "r1_wall",
+          "kind": "PANEL",
+          "name": "Alphabet wall",
+          "yaw": -4,
+          "pitch": 22,
+          "after": [
+            "r1_note"
+          ],
+          "panel": "r1_wall"
+        },
+        {
+          "id": "r1_hatch",
+          "kind": "AUTO",
+          "after": [
+            "r1_wall"
+          ],
+          "reward": {
+            "items": [
+              "hatch_key"
+            ],
+            "page": 1
+          }
+        },
+        {
+          "id": "r1_exit",
+          "kind": "EXIT",
+          "name": "Open hatch",
+          "yaw": 127.5,
+          "pitch": -34.5,
+          "after": [
+            "r1_hatch"
+          ]
+        }
+      ],
+      "panel": {
+        "type": "wall",
+        "title": "The Alphabet Wall",
+        "rounds": [
+          [
+            "F",
+            "O",
+            "L"
+          ],
+          [
+            "L",
+            "O",
+            "W",
+            "T"
+          ],
+          [
+            "H",
+            "E",
+            "H",
+            "U",
+            "M"
+          ]
+        ],
+        "final": "FOLLOW THE HUM",
+        "intro": "The wall will light some bulbs, one at a time. Watch them. Then tap the same bulbs in the same order. You can watch again as often as you like."
+      },
+      "wrong": [
+        {
+          "who": "otto",
+          "text": "Slow down. Watch the whole sequence before you tap.",
+          "audioFile": "assets/audio/voice/rooms_room1_wrong_0.mp3"
+        },
+        {
+          "who": "juno",
+          "text": "Callum's note says to copy it back, in the same order.",
+          "audioFile": "assets/audio/voice/rooms_room1_wrong_1.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "Press Watch Again. Say each letter out loud as it lights.",
+          "audioFile": "assets/audio/voice/rooms_room1_wrong_2.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "juno",
+          "text": "Follow the hum. Callum left that for me.",
+          "audioFile": "assets/audio/voice/rooms_room1_right_0.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "A hum? Like a sound, or a machine?",
+          "audioFile": "assets/audio/voice/rooms_room1_right_1.mp3"
+        },
+        {
+          "who": "juno",
+          "text": "Maybe both. Let's find out.",
+          "audioFile": "assets/audio/voice/rooms_room1_right_2.mp3"
+        }
+      ],
+      "hints": {
+        "flash": [
+          "r1_note",
+          "r1_wall"
+        ],
+        "line": {
+          "who": "otto",
+          "text": "Do round one first. You can watch again as often as you like.",
+          "audioFile": "assets/audio/voice/rooms_room1_hints_line.mp3"
+        }
+      },
+      "flicker": {
+        "minSeconds": 3,
+        "maxSeconds": 7
+      }
+    },
+    {
+      "id": "room2",
+      "name": "Starlight Arcade",
+      "accent": "#FF3DA5",
+      "panorama": "assets/rooms/room2.webp",
+      "objective": "Open the locked cabinet in the arcade.",
+      "giveOnEnter": "flyer",
+      "enter": [
+        {
+          "who": "juno",
+          "text": "The arcade is dead dark.",
+          "audioFile": "assets/audio/voice/rooms_room2_enter_0.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "Callum's flyer says the high score night. Something is hidden here.",
+          "audioFile": "assets/audio/voice/rooms_room2_enter_1.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r2_poster",
+          "kind": "INSPECT",
+          "name": "Wall poster",
+          "yaw": 54.9,
+          "pitch": 33,
+          "after": [],
+          "view": "poster",
+          "line": {
+            "who": "otto",
+            "text": "The other half of the key. Eight symbols, two halves.",
+            "audioFile": "assets/audio/voice/rooms_room2_hotspots_r2_poster_line.mp3"
+          },
+          "note": "Wall poster key: star = S, heart = T, triangle = E, cross = O."
+        },
+        {
+          "id": "r2_board",
+          "kind": "INSPECT",
+          "name": "Scoreboard",
+          "yaw": -7.3,
+          "pitch": 44,
+          "after": [],
+          "view": "board",
+          "power": "flicker",
+          "line": {
+            "who": "juno",
+            "text": "Four symbols. It is too dark to make them out.",
+            "audioFile": "assets/audio/voice/rooms_room2_hotspots_r2_board_line.mp3"
+          },
+          "note": "Scoreboard: four symbols, too dark to read.",
+          "lineLit": {
+            "who": "juno",
+            "text": "Bright and steady now. Star, heart, bolt, diamond.",
+            "audioFile": "assets/audio/voice/rooms_room2_hotspots_r2_board_lineLit.mp3"
+          },
+          "required": true,
+          "noteLit": "Scoreboard, left to right: star, heart, lightning bolt, diamond.",
+          "fxLine": {
+            "who": "juno",
+            "text": "The scoreboard lit up. Look at it again.",
+            "audioFile": "assets/audio/voice/rooms_room2_hotspots_r2_board_fxLine.mp3"
+          }
+        },
+        {
+          "id": "r2_cabinet",
+          "kind": "PANEL",
+          "name": "Locked cabinet",
+          "yaw": 117,
+          "pitch": 6,
+          "after": [
+            "book:flyer",
+            "r2_poster",
+            "r2_board"
+          ],
+          "panel": "r2_cabinet"
+        },
+        {
+          "id": "r2_cab_open",
+          "kind": "AUTO",
+          "after": [
+            "r2_cabinet"
+          ],
+          "reward": {
+            "items": [
+              "staff_token"
+            ],
+            "page": 2
+          }
+        },
+        {
+          "id": "r2_exit",
+          "kind": "EXIT",
+          "name": "Back-room door",
+          "yaw": 142,
+          "pitch": 3,
+          "after": [
+            "r2_cab_open"
+          ]
+        }
+      ],
+      "views": {
+        "poster": [
+          {
+            "type": "key",
+            "title": "Wall poster key",
+            "symbols": [
+              [
+                "star",
+                "S"
+              ],
+              [
+                "heart",
+                "T"
+              ],
+              [
+                "triangle",
+                "E"
+              ],
+              [
+                "cross",
+                "O"
+              ]
+            ]
+          }
+        ],
+        "board": [
+          {
+            "type": "board",
+            "title": "Scoreboard",
+            "symbols": [
+              "star",
+              "heart",
+              "bolt",
+              "diamond"
+            ]
+          }
+        ]
+      },
+      "flyerViews": [
+        {
+          "type": "flyer",
+          "title": "Callum's flyer: front"
+        },
+        {
+          "type": "key",
+          "title": "Callum's flyer: back",
+          "symbols": [
+            [
+              "bolt",
+              "A"
+            ],
+            [
+              "diamond",
+              "R"
+            ],
+            [
+              "moon",
+              "M"
+            ],
+            [
+              "dot",
+              "K"
+            ]
+          ]
+        }
+      ],
+      "flyerLine": {
+        "who": "juno",
+        "text": "Callum drew half a key on the back.",
+        "audioFile": "assets/audio/voice/rooms_room2_flyerLine.mp3"
+      },
+      "flyerNote": "Flyer back key: lightning bolt = A, diamond = R, moon = M, dot = K.",
+      "panel": {
+        "type": "cabinet",
+        "title": "The Locked Cabinet",
+        "answer": "STAR",
+        "intro": "Turn the four dials to spell the word, then press Open."
+      },
+      "wrong": [
+        {
+          "who": "otto",
+          "text": "Each symbol is exactly one letter. Find all four on a key.",
+          "audioFile": "assets/audio/voice/rooms_room2_wrong_0.mp3"
+        },
+        {
+          "who": "juno",
+          "text": "Callum wrote half the key on the back of the flyer. The poster has the rest.",
+          "audioFile": "assets/audio/voice/rooms_room2_wrong_1.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "Read the scoreboard left to right. The first symbol is a star, and the star's letter is S.",
+          "audioFile": "assets/audio/voice/rooms_room2_wrong_2.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "juno",
+          "text": "S, T, A, R. Starlight Arcade.",
+          "audioFile": "assets/audio/voice/rooms_room2_right_0.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "A staff token. It says CARETAKER.",
+          "audioFile": "assets/audio/voice/rooms_room2_right_1.mp3"
+        },
+        {
+          "who": "juno",
+          "text": "Someone from the station was here that night.",
+          "audioFile": "assets/audio/voice/rooms_room2_right_2.mp3"
+        }
+      ],
+      "hints": {
+        "flash": [
+          "book:flyer",
+          "r2_poster",
+          "r2_board"
+        ],
+        "line": {
+          "who": "juno",
+          "text": "Use both halves of the key. Each symbol on the scoreboard has one letter.",
+          "audioFile": "assets/audio/voice/rooms_room2_hints_line.mp3"
+        }
+      }
+    },
+    {
+      "id": "room3",
+      "name": "Game-Night Garage",
+      "accent": "#F07A2A",
+      "panorama": "assets/rooms/room3.webp",
+      "objective": "Find out how the Static can be stopped.",
+      "enter": [
+        {
+          "who": "otto",
+          "text": "My garage. Game night is Friday. Callum always played the warden.",
+          "audioFile": "assets/audio/voice/rooms_room3_enter_0.mp3"
+        },
+        {
+          "who": "juno",
+          "text": "The warden. That sounds like what is out there.",
+          "audioFile": "assets/audio/voice/rooms_room3_enter_1.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r3_card",
+          "kind": "INSPECT",
+          "name": "Warden monster card",
+          "yaw": 20.8,
+          "pitch": -17.6,
+          "after": [],
+          "view": "warden",
+          "line": {
+            "who": "otto",
+            "text": "The Gloom Warden. In my game it has four weaknesses.",
+            "audioFile": "assets/audio/voice/rooms_room3_hotspots_r3_card_line.mp3"
+          },
+          "note": "Gloom Warden: follows loud sounds; cannot stand steady bright light; cannot cross a line of salt; feeds on electricity from live wires."
+        },
+        {
+          "id": "r3_chart",
+          "kind": "INSPECT",
+          "name": "Gear chart poster",
+          "yaw": 33.8,
+          "pitch": 30,
+          "after": [],
+          "view": "chart",
+          "line": {
+            "who": "juno",
+            "text": "Five gear cards. Each one does something different.",
+            "audioFile": "assets/audio/voice/rooms_room3_hotspots_r3_chart_line.mp3"
+          },
+          "note": "Gear chart: Echo Drum = loud noise far away. Sun Lantern = steady bright light. Salt Ring = pours a line of salt. Rubber Cutters = cut a live wire safely. Bouncy Ball = only bounces."
+        },
+        {
+          "id": "r3_toolbox",
+          "kind": "power",
+          "power": "push",
+          "yaw": 40.8,
+          "pitch": -3.6,
+          "after": [
+            "r3_card"
+          ],
+          "fxLine": {
+            "who": "otto",
+            "text": "The toolbox scraped aside. The whole warden card is readable now.",
+            "audioFile": "assets/audio/voice/rooms_room3_hotspots_r3_toolbox_fxLine.mp3"
+          }
+        },
+        {
+          "id": "r3_table",
+          "kind": "PANEL",
+          "name": "Card table",
+          "yaw": -12,
+          "pitch": -8,
+          "after": [
+            "r3_card",
+            "r3_chart"
+          ],
+          "panel": "r3_table"
+        },
+        {
+          "id": "r3_door_open",
+          "kind": "AUTO",
+          "after": [
+            "r3_table"
+          ],
+          "reward": {
+            "items": [],
+            "page": 3
+          }
+        },
+        {
+          "id": "r3_exit",
+          "kind": "EXIT",
+          "name": "Garage door",
+          "yaw": 155.4,
+          "pitch": 6,
+          "after": [
+            "r3_door_open"
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "id": "drum",
+          "name": "Echo Drum",
+          "text": "Makes a loud noise far away.",
+          "sprite": "prop_echo_drum"
+        },
+        {
+          "id": "lantern",
+          "name": "Sun Lantern",
+          "text": "Gives a steady bright light.",
+          "sprite": "prop_sun_lantern"
+        },
+        {
+          "id": "salt",
+          "name": "Salt Ring",
+          "text": "Pours a line on the floor.",
+          "sprite": "prop_salt_ring"
+        },
+        {
+          "id": "cutters",
+          "name": "Rubber Cutters",
+          "text": "Cuts a live wire safely.",
+          "sprite": "prop_rubber_cutters"
+        },
+        {
+          "id": "ball",
+          "name": "Bouncy Ball",
+          "text": "Only bounces.",
+          "sprite": "prop_bouncy_ball"
+        }
+      ],
+      "views": {
+        "warden": [
+          {
+            "type": "warden",
+            "title": "The Gloom Warden"
+          }
+        ],
+        "chart": [
+          {
+            "type": "chart",
+            "title": "Gear chart"
+          }
+        ]
+      },
+      "panel": {
+        "type": "table",
+        "title": "The Card Table",
+        "intro": "Put one gear card on each rule, then press Check.",
+        "rules": [
+          {
+            "id": 1,
+            "text": "Follows loud sounds.",
+            "answer": "drum"
+          },
+          {
+            "id": 2,
+            "text": "Cannot stand steady bright light.",
+            "answer": "lantern"
+          },
+          {
+            "id": 3,
+            "text": "Cannot cross a line of salt.",
+            "answer": "salt"
+          },
+          {
+            "id": 4,
+            "text": "Feeds on electricity from live wires.",
+            "coveredText": "Feeds on…",
+            "answer": "cutters"
+          }
+        ]
+      },
+      "wrong": [
+        {
+          "who": "otto",
+          "text": "Each card counters exactly one rule. Read what each card does.",
+          "audioFile": "assets/audio/voice/rooms_room3_wrong_0.mp3"
+        },
+        {
+          "who": "juno",
+          "text": "The chart says what each card does. The warden's card says what it fears.",
+          "audioFile": "assets/audio/voice/rooms_room3_wrong_1.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "The lantern gives steady light. Which rule is about light?",
+          "audioFile": "assets/audio/voice/rooms_room3_wrong_2.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "otto",
+          "text": "It follows sounds, hates bright light, can't cross salt and feeds on power.",
+          "audioFile": "assets/audio/voice/rooms_room3_right_0.mp3"
+        },
+        {
+          "who": "juno",
+          "text": "Like the thing in the dark.",
+          "audioFile": "assets/audio/voice/rooms_room3_right_1.mp3"
+        },
+        {
+          "who": "walkie",
+          "text": "That is the Static. Your game is closer to the truth than you know.",
+          "audioFile": "assets/audio/voice/rooms_room3_right_2.mp3"
+        }
+      ],
+      "hints": {
+        "flash": [
+          "r3_card",
+          "r3_chart"
+        ],
+        "line": {
+          "who": "otto",
+          "text": "Match what the warden fears with what each card does.",
+          "audioFile": "assets/audio/voice/rooms_room3_hints_line.mp3"
+        }
+      }
+    },
+    {
+      "id": "room4",
+      "name": "Lakeside Radio Hut",
+      "accent": "#3DA5FF",
+      "panorama": "assets/rooms/room4.webp",
+      "objective": "Find out what was on the radio that night.",
+      "enter": [
+        {
+          "who": "juno",
+          "text": "A radio hut. Callum said to follow the hum.",
+          "audioFile": "assets/audio/voice/rooms_room4_enter_0.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "Four tapes. Maybe one of them hums.",
+          "audioFile": "assets/audio/voice/rooms_room4_enter_1.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r4_radio",
+          "kind": "LEARN",
+          "name": "Radio",
+          "yaw": -27.7,
+          "pitch": -2.2,
+          "after": [],
+          "power": "flicker",
+          "card": {
+            "title": "The radio",
+            "text": "A big old radio. The dial is dark and it makes no sound."
+          },
+          "note": "The radio is dead. The old recorder has a crank.",
+          "line": {
+            "who": "otto",
+            "text": "The radio is dead. The old recorder has a crank.",
+            "audioFile": "assets/audio/voice/rooms_room4_hotspots_r4_radio_line.mp3"
+          },
+          "fxLine": {
+            "who": "otto",
+            "text": "The radio dial lit up. Maybe the tape recorder will run faster now.",
+            "audioFile": "assets/audio/voice/rooms_room4_hotspots_r4_radio_fxLine.mp3"
+          },
+          "fxGlow": {
+            "yaw": -50.5,
+            "pitch": 6
+          }
+        },
+        {
+          "id": "r4_rack",
+          "kind": "FIND",
+          "name": "Tape rack",
+          "yaw": 12.9,
+          "pitch": -2.2,
+          "after": [],
+          "sprite": "item_cassette",
+          "items": [
+            "tape_a",
+            "tape_b",
+            "tape_c",
+            "tape_d"
+          ],
+          "card": {
+            "title": "Four tapes",
+            "text": "Four cassette tapes, A to D. Use each one on the recorder to hear it. They are saved in your Casebook."
+          },
+          "line": {
+            "who": "juno",
+            "text": "Four tapes. Let's hear each one.",
+            "audioFile": "assets/audio/voice/rooms_room4_hotspots_r4_rack_line.mp3"
+          }
+        },
+        {
+          "id": "r4_recorder",
+          "kind": "USE",
+          "name": "Hand-cranked recorder",
+          "yaw": 43.6,
+          "pitch": -5,
+          "after": [
+            "r4_rack"
+          ]
+        },
+        {
+          "id": "r4_board",
+          "kind": "PANEL",
+          "name": "Timeline board",
+          "yaw": -5.3,
+          "pitch": -21.8,
+          "after": [
+            "all_tapes_heard"
+          ],
+          "panel": "r4_board"
+        },
+        {
+          "id": "r4_key",
+          "kind": "AUTO",
+          "after": [
+            "r4_board"
+          ],
+          "reward": {
+            "items": [
+              "channel_key"
+            ],
+            "page": 4
+          }
+        },
+        {
+          "id": "r4_exit",
+          "kind": "EXIT",
+          "name": "Hut door",
+          "yaw": 113.5,
+          "pitch": 6,
+          "after": [
+            "r4_key"
+          ]
+        }
+      ],
+      "tapes": {
+        "A": {
+          "caption": "Ten minutes after the storm warning, a car left the station road.",
+          "time": "9:40"
+        },
+        "B": {
+          "caption": "Power is out across town. It is ten forty-seven p.m.",
+          "time": "10:47"
+        },
+        "C": {
+          "caption": "Storm warning for Marrow Creek, issued at nine thirty p.m.",
+          "time": "9:30"
+        },
+        "D": {
+          "caption": "Three minutes before the lights failed, a woman hummed a lullaby into the line.",
+          "time": "10:44"
+        }
+      },
+      "panel": {
+        "type": "board",
+        "title": "The Timeline Board",
+        "intro": "Put the tapes in the order they happened, earliest first, then press Check. Some tapes give a time and some only say how long before or after.",
+        "answer": [
+          "C",
+          "A",
+          "D",
+          "B"
+        ]
+      },
+      "wrong": [
+        {
+          "who": "otto",
+          "text": "Listen to all four tapes. Each one gives a time, or says how long after or before something.",
+          "audioFile": "assets/audio/voice/rooms_room4_wrong_0.mp3"
+        },
+        {
+          "who": "juno",
+          "text": "One tape says the lights failed at ten forty-seven. Another says three minutes before that.",
+          "audioFile": "assets/audio/voice/rooms_room4_wrong_1.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "Do the sums: ten forty-seven take away three, and nine thirty add ten.",
+          "audioFile": "assets/audio/voice/rooms_room4_wrong_2.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "juno",
+          "text": "A woman hummed a lullaby, three minutes before the lights failed.",
+          "audioFile": "assets/audio/voice/rooms_room4_right_0.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "Callum said to follow the hum. It is her.",
+          "audioFile": "assets/audio/voice/rooms_room4_right_1.mp3"
+        },
+        {
+          "who": "walkie",
+          "text": "The hum starts at the station. Find the lab.",
+          "audioFile": "assets/audio/voice/rooms_room4_right_2.mp3"
+        }
+      ],
+      "hints": {
+        "flash": [
+          "r4_rack",
+          "r4_recorder"
+        ],
+        "line": {
+          "who": "otto",
+          "text": "Listen to every tape and write down its time. Two tapes need a sum.",
+          "audioFile": "assets/audio/voice/rooms_room4_hints_line.mp3"
+        }
+      }
+    },
+    {
+      "id": "room5",
+      "name": "Hidden Research Lab",
+      "accent": "#2FD1B5",
+      "panorama": "assets/rooms/room5.webp",
+      "objective": "Find out who was in the station that night.",
+      "enter": [
+        {
+          "who": "wren",
+          "text": "I am Wren. This is where they kept me.",
+          "audioFile": "assets/audio/voice/rooms_room5_enter_0.mp3"
+        },
+        {
+          "who": "juno",
+          "text": "Callum followed the hum here.",
+          "audioFile": "assets/audio/voice/rooms_room5_enter_1.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "Then someone left a paper trail.",
+          "audioFile": "assets/audio/voice/rooms_room5_enter_2.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r5_cot",
+          "kind": "LEARN",
+          "name": "Test room cot",
+          "yaw": -85,
+          "pitch": -2,
+          "after": [],
+          "card": {
+            "title": "The test room",
+            "text": "\"This is where they kept me.\""
+          },
+          "note": "Test room: Badges open every door.",
+          "line": {
+            "who": "wren",
+            "text": "Badges open every door. Whoever has one can go anywhere.",
+            "audioFile": "assets/audio/voice/rooms_room5_hotspots_r5_cot_line.mp3"
+          }
+        },
+        {
+          "id": "r5_roster",
+          "kind": "INSPECT",
+          "name": "Staff roster board",
+          "yaw": 91.1,
+          "pitch": 20,
+          "after": [],
+          "view": "roster",
+          "line": {
+            "who": "otto",
+            "text": "Three staff, three badges. A paper trail needs this key.",
+            "audioFile": "assets/audio/voice/rooms_room5_hotspots_r5_roster_line.mp3"
+          },
+          "note": "Roster: 03 Aldous Finch, Director. 07 Ines Corvane, Caretaker. 11 Gus Harlow, Night Guard."
+        },
+        {
+          "id": "r5_drawer",
+          "kind": "FIND",
+          "name": "Desk drawer",
+          "yaw": 85.5,
+          "pitch": -13.4,
+          "after": [],
+          "sprite": "item_paper_slip",
+          "items": [
+            "slip_s2",
+            "slip_s4"
+          ],
+          "card": {
+            "title": "Two slips",
+            "text": "Two slips of paper from the drawer. Each one belongs to somebody."
+          },
+          "line": {
+            "who": "juno",
+            "text": "Slips of paper. Each one belongs to somebody.",
+            "audioFile": "assets/audio/voice/rooms_room5_hotspots_r5_drawer_line.mp3"
+          }
+        },
+        {
+          "id": "r5_bin",
+          "kind": "FIND",
+          "name": "Wastebasket",
+          "yaw": 102.3,
+          "pitch": -21.8,
+          "after": [],
+          "sprite": "item_paper_slip",
+          "items": [
+            "slip_s6"
+          ],
+          "card": {
+            "title": "A slip",
+            "text": "A slip of paper from the wastebasket."
+          }
+        },
+        {
+          "id": "r5_printer",
+          "kind": "FIND",
+          "name": "Printer tray",
+          "yaw": 96,
+          "pitch": 2,
+          "after": [],
+          "sprite": "item_paper_slip",
+          "items": [
+            "slip_s1",
+            "slip_s3"
+          ],
+          "card": {
+            "title": "Two slips",
+            "text": "Two slips of paper from the printer tray."
+          }
+        },
+        {
+          "id": "r5_slip5",
+          "kind": "FIND",
+          "name": "Slip behind the cabinet",
+          "yaw": 133,
+          "pitch": 0.5,
+          "after": [
+            "r5_cabinet"
+          ],
+          "sprite": "item_paper_slip",
+          "items": [
+            "slip_s5"
+          ],
+          "card": {
+            "title": "The hidden slip",
+            "text": "A slip of paper that was stuck behind the heavy cabinet."
+          }
+        },
+        {
+          "id": "r5_cabinet",
+          "kind": "power",
+          "power": "push",
+          "yaw": 154,
+          "pitch": -10.6,
+          "after": [],
+          "required": true,
+          "fxLine": {
+            "who": "wren",
+            "text": "The cabinet moved. Something was stuck behind it.",
+            "audioFile": "assets/audio/voice/rooms_room5_hotspots_r5_cabinet_fxLine.mp3"
+          }
+        },
+        {
+          "id": "r5_cork",
+          "kind": "PANEL",
+          "name": "Corkboard",
+          "yaw": 142.8,
+          "pitch": 23,
+          "after": [
+            "r5_roster",
+            "r5_drawer",
+            "r5_bin",
+            "r5_printer",
+            "r5_slip5"
+          ],
+          "panel": "r5_cork"
+        },
+        {
+          "id": "r5_keycard",
+          "kind": "AUTO",
+          "after": [
+            "r5_cork"
+          ],
+          "reward": {
+            "items": [
+              "lab_keycard"
+            ],
+            "page": 5
+          }
+        },
+        {
+          "id": "r5_exit",
+          "kind": "EXIT",
+          "name": "Lab door to the tunnels",
+          "yaw": -139.5,
+          "pitch": 6,
+          "after": [
+            "r5_keycard"
+          ]
+        }
+      ],
+      "views": {
+        "roster": [
+          {
+            "type": "roster",
+            "title": "Staff roster"
+          }
+        ]
+      },
+      "people": [
+        {
+          "id": "finch",
+          "name": "Aldous Finch",
+          "badge": "03",
+          "job": "Director"
+        },
+        {
+          "id": "corvane",
+          "name": "Ines Corvane",
+          "badge": "07",
+          "job": "Caretaker"
+        },
+        {
+          "id": "harlow",
+          "name": "Gus Harlow",
+          "badge": "11",
+          "job": "Night Guard"
+        }
+      ],
+      "panel": {
+        "type": "cork",
+        "title": "The Corkboard",
+        "intro": "Tap a slip, then tap the person it belongs to."
+      },
+      "wrong": [
+        {
+          "who": "otto",
+          "text": "Each slip belongs to one person only. Start with the ones that name someone.",
+          "audioFile": "assets/audio/voice/rooms_room5_wrong_0.mp3"
+        },
+        {
+          "who": "wren",
+          "text": "The roster says which badge number belongs to which person.",
+          "audioFile": "assets/audio/voice/rooms_room5_wrong_1.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "Badge 03 is the Director. Badge 07 is the caretaker. Badge 11 is the guard.",
+          "audioFile": "assets/audio/voice/rooms_room5_wrong_2.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "juno",
+          "text": "Badge 07 was in the gate room at 10:44, three minutes before the lights failed.",
+          "audioFile": "assets/audio/voice/rooms_room5_right_0.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "And the Director left at 9:40.",
+          "audioFile": "assets/audio/voice/rooms_room5_right_1.mp3"
+        },
+        {
+          "who": "wren",
+          "text": "The gate room is under the quarry. The tunnels lead there.",
+          "audioFile": "assets/audio/voice/rooms_room5_right_2.mp3"
+        }
+      ],
+      "hints": {
+        "flash": [
+          "r5_drawer",
+          "r5_bin",
+          "r5_printer",
+          "r5_slip5",
+          "r5_cork"
+        ],
+        "line": {
+          "who": "wren",
+          "text": "Slips with a badge number need the roster. Slips with a name or a job go straight to the person.",
+          "audioFile": "assets/audio/voice/rooms_room5_hints_line.mp3"
+        }
+      }
+    },
+    {
+      "id": "room6",
+      "name": "Tunnels Under Marrow Creek",
+      "accent": "#8CE05A",
+      "panorama": "assets/rooms/room6.webp",
+      "objective": "Cross the tunnel floor to the far wall.",
+      "enter": [
+        {
+          "who": "juno",
+          "text": "Callum came through here.",
+          "audioFile": "assets/audio/voice/rooms_room6_enter_0.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "The floor is a grid of different tiles.",
+          "audioFile": "assets/audio/voice/rooms_room6_enter_1.mp3"
+        },
+        {
+          "who": "walkie",
+          "text": "The Static drifts through these tunnels. Stay quiet.",
+          "audioFile": "assets/audio/voice/rooms_room6_enter_2.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r6_rhyme",
+          "kind": "INSPECT",
+          "name": "Wall rhyme",
+          "yaw": -84.3,
+          "pitch": 7.5,
+          "after": [],
+          "view": "rhyme",
+          "line": {
+            "who": "juno",
+            "text": "A rhyme. Eight lines, so eight steps.",
+            "audioFile": "assets/audio/voice/rooms_room6_hotspots_r6_rhyme_line.mp3"
+          },
+          "note": "Rhyme: glow-cap, moss, glow-cap, moss, drip, glow-cap, stone, moss."
+        },
+        {
+          "id": "r6_plaque",
+          "kind": "LEARN",
+          "name": "Plaque",
+          "yaw": -126.2,
+          "pitch": 11,
+          "after": [],
+          "card": {
+            "title": "Plaque",
+            "text": "\"Step only to a touching tile, never diagonally and never onto the same tile twice. Begin at the tunnel mouth and end at the far wall.\""
+          },
+          "note": "Plaque: touching tiles only, no diagonals, no tile twice. Start at the tunnel mouth, end at the far wall.",
+          "line": {
+            "who": "otto",
+            "text": "Touching tiles only, no diagonals, no tile twice.",
+            "audioFile": "assets/audio/voice/rooms_room6_hotspots_r6_plaque_line.mp3"
+          }
+        },
+        {
+          "id": "r6_floor",
+          "kind": "PANEL",
+          "name": "Tunnel floor",
+          "yaw": 0,
+          "pitch": -30,
+          "after": [
+            "r6_rhyme",
+            "r6_plaque"
+          ],
+          "panel": "r6_floor",
+          "power": "veil",
+          "required": true,
+          "fxLine": {
+            "who": "wren",
+            "text": "The glow holds steady. Now you can make out the tiles.",
+            "audioFile": "assets/audio/voice/rooms_room6_hotspots_r6_floor_fxLine.mp3"
+          }
+        },
+        {
+          "id": "r6_drawing",
+          "kind": "AUTO",
+          "after": [
+            "r6_floor"
+          ],
+          "reward": {
+            "items": [
+              "child_drawing"
+            ],
+            "page": 6
+          }
+        },
+        {
+          "id": "r6_exit",
+          "kind": "EXIT",
+          "name": "Rift door",
+          "yaw": 1,
+          "pitch": 6,
+          "after": [
+            "r6_drawing"
+          ]
+        }
+      ],
+      "views": {
+        "rhyme": [
+          {
+            "type": "rhyme",
+            "title": "The wall rhyme"
+          }
+        ]
+      },
+      "rhyme": [
+        "Start on the glow-cap's gentle gleam,",
+        "then moss to soothe you like a dream.",
+        "Glow-cap again, to guide your way,",
+        "then moss to keep the Static at bay.",
+        "Now one wet drip, where waters run,",
+        "then glow-cap, bright as a tiny sun.",
+        "Last, a stone as grey as slate,",
+        "then moss, and open is the gate."
+      ],
+      "panel": {
+        "type": "floor",
+        "title": "The Tunnel Floor",
+        "intro": "Start in row 1 and step to a touching tile for each line of the rhyme. Finish in row 5.",
+        "tileNames": {
+          "glow": "Glow",
+          "moss": "Moss",
+          "drip": "Drip",
+          "stone": "Stone"
+        },
+        "grid": [
+          [
+            "drip",
+            "moss",
+            "moss",
+            "glow"
+          ],
+          [
+            "moss",
+            "moss",
+            "glow",
+            "drip"
+          ],
+          [
+            "stone",
+            "drip",
+            "glow",
+            "glow"
+          ],
+          [
+            "stone",
+            "drip",
+            "stone",
+            "glow"
+          ],
+          [
+            "stone",
+            "glow",
+            "moss",
+            "glow"
+          ]
+        ],
+        "order": [
+          "glow",
+          "moss",
+          "glow",
+          "moss",
+          "drip",
+          "glow",
+          "stone",
+          "moss"
+        ],
+        "route": [
+          "D1",
+          "C1",
+          "C2",
+          "B2",
+          "B3",
+          "C3",
+          "C4",
+          "C5"
+        ]
+      },
+      "wrong": [
+        {
+          "who": "otto",
+          "text": "Each line of the rhyme names one kind of tile. Take them in order.",
+          "audioFile": "assets/audio/voice/rooms_room6_wrong_0.mp3"
+        },
+        {
+          "who": "wren",
+          "text": "You can only step to a touching tile, never the same one twice. Eight lines, eight steps.",
+          "audioFile": "assets/audio/voice/rooms_room6_wrong_1.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "Line one is glow-cap. Only one glow-cap sits in the first row, at the far right. Start there.",
+          "audioFile": "assets/audio/voice/rooms_room6_wrong_2.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "juno",
+          "text": "We made it across. And look, a drawing.",
+          "audioFile": "assets/audio/voice/rooms_room6_right_0.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "A girl and a woman. It says: Mama's lullaby.",
+          "audioFile": "assets/audio/voice/rooms_room6_right_1.mp3"
+        },
+        {
+          "who": "juno",
+          "text": "The hum. A mother's lullaby.",
+          "audioFile": "assets/audio/voice/rooms_room6_right_2.mp3"
+        },
+        {
+          "who": "walkie",
+          "text": "The rift door is just ahead. Be ready.",
+          "audioFile": "assets/audio/voice/rooms_room6_right_3.mp3"
+        }
+      ],
+      "hints": {
+        "flash": [
+          "r6_rhyme",
+          "r6_plaque"
+        ],
+        "line": {
+          "who": "wren",
+          "text": "Count the lines of the rhyme. Each line is one tile, and tiles must touch.",
+          "audioFile": "assets/audio/voice/rooms_room6_hints_line.mp3"
+        }
+      }
+    },
+    {
+      "id": "room7",
+      "name": "The Otherworld",
+      "accent": "#A56BFF",
+      "panorama": "assets/rooms/room7.webp",
+      "objective": "Say what really happened and close the rift.",
+      "enter": [
+        {
+          "who": "juno",
+          "text": "The Otherworld. It is our basement, upside down.",
+          "audioFile": "assets/audio/voice/rooms_room7_enter_0.mp3"
+        },
+        {
+          "who": "walkie",
+          "text": "Stay close. The Static is near.",
+          "audioFile": "assets/audio/voice/rooms_room7_enter_1.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "I can hear a hum.",
+          "audioFile": "assets/audio/voice/rooms_room7_enter_2.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r7_box",
+          "kind": "INSPECT",
+          "name": "Music box",
+          "yaw": 92.5,
+          "pitch": -33,
+          "after": [],
+          "view": "musicbox",
+          "line": {
+            "who": "juno",
+            "text": "The lullaby. And a name scratched in the lid: Mira.",
+            "audioFile": "assets/audio/voice/rooms_room7_hotspots_r7_box_line.mp3"
+          },
+          "note": "Music box: plays the lullaby. The name Mira is scratched in the lid."
+        },
+        {
+          "id": "r7_sleeve",
+          "kind": "LEARN",
+          "name": "Callum's torn sleeve",
+          "yaw": -54.2,
+          "pitch": -42.8,
+          "after": [],
+          "card": {
+            "title": "Callum's sleeve",
+            "text": "A torn jacket sleeve. Callum steps out of the ash and speaks."
+          },
+          "note": "Callum: the rift stays open while the hum plays. It only breaks when someone says the whole truth.",
+          "line": {
+            "who": "callum",
+            "text": "Juno! I stayed to stop it growing. The rift stays open while the hum plays. It only breaks when someone says the whole truth.",
+            "audioFile": "assets/audio/voice/rooms_room7_hotspots_r7_sleeve_line.mp3"
+          }
+        },
+        {
+          "id": "r7_rift",
+          "kind": "PANEL",
+          "name": "The rift",
+          "yaw": -0.4,
+          "pitch": 20,
+          "after": [
+            "r7_box",
+            "r7_sleeve"
+          ],
+          "panel": "r7_rift"
+        },
+        {
+          "id": "r7_end",
+          "kind": "AUTO",
+          "after": [
+            "r7_rift"
+          ],
+          "ending": true
+        }
+      ],
+      "views": {
+        "musicbox": [
+          {
+            "type": "musicbox",
+            "title": "The music box",
+            "open": false
+          },
+          {
+            "type": "musicbox",
+            "title": "The lid",
+            "open": true
+          }
+        ]
+      },
+      "panel": {
+        "type": "rift",
+        "title": "The Rift",
+        "intro": "Finish each sentence. You only get 3 tries: every wrong answer lets the Static come closer. Open the Casebook to read the pages again.",
+        "sentences": [
+          {
+            "text": "The hum that Callum told me to follow is a ___.",
+            "options": [
+              "lullaby",
+              "siren",
+              "motor",
+              "radio jingle"
+            ],
+            "answer": "lullaby"
+          },
+          {
+            "text": "The woman was heard humming at ___ p.m.",
+            "options": [
+              "9:30",
+              "9:40",
+              "10:44",
+              "10:47"
+            ],
+            "answer": "10:44"
+          },
+          {
+            "text": "At that time, badge ___ entered the gate room.",
+            "options": [
+              "03",
+              "07",
+              "09",
+              "11"
+            ],
+            "answer": "07"
+          },
+          {
+            "text": "Badge 07 belongs to ___, the caretaker.",
+            "options": [
+              "Aldous Finch",
+              "Ines Corvane",
+              "Gus Harlow",
+              "Callum Park"
+            ],
+            "answer": "Ines Corvane"
+          },
+          {
+            "text": "She opened the gate to find her ___.",
+            "options": [
+              "brother",
+              "daughter",
+              "mother",
+              "dog"
+            ],
+            "answer": "daughter"
+          }
+        ],
+        "maxWrong": 3
+      },
+      "wrong": [
+        {
+          "who": "otto",
+          "text": "Each sentence matches one File page. Open the Casebook and read them again.",
+          "audioFile": "assets/audio/voice/rooms_room7_wrong_0.mp3"
+        },
+        {
+          "who": "wren",
+          "text": "Page 4 is about the hum and the time. Page 5 is about the badges. Page 6 is about why.",
+          "audioFile": "assets/audio/voice/rooms_room7_wrong_1.mp3"
+        },
+        {
+          "who": "otto",
+          "text": "The badge in the gate room at 10:44 was badge 07. The roster says 07 is the caretaker.",
+          "audioFile": "assets/audio/voice/rooms_room7_wrong_2.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "juno",
+          "text": "Ines Corvane hummed a lullaby at 10:44 and opened the gate with badge 07. She did it to find her daughter, Mira.",
+          "audioFile": "assets/audio/voice/rooms_room7_right_0.mp3"
+        }
+      ],
+      "hints": {
+        "flash": [
+          "ui:r7-casebook"
+        ],
+        "line": {
+          "who": "wren",
+          "text": "Page 4 is the hum, page 5 is the badges, page 6 is why.",
+          "audioFile": "assets/audio/voice/rooms_room7_hints_line.mp3"
+        }
+      }
+    }
+  ],
+  "ending": [
+    {
+      "who": "juno",
+      "text": "Ines Corvane hummed a lullaby at 10:44 and opened the gate with badge 07. She did it to find her daughter, Mira.",
+      "fx": "hush",
+      "audioFile": "assets/audio/voice/ending_0.mp3"
+    },
+    {
+      "who": "ines",
+      "text": "I only wanted to bring Mira home.",
+      "fx": "ines",
+      "audioFile": "assets/audio/voice/ending_1.mp3"
+    },
+    {
+      "who": "wren",
+      "text": "The gate takes. It does not give back.",
+      "audioFile": "assets/audio/voice/ending_2.mp3"
+    },
+    {
+      "who": "ines",
+      "text": "Then I should have listened.",
+      "audioFile": "assets/audio/voice/ending_3.mp3"
+    },
+    {
+      "who": "narrator",
+      "text": "The rift begins to close. The light thins.",
+      "fx": "close",
+      "audioFile": "assets/audio/voice/ending_4.mp3"
+    },
+    {
+      "who": "narrator",
+      "text": "Callum, Juno, Otto and Wren step out through the closing gap. Ines stays behind and waves with the music box as the rift shuts.",
+      "fx": "step",
+      "audioFile": "assets/audio/voice/ending_5.mp3"
+    },
+    {
+      "who": "narrator",
+      "text": "Back in the basement. Callum hugs Juno. The alphabet wall blinks once: HOME.",
+      "fx": "home",
+      "audioFile": "assets/audio/voice/ending_6.mp3"
+    },
+    {
+      "who": "walkie",
+      "text": "Juno Park. There is a second door.",
+      "fx": "static",
+      "audioFile": "assets/audio/voice/ending_7.mp3"
+    }
+  ],
+  "endScreens": {
+    "win": {
+      "title": "The Gate Is Closed.",
+      "play": "Play Again",
+      "close": "Close"
+    },
+    "lose": {
+      "title": "The Lights Go Out.",
+      "text": "The gate stays open.",
+      "play": "Try Again from Room 1",
+      "close": "Close"
+    },
+    "loseStatic": {
+      "title": "The Static Wins.",
+      "text": "The rift swallowed the last light. The gate stays open.",
+      "play": "Try Again from Room 1",
+      "close": "Close"
+    }
+  },
+  "briefing": {
+    "kicker": "Case file · Marrow Creek, 1986",
+    "title": "The Night the Lights Went Out",
+    "story": [
+      "A storm cut the power at 10:47 p.m. and Callum Park, 16, vanished from his family's basement.",
+      "His sister Juno and her friend Otto saw the lights blink by themselves. Someone opened a gate to the Otherworld. Help them find out who."
+    ],
+    "goal": "Solve the mystery!!!",
+    "button": "Start the Case",
+    "narration": {
+      "who": "narrator",
+      "text": "The Night the Lights Went Out. A storm cut the power at 10:47 p.m. and Callum Park, 16, vanished from his family's basement. His sister Juno and her friend Otto saw the lights blink by themselves. Someone opened a gate to the Otherworld. Help them find out who. Solve the mystery!",
+      "audioFile": "assets/audio/voice/briefing_narration.mp3"
+    }
+  },
+  "threat": [
+    "The lights stutter. Something is near.",
+    "The Static is closing in!",
+    "The Static reaches you!"
+  ]
+}

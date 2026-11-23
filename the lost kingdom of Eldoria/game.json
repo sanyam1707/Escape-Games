@@ -1,0 +1,2370 @@
+{
+ "config": {
+  "title": "The Lost Kingdom of Eldoria",
+  "timerSeconds": 600,
+  "hints": 3,
+  "hintCost": 25,
+  "wrongCost": 10,
+  "lockout": 3,
+  "oathPoints": 30,
+  "stepPoints": 50,
+  "timePoints": 1,
+  "idleSeconds": 40,
+  "wallStrength": 5,
+  "volleys": 4,
+  "volleySeconds": 5,
+  "arriveSeconds": 4,
+  "attackSeconds": 12,
+  "blurPx": 6,
+  "unblurSeconds": 1.2
+ },
+ "art": {
+  "title": "assets/rooms/title_key_art.jpg",
+  "briefing": "assets/rooms/briefing_bg.jpg",
+  "map": "assets/rooms/map_full.jpg",
+  "bgm": "assets/audio/bgm.mp3",
+  "cut": [
+   "crest_lion",
+   "crest_oak",
+   "crest_mountain",
+   "crest_hawk",
+   "ore_iron",
+   "ore_darksteel",
+   "sword_plain",
+   "sword_fine",
+   "shield_plain",
+   "shield_banded",
+   "bust_elowen",
+   "bust_brann",
+   "bust_maelor",
+   "bust_wyn",
+   "bust_lirael",
+   "bust_durgan",
+   "bust_hild",
+   "bust_oswin",
+   "lord_venn",
+   "lord_orne",
+   "lord_keyes",
+   "lord_crane",
+   "king_1",
+   "king_2",
+   "king_3",
+   "king_4",
+   "king_5",
+   "king_6",
+   "bust_malachar",
+   "bust_varric",
+   "thrall",
+   "troll",
+   "wraith",
+   "archer",
+   "ballista",
+   "oilpot",
+   "arrow",
+   "bolt",
+   "flame",
+   "dragon_sleep",
+   "dragon_fly",
+   "dragon_land",
+   "oath_valorin",
+   "oath_aelari",
+   "oath_ironroot",
+   "oath_ravenspire",
+   "oath_stormvale",
+   "horn_highmere"
+  ],
+  "alias": {
+   "king_7": "bust_varric"
+  }
+ },
+ "mission": {
+  "heading": "The Fall of Eldoria",
+  "paras": [
+   "Eldoria was the last great kingdom of the West. It was ruled from the Ashen Throne and held together by five great hosts.",
+   "On the night called Ashfall, the gates opened, the beacons stayed dark, and the Hollow King's frost came through. Eldoria has been frozen ever since.",
+   "You are Elowen, last heir of House Valorin. Win back the five hosts and reach the Ashen Throne before the Long Winter closes. You have ten minutes."
+  ],
+  "button": "Begin",
+  "audioFile": "assets/audio/voice/mission_0.mp3"
+ },
+ "tutorial": [
+  {
+   "title": "Look around",
+   "text": "Drag to turn and look in every direction.",
+   "target": "",
+   "audioFile": "assets/audio/voice/tutorial_0.mp3"
+  },
+  {
+   "title": "Tap what glows",
+   "text": "Glowing spots can be opened, read or used. Some can be turned in your hands.",
+   "target": "",
+   "audioFile": "assets/audio/voice/tutorial_1.mp3"
+  },
+  {
+   "title": "The Book",
+   "text": "Everything you learn goes into your Book. Open it any time.",
+   "target": "#bookBtn",
+   "audioFile": "assets/audio/voice/tutorial_2.mp3"
+  },
+  {
+   "title": "Panels",
+   "text": "Puzzles open in panels. Use X to close one. Use Pause to stop the clock.",
+   "target": "#pauseBtn",
+   "audioFile": "assets/audio/voice/tutorial_3.mp3"
+  },
+  {
+   "title": "Clock, Renown and hints",
+   "text": "You have 10 minutes. Finds earn Renown. Wrong answers and hints cost Renown. You get 3 hints. Brann says them out loud. The clock keeps running.",
+   "target": "#hudRight",
+   "audioFile": "assets/audio/voice/tutorial_4.mp3"
+  }
+ ],
+ "speakers": {
+  "narrator": {
+   "name": "Narrator",
+   "pitch": 0.95,
+   "rate": 0.92,
+   "initial": "N"
+  },
+  "elowen": {
+   "name": "Elowen",
+   "pitch": 1.1,
+   "rate": 1.0,
+   "initial": "E",
+   "bust": "bust_elowen"
+  },
+  "brann": {
+   "name": "Brann",
+   "pitch": 0.7,
+   "rate": 0.9,
+   "initial": "B",
+   "bust": "bust_brann"
+  },
+  "maelor": {
+   "name": "Maelor (letter)",
+   "pitch": 0.9,
+   "rate": 0.85,
+   "initial": "M",
+   "bust": "bust_maelor"
+  },
+  "wyn": {
+   "name": "Sergeant Wyn",
+   "pitch": 0.8,
+   "rate": 1.0,
+   "initial": "W",
+   "bust": "bust_wyn"
+  },
+  "lirael": {
+   "name": "Queen Lirael",
+   "pitch": 1.4,
+   "rate": 0.85,
+   "initial": "L",
+   "bust": "bust_lirael"
+  },
+  "durgan": {
+   "name": "Lord Durgan",
+   "pitch": 0.5,
+   "rate": 0.9,
+   "initial": "D",
+   "bust": "bust_durgan"
+  },
+  "venn": {
+   "name": "Lord Venn",
+   "pitch": 0.9,
+   "rate": 1.0,
+   "initial": "V",
+   "bust": "lord_venn"
+  },
+  "orne": {
+   "name": "Lady Orne",
+   "pitch": 1.5,
+   "rate": 1.1,
+   "initial": "O",
+   "bust": "lord_orne"
+  },
+  "keyes": {
+   "name": "Lord Keyes",
+   "pitch": 1.0,
+   "rate": 1.1,
+   "initial": "K",
+   "bust": "lord_keyes"
+  },
+  "crane": {
+   "name": "Lady Crane",
+   "pitch": 1.2,
+   "rate": 0.9,
+   "initial": "C",
+   "bust": "lord_crane"
+  },
+  "hild": {
+   "name": "Captain Hild",
+   "pitch": 0.8,
+   "rate": 1.15,
+   "initial": "H",
+   "bust": "bust_hild"
+  },
+  "oswin": {
+   "name": "Marshal Oswin",
+   "pitch": 0.9,
+   "rate": 0.95,
+   "initial": "O",
+   "bust": "bust_oswin"
+  },
+  "king": {
+   "name": "Ghost King",
+   "pitch": 0.8,
+   "rate": 0.8,
+   "initial": "K",
+   "bust": "king_1"
+  },
+  "malachar": {
+   "name": "Malachar",
+   "pitch": 0.5,
+   "rate": 0.8,
+   "initial": "M",
+   "bust": "bust_malachar"
+  },
+  "varric": {
+   "name": "Varric Holloway",
+   "pitch": 0.95,
+   "rate": 0.95,
+   "initial": "V",
+   "bust": "bust_varric"
+  }
+ },
+ "dialogue": {
+  "open.1": {
+   "s": "maelor",
+   "t": "Elowen, if you can read this, you are at the Gate of Eldoria. The five hosts are still waiting beyond it. They have not forgotten the sun.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_open_1.mp3"
+  },
+  "open.2": {
+   "s": "brann",
+   "t": "Waiting? The gate is shut, the statues have no faces, and my beard is freezing. I like it already.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_open_2.mp3"
+  },
+  "open.3": {
+   "s": "elowen",
+   "t": "Four kings guard this gate. Their shields will open it, if we read them right.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_open_3.mp3"
+  },
+  "open.4": {
+   "s": "brann",
+   "t": "Of course there is a riddle. There is always a riddle.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_open_4.mp3"
+  },
+  "idle": {
+   "s": "brann",
+   "t": "Try turning around. Drag to look around.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_idle.mp3"
+  },
+  "hint.none": {
+   "s": "brann",
+   "t": "No more hints left. You can do this.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_hint_none.mp3"
+  },
+  "r1.enter.1": {
+   "s": "elowen",
+   "t": "I played under these kings when I was a child.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r1_enter_1.mp3"
+  },
+  "r1.enter.2": {
+   "s": "brann",
+   "t": "Now they have no faces. Lovely.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r1_enter_2.mp3"
+  },
+  "r1.inspect.aldric": {
+   "s": "elowen",
+   "t": "Aldric the Bold. His shield shows a lion.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_inspect_aldric.mp3"
+  },
+  "r1.inspect.berenor": {
+   "s": "elowen",
+   "t": "Berenor the Wise. His shield shows an oak tree.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_inspect_berenor.mp3"
+  },
+  "r1.inspect.cadoc": {
+   "s": "elowen",
+   "t": "Cadoc the Just. His shield shows a mountain.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_inspect_cadoc.mp3"
+  },
+  "r1.inspect.doreth": {
+   "s": "elowen",
+   "t": "Doreth the Swift. His shield shows a hawk.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_inspect_doreth.mp3"
+  },
+  "r1.wrong.1": {
+   "s": "brann",
+   "t": "It did not fit. Maybe the order matters.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_wrong_1.mp3"
+  },
+  "r1.wrong.2": {
+   "s": "brann",
+   "t": "Read the plaque. Then look at each king's shield.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_wrong_2.mp3"
+  },
+  "r1.wrong.3": {
+   "s": "brann",
+   "t": "Aldric is first. Doreth is last. Cadoc comes after Berenor.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_wrong_3.mp3"
+  },
+  "r1.hint": {
+   "s": "brann",
+   "t": "Each statue has a name and a shield. The plaque says who came first and who came last.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_hint.mp3"
+  },
+  "r1.right.1": {
+   "s": "elowen",
+   "t": "Lion, oak, mountain, hawk. The four kings, in their order.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r1_right_1.mp3"
+  },
+  "r1.right.2": {
+   "s": "brann",
+   "t": "And look, Elowen. The bar was lifted, not broken. Someone inside opened this gate.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r1_right_2.mp3"
+  },
+  "r1.oath": {
+   "s": "wyn",
+   "t": "The Guard held the walls, as we swore. We stand with you.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_oath.mp3"
+  },
+  "r2.enter.1": {
+   "s": "elowen",
+   "t": "No one has crossed these stones since Ashfall.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r2_enter_1.mp3"
+  },
+  "r2.enter.2": {
+   "s": "brann",
+   "t": "Something is watching us from the branches. Many somethings.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r2_enter_2.mp3"
+  },
+  "r2.wrong.1": {
+   "s": "brann",
+   "t": "The roots snapped back. Try a different path.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r2_wrong_1.mp3"
+  },
+  "r2.wrong.2": {
+   "s": "brann",
+   "t": "Four trees, four carved rules. Have you read them all?",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r2_wrong_2.mp3"
+  },
+  "r2.wrong.3": {
+   "s": "brann",
+   "t": "Start on a leaf and end on a star. No thorns. No stone like the one you leave. Never lean the same way twice.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r2_wrong_3.mp3"
+  },
+  "r2.hint": {
+   "s": "brann",
+   "t": "The tree rules are the key. Cross out every thorn first.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r2_hint.mp3"
+  },
+  "r2.right.1": {
+   "s": "elowen",
+   "t": "From a leaf to a star, and never the same lean twice. The Wood let us through.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r2_right_1.mp3"
+  },
+  "r2.right.2": {
+   "s": "brann",
+   "t": "And that cold lantern is no accident.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r2_right_2.mp3"
+  },
+  "r2.oath": {
+   "s": "lirael",
+   "t": "No beacon burned that night. We saw only darkness. The Aelari stand with you.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r2_oath.mp3"
+  },
+  "r3.enter.1": {
+   "s": "elowen",
+   "t": "Ironroot Deeps. The forge is still warm.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r3_enter_1.mp3"
+  },
+  "r3.enter.2": {
+   "s": "brann",
+   "t": "Dwarves. They count everything twice.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r3_enter_2.mp3"
+  },
+  "r3.enter.3": {
+   "s": "durgan",
+   "t": "Valorin. Fill my order exactly, with the ore I have, and I will listen.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r3_enter_3.mp3"
+  },
+  "r3.wrong.1": {
+   "s": "brann",
+   "t": "He weighed it. Too much ore, or too little. Count again.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r3_wrong_1.mp3"
+  },
+  "r3.wrong.2": {
+   "s": "brann",
+   "t": "Read the slate and the four recipes. The slate has a rule about fine swords.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r3_wrong_2.mp3"
+  },
+  "r3.wrong.3": {
+   "s": "brann",
+   "t": "Four swords, three shields, every bar used, and at least three swords fine.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r3_wrong_3.mp3"
+  },
+  "r3.hint": {
+   "s": "brann",
+   "t": "Add up what each recipe uses. Then match the total to the bins.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r3_hint.mp3"
+  },
+  "r3.right.1": {
+   "s": "elowen",
+   "t": "One plain sword and three fine. One plain shield and two banded. Not one bar left.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r3_right_1.mp3"
+  },
+  "r3.right.2": {
+   "s": "brann",
+   "t": "Dwarves are happiest when the numbers are perfect.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r3_right_2.mp3"
+  },
+  "r3.oath": {
+   "s": "durgan",
+   "t": "That night, the royal armory was opened with a key. No door was forced. Ironroot stands with you.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r3_oath.mp3"
+  },
+  "r4.enter.1": {
+   "s": "elowen",
+   "t": "Four lords, four chairs, and not one friend among them.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r4_enter_1.mp3"
+  },
+  "r4.enter.2": {
+   "s": "brann",
+   "t": "They agree on nothing. So they will not agree on you.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r4_enter_2.mp3"
+  },
+  "r4.wrong.venn": {
+   "s": "venn",
+   "t": "Words. Everyone has words.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_wrong_venn.mp3"
+  },
+  "r4.wrong.orne": {
+   "s": "orne",
+   "t": "You do not understand what is coming.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_wrong_orne.mp3"
+  },
+  "r4.wrong.keyes": {
+   "s": "keyes",
+   "t": "Where is the profit in that?",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_wrong_keyes.mp3"
+  },
+  "r4.wrong.crane": {
+   "s": "crane",
+   "t": "I know my duty. You do not know me.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_wrong_crane.mp3"
+  },
+  "r4.wrong.1": {
+   "s": "brann",
+   "t": "That did not move them. Think about what each lord cares about.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_wrong_1.mp3"
+  },
+  "r4.wrong.2": {
+   "s": "brann",
+   "t": "Look at what stands around each lord. A room shows what a person wants.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_wrong_2.mp3"
+  },
+  "r4.wrong.3": {
+   "s": "brann",
+   "t": "Pride, fear, money and duty. Each lord cares about one of them. Pick the line that fits.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_wrong_3.mp3"
+  },
+  "r4.hint": {
+   "s": "brann",
+   "t": "Look at the thing near each lord. Then pick the line that fits what that lord cares about.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_hint.mp3"
+  },
+  "r4.won.venn": {
+   "s": "venn",
+   "t": "My name above the throne? Done.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_won_venn.mp3"
+  },
+  "r4.won.orne": {
+   "s": "orne",
+   "t": "Then we must stand together.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_won_orne.mp3"
+  },
+  "r4.won.keyes": {
+   "s": "keyes",
+   "t": "Ten years with no tax? Ravenspire is yours.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_won_keyes.mp3"
+  },
+  "r4.won.crane": {
+   "s": "crane",
+   "t": "My oath still stands. So does Ravenspire.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_won_crane.mp3"
+  },
+  "r4.right.1": {
+   "s": "elowen",
+   "t": "Four lords, four reasons, one yes.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r4_right_1.mp3"
+  },
+  "r4.right.2": {
+   "s": "brann",
+   "t": "I should learn to read a room like that.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r4_right_2.mp3"
+  },
+  "r4.oath": {
+   "s": "crane",
+   "t": "A raven told the north to stand down at the eighth bell. Ravenspire will find who sent it. Our ravens are yours.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_oath.mp3"
+  },
+  "r5.enter.1": {
+   "s": "elowen",
+   "t": "Stormwatch. The wall that was never meant to fall.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r5_enter_1.mp3"
+  },
+  "r5.enter.2": {
+   "s": "brann",
+   "t": "It looks like it fell once already.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r5_enter_2.mp3"
+  },
+  "r5.enter.3": {
+   "s": "hild",
+   "t": "Valorin? Good. I have forty tired people and a raven that says the enemy is coming.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r5_enter_3.mp3"
+  },
+  "r5.wavestart": {
+   "s": "hild",
+   "t": "Read the raven's report. Then build.",
+   "p": false
+  },
+  "r5.leak.1": {
+   "s": "brann",
+   "t": "They broke through. Check what is coming before you build.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r5_leak_1.mp3"
+  },
+  "r5.leak.2": {
+   "s": "brann",
+   "t": "The raven tells you the side and the enemy. Match your defenders to them.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r5_leak_2.mp3"
+  },
+  "r5.leak.3": {
+   "s": "brann",
+   "t": "Oil for swarms, ballistae for trolls, archers for flyers.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r5_leak_3.mp3"
+  },
+  "r5.hint": {
+   "s": "brann",
+   "t": "Read the raven and the board. Each enemy has one best defender.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r5_hint.mp3"
+  },
+  "r5.lost": {
+   "s": "hild",
+   "t": "The wall is lost.",
+   "p": false
+  },
+  "r5.right.1": {
+   "s": "elowen",
+   "t": "Both waves are beaten, and the wall held.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r5_right_1.mp3"
+  },
+  "r5.right.2": {
+   "s": "brann",
+   "t": "The dwarves will be unbearable about their bolts.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r5_right_2.mp3"
+  },
+  "r5.oath": {
+   "s": "hild",
+   "t": "The watch was called to the feast hall at sundown. No one stood on this wall when the frost came. Stormvale rides with you.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r5_oath.mp3"
+  },
+  "r6.enter.1": {
+   "s": "elowen",
+   "t": "My father's war room. He planned every march from this table.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r6_enter_1.mp3"
+  },
+  "r6.enter.2": {
+   "s": "brann",
+   "t": "And the map is in six pieces. Of course it is.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r6_enter_2.mp3"
+  },
+  "r6.enter.3": {
+   "s": "oswin",
+   "t": "Five hosts, one dawn. March them so they all arrive together.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r6_enter_3.mp3"
+  },
+  "r6.wrong.1": {
+   "s": "brann",
+   "t": "The pegs said no. Some host would be early or late.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r6_wrong_1.mp3"
+  },
+  "r6.wrong.2": {
+   "s": "brann",
+   "t": "Read the road lengths on the map. Then read the speeds in the notes.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r6_wrong_2.mp3"
+  },
+  "r6.wrong.3": {
+   "s": "brann",
+   "t": "Days on the road equal leagues divided by speed. Everyone must arrive on Day 7.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r6_wrong_3.mp3"
+  },
+  "r6.hint": {
+   "s": "brann",
+   "t": "Work out how many days each host needs. The longest road leaves first.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r6_hint.mp3"
+  },
+  "r6.right.1": {
+   "s": "elowen",
+   "t": "Six days for the north, then four, three, two and one. Five hosts, one dawn.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r6_right_1.mp3"
+  },
+  "r6.right.2": {
+   "s": "brann",
+   "t": "Remind me never to argue with your father's maps.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r6_right_2.mp3"
+  },
+  "r6.marshal": {
+   "s": "oswin",
+   "t": "The order to hold the north pass was cancelled with the king's own seal. I was still holding it when they found me.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r6_marshal.mp3"
+  },
+  "r7.enter.1": {
+   "s": "elowen",
+   "t": "The Throne Court. Seven kings of my line, all watching.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r7_enter_1.mp3"
+  },
+  "r7.enter.2": {
+   "s": "brann",
+   "t": "Please let none of them be angry.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r7_enter_2.mp3"
+  },
+  "r7.s1.start": {
+   "s": "maelor",
+   "t": "The wyrm answers the song of the five hosts. Tap the glowing horn. Then play the six notes from your Book.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_s1_start.mp3"
+  },
+  "r7.s1.wrong.1": {
+   "s": "brann",
+   "t": "That was not the song. Look in your Book.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_s1_wrong_1.mp3"
+  },
+  "r7.s1.wrong.2": {
+   "s": "brann",
+   "t": "Six notes, one from each room. They are on the Horn Song page.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_s1_wrong_2.mp3"
+  },
+  "r7.s1.wrong.3": {
+   "s": "brann",
+   "t": "High, low, low... the rest is in your Book.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_s1_wrong_3.mp3"
+  },
+  "r7.s1.right": {
+   "s": "elowen",
+   "t": "Vyrmrath. He knows us.",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r7_s1_right.mp3"
+  },
+  "r7.s2.start": {
+   "s": "elowen",
+   "t": "Five things happened on Ashfall night. Test each one on the three suspects. Who could do all five?",
+   "p": true,
+   "audioFile": "assets/audio/voice/dialogue_r7_s2_start.mp3"
+  },
+  "r7.s2.wrong.1": {
+   "s": "brann",
+   "t": "That person could not do everything. Test every clue first.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_s2_wrong_1.mp3"
+  },
+  "r7.s2.wrong.2": {
+   "s": "brann",
+   "t": "Look at the ticks and crosses. Only one person has a tick every time.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_s2_wrong_2.mp3"
+  },
+  "r7.s2.wrong.3": {
+   "s": "brann",
+   "t": "Count the ticks. Who has all five?",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_s2_wrong_3.mp3"
+  },
+  "r7.s2.wrongking": {
+   "s": "king",
+   "t": "You wrong me.",
+   "p": false
+  },
+  "r7.s2.right": {
+   "s": "varric",
+   "t": "You were never meant to read the whole record, girl.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_s2_right.mp3"
+  },
+  "r7.s3.start": {
+   "s": "brann",
+   "t": "Frost spirits! Follow the arrow and tap them. Vyrmrath will burn each one.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_s3_start.mp3"
+  },
+  "r7.s3.wrong": {
+   "s": "brann",
+   "t": "Wrong banner! Think about what each host is good at.",
+   "p": false
+  },
+  "r7.s3.late": {
+   "s": "brann",
+   "t": "One got through! Keep tapping.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_s3_late.mp3"
+  },
+  "r7.s3.face": {
+   "s": "brann",
+   "t": "Turn to face the glow first.",
+   "p": false
+  },
+  "r7.hint.s1": {
+   "s": "brann",
+   "t": "The song is in your Book, one note from each room.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_hint_s1.mp3"
+  },
+  "r7.hint.s2": {
+   "s": "brann",
+   "t": "Test each clue. Who has a tick on all five?",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_hint_s2.mp3"
+  },
+  "r7.hint.s3": {
+   "s": "brann",
+   "t": "Follow the arrow and tap the frost spirits before they reach you.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_hint_s3.mp3"
+  },
+  "r7.hint": {
+   "s": "brann",
+   "t": "Follow the glow. It shows the next step.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r7_hint.mp3"
+  },
+  "hint.done": {
+   "s": "brann",
+   "t": "This room is done. Go on to the next one.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_hint_done.mp3"
+  },
+  "r1.plaque": {
+   "s": "elowen",
+   "t": "The plaque says Aldric is first and Doreth is last. Cadoc comes after Berenor.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_plaque.mp3"
+  },
+  "r1.step1": {
+   "s": "brann",
+   "t": "Good. Now we know every king and his shield. Look up at the four sockets above the gate and tap them.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r1_step1.mp3"
+  },
+  "r2.tree1": {
+   "s": "elowen",
+   "t": "Rule one: begin on a leaf and end on a star.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r2_tree1.mp3"
+  },
+  "r2.tree2": {
+   "s": "elowen",
+   "t": "Rule two: never step on a thorn.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r2_tree2.mp3"
+  },
+  "r2.tree3": {
+   "s": "elowen",
+   "t": "Rule three: the next stone must not match the stone you leave.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r2_tree3.mp3"
+  },
+  "r2.tree4": {
+   "s": "elowen",
+   "t": "Rule four: never lean the same way twice in a row.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r2_tree4.mp3"
+  },
+  "r2.step1": {
+   "s": "brann",
+   "t": "That is all four rules. Now tap the stepping stones and pick your path.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r2_step1.mp3"
+  },
+  "r3.plates": {
+   "s": "elowen",
+   "t": "Four recipes. Swords and shields, plain or fine. Each one uses iron and darksteel.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r3_plates.mp3"
+  },
+  "r3.slate": {
+   "s": "durgan",
+   "t": "Four swords and three shields. Use every bar. At least three swords must be fine.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r3_slate.mp3"
+  },
+  "r3.step1": {
+   "s": "brann",
+   "t": "Now we know the order. Tap the anvil and build it. The counter helps.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r3_step1.mp3"
+  },
+  "r4.cards": {
+   "s": "elowen",
+   "t": "Four cards: a name, the frost, trade and an oath. Each lord needs a different one.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_cards.mp3"
+  },
+  "r4.step1": {
+   "s": "brann",
+   "t": "Now tap the table. Pick a lord, then tap the line that fits what that lord cares about.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_step1.mp3"
+  },
+  "r5.raven": {
+   "s": "brann",
+   "t": "The raven shows who attacks and from which side. Build the right defenders, then start the wave.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r5_raven.mp3"
+  },
+  "r6.map": {
+   "s": "elowen",
+   "t": "The map is whole. The road lengths are in your Book. Now read the notes on the wall.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r6_map.mp3"
+  },
+  "r6.notes": {
+   "s": "elowen",
+   "t": "Each host has a speed. Everyone must arrive on Day 7.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r6_notes.mp3"
+  },
+  "r6.step2": {
+   "s": "brann",
+   "t": "Days on the road are the road divided by the speed. A host leaves on day 7 minus its days. Tap the rail.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r6_step2.mp3"
+  },
+  "r4.clue.venn": {
+   "s": "elowen",
+   "t": "That painting is Lord Venn himself. And every cup says VENN FIRST.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_clue_venn.mp3"
+  },
+  "r4.clue.orne": {
+   "s": "elowen",
+   "t": "Lady Orne's wall is all locks and bolts. And she keeps grain for three winters.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_clue_orne.mp3"
+  },
+  "r4.clue.keyes": {
+   "s": "elowen",
+   "t": "Lord Keyes has towers of ledgers, a coin scale and a toll chart of the Raven Road.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_clue_keyes.mp3"
+  },
+  "r4.clue.crane": {
+   "s": "elowen",
+   "t": "Lady Crane keeps an oath-sword over her hearth, and a framed oath to the old king.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r4_clue_crane.mp3"
+  },
+  "r5.w1": {
+   "s": "hild",
+   "t": "Thralls at the north and west gates. Weak, but many. Oil pots burn them all at once.",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r5_w1.mp3"
+  },
+  "r5.w2": {
+   "s": "hild",
+   "t": "The Frost Host! Thralls from the north, trolls from the east, wraiths from the south. Hold the wall!",
+   "p": false,
+   "audioFile": "assets/audio/voice/dialogue_r5_w2.mp3"
+  }
+ },
+ "oaths": [
+  {
+   "id": "valorin",
+   "name": "Valorin Guard",
+   "room": 1,
+   "gives": "Swords for the last march",
+   "art": "oath_valorin",
+   "letter": "V",
+   "title": "Oath of the Valorin Guard"
+  },
+  {
+   "id": "aelari",
+   "name": "Aelari",
+   "room": 2,
+   "gives": "Arrows that strike flyers",
+   "art": "oath_aelari",
+   "letter": "A",
+   "title": "Oath of the Aelari"
+  },
+  {
+   "id": "ironroot",
+   "name": "Ironroot",
+   "room": 3,
+   "gives": "Forge-fire and ballistae",
+   "art": "oath_ironroot",
+   "letter": "I",
+   "title": "Oath of Ironroot"
+  },
+  {
+   "id": "ravenspire",
+   "name": "Ravenspire",
+   "room": 4,
+   "gives": "Ravens that read where a host marches",
+   "art": "oath_ravenspire",
+   "letter": "R",
+   "title": "Oath of Ravenspire"
+  },
+  {
+   "id": "stormvale",
+   "name": "Stormvale",
+   "room": 5,
+   "gives": "The wall and its riders",
+   "art": "oath_stormvale",
+   "letter": "S",
+   "title": "Oath of Stormvale"
+  }
+ ],
+ "horn": [
+  "High",
+  "Low",
+  "Low",
+  "Mid",
+  "High",
+  "Low"
+ ],
+ "ashfall": [
+  "The gate was opened from inside at the ninth bell. The bar was lifted, not broken.",
+  "No beacon burned that night. The Wood saw only darkness.",
+  "The armory was opened with a key. No door was forced.",
+  "A raven told the northern lords to stand down at the eighth bell.",
+  "The wall watch was called to the feast hall at sundown.",
+  "The order to hold the north pass was cancelled with the king's own seal."
+ ],
+ "rooms": [
+  {
+   "n": 1,
+   "id": "gatehouse",
+   "name": "Gatehouse of Eldoria",
+   "pano": "assets/rooms/room1.webp",
+   "accent": "#c9a24b",
+   "yaw": 0,
+   "pitch": 5,
+   "goal": "Study the four statues and the plaque. Then put the crests in the sockets above the gate.",
+   "objective": [
+    {
+     "needs": [
+      "r1_aldric",
+      "r1_berenor",
+      "r1_cadoc",
+      "r1_doreth",
+      "r1_plaque"
+     ],
+     "text": "Look at the four statues and read the plaque.",
+     "then": "r1.step1"
+    },
+    {
+     "needs": [
+      "r1_sockets"
+     ],
+     "text": "Put the four crests in the sockets above the gate."
+    },
+    {
+     "text": "The gate is open. Go through."
+    }
+   ],
+   "reward": {
+    "oath": "valorin",
+    "horn": 0,
+    "fact": 0
+   },
+   "hotspots": [
+    {
+     "id": "r1_aldric",
+     "kind": "INSPECT",
+     "label": "Statue",
+     "yaw": -102,
+     "pitch": 8,
+     "title": "Aldric the Bold",
+     "say": "r1.inspect.aldric",
+     "views": [
+      {
+       "t": "A faceless king. The nameplate says: ALDRIC THE BOLD.",
+       "z": 5,
+       "dp": 10
+      },
+      {
+       "t": "His shield shows a lion.",
+       "z": 9,
+       "dp": -8
+      }
+     ],
+     "note": "Aldric the Bold: shield with a lion."
+    },
+    {
+     "id": "r1_berenor",
+     "kind": "INSPECT",
+     "label": "Statue",
+     "yaw": -152,
+     "pitch": 8,
+     "title": "Berenor the Wise",
+     "say": "r1.inspect.berenor",
+     "views": [
+      {
+       "t": "A faceless king. The nameplate says: BERENOR THE WISE.",
+       "z": 5,
+       "dp": 10
+      },
+      {
+       "t": "His shield shows an oak tree.",
+       "z": 9,
+       "dp": -8
+      }
+     ],
+     "note": "Berenor the Wise: shield with an oak tree."
+    },
+    {
+     "id": "r1_cadoc",
+     "kind": "INSPECT",
+     "label": "Statue",
+     "yaw": 151,
+     "pitch": 8,
+     "title": "Cadoc the Just",
+     "say": "r1.inspect.cadoc",
+     "views": [
+      {
+       "t": "A faceless king. The nameplate says: CADOC THE JUST.",
+       "z": 5,
+       "dp": 10
+      },
+      {
+       "t": "His shield shows a mountain.",
+       "z": 9,
+       "dp": -8
+      }
+     ],
+     "note": "Cadoc the Just: shield with a mountain."
+    },
+    {
+     "id": "r1_doreth",
+     "kind": "INSPECT",
+     "label": "Statue",
+     "yaw": 101,
+     "pitch": 8,
+     "title": "Doreth the Swift",
+     "say": "r1.inspect.doreth",
+     "views": [
+      {
+       "t": "A faceless king. The nameplate says: DORETH THE SWIFT.",
+       "z": 5,
+       "dp": 10
+      },
+      {
+       "t": "His shield shows a hawk.",
+       "z": 9,
+       "dp": -8
+      }
+     ],
+     "note": "Doreth the Swift: shield with a hawk."
+    },
+    {
+     "id": "r1_plaque",
+     "kind": "LEARN",
+     "label": "Plaque",
+     "yaw": -65,
+     "pitch": -7,
+     "title": "The bronze plaque",
+     "text": "\"Aldric raised the gate and the sun. Doreth shut it, last of the line. Cadoc came after Berenor.\"",
+     "note": "Plaque: Aldric raised the gate and the sun. Doreth shut it, last of the line. Cadoc came after Berenor.",
+     "say": "r1.plaque"
+    },
+    {
+     "id": "r1_sockets",
+     "kind": "PANEL",
+     "label": "Sockets",
+     "yaw": 0,
+     "pitch": 64,
+     "after": [
+      "r1_aldric",
+      "r1_berenor",
+      "r1_cadoc",
+      "r1_doreth",
+      "r1_plaque"
+     ],
+     "title": "Crest sockets",
+     "panel": "sockets"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "id": "silverwood",
+   "name": "Silverwood",
+   "pano": "assets/rooms/room2.webp",
+   "accent": "#7fbf9a",
+   "yaw": 0,
+   "pitch": -10,
+   "goal": "Read the four carved trees. Then find the safe path across the stepping stones.",
+   "objective": [
+    {
+     "needs": [
+      "r2_tree1",
+      "r2_tree2",
+      "r2_tree3",
+      "r2_tree4"
+     ],
+     "text": "Read the rules carved on the four great trees.",
+     "then": "r2.step1"
+    },
+    {
+     "needs": [
+      "r2_stones"
+     ],
+     "text": "Cross the stepping stones. Follow all four rules."
+    },
+    {
+     "text": "The Wood has let you through."
+    }
+   ],
+   "reward": {
+    "oath": "aelari",
+    "horn": 1,
+    "fact": 1
+   },
+   "hotspots": [
+    {
+     "id": "r2_tree1",
+     "kind": "LEARN",
+     "label": "Tree",
+     "yaw": -106,
+     "pitch": 14,
+     "title": "Tree of the Bough",
+     "text": "Carved in the bark: \"Begin on a leaf and end on a star.\"",
+     "note": "Tree rule 1: begin on a leaf and end on a star.",
+     "say": "r2.tree1"
+    },
+    {
+     "id": "r2_tree2",
+     "kind": "LEARN",
+     "label": "Tree",
+     "yaw": 67,
+     "pitch": 12,
+     "title": "Thorn Tree",
+     "text": "Carved in the bark: \"Do not step on the thorn.\"",
+     "note": "Tree rule 2: never step on a thorn.",
+     "say": "r2.tree2"
+    },
+    {
+     "id": "r2_tree3",
+     "kind": "LEARN",
+     "label": "Tree",
+     "yaw": 123,
+     "pitch": 30,
+     "title": "Moon Tree",
+     "text": "Carved in the bark: \"No stone may match the stone you leave.\"",
+     "note": "Tree rule 3: the next stone must not match the stone you leave.",
+     "say": "r2.tree3"
+    },
+    {
+     "id": "r2_tree4",
+     "kind": "LEARN",
+     "label": "Tree",
+     "yaw": -88,
+     "pitch": 20,
+     "title": "The Willow",
+     "text": "Carved in the bark: \"Do not lean the same way twice in a row.\" (Two steps left in a row, or two steps right in a row, are not allowed.)",
+     "note": "Tree rule 4: never lean left twice or right twice in a row.",
+     "say": "r2.tree4"
+    },
+    {
+     "id": "r2_stones",
+     "kind": "PANEL",
+     "label": "Stones",
+     "yaw": 0,
+     "pitch": -38,
+     "after": [
+      "r2_tree1",
+      "r2_tree2",
+      "r2_tree3",
+      "r2_tree4"
+     ],
+     "title": "Stepping stones",
+     "panel": "stones"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "id": "forge",
+   "name": "Ironroot Forge",
+   "pano": "assets/rooms/room3.webp",
+   "accent": "#e07a2f",
+   "yaw": 0,
+   "pitch": -5,
+   "goal": "Read the recipes and the order slate. Then fill the order on the anvil. The panel counts for you.",
+   "objective": [
+    {
+     "needs": [
+      "r3_plates",
+      "r3_slate"
+     ],
+     "text": "Read the recipes and the order slate.",
+     "then": "r3.step1"
+    },
+    {
+     "needs": [
+      "r3_board"
+     ],
+     "text": "Fill the order on the anvil. Use every bar."
+    },
+    {
+     "text": "The forge sings."
+    }
+   ],
+   "reward": {
+    "oath": "ironroot",
+    "horn": 2,
+    "fact": 2
+   },
+   "hotspots": [
+    {
+     "id": "r3_plates",
+     "kind": "LEARN",
+     "label": "Recipes",
+     "yaw": -8,
+     "pitch": -18,
+     "title": "Four recipe plates",
+     "text": "Plain sword: 3 iron.\nFine sword: 2 iron + 1 darksteel.\nPlain shield: 5 iron.\nBanded shield: 3 iron + 2 darksteel.",
+     "note": "Recipes: plain sword 3 iron. Fine sword 2 iron + 1 darksteel. Plain shield 5 iron. Banded shield 3 iron + 2 darksteel.",
+     "say": "r3.plates"
+    },
+    {
+     "id": "r3_slate",
+     "kind": "LEARN",
+     "label": "Order slate",
+     "yaw": -79,
+     "pitch": 22,
+     "title": "The order slate",
+     "text": "\"Four swords and three shields. Use every bar and every ingot. At least three swords must be fine.\"",
+     "note": "Order: 4 swords and 3 shields. Use all ore. At least 3 swords fine.",
+     "say": "r3.slate"
+    },
+    {
+     "id": "r3_board",
+     "kind": "PANEL",
+     "label": "Anvil",
+     "yaw": 0,
+     "pitch": -40,
+     "after": [
+      "r3_plates",
+      "r3_slate"
+     ],
+     "title": "Anvil order board",
+     "panel": "forge"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "id": "council",
+   "name": "Ravenspire Council",
+   "pano": "assets/rooms/room4.webp",
+   "accent": "#7a6bb5",
+   "yaw": 0,
+   "pitch": 0,
+   "goal": "Look at the thing near each lord. Read the cards. Then give each lord the line that fits what they care about.",
+   "objective": [
+    {
+     "needs": [
+      "r4_venn1",
+      "r4_orne1",
+      "r4_keyes1",
+      "r4_crane1",
+      "r4_cards"
+     ],
+     "text": "Look at one thing near each lord. Then read the cards on the table.",
+     "then": "r4.step1"
+    },
+    {
+     "needs": [
+      "r4_table"
+     ],
+     "text": "At the table, give each lord the line that moves them."
+    },
+    {
+     "text": "The council has said yes."
+    }
+   ],
+   "reward": {
+    "oath": "ravenspire",
+    "horn": 3,
+    "fact": 3
+   },
+   "hotspots": [
+    {
+     "id": "r4_venn1",
+     "kind": "INSPECT",
+     "label": "Portrait",
+     "yaw": -143,
+     "pitch": 37,
+     "lord": "venn",
+     "title": "A gold-framed portrait",
+     "views": [
+      {
+       "t": "Venn: a huge painting of himself, and cups all engraved VENN FIRST."
+      }
+     ],
+     "note": "Venn: a huge painting of himself, and cups all engraved VENN FIRST.",
+     "say": "r4.clue.venn"
+    },
+    {
+     "id": "r4_orne1",
+     "kind": "INSPECT",
+     "label": "Locks",
+     "yaw": -36,
+     "pitch": 31,
+     "lord": "orne",
+     "title": "Wall of locks",
+     "views": [
+      {
+       "t": "Orne: a wall of locks, barred windows, and grain stored for three winters."
+      }
+     ],
+     "note": "Orne: a wall of locks, barred windows, and grain stored for three winters.",
+     "say": "r4.clue.orne"
+    },
+    {
+     "id": "r4_keyes1",
+     "kind": "INSPECT",
+     "label": "Ledgers",
+     "yaw": 36,
+     "pitch": 22,
+     "lord": "keyes",
+     "title": "Towers of ledgers",
+     "views": [
+      {
+       "t": "Keyes: towers of ledgers, a coin scale and a toll chart of the Raven Road."
+      }
+     ],
+     "note": "Keyes: towers of ledgers, a coin scale and a toll chart of the Raven Road.",
+     "say": "r4.clue.keyes"
+    },
+    {
+     "id": "r4_crane1",
+     "kind": "INSPECT",
+     "label": "Oath-sword",
+     "yaw": 140,
+     "pitch": 40,
+     "lord": "crane",
+     "title": "Oath-sword",
+     "views": [
+      {
+       "t": "Crane: an oath-sword over the hearth and a framed oath to the old king."
+      }
+     ],
+     "note": "Crane: an oath-sword over the hearth and a framed oath to the old king.",
+     "say": "r4.clue.crane"
+    },
+    {
+     "id": "r4_cards",
+     "kind": "LEARN",
+     "label": "Cards",
+     "yaw": -24,
+     "pitch": -18,
+     "title": "The argument cards",
+     "text": "Four argument cards lie on the table: one about a name, one about the frost, one about trade, one about an oath. Each lord will hear all four, in a different order. Pick the one that fits what that lord cares about.",
+     "note": "Four argument cards: a name, the frost, trade, an oath. Pick the one that fits each lord.",
+     "say": "r4.cards"
+    },
+    {
+     "id": "r4_table",
+     "kind": "PANEL",
+     "label": "Council table",
+     "yaw": 8,
+     "pitch": -25,
+     "after": [
+      "r4_venn1",
+      "r4_orne1",
+      "r4_keyes1",
+      "r4_crane1",
+      "r4_cards"
+     ],
+     "title": "The council table",
+     "panel": "council"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "id": "wall",
+   "name": "Stormwatch Wall",
+   "pano": "assets/rooms/room5.webp",
+   "accent": "#7fb3d5",
+   "yaw": -60,
+   "pitch": -6,
+   "goal": "Read the raven's report. Build defenders on the wall. Beat the two waves. If the wall falls, you can try again.",
+   "sides": {
+    "N": -60,
+    "E": 30,
+    "S": 120,
+    "W": -150
+   },
+   "objective": [
+    {
+     "needs": [
+      "r5_raven"
+     ],
+     "text": "Read the raven's report. It names the side and the enemy."
+    },
+    {
+     "text": "Build defenders on the wall. Then start the wave."
+    }
+   ],
+   "reward": {
+    "oath": "stormvale",
+    "horn": 4,
+    "fact": 4
+   },
+   "hotspots": [
+    {
+     "id": "r5_raven",
+     "kind": "LEARN",
+     "label": "Raven",
+     "yaw": 135,
+     "pitch": 3,
+     "title": "The raven's report",
+     "text": "",
+     "dynamic": "raven",
+     "say": "r5.raven"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "id": "warroom",
+   "name": "Highmere War Room",
+   "pano": "assets/rooms/room6.webp",
+   "accent": "#b5453a",
+   "yaw": 0,
+   "pitch": -5,
+   "goal": "Rebuild the map. Read the marching notes. Then send each host out on the right day.",
+   "objective": [
+    {
+     "needs": [
+      "r6_map"
+     ],
+     "text": "Put the six map pieces back together on the table."
+    },
+    {
+     "needs": [
+      "r6_notes"
+     ],
+     "text": "Read the marching notes on the wall.",
+     "then": "r6.step2"
+    },
+    {
+     "needs": [
+      "r6_rail"
+     ],
+     "text": "Place each host's banner on the day it should leave."
+    },
+    {
+     "text": "The hosts march."
+    }
+   ],
+   "reward": {
+    "oath": null,
+    "horn": 5,
+    "fact": 5,
+    "marshal": true
+   },
+   "hotspots": [
+    {
+     "id": "r6_map",
+     "kind": "PANEL",
+     "label": "Map",
+     "yaw": 0,
+     "pitch": -25,
+     "title": "The torn map",
+     "panel": "map"
+    },
+    {
+     "id": "r6_notes",
+     "kind": "LEARN",
+     "label": "Notes",
+     "yaw": 50,
+     "pitch": 22,
+     "after": [
+      "r6_map"
+     ],
+     "title": "The marching notes",
+     "text": "Speeds, in leagues per day:\nStormvale 6. Ironroot 3. Aelari 8. Ravenspire 10. Valorin Guard 5.\n\nThe frost reaches Highmere at dawn on Day 7. A host that leaves on day D and needs T days arrives at dawn on day D + T. All five hosts must arrive on Day 7.",
+     "note": "Speeds: Stormvale 6, Ironroot 3, Aelari 8, Ravenspire 10, Valorin Guard 5 leagues a day. A host leaving on day D needing T days arrives on day D+T. Everyone must arrive on Day 7.",
+     "say": "r6.notes"
+    },
+    {
+     "id": "r6_rail",
+     "kind": "PANEL",
+     "label": "Rail",
+     "yaw": 140,
+     "pitch": -9,
+     "after": [
+      "r6_map",
+      "r6_notes"
+     ],
+     "title": "The dispatch rail",
+     "panel": "dispatch"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "id": "throne",
+   "name": "The Ashen Throne",
+   "pano": "assets/rooms/room7.webp",
+   "accent": "#f2b36b",
+   "yaw": 0,
+   "pitch": 15,
+   "goal": "Sound the Horn of Highmere. Then find the traitor. Then break the frost.",
+   "kings": [
+    -146,
+    -89,
+    -45,
+    44,
+    88,
+    144,
+    0
+   ],
+   "objective": [
+    {
+     "needs": [
+      "r7_horn"
+     ],
+     "text": "Tap the glowing Horn of Highmere."
+    },
+    {
+     "needs": [
+      "r7_court"
+     ],
+     "text": "Test each Ashfall fact on the suspects. Accuse the traitor."
+    },
+    {
+     "needs": [
+      "r7_frost"
+     ],
+     "text": "Tap the frost spirits before they reach you."
+    },
+    {
+     "text": "Make the last choice."
+    }
+   ],
+   "hotspots": [
+    {
+     "id": "r7_horn",
+     "kind": "ACT",
+     "label": "Horn",
+     "yaw": 0,
+     "pitch": 3,
+     "title": "Horn of Highmere"
+    },
+    {
+     "id": "r7_k7",
+     "kind": "ACT",
+     "label": "Ashen Throne",
+     "yaw": 0,
+     "pitch": 26,
+     "after": [
+      "r7_horn"
+     ],
+     "king": 6
+    }
+   ],
+   "pseudo": [
+    "r7_court",
+    "r7_frost"
+   ]
+  }
+ ],
+ "stones": {
+  "rows": [
+   [
+    "leaf",
+    "moon",
+    "leaf"
+   ],
+   [
+    "star",
+    "moon",
+    "thorn"
+   ],
+   [
+    "moon",
+    "leaf",
+    "star"
+   ],
+   [
+    "thorn",
+    "leaf",
+    "star"
+   ],
+   [
+    "thorn",
+    "leaf",
+    "star"
+   ]
+  ],
+  "rules": [
+   "Begin on a leaf and end on a star.",
+   "Do not step on a thorn.",
+   "No stone may match the one you leave.",
+   "Do not lean the same way twice in a row."
+  ]
+ },
+ "forge": {
+  "ore": {
+   "iron": 20,
+   "darksteel": 7
+  },
+  "items": [
+   {
+    "id": "sword_plain",
+    "name": "Plain sword",
+    "iron": 3,
+    "dark": 0,
+    "kind": "sword",
+    "fine": false,
+    "cut": "sword_plain"
+   },
+   {
+    "id": "sword_fine",
+    "name": "Fine sword",
+    "iron": 2,
+    "dark": 1,
+    "kind": "sword",
+    "fine": true,
+    "cut": "sword_fine"
+   },
+   {
+    "id": "shield_plain",
+    "name": "Plain shield",
+    "iron": 5,
+    "dark": 0,
+    "kind": "shield",
+    "fine": false,
+    "cut": "shield_plain"
+   },
+   {
+    "id": "shield_banded",
+    "name": "Banded shield",
+    "iron": 3,
+    "dark": 2,
+    "kind": "shield",
+    "fine": true,
+    "cut": "shield_banded"
+   }
+  ],
+  "swords": 4,
+  "shields": 3,
+  "minFine": 3
+ },
+ "council": {
+  "cards": {
+   "A": "Your name will be carved above the throne.",
+   "B": "The frost will reach Ravenspire next. Together we can stop it.",
+   "C": "Reopen the Raven Road. Ten years with no tax.",
+   "D": "You swore to serve the Valorin crown. That oath did not die with the king."
+  },
+  "lords": [
+   {
+    "id": "venn",
+    "name": "Lord Venn",
+    "chair": "North",
+    "card": "A"
+   },
+   {
+    "id": "orne",
+    "name": "Lady Orne",
+    "chair": "East",
+    "card": "B"
+   },
+   {
+    "id": "keyes",
+    "name": "Lord Keyes",
+    "chair": "South",
+    "card": "C"
+   },
+   {
+    "id": "crane",
+    "name": "Lady Crane",
+    "chair": "West",
+    "card": "D"
+   }
+  ],
+  "options": {
+   "venn": [
+    "C",
+    "D",
+    "A",
+    "B"
+   ],
+   "orne": [
+    "D",
+    "A",
+    "B",
+    "C"
+   ],
+   "keyes": [
+    "B",
+    "C",
+    "D",
+    "A"
+   ],
+   "crane": [
+    "A",
+    "D",
+    "C",
+    "B"
+   ]
+  }
+ },
+ "battle": {
+  "defenders": [
+   {
+    "id": "archer",
+    "name": "Archer",
+    "cost": 10,
+    "dmg": 2,
+    "air": true,
+    "ground": true,
+    "info": "2 damage each volley. Hits ground and air.",
+    "cut": "archer"
+   },
+   {
+    "id": "ballista",
+    "name": "Ballista",
+    "cost": 25,
+    "dmg": 6,
+    "air": false,
+    "ground": true,
+    "info": "6 damage each volley. Ground only.",
+    "cut": "ballista"
+   },
+   {
+    "id": "oil",
+    "name": "Oil pot",
+    "cost": 15,
+    "dmg": 3,
+    "air": false,
+    "ground": true,
+    "once": true,
+    "info": "3 damage to every ground enemy on its side, once. Ground only.",
+    "cut": "oilpot"
+   }
+  ],
+  "enemies": {
+   "thrall": {
+    "name": "Frost Thrall",
+    "plural": "Frost Thralls",
+    "hp": 2,
+    "air": false,
+    "wall": 1,
+    "cut": "thrall",
+    "color": "#9fc4df"
+   },
+   "troll": {
+    "name": "Frost Troll",
+    "plural": "Frost Trolls",
+    "hp": 12,
+    "air": false,
+    "wall": 3,
+    "cut": "troll",
+    "color": "#6f8fc0"
+   },
+   "wraith": {
+    "name": "Wraith",
+    "plural": "Wraiths",
+    "hp": 4,
+    "air": true,
+    "wall": 2,
+    "cut": "wraith",
+    "color": "#c7b5e8"
+   }
+  },
+  "waves": [
+   {
+    "name": "Thralls at the gates",
+    "intro": "r5.w1",
+    "budget": 40,
+    "sides": {
+     "N": {
+      "thrall": 6
+     },
+     "W": {
+      "thrall": 4
+     }
+    }
+   },
+   {
+    "name": "The Frost Host",
+    "intro": "r5.w2",
+    "budget": 70,
+    "sides": {
+     "N": {
+      "thrall": 6
+     },
+     "E": {
+      "troll": 2
+     },
+     "S": {
+      "wraith": 3
+     }
+    }
+   }
+  ],
+  "names": {
+   "N": "North",
+   "E": "East",
+   "S": "South",
+   "W": "West"
+  }
+ },
+ "dispatch": {
+  "hosts": [
+   {
+    "id": "stormvale",
+    "name": "Stormvale",
+    "road": 36,
+    "speed": 6,
+    "days": 6,
+    "leaves": 1,
+    "art": "oath_stormvale",
+    "letter": "S"
+   },
+   {
+    "id": "ironroot",
+    "name": "Ironroot",
+    "road": 12,
+    "speed": 3,
+    "days": 4,
+    "leaves": 3,
+    "art": "oath_ironroot",
+    "letter": "I"
+   },
+   {
+    "id": "aelari",
+    "name": "Aelari",
+    "road": 24,
+    "speed": 8,
+    "days": 3,
+    "leaves": 4,
+    "art": "oath_aelari",
+    "letter": "A"
+   },
+   {
+    "id": "ravenspire",
+    "name": "Ravenspire",
+    "road": 20,
+    "speed": 10,
+    "days": 2,
+    "leaves": 5,
+    "art": "oath_ravenspire",
+    "letter": "R"
+   },
+   {
+    "id": "valorin",
+    "name": "Valorin Guard",
+    "road": 5,
+    "speed": 5,
+    "days": 1,
+    "leaves": 6,
+    "art": "oath_valorin",
+    "letter": "V"
+   }
+  ],
+  "pegs": 6,
+  "arrival": 7
+ },
+ "frost": {
+  "waves": [
+   4,
+   5,
+   6
+  ],
+  "spawnEvery": 2.4,
+  "life": 9,
+  "maxMistakes": 3
+ },
+ "endings": {
+  "take": {
+   "title": "The Throne Taken",
+   "beats": [
+    "Elowen sits on the Ashen Throne.",
+    "The frost leaves the hall, but not her breath.",
+    "The five banners kneel. Maelor bows.",
+    "A raven lands. It carries a letter sealed with a pale queen's mark."
+   ],
+   "fx": [
+    [
+     "glow",
+     "rays"
+    ],
+    [
+     "frostfade",
+     "motes"
+    ],
+    [
+     "banners",
+     "motes"
+    ],
+    [
+     "raven"
+    ]
+   ],
+   "tint": "gold",
+   "audioFiles": [
+    "assets/audio/voice/ending_take_0.mp3",
+    "assets/audio/voice/ending_take_1.mp3",
+    "assets/audio/voice/ending_take_2.mp3",
+    "assets/audio/voice/ending_take_3.mp3"
+   ]
+  },
+  "break": {
+   "title": "The Throne Broken",
+   "beats": [
+    "Vyrmrath breathes fire on the Ashen Throne.",
+    "It cracks and falls.",
+    "Five banners hang side by side. Elowen says no king will sit alone again.",
+    "Far to the north, a veiled queen smiles on a frozen balcony."
+   ],
+   "fx": [
+    [
+     "fire",
+     "embers"
+    ],
+    [
+     "crack",
+     "embers"
+    ],
+    [
+     "sidebanners",
+     "embers"
+    ],
+    [
+     "queen"
+    ]
+   ],
+   "tint": "fire",
+   "audioFiles": [
+    "assets/audio/voice/ending_break_0.mp3",
+    "assets/audio/voice/ending_break_1.mp3",
+    "assets/audio/voice/ending_break_2.mp3",
+    "assets/audio/voice/ending_break_3.mp3"
+   ]
+  },
+  "spare": {
+   "title": "The Hollow King Freed",
+   "beats": [
+    "Elowen frees the Hollow King. His crown fades to dust.",
+    "His face returns. He is Prince Malachar, once bound by the Veiled Queen.",
+    "He tells her where the Veiled Queen waits. Then he walks north into the dark.",
+    "A line of frost begins to move south again."
+   ],
+   "fx": [
+    [
+     "dissolve",
+     "motes"
+    ],
+    [
+     "frostfade",
+     "motes"
+    ],
+    [
+     "walk",
+     "snow"
+    ],
+    [
+     "frostline",
+     "snow"
+    ]
+   ],
+   "tint": "ice",
+   "audioFiles": [
+    "assets/audio/voice/ending_spare_0.mp3",
+    "assets/audio/voice/ending_spare_1.mp3",
+    "assets/audio/voice/ending_spare_2.mp3",
+    "assets/audio/voice/ending_spare_3.mp3"
+   ]
+  },
+  "choiceText": "The frost is gone from his face. He is Prince Malachar, once a Valorin, bound by the Veiled Queen. What will you do?",
+  "choices": [
+   {
+    "id": "take",
+    "label": "Take the throne",
+    "sub": "Rule from the Ashen Throne."
+   },
+   {
+    "id": "break",
+    "label": "Break the throne",
+    "sub": "End the age of lonely kings."
+   },
+   {
+    "id": "spare",
+    "label": "Spare Malachar",
+    "sub": "Free Prince Malachar."
+   }
+  ],
+  "choiceTitle": "The Last Choice",
+  "choiceAudio": "assets/audio/voice/choice_0.mp3"
+ },
+ "screens": {
+  "timeup": {
+   "title": "The Long Winter covers the realm.",
+   "button": "Try Again"
+  },
+  "frost": {
+   "title": "The frost takes you.",
+   "button": "Try Again"
+  },
+  "wall": {
+   "title": "The wall is lost.",
+   "button": "Try Again"
+  },
+  "win": {
+   "button": "Play Again"
+  }
+ },
+ "ui": {
+  "tapStart": "Tap to begin",
+  "book": "Book",
+  "hint": "Hint",
+  "renown": "Renown",
+  "clock": "Clock",
+  "skip": "Skip",
+  "next": "Next",
+  "done": "Got it",
+  "paused": "Paused",
+  "resume": "Resume",
+  "restart": "Restart",
+  "restartSure": "Tap again to restart",
+  "saved": "Saved to your Book. You will need it for the puzzle.",
+  "tapContinue": "Tap to continue",
+  "turn": "Turn it",
+  "room": "Room",
+  "socketHint": "Put the kings' crests in order, I to IV. The plaque says who comes first and last. Drag a crest into a socket, or tap a crest, then a socket.",
+  "socketWrong": "The gate does not move. The crests slip back.",
+  "stoneHint": "Tap a stone in each row, from the bottom up. Dim stones break a rule, so you cannot pick them. If you get stuck, tap your last stone to step back.",
+  "walk": "Walk",
+  "reset": "Start again",
+  "stoneWrong": "The roots snap back! You are back on the bank.",
+  "forgeHint": "Make exactly what the slate asks. Use every bar and ingot. The counter shows how you are doing.",
+  "iron": "iron",
+  "darksteel": "darksteel",
+  "forgeGo": "Forge",
+  "forge_over": "You do not have that much ore.",
+  "forge_under": "Some ore is left over. The order needs every bar.",
+  "forge_count": "The scale tips. Check the number of swords and shields, and the fine swords.",
+  "councilHint": "1. Tap a lord. 2. Read the four lines. 3. Tap the line that fits what that lord cares about.",
+  "speak": "Speak",
+  "lordWon": "This lord has already said yes.",
+  "mapHint": "Put the six pieces in the right places. Drag them, or tap a piece and then a square.",
+  "mapDone": "The map is whole again.",
+  "leagues": "leagues",
+  "mapNote": "The map is restored. Road lengths are in the Map page.",
+  "mapRestored": "The map is whole! Road lengths saved to your Book.",
+  "pieceNo": "That piece does not go there.",
+  "dispatchHint": "Each host needs some days on the road. All must arrive on Day 7. So a host leaves on day 7 minus its days. Drag each banner to its day.",
+  "day": "Day",
+  "send": "Send",
+  "early": "would arrive too early.",
+  "late": "would arrive too late.",
+  "oathWon": "Oath won: {0}",
+  "hornWon": "A horn note and a fact are saved to your Book.",
+  "goOn": "Go on to {0}",
+  "tab_oaths": "Oaths",
+  "tab_horn": "Horn Song",
+  "tab_ashfall": "Night of Ashfall",
+  "tab_lords": "Lords",
+  "tab_map": "Map",
+  "tab_notes": "Notes",
+  "notSworn": "Not yet sworn",
+  "hornHint": "The song is filled in as you win each room.",
+  "noNotes": "Nothing yet.",
+  "noBudget": "Not enough budget for that.",
+  "wave": "Wave",
+  "budget": "Budget",
+  "wall": "Wall",
+  "remove": "Remove",
+  "raven": "Raven",
+  "startWave": "Start wave",
+  "readRaven": "Tap the glowing raven to read the report.",
+  "breach": "The wall takes {0} damage!",
+  "held": "The wave is beaten. The wall holds.",
+  "keepRing": "Keep Vyrmrath inside the ring, then sound the next note.",
+  "lookUp": "Look higher.",
+  "lookLeft": "The dragon is to your left.",
+  "lookRight": "The dragon is to your right.",
+  "noteLow": "Low",
+  "noteMid": "Mid",
+  "noteHigh": "High",
+  "court": "The Traitor's Trail",
+  "lastChoice": "The last choice",
+  "courtHint": "Each king says what they saw. Under it is the record of Ashfall. Find the one king whose words do not match the record, then tap Accuse. Tap a king's words to hear them.",
+  "courtTitle": "The Traitor's Trail",
+  "hear": "Hear",
+  "accuse": "Accuse",
+  "timeLeft": "Time left",
+  "oathsWon": "Oaths won",
+  "step": "Step",
+  "learned": "What you have learned",
+  "stoneStuck": "No safe stone here. Tap your last stone to step back.",
+  "forgeTotals": "Swords {0}/4 · Shields {1}/3 · Fine swords {2} (need 3 or more)",
+  "noticed": "What you noticed",
+  "pickLord": "Tap a lord to see what you noticed and hear four lines.",
+  "days": "days",
+  "ravenTip": "Tip: oil pots burn swarms of thralls. Ballistae shoot trolls. Archers shoot flyers.",
+  "record": "The record of Ashfall",
+  "clueSaved": "Clue saved to your Book",
+  "cluesFound": "Clues found",
+  "oathTitle": "Oath of the {0}",
+  "hornTitle": "The Horn of Highmere",
+  "hornLine": "The horn sounds a new note: {0}.",
+  "lordDone": "This lord has said yes.",
+  "resHeld": "Wave beaten!",
+  "resBreach": "Wave beaten, but the wall was hit!",
+  "resFinal": "The wall holds!",
+  "resLost": "The wall is lost!",
+  "resStats": "Enemies beaten: {0} of {1}",
+  "resWall": "Wall strength",
+  "resNext": "Next: read the raven's report, then build your defenders again.",
+  "resFinalLine": "Both waves are beaten. Captain Hild has something to say.",
+  "resLostLine": "The frost broke through. Build differently and try again.",
+  "btnNext": "Next wave",
+  "btnRetry": "Try again",
+  "btnOath": "Continue",
+  "btnBuild": "Build defenders",
+  "volley": "Volley",
+  "foes": "Enemies left",
+  "buildTip": "Pick a defender below, then tap a slot on the wall. Tap a filled slot to remove it.",
+  "incoming": "Incoming",
+  "recordFor": "Record, fact {0}",
+  "trailTitle": "The Traitor's Trail",
+  "trailHint": "These five things happened on Ashfall night. Tap a fact to test it on the three suspects. A tick means they could do it. A cross means they could not.",
+  "tapTest": "Tap to test",
+  "trailAll": "All tested. Only one person has a tick every time. Accuse them.",
+  "trailLeft": "{0} left to test. You can accuse when you are sure.",
+  "spiritsBroken": "Spirits broken",
+  "s3tip": "Follow the arrow and tap the frost spirits before they reach you.",
+  "frostHit": "Frost!",
+  "musicOn": "Music: on",
+  "musicOff": "Music: off",
+  "fxOn": "Sound effects: on",
+  "fxOff": "Sound effects: off",
+  "voiceOn": "Narration: on",
+  "voiceOff": "Narration: off"
+ },
+ "sockets": {
+  "answer": [
+   "lion",
+   "oak",
+   "mountain",
+   "hawk"
+  ],
+  "order": [
+   "hawk",
+   "mountain",
+   "lion",
+   "oak"
+  ],
+  "numerals": [
+   "I",
+   "II",
+   "III",
+   "IV"
+  ],
+  "crests": [
+   {
+    "id": "lion",
+    "name": "Lion",
+    "letter": "L",
+    "king": "Aldric",
+    "spot": "r1_aldric"
+   },
+   {
+    "id": "oak",
+    "name": "Oak",
+    "letter": "O",
+    "king": "Berenor",
+    "spot": "r1_berenor"
+   },
+   {
+    "id": "mountain",
+    "name": "Mountain",
+    "letter": "M",
+    "king": "Cadoc",
+    "spot": "r1_cadoc"
+   },
+   {
+    "id": "hawk",
+    "name": "Hawk",
+    "letter": "H",
+    "king": "Doreth",
+    "spot": "r1_doreth"
+   }
+  ]
+ },
+ "trail": {
+  "suspects": [
+   {
+    "id": "oswin",
+    "name": "Marshal Oswin",
+    "role": "Leads the armies. Slept in the war room tower."
+   },
+   {
+    "id": "hild",
+    "name": "Captain Hild",
+    "role": "Leads the wall watch. Stood on the Frostwall."
+   },
+   {
+    "id": "varric",
+    "name": "High Steward Varric",
+    "role": "Runs the castle. Keeps the keys, the seal and the ravens."
+   }
+  ],
+  "tests": [
+   {
+    "fact": 0,
+    "can": [
+     "oswin",
+     "varric"
+    ],
+    "why": {
+     "oswin": "He was inside the castle.",
+     "hild": "She was outside, on the wall.",
+     "varric": "He lives inside."
+    }
+   },
+   {
+    "fact": 2,
+    "can": [
+     "varric"
+    ],
+    "why": {
+     "oswin": "He only has the war room key.",
+     "hild": "She has no castle keys.",
+     "varric": "He holds every key."
+    }
+   },
+   {
+    "fact": 3,
+    "can": [
+     "varric"
+    ],
+    "why": {
+     "oswin": "The ravens are not his.",
+     "hild": "Her raven only flies to the wall.",
+     "varric": "He keeps the castle ravens."
+    }
+   },
+   {
+    "fact": 4,
+    "can": [
+     "hild",
+     "varric"
+    ],
+    "why": {
+     "oswin": "He does not lead the watch.",
+     "hild": "She leads the watch.",
+     "varric": "He runs every feast."
+    }
+   },
+   {
+    "fact": 5,
+    "can": [
+     "varric"
+    ],
+    "why": {
+     "oswin": "His own order was cancelled.",
+     "hild": "She has no seal.",
+     "varric": "He keeps the king's seal."
+    }
+   }
+  ]
+ }
+}

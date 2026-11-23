@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>The Hollowmere Secret</title>
+<meta name="description" content="A 360-degree mystery for ages 10+. Find Ines Vael before the Midnight Bell.">
+<meta name="theme-color" content="#14121a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Hollowmere Secret">
+<meta property="og:description" content="A 360-degree mystery for ages 10 and up. Search seven rooms of Hollowmere Academy and find Ines Vael before the Midnight Bell.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="vendor/pannellum.css">
+<link rel="stylesheet" href="style.css?v=1794499355">
+</head>
+<body>
+<div id="app">
+  <div id="pano"></div>
+  <div id="fog"></div>
+  <div id="hud" hidden>
+    <div id="hud-row">
+      <div id="hud-time" class="hud-box"><span class="bell">&#128276;</span><b id="time">12:00</b></div>
+      <div id="hud-score" class="hud-box"><small id="lbl-ev"></small><b id="score">0</b></div>
+      <div id="hud-pages"></div>
+    </div>
+    <div id="objective"><b id="lbl-obj"></b><span id="obj-text"></span></div>
+  </div>
+  <div id="strip" hidden></div>
+  <div id="bar" hidden>
+    <div class="bb"><button id="btn-pause" class="ibtn" aria-label="Pause"></button><span class="bl" id="lbl-pause"></span></div>
+    <div class="bb"><button id="btn-hint" class="ibtn" aria-label="Hint"></button><span class="bl" id="lbl-hint"></span></div>
+    <div class="bb"><button id="btn-book" class="ibtn" aria-label="Casebook"></button><span class="bl" id="lbl-book"></span></div>
+    <div id="tray" hidden></div>
+  </div>
+  <button id="btn-pause2" class="ibtn small" hidden aria-label="Pause"></button>
+  <div id="edge" hidden>&#10148;</div>
+  <div id="drag-hand" hidden>&#9755;</div>
+  <div id="layer"></div>
+  <div id="toast"></div>
+  <div id="debug" hidden></div>
+</div>
+<script src="vendor/pannellum.js"></script>
+<script src="logic.js?v=1794492954"></script>
+<script src="puzzles.js?v=1794499355"></script>
+<script src="game.js?v=1794499355"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Legacy of Olympus</title>
+<meta name="description" content="A 360 escape game. Save the Ember of Olympus in ten minutes.">
+<meta name="theme-color" content="#0B1530">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Legacy of Olympus">
+<meta property="og:description" content="A 360-degree escape game. Two young demigods race a ten-minute clock through seven trial chambers to save the Ember of Olympus.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="vendor/pannellum.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="pano"></div>
+<div id="vignette"></div>
+
+<header id="hud" hidden>
+  <div id="hud-row">
+    <div id="hud-room"><small id="lbl-room"></small><b id="room-name"></b></div>
+    <div id="hud-stats"><span class="stat"><small id="lbl-kleos"></small><b id="kleos">0</b></span><span class="stat"><small>&#9202;</small><b id="clock">10:00</b></span></div>
+  </div>
+  <div id="objective"><b id="lbl-obj"></b><span id="objective-text"></span></div>
+  <div id="strip"></div>
+</header>
+
+<nav id="bar" hidden>
+  <div class="bb"><button id="btn-pause" class="ibtn" aria-label="Menu"></button><span class="bl" id="lbl-menu"></span></div>
+  <div class="bb"><button id="btn-hint" class="ibtn" aria-label="Hint"></button><span class="bl" id="lbl-hint"></span><span id="hints-left" class="badge"></span></div>
+  <div class="bb"><button id="btn-book" class="ibtn" aria-label="Casebook"></button><span class="bl" id="lbl-book"></span></div>
+</nav>
+<div id="held" hidden></div>
+
+<section id="dialogue" hidden>
+  <div class="dbox">
+    <div id="d-name"></div>
+    <div id="bust"></div>
+    <div class="dtext"><p id="d-text"></p><span id="d-tap"></span></div>
+    <button id="skip" class="dskip"></button>
+  </div>
+</section>
+
+<section id="title" class="screen">
+  <div class="art"></div>
+  <div class="center"><small id="t-tag"></small><h1 id="t-title"></h1><button id="btn-start" class="btn big"></button></div>
+</section>
+<section id="brief" class="screen" hidden>
+  <div class="art"></div>
+  <div class="brief-text"><small id="b-kicker"></small><h1 id="b-head"></h1><div id="b-paras"></div><button id="btn-begin" class="btn big"></button></div>
+</section>
+
+<div id="tut" hidden><div id="spot"></div>
+  <div id="tut-card"><small id="tut-count"></small><p id="tut-text"></p><div class="row"><button id="tut-skip" class="btn ghost"></button><button id="tut-next" class="btn"></button></div></div>
+</div>
+
+<div id="modal" class="modal" hidden><div class="panel" id="panel"><button class="xbtn" id="modal-x" aria-label="Close"></button><div id="modal-body"></div></div></div>
+<div id="book" class="modal" hidden><div class="panel" id="book-panel"><button class="xbtn" id="book-x" aria-label="Close"></button><div id="book-body"></div></div></div>
+
+<div id="pause" hidden><div id="pause-box"></div></div>
+
+<div id="toast" hidden></div>
+<section id="cine" class="screen" hidden><div id="cine-ring"></div><p id="cine-text"></p><small id="cine-tap"></small><button id="cine-skip" class="btn ghost"></button></section>
+<div id="end" class="screen" hidden><div class="brief-text"><h1 id="end-title"></h1><p id="end-text"></p><p id="end-score"></p>
+  <button id="end-again" class="btn big"></button><button id="end-close" class="btn ghost"></button></div></div>
+<pre id="dbg" hidden></pre>
+
+<script src="vendor/pannellum.js"></script>
+<script src="audio.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

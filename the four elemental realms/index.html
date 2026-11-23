@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>The Four Elemental Realms</title>
+<meta name="description" content="A 360 point-and-click escape adventure through four floating realms.">
+<meta property="og:title" content="The Four Elemental Realms">
+<meta property="og:description" content="Relearn the four Forms and reopen the Spirit Nexus in 12 minutes.">
+<meta property="og:image" content="assets/sheets/tap_to_start.jpg">
+<link rel="stylesheet" href="vendor/pannellum.css">
+<link rel="stylesheet" href="style.css?v=feR18">
+</head>
+<body>
+<div id="pano"></div>
+<div id="hud" hidden>
+  <div id="bar">
+    <div class="stat" id="chiBox"><small>Chi</small><b id="chi">0</b></div>
+    <div class="stat" id="clockBox"><small>Time</small><b id="clock">12:00</b></div>
+    <button class="btn" id="hintBtn"></button>
+    <button class="btn" id="practiceBtn" hidden></button>
+    <span class="grow"></span>
+    <button class="btn" id="bookBtn"></button>
+    <button class="btn" id="pauseBtn"></button>
+  </div>
+  <div id="objective"></div>
+  <div id="strip"></div>
+  <div id="holding" hidden></div>
+</div>
+<div id="toast"></div>
+<div id="panelHost"></div>
+<div id="dlg" hidden></div>
+<div id="book" hidden></div>
+<div id="screen"></div>
+<script src="vendor/pannellum.js"></script>
+<script src="logic.js?v=feR18"></script>
+<script src="game.js?v=feR18"></script>
+</body>
+</html>

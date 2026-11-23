@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>The Forbidden Creature Archives</title>
+<meta name="description" content="A 360 point-and-click escape game. New York, 1926. Ten minutes to find the truth.">
+<link rel="stylesheet" href="vendor/pannellum/pannellum.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-room="1">
+  <div id="shake">
+    <div id="pano"></div>
+    <div id="fxlayer"></div>
+    <div id="sprites"></div>
+  </div>
+  <div id="fade"></div>
+
+  <header id="hud" hidden></header>
+  <button id="hintBtn" class="btn hint" hidden></button>
+  <div id="toasts"></div>
+
+  <div id="modals"></div>
+  <div id="blocker" hidden></div>
+  <div id="dlg" hidden></div>
+
+  <div id="pauseLayer" hidden></div>
+  <div id="screens"></div>
+  <div id="debugbar" hidden></div>
+</div>
+<noscript>This game needs JavaScript.</noscript>
+<script src="vendor/pannellum/pannellum.js"></script>
+<script src="logic.js"></script>
+<script src="sound.js"></script>
+<script src="fx.js"></script>
+<script src="panels.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

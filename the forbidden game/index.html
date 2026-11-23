@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>The Forbidden Game</title>
+<meta name="description" content="A 360 escape adventure. Two siblings, six Perils, seven minutes.">
+<meta property="og:title" content="The Forbidden Game">
+<meta property="og:description" content="A 360 escape adventure. Two siblings, six Perils, seven minutes.">
+<meta name="theme-color" content="#1E1510">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/sheets/start_art.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='8' y='8' width='48' height='48' rx='10' fill='%23C2272D' stroke='%23B88A3B' stroke-width='4'/%3E%3Ccircle cx='22' cy='22' r='5' fill='%23F1E4C3'/%3E%3Ccircle cx='42' cy='42' r='5' fill='%23F1E4C3'/%3E%3Ccircle cx='42' cy='22' r='5' fill='%23F1E4C3'/%3E%3Ccircle cx='22' cy='42' r='5' fill='%23F1E4C3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/pannellum/pannellum.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="pano"></div>
+
+<div id="fx" hidden>
+  <div class="lightning"></div><div class="rain"></div>
+  <div class="boardfx"><div class="board"></div><div class="dice d1"></div><div class="dice d2"></div></div>
+  <svg class="vinesvg"></svg>
+  <div class="goldglow"></div><div class="dimfx"></div><div class="seventh"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/><path d="M20 74L42 34L52 50L60 40L80 74z"/><path d="M36 44L42 34L48 44L45 42L42 46L39 42z" class="snow"/></svg></div>
+  <div class="flash"></div>
+</div>
+<div id="danger"></div>
+<div id="perilfx"></div>
+
+<div id="hud" hidden>
+  <div id="hud-top">
+    <span class="chip" id="hud-time" title="Time left">⏳ <b id="time">7:00</b></span>
+    <span class="chip" id="hud-pips" title="Pips (score)">◆ <b id="pips">0</b></span>
+    <span class="chip" id="hud-danger" data-lv="low" title="Danger"><span id="danger-ico"></span><b id="danger-pct">0%</b><i></i></span>
+    <button class="btn round" id="btn-pause" aria-label="Pause">❚❚</button>
+  </div>
+  <div id="hud-obj"></div>
+  <button id="holdchip" class="btn" hidden></button>
+  <div id="what" hidden></div>
+  <div id="hud-bottom">
+    <button class="btn round" id="btn-book" aria-label="Casebook">📖</button>
+    <div id="find"></div>
+    <button class="btn round" id="btn-hint" aria-label="Hint (dice)">🎲<small id="hints">6</small></button>
+  </div>
+</div>
+
+<section id="start" class="screen">
+  <h1 id="start-title"></h1><p id="start-tag"></p>
+  <button class="btn big" id="btn-start"></button>
+</section>
+
+<section id="mission" class="screen" hidden>
+  <div class="mission-text">
+    <p class="kicker" id="m-kicker"></p><h2 id="m-head"></h2><div id="m-paras"></div>
+    <button class="btn big" id="btn-begin"></button>
+  </div>
+</section>
+
+<div id="tut" hidden>
+  <div id="spot"></div>
+  <div id="tut-card" class="plank"><div id="tut-art"></div><p id="tut-text"></p><div id="tut-dots"></div>
+    <div class="row"><button class="btn" id="tut-skip"></button><button class="btn primary" id="tut-next"></button></div>
+  </div>
+</div>
+
+<div id="dlg" class="plank" hidden>
+  <div id="dlg-port"></div>
+  <div id="dlg-body"><p id="dlg-card"></p><b id="dlg-name"></b><p id="dlg-text"></p><small id="dlg-tap"></small></div>
+  <button class="btn" id="dlg-skip"></button>
+</div>
+
+<div id="dice-roll" hidden></div>
+<div id="fade"></div>
+
+<div id="panel" class="overlay" hidden><div class="plank">
+  <button class="btn round x" id="panel-x" aria-label="Close">✕</button>
+  <button class="btn round hintbtn" id="panel-hint" aria-label="Hint">🎲<small id="panel-hints"></small></button>
+  <h3 id="panel-title"></h3><div id="panel-body"></div><p id="panel-what"></p>
+</div></div>
+
+<div id="card" class="overlay" hidden><div class="plank">
+  <button class="btn round x" id="card-x" aria-label="Close">✕</button>
+  <div id="card-img"></div><h3 id="card-title"></h3><p id="card-text"></p><small id="card-sub"></small>
+  <button class="btn primary" id="card-ok"></button>
+</div></div>
+
+<div id="casebook" class="overlay" hidden><div class="plank book">
+  <button class="btn round x" id="cb-x" aria-label="Close">✕</button>
+  <div class="cbhead"><img id="cb-cover" alt="" hidden><h3 id="cb-title"></h3></div>
+  <div id="cb-tabs"></div><div id="cb-body"></div>
+</div></div>
+
+<div id="titlecard" hidden><h1></h1><p></p><button class="btn big"></button></div>
+<div id="toast" hidden></div>
+<div id="shatterfx" hidden></div>
+
+<div id="pausemenu" class="overlay" hidden><div class="plank"><h3 id="pm-title"></h3>
+  <button class="btn primary" id="pm-resume"></button><button class="btn" id="pm-voice"></button><button class="btn" id="pm-sound"></button><button class="btn" id="pm-music"></button><button class="btn" id="pm-restart"></button></div></div>
+<div id="timeup" class="overlay" hidden><div class="plank"><h3 id="tu-title"></h3><p id="tu-line"></p><button class="btn primary" id="tu-btn"></button><button class="btn" id="tu-review"></button></div></div>
+<div id="win" class="overlay" hidden><div class="plank"><h3 id="win-title"></h3><p id="win-line"></p><div id="win-stats"></div><button class="btn primary" id="win-again"></button><button class="btn" id="win-book"></button></div></div>
+<pre id="debug" hidden></pre>
+
+<script src="vendor/pannellum/pannellum.js"></script>
+<script src="sound.js"></script>
+<script src="logic.js"></script>
+<script src="panels.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

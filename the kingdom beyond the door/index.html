@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>The Kingdom Beyond the Door</title>
+<meta name="description" content="A 360-degree point-and-click escape game. Step through the Door and relight the Ember Heart in ten minutes.">
+<meta name="theme-color" content="#0B1530">
+<link rel="stylesheet" href="vendor/pannellum/pannellum.css">
+<link rel="stylesheet" href="style.css?v=15">
+</head>
+<body>
+<div id="app">
+  <div id="pano"></div>
+  <div id="snow" aria-hidden="true"></div>
+  <div id="fade"></div>
+
+  <header id="hud" class="hidden">
+    <div class="hud-left"><div id="roomName"></div><div id="objective"></div></div>
+    <div class="hud-right">
+      <div class="chip" id="clock" aria-label="Time left"><span class="ic-ember"></span><b id="clockTxt">10:00</b></div>
+      <div class="chip" id="embers" aria-label="Embers"><span class="ic-ember"></span><b id="emberTxt">0</b></div>
+      <button class="sqbtn" id="pauseBtn" aria-label="Pause"></button>
+    </div>
+  </header>
+  <div id="strip" class="hidden"></div>
+  <button class="round hidden" id="bagBtn" aria-label="Open your Bag"><span class="badge" id="bagBadge">0</span></button>
+  <button class="round hidden" id="hintBtn" aria-label="Use a hint"><span class="badge" id="hintBadge">2</span></button>
+  <div id="selChip" class="hidden"></div>
+  <div id="ghost" class="hidden"></div>
+
+  <div id="dlg" class="hidden" role="dialog" aria-live="polite">
+    <button id="dlgSkip" aria-label="Skip">Skip</button>
+    <div class="slot left"></div><div class="slot right"></div>
+    <div class="nameplate"></div>
+    <div class="dorn">&#10052;</div>
+    <div class="dtext"></div>
+    <div class="darrow"></div>
+  </div>
+
+  <div id="layers"></div>
+  <div id="toast" class="hidden"></div>
+  <div id="debug" class="hidden"></div>
+</div>
+<script src="vendor/pannellum/pannellum.js"></script>
+<script src="game.js?v=15"></script>
+</body>
+</html>

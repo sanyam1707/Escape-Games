@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Throne of the Seven Kingdoms</title>
+<meta name="description" content="A 360-degree escape game. You have ten minutes to prove who poisoned the king.">
+<meta property="og:title" content="Throne of the Seven Kingdoms">
+<meta property="og:description" content="A 360-degree escape game. You have ten minutes to prove who poisoned the king.">
+<meta property="og:image" content="assets/sheets/tap_to_start.jpg">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="vendor/pannellum.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <div id="pano"></div>
+  <div id="fx" aria-hidden="true"><div class="fx-vig"></div><div class="fx-pulse"></div><div class="fx-red"></div><div class="fx-glow"></div><div class="fx-guards"></div></div>
+  <div id="hotspots"></div>
+
+  <header id="hud" hidden>
+    <div class="hud-top">
+      <div class="hud-stats" id="hudStats">
+        <div class="stat plate"><span class="stat-k" data-ui="renown"></span><b id="renown">0</b></div>
+      </div>
+      <div class="hud-timer plate" id="timer">10:00</div>
+      <div class="hud-btns">
+        <button class="ibtn" id="hintBtn" aria-label="Hint"><span class="ico" data-icon="hint">?</span><i id="hintCount">3</i></button>
+        <button class="ibtn" id="bookBtn" aria-label="Proof Book"><span class="ico" data-icon="book">B</span></button>
+        <button class="ibtn" id="pauseBtn" aria-label="Pause"><span class="ico" data-icon="pause">II</span></button>
+      </div>
+    </div>
+    <div class="hud-banners" id="banners"></div>
+    <div class="hud-obj" id="objective"></div>
+    <div class="hud-find" id="findStrip"></div>
+  </header>
+
+  <div id="intro" class="card-wrap" hidden></div>
+  <div id="toast" role="status"></div>
+  <div id="flyer"></div>
+</div>
+
+<section id="screenStart" class="screen">
+  <div class="art"></div>
+  <div class="shade"></div>
+  <div class="start-body">
+    <div class="silhouette" aria-hidden="true"></div>
+    <h1 data-ui="title"></h1>
+    <p class="tap" data-ui="tapStart"></p>
+  </div>
+</section>
+
+<section id="screenMission" class="screen" hidden>
+  <div class="art"></div>
+  <div class="shade"></div>
+  <div class="mission-body">
+    <p class="kicker" id="mKicker"></p>
+    <h2 id="mHeading"></h2>
+    <div id="mParas"></div>
+    <button class="seal" id="beginBtn"></button>
+  </div>
+</section>
+
+<div id="tutorial" hidden>
+  <div class="tut-dim" id="tutDim"></div>
+  <div class="tut-card" id="tutCard">
+    <h3 id="tutTitle"></h3><p id="tutText"></p>
+    <div class="tut-nav"><button class="link" id="tutSkip"></button><span id="tutStep"></span><button class="seal sm" id="tutNext"></button></div>
+  </div>
+</div>
+
+<div id="dlg" hidden>
+  <div class="dlg-catch" id="dlgCatch"></div>
+  <div class="dlg-bar" id="dlgBar">
+    <div class="dlg-fig L" id="figL" hidden></div>
+    <div class="dlg-fig R" id="figR" hidden></div>
+    <div class="dlg-plate" id="dlgName"></div>
+    <p id="dlgLine"></p>
+    <div class="dlg-foot"><small id="dlgTap" data-ui="tap"></small><button class="link" id="dlgSkip"></button></div>
+  </div>
+</div>
+
+<div id="panel" class="modal" hidden>
+  <div class="modal-back" id="panelBack"></div>
+  <div class="modal-box" id="panelBox">
+    <button class="close" id="panelClose" aria-label="Close">&times;</button>
+    <div id="panelBody"></div>
+  </div>
+</div>
+
+<div id="book" class="modal" hidden>
+  <div class="modal-back" id="bookBack"></div>
+  <div class="modal-box" id="bookBox">
+    <button class="close" id="bookClose" aria-label="Close">&times;</button>
+    <h2 data-ui="bookTitle"></h2>
+    <div class="tabs" id="bookTabs"></div>
+    <div id="bookBody"></div>
+  </div>
+</div>
+
+<div id="pauseMenu" class="modal" hidden>
+  <div class="modal-back"></div>
+  <div class="modal-box small">
+    <h2 data-ui="pause"></h2>
+    <div class="menu" id="pauseList"></div>
+  </div>
+</div>
+
+<section id="screenDeath" class="screen" hidden>
+  <div class="art"></div><div class="shade"></div>
+  <div class="death-body"><p id="deathLine"></p><small data-ui="tap"></small></div>
+</section>
+
+<section id="screenOver" class="screen" hidden>
+  <div class="art"></div><div class="shade heavy"></div>
+  <div class="over-body"><h2 data-ui="gameOver"></h2><p class="big"><span data-ui="renown"></span>: <b id="overScore">0</b></p>
+    <div class="row"><button class="seal" id="tryBtn"></button><button class="seal ghost" id="overQuit"></button></div></div>
+</section>
+
+<section id="screenEnding" class="screen" hidden>
+  <div class="art"></div><div class="shade"></div>
+  <div class="death-body"><p id="endLine"></p><small data-ui="tap"></small></div>
+</section>
+
+<section id="screenWin" class="screen" hidden>
+  <div class="art"></div><div class="shade heavy"></div>
+  <div class="win-body">
+    <p class="kicker" data-ui="sequelHeading"></p>
+    <h2 id="winHeading"></h2>
+    <table class="score" id="winScore"></table>
+    <h3 data-ui="proofsHeading"></h3>
+    <ol id="winProofs"></ol>
+    <button class="seal" id="againBtn"></button>
+  </div>
+</section>
+
+<div id="rays" class="rays" hidden></div>
+<div id="ceremony" class="ceremony" hidden></div>
+<div id="reveal" hidden></div>
+<div id="splash" hidden></div>
+<canvas id="fxc"></canvas>
+<div id="flash"></div>
+
+<script src="vendor/pannellum.js"></script>
+<script src="fx.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,2137 @@
+{
+ "config": {
+  "timer": 720,
+  "score": {
+   "item": 5,
+   "secret": 5,
+   "reward": 30,
+   "final": 50,
+   "perSecond": 1,
+   "wrong": 10,
+   "hint": 30
+  },
+  "lockout": 3,
+  "hintsPerRoom": 2,
+  "idleSeconds": 40,
+  "blurPx": 6,
+  "sharpenMs": 1200,
+  "gesture": {
+   "gust": {
+    "minSweep": 390,
+    "minSize": 40
+   },
+   "flow": {
+    "minWidth": 60,
+    "minAmp": 15,
+    "revPx": 12
+   },
+   "root": {
+    "minWidth": 50,
+    "minHeight": 30,
+    "revPx": 15,
+    "cornerFrac": 0.1,
+    "maxFill": 0.66
+   },
+   "spark": {
+    "minHeight": 50,
+    "revPx": 10,
+    "maxSweep": 390
+   }
+  },
+  "rhythm": {
+   "shortMs": 300,
+   "longMs": 900,
+   "gapMs": 300,
+   "holdMinMs": 500,
+   "tolMs": 350
+  },
+  "musicVolume": 0.08
+ },
+ "speakers": {
+  "tavi": {
+   "name": "Tavi",
+   "pitch": 1.25,
+   "rate": 1.05,
+   "color": "#7FB7D9",
+   "bust": "bust_tavi"
+  },
+  "maren": {
+   "name": "Maren",
+   "pitch": 1.1,
+   "rate": 0.95,
+   "color": "#1F6F78",
+   "bust": "bust_maren"
+  },
+  "moku": {
+   "name": "Moku",
+   "pitch": 1,
+   "rate": 1,
+   "color": "#C79A3A",
+   "bust": "bust_moku",
+   "silent": true
+  },
+  "ashkar": {
+   "name": "Regent Ashkar",
+   "pitch": 0.6,
+   "rate": 0.85,
+   "color": "#B3342A",
+   "bust": "bust_ashkar"
+  },
+  "owl": {
+   "name": "Owl Keeper",
+   "pitch": 0.75,
+   "rate": 0.8,
+   "color": "#8C6BB1",
+   "bust": "bust_owl"
+  },
+  "narrator": {
+   "name": "Narrator",
+   "pitch": 0.9,
+   "rate": 0.9,
+   "color": "#E2B94B",
+   "bust": ""
+  }
+ },
+ "ui": {
+  "gameTitle": "The Four Elemental Realms",
+  "tapStart": "Tap to begin",
+  "begin": "Begin",
+  "next": "Next",
+  "skip": "Skip",
+  "close": "Close",
+  "pause": "Pause",
+  "resume": "Resume",
+  "voiceOn": "Voice: on",
+  "voiceOff": "Voice: off",
+  "restart": "Restart game",
+  "casebook": "Casebook",
+  "hint": "Hint",
+  "hintsLeft": "Hints",
+  "noHints": "No hints left in this room.",
+  "chi": "Chi",
+  "findStrip": "Find in this room",
+  "tabs": {
+   "clues": "Clues",
+   "forms": "Forms",
+   "marks": "Marks",
+   "items": "Items"
+  },
+  "emptyClues": "No clues yet. Look around the room.",
+  "locked": "Locked",
+  "hold": "Hold",
+  "holding": "Holding",
+  "cancel": "Cancel",
+  "needItem": "You need to hold an item. Open the Casebook, tap Items, then tap Hold.",
+  "wrongItem": "That is not the right item for this.",
+  "lockout": "Wait",
+  "continue": "Continue",
+  "gotIt": "Got it",
+  "tapContinue": "Tap to continue",
+  "practice": "Practise",
+  "practiceHint": "Trace the dotted shape, roughly is fine.",
+  "practiceFail": "Not quite. Try again.",
+  "practiceDone": "Well done!",
+  "formLearned": "Form learned",
+  "markEarned": "Mark earned",
+  "newItem": "New item",
+  "newRoom": "A new way is open!",
+  "exitHint": "Tap the glowing way out.",
+  "inspectHint": "Tap the object to turn it.",
+  "secretFound": "Secret found!",
+  "restartConfirm": "Start again from the beginning?",
+  "ringTitle": "The Cycle",
+  "roomsDone": "Rooms done",
+  "playAgain": "Play Again",
+  "tryAgain": "Try Again"
+ },
+ "start": {
+  "kicker": "A hundred years later",
+  "heading": "The Realms Are Falling Out of Balance",
+  "paras": [
+   "Four floating realms are kept in balance by a magic bridge called the Spirit Nexus.",
+   "A hundred years ago, the Nexus was sealed. Now Regent Ashkar steals the realms' Chi to power a war machine.",
+   "You are Tavi, a young monk who just woke up. With your friend Maren, relearn the four Forms and open the Nexus. You have 12 minutes."
+  ],
+  "tutorial": [
+   {
+    "text": "Drag on the screen to look around the room.",
+    "spot": "center",
+    "audioFile": "assets/audio/voice/tut_1.mp3"
+   },
+   {
+    "text": "Tap objects to pick them up or look closer.",
+    "spot": "center",
+    "audioFile": "assets/audio/voice/tut_2.mp3"
+   },
+   {
+    "text": "The Casebook keeps your clues, Forms, Marks and items. Puzzles do not show clues, so open it to read them.",
+    "spot": "casebook",
+    "audioFile": "assets/audio/voice/tut_3.mp3"
+   },
+   {
+    "text": "Forms are shapes you draw: a tornado, a wave, a flame and a mountain. When a puzzle asks, draw the shape on the screen.",
+    "spot": "center",
+    "audioFile": "assets/audio/voice/tut_4.mp3"
+   },
+   {
+    "text": "Chi is your score. A hint costs 30 Chi. You get 2 hints in each room. A wrong answer costs 10 Chi. You have 12 minutes. The clock only stops while Tavi and Maren talk.",
+    "spot": "chi",
+    "audioFile": "assets/audio/voice/tut_5.mp3"
+   }
+  ],
+  "opening": [
+   "open.1",
+   "open.2",
+   "open.3",
+   "open.4",
+   "open.5"
+  ],
+  "briefAudio": "assets/audio/voice/brief_1.mp3"
+ },
+ "dialogue": {
+  "open.1": {
+   "s": "narrator",
+   "t": "The wind-shell cracks. A boy sits up in a quiet stone hall.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_open_1.mp3"
+  },
+  "open.2": {
+   "s": "tavi",
+   "t": "Hello? Where is everybody? It is so quiet.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_open_2.mp3"
+  },
+  "open.3": {
+   "s": "maren",
+   "t": "You slept for a hundred years. I am Maren. I came to wake you up.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_open_3.mp3"
+  },
+  "open.4": {
+   "s": "maren",
+   "t": "Ashkar has sealed the Nexus. We must learn the four Forms to open it again.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_open_4.mp3"
+  },
+  "open.5": {
+   "s": "tavi",
+   "t": "Four Forms. I only remember one, from a dream. Let's go!",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_open_5.mp3"
+  },
+  "idle": {
+   "s": "maren",
+   "t": "Try turning around. Drag to look around.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_idle.mp3"
+  },
+  "r1.enter.1": {
+   "s": "tavi",
+   "t": "This was my home. It is so quiet now.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r1_enter_1.mp3"
+  },
+  "r1.enter.2": {
+   "s": "maren",
+   "t": "Find the toys that were yours. Look at the walls and the table.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r1_enter_2.mp3"
+  },
+  "r1.find.plaques": {
+   "s": "tavi",
+   "t": "Four riddles. Each riddle is about one toy.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r1_find_plaques.mp3"
+  },
+  "r1.inspect.suntop": {
+   "s": "maren",
+   "t": "A tiny crown mark under the toy. Remember it.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r1_inspect_suntop.mp3"
+  },
+  "r1.discuss": {
+   "s": "maren",
+   "t": "The four stands need four toys in the right order. Look for a ring of four pictures.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r1_discuss.mp3"
+  },
+  "r1.wrong.1": {
+   "s": "maren",
+   "t": "Think about what each toy does. Not only how it looks.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r1_wrong_1.mp3"
+  },
+  "r1.wrong.2": {
+   "s": "maren",
+   "t": "Open the Casebook. The plaque riddles say which toy to pick. The ring picture gives the order.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r1_wrong_2.mp3"
+  },
+  "r1.wrong.3": {
+   "s": "maren",
+   "t": "Order: the toy that hums, the one you blow, the one that rolls, the one with a house on its back.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r1_wrong_3.mp3"
+  },
+  "r1.right.1": {
+   "s": "tavi",
+   "t": "They hum together! I remember them. They were all mine.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r1_right_1.mp3"
+  },
+  "r1.right.2": {
+   "s": "maren",
+   "t": "Fire, Air, Water, Earth. The Cycle starts again with you.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r1_right_2.mp3"
+  },
+  "r1.right.3": {
+   "s": "tavi",
+   "t": "Then the first Form is mine again. Watch this!",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r1_right_3.mp3"
+  },
+  "r1.idle": {
+   "s": "maren",
+   "t": "There are eight toys, but the stands take only four.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r1_idle.mp3"
+  },
+  "r2.enter.1": {
+   "s": "maren",
+   "t": "Frostmere. My family's city. The moon rules everything here.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r2_enter_1.mp3"
+  },
+  "r2.enter.2": {
+   "s": "tavi",
+   "t": "Why are the gates frozen shut?",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r2_enter_2.mp3"
+  },
+  "r2.inspect.valve": {
+   "s": "maren",
+   "t": "Copper pipes in an ice city? Something is pulling power away.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r2_inspect_valve.mp3"
+  },
+  "r2.find.note": {
+   "s": "tavi",
+   "t": "Four pipes lead to one engine. That is the Regent's work.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r2_find_note.mp3"
+  },
+  "r2.discuss": {
+   "s": "tavi",
+   "t": "Four gates and four moons. Each gate wants a sea level first.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r2_discuss.mp3"
+  },
+  "r2.wrong.1": {
+   "s": "maren",
+   "t": "First check what sea level each gate wants. Then pick a moon.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r2_wrong_1.mp3"
+  },
+  "r2.wrong.2": {
+   "s": "maren",
+   "t": "The tide wall in your Casebook shows the sea level for each moon. The gate notes say what each gate needs.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r2_wrong_2.mp3"
+  },
+  "r2.wrong.3": {
+   "s": "maren",
+   "t": "Two gates want the highest sea: the whole moon, and no moon. Two want the lowest: the half that grows, and the half that shrinks.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r2_wrong_3.mp3"
+  },
+  "r2.right.1": {
+   "s": "tavi",
+   "t": "The water is rising. The gates are opening!",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r2_right_1.mp3"
+  },
+  "r2.right.2": {
+   "s": "maren",
+   "t": "The moon pulls the tide. Water Forms flow in the same way.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r2_right_2.mp3"
+  },
+  "r2.right.3": {
+   "s": "tavi",
+   "t": "Then the second Form is flowing back to me.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r2_right_3.mp3"
+  },
+  "r2.idle": {
+   "s": "maren",
+   "t": "There are eight moons but only four gates. What level does each gate want?",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r2_idle.mp3"
+  },
+  "r3.enter.1": {
+   "s": "tavi",
+   "t": "A garden in the sky. I love it here!",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r3_enter_1.mp3"
+  },
+  "r3.enter.2": {
+   "s": "maren",
+   "t": "The Jade Lotus keeps old secrets. Find out how their game works.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r3_enter_2.mp3"
+  },
+  "r3.find.letter": {
+   "s": "maren",
+   "t": "The Regent wants all four realms at the same time. That is his plan.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r3_find_letter.mp3"
+  },
+  "r3.inspect.teapot": {
+   "s": "tavi",
+   "t": "A paper bird! It says the Owl knows about the engine.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r3_inspect_teapot.mp3"
+  },
+  "r3.discuss": {
+   "s": "tavi",
+   "t": "Four tiles in every row. Each one needs its own place.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r3_discuss.mp3"
+  },
+  "r3.wrong.1": {
+   "s": "maren",
+   "t": "Each element can show up only once in every row and every column.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r3_wrong_1.mp3"
+  },
+  "r3.wrong.2": {
+   "s": "maren",
+   "t": "Start with Earth. All the Earth tiles are already there. Then fill in what is missing in each row.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r3_wrong_2.mp3"
+  },
+  "r3.wrong.3": {
+   "s": "maren",
+   "t": "Row three needs Air and Fire. The first column already has Fire, so Air goes in the first square of row three.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r3_wrong_3.mp3"
+  },
+  "r3.right.1": {
+   "s": "tavi",
+   "t": "The petals open! The board sinks into the stone.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r3_right_1.mp3"
+  },
+  "r3.right.2": {
+   "s": "maren",
+   "t": "The door was a harmony lock. Only a patient mind can open it.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r3_right_2.mp3"
+  },
+  "r3.right.3": {
+   "s": "tavi",
+   "t": "Earth waits to be pushed, so I push. The third Form is mine!",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r3_right_3.mp3"
+  },
+  "r3.idle": {
+   "s": "maren",
+   "t": "Earth is the easy one. Its four tiles are already placed.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r3_idle.mp3"
+  },
+  "r4.enter.1": {
+   "s": "tavi",
+   "t": "So many books! Moku, do not touch the owl.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r4_enter_1.mp3"
+  },
+  "r4.enter.2": {
+   "s": "owl",
+   "t": "Few visit. Fewer read. Which one are you?",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_enter_2.mp3"
+  },
+  "r4.inspect.ledger": {
+   "s": "maren",
+   "t": "This is very old. The Regent's family name is in it.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_inspect_ledger.mp3"
+  },
+  "r4.discuss": {
+   "s": "tavi",
+   "t": "The key has two parts, so we need both parts.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r4_discuss.mp3"
+  },
+  "r4.wrong.1": {
+   "s": "maren",
+   "t": "The key is split in two. Check the shelves and the owl's wings.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_wrong_1.mp3"
+  },
+  "r4.wrong.2": {
+   "s": "maren",
+   "t": "Your Casebook has all the pairs now. Match the scroll one picture at a time.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_wrong_2.mp3"
+  },
+  "r4.wrong.3": {
+   "s": "maren",
+   "t": "The first word has four letters and ends with K. The second word has three letters and starts with S.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_wrong_3.mp3"
+  },
+  "r4.right.1": {
+   "s": "owl",
+   "t": "Dark Sun. When the sun hides, the engine's fire hides too.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_right_1.mp3"
+  },
+  "r4.right.2": {
+   "s": "tavi",
+   "t": "An eclipse! That is when we can stop the engine.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r4_right_2.mp3"
+  },
+  "r4.right.3": {
+   "s": "owl",
+   "t": "Take my glass. It bends shadow where you point it.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_right_3.mp3"
+  },
+  "r4.idle": {
+   "s": "maren",
+   "t": "Four pictures, then three. Two short words.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_idle.mp3"
+  },
+  "r5.enter.1": {
+   "s": "ashkar",
+   "t": "You walk into my house, little monk. Enjoy it while you can.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r5_enter_1.mp3"
+  },
+  "r5.enter.2": {
+   "s": "maren",
+   "t": "He knows we are here. Stay calm and keep going.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r5_enter_2.mp3"
+  },
+  "r5.inspect.brazier": {
+   "s": "tavi",
+   "t": "This fire was lit for the people. That is not how the Regent uses it.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r5_inspect_brazier.mp3"
+  },
+  "r5.find.map": {
+   "s": "maren",
+   "t": "All four pipes end in one place: the Eclipse Court.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r5_find_map.mp3"
+  },
+  "r5.discuss": {
+   "s": "tavi",
+   "t": "The mask is breathing fire. I think I have to breathe back.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r5_discuss.mp3"
+  },
+  "r5.wrong.1": {
+   "s": "maren",
+   "t": "Watch the mask again. The short and long flashes both matter.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r5_wrong_1.mp3"
+  },
+  "r5.wrong.2": {
+   "s": "maren",
+   "t": "Your Casebook says a short flash is a quick tap, and a long glow is a slow press.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r5_wrong_2.mp3"
+  },
+  "r5.wrong.3": {
+   "s": "maren",
+   "t": "Tap when the flash is short. Hold when the glow is long. Keep the same beat.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r5_wrong_3.mp3"
+  },
+  "r5.right.1": {
+   "s": "tavi",
+   "t": "The fires roar! It felt like breathing in and out.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r5_right_1.mp3"
+  },
+  "r5.right.2": {
+   "s": "maren",
+   "t": "Fire is breath, not anger. Keep that in your heart.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r5_right_2.mp3"
+  },
+  "r5.right.3": {
+   "s": "tavi",
+   "t": "The fourth Form is mine! And the Cycle closes. Earth leads back to Fire.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r5_right_3.mp3"
+  },
+  "r5.idle": {
+   "s": "maren",
+   "t": "Use Watch again. It is free.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r5_idle.mp3"
+  },
+  "r6.enter.1": {
+   "s": "tavi",
+   "t": "The sun is black. I have never seen that.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r6_enter_1.mp3"
+  },
+  "r6.enter.2": {
+   "s": "maren",
+   "t": "The Dark Sun. The Owl was right. Use her glass!",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r6_enter_2.mp3"
+  },
+  "r6.inspect.sundial": {
+   "s": "tavi",
+   "t": "The dark sun will not last. We have to be quick.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r6_inspect_sundial.mp3"
+  },
+  "r6.find.blueprint": {
+   "s": "maren",
+   "t": "The engine is linked to a mirror in the Nexus. Remember that.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r6_find_blueprint.mp3"
+  },
+  "r6.discuss": {
+   "s": "tavi",
+   "t": "A beam enters low on the left. We must bend it to the crystal.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r6_discuss.mp3"
+  },
+  "r6.wrong.1": {
+   "s": "maren",
+   "t": "Follow the beam with your eyes, one mirror at a time.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r6_wrong_1.mp3"
+  },
+  "r6.wrong.2": {
+   "s": "maren",
+   "t": "The rules card in your Casebook shows how each mirror turns the beam. The court plan shows where the mirrors stand.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r6_wrong_2.mp3"
+  },
+  "r6.wrong.3": {
+   "s": "maren",
+   "t": "The beam goes right, climbs up, goes right again, drops down, then runs right into the crystal.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r6_wrong_3.mp3"
+  },
+  "r6.right.1": {
+   "s": "tavi",
+   "t": "The shadow floods the crystal. The engine's glow is dying!",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r6_right_1.mp3"
+  },
+  "r6.right.2": {
+   "s": "maren",
+   "t": "The guards' flames are gone. But the Regent will not stop.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r6_right_2.mp3"
+  },
+  "r6.right.3": {
+   "s": "tavi",
+   "t": "Then we go to the Nexus. The bridge is open now.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r6_right_3.mp3"
+  },
+  "r6.idle": {
+   "s": "maren",
+   "t": "The beam goes right first. Which way should the first mirror turn it?",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r6_idle.mp3"
+  },
+  "r7.enter.1": {
+   "s": "tavi",
+   "t": "Four pillars and a big mirror. This is the Nexus.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r7_enter_1.mp3"
+  },
+  "r7.enter.2": {
+   "s": "maren",
+   "t": "The engine is linked to that mirror. Ashkar is watching us.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r7_enter_2.mp3"
+  },
+  "r7.enter.3": {
+   "s": "ashkar",
+   "t": "Four realms in one cup. Comet night is mine.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_enter_3.mp3"
+  },
+  "r7.discuss": {
+   "s": "maren",
+   "t": "Read your Casebook. The Marks and the tablet will help you here.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r7_discuss.mp3"
+  },
+  "r7.A.wrong.1": {
+   "s": "maren",
+   "t": "Check the four Marks in your Casebook.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_A_wrong_1.mp3"
+  },
+  "r7.A.wrong.2": {
+   "s": "maren",
+   "t": "The Marks make a ring. The tablet tells you where the ring starts.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_A_wrong_2.mp3"
+  },
+  "r7.A.wrong.3": {
+   "s": "maren",
+   "t": "Ashkar is Ember, which is Fire. Start with Fire, then follow the Marks.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_A_wrong_3.mp3"
+  },
+  "r7.B.wrong": {
+   "s": "maren",
+   "t": "Open the Forms tab. Each pillar needs the Form of its own element.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_B_wrong.mp3"
+  },
+  "r7.C.wrong.1": {
+   "s": "maren",
+   "t": "Remember what the elders wrote on the wall.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_C_wrong_1.mp3"
+  },
+  "r7.C.wrong.2": {
+   "s": "maren",
+   "t": "Taking Chi breaks the Cycle, even from the Regent.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_C_wrong_2.mp3"
+  },
+  "r7.C.wrong.3": {
+   "s": "maren",
+   "t": "Balance is returned, never taken. Return it.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_C_wrong_3.mp3"
+  },
+  "r7.right": {
+   "s": "tavi",
+   "t": "The Cycle is whole again. Everything is flowing back!",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_r7_right.mp3"
+  },
+  "r7.idle": {
+   "s": "maren",
+   "t": "The Marks make a ring. Which element does the tablet say starts it?",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_idle.mp3"
+  },
+  "end.1": {
+   "s": "ashkar",
+   "t": "Why did you not take it? It was yours.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_end_1.mp3"
+  },
+  "end.2": {
+   "s": "tavi",
+   "t": "It never was. It belongs to everyone.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_end_2.mp3"
+  },
+  "end.3": {
+   "s": "maren",
+   "t": "The realms are breathing again.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_end_3.mp3"
+  },
+  "end.4": {
+   "s": "narrator",
+   "t": "The wind-shell is quiet. The Nexus is open and the Cycle turns once more.",
+   "pt": true,
+   "audioFile": "assets/audio/voice/dlg_end_4.mp3"
+  },
+  "end.5": {
+   "s": "moku",
+   "t": "Moku chirps and curls up on Tavi's shoulder.",
+   "pt": true
+  },
+  "r1.find.mural": {
+   "s": "maren",
+   "t": "The elders wrote this. Read it twice.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r1_find_mural.mp3"
+  },
+  "r1.find.cycle": {
+   "s": "tavi",
+   "t": "Four pictures in a ring. The arrows show an order.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r1_find_cycle.mp3"
+  },
+  "r2.find.tide": {
+   "s": "maren",
+   "t": "The moon changes the sea. Keep this chart.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r2_find_tide.mp3"
+  },
+  "r2.find.gates": {
+   "s": "tavi",
+   "t": "Each gate has its own rule.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r2_find_gates.mp3"
+  },
+  "r3.find.scroll": {
+   "s": "maren",
+   "t": "A simple rule: each tile once in every row and column.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r3_find_scroll.mp3"
+  },
+  "r3.find.token": {
+   "s": "tavi",
+   "t": "A white lotus! It looks like it fits a door.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r3_find_token.mp3"
+  },
+  "r4.find.scroll": {
+   "s": "tavi",
+   "t": "Strange pictures. We need a key to read them.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_find_scroll.mp3"
+  },
+  "r4.find.spines": {
+   "s": "maren",
+   "t": "Half of the key. The owl may have the rest.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_find_spines.mp3"
+  },
+  "r4.find.wings": {
+   "s": "tavi",
+   "t": "The other half of the key is on the owl feathers!",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r4_find_wings.mp3"
+  },
+  "r5.find.relief": {
+   "s": "maren",
+   "t": "The dragon breathes in short and long puffs.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r5_find_relief.mp3"
+  },
+  "r5.find.note": {
+   "s": "tavi",
+   "t": "The engine needs light. Shadow can stop it.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r5_find_note.mp3"
+  },
+  "r6.find.plan": {
+   "s": "maren",
+   "t": "A map of the floor. Note where each mirror stands.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r6_find_plan.mp3"
+  },
+  "r6.find.rules": {
+   "s": "tavi",
+   "t": "Now I know how the mirrors turn the beam.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r6_find_rules.mp3"
+  },
+  "r7.find.tablet": {
+   "s": "maren",
+   "t": "Start with the one who broke the Cycle.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_find_tablet.mp3"
+  },
+  "r7.find.shard": {
+   "s": "tavi",
+   "t": "What was taken can be given back.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_find_shard.mp3"
+  },
+  "r7.find.offer": {
+   "s": "tavi",
+   "t": "He wants me to take it all. No way.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_find_offer.mp3"
+  },
+  "r7.inspect.hand": {
+   "s": "maren",
+   "t": "The first Wayfarer's toy. Just like yours, Tavi.",
+   "pt": false,
+   "audioFile": "assets/audio/voice/dlg_r7_inspect_hand.mp3"
+  }
+ },
+ "cards": {
+  "c.r1.mural": {
+   "title": "Elders' mural",
+   "text": "Balance is returned, never taken.",
+   "type": "Clue"
+  },
+  "c.r1.plaques": {
+   "title": "Plaque rubbings",
+   "text": "Fire: My toy hums when it turns and never walks.\nAir: Mine is blown, not flown.\nWater: Mine rolls wherever the water goes.\nEarth: Mine carries its house on its back.",
+   "type": "Clue"
+  },
+  "c.r1.cycle": {
+   "title": "Cycle rubbing",
+   "text": "Four pictures in a ring: sun, wind, wave, mountain. Arrows go around from the sun.",
+   "type": "Clue"
+  },
+  "c.r1.suntop": {
+   "title": "Sun-top (secret)",
+   "text": "A tiny crown mark is scratched under the toy.",
+   "type": "Clue"
+  },
+  "c.r2.tide": {
+   "title": "Tide wall rubbing",
+   "text": "Sea level for each moon:\nHighest: new moon and full moon.\nLowest: first quarter and last quarter.\nMiddle: the four crescent and gibbous moons.",
+   "type": "Clue"
+  },
+  "c.r2.gates": {
+   "title": "Gate inscriptions",
+   "text": "Gate A: highest sea, whole moon.\nGate B: highest sea, no moon.\nGate C: lowest sea, the lit half is growing.\nGate D: lowest sea, the lit half is shrinking.",
+   "type": "Clue"
+  },
+  "c.r2.note": {
+   "title": "Copper pipe note",
+   "text": "Chi is drained along four copper pipes into one engine.",
+   "type": "Clue"
+  },
+  "c.r2.valve": {
+   "title": "Copper valve (secret)",
+   "text": "A crown mark is stamped on the valve.",
+   "type": "Clue"
+  },
+  "c.r3.scroll": {
+   "title": "Harmony scroll",
+   "text": "Each element can appear only once in every row and every column.",
+   "type": "Clue"
+  },
+  "c.r3.letter": {
+   "title": "Lotus letter",
+   "text": "The Regent needs all four realms at once, on comet night.",
+   "type": "Clue"
+  },
+  "c.r3.token": {
+   "title": "White lotus token",
+   "text": "Taken from a lantern. It fits a carved door. Find it in Items.",
+   "type": "Item"
+  },
+  "c.r3.teapot": {
+   "title": "Teapot (secret)",
+   "text": "A paper bird says: The Owl knows where the engine sleeps.",
+   "type": "Clue"
+  },
+  "c.r4.scroll": {
+   "title": "Glyph scroll",
+   "text": "Seven glyphs in two groups: four, then three.",
+   "type": "Clue"
+  },
+  "c.r4.spines": {
+   "title": "Shelf spine key",
+   "text": "Spiral = D\nThree dots = A\nCrescent = R\nArrow = K",
+   "type": "Clue"
+  },
+  "c.r4.wings": {
+   "title": "Owl wing key",
+   "text": "Ring with a dot = S\nWavy line = U\nTower = N",
+   "type": "Clue"
+  },
+  "c.r4.ledger": {
+   "title": "Visitor ledger (secret)",
+   "text": "A very old note: A. only asked about eclipses.",
+   "type": "Clue"
+  },
+  "c.r5.relief": {
+   "title": "Breath relief rubbing",
+   "text": "Short flashes are quick puffs. Long glows are slow holds.",
+   "type": "Clue"
+  },
+  "c.r5.note": {
+   "title": "Engine note",
+   "text": "The engine feeds on light. It fails in shadow.",
+   "type": "Clue"
+  },
+  "c.r5.map": {
+   "title": "War map",
+   "text": "Four copper pipes run from the four realms to one place: the Eclipse Court.",
+   "type": "Clue"
+  },
+  "c.r5.brazier": {
+   "title": "Brazier base (secret)",
+   "text": "Lit for the people, never for the throne.",
+   "type": "Clue"
+  },
+  "c.r6.plan": {
+   "title": "Court plan",
+   "text": "The floor is a grid of 5 rows and 5 columns. Row 1 is at the top. The lens slot is at row 5, column 1. The mirrors stand at row 5 column 2, row 3 column 2, row 3 column 4, and row 5 column 4. The crystal is at row 5, column 5.",
+   "type": "Clue"
+  },
+  "c.r6.rules": {
+   "title": "Mirror rules card",
+   "text": "Slash mirror ( / ): a beam going right turns up. Up turns right. Left turns down. Down turns left.\nBack-slash mirror ( \\ ): a beam going right turns down. Down turns right. Left turns up. Up turns left.",
+   "type": "Clue"
+  },
+  "c.r6.blueprint": {
+   "title": "Engine blueprint",
+   "text": "The engine's heart is linked to a mirror in the Spirit Nexus.",
+   "type": "Clue"
+  },
+  "c.r6.sundial": {
+   "title": "Sundial (secret)",
+   "text": "The Dark Sun passes quickly. Do not waste it.",
+   "type": "Clue"
+  },
+  "c.r7.tablet": {
+   "title": "Guardian's tablet",
+   "text": "Begin with the element of the one who broke the Cycle.",
+   "type": "Clue"
+  },
+  "c.r7.shard": {
+   "title": "Mirror shard",
+   "text": "The engine drinks through this mirror. What was taken can be returned.",
+   "type": "Clue"
+  },
+  "c.r7.offer": {
+   "title": "The Regent's offer",
+   "text": "Join me. Take the Chi of the four realms and rule them.",
+   "type": "Clue"
+  },
+  "c.r7.hand": {
+   "title": "Guardian's hand (secret)",
+   "text": "It holds a small sun-top. It was the first Wayfarer's toy.",
+   "type": "Clue"
+  }
+ },
+ "elements": {
+  "fire": {
+   "name": "Fire",
+   "emblem": "emblem_sun",
+   "color": "#B3342A",
+   "glyph": "sun"
+  },
+  "air": {
+   "name": "Air",
+   "emblem": "emblem_wind",
+   "color": "#7FB7D9",
+   "glyph": "wind"
+  },
+  "water": {
+   "name": "Water",
+   "emblem": "emblem_wave",
+   "color": "#1F6F78",
+   "glyph": "wave"
+  },
+  "earth": {
+   "name": "Earth",
+   "emblem": "emblem_mountain",
+   "color": "#5E8F5B",
+   "glyph": "mountain"
+  }
+ },
+ "forms": {
+  "gust": {
+   "name": "Gust",
+   "element": "air",
+   "icon": "form_gust",
+   "how": "Draw a tornado: a spiral that winds round at least one and a half times.",
+   "guide": "gust"
+  },
+  "flow": {
+   "name": "Flow",
+   "element": "water",
+   "icon": "form_flow",
+   "how": "Draw a wave with two humps, left to right.",
+   "guide": "flow"
+  },
+  "root": {
+   "name": "Root",
+   "element": "earth",
+   "icon": "form_root",
+   "how": "Draw a mountain: one peak, like a tent.",
+   "guide": "root"
+  },
+  "spark": {
+   "name": "Spark",
+   "element": "fire",
+   "icon": "form_spark",
+   "how": "Draw a flame: tall, with a pointed top.",
+   "guide": "spark"
+  }
+ },
+ "marks": [
+  {
+   "id": "air_after_fire",
+   "title": "Air follows Fire",
+   "from": "fire",
+   "to": "air",
+   "icon": "mark_air_after_fire"
+  },
+  {
+   "id": "water_after_air",
+   "title": "Water follows Air",
+   "from": "air",
+   "to": "water",
+   "icon": "mark_water_after_air"
+  },
+  {
+   "id": "earth_after_water",
+   "title": "Earth follows Water",
+   "from": "water",
+   "to": "earth",
+   "icon": "mark_earth_after_water"
+  },
+  {
+   "id": "fire_after_earth",
+   "title": "Fire follows Earth",
+   "from": "earth",
+   "to": "fire",
+   "icon": "mark_fire_after_earth"
+  }
+ ],
+ "items": {
+  "token": {
+   "title": "White lotus token",
+   "icon": "find_token",
+   "text": "Fits the carved door in the Lotus Garden."
+  },
+  "owl_glass": {
+   "title": "Owl-glass",
+   "icon": "item_owl_glass",
+   "text": "Bends shadow. Fits a lens slot."
+  },
+  "eclipse_seal": {
+   "title": "Eclipse Seal",
+   "icon": "item_eclipse_seal",
+   "text": "Opens the bridge to the Spirit Nexus."
+  }
+ },
+ "puzzles": {
+  "r1": {
+   "title": "Relic Test",
+   "text": "Tap a toy, then tap a stand. Tap a toy on a stand to take it back.",
+   "button": "Present",
+   "relics": [
+    {
+     "id": "sun_top",
+     "name": "Sun-top",
+     "color": "#E2793A"
+    },
+    {
+     "id": "ember_stone",
+     "name": "Ember-stone",
+     "color": "#444"
+    },
+    {
+     "id": "wind_whistle",
+     "name": "Wind-whistle",
+     "color": "#7FB7D9"
+    },
+    {
+     "id": "kite",
+     "name": "Kite",
+     "color": "#C79A3A"
+    },
+    {
+     "id": "tide_marble",
+     "name": "Tide-marble",
+     "color": "#2A5FB0"
+    },
+    {
+     "id": "shell_comb",
+     "name": "Shell-comb",
+     "color": "#E8D3A6"
+    },
+    {
+     "id": "jade_tortoise",
+     "name": "Jade tortoise",
+     "color": "#5E8F5B"
+    },
+    {
+     "id": "clay_drum",
+     "name": "Clay drum",
+     "color": "#A5502F"
+    }
+   ],
+   "answer": [
+    "sun_top",
+    "wind_whistle",
+    "tide_marble",
+    "jade_tortoise"
+   ]
+  },
+  "r2": {
+   "title": "Moon-Tide Gates",
+   "text": "Tap a gate's moon to change it. Then release the tide.",
+   "button": "Release the tide",
+   "wrong": "The tide holds.",
+   "phases": [
+    "new",
+    "waxing crescent",
+    "first quarter",
+    "waxing gibbous",
+    "full",
+    "waning gibbous",
+    "last quarter",
+    "waning crescent"
+   ],
+   "levels": [
+    "high",
+    "mid",
+    "low",
+    "mid",
+    "high",
+    "mid",
+    "low",
+    "mid"
+   ],
+   "answer": [
+    "full",
+    "new",
+    "first quarter",
+    "last quarter"
+   ]
+  },
+  "r3": {
+   "title": "Lotus Tile Game",
+   "text": "Tap an empty square to change its tile. Locked tiles cannot change.",
+   "button": "Bloom",
+   "wrong": "The lotus stays closed.",
+   "tiles": [
+    "",
+    "air",
+    "water",
+    "earth",
+    "fire"
+   ],
+   "given": [
+    "F..E",
+    ".EF.",
+    "..EW",
+    "EW.."
+   ],
+   "solution": [
+    "FAWE",
+    "WEFA",
+    "AFEW",
+    "EWAF"
+   ]
+  },
+  "r4": {
+   "title": "Forbidden Glyphs",
+   "text": "Tap a slot, then tap a letter. The slots sit under the scroll's glyphs.",
+   "button": "Read aloud",
+   "wrong": "The scroll stays silent.",
+   "glyphs": [
+    "spiral",
+    "dots",
+    "crescent",
+    "arrow",
+    "ring",
+    "wavy",
+    "tower"
+   ],
+   "scroll": [
+    "spiral",
+    "dots",
+    "crescent",
+    "arrow",
+    "ring",
+    "wavy",
+    "tower"
+   ],
+   "groups": [
+    4,
+    3
+   ],
+   "answer": "DARKSUN"
+  },
+  "r5": {
+   "title": "Dragon Breath",
+   "text": "Watch the mask. Tap for a short flash. Press and hold for a long glow.",
+   "button": "Watch again",
+   "rounds": [
+    "SSL",
+    "LSSL",
+    "SLSLS"
+   ],
+   "tapHere": "Tap or hold here"
+  },
+  "r6": {
+   "title": "Shadow Routing",
+   "text": "Tap a mirror to flip it between / and \\. Then cast the shadow.",
+   "button": "Cast shadow",
+   "wrong": "The shadow misses the crystal.",
+   "size": 5,
+   "lens": [
+    5,
+    1
+   ],
+   "crystal": [
+    5,
+    5
+   ],
+   "mirrors": [
+    [
+     5,
+     2
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     5,
+     4
+    ]
+   ],
+   "start": [
+    "\\",
+    "\\",
+    "/",
+    "/"
+   ],
+   "answer": [
+    "/",
+    "/",
+    "\\",
+    "\\"
+   ]
+  },
+  "r7": {
+   "title": "The Nexus Mirror",
+   "stepTitles": [
+    "Step 1: Prove the Cycle",
+    "Step 2: Perform the Forms",
+    "Step 3: The final choice"
+   ],
+   "stepTexts": [
+    "Put the four elements in order, to prove the Cycle. Check the Casebook.",
+    "Each pillar wakes in turn. Draw the Form of its element. Check the Forms tab.",
+    "One last question."
+   ],
+   "button": "Check",
+   "answerA": [
+    "fire",
+    "air",
+    "water",
+    "earth"
+   ],
+   "pillars": [
+    {
+     "element": "fire",
+     "form": "spark"
+    },
+    {
+     "element": "air",
+     "form": "gust"
+    },
+    {
+     "element": "water",
+     "form": "flow"
+    },
+    {
+     "element": "earth",
+     "form": "root"
+    }
+   ],
+   "question": "What will you do with the Chi?",
+   "choices": [
+    {
+     "text": "Take the Chi and keep it safe.",
+     "right": false
+    },
+    {
+     "text": "Seal the Regent inside the mirror.",
+     "right": false
+    },
+    {
+     "text": "Return the Chi to the four realms.",
+     "right": true
+    }
+   ]
+  }
+ },
+ "rooms": [
+  {
+   "n": 1,
+   "id": "r1",
+   "name": "Windcrest Sanctuary",
+   "realm": "Sky",
+   "pano": "assets/rooms/room1.webp",
+   "accent": "#7FB7D9",
+   "accent2": "#E8D3A6",
+   "objective": "Find the toys' clues, then solve the Relic Test.",
+   "enter": [
+    "r1.enter.1",
+    "r1.enter.2"
+   ],
+   "discuss": "r1.discuss",
+   "wrong": [
+    "r1.wrong.1",
+    "r1.wrong.2",
+    "r1.wrong.3"
+   ],
+   "right": [
+    "r1.right.1",
+    "r1.right.2",
+    "r1.right.3"
+   ],
+   "idle": "r1.idle",
+   "hints": [
+    "Read each rubbing in the Casebook. Match each riddle to one toy.",
+    "The ring goes sun, wind, wave, mountain. Put the matching toys in that order."
+   ],
+   "puzzle": "r1",
+   "start": [
+    0,
+    0
+   ],
+   "reward": {
+    "title": "Gust and the Air Mark",
+    "form": "gust",
+    "mark": "air_after_fire"
+   },
+   "hotspots": [
+    {
+     "id": "r1_mural",
+     "kind": "FIND",
+     "label": "Elders' mural piece",
+     "yaw": -25,
+     "pitch": 5,
+     "sprite": "find_mural",
+     "card": "c.r1.mural",
+     "say": "r1.find.mural"
+    },
+    {
+     "id": "r1_plaques",
+     "kind": "FIND",
+     "label": "Plaque rubbings",
+     "yaw": 69,
+     "pitch": 22,
+     "sprite": "find_plaques",
+     "card": "c.r1.plaques",
+     "say": "r1.find.plaques"
+    },
+    {
+     "id": "r1_cycle",
+     "kind": "FIND",
+     "label": "Cycle rubbing",
+     "yaw": 125,
+     "pitch": 40,
+     "sprite": "find_cycle",
+     "card": "c.r1.cycle",
+     "say": "r1.find.cycle"
+    },
+    {
+     "id": "r1_suntop",
+     "kind": "INSPECT",
+     "label": "Sun-top toy",
+     "yaw": -120,
+     "pitch": -8,
+     "views": [
+      "insp_suntop",
+      "detail_suntop"
+     ],
+     "card": "c.r1.suntop",
+     "say": "r1.inspect.suntop"
+    },
+    {
+     "id": "r1_table",
+     "kind": "PANEL",
+     "label": "Relic stands",
+     "yaw": 100,
+     "pitch": -8,
+     "after": [
+      "r1_plaques",
+      "r1_cycle"
+     ]
+    },
+    {
+     "id": "r1_exit",
+     "kind": "EXIT",
+     "label": "Way to Frostmere",
+     "yaw": 180,
+     "pitch": 5
+    }
+   ],
+   "hintAudio": [
+    "assets/audio/voice/hint_r1_1.mp3",
+    "assets/audio/voice/hint_r1_2.mp3"
+   ]
+  },
+  {
+   "n": 2,
+   "id": "r2",
+   "name": "Frostmere Citadel",
+   "realm": "Tide",
+   "pano": "assets/rooms/room2.webp",
+   "accent": "#1F6F78",
+   "accent2": "#C9D6DF",
+   "objective": "Learn the tide levels, then open the four gates.",
+   "enter": [
+    "r2.enter.1",
+    "r2.enter.2"
+   ],
+   "discuss": "r2.discuss",
+   "wrong": [
+    "r2.wrong.1",
+    "r2.wrong.2",
+    "r2.wrong.3"
+   ],
+   "right": [
+    "r2.right.1",
+    "r2.right.2",
+    "r2.right.3"
+   ],
+   "idle": "r2.idle",
+   "hints": [
+    "Match each gate's sea level to the tide wall chart.",
+    "The sea is highest at the full and new moon. It is lowest at the two quarters. The growing half is the first quarter."
+   ],
+   "puzzle": "r2",
+   "start": [
+    0,
+    0
+   ],
+   "reward": {
+    "title": "Flow and the Water Mark",
+    "form": "flow",
+    "mark": "water_after_air"
+   },
+   "hotspots": [
+    {
+     "id": "r2_tide",
+     "kind": "FIND",
+     "label": "Tide wall rubbing",
+     "yaw": -125,
+     "pitch": 0,
+     "sprite": "find_tide",
+     "card": "c.r2.tide",
+     "say": "r2.find.tide"
+    },
+    {
+     "id": "r2_gates",
+     "kind": "FIND",
+     "label": "Gate inscriptions",
+     "yaw": 26,
+     "pitch": -21,
+     "sprite": "find_gates",
+     "card": "c.r2.gates",
+     "say": "r2.find.gates"
+    },
+    {
+     "id": "r2_note",
+     "kind": "FIND",
+     "label": "Copper pipe note",
+     "yaw": 88,
+     "pitch": -22,
+     "sprite": "find_note",
+     "card": "c.r2.note",
+     "say": "r2.find.note"
+    },
+    {
+     "id": "r2_valve",
+     "kind": "INSPECT",
+     "label": "Copper valve",
+     "yaw": 140,
+     "pitch": 2,
+     "views": [
+      "insp_valve",
+      "detail_valve"
+     ],
+     "card": "c.r2.valve",
+     "say": "r2.inspect.valve"
+    },
+    {
+     "id": "r2_dials",
+     "kind": "PANEL",
+     "label": "Moon dials",
+     "yaw": 0,
+     "pitch": 20,
+     "after": [
+      "r2_tide",
+      "r2_gates"
+     ]
+    },
+    {
+     "id": "r2_exit",
+     "kind": "EXIT",
+     "label": "Way to the Lotus Garden",
+     "yaw": 0,
+     "pitch": -8
+    }
+   ],
+   "hintAudio": [
+    "assets/audio/voice/hint_r2_1.mp3",
+    "assets/audio/voice/hint_r2_2.mp3"
+   ]
+  },
+  {
+   "n": 3,
+   "id": "r3",
+   "name": "Jade Lotus Garden",
+   "realm": "Stone",
+   "pano": "assets/rooms/room3.webp",
+   "accent": "#5E8F5B",
+   "accent2": "#C79A3A",
+   "objective": "Solve the lotus board, then open the boulder door.",
+   "enter": [
+    "r3.enter.1",
+    "r3.enter.2"
+   ],
+   "discuss": "r3.discuss",
+   "wrong": [
+    "r3.wrong.1",
+    "r3.wrong.2",
+    "r3.wrong.3"
+   ],
+   "right": [
+    "r3.right.1",
+    "r3.right.2",
+    "r3.right.3"
+   ],
+   "idle": "r3.idle",
+   "hints": [
+    "Read the Harmony scroll. All four Earth tiles are already fixed.",
+    "Row three is missing Air and Fire. The first column already has Fire."
+   ],
+   "puzzle": "r3",
+   "start": [
+    0,
+    0
+   ],
+   "reward": {
+    "title": "Root and the Earth Mark",
+    "form": "root",
+    "mark": "earth_after_water"
+   },
+   "hotspots": [
+    {
+     "id": "r3_scroll",
+     "kind": "FIND",
+     "label": "Harmony scroll",
+     "yaw": -50,
+     "pitch": -25,
+     "sprite": "find_harmony_scroll",
+     "card": "c.r3.scroll",
+     "say": "r3.find.scroll"
+    },
+    {
+     "id": "r3_letter",
+     "kind": "FIND",
+     "label": "Lotus letter",
+     "yaw": -150,
+     "pitch": -40,
+     "sprite": "find_letter",
+     "card": "c.r3.letter",
+     "say": "r3.find.letter"
+    },
+    {
+     "id": "r3_token",
+     "kind": "FIND",
+     "label": "White lotus token",
+     "yaw": 52,
+     "pitch": 0,
+     "sprite": "find_token",
+     "card": "c.r3.token",
+     "item": "token",
+     "say": "r3.find.token"
+    },
+    {
+     "id": "r3_teapot",
+     "kind": "INSPECT",
+     "label": "Teapot",
+     "yaw": -125,
+     "pitch": -22,
+     "views": [
+      "insp_teapot",
+      "detail_teapot"
+     ],
+     "card": "c.r3.teapot",
+     "say": "r3.inspect.teapot"
+    },
+    {
+     "id": "r3_board",
+     "kind": "PANEL",
+     "label": "Lotus board",
+     "yaw": 0,
+     "pitch": -20,
+     "after": [
+      "r3_scroll"
+     ]
+    },
+    {
+     "id": "r3_door",
+     "kind": "USE",
+     "label": "Boulder door",
+     "yaw": 0,
+     "pitch": 28,
+     "need": "token",
+     "after": [
+      "r3_board"
+     ]
+    },
+    {
+     "id": "r3_exit",
+     "kind": "EXIT",
+     "label": "Door to the Owl Archive",
+     "yaw": 0,
+     "pitch": 28
+    }
+   ],
+   "split": 1,
+   "hintAudio": [
+    "assets/audio/voice/hint_r3_1.mp3",
+    "assets/audio/voice/hint_r3_2.mp3"
+   ]
+  },
+  {
+   "n": 4,
+   "id": "r4",
+   "name": "Owlwind Archive",
+   "realm": "Knowledge",
+   "pano": "assets/rooms/room4.webp",
+   "accent": "#8C6BB1",
+   "accent2": "#E2B94B",
+   "objective": "Find both halves of the key, then read the scroll.",
+   "enter": [
+    "r4.enter.1",
+    "r4.enter.2"
+   ],
+   "discuss": "r4.discuss",
+   "wrong": [
+    "r4.wrong.1",
+    "r4.wrong.2",
+    "r4.wrong.3"
+   ],
+   "right": [
+    "r4.right.1",
+    "r4.right.2",
+    "r4.right.3"
+   ],
+   "idle": "r4.idle",
+   "hints": [
+    "Find both halves of the key: on the shelf spines and on the owl's wings.",
+    "The two words have four letters and three letters. The second is what an eclipse hides."
+   ],
+   "puzzle": "r4",
+   "start": [
+    0,
+    0
+   ],
+   "reward": {
+    "title": "The Owl-glass",
+    "item": "owl_glass"
+   },
+   "hotspots": [
+    {
+     "id": "r4_scroll",
+     "kind": "FIND",
+     "label": "Glyph scroll",
+     "yaw": 146,
+     "pitch": -42,
+     "sprite": "find_glyph_scroll",
+     "card": "c.r4.scroll",
+     "say": "r4.find.scroll"
+    },
+    {
+     "id": "r4_spines",
+     "kind": "FIND",
+     "label": "Shelf spine key",
+     "yaw": -50,
+     "pitch": 12,
+     "sprite": "find_spines",
+     "card": "c.r4.spines",
+     "say": "r4.find.spines"
+    },
+    {
+     "id": "r4_wings",
+     "kind": "FIND",
+     "label": "Owl wing key",
+     "yaw": 45,
+     "pitch": 52,
+     "sprite": "find_wings",
+     "card": "c.r4.wings",
+     "say": "r4.find.wings"
+    },
+    {
+     "id": "r4_ledger",
+     "kind": "INSPECT",
+     "label": "Visitor ledger",
+     "yaw": -148,
+     "pitch": -40,
+     "views": [
+      "insp_ledger",
+      "detail_ledger"
+     ],
+     "card": "c.r4.ledger",
+     "say": "r4.inspect.ledger"
+    },
+    {
+     "id": "r4_lectern",
+     "kind": "PANEL",
+     "label": "Scroll lectern",
+     "yaw": 50,
+     "pitch": -20,
+     "after": [
+      "r4_scroll",
+      "r4_spines",
+      "r4_wings"
+     ]
+    },
+    {
+     "id": "r4_exit",
+     "kind": "EXIT",
+     "label": "Stair to the Ember Citadel",
+     "yaw": 65,
+     "pitch": 8
+    }
+   ],
+   "hintAudio": [
+    "assets/audio/voice/hint_r4_1.mp3",
+    "assets/audio/voice/hint_r4_2.mp3"
+   ]
+  },
+  {
+   "n": 5,
+   "id": "r5",
+   "name": "Ember Citadel",
+   "realm": "Fire",
+   "pano": "assets/rooms/room5.webp",
+   "accent": "#B3342A",
+   "accent2": "#E2B94B",
+   "objective": "Learn how the dragon breathes, then breathe back.",
+   "enter": [
+    "r5.enter.1",
+    "r5.enter.2"
+   ],
+   "discuss": "r5.discuss",
+   "wrong": [
+    "r5.wrong.1",
+    "r5.wrong.2",
+    "r5.wrong.3"
+   ],
+   "right": [
+    "r5.right.1",
+    "r5.right.2",
+    "r5.right.3"
+   ],
+   "idle": "r5.idle",
+   "hints": [
+    "Use Watch again. It is free. Count the flashes.",
+    "A short flash is a tap. A long glow is a press and hold."
+   ],
+   "puzzle": "r5",
+   "start": [
+    0,
+    0
+   ],
+   "reward": {
+    "title": "Spark and the Fire Mark",
+    "form": "spark",
+    "mark": "fire_after_earth"
+   },
+   "hotspots": [
+    {
+     "id": "r5_relief",
+     "kind": "FIND",
+     "label": "Breath relief rubbing",
+     "yaw": -130,
+     "pitch": 15,
+     "sprite": "find_relief",
+     "card": "c.r5.relief",
+     "say": "r5.find.relief"
+    },
+    {
+     "id": "r5_note",
+     "kind": "FIND",
+     "label": "Engine note",
+     "yaw": -100,
+     "pitch": -30,
+     "sprite": "find_engine_note",
+     "card": "c.r5.note",
+     "say": "r5.find.note"
+    },
+    {
+     "id": "r5_map",
+     "kind": "FIND",
+     "label": "War map",
+     "yaw": -145,
+     "pitch": -30,
+     "sprite": "find_war_map",
+     "card": "c.r5.map",
+     "say": "r5.find.map"
+    },
+    {
+     "id": "r5_brazier",
+     "kind": "INSPECT",
+     "label": "Brazier base",
+     "yaw": -45,
+     "pitch": -8,
+     "views": [
+      "insp_brazier",
+      "detail_brazier"
+     ],
+     "card": "c.r5.brazier",
+     "say": "r5.inspect.brazier"
+    },
+    {
+     "id": "r5_mask",
+     "kind": "PANEL",
+     "label": "Dragon mask",
+     "yaw": 0,
+     "pitch": 35,
+     "after": [
+      "r5_relief"
+     ]
+    },
+    {
+     "id": "r5_exit",
+     "kind": "EXIT",
+     "label": "Gate to the Eclipse Court",
+     "yaw": 112,
+     "pitch": 5
+    }
+   ],
+   "hintAudio": [
+    "assets/audio/voice/hint_r5_1.mp3",
+    "assets/audio/voice/hint_r5_2.mp3"
+   ]
+  },
+  {
+   "n": 6,
+   "id": "r6",
+   "name": "Eclipse Court",
+   "realm": "Shadow",
+   "pano": "assets/rooms/room6.webp",
+   "accent": "#1D2150",
+   "accent2": "#E2B94B",
+   "objective": "Use the Owl-glass, then bend the beam to the crystal.",
+   "enter": [
+    "r6.enter.1",
+    "r6.enter.2"
+   ],
+   "discuss": "r6.discuss",
+   "wrong": [
+    "r6.wrong.1",
+    "r6.wrong.2",
+    "r6.wrong.3"
+   ],
+   "right": [
+    "r6.right.1",
+    "r6.right.2",
+    "r6.right.3"
+   ],
+   "idle": "r6.idle",
+   "hints": [
+    "Trace the beam from the lens. The first mirror must send it up, not down.",
+    "From the first to the last, the mirrors are slash, slash, back-slash, back-slash."
+   ],
+   "puzzle": "r6",
+   "start": [
+    0,
+    0
+   ],
+   "reward": {
+    "title": "The Eclipse Seal",
+    "item": "eclipse_seal"
+   },
+   "hotspots": [
+    {
+     "id": "r6_plan",
+     "kind": "FIND",
+     "label": "Court plan",
+     "yaw": -58,
+     "pitch": -60,
+     "sprite": "find_court_plan",
+     "card": "c.r6.plan",
+     "say": "r6.find.plan"
+    },
+    {
+     "id": "r6_rules",
+     "kind": "FIND",
+     "label": "Mirror rules card",
+     "yaw": 49,
+     "pitch": -18,
+     "sprite": "find_rules_card",
+     "card": "c.r6.rules",
+     "say": "r6.find.rules"
+    },
+    {
+     "id": "r6_blueprint",
+     "kind": "FIND",
+     "label": "Engine blueprint",
+     "yaw": 140,
+     "pitch": -8,
+     "sprite": "find_blueprint",
+     "card": "c.r6.blueprint",
+     "say": "r6.find.blueprint"
+    },
+    {
+     "id": "r6_sundial",
+     "kind": "INSPECT",
+     "label": "Sundial",
+     "yaw": 0,
+     "pitch": 5,
+     "views": [
+      "insp_sundial",
+      "detail_sundial"
+     ],
+     "card": "c.r6.sundial",
+     "say": "r6.inspect.sundial"
+    },
+    {
+     "id": "r6_slot",
+     "kind": "USE",
+     "label": "Lens slot",
+     "yaw": -147,
+     "pitch": 17,
+     "need": "owl_glass",
+     "after": [
+      "r6_plan"
+     ]
+    },
+    {
+     "id": "r6_grid",
+     "kind": "PANEL",
+     "label": "Mirror floor",
+     "yaw": 0,
+     "pitch": -38,
+     "after": [
+      "r6_slot",
+      "r6_rules"
+     ]
+    },
+    {
+     "id": "r6_exit",
+     "kind": "EXIT",
+     "label": "Bridge to the Spirit Nexus",
+     "yaw": 97,
+     "pitch": 12
+    }
+   ],
+   "hintAudio": [
+    "assets/audio/voice/hint_r6_1.mp3",
+    "assets/audio/voice/hint_r6_2.mp3"
+   ]
+  },
+  {
+   "n": 7,
+   "id": "r7",
+   "name": "Spirit Nexus",
+   "realm": "Balance",
+   "pano": "assets/rooms/room7.webp",
+   "accent": "#E2B94B",
+   "accent2": "#FFF4D6",
+   "objective": "Read the clues, then use the pillars and the mirror.",
+   "enter": [
+    "r7.enter.1",
+    "r7.enter.2",
+    "r7.enter.3"
+   ],
+   "discuss": "r7.discuss",
+   "wrong": [
+    "r7.A.wrong.1",
+    "r7.A.wrong.2",
+    "r7.A.wrong.3"
+   ],
+   "right": [
+    "r7.right"
+   ],
+   "idle": "r7.idle",
+   "hints": [
+    "Read the four Marks and the tablet in the Casebook.",
+    "Begin with Fire. Then Air, Water, Earth. Each pillar wants the Form of its own element."
+   ],
+   "puzzle": "r7",
+   "start": [
+    0,
+    0
+   ],
+   "reward": null,
+   "hotspots": [
+    {
+     "id": "r7_tablet",
+     "kind": "FIND",
+     "label": "Guardian's tablet",
+     "yaw": 69,
+     "pitch": -22,
+     "sprite": "find_tablet",
+     "card": "c.r7.tablet",
+     "say": "r7.find.tablet"
+    },
+    {
+     "id": "r7_shard",
+     "kind": "FIND",
+     "label": "Mirror shard",
+     "yaw": -15,
+     "pitch": -20,
+     "sprite": "find_shard",
+     "card": "c.r7.shard",
+     "say": "r7.find.shard"
+    },
+    {
+     "id": "r7_offer",
+     "kind": "FIND",
+     "label": "The Regent's offer",
+     "yaw": -69,
+     "pitch": -22,
+     "sprite": "find_offer",
+     "card": "c.r7.offer",
+     "say": "r7.find.offer"
+    },
+    {
+     "id": "r7_hand",
+     "kind": "INSPECT",
+     "label": "Guardian's hand",
+     "yaw": -33,
+     "pitch": 30,
+     "views": [
+      "insp_hand",
+      "detail_hand"
+     ],
+     "card": "c.r7.hand",
+     "say": "r7.inspect.hand"
+    },
+    {
+     "id": "r7_finale",
+     "kind": "PANEL",
+     "label": "Nexus mirror",
+     "yaw": 0,
+     "pitch": 14,
+     "after": [
+      "r7_tablet",
+      "r7_shard",
+      "r7_offer"
+     ]
+    }
+   ],
+   "hintAudio": [
+    "assets/audio/voice/hint_r7_1.mp3",
+    "assets/audio/voice/hint_r7_2.mp3"
+   ]
+  }
+ ],
+ "end": {
+  "winTitle": "Balance Restored",
+  "winText": "The Cycle turns again. The four realms are safe.",
+  "lines": [
+   "Items",
+   "Secret details",
+   "Room rewards",
+   "Final steps",
+   "Time bonus",
+   "Hints used",
+   "Mistakes",
+   "Total Chi"
+  ],
+  "loseTitle": "The Comet Passes",
+  "loseText": "The comet crosses the sky. The Regent drinks the four realms. Try again, and be faster.",
+  "sequel": "A pale figure whispers: \"He was only the first to drink.\""
+ }
+}

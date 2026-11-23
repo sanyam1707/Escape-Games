@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="A 360 point-and-click sea adventure. Solve seven rooms, ink the Living Chart, open the Edge Gate.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Beyond the Forgotten Seas">
+<meta property="og:description" content="A 360 point-and-click sea adventure. Solve seven rooms, ink the Living Chart, open the Edge Gate.">
+<meta property="og:image" content="og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0F2233">
+<title>Beyond the Forgotten Seas</title>
+<link rel="stylesheet" href="vendor/pannellum.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="pano"></div>
+
+<div id="hud-top" hidden>
+  <div id="fortune"><small></small><b>0</b></div>
+  <div id="timer">7:00</div>
+  <div class="btns">
+    <button id="btn-book" aria-label="Book"><svg viewBox="0 0 24 24"><path d="M5 3h12a2 2 0 0 1 2 2v16H7a2 2 0 0 1-2-2zM7 17h12" /></svg></button>
+    <button id="btn-hint" aria-label="Hint"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c1 1 1 2 1 3h6c0-1 0-2 1-3a6 6 0 0 0-4-10z" /></svg><i></i></button>
+    <button id="btn-pause" aria-label="Pause"><svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" /></svg></button>
+  </div>
+</div>
+<div id="hud" hidden>
+  <div id="hud-left"><div id="objective"></div><div id="strip"></div><button id="held" hidden></button></div>
+  <div id="compass"><svg viewBox="-50 -50 100 100"><circle r="46" class="ring"/><g id="needle"><path d="M0-40L7 0L0 8L-7 0Z" class="n1"/><path d="M0 40L5 0L-5 0Z" class="n2"/></g></svg></div>
+</div>
+
+<div id="dlg" hidden>
+  <div id="dlg-action"></div>
+  <div id="dlg-box"><div id="dlg-face"></div><div id="dlg-body"><b id="dlg-name"></b><p id="dlg-text"></p><small>&#9654;</small></div></div>
+</div>
+
+<div id="card" class="overlay" hidden><div class="panel"><button class="x" aria-label="Close">&times;</button><h3></h3><p></p><div class="extra"></div><em></em></div></div>
+<div id="panel" class="overlay" hidden><div class="panel big"><button class="x" aria-label="Close">&times;</button><h3></h3><div class="body"></div><div class="lockmsg"></div></div></div>
+<div id="book" class="overlay" hidden><div class="panel big"><button class="x" aria-label="Close">&times;</button><div class="tabs"></div><div class="body"></div></div></div>
+<div id="pause" class="overlay" hidden><div class="panel"><h3></h3><button data-a="resume"></button><button data-a="voice"></button><button data-a="music"></button><button data-a="quit"></button></div></div>
+<div id="end" class="overlay" hidden><div class="panel"><h3></h3><div id="end-lines"></div><p id="end-stats"></p><div id="end-btns"></div></div></div>
+
+<div id="tut" hidden><div id="spot"></div><div id="tut-card"><p></p><div><button id="tut-skip"></button><button id="tut-next"></button></div></div></div>
+
+<section id="s-start" class="screen"><h1></h1><p class="tap"></p></section>
+<section id="s-info" class="screen" hidden><div class="info"><small></small><h2></h2><div class="paras"></div><button></button></div></section>
+
+<div id="fade"></div>
+<div id="toast" hidden></div>
+<pre id="debug" hidden></pre>
+<script src="vendor/pannellum.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

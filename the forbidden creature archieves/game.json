@@ -1,0 +1,2472 @@
+{
+  "config": {
+    "timerSeconds": 600,
+    "scoring": {
+      "find": 5,
+      "secret": 5,
+      "roomReward": 30,
+      "partA": 50,
+      "partB": 50,
+      "partC": 0,
+      "timeBonusPerSecond": 1
+    },
+    "hintCost": 25,
+    "hintsPerGame": 3,
+    "wrongCost": 10,
+    "lockoutSeconds": 3,
+    "idleSeconds": 40,
+    "blurPx": 6,
+    "blurSeconds": 1.2,
+    "redClockSeconds": 60,
+    "sfx": {
+      "enabled": true
+    },
+    "bgmVolume": 0.22,
+    "bgmDuckVolume": 0.07,
+    "maxParticles": 150,
+    "accuseChances": 3
+  },
+  "characters": {
+    "nigel": {
+      "name": "Nigel",
+      "pitch": 1.05,
+      "rate": 0.95,
+      "color": "#1f6a6a",
+      "initials": "N",
+      "defaultMood": "neutral",
+      "busts": {
+        "neutral": "assets/cut/nigel_neutral.png",
+        "happy": "assets/cut/nigel_happy.png",
+        "worried": "assets/cut/nigel_worried.png",
+        "surprised": "assets/cut/nigel_surprised.png"
+      }
+    },
+    "jacek": {
+      "name": "Jacek",
+      "pitch": 0.85,
+      "rate": 1.05,
+      "color": "#8a6a3a",
+      "initials": "J",
+      "defaultMood": "neutral",
+      "busts": {
+        "neutral": "assets/cut/jacek_neutral.png",
+        "happy": "assets/cut/jacek_happy.png",
+        "worried": "assets/cut/jacek_worried.png",
+        "surprised": "assets/cut/jacek_surprised.png"
+      }
+    },
+    "tessa": {
+      "name": "Tessa Goldwell",
+      "pitch": 1.25,
+      "rate": 1.1,
+      "color": "#6a6a72",
+      "initials": "T",
+      "defaultMood": "neutral",
+      "busts": {
+        "neutral": "assets/cut/tessa_neutral.png",
+        "serious": "assets/cut/tessa_serious.png"
+      }
+    },
+    "graves": {
+      "name": "Director Graves-Hollis",
+      "pitch": 0.6,
+      "rate": 0.85,
+      "color": "#2a2a30",
+      "initials": "G",
+      "defaultMood": "polished",
+      "busts": {
+        "polished": "assets/cut/graves_polished.png",
+        "true": "assets/cut/graves_true.png"
+      }
+    },
+    "cael": {
+      "name": "Cael",
+      "pitch": 1.35,
+      "rate": 0.9,
+      "color": "#5a4a7a",
+      "initials": "C",
+      "defaultMood": "afraid",
+      "busts": {
+        "afraid": "assets/cut/cael_afraid.png",
+        "calm": "assets/cut/cael_calm.png"
+      }
+    },
+    "goblin": {
+      "name": "Mr. Gnarlsby",
+      "pitch": 0.7,
+      "rate": 1.0,
+      "color": "#7a3a5a",
+      "initials": "G",
+      "defaultMood": "smug",
+      "busts": {
+        "smug": "assets/cut/gnarlsby_smug.png"
+      }
+    },
+    "narrator": {
+      "name": "Narrator",
+      "pitch": 0.95,
+      "rate": 0.95,
+      "color": "#4a3a2a",
+      "initials": "N",
+      "defaultMood": "neutral",
+      "busts": {}
+    }
+  },
+  "creatures": [
+    {
+      "id": "twiglet",
+      "name": "Twiglet",
+      "about": "A tiny twig climber. Picks locks."
+    },
+    {
+      "id": "veilape",
+      "name": "Veilape",
+      "about": "Sees a moment ahead."
+    },
+    {
+      "id": "pilferling",
+      "name": "Pilferling",
+      "about": "Loves shiny things."
+    },
+    {
+      "id": "coilwing",
+      "name": "Coilwing",
+      "about": "A scaled coil with small wings."
+    },
+    {
+      "id": "hornback",
+      "name": "Hornback",
+      "about": "A heavy beast with a glowing horn."
+    },
+    {
+      "id": "dewmoth",
+      "name": "Dewmoth",
+      "about": "A moth that glows when damp."
+    },
+    {
+      "id": "stormwing",
+      "name": "Stormwing",
+      "about": "A huge storm-coloured bird."
+    }
+  ],
+  "ui": {
+    "ui.close": "Close",
+    "ui.skip": "Skip",
+    "ui.next": "Next",
+    "ui.letsGo": "Start",
+    "ui.objective": "Your goal",
+    "hud.pause": "Pause",
+    "hud.wonder": "Wonder",
+    "hud.notebook": "Notebook",
+    "hud.latches": "Suitcase latches",
+    "hud.hint": "Hint",
+    "hud.hintsLeft": "{n} left",
+    "dlg.next": "Tap to continue",
+    "dlg.skip": "Skip",
+    "card.added": "Added to your Notebook.",
+    "card.saved": "Saved to your notes.",
+    "inspect.turn": "Turn it",
+    "inspect.found": "You found a secret detail!",
+    "nb.title": "Notebook",
+    "nb.notes": "Notes",
+    "nb.clues": "Clues",
+    "nb.creatures": "Creatures",
+    "nb.noteN": "File Note {n}",
+    "nb.notWritten": "Not written yet.",
+    "nb.noClues": "Nothing here yet. Look around the room.",
+    "nb.notFreed": "Not freed yet.",
+    "pause.title": "Paused",
+    "pause.resume": "Resume",
+    "pause.voiceOn": "Narration: on",
+    "pause.voiceOff": "Narration: off",
+    "pause.musicOn": "Music: on",
+    "pause.musicOff": "Music: off",
+    "hint.none": "No hints left.",
+    "hint.noneHere": "No hints for this last choice.",
+    "hint.early": "Look around first. Then ask Jacek for a hint.",
+    "toast.way": "A way is open!",
+    "toast.wrong": "Wrong. -{n} Wonder",
+    "reward.noteTitle": "File Note {n}",
+    "reward.noteSaved": "Written in your Notebook.",
+    "lens.pick": "Pick a lens first.",
+    "lens.case": "Case {c}",
+    "lens.tag": "Tag on case {c}",
+    "lens.mine": "This is my case",
+    "venn.cold": "Needs the cold",
+    "venn.night": "Awake at night",
+    "venn.both": "Both",
+    "venn.none": "Neither",
+    "venn.how": "Tap a creature, then tap a place. Or drag it.",
+    "venn.check": "Check",
+    "venn.placeAll": "Put every creature in a place first.",
+    "lure.pouch": "Pouch: {n} of 3",
+    "lure.baits": "Baits",
+    "lure.how": "Tap a bait, then tap a free square. Or drag it. Tap a placed bait to take it back.",
+    "lure.release": "Release the Pilferling",
+    "lure.early": "She took the cage too early.",
+    "lure.stuck": "She could not reach the baits.",
+    "wheel.steps": "Wheel turned: {n}",
+    "wheel.minus": "Turn back one step",
+    "wheel.plus": "Turn forward one step",
+    "wheel.ask": "Which level is the boy on?",
+    "overlay.slideB": "Slide sheet B left or right",
+    "overlay.slideC": "Slide sheet C up or down",
+    "overlay.left": "Sheet B left",
+    "overlay.right": "Sheet B right",
+    "overlay.up": "Sheet C up",
+    "overlay.down": "Sheet C down",
+    "overlay.vert": "Sheet C:",
+    "overlay.ask": "Whose seal is this picture?",
+    "shadow.wall": "Shadow on the wall",
+    "shadow.stand": "Turntable",
+    "shadow.lamp": "Lamp",
+    "shadow.drawers": "Drawers",
+    "shadow.drawer": "Drawer {n}",
+    "shadow.turn": "Turn: {deg}°",
+    "shadow.stuck": "The drawer will not open. The shadow does not match its plate.",
+    "shadow.empty": "This drawer holds an empty folder.",
+    "untangle.how": "Tap a numbered pin, then a pin right next to it, to swap them. The ropes cannot be tapped. Swap until no ropes cross.",
+    "untangle.far": "Pick a pin right next to it (the dashed ones).",
+    "untangle.pin": "Pin {n}",
+    "proof.how": "Pick exactly three notes that point to the Director.",
+    "proof.note": "Note {n}",
+    "proof.present": "Present",
+    "hud.find": "Find",
+    "nb.items": "Items",
+    "nb.noItems": "No items yet. Find objects in the room.",
+    "hint.have": "So far you have: {have}.",
+    "hint.next": "Still missing: {label}. {where}",
+    "hint.ready": "You have everything for this puzzle. Tap the glowing puzzle ({label}) and use your Notebook.",
+    "overlay.how": "Slide sheet B with ◀ ▶ and sheet C with ▲ ▼. They wrap around the edges. Make the dots draw a picture, then find its seal in the ledger (Notebook).",
+    "hint.noPoints": "Not enough Wonder for a hint. A hint costs {cost}.",
+    "proof.chances": "Chances left",
+    "toast.accuseLeft": "Wrong accusation. {n} left.",
+    "pause.sfxOn": "Sound effects: on",
+    "pause.sfxOff": "Sound effects: off"
+  },
+  "screens": {
+    "tap": {
+      "kicker": "New York, 1926",
+      "title": "The Forbidden Creature Archives",
+      "prompt": "Tap to begin"
+    },
+    "mission": {
+      "heading": "One Night, One Suitcase",
+      "paragraphs": [
+        "New York, 1926. Under the city hides a wizard world. Its Assembly bans every dangerous creature and locks the records away in the Forbidden Creature Archives.",
+        "Tonight a swapped suitcase has set creatures loose across the city, and the Assembly wants them sealed away. Something dark is also waking below.",
+        "You are Nigel Scamper, a creature-keeper, with your new friend Jacek. Find your creatures, learn the truth and reach the Archives before time runs out. You have ten minutes."
+      ],
+      "button": "Begin",
+      "audioFile": "assets/audio/voice/mission_0.mp3"
+    },
+    "tutorial": [
+      {
+        "text": "Drag to look around the room.",
+        "spot": null
+      },
+      {
+        "text": "Tap what glows. You can read it, pick it up or turn it in your hands.",
+        "spot": ".demo"
+      },
+      {
+        "text": "The Notebook holds everything you learn. Puzzles do not show their clues, so open it to read them.",
+        "spot": "#nbBtn"
+      },
+      {
+        "text": "Puzzles open in panels. Tap X to close one. Tap Pause to stop the clock.",
+        "spot": "#pauseBtn"
+      },
+      {
+        "text": "Every puzzle you solve frees a creature. It opens the way to the next room.",
+        "spot": "#latches"
+      },
+      {
+        "text": "You have 10 minutes. Finds earn Wonder. Wrong answers and hints cost Wonder. You get 3 hints, and Jacek says them aloud. The clock keeps running while he talks.",
+        "spot": "#wonder, #clock"
+      }
+    ],
+    "win": {
+      "title": "The Archives Are Quiet",
+      "wonder": "Final Wonder",
+      "timeLeft": "Time left",
+      "ending": "Ending",
+      "endings": {
+        "calm": "Calm",
+        "sealed": "Sealed"
+      },
+      "again": "Play Again",
+      "close": "Close"
+    },
+    "timeup": {
+      "title": "The Shade Swallows the Archives",
+      "line": "The night is over. Try again.",
+      "again": "Try Again",
+      "close": "Close"
+    },
+    "accused": {
+      "title": "The Director Walks Free",
+      "line": "Three wrong accusations. The guards turn away and the Shade wins. Start again from the very beginning.",
+      "again": "Start Again"
+    }
+  },
+  "idle": {
+    "id": "idle_1",
+    "speaker": "jacek",
+    "text": "Try turning around. Drag to look around.",
+    "pausesTimer": false,
+    "mood": "neutral",
+    "audioFile": "assets/audio/voice/idle_1.mp3"
+  },
+  "opening": [
+    {
+      "id": "open_1",
+      "speaker": "narrator",
+      "text": "Midnight at the harbour. Two cases, one mix-up, and a night that will change a city.",
+      "pausesTimer": true,
+      "mood": "neutral",
+      "audioFile": "assets/audio/voice/open_1.mp3"
+    },
+    {
+      "id": "open_2",
+      "speaker": "jacek",
+      "text": "Mister Scamper, that is not my suitcase. Mine does not growl.",
+      "pausesTimer": true,
+      "mood": "neutral",
+      "audioFile": "assets/audio/voice/open_2.mp3"
+    },
+    {
+      "id": "open_3",
+      "speaker": "nigel",
+      "text": "It is not growling. It is nervous. Please, open it very slowly.",
+      "pausesTimer": true,
+      "mood": "neutral",
+      "audioFile": "assets/audio/voice/open_3.mp3"
+    },
+    {
+      "id": "open_4",
+      "speaker": "narrator",
+      "text": "Find the right case. The creatures are counting on you.",
+      "pausesTimer": true,
+      "mood": "neutral",
+      "audioFile": "assets/audio/voice/open_4.mp3"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "title": "Port Customs Hall",
+      "accent": "#6FA3C7",
+      "panorama": "assets/rooms/room1.webp",
+      "startYaw": 0,
+      "objective": "Find your suitcase.",
+      "panelId": "r1_cases",
+      "hotspots": [
+        {
+          "id": "r1_red_lens",
+          "kind": "FIND",
+          "label": "Red lens",
+          "after": [],
+          "yaw": -118.8,
+          "pitch": -7.9,
+          "card": {
+            "title": "Red lens",
+            "text": "A round red glass lens in a brass ring. Hold it over a tag and the red ink shows."
+          },
+          "line": "r1_find_red_lens_1",
+          "img": "red_lens",
+          "hint": "It is the red glass hood of the desk lamp near the three cases."
+        },
+        {
+          "id": "r1_green_lens",
+          "kind": "FIND",
+          "label": "Green lens",
+          "after": [],
+          "yaw": 104.6,
+          "pitch": -22.5,
+          "card": {
+            "title": "Green lens",
+            "text": "A round green glass lens in a brass ring. Hold it over a tag and the green ink shows."
+          },
+          "line": "r1_find_green_lens_1",
+          "img": "green_lens",
+          "hint": "It is the green glass paperweight on the inspection table."
+        },
+        {
+          "id": "r1_notice",
+          "kind": "LEARN",
+          "label": "Customs notice",
+          "after": [],
+          "yaw": 142.2,
+          "pitch": -18.0,
+          "card": {
+            "title": "Customs notice",
+            "text": "A creature-keeper's case shows a Bell under red glass and an Anchor under green glass. A baker's case shows a Fish under red glass."
+          },
+          "line": "r1_learn_notice_1",
+          "hint": "Find the customs notice and tap its gold ring. It says which case is yours."
+        },
+        {
+          "id": "r1_stamp",
+          "kind": "INSPECT",
+          "label": "Rubber stamp",
+          "after": [],
+          "yaw": -91.8,
+          "pitch": -27.0,
+          "card": {
+            "title": "Rubber stamp",
+            "text": ""
+          },
+          "line": "r1_inspect_stamp_1",
+          "views": [
+            {
+              "label": "Side view",
+              "text": "A rubber stamp and an ink pad. The stamp has been used a lot."
+            },
+            {
+              "label": "Handle",
+              "text": "Two letters are cut into the handle: G.H.",
+              "secret": true
+            }
+          ]
+        },
+        {
+          "id": "r1_cases",
+          "kind": "PANEL",
+          "label": "The three cases",
+          "after": [
+            "r1_red_lens",
+            "r1_green_lens",
+            "r1_notice"
+          ],
+          "yaw": 0.0,
+          "pitch": -27.0
+        },
+        {
+          "id": "r1_door",
+          "kind": "EXIT",
+          "label": "Brass gate",
+          "after": [
+            "r1_cases"
+          ],
+          "yaw": -159.8,
+          "pitch": 18.0
+        }
+      ],
+      "panel": {
+        "type": "lens",
+        "title": "The three cases",
+        "lenses": [
+          {
+            "id": "red",
+            "name": "Red lens"
+          },
+          {
+            "id": "green",
+            "name": "Green lens"
+          }
+        ],
+        "cases": [
+          {
+            "id": "A",
+            "red": "bell",
+            "green": "star"
+          },
+          {
+            "id": "B",
+            "red": "bell",
+            "green": "anchor",
+            "mine": true
+          },
+          {
+            "id": "C",
+            "red": "fish",
+            "green": "anchor"
+          }
+        ]
+      },
+      "reward": {
+        "note": 1,
+        "creature": "twiglet",
+        "caption": "Twiglet picks the lock.",
+        "chirp": "tik-tik!"
+      },
+      "conversation": [
+        {
+          "id": "r1_enter_1",
+          "speaker": "jacek",
+          "text": "Three suitcases, same leather, same latches. How does anyone tell them apart?",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r1_enter_1.mp3"
+        },
+        {
+          "id": "r1_enter_2",
+          "speaker": "nigel",
+          "text": "By their tags. Customs stamps them with ink that only special glass can show.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r1_enter_2.mp3"
+        },
+        {
+          "id": "r1_enter_3",
+          "speaker": "jacek",
+          "text": "Special glass. Of course. Let us look for some.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r1_enter_3.mp3"
+        },
+        {
+          "id": "r1_find_red_lens_1",
+          "speaker": "nigel",
+          "text": "A red lens. Hold it over a tag and the red ink shows.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r1_find_red_lens_1.mp3"
+        },
+        {
+          "id": "r1_find_green_lens_1",
+          "speaker": "nigel",
+          "text": "A green one. This shows the other ink.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r1_find_green_lens_1.mp3"
+        },
+        {
+          "id": "r1_learn_notice_1",
+          "speaker": "jacek",
+          "text": "A Bell under red and an Anchor under green. Nigel, that is you.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r1_learn_notice_1.mp3"
+        },
+        {
+          "id": "r1_inspect_stamp_1",
+          "speaker": "nigel",
+          "text": "Two letters cut in the handle: G.H. Whoever clears cases here uses this stamp.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r1_inspect_stamp_1.mp3"
+        },
+        {
+          "id": "r1_discuss_1",
+          "speaker": "nigel",
+          "text": "Hold each lens over each tag. Look for the Bell and the Anchor.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r1_discuss_1.mp3"
+        },
+        {
+          "id": "r1_discuss_2",
+          "speaker": "jacek",
+          "text": "Red first, then green. I will keep watch.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r1_discuss_2.mp3"
+        },
+        {
+          "id": "r1_wrong_1_hint_1_1",
+          "speaker": "jacek",
+          "text": "That case does not match both stamps. Check the red glass and the green glass.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r1_wrong_1_hint_1_1.mp3"
+        },
+        {
+          "id": "r1_wrong_2_hint_2_1",
+          "speaker": "jacek",
+          "text": "Read the notice again. Your case needs a Bell under red and an Anchor under green.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r1_wrong_2_hint_2_1.mp3"
+        },
+        {
+          "id": "r1_wrong_3_hint_3_1",
+          "speaker": "jacek",
+          "text": "Two cases show a Bell under red. Only one of them shows an Anchor under green.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r1_wrong_3_hint_3_1.mp3"
+        },
+        {
+          "id": "r1_right_1",
+          "speaker": "nigel",
+          "text": "Case B. It is mine.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r1_right_1.mp3"
+        },
+        {
+          "id": "r1_right_2",
+          "speaker": "jacek",
+          "text": "And mine has the Fish. At last, something simple.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r1_right_2.mp3"
+        },
+        {
+          "id": "r1_final_narration_1",
+          "speaker": "narrator",
+          "text": "The right case clicks open. Inside, something small and clever starts to pick the lock.",
+          "pausesTimer": true,
+          "when": "final",
+          "audioFile": "assets/audio/voice/r1_final_narration_1.mp3"
+        }
+      ],
+      "bank": [
+        "r1_wrong_1_hint_1_1",
+        "r1_wrong_2_hint_2_1",
+        "r1_wrong_3_hint_3_1"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Inside the Case",
+      "accent": "#8FB56A",
+      "panorama": "assets/rooms/room2.webp",
+      "startYaw": -60,
+      "objective": "Put each creature where it belongs.",
+      "panelId": "r2_dens",
+      "hotspots": [
+        {
+          "id": "r2_cards",
+          "kind": "FIND",
+          "label": "Care cards",
+          "after": [],
+          "yaw": 122.6,
+          "pitch": -21.8,
+          "card": {
+            "title": "Care cards",
+            "text": "Twiglet loves warm huts, sleeps all night, wakes at dawn.\nHornback lives on ice floes, awake all day, asleep at night.\nPilferling likes warm kitchens, hunts at night, sleeps by day."
+          },
+          "line": "r2_find_cards_1",
+          "img": "care_cards",
+          "hint": "The care cards are a stack on the work desk."
+        },
+        {
+          "id": "r2_notebook",
+          "kind": "LEARN",
+          "label": "Nigel's notebook",
+          "after": [],
+          "yaw": 150.8,
+          "pitch": -23.6,
+          "card": {
+            "title": "Nigel's notebook",
+            "text": "1. The Veilape sleeps whenever the Pilferling is awake, and it hates the heat.\n2. The Coilwing shares the Hornback's love of ice and the Pilferling's night hours.\n3. The Dewmoth sleeps whenever the Coilwing is awake, and shares the Twiglet's warm hut."
+          },
+          "line": "r2_learn_notebook_1",
+          "hint": "Nigel's notebook lies near the cards on the work desk. Tap its gold ring."
+        },
+        {
+          "id": "r2_veilape",
+          "kind": "INSPECT",
+          "label": "Veilape on its perch",
+          "after": [],
+          "yaw": 69.8,
+          "pitch": 41.6,
+          "card": {
+            "title": "Veilape",
+            "text": ""
+          },
+          "line": "r2_inspect_veilape_1",
+          "views": [
+            {
+              "label": "Front",
+              "text": "A silver-furred creature with long arms, resting on its perch."
+            },
+            {
+              "label": "Eyes",
+              "text": "Look into its eyes: a tall man in a long black coat. It sees a moment ahead.",
+              "secret": true
+            }
+          ]
+        },
+        {
+          "id": "r2_dens",
+          "kind": "PANEL",
+          "label": "The six homes",
+          "after": [
+            "r2_cards",
+            "r2_notebook"
+          ],
+          "yaw": -76.5,
+          "pitch": 0.0
+        },
+        {
+          "id": "r2_curtain",
+          "kind": "EXIT",
+          "label": "Vine curtain",
+          "after": [
+            "r2_dens"
+          ],
+          "yaw": 31.5,
+          "pitch": 22.5
+        }
+      ],
+      "panel": {
+        "type": "venn",
+        "title": "The six homes",
+        "creatures": [
+          {
+            "id": "twiglet",
+            "name": "Twiglet",
+            "region": "none"
+          },
+          {
+            "id": "hornback",
+            "name": "Hornback",
+            "region": "cold"
+          },
+          {
+            "id": "pilferling",
+            "name": "Pilferling",
+            "region": "night"
+          },
+          {
+            "id": "veilape",
+            "name": "Veilape",
+            "region": "cold"
+          },
+          {
+            "id": "coilwing",
+            "name": "Coilwing",
+            "region": "both"
+          },
+          {
+            "id": "dewmoth",
+            "name": "Dewmoth",
+            "region": "none"
+          }
+        ]
+      },
+      "reward": {
+        "note": 2,
+        "creature": "veilape",
+        "also": [
+          "dewmoth"
+        ],
+        "caption": "The Veilape parts the curtain.",
+        "chirp": "hoo..."
+      },
+      "conversation": [
+        {
+          "id": "r2_enter_1",
+          "speaker": "jacek",
+          "text": "Mister Scamper, this suitcase has weather.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r2_enter_1.mp3"
+        },
+        {
+          "id": "r2_enter_2",
+          "speaker": "nigel",
+          "text": "Six homes in one case. Each creature belongs in the right one.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r2_enter_2.mp3"
+        },
+        {
+          "id": "r2_find_cards_1",
+          "speaker": "nigel",
+          "text": "My care cards. Three of them, anyway.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r2_find_cards_1.mp3"
+        },
+        {
+          "id": "r2_learn_notebook_1",
+          "speaker": "jacek",
+          "text": "Your notes talk about the ones with no card. Read them closely.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r2_learn_notebook_1.mp3"
+        },
+        {
+          "id": "r2_inspect_veilape_1",
+          "speaker": "nigel",
+          "text": "Its eyes show a tall man in a long black coat. It sees a moment ahead.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r2_inspect_veilape_1.mp3"
+        },
+        {
+          "id": "r2_discuss_1",
+          "speaker": "nigel",
+          "text": "Two questions for each creature: does it need the cold, and is it awake at night?",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r2_discuss_1.mp3"
+        },
+        {
+          "id": "r2_discuss_2",
+          "speaker": "jacek",
+          "text": "And the cards and notes answer both. Got it.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r2_discuss_2.mp3"
+        },
+        {
+          "id": "r2_wrong_1_hint_1_1",
+          "speaker": "jacek",
+          "text": "One of them is in the wrong circle. Ask the two questions again.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r2_wrong_1_hint_1_1.mp3"
+        },
+        {
+          "id": "r2_wrong_2_hint_2_1",
+          "speaker": "jacek",
+          "text": "The Veilape and Dewmoth have no card. Their sentences name another creature to compare with.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r2_wrong_2_hint_2_1.mp3"
+        },
+        {
+          "id": "r2_wrong_3_hint_3_1",
+          "speaker": "jacek",
+          "text": "The Coilwing is in both circles. The Dewmoth sleeps whenever the Coilwing is awake.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r2_wrong_3_hint_3_1.mp3"
+        },
+        {
+          "id": "r2_right_1",
+          "speaker": "nigel",
+          "text": "Every creature is where it belongs.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r2_right_1.mp3"
+        },
+        {
+          "id": "r2_right_2",
+          "speaker": "jacek",
+          "text": "And not one of them wants to eat me. Good.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r2_right_2.mp3"
+        },
+        {
+          "id": "r2_final_narration_1",
+          "speaker": "narrator",
+          "text": "The gentle creatures settle. None of them could have broken into a vault.",
+          "pausesTimer": true,
+          "when": "final",
+          "audioFile": "assets/audio/voice/r2_final_narration_1.mp3"
+        }
+      ],
+      "bank": [
+        "r2_wrong_1_hint_1_1",
+        "r2_wrong_2_hint_2_1",
+        "r2_wrong_3_hint_3_1"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Department Store Vault",
+      "accent": "#D4A84A",
+      "panorama": "assets/rooms/room3.webp",
+      "startYaw": 110,
+      "objective": "Guide the Pilferling into the cage.",
+      "panelId": "r3_plan",
+      "hotspots": [
+        {
+          "id": "r3_tray",
+          "kind": "FIND",
+          "label": "Shiny baits",
+          "after": [],
+          "yaw": 139.5,
+          "pitch": -36.0,
+          "card": {
+            "title": "Shiny baits",
+            "text": "Three shiny baits on a velvet tray: a coin, a blue jewel and a key. The Pilferling cannot resist them."
+          },
+          "line": "r3_find_trinkets_1",
+          "img": "bait_tray",
+          "hint": "The baits are on a velvet tray by the brass till."
+        },
+        {
+          "id": "r3_note",
+          "kind": "LEARN",
+          "label": "Shop-boy's note",
+          "after": [],
+          "yaw": 141.8,
+          "pitch": 24.8,
+          "card": {
+            "title": "Shop-boy's note",
+            "text": "1. The Pilferling goes for the nearest shiny thing it can walk to. Distance is counted in steps along the floor, not in a straight line.\n2. It cannot cross a counter.\n3. If two shiny things are equally near, it takes the one higher up the plan, then the one further left.\n4. It only steps into the cage once its pouch holds three treasures. Before that it squeezes out and the cage is wasted."
+          },
+          "line": "r3_learn_note_1",
+          "hint": "The shop-boy's note is pinned to a pillar. Tap its gold ring."
+        },
+        {
+          "id": "r3_counter",
+          "kind": "INSPECT",
+          "label": "Jewellery counter",
+          "after": [],
+          "yaw": 18.0,
+          "pitch": -22.5,
+          "card": {
+            "title": "Jewellery counter",
+            "text": ""
+          },
+          "line": "r3_inspect_counter_1",
+          "views": [
+            {
+              "label": "Open case",
+              "text": "A glass case with its door left open. Rings and pearls sit in rows."
+            },
+            {
+              "label": "Hinge",
+              "text": "A scrap of grey cloth is caught in the hinge. Someone in a grey coat was here.",
+              "secret": true
+            }
+          ]
+        },
+        {
+          "id": "r3_plan",
+          "kind": "PANEL",
+          "label": "The floor plan",
+          "after": [
+            "r3_tray",
+            "r3_note"
+          ],
+          "yaw": -105.8,
+          "pitch": -45.0
+        },
+        {
+          "id": "r3_cellar",
+          "kind": "EXIT",
+          "label": "Stairs down",
+          "after": [
+            "r3_plan"
+          ],
+          "yaw": 1.1,
+          "pitch": 3.4
+        }
+      ],
+      "panel": {
+        "type": "lure",
+        "title": "The floor plan",
+        "rows": [
+          "...#.",
+          ".#..#",
+          "#..C.",
+          "..#..",
+          "..#P."
+        ],
+        "stepSeconds": 0.4
+      },
+      "reward": {
+        "note": 3,
+        "creature": "pilferling",
+        "caption": "The Pilferling hands over a coin.",
+        "chirp": "chirrup!"
+      },
+      "conversation": [
+        {
+          "id": "r3_enter_1",
+          "speaker": "jacek",
+          "text": "A shop at midnight. Nothing is lonelier, or shinier.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r3_enter_1.mp3"
+        },
+        {
+          "id": "r3_enter_2",
+          "speaker": "nigel",
+          "text": "Her name is Pilferling. She is not stealing. She just cannot help herself.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r3_enter_2.mp3"
+        },
+        {
+          "id": "r3_find_trinkets_1",
+          "speaker": "nigel",
+          "text": "Three shiny baits. Exactly what she cannot resist.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r3_find_trinkets_1.mp3"
+        },
+        {
+          "id": "r3_learn_note_1",
+          "speaker": "jacek",
+          "text": "Nearest first, no crossing counters, and the cage only when her pouch is full. Four rules.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r3_learn_note_1.mp3"
+        },
+        {
+          "id": "r3_inspect_counter_1",
+          "speaker": "nigel",
+          "text": "A scrap of grey cloth, caught in the hinge. Someone in a grey coat was here.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r3_inspect_counter_1.mp3"
+        },
+        {
+          "id": "r3_discuss_1",
+          "speaker": "nigel",
+          "text": "She always goes to the nearest bait. So the order we place them in decides everything.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r3_discuss_1.mp3"
+        },
+        {
+          "id": "r3_discuss_2",
+          "speaker": "jacek",
+          "text": "And the cage must be the last thing she reaches.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r3_discuss_2.mp3"
+        },
+        {
+          "id": "r3_wrong_1_hint_1_1",
+          "speaker": "jacek",
+          "text": "She took the cage too early. Her pouch must be full first.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r3_wrong_1_hint_1_1.mp3"
+        },
+        {
+          "id": "r3_wrong_2_hint_2_1",
+          "speaker": "jacek",
+          "text": "Count her steps from where she starts. She goes to whichever bait is nearest by walking.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r3_wrong_2_hint_2_1.mp3"
+        },
+        {
+          "id": "r3_wrong_3_hint_3_1",
+          "speaker": "jacek",
+          "text": "Put the baits in a line next to her, so each one is the nearest after the last.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r3_wrong_3_hint_3_1.mp3"
+        },
+        {
+          "id": "r3_right_1",
+          "speaker": "nigel",
+          "text": "Three treasures. Pouch full. In she goes.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r3_right_1.mp3"
+        },
+        {
+          "id": "r3_right_2",
+          "speaker": "jacek",
+          "text": "She looks pleased with herself.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r3_right_2.mp3"
+        },
+        {
+          "id": "r3_final_narration_1",
+          "speaker": "narrator",
+          "text": "The cage clicks shut. In her pouch, something heavier than a coin.",
+          "pausesTimer": true,
+          "when": "final",
+          "audioFile": "assets/audio/voice/r3_final_narration_1.mp3"
+        }
+      ],
+      "bank": [
+        "r3_wrong_1_hint_1_1",
+        "r3_wrong_2_hint_2_1",
+        "r3_wrong_3_hint_3_1"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Underground Speakeasy",
+      "accent": "#C2467F",
+      "panorama": "assets/rooms/room4.webp",
+      "startYaw": 120,
+      "objective": "Read the goblin's cable.",
+      "panelId": "r4_desk",
+      "hotspots": [
+        {
+          "id": "r4_wheel",
+          "kind": "FIND",
+          "label": "Cipher wheel",
+          "after": [],
+          "yaw": 167.6,
+          "pitch": -6.8,
+          "card": {
+            "title": "Cipher wheel",
+            "text": "A brass wheel with two rings of letters. The inner ring turns.\n\nOpen your Notebook to turn it over."
+          },
+          "line": "r4_find_wheel_1",
+          "opens": "r4_wheelback",
+          "opensLabel": "Turn the wheel over",
+          "img": "cipher_wheel",
+          "hint": "The cipher wheel sits on the long bar."
+        },
+        {
+          "id": "r4_cable",
+          "kind": "FIND",
+          "label": "Coded cable",
+          "after": [],
+          "yaw": 137.2,
+          "pitch": -9.0,
+          "card": {
+            "title": "Coded cable",
+            "text": "AOL IVF PZ RLWA VU SLCLS UPUL\n\nIt looks like nonsense. Maybe the wheel can read it."
+          },
+          "line": "r4_find_cable_1",
+          "img": "coded_cable",
+          "hint": "The coded cable is under the brass telephone on the bar."
+        },
+        {
+          "id": "r4_matchbook",
+          "kind": "LEARN",
+          "label": "Matchbook",
+          "after": [],
+          "yaw": 106.9,
+          "pitch": -4.0,
+          "card": {
+            "title": "Matchbook",
+            "text": "Welcome to the Seven Stars Club. Our wheel turns one step for every star on our sign. Our sign has seven."
+          },
+          "line": "r4_learn_matchbook_1",
+          "hint": "The Seven Stars matchbook tells you how far to turn the wheel. Tap its gold ring."
+        },
+        {
+          "id": "r4_wheelback",
+          "kind": "INSPECT",
+          "label": "Back of the wheel",
+          "after": [
+            "r4_wheel"
+          ],
+          "fromNotebook": true,
+          "card": {
+            "title": "Back of the wheel",
+            "text": ""
+          },
+          "line": "r4_inspect_wheel_1",
+          "views": [
+            {
+              "label": "Front",
+              "text": "The front of the cipher wheel. The inner ring turns."
+            },
+            {
+              "label": "Back",
+              "text": "A pencil line joins A to H. Someone marked the setting.",
+              "secret": true
+            }
+          ]
+        },
+        {
+          "id": "r4_desk",
+          "kind": "PANEL",
+          "label": "The wheel and the cable",
+          "after": [
+            "r4_wheel",
+            "r4_cable",
+            "r4_matchbook"
+          ],
+          "yaw": 146.2,
+          "pitch": -22.5
+        },
+        {
+          "id": "r4_trapdoor",
+          "kind": "EXIT",
+          "label": "Cold-room door",
+          "after": [
+            "r4_desk"
+          ],
+          "yaw": 54.0,
+          "pitch": 0.0
+        }
+      ],
+      "panel": {
+        "type": "wheel",
+        "title": "The wheel and the cable",
+        "cable": "AOL IVF PZ RLWA VU SLCLS UPUL",
+        "key": 7,
+        "answerLevel": 9,
+        "levels": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "reward": {
+        "note": 4,
+        "creature": "coilwing",
+        "caption": "The Coilwing pulls the lever.",
+        "chirp": "sssh!"
+      },
+      "conversation": [
+        {
+          "id": "r4_enter_1",
+          "speaker": "jacek",
+          "text": "Nigel, this place is full of people who are not looking at us.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r4_enter_1.mp3"
+        },
+        {
+          "id": "r4_enter_2",
+          "speaker": "nigel",
+          "text": "Mister Gnarlsby sells secrets. We need the one in his cable.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r4_enter_2.mp3"
+        },
+        {
+          "id": "r4_find_wheel_1",
+          "speaker": "nigel",
+          "text": "A cipher wheel. Two rings of letters that turn against each other.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r4_find_wheel_1.mp3"
+        },
+        {
+          "id": "r4_find_cable_1",
+          "speaker": "jacek",
+          "text": "A cable full of nonsense. Or a message in a wheel's language.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r4_find_cable_1.mp3"
+        },
+        {
+          "id": "r4_learn_matchbook_1",
+          "speaker": "goblin",
+          "text": "Seven stars on my sign, seven steps on my wheel. Do not say I never helped.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "audioFile": "assets/audio/voice/r4_learn_matchbook_1.mp3"
+        },
+        {
+          "id": "r4_inspect_wheel_1",
+          "speaker": "nigel",
+          "text": "A pencil line joins A to H. Whoever used it last marked the setting.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r4_inspect_wheel_1.mp3"
+        },
+        {
+          "id": "r4_discuss_1",
+          "speaker": "nigel",
+          "text": "Turn the inner ring seven steps. The cable should become words.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r4_discuss_1.mp3"
+        },
+        {
+          "id": "r4_discuss_2",
+          "speaker": "jacek",
+          "text": "Then we read it out loud, slowly.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r4_discuss_2.mp3"
+        },
+        {
+          "id": "r4_wrong_1_hint_1_1",
+          "speaker": "jacek",
+          "text": "The window still shows nonsense. Check how many stars the matchbook says.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r4_wrong_1_hint_1_1.mp3"
+        },
+        {
+          "id": "r4_wrong_2_hint_2_1",
+          "speaker": "jacek",
+          "text": "Seven steps on the inner ring. Count each letter.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r4_wrong_2_hint_2_1.mp3"
+        },
+        {
+          "id": "r4_wrong_3_hint_3_1",
+          "speaker": "jacek",
+          "text": "Read the window out loud. It names a place and a number.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r4_wrong_3_hint_3_1.mp3"
+        },
+        {
+          "id": "r4_right_1",
+          "speaker": "nigel",
+          "text": "The boy is kept on Level Nine.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r4_right_1.mp3"
+        },
+        {
+          "id": "r4_right_2",
+          "speaker": "jacek",
+          "text": "Level Nine. That is deep, isn't it?",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r4_right_2.mp3"
+        },
+        {
+          "id": "r4_final_narration_1",
+          "speaker": "narrator",
+          "text": "Somewhere far below, something dark turns over in its sleep.",
+          "pausesTimer": true,
+          "when": "final",
+          "audioFile": "assets/audio/voice/r4_final_narration_1.mp3"
+        }
+      ],
+      "bank": [
+        "r4_wrong_1_hint_1_1",
+        "r4_wrong_2_hint_2_1",
+        "r4_wrong_3_hint_3_1"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Second Salemers Hall",
+      "accent": "#A33B3B",
+      "panorama": "assets/rooms/room5.webp",
+      "startYaw": 0,
+      "objective": "Find who pays for the fear.",
+      "panelId": "r5_table",
+      "findLines": {
+        "1": "r5_find_sheet_1",
+        "3": "r5_find_third_sheet_1"
+      },
+      "hotspots": [
+        {
+          "id": "r5_sheet_a",
+          "kind": "FIND",
+          "label": "Glass sheet A",
+          "after": [],
+          "yaw": 1.1,
+          "pitch": -1.8,
+          "card": {
+            "title": "Glass sheet A",
+            "text": "A clear sheet of glass with black dots. Sheet A stays still on the table on the lamp table. Stack all three sheets and the dots add up to one picture."
+          },
+          "img": "glass_sheet",
+          "hint": "Glass sheet A is on the lectern.",
+          "seals": [
+            {
+              "name": "Sheet A: stays still on the table",
+              "grid": [
+                "..#..",
+                ".#.#.",
+                "....#",
+                ".#.#.",
+                "....."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "r5_sheet_b",
+          "kind": "FIND",
+          "label": "Glass sheet B",
+          "after": [],
+          "yaw": -155.2,
+          "pitch": -20.3,
+          "card": {
+            "title": "Glass sheet B",
+            "text": "A clear sheet of glass with black dots. Sheet B slides left and right on the lamp table. Stack all three sheets and the dots add up to one picture."
+          },
+          "img": "glass_sheet",
+          "hint": "Glass sheet B is in the pamphlet box.",
+          "seals": [
+            {
+              "name": "Sheet B: slides left and right",
+              "grid": [
+                ".....",
+                "....#",
+                "..#..",
+                "#..##",
+                "....."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "r5_sheet_c",
+          "kind": "FIND",
+          "label": "Glass sheet C",
+          "after": [],
+          "yaw": -117.5,
+          "pitch": -2.2,
+          "card": {
+            "title": "Glass sheet C",
+            "text": "A clear sheet of glass with black dots. Sheet C slides up and down on the lamp table. Stack all three sheets and the dots add up to one picture."
+          },
+          "img": "glass_sheet",
+          "hint": "Glass sheet C is in a coat pocket on a chair.",
+          "seals": [
+            {
+              "name": "Sheet C: slides up and down",
+              "grid": [
+                "##.#.",
+                ".....",
+                "..#..",
+                ".....",
+                "....."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "r5_ledger",
+          "kind": "LEARN",
+          "label": "Donor ledger",
+          "after": [],
+          "yaw": 164.2,
+          "pitch": -12.4,
+          "card": {
+            "title": "Donor ledger",
+            "text": "The ledger lists four seals and the four names that use them."
+          },
+          "line": "r5_learn_ledger_1",
+          "seals": [
+            {
+              "name": "The Hollis family",
+              "grid": [
+                "..#..",
+                ".###.",
+                "##.##",
+                ".###.",
+                "..#.."
+              ]
+            },
+            {
+              "name": "Mrs. Pemberton, the group's leader",
+              "grid": [
+                "..#..",
+                "..#..",
+                "#####",
+                "..#..",
+                "..#.."
+              ]
+            },
+            {
+              "name": "Fenwick Bank",
+              "grid": [
+                ".###.",
+                "#...#",
+                "#...#",
+                "#...#",
+                ".###."
+              ]
+            },
+            {
+              "name": "The Whitmore estate",
+              "grid": [
+                "#.#.#",
+                ".###.",
+                "#####",
+                ".###.",
+                "#.#.#"
+              ]
+            }
+          ],
+          "hint": "The donor ledger is on the lamp table. Tap its gold ring."
+        },
+        {
+          "id": "r5_pamphlet",
+          "kind": "INSPECT",
+          "label": "A pamphlet",
+          "after": [],
+          "yaw": -146.2,
+          "pitch": -32.6,
+          "card": {
+            "title": "Pamphlet",
+            "text": ""
+          },
+          "line": "r5_inspect_pamphlet_1",
+          "views": [
+            {
+              "label": "Front",
+              "text": "A pamphlet that says every creature is a monster."
+            },
+            {
+              "label": "Back",
+              "text": "In tiny print on the back: Printed on Assembly paper.",
+              "secret": true
+            }
+          ]
+        },
+        {
+          "id": "r5_table",
+          "kind": "PANEL",
+          "label": "The lamp table",
+          "after": [
+            "r5_sheet_a",
+            "r5_sheet_b",
+            "r5_sheet_c",
+            "r5_ledger"
+          ],
+          "yaw": -93.4,
+          "pitch": -4.5
+        },
+        {
+          "id": "r5_cellar",
+          "kind": "EXIT",
+          "label": "Cellar door",
+          "after": [
+            "r5_table"
+          ],
+          "yaw": 93.4,
+          "pitch": 1.1
+        }
+      ],
+      "panel": {
+        "type": "overlay",
+        "title": "The lamp table",
+        "A": [
+          "..#..",
+          ".#.#.",
+          "....#",
+          ".#.#.",
+          "....."
+        ],
+        "B": [
+          ".....",
+          "....#",
+          "..#..",
+          "#..##",
+          "....."
+        ],
+        "C": [
+          "##.#.",
+          ".....",
+          "..#..",
+          ".....",
+          "....."
+        ],
+        "answer": [
+          3,
+          2
+        ],
+        "answerOwner": "hollis",
+        "owners": [
+          {
+            "id": "hollis",
+            "name": "The Hollis family"
+          },
+          {
+            "id": "pemberton",
+            "name": "Mrs. Pemberton"
+          },
+          {
+            "id": "fenwick",
+            "name": "Fenwick Bank"
+          },
+          {
+            "id": "whitmore",
+            "name": "The Whitmore estate"
+          }
+        ]
+      },
+      "reward": {
+        "note": 5,
+        "creature": "hornback",
+        "caption": "The Hornback charges the door open.",
+        "chirp": "HUFF!"
+      },
+      "conversation": [
+        {
+          "id": "r5_enter_1",
+          "speaker": "jacek",
+          "text": "A church hall with no saints. Only pamphlets.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r5_enter_1.mp3"
+        },
+        {
+          "id": "r5_enter_2",
+          "speaker": "nigel",
+          "text": "They think every creature is a monster. Someone is paying them to keep thinking it.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r5_enter_2.mp3"
+        },
+        {
+          "id": "r5_radio_1",
+          "speaker": "tessa",
+          "text": "Nigel Scamper? Tessa Goldwell, Assembly Investigator. Somebody high up is feeding that group. Find out who.",
+          "pausesTimer": false,
+          "when": "radio",
+          "audioFile": "assets/audio/voice/r5_radio_1.mp3"
+        },
+        {
+          "id": "r5_find_sheet_1",
+          "speaker": "nigel",
+          "text": "A sheet of glass with a few dots on it. There must be more.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r5_find_sheet_1.mp3"
+        },
+        {
+          "id": "r5_find_third_sheet_1",
+          "speaker": "jacek",
+          "text": "Three sheets. Three pictures that are only half a picture each.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r5_find_third_sheet_1.mp3"
+        },
+        {
+          "id": "r5_learn_ledger_1",
+          "speaker": "nigel",
+          "text": "Four seals, four names. One of them paid for all of this.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r5_learn_ledger_1.mp3"
+        },
+        {
+          "id": "r5_inspect_pamphlet_1",
+          "speaker": "jacek",
+          "text": "Printed on Assembly paper. Not a street printer.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r5_inspect_pamphlet_1.mp3"
+        },
+        {
+          "id": "r5_discuss_1",
+          "speaker": "nigel",
+          "text": "Slide the sheets until the dots make a picture. Then compare it with the ledger.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r5_discuss_1.mp3"
+        },
+        {
+          "id": "r5_discuss_2",
+          "speaker": "jacek",
+          "text": "Stack them like a puzzle you cannot see the box of.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r5_discuss_2.mp3"
+        },
+        {
+          "id": "r5_wrong_1_hint_1_1",
+          "speaker": "jacek",
+          "text": "Sheet A never moves. Slide B left and right, and C up and down. The dots from all three sheets add up to one picture.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r5_wrong_1_hint_1_1.mp3"
+        },
+        {
+          "id": "r5_wrong_2_hint_2_1",
+          "speaker": "jacek",
+          "text": "You are looking for a neat, balanced picture, like a stamp. Open the ledger in your Notebook and look at the four seals.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r5_wrong_2_hint_2_1.mp3"
+        },
+        {
+          "id": "r5_wrong_3_hint_3_1",
+          "speaker": "jacek",
+          "text": "One seal is a diamond with an eye in the middle. Keep sliding until the dots draw it. Sheets wrap around the edges. Then tap the name that owns that seal.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r5_wrong_3_hint_3_1.mp3"
+        },
+        {
+          "id": "r5_right_1",
+          "speaker": "nigel",
+          "text": "A diamond with an eye. The Hollis family.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r5_right_1.mp3"
+        },
+        {
+          "id": "r5_right_2",
+          "speaker": "jacek",
+          "text": "The Hollis family is paying for the fear.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r5_right_2.mp3"
+        },
+        {
+          "id": "r5_final_narration_1",
+          "speaker": "narrator",
+          "text": "The money never touched the group's hands. It came sealed, from the Assembly's own tower.",
+          "pausesTimer": true,
+          "when": "final",
+          "audioFile": "assets/audio/voice/r5_final_narration_1.mp3"
+        }
+      ],
+      "bank": [
+        "r5_wrong_1_hint_1_1",
+        "r5_wrong_2_hint_2_1",
+        "r5_wrong_3_hint_3_1"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Archive Stacks",
+      "accent": "#5FAE9A",
+      "panorama": "assets/rooms/room6.webp",
+      "startYaw": -30,
+      "objective": "Open the right drawer with a shadow.",
+      "panelId": "r6_drawers",
+      "hotspots": [
+        {
+          "id": "r6_registry",
+          "kind": "FIND",
+          "label": "Registry book",
+          "after": [],
+          "yaw": -159.8,
+          "pitch": -15.8,
+          "card": {
+            "title": "Registry book",
+            "text": "A big book that lists every drawer in the Archives.\n\nOpen your Notebook to read its page."
+          },
+          "line": "r6_find_registry_1",
+          "opens": "r6_page",
+          "opensLabel": "Read the registry page",
+          "img": "registry_book",
+          "hint": "The registry book is on the ladder desk."
+        },
+        {
+          "id": "r6_page",
+          "kind": "LEARN",
+          "label": "Registry page",
+          "after": [
+            "r6_registry"
+          ],
+          "fromNotebook": true,
+          "card": {
+            "title": "Registry page",
+            "text": "Subject C is kept behind the Folded Wings plate. A drawer opens only while the statuette's shadow on the wall matches its plate."
+          },
+          "line": "r6_learn_registry_1",
+          "hint": "Open your Notebook, tap Clues, and use the button on the registry book to read its page."
+        },
+        {
+          "id": "r6_statuette",
+          "kind": "INSPECT",
+          "label": "Stormwing statuette",
+          "after": [],
+          "yaw": -22.5,
+          "pitch": -9.0,
+          "card": {
+            "title": "Statuette",
+            "text": ""
+          },
+          "line": "r6_inspect_statuette_1",
+          "views": [
+            {
+              "label": "Side",
+              "text": "A carved Stormwing statuette on a turntable."
+            },
+            {
+              "label": "Base",
+              "text": "A crest is cut into the base: a diamond with an eye. It is the Hollis crest.",
+              "secret": true
+            }
+          ]
+        },
+        {
+          "id": "r6_drawers",
+          "kind": "PANEL",
+          "label": "Turntable, lamp and drawers",
+          "after": [
+            "r6_registry",
+            "r6_page"
+          ],
+          "yaw": 10.1,
+          "pitch": 3.4
+        },
+        {
+          "id": "r6_stair",
+          "kind": "EXIT",
+          "label": "Shelf door",
+          "after": [
+            "r6_drawers"
+          ],
+          "yaw": 110.2,
+          "pitch": 15.8
+        }
+      ],
+      "panel": {
+        "type": "shadow",
+        "title": "Turntable, lamp and drawers",
+        "lamp": [
+          "Low",
+          "High"
+        ],
+        "names": {
+          "sh_spread_wings": "Spread Wings",
+          "sh_long_beak": "Long Beak",
+          "sh_folded_wings": "Folded Wings",
+          "sh_round_body": "Round Body",
+          "sh_tail_fan": "Tail Fan",
+          "sh_crest": "Crest",
+          "sh_two_legs": "Two Legs",
+          "sh_tiny_dot": "Tiny Dot"
+        },
+        "table": [
+          [
+            "sh_spread_wings",
+            "sh_long_beak"
+          ],
+          [
+            "sh_folded_wings",
+            "sh_round_body"
+          ],
+          [
+            "sh_tail_fan",
+            "sh_crest"
+          ],
+          [
+            "sh_two_legs",
+            "sh_tiny_dot"
+          ]
+        ],
+        "drawers": [
+          {
+            "id": 1,
+            "plate": "sh_spread_wings"
+          },
+          {
+            "id": 2,
+            "plate": "sh_folded_wings",
+            "file": true
+          },
+          {
+            "id": 3,
+            "plate": "sh_round_body"
+          }
+        ]
+      },
+      "reward": {
+        "note": 6,
+        "creature": "veilape",
+        "caption": "The Veilape opens the stair.",
+        "chirp": "hoo..."
+      },
+      "conversation": [
+        {
+          "id": "r6_enter_1",
+          "speaker": "jacek",
+          "text": "Shelves as tall as a church, and not one window.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r6_enter_1.mp3"
+        },
+        {
+          "id": "r6_enter_2",
+          "speaker": "nigel",
+          "text": "Every creature the Assembly ever banned has a drawer in here.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r6_enter_2.mp3"
+        },
+        {
+          "id": "r6_radio_1",
+          "speaker": "tessa",
+          "text": "Level Nine is past the stacks. The drawers use shadows, an old Archive trick.",
+          "pausesTimer": false,
+          "when": "radio",
+          "audioFile": "assets/audio/voice/r6_radio_1.mp3"
+        },
+        {
+          "id": "r6_find_registry_1",
+          "speaker": "nigel",
+          "text": "The registry. It must say which drawer holds Subject C.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r6_find_registry_1.mp3"
+        },
+        {
+          "id": "r6_learn_registry_1",
+          "speaker": "jacek",
+          "text": "Folded Wings. A drawer that opens for a shadow.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r6_learn_registry_1.mp3"
+        },
+        {
+          "id": "r6_inspect_statuette_1",
+          "speaker": "nigel",
+          "text": "The Hollis crest, cut into the base. Someone from that family has a hand in the Archives.",
+          "pausesTimer": false,
+          "when": "hotspot",
+          "mood": "surprised",
+          "audioFile": "assets/audio/voice/r6_inspect_statuette_1.mp3"
+        },
+        {
+          "id": "r6_discuss_1",
+          "speaker": "nigel",
+          "text": "We need the statuette's shadow to look like folded wings.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r6_discuss_1.mp3"
+        },
+        {
+          "id": "r6_discuss_2",
+          "speaker": "jacek",
+          "text": "Turn it, move the lamp, and keep watching the wall.",
+          "pausesTimer": true,
+          "when": "discuss",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r6_discuss_2.mp3"
+        },
+        {
+          "id": "r6_wrong_1_hint_1_1",
+          "speaker": "jacek",
+          "text": "That drawer is empty. Look for the one the registry named.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r6_wrong_1_hint_1_1.mp3"
+        },
+        {
+          "id": "r6_wrong_2_hint_2_1",
+          "speaker": "jacek",
+          "text": "The statuette turns four ways and the lamp sits two ways. Try them one by one.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r6_wrong_2_hint_2_1.mp3"
+        },
+        {
+          "id": "r6_wrong_3_hint_3_1",
+          "speaker": "jacek",
+          "text": "Folded wings means the statuette is side-on and the lamp is low.",
+          "pausesTimer": false,
+          "when": "bank",
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r6_wrong_3_hint_3_1.mp3"
+        },
+        {
+          "id": "r6_right_1",
+          "speaker": "nigel",
+          "text": "Subject C's file. A boy, thirteen years old.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r6_right_1.mp3"
+        },
+        {
+          "id": "r6_right_2",
+          "speaker": "jacek",
+          "text": "He is not a monster. He is a child.",
+          "pausesTimer": true,
+          "when": "right",
+          "mood": "happy",
+          "audioFile": "assets/audio/voice/r6_right_2.mp3"
+        },
+        {
+          "id": "r6_final_narration_1",
+          "speaker": "narrator",
+          "text": "The file is short and kind. It says the dark grows with fear, and shrinks with care.",
+          "pausesTimer": true,
+          "when": "final",
+          "audioFile": "assets/audio/voice/r6_final_narration_1.mp3"
+        }
+      ],
+      "bank": [
+        "r6_wrong_1_hint_1_1",
+        "r6_wrong_2_hint_2_1",
+        "r6_wrong_3_hint_3_1"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Obscurus Chamber",
+      "accent": "#8A63D2",
+      "panorama": "assets/rooms/room7.webp",
+      "startYaw": 0,
+      "objective": "Calm the Shade.",
+      "objectiveCard": "Calm the Shade.\nThen show the Assembly the truth.\nThen choose how it ends.",
+      "objectives": {
+        "A": "Calm the Shade.",
+        "B": "Show the Assembly the truth.",
+        "C": "Choose how it ends."
+      },
+      "hotspots": [
+        {
+          "id": "r7_entrance",
+          "kind": "AUTO",
+          "label": "Entrance",
+          "after": [],
+          "auto": true
+        },
+        {
+          "id": "r7_ring",
+          "kind": "PANEL",
+          "label": "The ring of pins",
+          "after": [
+            "r7_entrance"
+          ],
+          "yaw": 0.0,
+          "pitch": -31.5,
+          "part": "A"
+        },
+        {
+          "id": "r7_arrival",
+          "kind": "AUTO",
+          "label": "Arrival",
+          "after": [
+            "r7_ring"
+          ],
+          "auto": true
+        },
+        {
+          "id": "r7_table",
+          "kind": "PANEL",
+          "label": "The proof table",
+          "after": [
+            "r7_arrival"
+          ],
+          "yaw": 166.5,
+          "pitch": -9.0,
+          "part": "B"
+        },
+        {
+          "id": "r7_choice",
+          "kind": "PANEL",
+          "label": "The last choice",
+          "after": [
+            "r7_table"
+          ],
+          "yaw": 0.0,
+          "pitch": -31.5,
+          "part": "C"
+        },
+        {
+          "id": "r7_ending",
+          "kind": "AUTO",
+          "label": "Ending",
+          "after": [
+            "r7_choice"
+          ],
+          "auto": true
+        }
+      ],
+      "banks": {
+        "A": [
+          "r7_a_hint_1",
+          "r7_a_hint_2",
+          "r7_a_hint_3"
+        ],
+        "B": [
+          "r7_b_bank_1",
+          "r7_b_bank_2",
+          "r7_b_bank_3"
+        ]
+      },
+      "panel": {
+        "parts": {
+          "A": {
+            "type": "untangle",
+            "title": "Calm the Shade",
+            "start": [
+              "A",
+              "B",
+              "C",
+              "A",
+              "D",
+              "B",
+              "C",
+              "D"
+            ],
+            "ropes": {
+              "A": {
+                "color": "#d9453d"
+              },
+              "B": {
+                "color": "#3d7fd9"
+              },
+              "C": {
+                "color": "#e0b43a"
+              },
+              "D": {
+                "color": "#3fae5c"
+              }
+            }
+          },
+          "B": {
+            "type": "proof",
+            "title": "The Proof Table",
+            "answer": [
+              1,
+              3,
+              5
+            ]
+          },
+          "C": {
+            "type": "choice",
+            "title": "The last choice",
+            "options": [
+              {
+                "id": "calm",
+                "label": "Hold out your hand to Cael"
+              },
+              {
+                "id": "sealed",
+                "label": "Close the Archive seal around the Shade"
+              }
+            ]
+          }
+        }
+      },
+      "conversation": [
+        {
+          "id": "r7_enter_1",
+          "speaker": "jacek",
+          "text": "Nigel, the floor is moving.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r7_enter_1.mp3"
+        },
+        {
+          "id": "r7_enter_2",
+          "speaker": "nigel",
+          "text": "It is not the floor. It is a boy's fear, grown too big for him.",
+          "pausesTimer": true,
+          "when": "enter",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r7_enter_2.mp3"
+        },
+        {
+          "id": "r7_tessa_arrives_1",
+          "speaker": "tessa",
+          "text": "I am here. The ropes are the Archive's old binding. Free them and the Shade will quiet.",
+          "pausesTimer": false,
+          "when": "tessa_arrives",
+          "audioFile": "assets/audio/voice/r7_tessa_arrives_1.mp3"
+        },
+        {
+          "id": "r7_part_a_right_1",
+          "speaker": "nigel",
+          "text": "The ropes are free. The storm is going quiet.",
+          "pausesTimer": true,
+          "when": "part_a_right",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r7_part_a_right_1.mp3"
+        },
+        {
+          "id": "r7_part_a_right_2",
+          "speaker": "jacek",
+          "text": "Look at him. He is just a boy.",
+          "pausesTimer": true,
+          "when": "part_a_right",
+          "mood": "neutral",
+          "audioFile": "assets/audio/voice/r7_part_a_right_2.mp3"
+        },
+        {
+          "id": "r7_graves_arrives_1",
+          "speaker": "graves",
+          "text": "Stand away, all of you. These creatures broke into the Archives.",
+          "pausesTimer": false,
+          "when": "graves_arrives",
+          "audioFile": "assets/audio/voice/r7_graves_arrives_1.mp3"
+        },
+        {
+          "id": "r7_graves_arrives_2",
+          "speaker": "tessa",
+          "text": "Show the guards what you found, Nigel.",
+          "pausesTimer": false,
+          "when": "graves_arrives",
+          "audioFile": "assets/audio/voice/r7_graves_arrives_2.mp3"
+        },
+        {
+          "id": "r7_part_b_right_1",
+          "speaker": "tessa",
+          "text": "His stamp, his key, his crest. Guards, look at the Director's own mark.",
+          "pausesTimer": false,
+          "when": "part_b_right",
+          "mood": "serious",
+          "audioFile": "assets/audio/voice/r7_part_b_right_1.mp3"
+        },
+        {
+          "id": "r7_part_b_right_2",
+          "speaker": "graves",
+          "text": "You were never meant to get this far.",
+          "pausesTimer": false,
+          "when": "part_b_right",
+          "mood": "true",
+          "audioFile": "assets/audio/voice/r7_part_b_right_2.mp3"
+        },
+        {
+          "id": "r7_part_c_start_1",
+          "speaker": "tessa",
+          "text": "Nigel, your sixth note. Fear feeds the Shade. Calm quiets it.",
+          "pausesTimer": false,
+          "when": "part_c_start",
+          "mood": "serious",
+          "audioFile": "assets/audio/voice/r7_part_c_start_1.mp3"
+        },
+        {
+          "id": "r7_part_c_start_2",
+          "speaker": "cael",
+          "text": "Please. I do not want to hurt anyone.",
+          "pausesTimer": false,
+          "when": "part_c_start",
+          "mood": "afraid",
+          "audioFile": "assets/audio/voice/r7_part_c_start_2.mp3"
+        },
+        {
+          "id": "r7_a_hint_1",
+          "when": "bank_a",
+          "speaker": "jacek",
+          "text": "Two ropes cross. Move a pin so they stop.",
+          "pausesTimer": false,
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r7_a_hint_1.mp3"
+        },
+        {
+          "id": "r7_a_hint_2",
+          "when": "bank_a",
+          "speaker": "jacek",
+          "text": "Swap two pins that sit next to each other and watch the storm settle.",
+          "pausesTimer": false,
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r7_a_hint_2.mp3"
+        },
+        {
+          "id": "r7_a_hint_3",
+          "when": "bank_a",
+          "speaker": "jacek",
+          "text": "Put matching colours side by side, and no rope can cross another.",
+          "pausesTimer": false,
+          "mood": "worried",
+          "audioFile": "assets/audio/voice/r7_a_hint_3.mp3"
+        },
+        {
+          "id": "r7_b_bank_1",
+          "when": "bank_b",
+          "speaker": "graves",
+          "text": "Mister Scamper, those pages say nothing about me.",
+          "pausesTimer": false,
+          "mood": "polished",
+          "audioFile": "assets/audio/voice/r7_b_bank_1.mp3"
+        },
+        {
+          "id": "r7_b_bank_2",
+          "when": "bank_b",
+          "speaker": "tessa",
+          "text": "Look for the notes with his stamp, his key and his crest.",
+          "pausesTimer": false,
+          "mood": "serious",
+          "audioFile": "assets/audio/voice/r7_b_bank_2.mp3"
+        },
+        {
+          "id": "r7_b_bank_3",
+          "when": "bank_b",
+          "speaker": "tessa",
+          "text": "Three of the six notes carry the Director's mark. The other three do not.",
+          "pausesTimer": false,
+          "mood": "serious",
+          "audioFile": "assets/audio/voice/r7_b_bank_3.mp3"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "text": "Your case was cleared unopened. Stamp: G.H., Security.",
+      "graves": true
+    },
+    {
+      "id": 2,
+      "text": "Every creature in the case is gentle. None could have broken into the Archives.",
+      "graves": false
+    },
+    {
+      "id": 3,
+      "text": "A brass key marked Level Nine, engraved Director G.H., was in the Pilferling's pouch.",
+      "graves": true
+    },
+    {
+      "id": 4,
+      "text": "The boy is kept on Level Nine.",
+      "graves": false
+    },
+    {
+      "id": 5,
+      "text": "The group's money comes from a purse sealed with the Hollis crest.",
+      "graves": true
+    },
+    {
+      "id": 6,
+      "text": "Subject C is a boy. Fear feeds the Shade. Calm quiets it.",
+      "graves": false
+    }
+  ],
+  "ending": {
+    "calm": [
+      {
+        "id": "end_calm_1",
+        "speaker": "narrator",
+        "text": "Cael takes Nigel's hand. The Shade lifts from him like smoke and fades into gold light.",
+        "pausesTimer": false,
+        "sprite": "cael",
+        "audioFile": "assets/audio/voice/end_calm_1.mp3"
+      },
+      {
+        "id": "end_calm_2",
+        "speaker": "narrator",
+        "text": "Tessa's guards lead Graves-Hollis away, his polished mask gone.",
+        "pausesTimer": false,
+        "audioFile": "assets/audio/voice/end_calm_2.mp3"
+      },
+      {
+        "id": "end_calm_3",
+        "speaker": "narrator",
+        "text": "The Stormwing bursts from Nigel's suitcase. The ceiling opens to the night sky.",
+        "pausesTimer": false,
+        "fx": "storm",
+        "audioFile": "assets/audio/voice/end_calm_3.mp3"
+      },
+      {
+        "id": "end_calm_4",
+        "speaker": "narrator",
+        "text": "A silver rain falls over the city and washes the night from the mind of everyone without magic.",
+        "pausesTimer": false,
+        "audioFile": "assets/audio/voice/end_calm_4.mp3"
+      },
+      {
+        "id": "end_calm_5",
+        "speaker": "jacek",
+        "text": "Funny. I had the strangest dream about a suitcase.",
+        "pausesTimer": false,
+        "mood": "happy",
+        "audioFile": "assets/audio/voice/end_calm_5.mp3"
+      },
+      {
+        "id": "end_calm_6",
+        "speaker": "narrator",
+        "text": "Nigel slips a silver egg into his coat. Cael waves goodbye to him.",
+        "pausesTimer": false,
+        "audioFile": "assets/audio/voice/end_calm_6.mp3"
+      },
+      {
+        "id": "end_calm_7",
+        "speaker": "narrator",
+        "text": "Tessa hands Nigel a telegram. Trial in Paris. Bring the case, and Cael.",
+        "pausesTimer": false,
+        "audioFile": "assets/audio/voice/end_calm_7.mp3"
+      }
+    ],
+    "sealed": [
+      {
+        "id": "end_sealed_1",
+        "speaker": "narrator",
+        "text": "The Archive seal closes. The Shade is drawn into a small iron lantern and Cael sinks into a calm sleep.",
+        "pausesTimer": false,
+        "sprite": "cael",
+        "audioFile": "assets/audio/voice/end_sealed_1.mp3"
+      },
+      {
+        "id": "end_sealed_2",
+        "speaker": "narrator",
+        "text": "Tessa's guards lead Graves-Hollis away, his polished mask gone.",
+        "pausesTimer": false,
+        "audioFile": "assets/audio/voice/end_sealed_2.mp3"
+      },
+      {
+        "id": "end_sealed_3",
+        "speaker": "narrator",
+        "text": "The Stormwing bursts from Nigel's suitcase. The ceiling opens to the night sky.",
+        "pausesTimer": false,
+        "fx": "storm",
+        "audioFile": "assets/audio/voice/end_sealed_3.mp3"
+      },
+      {
+        "id": "end_sealed_4",
+        "speaker": "narrator",
+        "text": "A silver rain falls over the city and washes the night from the mind of everyone without magic.",
+        "pausesTimer": false,
+        "audioFile": "assets/audio/voice/end_sealed_4.mp3"
+      },
+      {
+        "id": "end_sealed_5",
+        "speaker": "jacek",
+        "text": "Funny. I had the strangest dream about a suitcase.",
+        "pausesTimer": false,
+        "mood": "happy",
+        "audioFile": "assets/audio/voice/end_sealed_5.mp3"
+      },
+      {
+        "id": "end_sealed_6",
+        "speaker": "narrator",
+        "text": "Nigel slips a silver egg into his coat. Cael sleeps on.",
+        "pausesTimer": false,
+        "audioFile": "assets/audio/voice/end_sealed_6.mp3"
+      },
+      {
+        "id": "end_sealed_7",
+        "speaker": "narrator",
+        "text": "Tessa hands Nigel a telegram. Trial in Paris. The lantern hums whenever Cael dreams.",
+        "pausesTimer": false,
+        "audioFile": "assets/audio/voice/end_sealed_7.mp3"
+      }
+    ]
+  }
+}

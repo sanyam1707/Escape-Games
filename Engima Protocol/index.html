@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>The Enigma Protocol</title>
+<meta name="description" content="A 360 detective escape game set in gaslit Larkhaven. Seven rooms, ten minutes.">
+<meta property="og:title" content="The Enigma Protocol">
+<meta property="og:description" content="A 360 detective escape game set in gaslit Larkhaven. Seven rooms, ten minutes.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/sheets/keyart_title.jpg">
+<meta name="theme-color" content="#14202E">
+<link rel="stylesheet" href="vendor/pannellum.css">
+<link rel="stylesheet" href="style.css?v=13">
+</head>
+<body>
+<div id="app">
+  <!-- room view: panorama + gradient fallback -->
+  <div id="stage"><div id="fallback"></div><div id="pano"></div></div>
+
+  <!-- HUD -->
+  <header id="hud" hidden>
+    <div class="hud-row">
+      <div class="hud-left"><div id="timer" class="chip" aria-label="Time left">10:00</div>
+      <div id="purse" class="chip"><span class="ico" data-ico="purse"></span><b id="score">0</b></div></div>
+      <div id="hints" class="chip"><span class="ico" data-ico="hint"></span><b id="hintCount">3</b></div>
+    </div>
+    <div id="objective"></div>
+  </header>
+  <nav id="bar" hidden>
+    <button id="btnHint" class="bar-btn"><span class="ico" data-ico="hint"></span><span data-t="hint"></span></button>
+    <button id="btnBook" class="bar-btn"><span class="ico" data-ico="casebook"></span><span data-t="casebook"></span></button>
+    <button id="btnPause" class="bar-btn"><span class="ico pause-ico"></span><span data-t="pause"></span></button>
+  </nav>
+  <div id="dragHand" hidden></div>
+
+  <!-- 1. Tap to Start -->
+  <section id="start" class="screen">
+    <div class="fog"></div>
+    <h1 id="startTitle"></h1>
+    <button id="btnStart" class="seal" data-t="tapToStart"></button>
+  </section>
+
+  <!-- 2. Mission Info: one full page, no box -->
+  <section id="mission" class="screen" hidden>
+    <div class="fog"></div>
+    <div class="mission-text">
+      <h2 id="missionHeading"></h2>
+      <div id="missionBody"></div>
+      <button id="btnBegin" class="seal"></button>
+    </div>
+  </section>
+
+  <!-- 3. Tutorial -->
+  <section id="tutorial" hidden>
+    <div id="spot"></div>
+    <div id="tSamples">
+      <button id="sampleObject" class="sample"></button>
+      <button id="sampleGlow" class="sample glow"></button>
+      <button id="sampleItem" class="sample"></button>
+    </div>
+    <div id="tCard" class="card parchment">
+      <p id="tText"></p>
+      <p id="tAsk"></p>
+      <div class="row"><button id="tSkip" class="plate ghost" data-t="skip"></button><button id="tNext" class="plate" data-t="next"></button></div>
+    </div>
+  </section>
+
+  <!-- dialogue caption -->
+  <section id="dialogue" hidden>
+    <div id="dBox" class="parchment">
+      <div id="dBust"></div>
+      <div id="dMain">
+      <div id="dName"></div>
+      <p id="dText"></p>
+      <div id="dFoot">
+        <span id="dHint" data-t="tapContinue"></span>
+        <span class="dbtns">
+          <button class="plate ghost" data-pause aria-label="Pause" data-t="pause"></button>
+          <button id="dSkip" class="plate ghost" data-t="skip"></button>
+        </span>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- generic card / close-up -->
+  <section id="card" class="modal" hidden>
+    <div class="card parchment">
+      <button class="x" data-close aria-label="Close">&times;</button>
+      <h3 id="cardTitle"></h3>
+      <img id="cardArt" alt="" hidden>
+      <p id="cardText"></p>
+      <p id="cardNote"></p>
+      <button class="pause-mini" data-pause aria-label="Pause"><span class="pause-ico"></span></button>
+      <div class="row"><button id="cardTurn" class="plate ghost" data-t="turn" hidden></button><button id="cardDone" class="plate" data-close data-t="done"></button></div>
+    </div>
+  </section>
+
+  <!-- puzzle panel -->
+  <section id="panel" class="modal" hidden>
+    <div class="card parchment wide">
+      <button class="x" data-close aria-label="Close">&times;</button>
+      <button class="pause-mini" data-pause aria-label="Pause"><span class="pause-ico"></span></button>
+      <h3 id="panelTitle"></h3>
+      <div id="panelBody"></div>
+      <div class="row"><button id="panelHint" class="plate ghost"></button></div>
+    </div>
+  </section>
+
+  <!-- end screens -->
+  <section id="end" class="screen" hidden>
+    <div class="fog"></div>
+    <h2 id="endTitle"></h2><div id="endBody"></div><div id="endBtns" class="row"></div>
+  </section>
+  <div id="fade"></div>
+
+  <!-- Casebook -->
+  <section id="book" class="modal" hidden>
+    <div class="card parchment">
+      <button class="x" data-close aria-label="Close">&times;</button>
+      <h3 data-t="casebook"></h3>
+      <div id="bookTabs" class="tabs"></div>
+      <p id="bookBody"></p>
+      <button class="pause-mini" data-pause aria-label="Pause"><span class="pause-ico"></span></button>
+    </div>
+  </section>
+
+  <!-- Pause menu -->
+  <section id="pauseMenu" class="modal dark" hidden>
+    <div class="card parchment menu">
+      <h3 data-t="pause"></h3>
+      <button id="pmResume" class="plate" data-t="resume"></button>
+      <button id="pmSound" class="plate ghost"></button>
+      <button id="pmNarr" class="plate ghost"></button>
+      <button id="pmRestart" class="plate ghost" data-t="restartRoom"></button>
+      <button id="pmQuit" class="plate ghost" data-t="quit"></button>
+      <div id="pmConfirm" hidden>
+        <p data-t="quitConfirm"></p>
+        <div class="row"><button id="pmNo" class="plate ghost" data-t="no"></button><button id="pmYes" class="plate" data-t="yes"></button></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="danger"></div>
+  <div id="toast" hidden></div>
+  <pre id="dbg" hidden></pre>
+</div>
+<script src="vendor/pannellum.js"></script>
+<script src="puzzles.js?v=13"></script>
+<script src="game.js?v=13"></script>
+</body>
+</html>

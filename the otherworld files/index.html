@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>The Otherworld Files</title>
+<meta name="description" content="A 360 point-and-click escape game set in Marrow Creek, 1986. Follow the lights and find who opened the gate.">
+<meta property="og:title" content="The Otherworld Files">
+<meta property="og:description" content="Seven rooms. Seven minutes. Follow the hum.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="vendor/pannellum.css">
+<link rel="stylesheet" href="style.css?v=23">
+</head>
+<body>
+<div id="app">
+  <div id="stage"><div id="pano"></div></div>
+  <div id="flicker"></div>
+  <div id="fade"></div>
+  <div id="crt"></div>
+
+  <div id="hud-top" class="hud hidden">
+    <div class="row">
+      <div class="stat" id="st-time"><span class="lbl">TIME</span><span id="timer" class="num">7:00</span></div>
+      <div class="stat" id="st-signal"><span class="lbl">SIGNAL</span><span id="signal" class="num">0</span></div>
+      <div id="sparks" class="sparks" aria-label="Sparks"></div>
+    </div>
+    <div id="objective"></div>
+    <div id="findstrip"></div>
+  </div>
+  <div id="floaters"></div>
+
+  <div id="hud-bottom" class="hud hidden">
+    <button id="btn-pause" class="btn small" aria-label="Pause">Pause</button>
+    <button id="btn-hint" class="btn small" aria-label="Hint"><span class="ico" data-icon="icon_hint"></span><span class="t">Hint</span></button>
+    <button id="btn-book" class="btn small" aria-label="Casebook"><span class="ico" data-icon="icon_casebook"></span><span class="t">Casebook</span></button>
+    <div id="powers"></div>
+  </div>
+
+  <div id="panel-layer"></div>
+  <div id="armed" class="hidden"><span id="armed-text"></span><button id="armed-x" class="x" aria-label="Cancel">&times;</button></div>
+  <div id="edge-arrow" class="hidden"></div>
+  <div id="drag-hand" class="hidden"></div>
+  <div id="dialogue" class="hidden"><div class="port"></div><div class="txt"><div class="who"></div><div class="line"></div></div><button class="skip" id="dlg-skip">Skip</button></div>
+  <div id="card-layer"></div>
+  <div id="casebook" class="hidden"></div>
+  <div id="toast" class="hidden"></div>
+  <div id="wren-drop" class="hidden"></div>
+  <div id="threat"><div class="vig"></div><div class="shade"></div><div class="noise"></div><div class="cap"></div></div>
+  <div id="debug" class="hidden"></div>
+  <div id="pause" class="overlay hidden"></div>
+  <div id="tutorial" class="hidden"></div>
+  <div id="briefing" class="hidden"></div>
+  <div id="start" class="overlay"></div>
+  <div id="endscreen" class="overlay hidden"></div>
+  <div id="error" class="overlay hidden"></div>
+</div>
+<script src="vendor/pannellum.js"></script>
+<script src="game.js?v=23"></script>
+<script src="audio.js?v=23"></script>
+<script src="panels.js?v=23"></script>
+</body>
+</html>

@@ -1,0 +1,3134 @@
+{
+  "config": {
+    "title": "The Kingdom Beyond the Door",
+    "scoreName": "Embers",
+    "timerSeconds": 600,
+    "idleSeconds": 25,
+    "pointsItem": 5,
+    "pointsClue": 0,
+    "pointsRoom": 30,
+    "pointsFinalStep": 30,
+    "pointsPerSecondLeft": 1,
+    "penaltyWrong": 10,
+    "penaltyWrongCapPerPuzzle": 30,
+    "lockoutSeconds": 3,
+    "penaltyHint": 25,
+    "hintsPerRoom": 2,
+    "blurPx": 6,
+    "blurSharpenMs": 1200,
+    "typewriterMsPerChar": 26,
+    "tutorialBlurRoom": "room1"
+  },
+  "theme": {
+    "colors": {
+      "midnight": "#0B1530",
+      "midnight2": "#14224A",
+      "frost": "#EAF2FF",
+      "frostDim": "#A9B9D6",
+      "ember": "#F2B134",
+      "emberDeep": "#C9801C",
+      "brass": "#B98A3E",
+      "spruce": "#2F5D50",
+      "danger": "#E0563F",
+      "ok": "#7BD08A",
+      "glass": "rgba(14,24,54,0.88)"
+    },
+    "fonts": {
+      "title": "Cormorant Garamond",
+      "body": "Lora",
+      "fallbackTitle": "Georgia, serif",
+      "fallbackBody": "Georgia, serif"
+    }
+  },
+  "characters": {
+    "ivy": {
+      "name": "Ivy",
+      "side": "left",
+      "accent": "#A8D5BA",
+      "voice": {
+        "pitch": 1,
+        "rate": 0.95,
+        "gender": "female"
+      },
+      "moods": [
+        "neutral",
+        "happy",
+        "worried",
+        "surprised"
+      ],
+      "busts": {
+        "neutral": "assets/cut/bust_ivy_neutral.png",
+        "happy": "assets/cut/bust_ivy_happy.png",
+        "worried": "assets/cut/bust_ivy_worried.png",
+        "surprised": "assets/cut/bust_ivy_surprised.png"
+      }
+    },
+    "tobin": {
+      "name": "Tobin",
+      "side": "left",
+      "accent": "#E87D5E",
+      "voice": {
+        "pitch": 1.05,
+        "rate": 1.05,
+        "gender": "male"
+      },
+      "moods": [
+        "neutral",
+        "happy",
+        "worried",
+        "surprised"
+      ],
+      "busts": {
+        "neutral": "assets/cut/bust_tobin_neutral.png",
+        "happy": "assets/cut/bust_tobin_happy.png",
+        "worried": "assets/cut/bust_tobin_worried.png",
+        "surprised": "assets/cut/bust_tobin_surprised.png"
+      }
+    },
+    "rook": {
+      "name": "Rook",
+      "side": "left",
+      "accent": "#E3913F",
+      "voice": {
+        "pitch": 1.25,
+        "rate": 1.1,
+        "gender": "male"
+      },
+      "moods": [
+        "neutral",
+        "worried",
+        "guilty",
+        "hopeful"
+      ],
+      "busts": {
+        "neutral": "assets/cut/bust_rook_neutral.png",
+        "worried": "assets/cut/bust_rook_worried.png",
+        "guilty": "assets/cut/bust_rook_guilty.png",
+        "hopeful": "assets/cut/bust_rook_hopeful.png"
+      }
+    },
+    "bramble": {
+      "name": "Mother Bramble",
+      "side": "right",
+      "accent": "#C8553D",
+      "voice": {
+        "pitch": 0.9,
+        "rate": 0.85,
+        "gender": "female"
+      },
+      "moods": [
+        "neutral",
+        "warm"
+      ],
+      "busts": {
+        "neutral": "assets/cut/bust_bramble_neutral.png",
+        "warm": "assets/cut/bust_bramble_warm.png"
+      }
+    },
+    "fenn": {
+      "name": "Elder Fenn",
+      "side": "right",
+      "accent": "#6FA86B",
+      "voice": {
+        "pitch": 0.7,
+        "rate": 0.8,
+        "gender": "male"
+      },
+      "moods": [
+        "neutral",
+        "warm"
+      ],
+      "busts": {
+        "neutral": "assets/cut/bust_fenn_neutral.png",
+        "warm": "assets/cut/bust_fenn_warm.png"
+      }
+    },
+    "veyra": {
+      "name": "Veyra",
+      "side": "right",
+      "accent": "#7FB8E0",
+      "voice": {
+        "pitch": 0.6,
+        "rate": 0.75,
+        "gender": "female"
+      },
+      "moods": [
+        "calm",
+        "cold",
+        "furious"
+      ],
+      "busts": {
+        "calm": "assets/cut/bust_veyra_calm.png",
+        "cold": "assets/cut/bust_veyra_cold.png",
+        "furious": "assets/cut/bust_veyra_furious.png"
+      }
+    },
+    "auren": {
+      "name": "Auren",
+      "side": "right",
+      "accent": "#F2B134",
+      "voice": {
+        "pitch": 0.5,
+        "rate": 0.7,
+        "gender": "male"
+      },
+      "moods": [
+        "calm",
+        "gentle"
+      ],
+      "busts": {
+        "calm": "assets/cut/bust_auren_calm.png",
+        "gentle": "assets/cut/bust_auren_gentle.png"
+      }
+    },
+    "narrator": {
+      "name": "Narrator",
+      "side": "none",
+      "accent": "#CFE3FF",
+      "voice": {
+        "pitch": 1,
+        "rate": 0.95,
+        "gender": "neutral"
+      },
+      "moods": [],
+      "busts": {}
+    }
+  },
+  "start": {
+    "tapToStart": {
+      "title": "The Kingdom Beyond the Door",
+      "subtitle": "A door. A frozen kingdom. Ten minutes.",
+      "button": "Tap to Start"
+    },
+    "mission": {
+      "heading": "Aldermere Waits",
+      "button": "Begin",
+      "paragraphs": [
+        "Behind a carved door in the Marlow attic lies Aldermere, a hidden kingdom where winter has never ended. For a hundred years its seasons have been locked away.",
+        "Its golden lion-king sleeps in stone. His Ember Heart was shattered into six shards by the cruel Winter Regent, and someone opened the Door to let her frost in.",
+        "You are Ivy and Tobin Marlow. Find the six shards before the frost seals the Door in ten minutes."
+      ],
+      "audioFile": "assets/audio/voice/mission_0.mp3"
+    },
+    "tutorial": [
+      {
+        "id": "t1",
+        "title": "Look around",
+        "text": "Drag to look around the room.",
+        "target": "screen"
+      },
+      {
+        "id": "t2",
+        "title": "Tap what glows",
+        "text": "Tap anything that glows. You can take it, read it or open it.",
+        "target": "glowDemo"
+      },
+      {
+        "id": "t3",
+        "title": "Bag and Casebook",
+        "text": "Items go in your Bag. To use one, tap it, then tap where it belongs. Clues go in your Casebook.",
+        "target": "bagButton"
+      },
+      {
+        "id": "t4",
+        "title": "Puzzles",
+        "text": "Puzzles open on their own screen. Close them with X. Pause stops the clock.",
+        "target": "pauseButton"
+      },
+      {
+        "id": "t5",
+        "title": "Embers, hints and the clock",
+        "text": "You earn Embers for items, shards and time left. Wrong answers and hints cost Embers. You have 2 hints per room, 25 Embers each. The clock counts down from 10:00 while the frost climbs the Door.",
+        "target": "topBar"
+      }
+    ],
+    "openNarration": "open_narr"
+  },
+  "items": {
+    "winding_key": {
+      "name": "Winding Key",
+      "desc": "A small brass key on a faded ribbon. It looks made for winding something.",
+      "sprite": "assets/cut/winding_key.png"
+    },
+    "music_box": {
+      "name": "Music Box",
+      "desc": "Grandmother's music box. It has stopped. Maybe a key can wind it.",
+      "sprite": "assets/cut/music_box.png"
+    },
+    "music_box_wound": {
+      "name": "Wound Music Box",
+      "desc": "Wound up and ready to play. Try it on the Door.",
+      "sprite": "assets/cut/music_box.png"
+    },
+    "flint_striker": {
+      "name": "Flint Striker",
+      "desc": "A steel striker for making sparks.",
+      "sprite": "assets/cut/flint_striker.png"
+    },
+    "lantern_oil": {
+      "name": "Lantern Oil",
+      "desc": "A small tin of lantern oil.",
+      "sprite": "assets/cut/lantern_oil.png"
+    },
+    "serving_tray": {
+      "name": "Serving Tray",
+      "desc": "A wide wooden tray.",
+      "sprite": "assets/cut/serving_tray.png"
+    },
+    "wooden_ladle": {
+      "name": "Wooden Ladle",
+      "desc": "A long wooden ladle.",
+      "sprite": "assets/cut/wooden_ladle.png"
+    },
+    "wooden_mallet": {
+      "name": "Wooden Mallet",
+      "desc": "A carpenter's mallet.",
+      "sprite": "assets/cut/wooden_mallet.png"
+    },
+    "warming_stone": {
+      "name": "Warming Stone",
+      "desc": "A smooth stone that still holds heat.",
+      "sprite": "assets/cut/warming_stone.png"
+    },
+    "ice_spikes": {
+      "name": "Ice Spikes",
+      "desc": "Studded spikes that strap on boots.",
+      "sprite": "assets/cut/ice_spikes.png"
+    },
+    "ferry_lantern": {
+      "name": "Ferry Lantern",
+      "desc": "A small brass lantern with a handle.",
+      "sprite": "assets/cut/ferry_lantern.png"
+    },
+    "mural_fragments": {
+      "name": "Mural Fragments",
+      "desc": "Nine pieces of a broken painting.",
+      "sprite": "assets/cut/mural_fragments.png"
+    },
+    "candle_taper": {
+      "name": "Candle Taper",
+      "desc": "A thin candle in a brass holder.",
+      "sprite": "assets/cut/candle_taper.png"
+    },
+    "kit_locket": {
+      "name": "Kit Locket",
+      "desc": "A silver locket with three tiny fox faces.",
+      "sprite": "assets/cut/kit_locket.png"
+    },
+    "silver_bell_key": {
+      "name": "Silver Bell-Key",
+      "desc": "A silver key with a small bell on top.",
+      "sprite": "assets/cut/silver_bell_key.png"
+    },
+    "shard_bell": {
+      "name": "Bell Shard",
+      "desc": "Amber glass with a tiny bell inside.",
+      "sprite": "assets/cut/shard_bell.png"
+    },
+    "shard_lantern": {
+      "name": "Lantern Shard",
+      "desc": "Pale gold glass with a flame pattern.",
+      "sprite": "assets/cut/shard_lantern.png"
+    },
+    "shard_hearth": {
+      "name": "Hearth Shard",
+      "desc": "Red-orange glass, warm to the touch.",
+      "sprite": "assets/cut/shard_hearth.png"
+    },
+    "shard_dance": {
+      "name": "Dance Shard",
+      "desc": "Green glass with a swirl inside.",
+      "sprite": "assets/cut/shard_dance.png"
+    },
+    "shard_ice": {
+      "name": "Ice Shard",
+      "desc": "Blue glass that never melts.",
+      "sprite": "assets/cut/shard_ice.png"
+    },
+    "shard_tale": {
+      "name": "Tale Shard",
+      "desc": "Violet glass with a tiny book inside.",
+      "sprite": "assets/cut/shard_tale.png"
+    }
+  },
+  "combines": [
+    {
+      "a": "winding_key",
+      "b": "music_box",
+      "produces": "music_box_wound",
+      "event": "r1_wound",
+      "dialogue": null,
+      "sound": "lullaby"
+    }
+  ],
+  "clues": {
+    "C1": {
+      "title": "Grandmother's Letter",
+      "room": 1,
+      "clue": "The Door was last opened from the kingdom side, not from our attic.",
+      "text": "To whoever finds the Door: it wakes to the old song. Wind the box, let the Door hear it, then ring the bells back as they sing. Leaf wakes, Sun warms, Moon rests, Snow sleeps, Star keeps watch. Someone opened it from the other side last winter, and I never learned who. Keep warm. Nan."
+    },
+    "C2": {
+      "title": "Fox Prints",
+      "room": 2,
+      "clue": "Small fox prints lead from the Door to the Regent's road.",
+      "text": "Small fox prints, fresh before the last snowfall, lead from the Door to the Regent's road. They return the same way."
+    },
+    "C3": {
+      "title": "Mother Bramble's Note",
+      "room": 3,
+      "clue": "Only the court's fox carried the silver bell-key.",
+      "text": "Feed my guests by their needs and nothing else. The pantry has these dishes, and not one serving more. P.S. You ask about the silver bell-key. Only the court's fox ever carried it."
+    },
+    "C4": {
+      "title": "The Faun's Diary",
+      "room": 4,
+      "clue": "The court's fox came back in the night with the bell-key and frost on his coat.",
+      "text": "Day ninety of the long frost. In the night the court's fox came back through the glade, the silver bell-key at his neck and frost on his coat. He did not stop to speak. Fenn."
+    },
+    "C5": {
+      "title": "The Ferry Ledger",
+      "room": 5,
+      "clue": "One fox crossed the lake twice, once with the bell-key and once without it.",
+      "text": "Last winter, at dusk: one fox to the palace, the silver bell-key at his neck. Before dawn: the same fox, back, without it."
+    },
+    "C6": {
+      "title": "The Broken Mural",
+      "room": 6,
+      "clue": "The fox gave the key to the Regent, and his three kits sleep in ice behind her.",
+      "text": "A fox in a court sash hands a silver key to the Regent. Three small fox kits sleep in blocks of ice behind her."
+    }
+  },
+  "notes": {
+    "N_fauns": {
+      "title": "The Fauns' Poem",
+      "room": 4,
+      "text": "Wake the quiet before the loud,\nthe few before the many.\nCount the berries on each crown,\nand wake the fewest first.\nBut the captain, plumed and proud,\nwakes last of all, whatever the count."
+    },
+    "N_warden": {
+      "title": "The Warden's Poem",
+      "room": 5,
+      "text": "Begin on the shell, where the ice is thick.\nStep toward the sunrise, and climb.\nGo north once more. Then the sunset, quick,\nand the sunset again, one step at a time.\nFour steps in all, and the star is the end.\nEvery other tile will not bend."
+    },
+    "N_route": {
+      "title": "The Route Rhyme",
+      "room": 6,
+      "text": "Where wolves keep watch, do not go,\nand the Bridge of Glass will crack below.\nBut share a meal at the Hollow's door,\nthen on to the lake and the palace shore."
+    },
+    "N_heart": {
+      "title": "The Heart Rhyme",
+      "room": 6,
+      "text": "Light the six as the road was walked:\nthe bell, the lantern, the hearth that glowed,\nthe dance, the ice, and the tale last told.\nThe last ember burns only for mercy."
+    }
+  },
+  "dialogues": {
+    "open_narr": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "narrator",
+          "mood": null,
+          "text": "The attic had been closed for years. Tonight, the old door at its end began to hum.",
+          "audioFile": "assets/audio/voice/open_narr_0.mp3"
+        },
+        {
+          "who": "narrator",
+          "mood": null,
+          "text": "Frost spread across its carved bells. Then a fox stepped out of the cold.",
+          "audioFile": "assets/audio/voice/open_narr_1.mp3"
+        }
+      ]
+    },
+    "idle": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Try turning around. Drag to look around.",
+          "audioFile": "assets/audio/voice/idle_0.mp3"
+        }
+      ]
+    },
+    "r1_enter": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "Grandmother never let us up here. And that door was not on any plan of the house.",
+          "audioFile": "assets/audio/voice/r1_enter_0.mp3"
+        },
+        {
+          "who": "tobin",
+          "mood": "surprised",
+          "text": "Then why is it humming? Rook, you said it could take us there.",
+          "audioFile": "assets/audio/voice/r1_enter_1.mp3"
+        },
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "It can, but the Door sleeps. I served in the court before the frost, so I know its ways. Wake it quickly.",
+          "audioFile": "assets/audio/voice/r1_enter_2.mp3"
+        }
+      ]
+    },
+    "r1_find_key": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "A tiny brass key on a ribbon. A winding key, I would bet. Something up here must need winding.",
+          "audioFile": "assets/audio/voice/r1_find_key_0.mp3"
+        }
+      ]
+    },
+    "r1_find_box": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "A music box, with Grandmother's initials.",
+          "audioFile": "assets/audio/voice/r1_find_box_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "The crank will not turn. It is wound down and stuck.",
+          "audioFile": "assets/audio/voice/r1_find_box_1.mp3"
+        }
+      ]
+    },
+    "r1_clue_letter": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "Someone opened this Door from the other side. Last winter.",
+          "audioFile": "assets/audio/voice/r1_clue_letter_0.mp3"
+        }
+      ]
+    },
+    "r1_discuss_door": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "surprised",
+          "text": "The bells are glowing. It heard us.",
+          "audioFile": "assets/audio/voice/r1_discuss_door_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "Now we ring them back, as they sing.",
+          "audioFile": "assets/audio/voice/r1_discuss_door_1.mp3"
+        }
+      ]
+    },
+    "r1_wrong1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Not quite. Watch which symbol lights first, not where it sits.",
+          "audioFile": "assets/audio/voice/r1_wrong1_0.mp3"
+        }
+      ]
+    },
+    "r1_wrong2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Nan wrote a song for the Door. Learn the symbols, then follow them around the bells.",
+          "audioFile": "assets/audio/voice/r1_wrong2_0.mp3"
+        }
+      ]
+    },
+    "r1_wrong3": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "worried",
+          "text": "The bells moved again. Follow the symbols and their notes, not the places. Take it slowly.",
+          "audioFile": "assets/audio/voice/r1_wrong3_0.mp3"
+        }
+      ]
+    },
+    "r1_right": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "happy",
+          "text": "It is opening. The air smells of pine and snow.",
+          "audioFile": "assets/audio/voice/r1_right_0.mp3"
+        },
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "Stay close to the fox.",
+          "audioFile": "assets/audio/voice/r1_right_1.mp3"
+        },
+        {
+          "who": "narrator",
+          "mood": null,
+          "text": "The Door swung wide. Beyond it lay a wood lit only by one tired lantern.",
+          "audioFile": "assets/audio/voice/r1_right_2.mp3"
+        }
+      ]
+    },
+    "r1_hint1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Each round the Door rings a song. Watch which bell lights, not where it sits. The bells change places every round.",
+          "audioFile": "assets/audio/voice/r1_hint1_0.mp3"
+        }
+      ]
+    },
+    "r1_hint2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Every bell keeps its own note and its own symbol, even when it moves. Listen as well as look.",
+          "audioFile": "assets/audio/voice/r1_hint2_0.mp3"
+        }
+      ]
+    },
+    "r2_enter": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "Pine, snow and a lantern that has not burned in years.",
+          "audioFile": "assets/audio/voice/r2_enter_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "surprised",
+          "text": "That lantern lights the way through the wood. And look at that ring of ice mirrors.",
+          "audioFile": "assets/audio/voice/r2_enter_1.mp3"
+        }
+      ]
+    },
+    "r2_find_striker": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "A striker. Solid steel.",
+          "audioFile": "assets/audio/voice/r2_find_striker_0.mp3"
+        }
+      ]
+    },
+    "r2_find_oil": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "Lantern oil. A little frozen, but it will do.",
+          "audioFile": "assets/audio/voice/r2_find_oil_0.mp3"
+        }
+      ]
+    },
+    "r2_clue_prints": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "Fox prints. Small ones, leading away from the Door.",
+          "audioFile": "assets/audio/voice/r2_clue_prints_0.mp3"
+        }
+      ]
+    },
+    "r2_rook_deflect": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "worried",
+          "text": "There are many foxes in Aldermere, Ivy. Let us not waste time on tracks.",
+          "audioFile": "assets/audio/voice/r2_rook_deflect_0.mp3"
+        }
+      ]
+    },
+    "r2_discuss_beam": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "The beam goes straight, and the ice blocks it.",
+          "audioFile": "assets/audio/voice/r2_discuss_beam_0.mp3"
+        },
+        {
+          "who": "tobin",
+          "mood": "happy",
+          "text": "So we bend it with the mirrors.",
+          "audioFile": "assets/audio/voice/r2_discuss_beam_1.mp3"
+        }
+      ]
+    },
+    "r2_wrong1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "The light stopped short. Follow the beam with your eyes.",
+          "audioFile": "assets/audio/voice/r2_wrong1_0.mp3"
+        }
+      ]
+    },
+    "r2_wrong2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Each mirror turns the light a quarter turn. Find where it stops and fix that mirror.",
+          "audioFile": "assets/audio/voice/r2_wrong2_0.mp3"
+        }
+      ]
+    },
+    "r2_wrong3": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "worried",
+          "text": "Up, left across the top, down the left side, then east along the bottom row.",
+          "audioFile": "assets/audio/voice/r2_wrong3_0.mp3"
+        }
+      ]
+    },
+    "r2_right": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "narrator",
+          "mood": null,
+          "text": "The beam struck the old lantern. Light poured into the wood, and the snow turned gold.",
+          "audioFile": "assets/audio/voice/r2_right_0.mp3"
+        },
+        {
+          "who": "tobin",
+          "mood": "happy",
+          "text": "It is warm!",
+          "audioFile": "assets/audio/voice/r2_right_1.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "happy",
+          "text": "Hold that thought. There is more to find.",
+          "audioFile": "assets/audio/voice/r2_right_2.mp3"
+        }
+      ]
+    },
+    "r2_hint1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Two ice blocks stand in the way. The beam must go around them, not through them.",
+          "audioFile": "assets/audio/voice/r2_hint1_0.mp3"
+        }
+      ]
+    },
+    "r2_hint2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Start at the Sun Lantern. The first mirror it hits sends it up. Follow the beam one mirror at a time.",
+          "audioFile": "assets/audio/voice/r2_hint2_0.mp3"
+        }
+      ]
+    },
+    "r3_enter": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "bramble",
+          "mood": "warm",
+          "text": "Mind the snow on the mat. Seven mouths and one pantry. Feed them right and I will tell you what I know.",
+          "audioFile": "assets/audio/voice/r3_enter_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "Seven guests and five dishes. We will need that chart on the pantry door.",
+          "audioFile": "assets/audio/voice/r3_enter_1.mp3"
+        }
+      ]
+    },
+    "r3_find_tray": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "A good flat tray, plenty of grip.",
+          "audioFile": "assets/audio/voice/r3_find_tray_0.mp3"
+        }
+      ]
+    },
+    "r3_find_ladle": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "A ladle. The pot is still warm.",
+          "audioFile": "assets/audio/voice/r3_find_ladle_0.mp3"
+        }
+      ]
+    },
+    "r3_clue_note": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "Mother Bramble says only the court's fox carried the bell-key.",
+          "audioFile": "assets/audio/voice/r3_clue_note_0.mp3"
+        }
+      ]
+    },
+    "r3_discuss_pot": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "happy",
+          "text": "Stew and soup are ready. Now to seat everyone.",
+          "audioFile": "assets/audio/voice/r3_discuss_pot_0.mp3"
+        }
+      ]
+    },
+    "r3_wrong1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Someone at the table is unhappy. See who.",
+          "audioFile": "assets/audio/voice/r3_wrong1_0.mp3"
+        }
+      ]
+    },
+    "r3_wrong2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "The chart says which dishes are warm, soft or firm. Match each guest's need.",
+          "audioFile": "assets/audio/voice/r3_wrong2_0.mp3"
+        }
+      ]
+    },
+    "r3_wrong3": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Start with the guest who has only one choice. The limits will do the rest.",
+          "audioFile": "assets/audio/voice/r3_wrong3_0.mp3"
+        }
+      ]
+    },
+    "r3_right": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "bramble",
+          "mood": "warm",
+          "text": "There. Not a crumb left. Well done, dears.",
+          "audioFile": "assets/audio/voice/r3_right_0.mp3"
+        },
+        {
+          "who": "narrator",
+          "mood": null,
+          "text": "In the hearth, a small red shard began to glow.",
+          "audioFile": "assets/audio/voice/r3_right_1.mp3"
+        }
+      ]
+    },
+    "r3_hint1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Some guests can eat only one dish. Serve them first.",
+          "audioFile": "assets/audio/voice/r3_hint1_0.mp3"
+        }
+      ]
+    },
+    "r3_hint2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "The heron and the otter can only have the stew. That uses both servings, so the hare must take the soup.",
+          "audioFile": "assets/audio/voice/r3_hint2_0.mp3"
+        }
+      ]
+    },
+    "r4_enter": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "surprised",
+          "text": "Five fauns, frozen mid-song. This place was a party once.",
+          "audioFile": "assets/audio/voice/r4_enter_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "A poem on the signpost and berries on every wreath. Counting looks important.",
+          "audioFile": "assets/audio/voice/r4_enter_1.mp3"
+        }
+      ]
+    },
+    "r4_find_mallet": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "A good mallet. Better at chipping ice than singing.",
+          "audioFile": "assets/audio/voice/r4_find_mallet_0.mp3"
+        }
+      ]
+    },
+    "r4_find_stone": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "A warming stone. It still holds a little heat.",
+          "audioFile": "assets/audio/voice/r4_find_stone_0.mp3"
+        }
+      ]
+    },
+    "r4_clue_diary": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "The court's fox came back at night with the key. And frost on his coat.",
+          "audioFile": "assets/audio/voice/r4_clue_diary_0.mp3"
+        }
+      ]
+    },
+    "r4_rook_deflect": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "worried",
+          "text": "Fenn was always dramatic. Shall we move on?",
+          "audioFile": "assets/audio/voice/r4_rook_deflect_0.mp3"
+        }
+      ]
+    },
+    "r4_discuss_chipped": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "happy",
+          "text": "Now we can see every berry.",
+          "audioFile": "assets/audio/voice/r4_discuss_chipped_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "Fewest first, and the captain last. And who wears the plumed cap?",
+          "audioFile": "assets/audio/voice/r4_discuss_chipped_1.mp3"
+        }
+      ]
+    },
+    "r4_wrong1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "The statue shivered back to ice. Read the poem again.",
+          "audioFile": "assets/audio/voice/r4_wrong1_0.mp3"
+        }
+      ]
+    },
+    "r4_wrong2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Count the berries on every wreath. The few wake before the many.",
+          "audioFile": "assets/audio/voice/r4_wrong2_0.mp3"
+        }
+      ]
+    },
+    "r4_wrong3": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "worried",
+          "text": "Bells has one. Count upward. The captain in the plumed cap wakes last, whatever his number.",
+          "audioFile": "assets/audio/voice/r4_wrong3_0.mp3"
+        }
+      ]
+    },
+    "r4_right": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "narrator",
+          "mood": null,
+          "text": "One by one the fauns stretched, laughed and began to play. Snow fell like confetti.",
+          "audioFile": "assets/audio/voice/r4_right_0.mp3"
+        },
+        {
+          "who": "fenn",
+          "mood": "warm",
+          "text": "Thank you, little ones. Take the dance with you.",
+          "audioFile": "assets/audio/voice/r4_right_1.mp3"
+        }
+      ]
+    },
+    "r4_hint1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "The poem tells you to count. Chip the wreaths and count the berries on each.",
+          "audioFile": "assets/audio/voice/r4_hint1_0.mp3"
+        }
+      ]
+    },
+    "r4_hint2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Bells, then Lyre, then Flute, then Drum. The captain with the horn wakes last.",
+          "audioFile": "assets/audio/voice/r4_hint2_0.mp3"
+        }
+      ]
+    },
+    "r5_enter": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "surprised",
+          "text": "That lake is the way to the palace. Look at all those cracks.",
+          "audioFile": "assets/audio/voice/r5_enter_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "Some of the ice will hold and some will not. There must be a rule.",
+          "audioFile": "assets/audio/voice/r5_enter_1.mp3"
+        }
+      ]
+    },
+    "r5_find_spikes": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "Ice spikes. Strap them on and we will not slip.",
+          "audioFile": "assets/audio/voice/r5_find_spikes_0.mp3"
+        }
+      ]
+    },
+    "r5_find_lantern": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "A ferry lantern. The tiles are too dim to read without it.",
+          "audioFile": "assets/audio/voice/r5_find_lantern_0.mp3"
+        }
+      ]
+    },
+    "r5_clue_ledger": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "One fox there and back. With the key, then without it.",
+          "audioFile": "assets/audio/voice/r5_clue_ledger_0.mp3"
+        }
+      ]
+    },
+    "r5_rook_deflect": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "worried",
+          "text": "Foxes cross ice easily. There is nothing to read into that.",
+          "audioFile": "assets/audio/voice/r5_rook_deflect_0.mp3"
+        }
+      ]
+    },
+    "r5_discuss_lit": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "happy",
+          "text": "Every tile has a mark now.",
+          "audioFile": "assets/audio/voice/r5_discuss_lit_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "And the warden's poem says which ones to step on.",
+          "audioFile": "assets/audio/voice/r5_discuss_lit_1.mp3"
+        }
+      ]
+    },
+    "r5_wrong1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Crack! Back to the shore. Read the poem slowly.",
+          "audioFile": "assets/audio/voice/r5_wrong1_0.mp3"
+        }
+      ]
+    },
+    "r5_wrong2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Sunrise is the right, sunset is the left, and north is straight ahead.",
+          "audioFile": "assets/audio/voice/r5_wrong2_0.mp3"
+        }
+      ]
+    },
+    "r5_wrong3": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "worried",
+          "text": "Start on the shell in the first row. Right, straight, left, left.",
+          "audioFile": "assets/audio/voice/r5_wrong3_0.mp3"
+        }
+      ]
+    },
+    "r5_right": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "narrator",
+          "mood": null,
+          "text": "The last tile held. On the far shore, a blue shard shone like a piece of the lake.",
+          "audioFile": "assets/audio/voice/r5_right_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "happy",
+          "text": "We made it.",
+          "audioFile": "assets/audio/voice/r5_right_1.mp3"
+        },
+        {
+          "who": "tobin",
+          "mood": "surprised",
+          "text": "Do not look down.",
+          "audioFile": "assets/audio/voice/r5_right_2.mp3"
+        }
+      ]
+    },
+    "r5_hint1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "The poem is a list of directions. Start on the shell and follow it one step at a time.",
+          "audioFile": "assets/audio/voice/r5_hint1_0.mp3"
+        }
+      ]
+    },
+    "r5_hint2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "From the shell: right, straight ahead, left, left. The star is the end.",
+          "audioFile": "assets/audio/voice/r5_hint2_0.mp3"
+        }
+      ]
+    },
+    "r6_enter": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "The old gallery of Aldermere. This wall was a mural once.",
+          "audioFile": "assets/audio/voice/r6_enter_0.mp3"
+        },
+        {
+          "who": "tobin",
+          "mood": "worried",
+          "text": "Someone smashed it. The pieces are all over the floor.",
+          "audioFile": "assets/audio/voice/r6_enter_1.mp3"
+        }
+      ]
+    },
+    "r6_find_fragments": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "Nine pieces. Maybe we can put it back.",
+          "audioFile": "assets/audio/voice/r6_find_fragments_0.mp3"
+        }
+      ]
+    },
+    "r6_find_taper": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "A candle taper. Good for dark corners.",
+          "audioFile": "assets/audio/voice/r6_find_taper_0.mp3"
+        }
+      ]
+    },
+    "r6_discuss_jigsaw": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "narrator",
+          "mood": null,
+          "text": "The mural glowed faintly. Aldermere, whole again.",
+          "audioFile": "assets/audio/voice/r6_discuss_jigsaw_0.mp3"
+        }
+      ]
+    },
+    "r6_clue_mural": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "A fox in a court sash hands a key to the Regent.",
+          "audioFile": "assets/audio/voice/r6_clue_mural_0.mp3"
+        },
+        {
+          "who": "tobin",
+          "mood": "worried",
+          "text": "And three tiny kits, sleeping in ice. Rook?",
+          "audioFile": "assets/audio/voice/r6_clue_mural_1.mp3"
+        },
+        {
+          "who": "rook",
+          "mood": "guilty",
+          "text": "Not here. At the palace. I will tell you everything there.",
+          "audioFile": "assets/audio/voice/r6_clue_mural_2.mp3"
+        }
+      ]
+    },
+    "r6_wrong1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "That road is guarded or broken. Read the border rhyme again.",
+          "audioFile": "assets/audio/voice/r6_wrong1_0.mp3"
+        }
+      ]
+    },
+    "r6_wrong2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "Avoid the wolves' road and the Glass Bridge. Stop at the Hollow, then go to the lake.",
+          "audioFile": "assets/audio/voice/r6_wrong2_0.mp3"
+        }
+      ]
+    },
+    "r6_wrong3": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "worried",
+          "text": "Door, Lantern Wood, Badger Hollow, Fauns' Glade, the lake, the palace. You walked it.",
+          "audioFile": "assets/audio/voice/r6_wrong3_0.mp3"
+        }
+      ]
+    },
+    "r6_right": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "narrator",
+          "mood": null,
+          "text": "The route glowed across the map and ended at a palace of ice.",
+          "audioFile": "assets/audio/voice/r6_right_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "Rook, whatever you have to tell us...",
+          "audioFile": "assets/audio/voice/r6_right_1.mp3"
+        },
+        {
+          "who": "rook",
+          "mood": "guilty",
+          "text": "At the palace, Ivy.",
+          "audioFile": "assets/audio/voice/r6_right_2.mp3"
+        }
+      ]
+    },
+    "r6_hint1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "The border rhyme names two places to avoid and one place to visit. Mark them on the map.",
+          "audioFile": "assets/audio/voice/r6_hint1_0.mp3"
+        }
+      ]
+    },
+    "r6_hint2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "neutral",
+          "text": "You have walked most of the way already: Lantern Wood, Badger Hollow, Fauns' Glade, then the lake.",
+          "audioFile": "assets/audio/voice/r6_hint2_0.mp3"
+        }
+      ]
+    },
+    "r7_enter": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "veyra",
+          "mood": "calm",
+          "text": "Welcome, Marlows. The seal on the Heart opens to one thing only: the truth of how my frost came through. Name it, if you can.",
+          "audioFile": "assets/audio/voice/r7_enter_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "We will.",
+          "audioFile": "assets/audio/voice/r7_enter_1.mp3"
+        },
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "Every room gave us a piece. Let us put them together.",
+          "audioFile": "assets/audio/voice/r7_enter_2.mp3"
+        }
+      ]
+    },
+    "r7_find_locket": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "A tiny silver locket with three small fox faces.",
+          "audioFile": "assets/audio/voice/r7_find_locket_0.mp3"
+        }
+      ]
+    },
+    "r7_find_key": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "The silver bell-key. The very one from the Door.",
+          "audioFile": "assets/audio/voice/r7_find_key_0.mp3"
+        }
+      ]
+    },
+    "r7_stepA_wrong1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "worried",
+          "text": "Think about who could use the key. Open the Casebook.",
+          "audioFile": "assets/audio/voice/r7_stepA_wrong1_0.mp3"
+        }
+      ]
+    },
+    "r7_stepA_wrong2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "worried",
+          "text": "The clues from every room point one way.",
+          "audioFile": "assets/audio/voice/r7_stepA_wrong2_0.mp3"
+        }
+      ]
+    },
+    "r7_stepA_wrong3": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "worried",
+          "text": "A fox in the prints, the diary, the ledger and the mural.",
+          "audioFile": "assets/audio/voice/r7_stepA_wrong3_0.mp3"
+        }
+      ]
+    },
+    "r7_confession": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "rook",
+          "mood": "guilty",
+          "text": "It is true. I opened the Door. Veyra froze my three kits and promised to wake them.",
+          "audioFile": "assets/audio/voice/r7_confession_0.mp3"
+        },
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "Why did you not tell us?",
+          "audioFile": "assets/audio/voice/r7_confession_1.mp3"
+        },
+        {
+          "who": "rook",
+          "mood": "guilty",
+          "text": "Because I was afraid you would send me away.",
+          "audioFile": "assets/audio/voice/r7_confession_2.mp3"
+        },
+        {
+          "who": "veyra",
+          "mood": "cold",
+          "text": "How tiresome. A traitor is a traitor.",
+          "audioFile": "assets/audio/voice/r7_confession_3.mp3"
+        }
+      ]
+    },
+    "r7_stepB_wrong1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "worried",
+          "text": "The shard went back. Check the rhyme in the Casebook.",
+          "audioFile": "assets/audio/voice/r7_stepB_wrong1_0.mp3"
+        }
+      ]
+    },
+    "r7_stepB_wrong2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "The rhyme follows the road we walked.",
+          "audioFile": "assets/audio/voice/r7_stepB_wrong2_0.mp3"
+        }
+      ]
+    },
+    "r7_stepB_wrong3": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "First the Bell, then the Lantern, and on through each room.",
+          "audioFile": "assets/audio/voice/r7_stepB_wrong3_0.mp3"
+        }
+      ]
+    },
+    "r7_after_heart": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "narrator",
+          "mood": null,
+          "text": "Six embers burned in the Heart. A seventh socket stayed dark.",
+          "audioFile": "assets/audio/voice/r7_after_heart_0.mp3"
+        },
+        {
+          "who": "auren",
+          "mood": "calm",
+          "text": "One more ember. Given freely, or not at all.",
+          "audioFile": "assets/audio/voice/r7_after_heart_1.mp3"
+        },
+        {
+          "who": "veyra",
+          "mood": "cold",
+          "text": "Nobody gives freely. Everyone takes.",
+          "audioFile": "assets/audio/voice/r7_after_heart_2.mp3"
+        }
+      ]
+    },
+    "r7_locket": {
+      "pausesTimer": true,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "Take this. It is yours.",
+          "audioFile": "assets/audio/voice/r7_locket_0.mp3"
+        },
+        {
+          "who": "rook",
+          "mood": "hopeful",
+          "text": "Ivy, if the Heart wants an ember, I have one. It is all that is left of my own fire.",
+          "audioFile": "assets/audio/voice/r7_locket_1.mp3"
+        }
+      ]
+    },
+    "r7_stepC_wrong1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "worried",
+          "text": "No. Think about what the Heart asked for.",
+          "audioFile": "assets/audio/voice/r7_stepC_wrong1_0.mp3"
+        }
+      ]
+    },
+    "r7_stepC_wrong2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "The mural said mercy. The Heart says the same.",
+          "audioFile": "assets/audio/voice/r7_stepC_wrong2_0.mp3"
+        }
+      ]
+    },
+    "r7_stepC_wrong3": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "Mercy means forgiving him.",
+          "audioFile": "assets/audio/voice/r7_stepC_wrong3_0.mp3"
+        }
+      ]
+    },
+    "r7_hint1": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "Each room left a clue in the Casebook. The first step is about who, and who is in every clue.",
+          "audioFile": "assets/audio/voice/r7_hint1_0.mp3"
+        }
+      ]
+    },
+    "r7_hint2": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "The Heart Rhyme in the Casebook gives the order of the shards. The last ember burns only for mercy.",
+          "audioFile": "assets/audio/voice/r7_hint2_0.mp3"
+        }
+      ]
+    },
+    "lock_r1_slot": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "worried",
+          "text": "The Door has a small slot, shaped for something that makes music. Not just any old thing.",
+          "audioFile": "assets/audio/voice/lock_r1_slot_0.mp3"
+        }
+      ]
+    },
+    "lock_r2_filled": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "The Sun Lantern is bone dry. It needs fuel before anything else.",
+          "audioFile": "assets/audio/voice/lock_r2_filled_0.mp3"
+        }
+      ]
+    },
+    "lock_r2_lit": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "It has fuel now, but it will not light by itself. We need a spark.",
+          "audioFile": "assets/audio/voice/lock_r2_lit_0.mp3"
+        }
+      ]
+    },
+    "lock_r3_pot": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "The pot is cold and nobody is stirring. Something with a long handle would help.",
+          "audioFile": "assets/audio/voice/lock_r3_pot_0.mp3"
+        }
+      ]
+    },
+    "lock_r3_table": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "Seven guests and no way to carry the food to them. We need something flat to serve on.",
+          "audioFile": "assets/audio/voice/lock_r3_table_0.mp3"
+        }
+      ]
+    },
+    "lock_r4_chip": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "The wreaths are frozen solid. We would have to break the ice somehow.",
+          "audioFile": "assets/audio/voice/lock_r4_chip_0.mp3"
+        }
+      ]
+    },
+    "lock_r4_ring": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "worried",
+          "text": "The statues are stiff with cold. Something warm might loosen them.",
+          "audioFile": "assets/audio/voice/lock_r4_ring_0.mp3"
+        }
+      ]
+    },
+    "lock_r5_pole": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "This pole holds a lantern, but the hook is empty. It is far too dark to read the ice.",
+          "audioFile": "assets/audio/voice/lock_r5_pole_0.mp3"
+        }
+      ]
+    },
+    "lock_r5_edge": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "worried",
+          "text": "That ice is glass. We will want something for our boots before we step on.",
+          "audioFile": "assets/audio/voice/lock_r5_edge_0.mp3"
+        }
+      ]
+    },
+    "lock_r6_wall": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "neutral",
+          "text": "Nine empty slots. Whatever fills them must be lying around this hall.",
+          "audioFile": "assets/audio/voice/lock_r6_wall_0.mp3"
+        }
+      ]
+    },
+    "lock_r6_map": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "tobin",
+          "mood": "neutral",
+          "text": "The map is too dark to read. It needs a small, steady flame.",
+          "audioFile": "assets/audio/voice/lock_r6_map_0.mp3"
+        }
+      ]
+    },
+    "lock_r7_lock": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "The Heart is frozen shut, with a keyhole at its base. We have seen a key like that before.",
+          "audioFile": "assets/audio/voice/lock_r7_lock_0.mp3"
+        }
+      ]
+    },
+    "lock_r7_rook": {
+      "pausesTimer": false,
+      "lines": [
+        {
+          "who": "ivy",
+          "mood": "worried",
+          "text": "Rook is shaking. Something of his own, something he lost, might reach him.",
+          "audioFile": "assets/audio/voice/lock_r7_rook_0.mp3"
+        }
+      ]
+    }
+  },
+  "panels": {
+    "bells": {
+      "type": "bells",
+      "title": "The Door's Bells",
+      "symbols": [
+        "leaf",
+        "sun",
+        "moon",
+        "snowflake",
+        "star"
+      ],
+      "freqHz": [
+        261.63,
+        329.63,
+        392,
+        440,
+        523.25
+      ],
+      "rounds": [
+        [
+          "leaf",
+          "sun",
+          "moon"
+        ],
+        [
+          "sun",
+          "star",
+          "leaf",
+          "moon"
+        ],
+        [
+          "snowflake",
+          "leaf",
+          "star",
+          "moon",
+          "sun",
+          "star"
+        ]
+      ],
+      "wrong": [
+        "r1_wrong1",
+        "r1_wrong2",
+        "r1_wrong3"
+      ]
+    },
+    "mirrors": {
+      "type": "mirrors",
+      "title": "Ice Mirror Ring",
+      "size": 5,
+      "sourceRow": 3,
+      "sourceDir": "east",
+      "lampRow": 5,
+      "lampSide": "east",
+      "mirrors": {
+        "A": [
+          1,
+          1
+        ],
+        "B": [
+          1,
+          3
+        ],
+        "C": [
+          3,
+          3
+        ],
+        "D": [
+          5,
+          1
+        ]
+      },
+      "ice": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "start": "\\",
+      "solution": {
+        "A": "/",
+        "B": "\\",
+        "C": "/",
+        "D": "\\"
+      },
+      "button": "Release the light",
+      "wrong": [
+        "r2_wrong1",
+        "r2_wrong2",
+        "r2_wrong3"
+      ]
+    },
+    "guests": {
+      "type": "guests",
+      "title": "The Seven Guests",
+      "dishes": {
+        "stew": {
+          "name": "Fish Stew",
+          "servings": 2,
+          "warm": true,
+          "texture": "soft",
+          "sweet": false,
+          "contains": "fish"
+        },
+        "soup": {
+          "name": "Barley Soup",
+          "servings": 2,
+          "warm": true,
+          "texture": "soft",
+          "sweet": false,
+          "contains": "no fish"
+        },
+        "loaf": {
+          "name": "Nut Loaf",
+          "servings": 1,
+          "warm": false,
+          "texture": "firm",
+          "sweet": false,
+          "contains": "nuts"
+        },
+        "cake": {
+          "name": "Honey Cake",
+          "servings": 1,
+          "warm": false,
+          "texture": "soft",
+          "sweet": true,
+          "contains": "no fish"
+        },
+        "tart": {
+          "name": "Berry Tart",
+          "servings": 1,
+          "warm": false,
+          "texture": "firm",
+          "sweet": true,
+          "contains": "no fish"
+        }
+      },
+      "guests": [
+        {
+          "id": "bram",
+          "name": "Bram the heron",
+          "says": "Only fish.",
+          "answer": "stew"
+        },
+        {
+          "id": "hale",
+          "name": "Hale the otter",
+          "says": "Fish, and it must be warm.",
+          "answer": "stew"
+        },
+        {
+          "id": "nell",
+          "name": "Nell the hare",
+          "says": "Warm and soft, please.",
+          "answer": "soup"
+        },
+        {
+          "id": "tilly",
+          "name": "Tilly the mouse",
+          "says": "Soft food, and no fish.",
+          "answer": "soup"
+        },
+        {
+          "id": "pip",
+          "name": "Pip the squirrel",
+          "says": "Firm food only.",
+          "answer": "loaf"
+        },
+        {
+          "id": "wren",
+          "name": "Wren the robin",
+          "says": "Something sweet.",
+          "answer": "cake"
+        },
+        {
+          "id": "moss",
+          "name": "Moss the hedgehog",
+          "says": "Sweet and firm.",
+          "answer": "tart"
+        }
+      ],
+      "button": "Serve the table",
+      "wrong": [
+        "r3_wrong1",
+        "r3_wrong2",
+        "r3_wrong3"
+      ],
+      "guestOrder": [
+        "wren",
+        "nell",
+        "bram",
+        "moss",
+        "tilly",
+        "hale",
+        "pip"
+      ],
+      "dishOrder": [
+        "tart",
+        "soup",
+        "cake",
+        "stew",
+        "loaf"
+      ]
+    },
+    "fauns": {
+      "type": "fauns",
+      "title": "Wake the Fauns",
+      "statues": [
+        {
+          "id": "bells",
+          "name": "Bells",
+          "berries": 1
+        },
+        {
+          "id": "lyre",
+          "name": "Lyre",
+          "berries": 2
+        },
+        {
+          "id": "flute",
+          "name": "Flute (Elder Fenn)",
+          "berries": 3
+        },
+        {
+          "id": "horn",
+          "name": "Horn (the captain)",
+          "berries": 4
+        },
+        {
+          "id": "drum",
+          "name": "Drum",
+          "berries": 5
+        }
+      ],
+      "solution": [
+        "bells",
+        "lyre",
+        "flute",
+        "drum",
+        "horn"
+      ],
+      "wrong": [
+        "r4_wrong1",
+        "r4_wrong2",
+        "r4_wrong3"
+      ]
+    },
+    "tiles": {
+      "type": "tiles",
+      "title": "Thin Ice Crossing",
+      "columns": "ABCDE",
+      "rowsTopToBottom": [
+        [
+          "fish",
+          "star",
+          "leaf",
+          "snowflake",
+          "shell"
+        ],
+        [
+          "snowflake",
+          "shell",
+          "fish",
+          "leaf",
+          "star"
+        ],
+        [
+          "leaf",
+          "star",
+          "snowflake",
+          "fish",
+          "shell"
+        ],
+        [
+          "shell",
+          "fish",
+          "leaf",
+          "star",
+          "snowflake"
+        ],
+        [
+          "star",
+          "snowflake",
+          "shell",
+          "leaf",
+          "fish"
+        ]
+      ],
+      "startSymbolRow1": "shell",
+      "solution": [
+        "C1",
+        "D2",
+        "D3",
+        "C4",
+        "B5"
+      ],
+      "wrong": [
+        "r5_wrong1",
+        "r5_wrong2",
+        "r5_wrong3"
+      ]
+    },
+    "jigsaw": {
+      "type": "jigsaw",
+      "title": "The Broken Mural",
+      "image": "assets/sheets/mural.jpg",
+      "cols": 3,
+      "rows": 3,
+      "snapPx": 40
+    },
+    "route": {
+      "type": "route",
+      "title": "The Map of Aldermere",
+      "button": "Set out",
+      "clear": "Clear",
+      "nodes": {
+        "door": [
+          "Door",
+          0.08,
+          0.52
+        ],
+        "lantern": [
+          "Lantern Wood",
+          0.25,
+          0.25
+        ],
+        "oak": [
+          "Hollow Oak",
+          0.25,
+          0.78
+        ],
+        "hollow": [
+          "Badger Hollow",
+          0.45,
+          0.4
+        ],
+        "wolf": [
+          "Wolf Pass",
+          0.6,
+          0.12
+        ],
+        "glade": [
+          "Fauns' Glade",
+          0.52,
+          0.65
+        ],
+        "bridge": [
+          "Glass Bridge",
+          0.55,
+          0.9
+        ],
+        "lake": [
+          "Thin Ice Lake",
+          0.75,
+          0.55
+        ],
+        "palace": [
+          "Palace",
+          0.92,
+          0.4
+        ]
+      },
+      "edges": [
+        [
+          "door",
+          "lantern"
+        ],
+        [
+          "door",
+          "oak"
+        ],
+        [
+          "lantern",
+          "hollow"
+        ],
+        [
+          "lantern",
+          "wolf"
+        ],
+        [
+          "oak",
+          "glade"
+        ],
+        [
+          "oak",
+          "bridge"
+        ],
+        [
+          "hollow",
+          "glade"
+        ],
+        [
+          "glade",
+          "lake"
+        ],
+        [
+          "wolf",
+          "palace"
+        ],
+        [
+          "bridge",
+          "palace"
+        ],
+        [
+          "lake",
+          "palace"
+        ]
+      ],
+      "solution": [
+        "door",
+        "lantern",
+        "hollow",
+        "glade",
+        "lake",
+        "palace"
+      ],
+      "wrong": [
+        "r6_wrong1",
+        "r6_wrong2",
+        "r6_wrong3"
+      ]
+    },
+    "seal": {
+      "type": "seal",
+      "title": "The Seal of Truth",
+      "points": "pointsFinalStep",
+      "wrong": [
+        "r7_stepA_wrong1",
+        "r7_stepA_wrong2",
+        "r7_stepA_wrong3"
+      ],
+      "questions": [
+        {
+          "q": "Which side opened the Door last winter?",
+          "choices": [
+            "The attic side",
+            "The Aldermere side",
+            "Both sides at once",
+            "It was never opened"
+          ],
+          "answer": 1
+        },
+        {
+          "q": "Who carried the silver bell-key through the Door?",
+          "choices": [
+            "Mother Bramble",
+            "Elder Fenn",
+            "Rook",
+            "Tobin"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "Why did he open it?",
+          "choices": [
+            "For gold",
+            "By accident",
+            "To free his frozen kits",
+            "Because the lion ordered it"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    "heart": {
+      "type": "heart",
+      "title": "The Ember Heart",
+      "points": "pointsFinalStep",
+      "wrong": [
+        "r7_stepB_wrong1",
+        "r7_stepB_wrong2",
+        "r7_stepB_wrong3"
+      ],
+      "order": [
+        "shard_bell",
+        "shard_lantern",
+        "shard_hearth",
+        "shard_dance",
+        "shard_ice",
+        "shard_tale"
+      ],
+      "shardOrder": [
+        "shard_dance",
+        "shard_bell",
+        "shard_tale",
+        "shard_hearth",
+        "shard_lantern",
+        "shard_ice"
+      ]
+    },
+    "choice": {
+      "type": "choice",
+      "title": "The Last Choice",
+      "points": "pointsFinalStep",
+      "wrong": [
+        "r7_stepC_wrong1",
+        "r7_stepC_wrong2",
+        "r7_stepC_wrong3"
+      ],
+      "inscription": "The last ember burns only for mercy.",
+      "choices": [
+        {
+          "label": "Forgive Rook and accept his ember",
+          "correct": true
+        },
+        {
+          "label": "Banish Rook from Aldermere",
+          "correct": false
+        }
+      ]
+    }
+  },
+  "rooms": [
+    {
+      "id": "room1",
+      "name": "Attic of Marlow House",
+      "pano": "assets/rooms/room1.webp",
+      "accent": "#D9A441",
+      "objectives": [
+        {
+          "until": "done:r1_wound",
+          "text": "Find a way to wake the Door."
+        },
+        {
+          "until": "done:r1_slot",
+          "text": "Wake the Door with the music."
+        },
+        {
+          "until": null,
+          "text": "Ring the bells back as they sing."
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r1_key",
+          "kind": "FIND",
+          "label": "Winding Key",
+          "yaw": 56.4,
+          "pitch": -6.6,
+          "after": [],
+          "item": "winding_key",
+          "dialogue": "r1_find_key"
+        },
+        {
+          "id": "r1_box",
+          "kind": "FIND",
+          "label": "Music Box",
+          "yaw": 35.7,
+          "pitch": -11.9,
+          "after": [],
+          "item": "music_box",
+          "dialogue": "r1_find_box"
+        },
+        {
+          "id": "r1_letter",
+          "kind": "LEARN",
+          "label": "Grandmother's Letter",
+          "yaw": -21.2,
+          "pitch": 4.8,
+          "after": [],
+          "page": "C1",
+          "dialogue": "r1_clue_letter"
+        },
+        {
+          "id": "r1_slot",
+          "kind": "USE",
+          "label": "The Door's keyhole slot",
+          "yaw": 141.6,
+          "pitch": -1.3,
+          "after": [
+            "done:r1_wound"
+          ],
+          "needs": "music_box_wound",
+          "consumes": true,
+          "dialogue": "r1_discuss_door",
+          "thenPanel": "bells",
+          "locked": "lock_r1_slot"
+        }
+      ],
+      "combineEvents": [
+        "r1_wound"
+      ],
+      "finalPanel": "bells",
+      "right": "r1_right",
+      "shard": "shard_bell",
+      "shardYaw": 141.6,
+      "shardPitch": -18.5,
+      "exit": {
+        "yaw": 141.6,
+        "pitch": 14.6
+      },
+      "hints": [
+        "r1_hint1",
+        "r1_hint2"
+      ],
+      "enter": "r1_enter",
+      "findStrip": [
+        "winding_key",
+        "music_box"
+      ]
+    },
+    {
+      "id": "room2",
+      "name": "Lantern Wood",
+      "pano": "assets/rooms/room2.webp",
+      "accent": "#E8D48B",
+      "objectives": [
+        {
+          "until": "done:r2_lit",
+          "text": "Light the Sun Lantern."
+        },
+        {
+          "until": null,
+          "text": "Bend the light to the old lantern."
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r2_striker",
+          "kind": "FIND",
+          "label": "Flint Striker",
+          "yaw": 116.5,
+          "pitch": -43.7,
+          "after": [],
+          "item": "flint_striker",
+          "dialogue": "r2_find_striker"
+        },
+        {
+          "id": "r2_oil",
+          "kind": "FIND",
+          "label": "Lantern Oil",
+          "yaw": 92.6,
+          "pitch": -54.8,
+          "after": [],
+          "item": "lantern_oil",
+          "dialogue": "r2_find_oil"
+        },
+        {
+          "id": "r2_prints",
+          "kind": "LEARN",
+          "label": "Fox Prints",
+          "yaw": -26.5,
+          "pitch": -56.9,
+          "after": [],
+          "page": "C2",
+          "dialogue": "r2_clue_prints",
+          "then": "r2_rook_deflect"
+        },
+        {
+          "id": "r2_filled",
+          "kind": "USE",
+          "label": "The Sun Lantern",
+          "yaw": -131,
+          "pitch": 26.5,
+          "after": [],
+          "needs": "lantern_oil",
+          "consumes": true,
+          "locked": "lock_r2_filled"
+        },
+        {
+          "id": "r2_lit",
+          "kind": "USE",
+          "label": "The Sun Lantern",
+          "yaw": -131,
+          "pitch": 26.5,
+          "after": [
+            "done:r2_filled"
+          ],
+          "needs": "flint_striker",
+          "consumes": true,
+          "dialogue": "r2_discuss_beam",
+          "locked": "lock_r2_lit"
+        },
+        {
+          "id": "r2_mirrors",
+          "kind": "PANEL",
+          "label": "Ice Mirror Ring",
+          "yaw": 10.6,
+          "pitch": -27.8,
+          "after": [
+            "done:r2_lit"
+          ],
+          "panel": "mirrors"
+        }
+      ],
+      "finalPanel": "mirrors",
+      "right": "r2_right",
+      "shard": "shard_lantern",
+      "shardYaw": 47.6,
+      "shardPitch": -34.4,
+      "exit": {
+        "yaw": 5.3,
+        "pitch": 2.6
+      },
+      "hints": [
+        "r2_hint1",
+        "r2_hint2"
+      ],
+      "enter": "r2_enter",
+      "findStrip": [
+        "flint_striker",
+        "lantern_oil"
+      ]
+    },
+    {
+      "id": "room3",
+      "name": "Badger Hollow Kitchen",
+      "pano": "assets/rooms/room3.webp",
+      "accent": "#C8553D",
+      "objectives": [
+        {
+          "until": "done:r3_pot",
+          "text": "Warm the stew and soup."
+        },
+        {
+          "until": "done:r3_table",
+          "text": "Serve the table."
+        },
+        {
+          "until": null,
+          "text": "Feed all seven guests."
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r3_tray",
+          "kind": "FIND",
+          "label": "Serving Tray",
+          "yaw": -145.6,
+          "pitch": -1.3,
+          "after": [],
+          "item": "serving_tray",
+          "dialogue": "r3_find_tray"
+        },
+        {
+          "id": "r3_ladle",
+          "kind": "FIND",
+          "label": "Wooden Ladle",
+          "yaw": 114.4,
+          "pitch": 23.8,
+          "after": [],
+          "item": "wooden_ladle",
+          "dialogue": "r3_find_ladle"
+        },
+        {
+          "id": "r3_note",
+          "kind": "LEARN",
+          "label": "Mother Bramble's Note",
+          "yaw": 95.3,
+          "pitch": 25.1,
+          "after": [],
+          "page": "C3",
+          "dialogue": "r3_clue_note",
+          "showChart": true
+        },
+        {
+          "id": "r3_pot",
+          "kind": "USE",
+          "label": "The Hearth Pot",
+          "yaw": -5.3,
+          "pitch": 11.9,
+          "after": [],
+          "needs": "wooden_ladle",
+          "consumes": true,
+          "dialogue": "r3_discuss_pot",
+          "locked": "lock_r3_pot"
+        },
+        {
+          "id": "r3_table",
+          "kind": "USE",
+          "label": "The Round Table",
+          "yaw": -10.6,
+          "pitch": -23.8,
+          "after": [
+            "done:r3_pot"
+          ],
+          "needs": "serving_tray",
+          "consumes": true,
+          "thenPanel": "guests",
+          "locked": "lock_r3_table"
+        }
+      ],
+      "finalPanel": "guests",
+      "right": "r3_right",
+      "shard": "shard_hearth",
+      "shardYaw": 0,
+      "shardPitch": -1.3,
+      "exit": {
+        "yaw": 169.4,
+        "pitch": 10.6
+      },
+      "hints": [
+        "r3_hint1",
+        "r3_hint2"
+      ],
+      "enter": "r3_enter",
+      "findStrip": [
+        "serving_tray",
+        "wooden_ladle"
+      ]
+    },
+    {
+      "id": "room4",
+      "name": "Glade of the Frozen Fauns",
+      "pano": "assets/rooms/room4.webp",
+      "accent": "#6FA86B",
+      "objectives": [
+        {
+          "until": "done:r4_chip",
+          "text": "Free the berry wreaths from the ice."
+        },
+        {
+          "until": "done:r4_ring",
+          "text": "Warm the statues."
+        },
+        {
+          "until": null,
+          "text": "Wake the fauns in the right order."
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r4_mallet",
+          "kind": "FIND",
+          "label": "Wooden Mallet",
+          "yaw": 120.4,
+          "pitch": -68.8,
+          "after": [],
+          "item": "wooden_mallet",
+          "dialogue": "r4_find_mallet"
+        },
+        {
+          "id": "r4_stone",
+          "kind": "FIND",
+          "label": "Warming Stone",
+          "yaw": -23.8,
+          "pitch": -56.9,
+          "after": [],
+          "item": "warming_stone",
+          "dialogue": "r4_find_stone"
+        },
+        {
+          "id": "r4_poem",
+          "kind": "LEARN",
+          "label": "The Fauns' Poem",
+          "yaw": -150.9,
+          "pitch": -2.6,
+          "after": [],
+          "page": "N_fauns"
+        },
+        {
+          "id": "r4_diary",
+          "kind": "LEARN",
+          "label": "The Faun's Diary",
+          "yaw": 95.3,
+          "pitch": -64.9,
+          "after": [],
+          "page": "C4",
+          "dialogue": "r4_clue_diary",
+          "then": "r4_rook_deflect"
+        },
+        {
+          "id": "r4_chip",
+          "kind": "USE",
+          "label": "A berry wreath",
+          "yaw": -103.2,
+          "pitch": -18.5,
+          "after": [
+            "done:r4_mallet"
+          ],
+          "needs": "wooden_mallet",
+          "consumes": true,
+          "dialogue": "r4_discuss_chipped",
+          "locked": "lock_r4_chip"
+        },
+        {
+          "id": "r4_ring",
+          "kind": "USE",
+          "label": "The statue ring",
+          "yaw": 0,
+          "pitch": -10.6,
+          "after": [
+            "done:r4_chip",
+            "done:r4_stone"
+          ],
+          "needs": "warming_stone",
+          "consumes": true,
+          "thenPanel": "fauns",
+          "locked": "lock_r4_ring"
+        }
+      ],
+      "finalPanel": "fauns",
+      "right": "r4_right",
+      "shard": "shard_dance",
+      "shardYaw": 21.2,
+      "shardPitch": -34.4,
+      "exit": {
+        "yaw": 157.5,
+        "pitch": 10.6
+      },
+      "hints": [
+        "r4_hint1",
+        "r4_hint2"
+      ],
+      "enter": "r4_enter",
+      "findStrip": [
+        "wooden_mallet",
+        "warming_stone"
+      ]
+    },
+    {
+      "id": "room5",
+      "name": "Thin Ice Lake",
+      "pano": "assets/rooms/room5.webp",
+      "accent": "#7FB8E0",
+      "objectives": [
+        {
+          "until": "done:r5_pole",
+          "text": "Light the way across the ice."
+        },
+        {
+          "until": "done:r5_edge",
+          "text": "Strap on the spikes."
+        },
+        {
+          "until": null,
+          "text": "Cross the ice by the safe path."
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r5_spikes",
+          "kind": "FIND",
+          "label": "Ice Spikes",
+          "yaw": -76.8,
+          "pitch": -21.2,
+          "after": [],
+          "item": "ice_spikes",
+          "dialogue": "r5_find_spikes"
+        },
+        {
+          "id": "r5_lantern",
+          "kind": "FIND",
+          "label": "Ferry Lantern",
+          "yaw": -113.3,
+          "pitch": -13.8,
+          "after": [],
+          "item": "ferry_lantern",
+          "dialogue": "r5_find_lantern"
+        },
+        {
+          "id": "r5_sign",
+          "kind": "LEARN",
+          "label": "The Warden's Poem",
+          "yaw": -92.6,
+          "pitch": 13.2,
+          "after": [],
+          "page": "N_warden"
+        },
+        {
+          "id": "r5_ledger",
+          "kind": "LEARN",
+          "label": "The Ferry Ledger",
+          "yaw": -123.1,
+          "pitch": -18.5,
+          "after": [],
+          "page": "C5",
+          "dialogue": "r5_clue_ledger",
+          "then": "r5_rook_deflect"
+        },
+        {
+          "id": "r5_pole",
+          "kind": "USE",
+          "label": "The Lantern Pole",
+          "yaw": 152.2,
+          "pitch": 10.6,
+          "after": [],
+          "needs": "ferry_lantern",
+          "consumes": true,
+          "dialogue": "r5_discuss_lit",
+          "locked": "lock_r5_pole"
+        },
+        {
+          "id": "r5_edge",
+          "kind": "USE",
+          "label": "The lake edge",
+          "yaw": 0,
+          "pitch": -37.1,
+          "after": [
+            "done:r5_pole"
+          ],
+          "needs": "ice_spikes",
+          "consumes": true,
+          "thenPanel": "tiles",
+          "locked": "lock_r5_edge"
+        }
+      ],
+      "finalPanel": "tiles",
+      "right": "r5_right",
+      "shard": "shard_ice",
+      "shardYaw": 21.2,
+      "shardPitch": -1.3,
+      "exit": {
+        "yaw": 0,
+        "pitch": 4
+      },
+      "hints": [
+        "r5_hint1",
+        "r5_hint2"
+      ],
+      "enter": "r5_enter",
+      "findStrip": [
+        "ice_spikes",
+        "ferry_lantern"
+      ]
+    },
+    {
+      "id": "room6",
+      "name": "Hall of the Broken Mural",
+      "pano": "assets/rooms/room6.webp",
+      "accent": "#8E6BC1",
+      "objectives": [
+        {
+          "until": "done:r6_wall",
+          "text": "Put the mural back together."
+        },
+        {
+          "until": "done:jigsaw",
+          "text": "Read the finished mural."
+        },
+        {
+          "until": "done:r6_map",
+          "text": "Light the map."
+        },
+        {
+          "until": null,
+          "text": "Trace the safe route to the palace."
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r6_fragments",
+          "kind": "FIND",
+          "label": "Mural Fragments",
+          "yaw": 104.6,
+          "pitch": -23.8,
+          "after": [],
+          "item": "mural_fragments",
+          "dialogue": "r6_find_fragments"
+        },
+        {
+          "id": "r6_taper",
+          "kind": "FIND",
+          "label": "Candle Taper",
+          "yaw": -49,
+          "pitch": 0.5,
+          "after": [],
+          "item": "candle_taper",
+          "dialogue": "r6_find_taper"
+        },
+        {
+          "id": "r6_wall",
+          "kind": "USE",
+          "label": "The mural wall",
+          "yaw": 0,
+          "pitch": 21.2,
+          "after": [],
+          "needs": "mural_fragments",
+          "consumes": true,
+          "thenPanel": "jigsaw",
+          "locked": "lock_r6_wall"
+        },
+        {
+          "id": "r6_mural",
+          "kind": "LEARN",
+          "label": "The finished mural",
+          "yaw": 0,
+          "pitch": 21.2,
+          "after": [
+            "done:jigsaw"
+          ],
+          "page": "C6",
+          "dialogue": "r6_clue_mural",
+          "extraPages": [
+            "N_route",
+            "N_heart"
+          ]
+        },
+        {
+          "id": "r6_map",
+          "kind": "USE",
+          "label": "The mural's map",
+          "yaw": 0,
+          "pitch": 43.7,
+          "after": [
+            "done:r6_mural",
+            "done:r6_taper"
+          ],
+          "needs": "candle_taper",
+          "consumes": true,
+          "thenPanel": "route",
+          "locked": "lock_r6_map"
+        }
+      ],
+      "finalPanel": "route",
+      "right": "r6_right",
+      "shard": "shard_tale",
+      "shardYaw": -92.6,
+      "shardPitch": -26.5,
+      "exit": {
+        "yaw": 176,
+        "pitch": 1.3
+      },
+      "hints": [
+        "r6_hint1",
+        "r6_hint2"
+      ],
+      "enter": "r6_enter",
+      "findStrip": [
+        "mural_fragments",
+        "candle_taper"
+      ]
+    },
+    {
+      "id": "room7",
+      "name": "The Ice Palace",
+      "pano": "assets/rooms/room7.webp",
+      "accent": "#F2B134",
+      "objectives": [
+        {
+          "until": "done:seal",
+          "text": "Name the truth to open the seal."
+        },
+        {
+          "until": "done:r7_lock",
+          "text": "Free the Heart with the silver key."
+        },
+        {
+          "until": "done:heart",
+          "text": "Relight the Ember Heart."
+        },
+        {
+          "until": null,
+          "text": "Decide what to do with the last ember."
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r7_locket",
+          "kind": "FIND",
+          "label": "Kit Locket",
+          "yaw": -125.7,
+          "pitch": -49,
+          "after": [],
+          "item": "kit_locket",
+          "dialogue": "r7_find_locket"
+        },
+        {
+          "id": "r7_key",
+          "kind": "FIND",
+          "label": "Silver Bell-Key",
+          "yaw": 116.5,
+          "pitch": -19.9,
+          "after": [],
+          "item": "silver_bell_key",
+          "dialogue": "r7_find_key"
+        },
+        {
+          "id": "r7_seal",
+          "kind": "PANEL",
+          "label": "The Seal of Truth",
+          "yaw": 0,
+          "pitch": 35.7,
+          "after": [],
+          "panel": "seal"
+        },
+        {
+          "id": "r7_lock",
+          "kind": "USE",
+          "label": "The Heart's frost lock",
+          "yaw": 0,
+          "pitch": 7.9,
+          "after": [
+            "done:seal"
+          ],
+          "needs": "silver_bell_key",
+          "consumes": true,
+          "locked": "lock_r7_lock"
+        },
+        {
+          "id": "r7_heart",
+          "kind": "PANEL",
+          "label": "The Ember Heart",
+          "yaw": 0,
+          "pitch": 35.7,
+          "after": [
+            "done:r7_lock"
+          ],
+          "panel": "heart"
+        },
+        {
+          "id": "r7_rook",
+          "kind": "USE",
+          "label": "Rook",
+          "yaw": -42.4,
+          "pitch": -34.4,
+          "after": [
+            "done:heart"
+          ],
+          "needs": "kit_locket",
+          "consumes": true,
+          "dialogue": "r7_locket",
+          "thenPanel": "choice",
+          "locked": "lock_r7_rook"
+        }
+      ],
+      "finalPanel": "choice",
+      "right": null,
+      "shard": null,
+      "exit": null,
+      "hints": [
+        "r7_hint1",
+        "r7_hint2"
+      ],
+      "enter": "r7_enter",
+      "findStrip": [
+        "kit_locket",
+        "silver_bell_key"
+      ]
+    }
+  ],
+  "ending": {
+    "id": "ending",
+    "pausesTimer": true,
+    "stills": [
+      {
+        "file": "assets/sheets/ending1.jpg",
+        "text": "Rook places his ember. The Heart blazes gold. Veyra cries out as her frost cracks like glass and melts into a drift of snow.",
+        "audioFile": "assets/audio/voice/ending_0.mp3"
+      },
+      {
+        "file": "assets/sheets/ending2.jpg",
+        "text": "Spring spreads outward: the palace ice runs to water, the lake clears, the fauns dance, the old lantern in the wood glows green.",
+        "audioFile": "assets/audio/voice/ending_1.mp3"
+      },
+      {
+        "file": "assets/sheets/ending3.jpg",
+        "text": "The sleeping lion wakes. Auren stands. He tells Rook his gift of speech goes with the ember, and that he is forgiven. Three small fox kits tumble out of the melting ice. Rook, now a plain fox, nuzzles them without words.",
+        "audioFile": "assets/audio/voice/ending_2.mp3"
+      },
+      {
+        "file": "assets/sheets/ending4.jpg",
+        "text": "\"Go home through the Door,\" says Auren. \"It is yours to open now.\"",
+        "who": "auren",
+        "mood": "gentle",
+        "audioFile": "assets/audio/voice/ending_3.mp3"
+      },
+      {
+        "file": "assets/sheets/ending5.jpg",
+        "text": "In the attic, snow outside the window turns to petals. The Door glows warm. Rook and his kits stand at the threshold, free to cross whenever they wish.",
+        "audioFile": "assets/audio/voice/ending_4.mp3"
+      },
+      {
+        "file": "assets/sheets/ending6.jpg",
+        "text": "As the Door closes, a second carved door glows in the attic wall, marked with a ship and stars. A note in Grandmother's hand lies beneath it: \"There is more than one.\"",
+        "audioFile": "assets/audio/voice/ending_5.mp3"
+      }
+    ]
+  },
+  "endScreens": {
+    "win": {
+      "title": "Spring returns to Aldermere",
+      "button": "Play again"
+    },
+    "timeUp": {
+      "title": "The Door is shut",
+      "line": "Aldermere sleeps on.",
+      "button": "Try again"
+    },
+    "heartFail": {
+      "title": "The Heart Goes Dark",
+      "line": "The frost has taken the last ember. Aldermere sleeps on.",
+      "button": "Try again"
+    }
+  },
+  "idleDialogue": "idle",
+  "ui": {
+    "next": "Next",
+    "skip": "Skip",
+    "gotIt": "Got it",
+    "close": "Close",
+    "ok": "OK",
+    "yes": "Yes",
+    "no": "No",
+    "on": "On",
+    "off": "Off",
+    "pause": "Pause",
+    "hint": "Hint",
+    "wait": "Wait",
+    "exitLabel": "Go on",
+    "letsGo": "Let's go",
+    "addedBag": "Added to your Bag",
+    "savedNotes": "Saved to your notes",
+    "tapWhere": "Tap where it belongs",
+    "deselect": "Put it back",
+    "tryBag": "Try using something from your Bag here.",
+    "noCombine": "Those do not go together.",
+    "wayForward": "A way forward opens",
+    "combineTip": "You found two things that go together. Open your Bag and tap Combine.",
+    "itemUsed": "{item} used on {target}.",
+    "noHints": "No hints left in this room.",
+    "hintTitle": "Use a hint?",
+    "hintText": "A hint costs {n} Embers.",
+    "useHint": "Use hint",
+    "notNow": "Not now",
+    "book": {
+      "title": "Your Book",
+      "items": "Items",
+      "notes": "Notes",
+      "progress": "Progress",
+      "emptyItems": "Nothing yet. Look around for things that glow or lie about.",
+      "emptyNotes": "Clues you find will be saved here.",
+      "roomTag": "Room {n}",
+      "clues": "Clues {n} of {t}",
+      "use": "Use it in the room",
+      "putBack": "Put it back",
+      "combineWith": "Combine with {item}",
+      "canCombine": "Combine",
+      "tryTogether": "Holding {item}. Tap another item to try them together."
+    },
+    "pauseMenu": {
+      "sound": "Sound",
+      "music": "Music",
+      "resume": "Resume",
+      "casebook": "Casebook",
+      "restart": "Restart",
+      "restartAsk": "Restart the whole game?"
+    },
+    "chart": {
+      "dish": "Dish",
+      "servings": "Servings",
+      "warm": "Warm",
+      "texture": "Soft or firm",
+      "sweet": "Sweet",
+      "contains": "Contains"
+    },
+    "chartBtn": "Dish chart",
+    "bells": {
+      "round": "Round {n} of {t}",
+      "watch": "Watch the Door...",
+      "turn": "Your turn",
+      "again": "Hear it again"
+    },
+    "mirrors": {
+      "caption": "Bend the light so it reaches the old lantern."
+    },
+    "guests": {
+      "drop": "Drop a dish here"
+    },
+    "fauns": {
+      "caption": "Tap the statues in the order they should wake.",
+      "count": "Count"
+    },
+    "tiles": {
+      "caption": "The warden's poem is in your Casebook.",
+      "poem": "Poem",
+      "east": "Sunrise = right",
+      "west": "Sunset = left",
+      "north": "North = up"
+    },
+    "route": {
+      "rhymes": "Rhymes",
+      "yours": "Your route:"
+    },
+    "heart": {
+      "rhyme": "Rhyme",
+      "chances": "Chances left",
+      "warn": "You have three chances. Every wrong shard lets the frost in.",
+      "lost": "The frost takes the Heart."
+    },
+    "win": {
+      "items": "Items",
+      "shards": "Shards",
+      "steps": "Final steps",
+      "time": "Time left",
+      "pen": "Penalties"
+    },
+    "cancel": "Cancel",
+    "putBack": "Put back in your Bag.",
+    "needBag": "Open your Bag, tap the {item}, then tap Use.",
+    "needSomething": "You need to find something for this first.",
+    "wrongTarget": "That does not fit here. Tap Cancel to put it back.",
+    "goal": "Goal: {text}",
+    "lockedToast": "Locked. Maybe something from your Bag will help.",
+    "tapContinue": "Tap to continue"
+  }
+}

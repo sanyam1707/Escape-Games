@@ -1,0 +1,4 @@
+Background music: "Cathedral in the forest (ambient loop)" from OpenGameArt.org
+https://opengameart.org/content/cathedral-in-the-forest-ambient-loop
+License: CC0 (public domain). Converted from OGG to MP3.
+Sound effects are generated in code (Web Audio) and need no files.

@@ -1,0 +1,2223 @@
+{
+  "config": {
+    "timerSeconds": 420,
+    "fullEndingCrowns": 260,
+    "hints": 3,
+    "hintCost": 25,
+    "pickup": 5,
+    "secret": 5,
+    "roomReward": 30,
+    "finalStep": 50,
+    "wrong": 10,
+    "wrongCapPerPuzzle": 30,
+    "lockoutSeconds": 3,
+    "idleSeconds": 40,
+    "hfov": 85,
+    "blurSeconds": 1.2,
+    "sight": {
+      "yaw": 25,
+      "pitch": 32,
+      "tolerance": 3,
+      "holdSeconds": 3,
+      "falseHoldSeconds": 2,
+      "falseGaps": [
+        {
+          "yaw": -120,
+          "pitch": 15
+        },
+        {
+          "yaw": 120,
+          "pitch": 15
+        }
+      ]
+    }
+  },
+  "ui": {
+    "title": "THE CURSED HUNTER",
+    "tagline": "Win before you are cursed.",
+    "start": "TAP TO START",
+    "begin": "BEGIN",
+    "next": "Next",
+    "skip": "Skip",
+    "skipIntro": "Skip intro",
+    "tapContinue": "Tap to continue",
+    "close": "Close",
+    "casebook": "Casebook",
+    "hint": "Hint",
+    "pause": "Pause",
+    "crowns": "Crowns",
+    "findStrip": "Find here",
+    "resume": "Resume",
+    "restart": "Restart",
+    "quit": "Quit",
+    "soundOn": "Sound: On",
+    "soundOff": "Sound: Off",
+    "tabs": {
+      "clues": "Clues",
+      "items": "Items",
+      "pages": "Pages",
+      "notes": "Notes"
+    },
+    "emptyClues": "Nothing yet. Tap the glowing things in the room.",
+    "emptyItems": "No items yet. Find things in the rooms.",
+    "emptyNotes": "No notes yet. Bearings, measures and dates appear here.",
+    "pageEmpty": "Page not found yet",
+    "hold": "Hold",
+    "holding": "Holding",
+    "drop": "Put away",
+    "holdTip": "Tap an item to hold it. You need to hold some items to use them.",
+    "needHold": "Hold the {item} first. Open the Casebook, then Items, and tap it.",
+    "needItem": "You still need the {item}.",
+    "hintAsk": "Use a hint? It costs {cost} Crowns. You have {left} left.",
+    "hintYes": "Use hint",
+    "hintNo": "Not now",
+    "hintNone": "No hints left.",
+    "hintDone": "You do not need a hint here.",
+    "hintOut": "No more hints for this puzzle.",
+    "newThing": "Something new appeared in the room.",
+    "wayOut": "The way on is open. Tap the glowing arrow.",
+    "locked": "Locked for {s}s",
+    "nextRoom": "Go to: {room}",
+    "saved": "Saved to your notes.",
+    "added": "Added to your Casebook.",
+    "found": "FOUND",
+    "clue": "CLUE",
+    "secret": "SECRET DETAIL",
+    "page": "PAGE",
+    "goal": "YOUR GOAL",
+    "choice": "CHOICE",
+    "turn": "Turn it over",
+    "back": "Look again",
+    "view": "View",
+    "pauseTitle": "Paused",
+    "pauseNote": "The thorn timer is stopped.",
+    "quitAsk": "Leave this game? Your progress will be lost.",
+    "yes": "Yes",
+    "no": "No",
+    "check": "Check",
+    "clear": "Clear",
+    "reset": "Reset",
+    "fill": "Fill",
+    "empty": "Empty",
+    "pour": "Pour",
+    "wrongToast": "Wrong. -{n} Crowns",
+    "plusToast": "+{n} Crowns",
+    "timeUp": "TIME UP",
+    "timeUpText": "The curse wins this night.",
+    "tryAgain": "Try Again",
+    "playAgain": "Play Again",
+    "endCrowns": "Crowns",
+    "end": "THE END",
+    "travel": "Travelling to",
+    "loading": "Loading the room",
+    "alignTitle": "Stand in the right place",
+    "alignHelp": "Turn around and look at the far mountain. Find the V-shaped dip under the moon. Move it inside the ring, then hold still.",
+    "alignHold": "Hold steady...",
+    "alignFalse": "Not here. This gap is a trick.",
+    "sealUse": "Hold the Thorn Seal, then tap the bowl on the altar.",
+    "debugHint": "Debug on: click the view to print yaw and pitch.",
+    "needFirst": "Not yet. Do this first: {name}.",
+    "useChip": "Use it: Casebook, Items, tap Hold",
+    "notYet": "You cannot do that yet."
+  },
+  "voices": {
+    "torin": {
+      "name": "Torin Vael",
+      "rate": 0.9,
+      "pitch": 0.8,
+      "gender": "m",
+      "color": "#7e8fa0",
+      "initial": "T"
+    },
+    "mirelle": {
+      "name": "Mirelle Ashgrove",
+      "rate": 1.0,
+      "pitch": 1.1,
+      "gender": "f",
+      "color": "#6b8f5e",
+      "initial": "M"
+    },
+    "wenna": {
+      "name": "Old Wenna",
+      "rate": 0.85,
+      "pitch": 0.7,
+      "gender": "f",
+      "color": "#8f7a5e",
+      "initial": "W"
+    },
+    "aldric": {
+      "name": "Prince Aldric",
+      "rate": 0.8,
+      "pitch": 1.0,
+      "gender": "m",
+      "color": "#a8b4c8",
+      "initial": "A"
+    },
+    "crane": {
+      "name": "Magistrate Crane",
+      "rate": 0.95,
+      "pitch": 0.9,
+      "gender": "m",
+      "color": "#8a2a2a",
+      "initial": "C"
+    },
+    "narrator": {
+      "name": "Narrator",
+      "rate": 0.9,
+      "pitch": 0.85,
+      "gender": "m",
+      "color": "#5c6168",
+      "initial": "N"
+    }
+  },
+  "mission": {
+    "heading": "THE CURSED HUNTER",
+    "paras": [
+      "Valdrenn lies under fog and old debts, where monsters are hunted for coin.",
+      "Torin Vael killed the Marsh Stag, and its dying breath cursed him. A black thorn now climbs toward his heart.",
+      "You are Torin, with the witch Mirelle at your side. Find who sent you to that hunt and break the curse before the moon rises. You have seven minutes."
+    ],
+    "audioFile": "assets/audio/voice/mission_0.mp3"
+  },
+  "tutorial": [
+    {
+      "title": "Look around",
+      "text": "Drag the screen to turn around. Tap anything that looks useful.",
+      "target": "",
+      "audioFile": "assets/audio/voice/tutorial_0.mp3"
+    },
+    {
+      "title": "Your goal",
+      "text": "This line tells you what to do right now.",
+      "target": "#goal",
+      "audioFile": "assets/audio/voice/tutorial_1.mp3"
+    },
+    {
+      "title": "The clock",
+      "text": "You have 7 minutes to break the curse. The clock stops while Torin and Mirelle talk.",
+      "target": "#timer",
+      "audioFile": "assets/audio/voice/tutorial_2.mp3"
+    },
+    {
+      "title": "Crowns",
+      "text": "Crowns are your score. A wrong answer or a hint costs Crowns.",
+      "target": "#crowns",
+      "audioFile": "assets/audio/voice/tutorial_3.mp3"
+    },
+    {
+      "title": "Casebook",
+      "text": "Everything you find is saved here. Open it when you need a clue.",
+      "target": "#bCase",
+      "audioFile": "assets/audio/voice/tutorial_4.mp3"
+    },
+    {
+      "title": "Hints",
+      "text": "Stuck? Tap Hint. You get 3 hints in the whole game.",
+      "target": "#bHint",
+      "audioFile": "assets/audio/voice/tutorial_5.mp3"
+    },
+    {
+      "title": "Pause",
+      "text": "Pause stops the clock. Every puzzle also has an X to close it.",
+      "target": "#bPause",
+      "audioFile": "assets/audio/voice/tutorial_6.mp3"
+    }
+  ],
+  "opening": [
+    {
+      "who": "narrator",
+      "mood": "",
+      "text": "Three days ago the Marsh Stag fell to a hunter's blade.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/opening_0.mp3"
+    },
+    {
+      "who": "narrator",
+      "mood": "",
+      "text": "Tonight the hunter pays for it.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/opening_1.mp3"
+    },
+    {
+      "who": "mirelle",
+      "mood": "worried",
+      "text": "Torin, your neck. The mark moved again.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/opening_2.mp3"
+    },
+    {
+      "who": "torin",
+      "mood": "determined",
+      "text": "Then we had better move faster. The Last Lantern Inn is the nearest roof.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/opening_3.mp3"
+    }
+  ],
+  "idle": {
+    "who": "mirelle",
+    "mood": "amused",
+    "text": "Try turning around. Drag to look around.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/idle_0.mp3"
+  },
+  "puzzles": {
+    "torch": {
+      "order": [
+        "crow",
+        "stag",
+        "moon",
+        "thorn"
+      ],
+      "symbols": [
+        {
+          "id": "crow",
+          "name": "Crow",
+          "sprite": "sym_crow",
+          "glyph": "🐦"
+        },
+        {
+          "id": "stag",
+          "name": "Stag",
+          "sprite": "sym_stag",
+          "glyph": "🦌"
+        },
+        {
+          "id": "moon",
+          "name": "Moon",
+          "sprite": "sym_moon",
+          "glyph": "🌙"
+        },
+        {
+          "id": "thorn",
+          "name": "Thorn",
+          "sprite": "sym_thorn",
+          "glyph": "✶"
+        },
+        {
+          "id": "key",
+          "name": "Key",
+          "sprite": "",
+          "glyph": "🗝"
+        },
+        {
+          "id": "rose",
+          "name": "Rose",
+          "sprite": "",
+          "glyph": "🌹"
+        }
+      ],
+      "notices": [
+        {
+          "title": "WANTED: THORN WOLF",
+          "date": "11th of Frostwane",
+          "mark": "thorn"
+        },
+        {
+          "title": "LOST: ONE MULE",
+          "date": "1st of Frostwane",
+          "mark": ""
+        },
+        {
+          "title": "BOUNTY: BOG HAG",
+          "date": "8th of Frostwane",
+          "mark": "moon"
+        },
+        {
+          "title": "BEWARE: THIN ICE",
+          "date": "6th of Frostwane",
+          "mark": ""
+        },
+        {
+          "title": "WANTED: FEN CROW",
+          "date": "3rd of Frostwane",
+          "mark": "crow"
+        },
+        {
+          "title": "REWARD: LOST RING",
+          "date": "9th of Frostwane",
+          "mark": ""
+        },
+        {
+          "title": "CONTRACT: MARSH STAG",
+          "date": "5th of Frostwane",
+          "mark": "stag"
+        }
+      ],
+      "marksAt": [
+        [
+          0.5,
+          0.3
+        ],
+        [
+          0.22,
+          0.62
+        ],
+        [
+          0.78,
+          0.6
+        ],
+        [
+          0.5,
+          0.82
+        ]
+      ]
+    },
+    "vials": {
+      "big": 5,
+      "small": 3,
+      "target": 4
+    },
+    "lens": {
+      "lenses": [
+        {
+          "id": "red",
+          "name": "Red lens",
+          "color": "#c0322e",
+          "sigil": "crown",
+          "item": "lens_red"
+        },
+        {
+          "id": "blue",
+          "name": "Blue lens",
+          "color": "#2f5fbf",
+          "sigil": "chalice",
+          "item": "lens_blue"
+        },
+        {
+          "id": "green",
+          "name": "Green lens",
+          "color": "#2f9a4a",
+          "sigil": "stag",
+          "item": "lens_green"
+        }
+      ],
+      "sigils": [
+        {
+          "id": "crown",
+          "name": "Crown",
+          "sprite": "sym_crown",
+          "glyph": "♛",
+          "x": 0.22,
+          "y": 0.35
+        },
+        {
+          "id": "chalice",
+          "name": "Chalice",
+          "sprite": "sym_chalice",
+          "glyph": "🏆",
+          "x": 0.5,
+          "y": 0.62
+        },
+        {
+          "id": "stag",
+          "name": "Stag",
+          "sprite": "sym_stag",
+          "glyph": "🦌",
+          "x": 0.78,
+          "y": 0.32
+        }
+      ],
+      "order": [
+        "crown",
+        "chalice",
+        "stag"
+      ]
+    },
+    "venn": {
+      "beasts": [
+        {
+          "id": "fenwolf",
+          "name": "Fenwolf",
+          "sprite": "beast_fenwolf",
+          "glyph": "🐺",
+          "weak": [
+            "silver"
+          ]
+        },
+        {
+          "id": "drowner",
+          "name": "Reed Drowner",
+          "sprite": "beast_reed_drowner",
+          "glyph": "🧟",
+          "weak": [
+            "fire"
+          ]
+        },
+        {
+          "id": "shade",
+          "name": "Salt Shade",
+          "sprite": "beast_salt_shade",
+          "glyph": "👻",
+          "weak": [
+            "salt"
+          ]
+        },
+        {
+          "id": "wraith",
+          "name": "Gloam Wraith",
+          "sprite": "beast_gloam_wraith",
+          "glyph": "💀",
+          "weak": [
+            "silver",
+            "salt"
+          ]
+        },
+        {
+          "id": "hag",
+          "name": "Thorn Hag",
+          "sprite": "beast_thorn_hag",
+          "glyph": "🧙",
+          "weak": [
+            "silver",
+            "fire"
+          ]
+        },
+        {
+          "id": "ghoul",
+          "name": "Mire Ghoul",
+          "sprite": "beast_mire_ghoul",
+          "glyph": "🧛",
+          "weak": [
+            "fire",
+            "salt"
+          ]
+        },
+        {
+          "id": "warden",
+          "name": "Grave Warden",
+          "sprite": "beast_grave_warden",
+          "glyph": "🛡",
+          "weak": [
+            "silver",
+            "fire",
+            "salt"
+          ]
+        },
+        {
+          "id": "brute",
+          "name": "Plain Brute",
+          "sprite": "beast_plain_brute",
+          "glyph": "👹",
+          "weak": []
+        }
+      ]
+    },
+    "map": {
+      "size": 10,
+      "postA": "B2",
+      "postB": "H2",
+      "answer": "E5",
+      "bearingA": 45,
+      "bearingB": 315
+    },
+    "untangle": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "start": [
+        [
+          0.22,
+          0.22
+        ],
+        [
+          0.78,
+          0.78
+        ],
+        [
+          0.5,
+          0.88
+        ],
+        [
+          0.8,
+          0.2
+        ],
+        [
+          0.2,
+          0.78
+        ],
+        [
+          0.52,
+          0.14
+        ]
+      ]
+    }
+  },
+  "rooms": [
+    {
+      "id": "r1",
+      "name": "The Last Lantern Inn",
+      "pano": "assets/rooms/room1.webp",
+      "accent": "#C98A2B",
+      "puzzle": "torch",
+      "startYaw": 20,
+      "objective": "Find who ordered the hunt. Open the cellar.",
+      "enter": [
+        {
+          "who": "torin",
+          "mood": "worried",
+          "text": "Seven minutes. A dead man's clock, and I still smell wet dog.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r1_enter_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "amused",
+          "text": "That is the rain, Torin. Stop sulking and look at the walls.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r1_enter_1.mp3"
+        }
+      ],
+      "discuss": [
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Somebody wanted that Stag dead. Bounties do not post themselves.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r1_discuss_0.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "narrator",
+          "mood": "",
+          "text": "The door groans open. Below, the cellar smells of old paper and older secrets.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r1_right_0.mp3"
+        },
+        {
+          "who": "torin",
+          "mood": "angry",
+          "text": "Contract, signed with a crane's head. I never saw that seal on a hunt before.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r1_right_1.mp3"
+        }
+      ],
+      "wrong": [
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "That order feels wrong, Torin. Which warning came first?",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r1_wrong_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Look at the dates printed on each notice, not the marks.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r1_wrong_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Earliest date first. Crow, then the next oldest, and so on.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r1_wrong_2.mp3"
+        }
+      ],
+      "hints": [
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Some notices hide ink. Sweep the light slowly.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r1_hints_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "The ledger says the oldest warning is answered first.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r1_hints_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Read the four dates. Put them in order, earliest first.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r1_hints_2.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r1_lantern",
+          "kind": "FIND",
+          "name": "Hooked lantern",
+          "yaw": 86,
+          "pitch": 33,
+          "after": [],
+          "item": "lantern",
+          "sprite": "hooked_lantern",
+          "icon": "🏮",
+          "goal": "Find a light.",
+          "text": "A hooked lantern. Its light can show ink that you cannot see in the dark."
+        },
+        {
+          "id": "r1_ledger",
+          "kind": "LEARN",
+          "name": "Tavern ledger",
+          "yaw": -100,
+          "pitch": -8,
+          "after": [
+            "r1_lantern"
+          ],
+          "icon": "📖",
+          "goal": "Read the ledger.",
+          "text": "The innkeeper's ledger. It says warnings must be answered in order. The oldest warning is answered first.",
+          "clue": "Tavern ledger: the oldest warning is answered first.",
+          "blocked": "It is too dark to read the ledger. You need some light."
+        },
+        {
+          "id": "r1_trophy",
+          "kind": "INSPECT",
+          "name": "Antler trophy",
+          "yaw": 103,
+          "pitch": 40,
+          "after": [
+            "r1_lantern"
+          ],
+          "icon": "🦌",
+          "goal": "Examine the antler trophy.",
+          "views": [
+            {
+              "sprite": "trophy_v1",
+              "text": "An antler trophy hangs on the beam. The base looks strange."
+            },
+            {
+              "sprite": "trophy_v2",
+              "text": "Turned over, the base has a thorn carved inside it. Someone marked this place."
+            }
+          ],
+          "secret": {
+            "text": "A thorn is carved inside the trophy base. The thorn is the sign of the Stag contract.",
+            "clue": "A thorn is carved inside the antler trophy base."
+          },
+          "blocked": "It is too dark to see the trophy. You need some light."
+        },
+        {
+          "id": "r1_notices",
+          "kind": "PANEL",
+          "name": "Notice wall",
+          "yaw": 135,
+          "pitch": 15,
+          "after": [
+            "r1_ledger",
+            "r1_trophy"
+          ],
+          "panel": "torch",
+          "discuss": true,
+          "icon": "📜",
+          "goal": "Reveal the hidden marks.",
+          "titleText": "Notice wall: sweep the light"
+        },
+        {
+          "id": "r1_lock",
+          "kind": "PANEL",
+          "name": "Cellar door lock",
+          "yaw": 12,
+          "pitch": 2,
+          "after": [
+            "r1_notices"
+          ],
+          "panel": "lock",
+          "triggersRight": true,
+          "icon": "🔒",
+          "goal": "Open the cellar door.",
+          "titleText": "Cellar door lock"
+        },
+        {
+          "id": "r1_contract",
+          "kind": "FIND",
+          "reward": true,
+          "name": "Contract Page",
+          "yaw": 24,
+          "pitch": -10,
+          "after": [
+            "r1_lock",
+            "narration"
+          ],
+          "item": "page1",
+          "page": 1,
+          "sprite": "page1_contract",
+          "icon": "📜",
+          "goal": "Find the Stag contract.",
+          "text": "The Marsh Stag contract. It is signed with a crane's head seal. Page 1 of 6 is yours."
+        }
+      ],
+      "exit": {
+        "yaw": 12,
+        "pitch": 5
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Wenna's Reed Hut",
+      "pano": "assets/rooms/room2.webp",
+      "accent": "#5E9C6B",
+      "puzzle": "vials",
+      "startYaw": 40,
+      "objective": "Brew the antidote. Measure four.",
+      "enter": [
+        {
+          "who": "wenna",
+          "mood": "grim",
+          "text": "Silver eyes and a bad sunset on your chest. Sit, hunter. I have seen that thorn.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r2_enter_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "Can you slow it? We have until moonrise.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r2_enter_1.mp3"
+        }
+      ],
+      "discuss": [
+        {
+          "who": "wenna",
+          "mood": "amused",
+          "text": "Four measures of marsh water, and my hands are too shaky to count.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r2_discuss_0.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "narrator",
+          "mood": "",
+          "text": "The antidote hisses green. The thorn stops, just for now.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r2_right_0.mp3"
+        },
+        {
+          "who": "wenna",
+          "mood": "grim",
+          "text": "A steward paid for that hunt in coin stamped with a crane. Ask who sits behind the crane.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r2_right_1.mp3"
+        }
+      ],
+      "wrong": [
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "Not four yet. Count what is in the big vial.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r2_wrong_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "You can pour between the vials, not just fill and empty.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r2_wrong_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Fill the big one, pour into the small one, and think about what is left.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r2_wrong_2.mp3"
+        }
+      ],
+      "hints": [
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Only the big vial needs to end with four.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r2_hints_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Fill the big vial first, then pour into the small one.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r2_hints_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Empty the small one, pour the leftover into it, refill, and top it up.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r2_hints_2.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r2_slate",
+          "kind": "LEARN",
+          "name": "Recipe slate",
+          "yaw": 58,
+          "pitch": 15,
+          "after": [],
+          "icon": "📋",
+          "goal": "Find the recipe.",
+          "text": "A recipe is chalked on the slate. The antidote needs exactly four measures of marsh water.",
+          "clue": "Recipe slate: the antidote needs exactly four measures of marsh water.",
+          "notes": [
+            "Antidote: 4 measures of marsh water."
+          ]
+        },
+        {
+          "id": "r2_flask",
+          "kind": "FIND",
+          "name": "Empty antidote flask",
+          "yaw": -99,
+          "pitch": -9,
+          "after": [],
+          "item": "flask",
+          "sprite": "antidote_flask",
+          "icon": "⚗",
+          "goal": "Find the empty antidote flask.",
+          "text": "An empty antidote flask. Wenna will need it once the water is measured."
+        },
+        {
+          "id": "r2_thornleaf",
+          "kind": "FIND",
+          "name": "Thorn-leaf bundle",
+          "yaw": -8,
+          "pitch": 42,
+          "after": [
+            "r2_slate"
+          ],
+          "item": "thornleaf",
+          "sprite": "thornleaf_bundle",
+          "icon": "🌿",
+          "goal": "Find the thorn-leaf bundle.",
+          "text": "A bundle of dried thorn leaves. This is the herb that fights the curse."
+        },
+        {
+          "id": "r2_soot",
+          "kind": "INSPECT",
+          "name": "Cauldron soot",
+          "yaw": 0,
+          "pitch": -5,
+          "after": [
+            "r2_flask"
+          ],
+          "icon": "🔥",
+          "goal": "Examine the cauldron soot.",
+          "views": [
+            {
+              "sprite": "soot_v1",
+              "text": "Thick soot lines the cauldron rim. Something glints in it."
+            },
+            {
+              "sprite": "soot_v2",
+              "text": "Rubbed clean, the soot shows a coin stamped with a crane's head."
+            }
+          ],
+          "secret": {
+            "text": "A coin stamped with a crane's head lies in the ash. Someone powerful paid for this hunt.",
+            "clue": "A crane-stamped coin was hidden in Wenna's ash."
+          }
+        },
+        {
+          "id": "r2_vials",
+          "kind": "PANEL",
+          "name": "Water barrel and vials",
+          "yaw": 96,
+          "pitch": 8,
+          "after": [
+            "r2_slate",
+            "r2_flask",
+            "r2_thornleaf",
+            "r2_soot"
+          ],
+          "panel": "vials",
+          "discuss": true,
+          "triggersRight": true,
+          "icon": "⚗",
+          "goal": "Measure the antidote.",
+          "titleText": "Pouring vials"
+        },
+        {
+          "id": "r2_account",
+          "kind": "FIND",
+          "reward": true,
+          "name": "Wenna's Account",
+          "yaw": 130,
+          "pitch": -12,
+          "after": [
+            "r2_vials",
+            "narration"
+          ],
+          "item": "page2",
+          "page": 2,
+          "sprite": "page2_wenna",
+          "icon": "📜",
+          "goal": "Find Wenna's account.",
+          "text": "Wenna wrote down what she knows. Page 2 of 6 is yours."
+        }
+      ],
+      "onSolve": {
+        "rename": {
+          "flask": "Antidote (full flask)"
+        },
+        "toast": "Your flask fills with green antidote."
+      },
+      "exit": {
+        "yaw": 165,
+        "pitch": 5
+      }
+    },
+    {
+      "id": "r3",
+      "name": "The Drowned Chapel",
+      "pano": "assets/rooms/room3.webp",
+      "accent": "#4A7FA8",
+      "puzzle": "lens",
+      "startYaw": 0,
+      "objective": "Read the chapel's riddle.",
+      "enter": [
+        {
+          "who": "torin",
+          "mood": "worried",
+          "text": "Cold. Even for me. Something died here, and it did not rest.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r3_enter_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "The prints end at the altar. It came here to pray, or to hide.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r3_enter_1.mp3"
+        }
+      ],
+      "discuss": [
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Three coloured glasses and one riddle. Somebody wanted this read slowly.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r3_discuss_0.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "narrator",
+          "mood": "",
+          "text": "A crown, a chalice, a stag. A tale told in three colours.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r3_right_0.mp3"
+        },
+        {
+          "who": "torin",
+          "mood": "angry",
+          "text": "The Stag was the Prince. We hunted a murdered man.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r3_right_1.mp3"
+        }
+      ],
+      "wrong": [
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "The colours matter. What does the plaque say comes first?",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r3_wrong_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Wound, water, wild. Match each to a lens colour.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r3_wrong_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Red first, then blue, then green. Read what each lens shows.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r3_wrong_2.mp3"
+        }
+      ],
+      "hints": [
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Each lens shows a different picture on the wall.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r3_hints_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "The plaque names three things. Each one is a colour.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r3_hints_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Red, then blue, then green. Place what you saw, in that order.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r3_hints_2.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r3_plaque",
+          "kind": "LEARN",
+          "name": "Altar plaque",
+          "yaw": 0,
+          "pitch": -12,
+          "after": [],
+          "icon": "📜",
+          "goal": "Find the plaque and read it.",
+          "text": "First the wound, then the water, then the wild. The plaque adds: wound is red, water is blue, wild is green.",
+          "clue": "Plaque: first the wound, then the water, then the wild.",
+          "notes": [
+            "Wound = red. Water = blue. Wild = green. Use them in that order."
+          ]
+        },
+        {
+          "id": "r3_red",
+          "kind": "FIND",
+          "name": "Red lens",
+          "yaw": -6,
+          "pitch": 8,
+          "after": [],
+          "item": "lens_red",
+          "sprite": "lens_red",
+          "icon": "🔴",
+          "goal": "Find the three lenses.",
+          "text": "A red glass lens in a brass ring."
+        },
+        {
+          "id": "r3_blue",
+          "kind": "FIND",
+          "name": "Blue lens",
+          "yaw": 5,
+          "pitch": 8,
+          "after": [],
+          "item": "lens_blue",
+          "sprite": "lens_blue",
+          "icon": "🔵",
+          "goal": "Find the three lenses.",
+          "text": "A blue glass lens in a brass ring."
+        },
+        {
+          "id": "r3_green",
+          "kind": "FIND",
+          "name": "Green lens",
+          "yaw": 16,
+          "pitch": 8,
+          "after": [],
+          "item": "lens_green",
+          "sprite": "lens_green",
+          "icon": "🟢",
+          "goal": "Find the three lenses.",
+          "text": "A green glass lens in a brass ring."
+        },
+        {
+          "id": "r3_font",
+          "kind": "INSPECT",
+          "name": "Stone font",
+          "yaw": -99,
+          "pitch": -17,
+          "after": [
+            "r3_plaque"
+          ],
+          "icon": "🏆",
+          "goal": "Examine the stone font.",
+          "views": [
+            {
+              "sprite": "font_v1",
+              "text": "A cracked stone font with a chalice carved on it."
+            },
+            {
+              "sprite": "font_v2",
+              "text": "Under the chalice rim, someone scratched the letters A.V."
+            }
+          ],
+          "secret": {
+            "text": "The initials A.V. are scratched under the chalice rim. They belong to Prince Aldric Valdrenn.",
+            "clue": "The initials A.V. belong to Prince Aldric Valdrenn."
+          }
+        },
+        {
+          "id": "r3_mural",
+          "kind": "PANEL",
+          "name": "Mural wall",
+          "yaw": -72,
+          "pitch": 25,
+          "after": [
+            "r3_red",
+            "r3_blue",
+            "r3_green",
+            "r3_plaque",
+            "r3_font"
+          ],
+          "panel": "lens",
+          "discuss": true,
+          "triggersRight": true,
+          "icon": "🖼",
+          "goal": "Reveal the hidden sigils.",
+          "titleText": "The mural and the lenses"
+        },
+        {
+          "id": "r3_vow",
+          "kind": "FIND",
+          "reward": true,
+          "name": "The Prince's Vow",
+          "yaw": -18,
+          "pitch": -2,
+          "after": [
+            "r3_mural",
+            "narration"
+          ],
+          "item": "page3",
+          "page": 3,
+          "sprite": "page3_vow",
+          "icon": "📜",
+          "goal": "Find the Prince's Vow.",
+          "text": "A vow signed A.V. Page 3 of 6 is yours."
+        }
+      ],
+      "exit": {
+        "yaw": 122,
+        "pitch": 8
+      }
+    },
+    {
+      "id": "r4",
+      "name": "The Hunters' Bestiary Tower",
+      "pano": "assets/rooms/room4.webp",
+      "accent": "#7A5AA6",
+      "puzzle": "venn",
+      "startYaw": 0,
+      "objective": "Find the beast that fears everything.",
+      "enter": [
+        {
+          "who": "torin",
+          "mood": "worried",
+          "text": "My guild's tower. I swore I would not come back.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r4_enter_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "amused",
+          "text": "You swore a lot of things. Start reading the stands.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r4_enter_1.mp3"
+        }
+      ],
+      "discuss": [
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Eight beasts, three weaknesses. One of them is weak to everything.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r4_discuss_0.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "narrator",
+          "mood": "",
+          "text": "The cabinet opens. Dark filings glitter in a stone dish.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r4_right_0.mp3"
+        },
+        {
+          "who": "torin",
+          "mood": "angry",
+          "text": "Crane paid for silver-eyed hunters on purpose. He wanted a man who could not be bought off.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r4_right_1.mp3"
+        }
+      ],
+      "wrong": [
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "Check that beast's stand again. What hurts it?",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r4_wrong_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "A beast with two weaknesses sits where two circles overlap.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r4_wrong_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "One beast is weak to silver, fire and salt. That one sits in the very middle.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r4_wrong_2.mp3"
+        }
+      ],
+      "hints": [
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Read every stand. Each beast lists what hurts it.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r4_hints_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Two weaknesses means the overlap of two circles.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r4_hints_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Three weaknesses is the centre. None means outside the circles.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r4_hints_2.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r4_index",
+          "kind": "FIND",
+          "name": "Bestiary index",
+          "yaw": -178,
+          "pitch": -6,
+          "after": [],
+          "item": "index",
+          "sprite": "bestiary_index",
+          "icon": "📕",
+          "goal": "Find the bestiary index.",
+          "text": "The index lists eight beasts. Each one has a stand in this room that says what hurts it."
+        },
+        {
+          "id": "r4_stand_1",
+          "kind": "LEARN",
+          "name": "Stand: Fenwolf",
+          "yaw": -116,
+          "pitch": -18,
+          "after": [
+            "r4_index"
+          ],
+          "icon": "📖",
+          "beast": "fenwolf",
+          "goal": "Read all eight beast stands.",
+          "text": "Fenwolf. Weak to: Silver.",
+          "clue": "Fenwolf is weak to silver."
+        },
+        {
+          "id": "r4_stand_2",
+          "kind": "LEARN",
+          "name": "Stand: Reed Drowner",
+          "yaw": -88,
+          "pitch": -13,
+          "after": [
+            "r4_index"
+          ],
+          "icon": "📖",
+          "beast": "drowner",
+          "goal": "Read all eight beast stands.",
+          "text": "Reed Drowner. Weak to: Fire.",
+          "clue": "Reed Drowner is weak to fire."
+        },
+        {
+          "id": "r4_stand_3",
+          "kind": "LEARN",
+          "name": "Stand: Salt Shade",
+          "yaw": -62,
+          "pitch": -7,
+          "after": [
+            "r4_index"
+          ],
+          "icon": "📖",
+          "beast": "shade",
+          "goal": "Read all eight beast stands.",
+          "text": "Salt Shade. Weak to: Salt.",
+          "clue": "Salt Shade is weak to salt."
+        },
+        {
+          "id": "r4_stand_4",
+          "kind": "LEARN",
+          "name": "Stand: Gloam Wraith",
+          "yaw": -28,
+          "pitch": -7,
+          "after": [
+            "r4_index"
+          ],
+          "icon": "📖",
+          "beast": "wraith",
+          "goal": "Read all eight beast stands.",
+          "text": "Gloam Wraith. Weak to: Silver and Salt.",
+          "clue": "Gloam Wraith is weak to silver and salt."
+        },
+        {
+          "id": "r4_stand_5",
+          "kind": "LEARN",
+          "name": "Stand: Thorn Hag",
+          "yaw": 28,
+          "pitch": -7,
+          "after": [
+            "r4_index"
+          ],
+          "icon": "📖",
+          "beast": "hag",
+          "goal": "Read all eight beast stands.",
+          "text": "Thorn Hag. Weak to: Silver and Fire.",
+          "clue": "Thorn Hag is weak to silver and fire."
+        },
+        {
+          "id": "r4_stand_6",
+          "kind": "LEARN",
+          "name": "Stand: Mire Ghoul",
+          "yaw": 58,
+          "pitch": -10,
+          "after": [
+            "r4_index"
+          ],
+          "icon": "📖",
+          "beast": "ghoul",
+          "goal": "Read all eight beast stands.",
+          "text": "Mire Ghoul. Weak to: Fire and Salt.",
+          "clue": "Mire Ghoul is weak to fire and salt."
+        },
+        {
+          "id": "r4_stand_7",
+          "kind": "LEARN",
+          "name": "Stand: Grave Warden",
+          "yaw": 88,
+          "pitch": -15,
+          "after": [
+            "r4_index"
+          ],
+          "icon": "📖",
+          "beast": "warden",
+          "goal": "Read all eight beast stands.",
+          "text": "Grave Warden. Weak to: Silver, Fire and Salt.",
+          "clue": "Grave Warden is weak to silver, fire and salt."
+        },
+        {
+          "id": "r4_stand_8",
+          "kind": "LEARN",
+          "name": "Stand: Plain Brute",
+          "yaw": 157,
+          "pitch": -24,
+          "after": [
+            "r4_index"
+          ],
+          "icon": "📖",
+          "beast": "brute",
+          "goal": "Read all eight beast stands.",
+          "text": "Plain Brute. Weak to: nothing. Steel just works on it.",
+          "clue": "Plain Brute has no weakness."
+        },
+        {
+          "id": "r4_skull",
+          "kind": "INSPECT",
+          "name": "Stag skull",
+          "yaw": 135,
+          "pitch": 50,
+          "after": [],
+          "icon": "💀",
+          "goal": "Examine the big skull.",
+          "views": [
+            {
+              "sprite": "skull_v1",
+              "text": "A huge horned skull on a high shelf. Something is tucked inside."
+            },
+            {
+              "sprite": "skull_v2",
+              "text": "A folded guild note is tucked inside. It says Crane's steward pays for the hunt."
+            }
+          ],
+          "secret": {
+            "text": "A guild note ties the hunt's sponsor to Magistrate Crane.",
+            "clue": "A guild note ties the hunt's sponsor to Magistrate Crane."
+          }
+        },
+        {
+          "id": "r4_wheel",
+          "kind": "PANEL",
+          "name": "Chalk wheel",
+          "yaw": 0,
+          "pitch": -40,
+          "after": [
+            "r4_stand_1",
+            "r4_stand_2",
+            "r4_stand_3",
+            "r4_stand_4",
+            "r4_stand_5",
+            "r4_stand_6",
+            "r4_stand_7",
+            "r4_stand_8",
+            "r4_skull"
+          ],
+          "panel": "venn",
+          "discuss": true,
+          "triggersRight": true,
+          "icon": "◉",
+          "goal": "Sort the eight beasts.",
+          "titleText": "The chalk wheel"
+        },
+        {
+          "id": "r4_filings",
+          "kind": "FIND",
+          "name": "Grave-iron filings",
+          "yaw": 15,
+          "pitch": 10,
+          "after": [
+            "r4_wheel"
+          ],
+          "item": "filings",
+          "sprite": "grave_iron_dish",
+          "icon": "⛏",
+          "goal": "Find the grave-iron filings.",
+          "text": "Dark grave-iron filings. They help break binding curses."
+        },
+        {
+          "id": "r4_ledger",
+          "kind": "FIND",
+          "reward": true,
+          "name": "Hunter's Ledger",
+          "yaw": -152,
+          "pitch": -12,
+          "after": [
+            "r4_filings",
+            "narration"
+          ],
+          "item": "page4",
+          "page": 4,
+          "sprite": "page4_ledger",
+          "icon": "📜",
+          "goal": "Find the Hunter's Ledger.",
+          "text": "The guild's own ledger. Page 4 of 6 is yours."
+        }
+      ],
+      "exit": {
+        "yaw": 51,
+        "pitch": 15
+      }
+    },
+    {
+      "id": "r5",
+      "name": "The Gallows Watchtower",
+      "pano": "assets/rooms/room5.webp",
+      "accent": "#A84A4A",
+      "puzzle": "map",
+      "startYaw": 40,
+      "objective": "Find where the Prince lies.",
+      "enter": [
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "There. One yew in all that marsh. Too neat to be natural.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r5_enter_0.mp3"
+        },
+        {
+          "who": "torin",
+          "mood": "determined",
+          "text": "A grave marker. Somebody planted it to be found.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r5_enter_1.mp3"
+        }
+      ],
+      "discuss": [
+        {
+          "who": "torin",
+          "mood": "determined",
+          "text": "Two posts, two bearings. Where the lines meet, that is where he lies.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r5_discuss_0.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "narrator",
+          "mood": "",
+          "text": "Where the lines cross, the yew stands. Beneath it, a ring catches the dying light.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r5_right_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "A crane stamped over the Prince's own crest. The Magistrate marked his work.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r5_right_1.mp3"
+        }
+      ],
+      "wrong": [
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "That is not where the two lines cross.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r5_wrong_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Draw both lines. Mark where they meet, not where one passes.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r5_wrong_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Both bearings run at 45 degrees. Use the middle of the map.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r5_wrong_2.mp3"
+        }
+      ],
+      "hints": [
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Use the compass at each post, then draw each line on the map.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r5_hints_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Post A is at B2, Post B is at H2.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r5_hints_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "One line rises to the right, the other rises to the left. They cross in the centre column.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r5_hints_2.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r5_compass",
+          "kind": "FIND",
+          "name": "Brass compass",
+          "yaw": 58,
+          "pitch": -45,
+          "after": [],
+          "item": "compass",
+          "sprite": "brass_compass",
+          "icon": "🧭",
+          "goal": "Find the brass compass.",
+          "text": "A brass compass. Hold it when you read a signal post."
+        },
+        {
+          "id": "r5_spyglass",
+          "kind": "FIND",
+          "name": "Spyglass",
+          "yaw": 64,
+          "pitch": -14,
+          "after": [],
+          "item": "spyglass",
+          "sprite": "spyglass",
+          "icon": "🔭",
+          "goal": "Find the spyglass.",
+          "text": "A brass spyglass. It lets you see the yew from far away."
+        },
+        {
+          "id": "r5_carving",
+          "kind": "INSPECT",
+          "name": "Carved flag post",
+          "yaw": -131,
+          "pitch": -22,
+          "after": [
+            "r5_compass"
+          ],
+          "icon": "🪧",
+          "goal": "Examine the carved post.",
+          "views": [
+            {
+              "sprite": "carving_v1",
+              "text": "An old wooden post holds a torn flag. Something is carved low on it."
+            },
+            {
+              "sprite": "carving_v2",
+              "text": "Carved low on the post: A.V. wait for me."
+            }
+          ],
+          "secret": {
+            "text": "The carving says: A.V. wait for me. The Prince hoped someone would come.",
+            "clue": "A carving says: A.V. wait for me."
+          },
+          "blocked": "Marks are cut into the post, but you cannot read their angle without something to measure with."
+        },
+        {
+          "id": "r5_postA",
+          "kind": "USE",
+          "name": "Post A (west)",
+          "yaw": -168,
+          "pitch": 4,
+          "after": [
+            "r5_compass",
+            "r5_spyglass",
+            "r5_carving"
+          ],
+          "needs": "compass",
+          "icon": "🔭",
+          "goal": "Take a bearing to the first post.",
+          "text": "You hold the compass and look through the spyglass. From Post A, the yew lies at 045 degrees (north-east).",
+          "clue": "From Post A the yew lies at 045 degrees.",
+          "notes": [
+            "Post A is at B2. Bearing to the yew: 045 degrees (north-east)."
+          ]
+        },
+        {
+          "id": "r5_postB",
+          "kind": "USE",
+          "name": "Post B (east)",
+          "yaw": 170,
+          "pitch": 4,
+          "after": [
+            "r5_compass",
+            "r5_spyglass",
+            "r5_carving"
+          ],
+          "needs": "compass",
+          "icon": "🔭",
+          "goal": "Take a bearing to the second post.",
+          "text": "You hold the compass and look through the spyglass. From Post B, the yew lies at 315 degrees (north-west).",
+          "clue": "From Post B the yew lies at 315 degrees.",
+          "notes": [
+            "Post B is at H2. Bearing to the yew: 315 degrees (north-west)."
+          ]
+        },
+        {
+          "id": "r5_map",
+          "kind": "PANEL",
+          "name": "Map",
+          "yaw": 28,
+          "pitch": -38,
+          "after": [
+            "r5_postA",
+            "r5_postB"
+          ],
+          "panel": "map",
+          "discuss": true,
+          "triggersRight": true,
+          "icon": "🗺",
+          "goal": "Mark where the two lines cross.",
+          "titleText": "The marsh map"
+        },
+        {
+          "id": "r5_ring",
+          "kind": "FIND",
+          "reward": true,
+          "name": "The Prince's Ring",
+          "yaw": 3,
+          "pitch": 3,
+          "after": [
+            "r5_map",
+            "narration"
+          ],
+          "item": "page5",
+          "page": 5,
+          "sprite": "page5_ring",
+          "icon": "💍",
+          "goal": "Find the Prince's ring.",
+          "text": "The Prince's ring, buried under the yew. It has a second, newer stamp: a crane's head. Page 5 of 6 is yours."
+        }
+      ],
+      "exit": {
+        "yaw": -18,
+        "pitch": -36
+      }
+    },
+    {
+      "id": "r6",
+      "name": "The Chain Crypt",
+      "pano": "assets/rooms/room6.webp",
+      "accent": "#6B7A8F",
+      "puzzle": "untangle",
+      "startYaw": 0,
+      "objective": "Free the chains.",
+      "enter": [
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "Chains of binding. Whoever wove these knew a good deal of dark craft.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r6_enter_0.mp3"
+        },
+        {
+          "who": "torin",
+          "mood": "angry",
+          "text": "Then they know what the Stag was. And they sent me to kill it.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r6_enter_1.mp3"
+        }
+      ],
+      "discuss": [
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Free the chains without crossing them. A curse needs a knot to hold.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r6_discuss_0.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "narrator",
+          "mood": "",
+          "text": "The last chain slides free. The sarcophagus lid splits and a letter drifts out.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r6_right_0.mp3"
+        },
+        {
+          "who": "torin",
+          "mood": "angry",
+          "text": "Crane. He poisoned him, bound him, and hired me to bury it.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r6_right_1.mp3"
+        }
+      ],
+      "wrong": [
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "Some chains still cross. Look for the red glow.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r6_wrong_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Try the inner three rings first. They form a small triangle.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r6_wrong_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Put the inner triangle inside the outer triangle. Then no chains cross.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r6_wrong_2.mp3"
+        }
+      ],
+      "hints": [
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Red chains are the ones still crossing.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r6_hints_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Rings 1, 2 and 3 form one triangle. Rings 4, 5 and 6 form another.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r6_hints_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Draw one triangle inside the other. Each inner ring sits under one outer ring.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r6_hints_2.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r6_hook",
+          "kind": "FIND",
+          "name": "Iron hook",
+          "yaw": -150,
+          "pitch": -22,
+          "after": [],
+          "item": "hook",
+          "sprite": "iron_hook",
+          "icon": "🪝",
+          "goal": "Find the iron hook.",
+          "text": "A wrought iron hook. It helps you move the heavy chain rings."
+        },
+        {
+          "id": "r6_lid",
+          "kind": "INSPECT",
+          "name": "Sarcophagus lid",
+          "yaw": 0,
+          "pitch": -14,
+          "after": [
+            "r6_hook"
+          ],
+          "icon": "⚰",
+          "goal": "Examine the sarcophagus lid.",
+          "views": [
+            {
+              "sprite": "lid_v1",
+              "text": "The stone lid is bound with cursed chains."
+            },
+            {
+              "sprite": "lid_v2",
+              "text": "A stag's antlers are carved into the stone, hidden under the chains."
+            }
+          ],
+          "secret": {
+            "text": "A stag's antlers are carved on the lid. The one inside was the Stag.",
+            "clue": "A stag's antlers are carved on the sarcophagus lid."
+          },
+          "blocked": "Heavy chains hold the lid down. You need something to hook them with."
+        },
+        {
+          "id": "r6_rings",
+          "kind": "PANEL",
+          "name": "The six rings",
+          "yaw": -75,
+          "pitch": 22,
+          "after": [
+            "r6_hook",
+            "r6_lid"
+          ],
+          "panel": "untangle",
+          "discuss": true,
+          "triggersRight": true,
+          "icon": "⛓",
+          "goal": "Free the chains so none cross.",
+          "titleText": "The six rings"
+        },
+        {
+          "id": "r6_brazier",
+          "kind": "USE",
+          "name": "Blue brazier",
+          "yaw": 82,
+          "pitch": -10,
+          "after": [
+            "r6_rings"
+          ],
+          "icon": "🔥",
+          "goal": "Examine the blue flame.",
+          "text": "The brazier flares bright. Its light shows a small stone coffer beside it.",
+          "toast": "A coffer shows in the light."
+        },
+        {
+          "id": "r6_letter",
+          "kind": "FIND",
+          "reward": true,
+          "name": "The Prince's Letter",
+          "yaw": 116,
+          "pitch": -22,
+          "after": [
+            "r6_brazier",
+            "narration"
+          ],
+          "item": "page6",
+          "page": 6,
+          "sprite": "page6_letter",
+          "icon": "✉",
+          "goal": "Find the Prince's letter.",
+          "text": "The Prince's letter. Page 6 of 6 is yours."
+        }
+      ],
+      "exit": {
+        "yaw": 160,
+        "pitch": 5
+      }
+    },
+    {
+      "id": "r7",
+      "name": "The Ritual Ring",
+      "pano": "assets/rooms/room7.webp",
+      "accent": "#C9A24A",
+      "puzzle": "align",
+      "startYaw": -150,
+      "final": true,
+      "objective": "Stand where the stones frame the dip in the mountain.",
+      "enter": [
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "The stones. Seven of them. And Crane is already here.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r7_enter_0.mp3"
+        },
+        {
+          "who": "crane",
+          "mood": "smug",
+          "text": "Hunter. You are a good deal faster than I hoped.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r7_enter_1.mp3"
+        }
+      ],
+      "discuss": [
+        {
+          "who": "torin",
+          "mood": "angry",
+          "text": "You hired me to kill a dead man. I am done being your blade.",
+          "pausesTimer": true,
+          "audioFile": "assets/audio/voice/r7_discuss_0.mp3"
+        }
+      ],
+      "right": [
+        {
+          "who": "aldric",
+          "mood": "grateful",
+          "text": "Thank you for finding me. I only wished to be remembered.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r7_right_0.mp3"
+        }
+      ],
+      "choice": [
+        {
+          "who": "narrator",
+          "mood": "",
+          "text": "The Thorn Seal burns in its bowl. The curse waits for a name.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r7_choice_0.mp3"
+        }
+      ],
+      "vision": [
+        "A vision flickers over the stones...",
+        "Magistrate Crane stands in the old hall, smiling.",
+        "He pours poison into the Prince's chalice, and the Prince drinks.",
+        "The Prince falls. A thorn grows. The Stag is born."
+      ],
+      "wrong": [
+        {
+          "who": "mirelle",
+          "mood": "worried",
+          "text": "That gap between the stones is a trick. The real one is the V-shaped dip in the far mountain.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r7_wrong_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Look for the full moon. The dip is right under it.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r7_wrong_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Put the dip inside the ring, then hold still.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r7_wrong_2.mp3"
+        }
+      ],
+      "hints": [
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "The letter said to stand where the stones frame the dip in the mountain.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r7_hints_0.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "neutral",
+          "text": "Gaps between the other stones are tricks. The real dip is in the far mountain, under the moon.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r7_hints_1.mp3"
+        },
+        {
+          "who": "mirelle",
+          "mood": "determined",
+          "text": "Turn until the V-shaped dip sits inside the ring. Then hold still for three seconds.",
+          "pausesTimer": false,
+          "audioFile": "assets/audio/voice/r7_hints_2.mp3"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "r7_align",
+          "kind": "ALIGN",
+          "name": "Centre of the ring",
+          "after": [],
+          "goal": "Step into the centre of the ring.",
+          "yaw": 0,
+          "pitch": -50,
+          "icon": "◎"
+        },
+        {
+          "id": "r7_seal",
+          "kind": "FIND",
+          "name": "Thorn Seal",
+          "yaw": -18,
+          "pitch": -23,
+          "after": [
+            "r7_align",
+            "narration"
+          ],
+          "item": "seal",
+          "noCrowns": true,
+          "sprite": "thorn_seal",
+          "icon": "✺",
+          "goal": "Find the Thorn Seal.",
+          "text": "The Thorn Seal. It holds the curse. Open the Casebook, tap it to hold it, then tap the bowl on the altar."
+        },
+        {
+          "id": "r7_bowl",
+          "kind": "USE",
+          "name": "Seal bowl",
+          "yaw": 0,
+          "pitch": -17,
+          "after": [
+            "r7_seal"
+          ],
+          "needs": "seal",
+          "icon": "🜂",
+          "final": true,
+          "goal": "Use the Thorn Seal."
+        }
+      ],
+      "visionAudio": [
+        "assets/audio/voice/r7_vision_0.mp3",
+        "assets/audio/voice/r7_vision_1.mp3",
+        "assets/audio/voice/r7_vision_2.mp3",
+        "assets/audio/voice/r7_vision_3.mp3"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "title": "Page 1: The Contract",
+      "text": "A hunt contract for the Marsh Stag. It is signed with a crane's head. A steward's wax seal presses the same crane into the red wax."
+    },
+    {
+      "title": "Page 2: Wenna's Account",
+      "text": "Wenna writes: a steward paid for the Stag hunt in coin stamped with a crane. The Stag was never an ordinary beast."
+    },
+    {
+      "title": "Page 3: The Prince's Vow",
+      "text": "A vow signed A.V. Prince Aldric Valdrenn swears to guard the marsh people. The sigils are his: a Crown, a Chalice and a Stag."
+    },
+    {
+      "title": "Page 4: The Hunter's Ledger",
+      "text": "The guild ledger shows who paid for the hunt. The buyer asked for one thing only: send a hunter with silver eyes."
+    },
+    {
+      "title": "Page 5: The Prince's Ring",
+      "text": "The Prince's gold ring. A newer stamp covers his crest: a crane's head. Crane marked his own work."
+    },
+    {
+      "title": "Page 6: The Prince's Letter",
+      "text": "Aldric writes: Crane poisoned me for the crown and bound my spirit as a beast. If you read this, go to the Ritual Ring. Stand where the two gate stones frame the notch in the far mountain."
+    }
+  ],
+  "choices": [
+    {
+      "id": "return",
+      "title": "Return the curse to Crane",
+      "text": "The thorn leaves you and takes root in the Magistrate. He becomes the thing he made.",
+      "fx": "ink"
+    },
+    {
+      "id": "bear",
+      "title": "Bear the curse yourself",
+      "text": "You pull the thorn into your own heart so the Prince can rest. The mark stays, but slowly.",
+      "fx": "vines"
+    },
+    {
+      "id": "break",
+      "title": "Break the curse",
+      "text": "The antidote, the grave-iron and the Prince's ring unbind everything. Aldric is freed.",
+      "fx": "break"
+    }
+  ],
+  "endings": {
+    "return": {
+      "title": "Dark Justice",
+      "lines": [
+        "Crane screams as antlers split his brow. The thorn takes root in him.",
+        "Guards close in. The kingdom is safe.",
+        "Torin walks into the fog, free but cold.",
+        "The kingdom was saved. The hunter kept the silence."
+      ],
+      "audio": [
+        "assets/audio/voice/end_return_0.mp3",
+        "assets/audio/voice/end_return_1.mp3",
+        "assets/audio/voice/end_return_2.mp3",
+        "assets/audio/voice/end_return_3.mp3"
+      ]
+    },
+    "bear": {
+      "title": "The Heroic Sacrifice",
+      "lines": [
+        "The Prince bows to Torin and fades.",
+        "Torin looks at the thorn, grim and steady. It will climb slowly now.",
+        "Mirelle takes his arm. He lives, cursed, but not alone."
+      ],
+      "audio": [
+        "assets/audio/voice/end_bear_0.mp3",
+        "assets/audio/voice/end_bear_1.mp3",
+        "assets/audio/voice/end_bear_2.mp3"
+      ]
+    },
+    "breakFull": {
+      "title": "The Curse Is Broken",
+      "lines": [
+        "The thorn dissolves into gold light.",
+        "Aldric's spirit rises into the dawn.",
+        "Torin's silver eyes grow warm. The marsh is quiet at last."
+      ],
+      "audio": [
+        "assets/audio/voice/end_breakFull_0.mp3",
+        "assets/audio/voice/end_breakFull_1.mp3",
+        "assets/audio/voice/end_breakFull_2.mp3"
+      ]
+    },
+    "breakBitter": {
+      "title": "A Bittersweet Dawn",
+      "lines": [
+        "The thorn dissolves into gold light.",
+        "Aldric's spirit rises into the dawn.",
+        "But a dark scar remains on Torin's neck, to remember the cost."
+      ],
+      "audio": [
+        "assets/audio/voice/end_breakBitter_0.mp3",
+        "assets/audio/voice/end_breakBitter_1.mp3",
+        "assets/audio/voice/end_breakBitter_2.mp3"
+      ]
+    },
+    "seed": [
+      "In the bowl, the Thorn Seal burns away. Its ash leaves a map to Ashmark, another kingdom under the same curse.",
+      "Torin, Mirelle and the seal's ash start walking."
+    ],
+    "seedAudio": [
+      "assets/audio/voice/end_seed_0.mp3",
+      "assets/audio/voice/end_seed_1.mp3"
+    ]
+  }
+}
