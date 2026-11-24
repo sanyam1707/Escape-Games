@@ -1,0 +1,1916 @@
+{
+  "title": "The Paradox Academy",
+  "config": {
+    "timerSeconds": 600,
+    "score": {
+      "find": 5,
+      "secret": 5,
+      "reward": 30,
+      "part1": 50,
+      "part2": 50,
+      "wrong": -10,
+      "wrongCap": -30,
+      "hint": -25
+    },
+    "hints": 3,
+    "lockoutSec": 3,
+    "idleSec": 60,
+    "nudgeEvery": 8,
+    "lowTimeSec": 60
+  },
+  "speakers": {
+    "wren": {
+      "name": "Wren",
+      "pitch": 1.2,
+      "rate": 1.0
+    },
+    "tock": {
+      "name": "Tock",
+      "pitch": 0.7,
+      "rate": 0.9
+    },
+    "vale": {
+      "name": "Headmaster Vale",
+      "pitch": 0.8,
+      "rate": 0.85
+    },
+    "corvin": {
+      "name": "Corvin (recording)",
+      "pitch": 1.0,
+      "rate": 0.95
+    },
+    "sable": {
+      "name": "Agent Sable",
+      "pitch": 0.9,
+      "rate": 1.05
+    },
+    "narrator": {
+      "name": "Narrator",
+      "pitch": 1.0,
+      "rate": 0.92
+    }
+  },
+  "mission": {
+    "kicker": "THE PARADOX ACADEMY",
+    "heading": "The Last Bell",
+    "paras": [
+      "The Paradox Academy stands on a cliff where no two clocks agree. Tonight its Headmaster died, and in ten minutes the Last Bell will ring the end of everything.",
+      "You are Wren Hollis, home after thirty lost years, still fifteen. Tock, the old clockwork butler, is at your side.",
+      "Find out what started the loop before the clock runs out: ten minutes."
+    ],
+    "button": "Begin",
+    "audioFile": "assets/audio/voice/mission_0.mp3"
+  },
+  "tutorial": [
+    {
+      "title": "Look around",
+      "text": "Drag to turn the room. Glowing things can be tapped.",
+      "target": "#pano"
+    },
+    {
+      "title": "Tap and take",
+      "text": "Tap a glowing object to look at it, read it or take it. Wren's Logbook keeps everything you find.",
+      "target": "#btn-book"
+    },
+    {
+      "title": "Puzzles",
+      "text": "Each room has one puzzle. Every panel has an X to close it, and you can pause any time.",
+      "target": "#btn-pause"
+    },
+    {
+      "title": "Moments, hints and the clock",
+      "text": "You earn Moments for finds and room rewards. Wrong answers cost a few. Tock gives 3 hints in the whole game, at a cost of 25 Moments each. You have 10 minutes.",
+      "target": "#hud-top"
+    }
+  ],
+  "opening": [
+    "open.1",
+    "open.2",
+    "open.3",
+    "open.4",
+    "open.5"
+  ],
+  "dialogue": {
+    "open.1": {
+      "s": "wren",
+      "m": "shocked",
+      "t": "The Foyer. Everything is exactly as I remember it. Except the clock has stopped.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_open.1.mp3"
+    },
+    "open.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Welcome home, Miss Wren. It is 9:07, and the Headmaster is gone.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_open.2.mp3"
+    },
+    "open.3": {
+      "s": "wren",
+      "m": "worried",
+      "t": "Gone? Tock, why do I feel I've done all this before?",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_open.3.mp3"
+    },
+    "open.4": {
+      "s": "tock",
+      "m": "worried",
+      "t": "I cannot say, Miss. But the Last Bell rings in ten minutes.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_open.4.mp3"
+    },
+    "open.5": {
+      "s": "wren",
+      "m": "calm",
+      "t": "Then we start the clock again. Find me the way, Tock.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_open.5.mp3"
+    },
+    "r1.enter.1": {
+      "s": "wren",
+      "m": "worried",
+      "t": "Nine-oh-seven, and nothing moves. The clock first, Tock.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r1.enter.1.mp3"
+    },
+    "r1.inspect.clock": {
+      "s": "tock",
+      "m": "calm",
+      "t": "It stopped at the minute he died, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r1.inspect.clock.mp3"
+    },
+    "r1.find.key": {
+      "s": "wren",
+      "m": "calm",
+      "t": "Tock's own winding key. He's been carrying it all along.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r1.find.key.mp3"
+    },
+    "r1.find.gears": {
+      "s": "wren",
+      "m": "excited",
+      "t": "Six gears, and two empty shafts that need two of them.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r1.find.gears.mp3"
+    },
+    "r1.wrong.1": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Hm. The clock coughed, Miss. Maybe a gear does not fit its gap.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r1.wrong.1.mp3"
+    },
+    "r1.wrong.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The brass plate gives each gap as a number. A fitting pair adds up to it.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r1.wrong.2.mp3"
+    },
+    "r1.wrong.3": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Take the first gap, thirty-six, and take away the twelve already there.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r1.wrong.3.mp3"
+    },
+    "r1.hint": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Look at the two gap numbers. The teeth must add up to each one.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r1.hint.mp3"
+    },
+    "r1.idle": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The clock's heart is behind the little brass door, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r1.idle.mp3"
+    },
+    "r1.right.1": {
+      "s": "wren",
+      "m": "excited",
+      "t": "It's ticking. Nine-oh-seven is moving again.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r1.right.1.mp3"
+    },
+    "r1.right.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "And the hour hand has fallen loose, Miss. The Study lock is shaped for it.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r1.right.2.mp3"
+    },
+    "r1.right.3": {
+      "s": "wren",
+      "m": "calm",
+      "t": "Then the Headmaster's last room is next.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r1.right.3.mp3"
+    },
+    "r2.enter.1": {
+      "s": "wren",
+      "m": "worried",
+      "t": "Father's Study. His tea is still warm, Tock.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r2.enter.1.mp3"
+    },
+    "r2.inspect.cups": {
+      "s": "tock",
+      "m": "worried",
+      "t": "Two cups, Miss. The Headmaster had a visitor.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r2.inspect.cups.mp3"
+    },
+    "r2.find.magnifier": {
+      "s": "wren",
+      "m": "calm",
+      "t": "His magnifier. Good for looking where nobody looked.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r2.find.magnifier.mp3"
+    },
+    "r2.use.rug": {
+      "s": "wren",
+      "m": "shocked",
+      "t": "A boot print. Small. Like a first-year's.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r2.use.rug.mp3"
+    },
+    "r2.wrong.1": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Not quite, Miss. Start with who cannot be on the Roof.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r2.wrong.1.mp3"
+    },
+    "r2.wrong.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Two notes talk about the Roof. Together they leave only one sibling.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r2.wrong.2.mp3"
+    },
+    "r2.wrong.3": {
+      "s": "tock",
+      "m": "calm",
+      "t": "That puts Marlowe on the Roof. The soup note settles Dax next.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r2.wrong.3.mp3"
+    },
+    "r2.hint": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Begin with the Roof. Only one sibling fits both notes about it.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r2.hint.mp3"
+    },
+    "r2.idle": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The cork board holds four notes, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r2.idle.mp3"
+    },
+    "r2.right.1": {
+      "s": "wren",
+      "m": "calm",
+      "t": "So Marlowe, Isolde, Dax and Bram were all somewhere else.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r2.right.1.mp3"
+    },
+    "r2.right.2": {
+      "s": "tock",
+      "m": "worried",
+      "t": "And yet two cups, Miss, and a boot print under the desk.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r2.right.2.mp3"
+    },
+    "r2.right.3": {
+      "s": "wren",
+      "m": "shocked",
+      "t": "Someone else was here at 9:07. Someone my size.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r2.right.3.mp3"
+    },
+    "r3.enter.1": {
+      "s": "wren",
+      "m": "calm",
+      "t": "Marlowe's perch. He could watch the stars for hours.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r3.enter.1.mp3"
+    },
+    "r3.enter.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Tempus rises over the courtyard, Miss. The Headmaster's own star.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r3.enter.2.mp3"
+    },
+    "r3.find.eyepiece": {
+      "s": "wren",
+      "m": "excited",
+      "t": "A little brass eyepiece. It fits the great telescope.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r3.find.eyepiece.mp3"
+    },
+    "r3.inspect.compass": {
+      "s": "tock",
+      "m": "calm",
+      "t": "North is the brass owl, Miss. Everything else counts from there.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r3.inspect.compass.mp3"
+    },
+    "r3.wrong.1": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Close, Miss, but not true. Read the star chart's two rules again.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r3.wrong.1.mp3"
+    },
+    "r3.wrong.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The chart wants the Foyer clock's hour, times fifteen, for the bearing.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r3.wrong.2.mp3"
+    },
+    "r3.wrong.3": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Nine hours, fifteen degrees each. The height is seven children, five each.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r3.wrong.3.mp3"
+    },
+    "r3.hint": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Two rules on the chart. One uses the Foyer clock, one counts the children.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r3.hint.mp3"
+    },
+    "r3.idle": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The eyepiece is on the bench, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r3.idle.mp3"
+    },
+    "r3.right.1": {
+      "s": "wren",
+      "m": "shocked",
+      "t": "There's something scratched on the rail. \"Wren, do not save him.\"",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r3.right.1.mp3"
+    },
+    "r3.right.2": {
+      "s": "tock",
+      "m": "worried",
+      "t": "I cannot say what it means, Miss.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r3.right.2.mp3"
+    },
+    "r3.right.3": {
+      "s": "wren",
+      "m": "worried",
+      "t": "Neither can I. But that is my handwriting.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r3.right.3.mp3"
+    },
+    "r4.enter.1": {
+      "s": "wren",
+      "m": "calm",
+      "t": "Seven beds, and one of them is mine. It still has my name.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r4.enter.1.mp3"
+    },
+    "r4.inspect.bed": {
+      "s": "tock",
+      "m": "worried",
+      "t": "Eleven marks, Miss. Miss Tansy was counting something.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r4.inspect.bed.mp3"
+    },
+    "r4.find.fuse": {
+      "s": "wren",
+      "m": "calm",
+      "t": "A fuse for the Night-Watch board.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r4.find.fuse.mp3"
+    },
+    "r4.learn.plate": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Always first the Bell, then the Key, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r4.learn.plate.mp3"
+    },
+    "r4.nudge.1": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Each switch flips itself and the lamps beside, above and below it.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r4.nudge.1.mp3"
+    },
+    "r4.nudge.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Try pressing fewer switches. Each one has to earn its place.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r4.nudge.2.mp3"
+    },
+    "r4.nudge.3": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Look at the top row first, Miss, then the rest.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r4.nudge.3.mp3"
+    },
+    "r4.hint": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Four presses are enough. Think of the top row and the left lamp.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r4.hint.mp3"
+    },
+    "r4.idle": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The tin of fuses is on the shelf, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r4.idle.mp3"
+    },
+    "r4.right.1": {
+      "s": "wren",
+      "m": "excited",
+      "t": "Every lamp lit, just as the Headmaster liked it.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r4.right.1.mp3"
+    },
+    "r4.right.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Miss Tansy left you a page, under her pillow.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r4.right.2.mp3"
+    },
+    "r4.right.3": {
+      "s": "wren",
+      "m": "shocked",
+      "t": "Eleven times. She wrote that she saw me pull him out, eleven times.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r4.right.3.mp3"
+    },
+    "r5.enter.1": {
+      "s": "wren",
+      "m": "calm",
+      "t": "The Lab. It smells of cold metal and old thunderstorms.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r5.enter.1.mp3"
+    },
+    "r5.learn.recipe": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Exactly four drams, Miss. The Headmaster was strict about it.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r5.learn.recipe.mp3"
+    },
+    "r5.inspect.bottle": {
+      "s": "tock",
+      "m": "worried",
+      "t": "The initials on this label are W.H., Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r5.inspect.bottle.mp3"
+    },
+    "r5.find.handle": {
+      "s": "wren",
+      "m": "worried",
+      "t": "The tap's handle. Someone took it off on purpose.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r5.find.handle.mp3"
+    },
+    "r5.wrong.1": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Not four drams yet, Miss. The recipe is very strict.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r5.wrong.1.mp3"
+    },
+    "r5.wrong.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "You get exact amounts by pouring one vial into the other until it is full.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r5.wrong.2.mp3"
+    },
+    "r5.wrong.3": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Fill the big vial, pour into the small one, and look at what is left behind.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r5.wrong.3.mp3"
+    },
+    "r5.hint": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Fill the big vial, pour into the small one. What is left?",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r5.hint.mp3"
+    },
+    "r5.idle": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The tap needs its handle, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r5.idle.mp3"
+    },
+    "r5.right.1": {
+      "s": "wren",
+      "m": "excited",
+      "t": "Four drams, to the drop. The mist has frozen in the air.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r5.right.1.mp3"
+    },
+    "r5.right.2": {
+      "s": "tock",
+      "m": "worried",
+      "t": "And the label says W.H., Miss. Those are your initials.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r5.right.2.mp3"
+    },
+    "r5.right.3": {
+      "s": "wren",
+      "m": "shocked",
+      "t": "I brewed this. Or I will. Or I already have.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r5.right.3.mp3"
+    },
+    "r6.enter.1": {
+      "s": "wren",
+      "m": "calm",
+      "t": "The Vault of Hours. Every drawer is stamped with a date.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r6.enter.1.mp3"
+    },
+    "r6.inspect.drawers": {
+      "s": "tock",
+      "m": "worried",
+      "t": "This drawer is open and empty, and it carries tonight's date.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r6.inspect.drawers.mp3"
+    },
+    "r6.find.lantern": {
+      "s": "wren",
+      "m": "calm",
+      "t": "The lantern's still lit. The vault ring will need it.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r6.find.lantern.mp3"
+    },
+    "r6.learn.ledger": {
+      "s": "tock",
+      "m": "worried",
+      "t": "Eleven entries, Miss, all signed W.H., all at 9:07.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r6.learn.ledger.mp3"
+    },
+    "r6.wrong.1": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Not yet, Miss. Use the clues from the Observatory, the Dormitory and the Lab.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r6.wrong.1.mp3"
+    },
+    "r6.wrong.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Four symbols are possible, and a gold ring tells you which ones are home.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r6.wrong.2.mp3"
+    },
+    "r6.wrong.3": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The Bell goes before the Key, and the Eye is never first.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r6.wrong.3.mp3"
+    },
+    "r6.hint": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Rule out the Sun and the Moon. Then count your gold rings.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r6.hint.mp3"
+    },
+    "r6.idle": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The lantern lights the ring, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r6.idle.mp3"
+    },
+    "r6.right.1": {
+      "s": "wren",
+      "m": "shocked",
+      "t": "Eleven times, in my own hand. Tonight is the twelfth.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r6.right.1.mp3"
+    },
+    "r6.right.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The Paradox Engine is in the Clock Tower, Miss. That is where it all started.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r6.right.2.mp3"
+    },
+    "r6.right.3": {
+      "s": "wren",
+      "m": "calm",
+      "t": "Then that is where it ends.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r6.right.3.mp3"
+    },
+    "r7.enter.1": {
+      "s": "wren",
+      "m": "calm",
+      "t": "The Clock Tower. This is where it all began, Tock.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r7.enter.1.mp3"
+    },
+    "r7.enter.2": {
+      "s": "tock",
+      "m": "guilty",
+      "t": "It is, Miss. There is much I have not said.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r7.enter.2.mp3"
+    },
+    "r7.find.record": {
+      "s": "wren",
+      "m": "worried",
+      "t": "A record, left on the sill. Whose voice is this?",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r7.find.record.mp3"
+    },
+    "r7.use.record.1": {
+      "s": "corvin",
+      "m": "calm",
+      "t": "Wren, the first time, you froze the Study when he fell. That frozen second is the Bell.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r7.use.record.1.mp3"
+    },
+    "r7.use.record.2": {
+      "s": "corvin",
+      "m": "calm",
+      "t": "Every try since has only stretched it. I am sorry.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r7.use.record.2.mp3"
+    },
+    "r7.inspect.plate": {
+      "s": "tock",
+      "m": "calm",
+      "t": "A rule, Miss. Never rest a larger moment on a smaller one.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r7.inspect.plate.mp3"
+    },
+    "r7.illegal.1": {
+      "s": "tock",
+      "m": "calm",
+      "t": "A larger ring cannot rest on a smaller one, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r7.illegal.1.mp3"
+    },
+    "r7.illegal.2": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Move the smallest ring first, and keep moving it.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r7.illegal.2.mp3"
+    },
+    "r7.illegal.3": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The Second helps every other ring travel.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r7.illegal.3.mp3"
+    },
+    "r7.hint": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Move the Second out of the way. Then the next ring can go.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r7.hint.mp3"
+    },
+    "r7.idle": {
+      "s": "tock",
+      "m": "calm",
+      "t": "The hour hand fits the Engine's socket, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_r7.idle.mp3"
+    },
+    "r7.right.1": {
+      "s": "wren",
+      "m": "calm",
+      "t": "The Engine is still. The Bell is held at the edge of ringing.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r7.right.1.mp3"
+    },
+    "r7.right.2": {
+      "s": "tock",
+      "m": "guilty",
+      "t": "Miss Wren, I must tell you. I wrote every warning in your Logbook. You asked me to.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r7.right.2.mp3"
+    },
+    "r7.right.3": {
+      "s": "wren",
+      "m": "shocked",
+      "t": "You knew. Eleven times.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r7.right.3.mp3"
+    },
+    "r7.right.4": {
+      "s": "tock",
+      "m": "guilty",
+      "t": "Eleven times, Miss. I am so very sorry.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r7.right.4.mp3"
+    },
+    "r7.right.5": {
+      "s": "wren",
+      "m": "calm",
+      "t": "Then let me finish it properly.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_r7.right.5.mp3"
+    },
+    "endA.1": {
+      "s": "wren",
+      "m": "calm",
+      "t": "Goodbye, Father. I should have said it the first time.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_endA.1.mp3"
+    },
+    "endA.2": {
+      "s": "tock",
+      "m": "guilty",
+      "t": "The Logbook is blank, Miss. You will not remember tonight.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_endA.2.mp3"
+    },
+    "endA.3": {
+      "s": "wren",
+      "m": "calm",
+      "t": "Then keep it for me, Tock.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_endA.3.mp3"
+    },
+    "endA.4": {
+      "s": "narrator",
+      "m": "calm",
+      "t": "The Bell stays silent. Dawn finds seven beds, six sleepers and one smiling girl who cannot say why.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_endA.4.mp3"
+    },
+    "endA.5": {
+      "s": "sable",
+      "m": "calm",
+      "t": "Miss Hollis? The Bureau of Hours would like a word about thirty lost years.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_endA.5.mp3"
+    },
+    "endB.1": {
+      "s": "wren",
+      "m": "calm",
+      "t": "Stay with me, Father, for as long as the clock lets us.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_endB.1.mp3"
+    },
+    "endB.2": {
+      "s": "tock",
+      "m": "guilty",
+      "t": "The Bell cannot ring, Miss. But nothing will ever move on.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_endB.2.mp3"
+    },
+    "endB.3": {
+      "s": "narrator",
+      "m": "calm",
+      "t": "Frost spreads through the Academy. Only Wren, Tock and one pocket-watch still tick.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_endB.3.mp3"
+    },
+    "endB.4": {
+      "s": "wren",
+      "m": "worried",
+      "t": "Whose watch is that?",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_endB.4.mp3"
+    },
+    "endB.5": {
+      "s": "sable",
+      "m": "calm",
+      "t": "You froze a moment on purpose, Miss Hollis. The Bureau has waited a long time for that.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_endB.5.mp3"
+    },
+    "hint.none": {
+      "s": "tock",
+      "m": "calm",
+      "t": "I have no hints left, Miss.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_hint.none.mp3"
+    },
+    "hint.poor": {
+      "s": "tock",
+      "m": "calm",
+      "t": "Not enough Moments, Miss. A hint costs 25 Moments.",
+      "p": false,
+      "audioFile": "assets/audio/voice/dlg_hint.poor.mp3"
+    },
+    "credits.whisper": {
+      "s": "corvin",
+      "m": "calm",
+      "t": "Wren, there is a thirteenth hour.",
+      "p": true,
+      "audioFile": "assets/audio/voice/dlg_credits.whisper.mp3"
+    }
+  },
+  "items": {
+    "key": {
+      "name": "Winding Key",
+      "desc": "Tock's own key. It winds the Foyer clock.",
+      "glyph": "key"
+    },
+    "gears": {
+      "name": "Gear Case",
+      "desc": "Six brass gears of different sizes.",
+      "glyph": "gear"
+    },
+    "magnifier": {
+      "name": "Magnifier",
+      "desc": "The Headmaster's brass magnifier. Use it to look closely.",
+      "glyph": "lens"
+    },
+    "eyepiece": {
+      "name": "Eyepiece",
+      "desc": "A small brass eyepiece for the great telescope.",
+      "glyph": "lens"
+    },
+    "fuse": {
+      "name": "Brass Fuse",
+      "desc": "A glass fuse in brass caps. It powers the Night-Watch board.",
+      "glyph": "bolt"
+    },
+    "handle": {
+      "name": "Tap Handle",
+      "desc": "A silver handle for the Lab tap.",
+      "glyph": "tap"
+    },
+    "lantern": {
+      "name": "Lantern",
+      "desc": "A lit brass lantern. Its light shows the vault ring.",
+      "glyph": "lamp"
+    },
+    "record": {
+      "name": "Old Record",
+      "desc": "A record left on the sill. Play it on the gramophone.",
+      "glyph": "disc"
+    },
+    "hourhand": {
+      "name": "Hour Hand",
+      "desc": "The clock's brass hour hand. It fits the Study lock and the Engine.",
+      "glyph": "hand",
+      "reward": true
+    },
+    "studykey": {
+      "name": "Study Key",
+      "desc": "Opens the narrow door behind the bookcase.",
+      "glyph": "key",
+      "reward": true
+    },
+    "starlens": {
+      "name": "Starlens",
+      "desc": "A round lens that shows hidden marks and opens the Dormitory door.",
+      "glyph": "star",
+      "reward": true
+    },
+    "diary": {
+      "name": "Diary Page",
+      "desc": "Tansy's page. It opens the Laboratory door.",
+      "glyph": "page",
+      "reward": true
+    },
+    "vial": {
+      "name": "Vial of Stillness",
+      "desc": "One clean freeze of time. Use once.",
+      "glyph": "vial",
+      "reward": true
+    },
+    "paradoxkey": {
+      "name": "Paradox Key",
+      "desc": "Opens the Clock Tower door.",
+      "glyph": "key",
+      "reward": true
+    }
+  },
+  "clues": {
+    "R1a": {
+      "title": "Gear note",
+      "text": "Six spins of the heart make one turn of the hand."
+    },
+    "R1b": {
+      "title": "Back plate",
+      "text": "Heart to Middle: 36. Middle to Hand: 64."
+    },
+    "C1": {
+      "title": "Boot print",
+      "text": "A small boot print under the desk, first-year boot size."
+    },
+    "C2": {
+      "title": "Telescope rail",
+      "text": "Scratched on the telescope rail: \"Wren, do not save him.\""
+    },
+    "S1": {
+      "title": "Star chart rules",
+      "text": "Bearing = the hour on the Foyer clock x 15. Height = the number of Vale children x 5."
+    },
+    "V1": {
+      "title": "Long Eclipse",
+      "text": "During the Long Eclipse, neither Sun nor Moon was seen."
+    },
+    "C3": {
+      "title": "Tansy's Diary Page",
+      "text": "\"Eleven times I saw her pull him out of the Study.\""
+    },
+    "V2": {
+      "title": "Night-Watch rule",
+      "text": "First the Bell, then the Key."
+    },
+    "R5a": {
+      "title": "Stillness recipe",
+      "text": "Stillness: exactly four drams. Not three, not five, or the moment cracks."
+    },
+    "V3": {
+      "title": "Recipe footnote",
+      "text": "The Eye never opens the sequence."
+    },
+    "C4": {
+      "title": "Bottle label",
+      "text": "\"W.H. Stillness - use once.\""
+    },
+    "C5": {
+      "title": "Vault ledger",
+      "text": "Eleven entries signed W.H., every one at 9:07."
+    },
+    "C6": {
+      "title": "Corvin's recording",
+      "text": "\"Wren, the first time, you froze the Study when he fell. That frozen second is the Bell. Every try since has only stretched it. I am sorry.\""
+    },
+    "C7": {
+      "title": "Engine plate",
+      "text": "Never rest a larger ring on a smaller one."
+    },
+    "T1": {
+      "title": "Compass ring",
+      "text": "Bearings start at North, where the brass owl stands."
+    },
+    "T2": {
+      "title": "Tansy's headboard",
+      "text": "Eleven tick marks are scratched on Tansy's headboard."
+    },
+    "T3": {
+      "title": "Warm cup",
+      "text": "The second cup is warm and half drunk."
+    },
+    "T4": {
+      "title": "Empty drawer",
+      "text": "One drawer is open and empty. It carries tonight's date."
+    }
+  },
+  "people": [
+    {
+      "name": "Marlowe",
+      "line": "Loves the stars. Spends most nights in the Observatory."
+    },
+    {
+      "name": "Isolde",
+      "line": "Brave, except about heights."
+    },
+    {
+      "name": "Dax",
+      "line": "Always in the kitchen. His sleeves smell of soup."
+    },
+    {
+      "name": "Bram",
+      "line": "Quiet reader. Keeps library slips in his pockets."
+    },
+    {
+      "name": "Tansy",
+      "line": "Kept a secret diary. Missing tonight.",
+      "missing": true
+    },
+    {
+      "name": "Corvin",
+      "line": "Clever, headphones always on. Missing tonight.",
+      "missing": true
+    },
+    {
+      "name": "Wren",
+      "line": "That is you. The seventh child, lost for thirty years."
+    }
+  ],
+  "puzzleText": {
+    "gear": {
+      "title": "The Clock's Heart",
+      "rule": "A gear pair fits a gap when its two teeth counts add up to the gap.",
+      "needKey": "The Wind button needs the winding key. Find it in the Foyer."
+    },
+    "alibi": {
+      "title": "Who Was Where?",
+      "notes": [
+        "The person on the Roof was neither Dax nor Bram.",
+        "Isolde cannot bear heights. She was not on the Roof.",
+        "Dax's sleeves smelled of soup. He was neither in the Library nor in the Greenhouse.",
+        "Bram had a library slip in his pocket, but he was nowhere near the Greenhouse."
+      ]
+    },
+    "sight": {
+      "title": "The Telescope",
+      "rule": "Turn the dials until the lit window and the star sit inside the ring."
+    },
+    "switch": {
+      "title": "Night-Watch Board",
+      "rule": "Each switch flips itself and the lamps above, below, left and right of it. Light all nine lamps."
+    },
+    "pour": {
+      "title": "Vials of Stillness",
+      "rule": "Get exactly four drams into the big vial, then offer the dose."
+    },
+    "sigil": {
+      "title": "The Vault Ring",
+      "rule": "Find four different symbols in order. Gold ring: right symbol, right place. Silver ring: right symbol, wrong place."
+    },
+    "tower": {
+      "title": "The Paradox Engine",
+      "rule": "Move all three rings from Past to Future. One ring at a time. Never put a bigger ring on a smaller one."
+    }
+  },
+  "choice": {
+    "title": "Eleven tries. One moment.",
+    "tock": {
+      "s": "tock",
+      "m": "guilty",
+      "t": "The Headmaster is at the Engine's heart, Miss, in the second before he falls. The vial holds one clean freeze. Whatever you choose, it is yours.",
+      "audioFile": "assets/audio/voice/choice_tock.mp3"
+    },
+    "buttons": [
+      {
+        "id": "A",
+        "label": "Let him go",
+        "side": "warm"
+      },
+      {
+        "id": "B",
+        "label": "Hold the moment",
+        "side": "cool"
+      }
+    ]
+  },
+  "endings": {
+    "A": {
+      "name": "The Morning After",
+      "lines": [
+        "endA.1",
+        "endA.2",
+        "endA.3",
+        "endA.4",
+        "endA.5"
+      ]
+    },
+    "B": {
+      "name": "The Held Hour",
+      "lines": [
+        "endB.1",
+        "endB.2",
+        "endB.3",
+        "endB.4",
+        "endB.5"
+      ]
+    }
+  },
+  "endScreen": {
+    "win": {
+      "title": "The Paradox Academy - Complete",
+      "hint": "There is another ending.",
+      "again": "Play Again",
+      "credits": "Credits"
+    },
+    "lose": {
+      "title": "The Bell rang.",
+      "again": "Try Again"
+    },
+    "credits": [
+      "The Paradox Academy",
+      "An original story, set in a school built like a clock.",
+      "Thank you for playing."
+    ]
+  },
+  "rooms": [
+    {
+      "id": "r1",
+      "name": "Grand Foyer",
+      "start": -64,
+      "accent": "#C9A227",
+      "pano": "assets/rooms/room1.webp",
+      "objective": "Get the Foyer clock ticking again.",
+      "enter": [
+        "r1.enter.1"
+      ],
+      "hint": "r1.hint",
+      "idle": "r1.idle",
+      "wrong": [
+        "r1.wrong.1",
+        "r1.wrong.2",
+        "r1.wrong.3"
+      ],
+      "right": [
+        "r1.right.1",
+        "r1.right.2",
+        "r1.right.3"
+      ],
+      "reward": {
+        "item": "hourhand",
+        "title": "The Hour Hand falls loose"
+      },
+      "timeline": "The Foyer clock ticks again.",
+      "hotspots": [
+        {
+          "id": "r1_note",
+          "kind": "LEARN",
+          "name": "Note",
+          "yaw": -71,
+          "pitch": 18,
+          "after": [],
+          "prompt": "Read the note pinned to the clock.",
+          "clues": [
+            "R1a"
+          ],
+          "text": "A note on the clock: \"Six spins of the heart make one turn of the hand.\"",
+          "promptAudio": "assets/audio/voice/hint_r1_note.mp3"
+        },
+        {
+          "id": "r1_clock",
+          "kind": "INSPECT",
+          "name": "Clock",
+          "yaw": -64,
+          "pitch": 39,
+          "after": [],
+          "prompt": "Look closely at the clock.",
+          "views": [
+            "clock_1",
+            "clock_2"
+          ],
+          "say": "r1.inspect.clock",
+          "viewText": [
+            "The clock face. It stopped at 9:07.",
+            "The back plate has tiny numbers."
+          ],
+          "secret": {
+            "clue": "R1b",
+            "text": "Hidden on the back plate: Heart to Middle is 36. Middle to Hand is 64."
+          },
+          "promptAudio": "assets/audio/voice/hint_r1_clock.mp3"
+        },
+        {
+          "id": "r1_key",
+          "kind": "FIND",
+          "name": "Winding key",
+          "yaw": -137,
+          "pitch": 1,
+          "after": [],
+          "prompt": "Something brass hangs on a hook.",
+          "item": "key",
+          "say": "r1.find.key",
+          "promptAudio": "assets/audio/voice/hint_r1_key.mp3"
+        },
+        {
+          "id": "r1_gears",
+          "kind": "FIND",
+          "name": "Gear case",
+          "yaw": 153,
+          "pitch": -20,
+          "after": [],
+          "prompt": "Look at the side table for gears.",
+          "item": "gears",
+          "say": "r1.find.gears",
+          "promptAudio": "assets/audio/voice/hint_r1_gears.mp3"
+        },
+        {
+          "id": "r1_mech",
+          "kind": "PANEL",
+          "name": "Clock door",
+          "yaw": -65,
+          "pitch": -4,
+          "after": [
+            "r1_gears"
+          ],
+          "prompt": "Open the little brass door in the clock.",
+          "panel": "gear",
+          "promptAudio": "assets/audio/voice/hint_r1_mech.mp3"
+        },
+        {
+          "id": "r1_door",
+          "kind": "USE",
+          "name": "Study door",
+          "yaw": -158,
+          "pitch": -2,
+          "after": [
+            "r1_reward"
+          ],
+          "exit": true,
+          "use": "hourhand",
+          "to": 1,
+          "prompt": "Use the Hour Hand on the Study door lock.",
+          "toast": "The lock turns. The Study door opens.",
+          "promptAudio": "assets/audio/voice/hint_r1_door.mp3"
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "name": "Headmaster's Study",
+      "start": 30,
+      "accent": "#8E2F3A",
+      "pano": "assets/rooms/room2.webp",
+      "objective": "Work out who was where at 9:07.",
+      "enter": [
+        "r2.enter.1"
+      ],
+      "hint": "r2.hint",
+      "idle": "r2.idle",
+      "wrong": [
+        "r2.wrong.1",
+        "r2.wrong.2",
+        "r2.wrong.3"
+      ],
+      "right": [
+        "r2.right.1",
+        "r2.right.2",
+        "r2.right.3"
+      ],
+      "reward": {
+        "item": "studykey",
+        "title": "A desk drawer opens"
+      },
+      "timeline": "The Study shows someone else was there.",
+      "hotspots": [
+        {
+          "id": "r2_magnifier",
+          "kind": "FIND",
+          "name": "Magnifier",
+          "yaw": 65,
+          "pitch": -13,
+          "after": [],
+          "prompt": "Find something to look closely with.",
+          "item": "magnifier",
+          "say": "r2.find.magnifier",
+          "promptAudio": "assets/audio/voice/hint_r2_magnifier.mp3"
+        },
+        {
+          "id": "r2_cups",
+          "kind": "INSPECT",
+          "name": "Teacups",
+          "yaw": 36,
+          "pitch": -18,
+          "after": [],
+          "prompt": "Look at the teacups on the desk.",
+          "views": [
+            "cups_1",
+            "cups_2"
+          ],
+          "say": "r2.inspect.cups",
+          "viewText": [
+            "Two teacups on the desk.",
+            "The second cup is still warm."
+          ],
+          "secret": {
+            "clue": "T3",
+            "text": "The second cup is warm and half drunk. Someone was here minutes ago."
+          },
+          "promptAudio": "assets/audio/voice/hint_r2_cups.mp3"
+        },
+        {
+          "id": "r2_rug",
+          "kind": "USE",
+          "name": "Rug",
+          "yaw": -25,
+          "pitch": -64,
+          "after": [
+            "r2_magnifier"
+          ],
+          "use": "magnifier",
+          "prompt": "Use the Magnifier on the rug.",
+          "say": "r2.use.rug",
+          "secret": {
+            "clue": "C1",
+            "text": "A small boot print, the size of a first-year's boot. Saved to Clues."
+          },
+          "promptAudio": "assets/audio/voice/hint_r2_rug.mp3"
+        },
+        {
+          "id": "r2_board",
+          "kind": "PANEL",
+          "name": "Cork board",
+          "yaw": -10,
+          "pitch": 29,
+          "after": [
+            "r2_rug"
+          ],
+          "prompt": "Read the cork board and fill in the alibis.",
+          "panel": "alibi",
+          "promptAudio": "assets/audio/voice/hint_r2_board.mp3"
+        },
+        {
+          "id": "r2_bookcase",
+          "kind": "USE",
+          "name": "Bookcase door",
+          "yaw": 119,
+          "pitch": 16,
+          "after": [
+            "r2_reward"
+          ],
+          "exit": true,
+          "use": "studykey",
+          "to": 2,
+          "prompt": "Use the Study Key on the bookcase door.",
+          "toast": "The bookcase swings open. Stairs lead up.",
+          "promptAudio": "assets/audio/voice/hint_r2_bookcase.mp3"
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "name": "Rooftop Observatory",
+      "start": 40,
+      "accent": "#2F4B8F",
+      "pano": "assets/rooms/room3.webp",
+      "objective": "Line up the telescope with the lit window and the star.",
+      "enter": [
+        "r3.enter.1",
+        "r3.enter.2"
+      ],
+      "hint": "r3.hint",
+      "idle": "r3.idle",
+      "wrong": [
+        "r3.wrong.1",
+        "r3.wrong.2",
+        "r3.wrong.3"
+      ],
+      "right": [
+        "r3.right.1",
+        "r3.right.2",
+        "r3.right.3"
+      ],
+      "reward": {
+        "item": "starlens",
+        "title": "A Starlens drops from the eyepiece",
+        "clue": "C2"
+      },
+      "timeline": "The Observatory warns: do not save him.",
+      "hotspots": [
+        {
+          "id": "r3_eyepiece",
+          "kind": "FIND",
+          "name": "Eyepiece",
+          "yaw": -127,
+          "pitch": -34,
+          "after": [],
+          "prompt": "Look on the bench for a small brass tube.",
+          "item": "eyepiece",
+          "say": "r3.find.eyepiece",
+          "promptAudio": "assets/audio/voice/hint_r3_eyepiece.mp3"
+        },
+        {
+          "id": "r3_chart",
+          "kind": "LEARN",
+          "name": "Star chart",
+          "yaw": -72,
+          "pitch": 22,
+          "after": [],
+          "prompt": "Read the star chart. It has two rules.",
+          "clues": [
+            "S1",
+            "V1"
+          ],
+          "text": "Rule 1: Bearing = the hour on the Foyer clock x 15. Rule 2: Height = the number of Vale children x 5. Footnote: during the Long Eclipse, neither Sun nor Moon was seen.",
+          "promptAudio": "assets/audio/voice/hint_r3_chart.mp3"
+        },
+        {
+          "id": "r3_compass",
+          "kind": "INSPECT",
+          "name": "Compass",
+          "yaw": 0,
+          "pitch": -28,
+          "after": [],
+          "prompt": "Look at the compass and the owl.",
+          "views": [
+            "compass_1",
+            "compass_2"
+          ],
+          "say": "r3.inspect.compass",
+          "viewText": [
+            "The compass ring and the brass owl.",
+            "The back of the ring."
+          ],
+          "secret": {
+            "clue": "T1",
+            "text": "Bearings start at North, where the owl stands. North is 0."
+          },
+          "promptAudio": "assets/audio/voice/hint_r3_compass.mp3"
+        },
+        {
+          "id": "r3_scope",
+          "kind": "PANEL",
+          "name": "Telescope",
+          "yaw": 45,
+          "pitch": 0,
+          "after": [
+            "r3_eyepiece"
+          ],
+          "use": "eyepiece",
+          "prompt": "Use the Eyepiece on the telescope.",
+          "panel": "sight",
+          "promptAudio": "assets/audio/voice/hint_r3_scope.mp3"
+        },
+        {
+          "id": "r3_stair",
+          "kind": "USE",
+          "name": "Stair door",
+          "yaw": 150,
+          "pitch": -30,
+          "after": [
+            "r3_reward"
+          ],
+          "exit": true,
+          "use": "starlens",
+          "to": 3,
+          "prompt": "Use the Starlens on the Dormitory door.",
+          "toast": "The Starlens glows. A door to the Dormitory appears.",
+          "promptAudio": "assets/audio/voice/hint_r3_stair.mp3"
+        }
+      ]
+    },
+    {
+      "id": "r4",
+      "name": "Dormitory Wing",
+      "start": 110,
+      "accent": "#8A74C4",
+      "pano": "assets/rooms/room4.webp",
+      "objective": "Light every lamp on the Night-Watch board.",
+      "enter": [
+        "r4.enter.1"
+      ],
+      "hint": "r4.hint",
+      "idle": "r4.idle",
+      "wrong": [],
+      "right": [
+        "r4.right.1",
+        "r4.right.2",
+        "r4.right.3"
+      ],
+      "reward": {
+        "item": "diary",
+        "title": "A Diary Page slides from the pillow",
+        "clue": "C3"
+      },
+      "timeline": "The Dormitory shows Tansy's secret.",
+      "hotspots": [
+        {
+          "id": "r4_bed",
+          "kind": "INSPECT",
+          "name": "Tansy's bed",
+          "yaw": 115,
+          "pitch": -12,
+          "after": [],
+          "prompt": "Look at the headboard of the far bed.",
+          "views": [
+            "bed_1",
+            "bed_2"
+          ],
+          "say": "r4.inspect.bed",
+          "viewText": [
+            "Tansy's headboard.",
+            "Tiny scratches line the wood."
+          ],
+          "secret": {
+            "clue": "T2",
+            "text": "Eleven tick marks are scratched into the headboard."
+          },
+          "promptAudio": "assets/audio/voice/hint_r4_bed.mp3"
+        },
+        {
+          "id": "r4_fuse",
+          "kind": "FIND",
+          "name": "Fuse tin",
+          "yaw": 142,
+          "pitch": -10,
+          "after": [],
+          "prompt": "Look on the shelf for a fuse.",
+          "item": "fuse",
+          "say": "r4.find.fuse",
+          "promptAudio": "assets/audio/voice/hint_r4_fuse.mp3"
+        },
+        {
+          "id": "r4_plate",
+          "kind": "LEARN",
+          "name": "Brass plate",
+          "yaw": 103,
+          "pitch": 6,
+          "after": [],
+          "prompt": "Read the plate under the board.",
+          "clues": [
+            "V2"
+          ],
+          "say": "r4.learn.plate",
+          "text": "The Night-Watch plate says: first the Bell, then the Key.",
+          "promptAudio": "assets/audio/voice/hint_r4_plate.mp3"
+        },
+        {
+          "id": "r4_board",
+          "kind": "PANEL",
+          "name": "Night-Watch board",
+          "yaw": 103,
+          "pitch": 29,
+          "after": [
+            "r4_fuse"
+          ],
+          "use": "fuse",
+          "prompt": "Use the Fuse on the Night-Watch board.",
+          "panel": "switch",
+          "promptAudio": "assets/audio/voice/hint_r4_board.mp3"
+        },
+        {
+          "id": "r4_labdoor",
+          "kind": "USE",
+          "name": "Laboratory door",
+          "yaw": -171,
+          "pitch": 7,
+          "after": [
+            "r4_reward"
+          ],
+          "exit": true,
+          "use": "diary",
+          "to": 4,
+          "prompt": "Use the Diary Page on the Laboratory door.",
+          "toast": "The keyhole turns. The Laboratory door opens.",
+          "promptAudio": "assets/audio/voice/hint_r4_labdoor.mp3"
+        }
+      ]
+    },
+    {
+      "id": "r5",
+      "name": "Alchemy Lab",
+      "start": 20,
+      "accent": "#3E9B7A",
+      "pano": "assets/rooms/room5.webp",
+      "objective": "Measure exactly four drams.",
+      "enter": [
+        "r5.enter.1"
+      ],
+      "hint": "r5.hint",
+      "idle": "r5.idle",
+      "wrong": [
+        "r5.wrong.1",
+        "r5.wrong.2",
+        "r5.wrong.3"
+      ],
+      "right": [
+        "r5.right.1",
+        "r5.right.2",
+        "r5.right.3"
+      ],
+      "reward": {
+        "item": "vial",
+        "title": "The bottle fills: Vial of Stillness"
+      },
+      "timeline": "The Lab makes the Vial of Stillness.",
+      "hotspots": [
+        {
+          "id": "r5_recipe",
+          "kind": "LEARN",
+          "name": "Recipe card",
+          "yaw": 16,
+          "pitch": 47,
+          "after": [],
+          "prompt": "Read the recipe card on the wall.",
+          "clues": [
+            "R5a",
+            "V3"
+          ],
+          "say": "r5.learn.recipe",
+          "text": "Recipe: Stillness needs exactly four drams. Not three, not five. Footnote: the Eye never opens the sequence.",
+          "promptAudio": "assets/audio/voice/hint_r5_recipe.mp3"
+        },
+        {
+          "id": "r5_bottle",
+          "kind": "INSPECT",
+          "name": "Old bottle",
+          "yaw": 83,
+          "pitch": 12,
+          "after": [],
+          "prompt": "Look at the empty bottle.",
+          "views": [
+            "bottle_1",
+            "bottle_2"
+          ],
+          "say": "r5.inspect.bottle",
+          "viewText": [
+            "An empty bottle with a yellowed label.",
+            "The label has two letters."
+          ],
+          "secret": {
+            "clue": "C4",
+            "text": "The label says: W.H. Stillness - use once."
+          },
+          "promptAudio": "assets/audio/voice/hint_r5_bottle.mp3"
+        },
+        {
+          "id": "r5_handle",
+          "kind": "FIND",
+          "name": "Tap handle",
+          "yaw": 81,
+          "pitch": 37,
+          "after": [],
+          "prompt": "A silver handle sits on a shelf.",
+          "item": "handle",
+          "say": "r5.find.handle",
+          "promptAudio": "assets/audio/voice/hint_r5_handle.mp3"
+        },
+        {
+          "id": "r5_tap",
+          "kind": "PANEL",
+          "name": "Lab tap",
+          "yaw": -61,
+          "pitch": 8,
+          "after": [
+            "r5_handle"
+          ],
+          "use": "handle",
+          "prompt": "Use the handle on the tap.",
+          "panel": "pour",
+          "promptAudio": "assets/audio/voice/hint_r5_tap.mp3"
+        },
+        {
+          "id": "r5_stair",
+          "kind": "USE",
+          "name": "Floor seal",
+          "yaw": 9,
+          "pitch": -62,
+          "after": [
+            "r5_reward"
+          ],
+          "exit": true,
+          "use": "vial",
+          "to": 5,
+          "prompt": "Use the Vial on the seal in the floor.",
+          "toast": "The seal melts. A stair leads down to the Vault.",
+          "promptAudio": "assets/audio/voice/hint_r5_stair.mp3"
+        }
+      ]
+    },
+    {
+      "id": "r6",
+      "name": "Vault of Hours",
+      "start": 0,
+      "accent": "#D9622B",
+      "pano": "assets/rooms/room6.webp",
+      "objective": "Crack the vault door's sigil lock.",
+      "enter": [
+        "r6.enter.1"
+      ],
+      "hint": "r6.hint",
+      "idle": "r6.idle",
+      "wrong": [
+        "r6.wrong.1",
+        "r6.wrong.2",
+        "r6.wrong.3"
+      ],
+      "right": [
+        "r6.right.1",
+        "r6.right.2",
+        "r6.right.3"
+      ],
+      "reward": {
+        "item": "paradoxkey",
+        "title": "The Paradox Key rises from the door"
+      },
+      "timeline": "The Vault shows eleven signed entries.",
+      "hotspots": [
+        {
+          "id": "r6_drawers",
+          "kind": "INSPECT",
+          "name": "Drawers",
+          "yaw": -101,
+          "pitch": 22,
+          "after": [],
+          "prompt": "Look at the brass drawers.",
+          "views": [
+            "drawers_1",
+            "drawers_2"
+          ],
+          "say": "r6.inspect.drawers",
+          "viewText": [
+            "Rows of drawers, each with a date.",
+            "One drawer is open. It is empty."
+          ],
+          "secret": {
+            "clue": "T4",
+            "text": "The open drawer carries tonight's date. It is empty."
+          },
+          "promptAudio": "assets/audio/voice/hint_r6_drawers.mp3"
+        },
+        {
+          "id": "r6_lantern",
+          "kind": "FIND",
+          "name": "Lantern",
+          "yaw": -127,
+          "pitch": 22,
+          "after": [],
+          "prompt": "Take the lantern from its hook.",
+          "item": "lantern",
+          "say": "r6.find.lantern",
+          "promptAudio": "assets/audio/voice/hint_r6_lantern.mp3"
+        },
+        {
+          "id": "r6_ledger",
+          "kind": "LEARN",
+          "name": "Ledger",
+          "yaw": -99,
+          "pitch": -9,
+          "after": [
+            "r6_lantern"
+          ],
+          "prompt": "Read the open ledger.",
+          "clues": [
+            "C5"
+          ],
+          "say": "r6.learn.ledger",
+          "text": "The ledger lists eleven entries. Every one is signed W.H. and timed 9:07.",
+          "promptAudio": "assets/audio/voice/hint_r6_ledger.mp3"
+        },
+        {
+          "id": "r6_door",
+          "kind": "PANEL",
+          "name": "Vault door",
+          "yaw": 0,
+          "pitch": 12,
+          "after": [
+            "r6_lantern"
+          ],
+          "use": "lantern",
+          "prompt": "Use the lantern to light the vault ring.",
+          "panel": "sigil",
+          "promptAudio": "assets/audio/voice/hint_r6_door.mp3"
+        },
+        {
+          "id": "r6_stairdoor",
+          "kind": "USE",
+          "name": "Tower door",
+          "yaw": 148,
+          "pitch": 0,
+          "after": [
+            "r6_reward"
+          ],
+          "exit": true,
+          "use": "paradoxkey",
+          "to": 6,
+          "prompt": "Use the Paradox Key on the Clock Tower door.",
+          "toast": "The door opens. The Clock Tower waits above.",
+          "promptAudio": "assets/audio/voice/hint_r6_stairdoor.mp3"
+        }
+      ]
+    },
+    {
+      "id": "r7",
+      "name": "Clock Tower",
+      "start": 0,
+      "accent": "#E8E1C8",
+      "pano": "assets/rooms/room7.webp",
+      "final": true,
+      "objective": "Start the Engine and move the three rings.",
+      "enter": [
+        "r7.enter.1",
+        "r7.enter.2"
+      ],
+      "hint": "r7.hint",
+      "idle": "r7.idle",
+      "wrong": [],
+      "right": [
+        "r7.right.1",
+        "r7.right.2",
+        "r7.right.3",
+        "r7.right.4",
+        "r7.right.5"
+      ],
+      "timeline": "The Clock Tower holds the first second.",
+      "hotspots": [
+        {
+          "id": "r7_record",
+          "kind": "FIND",
+          "name": "Record",
+          "yaw": 153,
+          "pitch": -14,
+          "after": [],
+          "prompt": "A record lies on the windowsill.",
+          "item": "record",
+          "say": "r7.find.record",
+          "promptAudio": "assets/audio/voice/hint_r7_record.mp3"
+        },
+        {
+          "id": "r7_gramophone",
+          "kind": "USE",
+          "name": "Gramophone",
+          "yaw": -168,
+          "pitch": -12,
+          "after": [
+            "r7_record"
+          ],
+          "use": "record",
+          "prompt": "Play the record on the gramophone.",
+          "play": [
+            "r7.use.record.1",
+            "r7.use.record.2"
+          ],
+          "clue": "C6",
+          "promptAudio": "assets/audio/voice/hint_r7_gramophone.mp3"
+        },
+        {
+          "id": "r7_socket",
+          "kind": "USE",
+          "name": "Engine socket",
+          "yaw": 0,
+          "pitch": 20,
+          "after": [],
+          "use": "hourhand",
+          "prompt": "Put the Hour Hand in the Engine's socket.",
+          "fx": "engineWake",
+          "toast": "The Engine wakes. A gold ring pulses.",
+          "promptAudio": "assets/audio/voice/hint_r7_socket.mp3"
+        },
+        {
+          "id": "r7_plate",
+          "kind": "INSPECT",
+          "name": "Engine plate",
+          "yaw": -30,
+          "pitch": -32,
+          "after": [
+            "r7_socket"
+          ],
+          "use": "starlens",
+          "prompt": "Use the Starlens on the plate by the Engine.",
+          "views": [
+            "plate_1",
+            "plate_2"
+          ],
+          "say": "r7.inspect.plate",
+          "viewText": [
+            "A brass plate with faint lines.",
+            "Lit from the side, the lines become words."
+          ],
+          "secret": {
+            "clue": "C7",
+            "text": "The hidden rule: never rest a larger ring on a smaller one."
+          },
+          "promptAudio": "assets/audio/voice/hint_r7_plate.mp3"
+        },
+        {
+          "id": "r7_engine",
+          "kind": "PANEL",
+          "name": "Engine",
+          "yaw": 0,
+          "pitch": -14,
+          "after": [
+            "r7_plate"
+          ],
+          "prompt": "Move all three rings from Past to Future.",
+          "panel": "tower",
+          "promptAudio": "assets/audio/voice/hint_r7_engine.mp3"
+        },
+        {
+          "id": "r7_core",
+          "kind": "USE",
+          "name": "Engine core",
+          "yaw": 0,
+          "pitch": -40,
+          "after": [
+            "r7_engine"
+          ],
+          "needs": "narration",
+          "use": "vial",
+          "prompt": "Use the Vial of Stillness on the Engine's core.",
+          "choice": true,
+          "promptAudio": "assets/audio/voice/hint_r7_core.mp3"
+        }
+      ]
+    }
+  ]
+}

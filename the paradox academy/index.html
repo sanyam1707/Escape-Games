@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>The Paradox Academy</title>
+<meta name="description" content="A 360 escape game. Ten minutes, seven rooms, one Last Bell.">
+<meta property="og:title" content="The Paradox Academy">
+<meta property="og:description" content="A 360 escape game. Ten minutes, seven rooms, one Last Bell.">
+<meta property="og:image" content="assets/sheets/tap_to_start.jpg">
+<meta name="theme-color" content="#0E1B2C">
+<link rel="stylesheet" href="vendor/pannellum.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="pano"></div>
+  <div id="fx-layer">
+    <canvas id="fx-c"></canvas>
+    <div id="fx-vig"></div><div id="fx-tint"></div><div id="fx-dawn"></div><div id="fx-frost"></div>
+    <div id="fx-ring"></div><div id="fx-flash"></div><div id="fx-ink"></div>
+    <div id="fx-watch"></div>
+    <div id="fx-windows"><i></i><i></i><i></i></div>
+  </div>
+
+  <div id="hud" hidden>
+    <div id="hud-top">
+      <div class="stat" id="timer" aria-label="Time left"><span class="ico clock"></span><b id="t-val">10:00</b></div>
+      <div class="stat" id="score" aria-label="Moments"><span class="ico moment"></span><b id="s-val">0</b><span id="s-float"></span></div>
+      <button id="btn-pause" class="btn round" aria-label="Pause"><span class="ico pause"></span></button>
+    </div>
+    <div id="hud-info"><div id="objective"></div><div id="find-strip"></div></div>
+    <div id="held" hidden></div>
+    <div id="side">
+      <button id="btn-book" class="rbtn" aria-label="Logbook"><span class="ico book"></span><small>Logbook</small></button>
+      <button id="btn-hint" class="rbtn" aria-label="Ask Tock for a hint"><span class="ico bulb"></span><small>Ask Tock</small><b id="hint-n">3</b></button>
+    </div>
+  </div>
+
+  <div id="bubble" hidden></div>
+  <div id="modal" hidden></div>
+  <div id="dlg" hidden></div>
+  <div id="screen" hidden></div>
+  <div id="toast" hidden></div>
+  <div id="fade"></div>
+  <div id="debug" hidden></div>
+</div>
+<script src="vendor/pannellum.js"></script>
+<script src="puzzles.js"></script>
+<script src="fx.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
