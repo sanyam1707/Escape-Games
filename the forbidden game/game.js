@@ -441,6 +441,7 @@ function useHint(panelId) {
   if (S.hints <= 0) return say(["hints_out"]);
   const t = panelId ? S.room.hotspots.find(h => h.id === panelId) : S.room.hotspots.find(h => h.kind !== "AUTO" && !S.done.has(h.id) && GameLogic.visible(h, S.done));
   if (!t) return toast(G.ui.noHint || "Nothing to hint right now.");
+  if (S.pips + G.config.pips.hint < 0) return toast(G.ui.noPips); // hint costs Pips; Pips never go below 0
   S.hints--; $("#hints").textContent = S.hints; $("#panel-hints").textContent = S.hints; addPips(G.config.pips.hint);
   if (t.kind === "PANEL") say([nextBank(t.id)]);
   else { say([{ speaker: "zoya", text: fmt(G.ui.hintLook, { label: t.label }), pausesTimer: true, audioFile: t.hintAudio }]); const e = document.querySelector(`[data-hs="${t.id}"]`); e?.classList.add("pulse"); setTimeout(() => e?.classList.remove("pulse"), 4000); }

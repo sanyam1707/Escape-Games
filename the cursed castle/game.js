@@ -423,6 +423,7 @@ function nextStep() { return room().hotspots.find(hs => (hs.kind !== 'AUTO' || h
 async function useHint() {
   if (S.busy || S.modals || S.over || S.paused) return;
   const r = room(), used = S.hints[r.id] || 0; if (used >= 2) { toast(ui('noHints')); return; }
+  if (S.merit < D.scoring.hint) { toast(ui('notEnoughMerit')); return; }
   S.hints[r.id] = used + 1; S.hintsUsedTotal++; addMerit(-D.scoring.hint); updateHUD(); S.idleAt = Date.now();
   const hd = r.hints[used]; let target = null;
   if (hd.flash !== 'none') { target = r.hotspots.find(q => q.id === hd.flash && avail(q) && !done().has(q.id)) || nextStep(); }

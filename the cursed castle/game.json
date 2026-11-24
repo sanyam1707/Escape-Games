@@ -87,6 +87,7 @@
     "hint": "Hint",
     "hintLeft": "{n} left",
     "noHints": "none left",
+    "notEnoughMerit": "Not enough Merit for a hint.",
     "notebook": "Notebook",
     "resume": "Resume",
     "soundOn": "Sound: on",

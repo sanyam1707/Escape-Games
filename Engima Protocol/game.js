@@ -284,16 +284,22 @@ function finished(P) {
   if (P.final) return playDialogue(room().dialogue.right, () => playDialogue(G.ending, win));
   refreshHotspots(); progress();
 }
+// A hint needs a hint left AND enough Guineas to pay for it (addScore clamps at 0, so it cannot be checked after).
+function canBuyHint() {
+  if (S.hints <= 0) { toast(G.ui.noHints); return false; }
+  if (S.score < G.config.penalties.hint) {
+    toast(G.ui.notEnoughCurrency.replace('{currency}', G.ui.guineas).replace('{cost}', G.config.penalties.hint)); return false;
+  }
+  return true;
+}
 function panelHint() {
-  if (!S.panel) return;
-  if (S.hints <= 0) return toast(G.ui.noHints);
+  if (!S.panel || !canBuyHint()) return;
   const { P, api } = S.panel; S.hints--; $('#hintCount').textContent = S.hints; addScore(-G.config.penalties.hint);
   $('#panelHint').disabled = S.hints <= 0; $('#btnHint').disabled = S.hints <= 0;
   bankLine(P, api.cur, api.cur || P.id);
 }
 function useHint() {
-  if (S.phase !== 'play') return;
-  if (S.hints <= 0) return toast(G.ui.noHints);
+  if (S.phase !== 'play' || !canBuyHint()) return;
   S.hints--; $('#hintCount').textContent = S.hints; addScore(-G.config.penalties.hint);
   const h = room().hotspots.find(visible), el = h && S.hsEls[h.id];
   if (el) { el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 3000); }

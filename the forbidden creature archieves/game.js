@@ -194,7 +194,7 @@
       const nob = ln.speaker === 'narrator', box = h('div', { class: 'dbox' + (beat ? ' beat' : '') + (nob ? ' nobust' : ''), role: 'dialog' },
         nob ? null : h('div', { class: 'bust' }, bustEl(ln, chr)),
         h('div', { class: 'dtxt' }, h('div', { class: 'dhead' }, h('span', { class: 'dname' }, chr.name), h('button', { class: 'dskip', onclick: e => { e.stopPropagation(); c.skip = true; fin(); } }, T('dlg.skip'))), h('div', { class: 'dtext' }, ln.text), h('div', { class: 'dnext' }, T('dlg.next'))));
-      dlg.replaceChildren(box); let over = false; dCur = { fin };
+      dlg.replaceChildren(box); document.documentElement.style.setProperty('--dlg-h', box.offsetHeight + 'px'); let over = false; dCur = { fin };
       function fin() { if (over) return; over = true; cancelSpeech(); unlock('dlg'); bl.onclick = null; document.removeEventListener('keydown', key); res(); }
       const key = e => { if (e.key === 'Enter' || e.key === ' ') { if (!modalStack.length || ln.pausesTimer) { e.preventDefault(); fin(); } } };
       box.onclick = fin; bl.onclick = fin; document.addEventListener('keydown', key);

@@ -466,9 +466,11 @@ async function act(h, node) {
 function askHint() {
   if (D.cur || stack.length && !S.panel) return;
   if (hintsLeft() <= 0) { toast(T('noHints')); return; }
+  if (S.score < C.penaltyHint) { toast(T('notEnoughEmbers')); return; }
   card(`<h2>${T('hintTitle')}</h2><p>${T('hintText', { n: C.penaltyHint })}</p>`, { buttons: [{ label: T('useHint'), primary: true, fn: useHint }, { label: T('notNow') }] });
 }
 function useHint() {
+  if (S.score < C.penaltyHint) { toast(T('notEnoughEmbers')); return; }
   const r = room(), k = S.hintsUsed[r.id] || 0; S.hintsUsed[r.id] = k + 1;
   sfx('hint'); penalize(C.penaltyHint); refresh(); Dialogue.play(r.hints[k]);
 }

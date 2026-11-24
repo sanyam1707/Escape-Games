@@ -108,6 +108,7 @@
   "hint": "Hint",
   "hintsLeft": "Hints",
   "noHints": "No hints left in this room.",
+  "noChiHint": "Not enough Chi to use a hint.",
   "chi": "Chi",
   "findStrip": "Find in this room",
   "tabs": {

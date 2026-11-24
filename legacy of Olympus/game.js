@@ -289,7 +289,8 @@ $("#btn-hint").onclick = () => {
   if (!S.playing || S.paused || modalOpen()) return; if (D) endTalk();
   const step = currentHint(room, S.done); if (!step) return toast(UI.noHintNeeded);
   if (S.hintsUsed >= C.hintsPerRoom) return toast(UI.noHints);
-  const k = room.id + ":" + step.done.join(), n = S.stepHints[k] || 0; S.stepHints[k] = n + 1; sfx("hint"); S.hintsUsed++; add(-C.hintCost); refresh(); // clock keeps running
+  if (S.score < C.hintCost) return toast(UI.notEnoughKleos); // add() floors at 0, so check before paying
+  const k =room.id + ":" + step.done.join(), n = S.stepHints[k] || 0; S.stepHints[k] = n + 1; sfx("hint"); S.hintsUsed++; add(-C.hintCost); refresh(); // clock keeps running
   say([{ speaker: "brindle", text: step.lines[Math.min(n, 1)], pausesTimer: false, audioFile: step.audio && step.audio[Math.min(n, 1)] }]);
 };
 

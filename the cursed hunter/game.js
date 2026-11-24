@@ -357,6 +357,7 @@ async function solvePanel(h) {
 function askHint() {
   const r = room(); if (S.phase !== 'play') return;
   if (S.hints <= 0) return toast(T('hintNone'), 'bad');
+  if (S.crowns < D.config.hintCost) return toast(T('hintNoCrowns', { cost: D.config.hintCost }), 'bad');
   const solved = r.final ? S.done.r7_align : S.done[r.hotspots.find((x) => x.triggersRight).id];
   if (solved) return toast(T('hintDone'));
   const used = S.hintUsed[r.id] || 0; if (used >= 3) return toast(T('hintOut'));

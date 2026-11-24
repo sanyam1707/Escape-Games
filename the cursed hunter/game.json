@@ -72,6 +72,7 @@
     "hintYes": "Use hint",
     "hintNo": "Not now",
     "hintNone": "No hints left.",
+    "hintNoCrowns": "Not enough Crowns to use a hint. A hint costs {cost} Crowns.",
     "hintDone": "You do not need a hint here.",
     "hintOut": "No more hints for this puzzle.",
     "newThing": "Something new appeared in the room.",

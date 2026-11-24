@@ -680,6 +680,7 @@ async function flashback(id) {
 function useHint() {
   if (!S || S.mode !== "play") return;
   if (S.hintsLeft <= 0) { toast(G.ui.noHints, "bad"); return; }
+  if (S.wards < G.config.hintCost) { toast(G.ui.notEnoughWards, "bad"); return; }
   const r = RM(), ph = r.phases;
   for (let i = 1; i <= 3; i++) {
     const k = "hint" + i; if (S.hintUsed[r.id + k]) continue;

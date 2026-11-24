@@ -319,6 +319,7 @@
     if (!S.playing || S.pause.size) return;
     const used = S.hints[S.room] || 0;
     if (used >= CFG.config.hintsPerRoom) return toast(CFG.ui.noHints);
+    if (S.chi < CFG.config.score.hint) return toast(CFG.ui.noChiHint);
     sfx('hint'); S.hints[S.room] = used + 1; S.stats.hints++; addChi(-CFG.config.score.hint); updateHud();
     say({ s: 'maren', t: room().hints[used], pt: false, audioFile: (room().hintAudio || [])[used] });
   }

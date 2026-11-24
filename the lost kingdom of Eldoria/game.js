@@ -640,6 +640,7 @@ $('#hintBtn').onclick = () => {
   if (S.phase !== 'play' || S.menu) return;
   if (S.cleared[S.ri] && S.ri < 6) return say('hint.done');
   if (S.hints <= 0) return say('hint.none');
+  if (S.score < cfg().hintCost) return toast(U('hintNoRenown').replace('{0}', U('renown')));
   S.hints--; penalize(cfg().hintCost); hud(); sfx('chime');
   say(S.ri === 6 ? `r7.hint.s${Math.min(3, S.stage)}` : `r${R().n}.hint`);
 };

@@ -220,6 +220,7 @@
  "ui": {
   "tapToStart": "Tap to start",
   "noHints": "No hints left",
+  "notEnoughWards": "Not enough Wards",
   "saved": "Saved to your notes",
   "paused": "Paused",
   "timeUpLine": "The tide covered the cave, and the house forgot again.",

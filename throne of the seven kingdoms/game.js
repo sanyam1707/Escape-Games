@@ -313,6 +313,7 @@ function bankLines() { const r = room(); return bankKey() === "r2b" ? r.bank2 : 
 function nextBank() { const k = bankKey(), b = bankLines(), i = S.bankIdx[k] || 0; S.bankIdx[k] = i + 1; return b[Math.min(i, b.length - 1)]; }
 $("hintBtn").onclick = () => {
   if (S.phase !== "play" || S.hints <= 0 || room().n === 7 || S.dead) return;
+  if (S.score < C.hintCost) { toast(U.noRenown); return; }
   S.hints--; addScore(-C.hintCost); paintHud(); say([nextBank()]);
 };
 function wrong(btns, boxEl) {

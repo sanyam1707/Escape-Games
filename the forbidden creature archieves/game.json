@@ -238,7 +238,7 @@
     "hint.next": "Still missing: {label}. {where}",
     "hint.ready": "You have everything for this puzzle. Tap the glowing puzzle ({label}) and use your Notebook.",
     "overlay.how": "Slide sheet B with ◀ ▶ and sheet C with ▲ ▼. They wrap around the edges. Make the dots draw a picture, then find its seal in the ledger (Notebook).",
-    "hint.noPoints": "Not enough Wonder for a hint. A hint costs {cost}.",
+    "hint.noPoints": "Not enough Wonder to use hints.",
     "proof.chances": "Chances left",
     "toast.accuseLeft": "Wrong accusation. {n} left.",
     "pause.sfxOn": "Sound effects: on",

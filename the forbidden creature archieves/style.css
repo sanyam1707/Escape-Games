@@ -67,7 +67,7 @@ small { opacity: .85; }
 .hint { position: absolute; right: 12px; bottom: calc(env(safe-area-inset-bottom) + 14px); z-index: 65; min-height: 48px; padding: 0 12px 0 16px; }
 .hint svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .hint .badge { min-width: 24px; height: 24px; border-radius: 12px; background: var(--ink); color: var(--gold); font-size: 14px; display: grid; place-items: center; }
-body.dlg-open #hintBtn { opacity: 0; pointer-events: none; }
+body.dlg-open #hintBtn { bottom: calc(env(safe-area-inset-bottom) + var(--dlg-h, 0px) + 24px); }
 #toasts { position: absolute; left: 12px; right: 84px; bottom: calc(env(safe-area-inset-bottom) + 16px); display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 75; pointer-events: none; }
 body.dlg-open #toasts { left: 12px; right: 12px; bottom: auto; top: calc(var(--hud-h) + 8px); }
 .toast { background: #120d08f2; color: var(--text); border: 1.5px solid var(--gold); border-radius: 14px; padding: 10px 16px; font-size: 15px; line-height: 1.35; max-width: min(92vw, 460px); text-align: center; box-shadow: 0 6px 20px #000a; animation: toast 2.8s ease forwards; }

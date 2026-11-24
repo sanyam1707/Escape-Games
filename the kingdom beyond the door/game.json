@@ -3046,6 +3046,7 @@
     "combineTip": "You found two things that go together. Open your Bag and tap Combine.",
     "itemUsed": "{item} used on {target}.",
     "noHints": "No hints left in this room.",
+    "notEnoughEmbers": "Not enough Embers to use a hint.",
     "hintTitle": "Use a hint?",
     "hintText": "A hint costs {n} Embers.",
     "useHint": "Use hint",

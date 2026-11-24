@@ -656,6 +656,7 @@
     if (modals.length) return;
     var used = S.hints[room().id] || 0;
     if (used >= cfg.hintsPerRoom) { say([ui.hintNone], { timed: true }); return; }
+    if (S.score < cfg.hintPenalty) { toast(ui.hintNoEvidence); return; }
     var t = nextTarget(); S.hints[room().id] = used + 1; addScore(-cfg.hintPenalty);
     if (used === 0) { say([ui.hint1], { timed: true }); }
     else {

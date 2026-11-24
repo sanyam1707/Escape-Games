@@ -2115,6 +2115,7 @@
   "book": "Book",
   "hint": "Hint",
   "renown": "Renown",
+  "hintNoRenown": "Not enough {0} to use a hint.",
   "clock": "Clock",
   "skip": "Skip",
   "next": "Next",

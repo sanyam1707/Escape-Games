@@ -101,6 +101,7 @@
   "hints": "Hints",
   "hintBtn": "Hint",
   "noHints": "No hints left",
+  "noRenown": "Not enough Renown to use a hint",
   "hintsOff": "No hints here",
   "savedNotes": "Saved to your notes",
   "addedBook": "Added to your Proof Book",

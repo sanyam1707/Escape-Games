@@ -77,6 +77,7 @@
     "timeUp": "Time Up",
     "timeUpText": "The clock tower strikes and the inspectors seal the doors.",
     "noHints": "No hints left.",
+    "notEnoughCurrency": "Not enough {currency} for a hint. A hint costs {cost}.",
     "tabs": [
       "Pages",
       "Evidence",
