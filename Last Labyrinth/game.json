@@ -1,0 +1,2474 @@
+{
+ "config": {
+  "title": "The Last Labyrinth",
+  "timerSeconds": 600,
+  "hintsTotal": 3,
+  "lockoutMs": 3000,
+  "idleMs": 25000,
+  "points": {
+   "find": 5,
+   "secret": 5,
+   "room": 30,
+   "final1": 50,
+   "choice": 50,
+   "wrong": 10,
+   "hint": 25
+  },
+  "blurPx": 6,
+  "sharpenMs": 1200,
+  "particles": {
+   "desktop": 60,
+   "phone": 30
+  },
+  "finalWallsMs": 90000,
+  "pano": {
+   "hfov": 100,
+   "hfovPortrait": 75,
+   "minHfov": 50,
+   "maxHfov": 120
+  }
+ },
+ "speakers": {
+  "ren": {
+   "name": "Ren",
+   "gender": "m",
+   "pitch": 0.95,
+   "rate": 1
+  },
+  "tali": {
+   "name": "Tali",
+   "gender": "f",
+   "pitch": 1.15,
+   "rate": 1.08
+  },
+  "keeper": {
+   "name": "The Keeper",
+   "gender": "m",
+   "pitch": 0.6,
+   "rate": 0.8
+  },
+  "dessa": {
+   "name": "Dessa",
+   "gender": "f",
+   "pitch": 1,
+   "rate": 0.92
+  },
+  "narrator": {
+   "name": "Narrator",
+   "gender": "m",
+   "pitch": 1,
+   "rate": 0.95,
+   "hidden": true
+  },
+  "cog": {
+   "name": "Cog",
+   "mute": true
+  }
+ },
+ "ui": {
+  "tapToStart": "Tap to Start",
+  "begin": "Begin",
+  "next": "Next",
+  "skip": "Skip",
+  "done": "Done",
+  "close": "Close",
+  "resume": "Resume",
+  "turn": "Turn it over",
+  "tapContinue": "Tap to continue",
+  "pause": "Pause",
+  "paused": "Paused",
+  "restart": "Start over",
+  "journal": "Journal",
+  "hint": "Hint",
+  "tallies": "Tallies",
+  "findStrip": "Find in this room",
+  "holding": "Holding",
+  "putBack": "Put back",
+  "tabs": {
+   "items": "Items",
+   "notes": "Notes",
+   "map": "Map",
+   "hints": "Hints"
+  },
+  "emptyItems": "Nothing yet. Tap glowing things to pick them up.",
+  "emptyNotes": "Not found yet",
+  "mapTitle": "The Runner's Map",
+  "mapSub": "Each room you finish lights one Route Mark.",
+  "hintsLeft": "Hints left: {n}",
+  "hintLogEmpty": "You have not used a hint.",
+  "hintCostNote": "Each hint costs {hint} Tallies.",
+  "noHints": "No hints left.",
+  "hintTooEarly": "Look around first. Tap the glowing things and the puzzle will open.",
+  "useNothing": "Open your Journal and pick an item first.",
+  "useWrong": "That does not fit here.",
+  "useNeed": "You also need: {list}.",
+  "savedNote": "Saved to your notes",
+  "teaches": "This teaches:",
+  "foundTitle": "You found",
+  "addedJournal": "Added to your Journal.",
+  "routeMark": "Route Mark {n}",
+  "routeMarkText": "Added to the Runner's Map.",
+  "newTool": "New tool",
+  "newToolText": "Added to your Journal.",
+  "newNote": "New note",
+  "objective": "Goal",
+  "secretFound": "Secret found",
+  "exitOpen": "A way forward is open.",
+  "wrongToast": "Wrong! -{n} Tallies",
+  "lockedToast": "Wait a moment...",
+  "timeUpTitle": "The Turning has begun.",
+  "timeUpText": "The walls moved before you reached the Door.",
+  "tryAgain": "Try Again",
+  "playAgain": "Play Again",
+  "finalTallies": "Final Tallies",
+  "toBeContinued": "To be continued...",
+  "maxLabel": "Out of {n}",
+  "sconceDark": "It is too dark to see.",
+  "loading": "Loading...",
+  "fallbackRoom": "Picture missing. Showing a plain room.",
+  "mapNo": "Route Mark",
+  "inspectKicker": "Look closely",
+  "voiceOn": "Voice: On",
+  "voiceOff": "Voice: Off",
+  "musicOn": "Music: On",
+  "musicOff": "Music: Off",
+  "hintNeedPoints": "You need {hint} Tallies for a hint.",
+  "hintDir": {
+   "front": "in front of you",
+   "left": "to your left",
+   "right": "to your right",
+   "back": "behind you"
+  },
+  "hintLearn": "A glowing note is {dir}. Tap it to read it.",
+  "hintFind": "Something to pick up is {dir}.",
+  "hintInspect": "Look closely at something {dir}.",
+  "hintPanel": "The puzzle is {dir}. Tap it.",
+  "hintExit": "The way forward is {dir}.",
+  "hintUseItem": "Open your Journal and pick the {item}. Then tap the {label} {dir}.",
+  "hintNeedItem": "You still need the {item}. Look around the room for it.",
+  "hintNothing": "Look around the room again. Turn all the way around.",
+  "notAllowed": "Not allowed",
+  "sfxOn": "Effects: On",
+  "sfxOff": "Effects: Off",
+  "drawerPenalty": "Wrong drawer! -{n} Tallies and -{s} seconds"
+ },
+ "mission": {
+  "kicker": "THE HOLLOW COURT",
+  "heading": "THE LAST LABYRINTH",
+  "paragraphs": [
+   "Stone walls rise around the Hollow Court. Every dusk they turn, and the maze becomes a new maze that nobody has ever mapped twice.",
+   "You are Ren. You woke yesterday with no memory. Dessa, the best Runner of all, found the Last Door two dusks ago and then vanished.",
+   "With Tali, follow Dessa's Journal through seven rooms and reach the Door. You have ten minutes before the Turning."
+  ],
+  "audioFile": "assets/audio/voice/mission_0.mp3"
+ },
+ "tutorial": [
+  {
+   "title": "Look around",
+   "text": "Drag to turn. Pinch or scroll to zoom.",
+   "target": null
+  },
+  {
+   "title": "Tap what glows",
+   "text": "Pick up items, read notes, and look closely at things. Gold glows teach you something.",
+   "target": null
+  },
+  {
+   "title": "Your Journal",
+   "text": "Your Journal keeps your items, your notes, the Runner's Map and your hints. Pick an item there to use it.",
+   "target": [
+    "#btnJournal"
+   ]
+  },
+  {
+   "title": "Puzzles",
+   "text": "Every puzzle has Close and Pause buttons. A wrong answer locks the puzzle for {lockout} seconds.",
+   "target": null
+  },
+  {
+   "title": "Tallies, hints and the clock",
+   "text": "Finds and rooms earn Tallies. A wrong answer costs {wrong}. You have {hints} hints, {hint} Tallies each. The clock starts at 10:00 when you begin.",
+   "target": [
+    "#clockWrap",
+    "#tallies",
+    "#btnHint"
+   ]
+  }
+ ],
+ "opening": [
+  {
+   "who": "narrator",
+   "text": "The lift groaned and stopped. Dust fell like slow rain.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/open_0.mp3"
+  },
+  {
+   "who": "narrator",
+   "text": "Above, the sky was turning orange.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/open_1.mp3"
+  },
+  {
+   "who": "tali",
+   "mood": "worried",
+   "text": "Ren, get up. The Turning is ten minutes away.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/open_2.mp3"
+  },
+  {
+   "who": "ren",
+   "mood": "surprised",
+   "text": "The Turning? Where are we?",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/open_3.mp3"
+  },
+  {
+   "who": "tali",
+   "mood": "neutral",
+   "text": "The Hollow Court. Dessa's Journal says the Door is seven rooms out.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/open_4.mp3"
+  },
+  {
+   "who": "ren",
+   "mood": "neutral",
+   "text": "Then we start with the lift.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/open_5.mp3"
+  },
+  {
+   "who": "tali",
+   "mood": "happy",
+   "text": "Good. You are a Runner already.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/open_6.mp3"
+  },
+  {
+   "who": "narrator",
+   "text": "Ren stepped out. The walls began to creak.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/open_7.mp3"
+  }
+ ],
+ "idle": {
+  "who": "tali",
+  "text": "Try turning around. Drag to look around.",
+  "pausesTimer": false,
+  "audioFile": "assets/audio/voice/idle_0.mp3"
+ },
+ "secretReact": [
+  {
+   "who": "tali",
+   "text": "Dessa wrote that.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/secret_0.mp3"
+  },
+  {
+   "who": "ren",
+   "text": "Keep it in the Journal.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/secret_1.mp3"
+  }
+ ],
+ "items": {
+  "chalk_stub": {
+   "name": "Chalk Stub",
+   "desc": "A stub of white chalk. It draws lines on a map.",
+   "line": {
+    "who": "tali",
+    "text": "Chalk! Good for drawing on maps.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_chalk_stub.mp3"
+   }
+  },
+  "lever_handle": {
+   "name": "Lever Handle",
+   "desc": "An iron handle. It fits a lever socket.",
+   "line": {
+    "who": "ren",
+    "text": "A lever handle. It should fit the post.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_lever_handle.mp3"
+   }
+  },
+  "ruler": {
+   "name": "Ruler",
+   "desc": "A wooden ruler with brass ends. It draws straight lines.",
+   "line": {
+    "who": "tali",
+    "text": "A ruler. Now my lines will be straight.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_ruler.mp3"
+   }
+  },
+  "brass_pin": {
+   "name": "Brass Pin",
+   "desc": "A small brass pin. It marks one spot on a map.",
+   "line": {
+    "who": "ren",
+    "text": "A brass pin. I can mark a spot with it.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_brass_pin.mp3"
+   }
+  },
+  "brass_ball": {
+   "name": "Brass Ball",
+   "desc": "A shiny brass ball. It rolls very well.",
+   "line": {
+    "who": "tali",
+    "text": "A brass ball. Where does it go?",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_brass_ball.mp3"
+   }
+  },
+  "socket_ring": {
+   "name": "Socket Ring",
+   "desc": "An iron ring. It fits a round socket.",
+   "line": {
+    "who": "ren",
+    "text": "An iron ring. It looks like a socket part.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_socket_ring.mp3"
+   }
+  },
+  "rusty_wrench": {
+   "name": "Rusty Wrench",
+   "desc": "A rusty wrench. It can turn stuck bolts.",
+   "line": {
+    "who": "tali",
+    "text": "A wrench. A bit rusty, but it will work.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_rusty_wrench.mp3"
+   }
+  },
+  "valve_spindle": {
+   "name": "Valve Spindle",
+   "desc": "A brass spindle. It is part of a valve.",
+   "line": {
+    "who": "ren",
+    "text": "A valve spindle. One part of the valve.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_valve_spindle.mp3"
+   }
+  },
+  "glow_lamp": {
+   "name": "Glow Lamp",
+   "desc": "A lantern with a green-blue flame. It lights dark rooms.",
+   "line": {
+    "who": "tali",
+    "text": "A glow lamp! It is still warm.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_glow_lamp.mp3"
+   }
+  },
+  "rope_spool": {
+   "name": "Rope Spool",
+   "desc": "A thick spool of strong rope.",
+   "line": {
+    "who": "ren",
+    "text": "A spool of rope. Strong and thick.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_rope_spool.mp3"
+   }
+  },
+  "name_cards": {
+   "name": "Name Cards",
+   "desc": "Six wooden cards, each with a name.",
+   "line": {
+    "who": "tali",
+    "text": "Name cards. Six names.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_name_cards.mp3"
+   }
+  },
+  "seal_ring": {
+   "name": "Seal Ring",
+   "desc": "A heavy ring with a black stone. It opens a vault.",
+   "line": {
+    "who": "ren",
+    "text": "The seal ring. Cog is clever.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_seal_ring.mp3"
+   }
+  },
+  "lever_grip": {
+   "name": "Lever Grip",
+   "desc": "An iron grip for the great lever.",
+   "line": {
+    "who": "tali",
+    "text": "A lever grip. This is for the big lever.",
+    "pausesTimer": false,
+    "audioFile": "assets/audio/voice/item_lever_grip.mp3"
+   }
+  },
+  "runners_compass": {
+   "name": "Runner's Compass",
+   "desc": "Shows which way is north. Runners never go without it."
+  },
+  "wall_model": {
+   "name": "Wall Model",
+   "desc": "A small brass maze with a round cradle. A ball rolls inside."
+  },
+  "valve_wheel": {
+   "name": "Valve Wheel",
+   "desc": "A big iron wheel. It opens a valve."
+  },
+  "rope_hook": {
+   "name": "Rope Hook",
+   "desc": "An iron hook for a rope. Good for a ravine."
+  },
+  "archive_key": {
+   "name": "Archive Key",
+   "desc": "A big old key. It opens the Archive."
+  },
+  "rule_card": {
+   "name": "Rule Card",
+   "desc": "A worn card with a pattern of dots. The Door wants this pattern."
+  }
+ },
+ "notes": {
+  "N1": {
+   "title": "Crate Manifest",
+   "teaches": "Fill the whole lift floor.",
+   "text": "CRATE MANIFEST\n\nPlatform: 5 wide, 4 tall.\nCrates:\n- 1 square crate, 2 by 2. It is bolted in the top-left corner.\n- 1 long crate, 4 in a row.\n- 1 S crate.\n- 1 L crate.\n- 1 J crate.\n\nThe lift locks only when every square of the floor is covered.\nTap a crate to turn it. Drag it onto the floor."
+  },
+  "N2": {
+   "title": "Bearing Note A",
+   "teaches": "A bearing is a direction in degrees.",
+   "text": "BEARING NOTE A\n\nThe cache is hidden on a line that starts at the SPIRE.\nFrom the Spire, look at bearing 135 degrees."
+  },
+  "N3": {
+   "title": "Bearing Note B",
+   "teaches": "A second line gives a second bearing.",
+   "text": "BEARING NOTE B\n\nThe cache is also on a line that starts at the OLD TREE.\nFrom the Old Tree, look at bearing 270 degrees."
+  },
+  "N4": {
+   "title": "Bearing Guide",
+   "teaches": "How to read a bearing.",
+   "text": "BEARING GUIDE\n\nBearings turn clockwise from north.\nNorth is 0. East is 90. South is 180. West is 270.\nIn between: 45 is north-east, 135 is south-east, 225 is south-west, 315 is north-west.\n\nThe map has columns A to I (left to right) and rows 1 to 9 (bottom to top). North is up.\nThe cache is where the two lines cross."
+  },
+  "N5": {
+   "title": "Model Plate",
+   "teaches": "How the ball moves.",
+   "text": "MODEL PLATE\n\nTilt the model. The ball rolls until a wall or the edge stops it.\nA pit swallows the ball. It goes back to the start.\nThe ball must fall into the exit hole.\nThe gate copies the ball."
+  },
+  "N6": {
+   "title": "Valve Plate",
+   "teaches": "How the pipes work.",
+   "text": "VALVE PLATE\n\nWater comes in at the top left. It leaves at the bottom right, through the sluice.\nTap a pipe to turn it.\nEvery pipe must join the next pipe. No open end is allowed.\nThen open the valve."
+  },
+  "N7": {
+   "title": "Ferryman's Board",
+   "teaches": "The crossing rules.",
+   "text": "FERRYMAN'S BOARD\n\nThe platform carries Ren and ONE thing. Only Ren can pull it.\nIf Ren is not on a bank, that bank must NOT hold:\n- Cog with the lamp\n- Cog with the spool\nThe lamp and the spool are safe together.\nGet all three across."
+  },
+  "N8": {
+   "title": "Seat Plates",
+   "teaches": "Who sits where.",
+   "text": "SEAT PLATES\n\nSeats 1 to 6 go clockwise. Seat 1 is under the skylight.\nOpposite seats: 1 and 4, 2 and 5, 3 and 6.\n\n1. Tamsin sits under the skylight (seat 1).\n2. Sable sits directly across the table from Iven.\n3. Orrel sits two seats clockwise of Iven.\n4. Quill sits two seats clockwise of Tamsin.\n5. Marro sits next to Tamsin.\n\nVAULT LINE: The vault is the drawer numbered like Orrel's seat."
+  },
+  "N9": {
+   "title": "Warden Rule",
+   "teaches": "What the Door really asks.",
+   "text": "WARDEN RULE\n\nBoth ways open the Door.\nThe Door only asks who you stand for."
+  },
+  "N10": {
+   "title": "Rule Card",
+   "teaches": "The pattern the Door wants.",
+   "text": "RULE CARD\n\nSet the nine lamps like this:\n\n  ●  ●  ●\n  ●  ○  ●\n  ●  ●  ●\n\n● = lit      ○ = dark\n\nEach switch flips its own lamp and the lamps above, below, left and right of it.\nSwitches are numbered 1 to 9, left to right, top to bottom."
+  }
+ },
+ "rooms": [
+  {
+   "id": "lift_yard",
+   "name": "The Lift Yard",
+   "file": "room1.webp",
+   "accent": "#D9A441",
+   "startYaw": 20,
+   "objective": "Fill the lift platform so it locks.",
+   "enter": [
+    {
+     "who": "ren",
+     "text": "A lift with a locked floor. Why?",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r1_enter_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "It locks only when it is full. Dessa packed it every dawn.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r1_enter_1.mp3"
+    }
+   ],
+   "wrong": [
+    {
+     "who": "tali",
+     "text": "Not quite. Every crate must touch another or a wall.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r1_wrong_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Check the manifest. The square crate is bolted and stays put.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r1_wrong_1.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "The long crate wants the bottom row. Fill around it.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r1_wrong_2.mp3"
+    }
+   ],
+   "hints": [
+    {
+     "who": "tali",
+     "text": "Start with the long crate. Put it along an edge.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r1_hint_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Long crate flat on the bottom. The S crate fills the right corner.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r1_hint_1.mp3"
+    }
+   ],
+   "right": [
+    {
+     "who": "narrator",
+     "text": "The platform locked with a heavy clunk.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r1_right_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Dessa did that every morning.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r1_right_1.mp3"
+    },
+    {
+     "who": "ren",
+     "text": "There is a compass under the lever.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r1_right_2.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Take it. You will need north.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r1_right_3.mp3"
+    }
+   ],
+   "reward": {
+    "items": [
+     "runners_compass"
+    ],
+    "notes": [],
+    "toast": "The lift gate is open."
+   },
+   "finish": "h1_panel",
+   "hotspots": [
+    {
+     "id": "h1_manifest",
+     "kind": "LEARN",
+     "label": "Crate Manifest",
+     "yaw": 118,
+     "pitch": 6,
+     "after": [],
+     "note": "N1"
+    },
+    {
+     "id": "h1_chalk",
+     "kind": "FIND",
+     "label": "Chalk Stub",
+     "yaw": 152,
+     "pitch": -52,
+     "after": [
+      "h1_manifest"
+     ],
+     "item": "chalk_stub"
+    },
+    {
+     "id": "h1_handle",
+     "kind": "FIND",
+     "label": "Lever Handle",
+     "yaw": -124,
+     "pitch": -9,
+     "after": [
+      "h1_manifest"
+     ],
+     "item": "lever_handle"
+    },
+    {
+     "id": "h1_wall",
+     "kind": "INSPECT",
+     "label": "Scratched wall",
+     "yaw": 110,
+     "pitch": 26,
+     "after": [
+      "h1_manifest"
+     ],
+     "views": [
+      {
+       "img": "r1_wall_a",
+       "text": "Tally marks, hundreds of them. Runners scratched one for every day they survived."
+      },
+      {
+       "img": "r1_wall_b",
+       "text": "A hidden scratch in the corner:"
+      }
+     ],
+     "secret": "Nobody leaves alone."
+    },
+    {
+     "id": "h1_socket",
+     "kind": "USE",
+     "label": "Lever post",
+     "yaw": 121,
+     "pitch": -12,
+     "after": [
+      "h1_handle"
+     ],
+     "needs": [
+      "lever_handle"
+     ],
+     "opens": "crate",
+     "msg": "The handle clicks into the socket."
+    },
+    {
+     "id": "h1_panel",
+     "kind": "PANEL",
+     "label": "Crate Fit",
+     "yaw": 121,
+     "pitch": -12,
+     "after": [
+      "h1_socket"
+     ],
+     "panel": "crate"
+    },
+    {
+     "id": "h1_exit",
+     "kind": "EXIT",
+     "label": "Lift gate",
+     "yaw": 0,
+     "pitch": -22,
+     "after": [
+      "@reward"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mapmakers_hut",
+   "name": "The Mapmakers' Hut",
+   "file": "room2.webp",
+   "accent": "#3FA7A0",
+   "startYaw": 20,
+   "objective": "Find where the cache is hidden.",
+   "enter": [
+    {
+     "who": "ren",
+     "text": "Maps everywhere. And two landmarks in the window.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r2_enter_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "The Spire and the Old Tree. Runners measured from both.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r2_enter_1.mp3"
+    }
+   ],
+   "wrong": [
+    {
+     "who": "tali",
+     "text": "No. One line is not enough. We need where two lines cross.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r2_wrong_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Read both notes. Each gives a bearing from one landmark.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r2_wrong_1.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Bearings run clockwise from north. East is 90, south is 180.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r2_wrong_2.mp3"
+    }
+   ],
+   "hints": [
+    {
+     "who": "tali",
+     "text": "Draw a line from the Spire and one from the Old Tree.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r2_hint_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "The Spire line runs down and right. The Tree line runs straight left. Where do they meet?",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r2_hint_1.mp3"
+    }
+   ],
+   "right": [
+    {
+     "who": "narrator",
+     "text": "The pin sank into the map and a hatch clicked below.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r2_right_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "A cache. Dessa's work.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r2_right_1.mp3"
+    },
+    {
+     "who": "ren",
+     "text": "A little brass maze with a ball slot.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r2_right_2.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "A model of the gate walls. Keep it.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r2_right_3.mp3"
+    }
+   ],
+   "reward": {
+    "items": [
+     "wall_model"
+    ],
+    "notes": [],
+    "toast": "The hut door is open."
+   },
+   "finish": "h2_panel",
+   "hotspots": [
+    {
+     "id": "h2_noteA",
+     "kind": "LEARN",
+     "label": "Bearing Note A",
+     "yaw": 42,
+     "pitch": 34,
+     "after": [],
+     "note": "N2"
+    },
+    {
+     "id": "h2_noteB",
+     "kind": "LEARN",
+     "label": "Bearing Note B",
+     "yaw": 74,
+     "pitch": -18,
+     "after": [],
+     "note": "N3"
+    },
+    {
+     "id": "h2_guide",
+     "kind": "LEARN",
+     "label": "Bearing Guide",
+     "yaw": -100,
+     "pitch": 36,
+     "after": [],
+     "note": "N4"
+    },
+    {
+     "id": "h2_ruler",
+     "kind": "FIND",
+     "label": "Ruler",
+     "yaw": 95,
+     "pitch": 3,
+     "after": [
+      "h2_guide"
+     ],
+     "item": "ruler"
+    },
+    {
+     "id": "h2_pin",
+     "kind": "FIND",
+     "label": "Brass Pin",
+     "yaw": 92,
+     "pitch": 22,
+     "after": [
+      "h2_guide"
+     ],
+     "item": "brass_pin"
+    },
+    {
+     "id": "h2_ledger",
+     "kind": "INSPECT",
+     "label": "Mapmakers' ledger",
+     "yaw": -67,
+     "pitch": -8,
+     "after": [
+      "h2_guide"
+     ],
+     "views": [
+      {
+       "img": "r2_ledger_a",
+       "text": "A thick ledger. Page after page of measurements and little drawings of the maze."
+      },
+      {
+       "img": "r2_ledger_b",
+       "text": "The last line of the last page:"
+      }
+     ],
+     "secret": "The Door was built to be held."
+    },
+    {
+     "id": "h2_compass",
+     "kind": "USE",
+     "label": "Table map",
+     "yaw": 0,
+     "pitch": -15,
+     "after": [
+      "h2_noteA",
+      "h2_noteB"
+     ],
+     "needs": [
+      "runners_compass"
+     ],
+     "msg": "The compass rose appears on the map. North is up."
+    },
+    {
+     "id": "h2_draw",
+     "kind": "USE",
+     "label": "Table map",
+     "yaw": 0,
+     "pitch": -15,
+     "after": [
+      "h2_compass",
+      "h2_ruler"
+     ],
+     "needs": [
+      "ruler",
+      "chalk_stub"
+     ],
+     "opens": "triangulation",
+     "msg": "You are ready to draw lines on the map."
+    },
+    {
+     "id": "h2_panel",
+     "kind": "PANEL",
+     "label": "Triangulation",
+     "yaw": 0,
+     "pitch": -15,
+     "after": [
+      "h2_draw"
+     ],
+     "panel": "triangulation"
+    },
+    {
+     "id": "h2_exit",
+     "kind": "EXIT",
+     "label": "Hut door",
+     "yaw": -168,
+     "pitch": 10,
+     "after": [
+      "@reward"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "moving_wall_gate",
+   "name": "The Moving Wall Gate",
+   "file": "room3.webp",
+   "accent": "#B5532E",
+   "startYaw": 0,
+   "objective": "Roll the ball into the exit hole.",
+   "enter": [
+    {
+     "who": "ren",
+     "text": "A gate as big as a hill, and a socket the size of my hand.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r3_enter_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "The model plugs in. The gate copies whatever the ball does.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r3_enter_1.mp3"
+    }
+   ],
+   "wrong": [
+    {
+     "who": "tali",
+     "text": "The ball only stops at walls. Think where it will stop.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r3_wrong_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Read the Model Plate. Pits swallow the ball.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r3_wrong_1.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Go up the left edge first. Then use the wall at the top right.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r3_wrong_2.mp3"
+    }
+   ],
+   "hints": [
+    {
+     "who": "tali",
+     "text": "Plan one tilt at a time. Ask where the ball ends up.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r3_hint_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Up to the top, then right until the wall stops it.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r3_hint_1.mp3"
+    }
+   ],
+   "right": [
+    {
+     "who": "narrator",
+     "text": "The slabs ground apart. Dust fell from the rails.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r3_right_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Dessa said it moves for those who plan.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r3_right_1.mp3"
+    },
+    {
+     "who": "ren",
+     "text": "There is a wheel on the frame.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r3_right_2.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "A valve wheel. The cistern is next.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r3_right_3.mp3"
+    }
+   ],
+   "reward": {
+    "items": [
+     "valve_wheel"
+    ],
+    "notes": [],
+    "toast": "The gate is open."
+   },
+   "finish": "h3_panel",
+   "hotspots": [
+    {
+     "id": "h3_plate",
+     "kind": "LEARN",
+     "label": "Model Plate",
+     "yaw": 0,
+     "pitch": -6,
+     "after": [],
+     "note": "N5"
+    },
+    {
+     "id": "h3_ball",
+     "kind": "FIND",
+     "label": "Brass Ball",
+     "yaw": 88,
+     "pitch": -16,
+     "after": [
+      "h3_plate"
+     ],
+     "item": "brass_ball"
+    },
+    {
+     "id": "h3_ring",
+     "kind": "FIND",
+     "label": "Socket Ring",
+     "yaw": -36,
+     "pitch": -25,
+     "after": [
+      "h3_plate"
+     ],
+     "item": "socket_ring"
+    },
+    {
+     "id": "h3_slab",
+     "kind": "INSPECT",
+     "label": "Chalked slab",
+     "yaw": -68,
+     "pitch": 25,
+     "after": [
+      "h3_plate"
+     ],
+     "views": [
+      {
+       "img": "r3_slab_a",
+       "text": "A slab with a chalk mark. The chalk is fresh. Something is hidden behind it."
+      },
+      {
+       "img": "r3_slab_b",
+       "text": "Behind the slab, tiny scratches:"
+      }
+     ],
+     "secret": "Pits ahead. Roll around them. D."
+    },
+    {
+     "id": "h3_ring_use",
+     "kind": "USE",
+     "label": "Brass panel",
+     "yaw": 0,
+     "pitch": -8,
+     "after": [
+      "h3_ring"
+     ],
+     "needs": [
+      "socket_ring"
+     ],
+     "msg": "The ring locks in. The cradle opens."
+    },
+    {
+     "id": "h3_model_use",
+     "kind": "USE",
+     "label": "Brass panel",
+     "yaw": 0,
+     "pitch": -8,
+     "after": [
+      "h3_ring_use",
+      "h3_ball"
+     ],
+     "needs": [
+      "wall_model",
+      "brass_ball"
+     ],
+     "opens": "tilt",
+     "msg": "The model fits the cradle. The ball drops inside."
+    },
+    {
+     "id": "h3_panel",
+     "kind": "PANEL",
+     "label": "Tilt Maze",
+     "yaw": 0,
+     "pitch": -8,
+     "after": [
+      "h3_model_use"
+     ],
+     "panel": "tilt"
+    },
+    {
+     "id": "h3_exit",
+     "kind": "EXIT",
+     "label": "Open gate",
+     "yaw": -150,
+     "pitch": 0,
+     "after": [
+      "@reward"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drowned_cistern",
+   "name": "The Drowned Cistern",
+   "file": "room4.webp",
+   "accent": "#3B82C4",
+   "startYaw": -40,
+   "objective": "Send the water out through the sluice.",
+   "enter": [
+    {
+     "who": "ren",
+     "text": "Black water, and a wall of pipes.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r4_enter_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "The sluice drains this place. If a pipe leaks, the Clatterers hear it.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r4_enter_1.mp3"
+    }
+   ],
+   "wrong": [
+    {
+     "who": "tali",
+     "text": "A pipe with an open end leaks. Look for the red glow.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r4_wrong_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Read the Valve Plate. Every pipe must be joined, not just one path.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r4_wrong_1.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Follow the water in from the top left, one tile at a time.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r4_wrong_2.mp3"
+    }
+   ],
+   "hints": [
+    {
+     "who": "tali",
+     "text": "Follow the water from the top left. Fix the leak you can see.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r4_hint_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "The two empty squares are top right. Pipes there must turn away from them.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r4_hint_1.mp3"
+    }
+   ],
+   "right": [
+    {
+     "who": "narrator",
+     "text": "Water rushed out through the sluice and the pool sank.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r4_right_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "A hook, stuck in the mud.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r4_right_1.mp3"
+    },
+    {
+     "who": "ren",
+     "text": "A rope hook. For a ravine?",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r4_right_2.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Dessa kept it for the Ivy Corridor.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r4_right_3.mp3"
+    }
+   ],
+   "reward": {
+    "items": [
+     "rope_hook"
+    ],
+    "notes": [],
+    "toast": "The sluice passage is open."
+   },
+   "finish": "h4_panel",
+   "hotspots": [
+    {
+     "id": "h4_plate",
+     "kind": "LEARN",
+     "label": "Valve Plate",
+     "yaw": 3,
+     "pitch": -24,
+     "after": [],
+     "note": "N6"
+    },
+    {
+     "id": "h4_wrench",
+     "kind": "FIND",
+     "label": "Rusty Wrench",
+     "yaw": -22,
+     "pitch": -43,
+     "after": [
+      "h4_plate"
+     ],
+     "item": "rusty_wrench"
+    },
+    {
+     "id": "h4_spindle",
+     "kind": "FIND",
+     "label": "Valve Spindle",
+     "yaw": -80,
+     "pitch": 14,
+     "after": [
+      "h4_plate"
+     ],
+     "item": "valve_spindle"
+    },
+    {
+     "id": "h4_back",
+     "kind": "INSPECT",
+     "label": "Back of the pipe board",
+     "yaw": -170,
+     "pitch": 25,
+     "after": [
+      "h4_plate"
+     ],
+     "views": [
+      {
+       "img": "r4_board_a",
+       "text": "The front of the old pipe board. Rust everywhere."
+      },
+      {
+       "img": "r4_board_b",
+       "text": "On the back, small scratches:"
+      }
+     ],
+     "secret": "Leaks make the Clatterers sing."
+    },
+    {
+     "id": "h4_board",
+     "kind": "USE",
+     "label": "Pipe board",
+     "yaw": -130,
+     "pitch": 22,
+     "after": [
+      "h4_wrench"
+     ],
+     "needs": [
+      "rusty_wrench"
+     ],
+     "opens": "pipes",
+     "msg": "The wrench frees the bolts. The pipes can turn now."
+    },
+    {
+     "id": "h4_pedestal",
+     "kind": "USE",
+     "label": "Valve pedestal",
+     "yaw": 0,
+     "pitch": -6,
+     "after": [
+      "h4_spindle"
+     ],
+     "needs": [
+      "valve_spindle",
+      "valve_wheel"
+     ],
+     "msg": "The wheel is on the pedestal. The pipe board has an Open valve button now."
+    },
+    {
+     "id": "h4_panel",
+     "kind": "PANEL",
+     "label": "Pipe Flow",
+     "yaw": -130,
+     "pitch": 22,
+     "after": [
+      "h4_board"
+     ],
+     "panel": "pipes"
+    },
+    {
+     "id": "h4_exit",
+     "kind": "EXIT",
+     "label": "Sluice passage",
+     "yaw": 100,
+     "pitch": 15,
+     "after": [
+      "@reward"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ivy_corridor",
+   "name": "The Ivy Corridor",
+   "file": "room5.webp",
+   "accent": "#5AA65A",
+   "startYaw": 20,
+   "objective": "Get Cog, the lamp and the spool across.",
+   "enter": [
+    {
+     "who": "narrator",
+     "text": "A ravine cut the corridor in two.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r5_enter_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Ren! Hook the platform and send everything over. And that clicking is Cog. Never leave him alone with anything.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r5_enter_1.mp3"
+    }
+   ],
+   "wrong": [
+    {
+     "who": "tali",
+     "text": "Something got wrecked. Cog cannot stay alone with the others.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r5_wrong_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Read the Ferryman's Board. Which two things are safe together?",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r5_wrong_1.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Take Cog first. Then fetch the others, and bring Cog back once.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r5_wrong_2.mp3"
+    }
+   ],
+   "hints": [
+    {
+     "who": "tali",
+     "text": "Cog is the problem. Who can stay alone on a bank?",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r5_hint_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "The lamp and the spool are safe together. Cog is never safe with either.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r5_hint_1.mp3"
+    }
+   ],
+   "right": [
+    {
+     "who": "narrator",
+     "text": "The platform bumped the far wall and the ivy stopped swaying.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r5_right_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Everyone made it. Even Cog.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r5_right_1.mp3"
+    },
+    {
+     "who": "ren",
+     "text": "A key on the post.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r5_right_2.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "The Archive. Dessa's last stop.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r5_right_3.mp3"
+    }
+   ],
+   "reward": {
+    "items": [
+     "archive_key"
+    ],
+    "notes": [],
+    "toast": "The far door is open."
+   },
+   "finish": "h5_panel",
+   "hotspots": [
+    {
+     "id": "h5_intro",
+     "kind": "AUTO",
+     "label": "Tali swings across",
+     "yaw": 0,
+     "pitch": 0,
+     "after": []
+    },
+    {
+     "id": "h5_post",
+     "kind": "USE",
+     "label": "Near post",
+     "yaw": 4,
+     "pitch": 6,
+     "after": [
+      "h5_intro"
+     ],
+     "needs": [
+      "rope_hook"
+     ],
+     "msg": "The hook catches the rope. The platform works now."
+    },
+    {
+     "id": "h5_board",
+     "kind": "LEARN",
+     "label": "Ferryman's Board",
+     "yaw": -25,
+     "pitch": -12,
+     "after": [
+      "h5_intro"
+     ],
+     "note": "N7"
+    },
+    {
+     "id": "h5_lamp",
+     "kind": "FIND",
+     "label": "Glow Lamp",
+     "yaw": -78,
+     "pitch": 3,
+     "after": [
+      "h5_board"
+     ],
+     "item": "glow_lamp"
+    },
+    {
+     "id": "h5_spool",
+     "kind": "FIND",
+     "label": "Rope Spool",
+     "yaw": 140,
+     "pitch": 28,
+     "after": [
+      "h5_board"
+     ],
+     "item": "rope_spool"
+    },
+    {
+     "id": "h5_ivy",
+     "kind": "INSPECT",
+     "label": "Clicking ivy",
+     "yaw": -55,
+     "pitch": 5,
+     "after": [
+      "h5_board"
+     ],
+     "views": [
+      {
+       "img": "r5_ivy_a",
+       "text": "Something clicks inside the ivy. A tiny brass pup with a cracked lens eye looks out. It is Cog!"
+      },
+      {
+       "img": "r5_ivy_b",
+       "text": "Chalk on the stone nearby:"
+      }
+     ],
+     "secret": "Feed him bolts, not rope.",
+     "joins": "cog",
+     "react": [
+      {
+       "who": "tali",
+       "text": "Cog! Come here, little one.",
+       "pausesTimer": false,
+       "audioFile": "assets/audio/voice/r5_react5_0.mp3"
+      },
+      {
+       "who": "cog",
+       "text": "Click-click!",
+       "pausesTimer": false
+      }
+     ]
+    },
+    {
+     "id": "h5_panel",
+     "kind": "PANEL",
+     "label": "River Crossing",
+     "yaw": 63,
+     "pitch": -20,
+     "after": [
+      "h5_post",
+      "h5_lamp",
+      "h5_spool",
+      "h5_ivy"
+     ],
+     "panel": "river"
+    },
+    {
+     "id": "h5_exit",
+     "kind": "EXIT",
+     "label": "Far door",
+     "yaw": 145,
+     "pitch": -2,
+     "after": [
+      "@reward"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wardens_archive",
+   "name": "The Wardens' Archive",
+   "file": "room6.webp",
+   "accent": "#8A63C9",
+   "startYaw": 0,
+   "dark": true,
+   "objective": "Seat the Wardens and open the vault.",
+   "enter": [
+    {
+     "who": "ren",
+     "text": "It is pitch dark. I can hear dripping.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r6_enter_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Light the lamp. The Wardens met here once.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r6_enter_1.mp3"
+    }
+   ],
+   "wrong": [
+    {
+     "who": "tali",
+     "text": "Not that arrangement. Check each plate against your seats.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r6_wrong_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Begin with the skylight seat. One plate fixes it.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r6_wrong_1.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Tamsin first. Then count clockwise from her and from Iven.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r6_wrong_2.mp3"
+    }
+   ],
+   "hints": [
+    {
+     "who": "tali",
+     "text": "Put Tamsin in seat 1. Then use the clockwise clues.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r6_hint_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Quill is two seats after Tamsin. Marro sits beside her. Where does Iven fit?",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r6_hint_1.mp3"
+    }
+   ],
+   "right": [
+    {
+     "who": "keeper",
+     "text": "Runner. The Card is yours. The Door asks only that its lamps match.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r6_right_0.mp3"
+    },
+    {
+     "who": "ren",
+     "text": "And then?",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r6_right_1.mp3"
+    },
+    {
+     "who": "keeper",
+     "text": "Both ways open the Door. It only asks who you stand for.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r6_right_2.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "I do not like that.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r6_right_3.mp3"
+    }
+   ],
+   "reward": {
+    "items": [
+     "rule_card"
+    ],
+    "notes": [
+     "N9",
+     "N10"
+    ],
+    "toast": "The archive door is open."
+   },
+   "finish": "h6_drawer",
+   "hotspots": [
+    {
+     "id": "h6_sconce",
+     "kind": "USE",
+     "label": "Wall sconce",
+     "yaw": -65,
+     "pitch": 20,
+     "after": [],
+     "needs": [
+      "glow_lamp"
+     ],
+     "msg": "The lamp is lit. The archive glows purple.",
+     "light": true
+    },
+    {
+     "id": "h6_cards",
+     "kind": "FIND",
+     "label": "Name Cards",
+     "yaw": -15,
+     "pitch": -10,
+     "after": [
+      "h6_sconce"
+     ],
+     "item": "name_cards"
+    },
+    {
+     "id": "h6_plates",
+     "kind": "LEARN",
+     "label": "Seat Plates",
+     "yaw": -150,
+     "pitch": -5,
+     "after": [
+      "h6_sconce"
+     ],
+     "note": "N8"
+    },
+    {
+     "id": "h6_ledger",
+     "kind": "INSPECT",
+     "label": "Old ledger",
+     "yaw": 125,
+     "pitch": 25,
+     "after": [
+      "h6_sconce"
+     ],
+     "views": [
+      {
+       "img": "r6_ledger_a",
+       "text": "An old book on a high shelf. The Wardens kept it closed."
+      },
+      {
+       "img": "r6_ledger_b",
+       "text": "The last page:"
+      }
+     ],
+     "secret": "The Keeper counts one thing: who you stand for."
+    },
+    {
+     "id": "h6_vent",
+     "kind": "INSPECT",
+     "label": "High vent",
+     "yaw": -120,
+     "pitch": 50,
+     "after": [
+      "h6_sconce"
+     ],
+     "views": [
+      {
+       "img": null,
+       "text": "A high vent. Something shiny is stuck inside. Cog squeezes in... and comes back with a heavy ring!"
+      }
+     ],
+     "gives": "seal_ring",
+     "react": [
+      {
+       "who": "cog",
+       "text": "Click-click!",
+       "pausesTimer": false
+      }
+     ]
+    },
+    {
+     "id": "h6_winch",
+     "kind": "USE",
+     "label": "Drawer winch",
+     "yaw": 0,
+     "pitch": 40,
+     "after": [
+      "h6_sconce"
+     ],
+     "needs": [
+      "rope_spool"
+     ],
+     "msg": "The rope winds on. The drawer wall lowers."
+    },
+    {
+     "id": "h6_panel",
+     "kind": "PANEL",
+     "label": "Seating Plan",
+     "yaw": 20,
+     "pitch": -22,
+     "after": [
+      "h6_cards",
+      "h6_plates"
+     ],
+     "panel": "seating"
+    },
+    {
+     "id": "h6_drawer",
+     "kind": "USE",
+     "label": "Drawers",
+     "yaw": 10,
+     "pitch": 12,
+     "after": [
+      "h6_winch",
+      "h6_vent",
+      "h6_panel"
+     ],
+     "needs": [
+      "seal_ring"
+     ],
+     "opens": "drawer",
+     "manual": true,
+     "msg": "The ring glows. Which drawer will you open?"
+    },
+    {
+     "id": "h6_exit",
+     "kind": "EXIT",
+     "label": "Archive door",
+     "yaw": -170,
+     "pitch": 8,
+     "after": [
+      "@reward"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "last_door",
+   "name": "The Last Door",
+   "file": "room7.webp",
+   "accent": "#E0443E",
+   "accent2": "#E8C25A",
+   "startYaw": 0,
+   "final": true,
+   "objective": "Set the lamps and choose.",
+   "enter": [
+    {
+     "who": "narrator",
+     "text": "The hall was silent. Then the walls began to breathe.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r7_enter_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "This is it. The Door.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r7_enter_1.mp3"
+    },
+    {
+     "who": "ren",
+     "text": "And the Rule Card is the pattern.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r7_enter_2.mp3"
+    },
+    {
+     "who": "keeper",
+     "text": "Runner. Set the lamps as written. The Turning will not wait.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r7_enter_3.mp3"
+    }
+   ],
+   "wrong": [
+    {
+     "who": "tali",
+     "text": "The walls! Back to the start. Think before you press.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r7_wrong_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Each switch flips five lamps, not one. Check the middle row.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r7_wrong_1.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Four switches are enough. One of them is the centre one.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r7_wrong_2.mp3"
+    }
+   ],
+   "hints": [
+    {
+     "who": "tali",
+     "text": "Compare the card with the board. Which lamps are wrong?",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r7_hint_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Switch 5 flips the centre lamp and its four neighbours. Start there.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/r7_hint_1.mp3"
+    }
+   ],
+   "right": [
+    {
+     "who": "narrator",
+     "text": "The lamps burned gold. The walls stopped and groaned back.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r7_right_0.mp3"
+    },
+    {
+     "who": "ren",
+     "text": "It worked.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r7_right_1.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Now the lever. Whatever it does, we do it together.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/r7_right_2.mp3"
+    }
+   ],
+   "choiceLines": [
+    {
+     "who": "keeper",
+     "text": "The Door will open. You may hold the lever so that every gate in the Labyrinth opens with it. Or you may go through alone. Both open the Door.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/choice_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "I will not tell you what to do. I will be here either way.",
+     "pausesTimer": false,
+     "audioFile": "assets/audio/voice/choice_1.mp3"
+    }
+   ],
+   "reward": {
+    "items": [],
+    "notes": [],
+    "toast": ""
+   },
+   "finish": "h7_board",
+   "hotspots": [
+    {
+     "id": "h7_grip",
+     "kind": "FIND",
+     "label": "Lever Grip",
+     "yaw": -100,
+     "pitch": -40,
+     "after": [],
+     "item": "lever_grip"
+    },
+    {
+     "id": "h7_plaque",
+     "kind": "INSPECT",
+     "label": "Door plaque",
+     "yaw": 0,
+     "pitch": 38,
+     "after": [],
+     "views": [
+      {
+       "img": "r7_plaque_a",
+       "text": "A brass plaque on the Door. It is polished by many hands."
+      },
+      {
+       "img": "r7_plaque_b",
+       "text": "Small scratches at its edge:"
+      }
+     ],
+     "secret": "Dessa was here. She chose."
+    },
+    {
+     "id": "h7_board",
+     "kind": "PANEL",
+     "label": "Switchboard",
+     "yaw": 0,
+     "pitch": -30,
+     "after": [],
+     "panel": "switch"
+    },
+    {
+     "id": "h7_lever",
+     "kind": "USE",
+     "label": "Great lever",
+     "yaw": -126,
+     "pitch": 15,
+     "after": [
+      "h7_grip",
+      "h7_board"
+     ],
+     "needs": [
+      "lever_grip"
+     ],
+     "opens": "choiceIntro",
+     "msg": "The grip locks onto the lever."
+    },
+    {
+     "id": "h7_choice",
+     "kind": "PANEL",
+     "label": "The Choice",
+     "yaw": -126,
+     "pitch": 15,
+     "after": [
+      "h7_lever"
+     ],
+     "panel": "choice"
+    }
+   ]
+  }
+ ],
+ "puzzles": {
+  "crate": {
+   "title": "Crate Fit",
+   "cols": 5,
+   "rows": 4,
+   "bolted": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   "pieces": {
+    "I": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      3,
+      0
+     ]
+    ],
+    "S": [
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "L": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "J": [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      2
+     ]
+    ]
+   },
+   "solution": [
+    "OOJJJ",
+    "OOLSJ",
+    "LLLSS",
+    "IIIIS"
+   ],
+   "help": "Tap a crate to turn it. Drag it onto the floor. Fill every square.",
+   "lock": "Lock the lift",
+   "reset": "Take all crates off",
+   "bolted_label": "Bolted",
+   "rules": "Crates cannot overlap, stick out of the floor, or move the bolted crate. You can turn crates but not flip them."
+  },
+  "triangulation": {
+   "title": "Triangulation",
+   "cols": 9,
+   "rows": 9,
+   "landmarks": [
+    {
+     "id": "spire",
+     "name": "Spire",
+     "cell": "B8"
+    },
+    {
+     "id": "tree",
+     "name": "Old Tree",
+     "cell": "I5"
+    }
+   ],
+   "marks": [
+    "E5",
+    "F4",
+    "C5",
+    "G7"
+   ],
+   "answer": "E5",
+   "bearings": [
+    0,
+    45,
+    90,
+    135,
+    180,
+    225,
+    270,
+    315
+   ],
+   "compassNames": {
+    "0": "N",
+    "45": "NE",
+    "90": "E",
+    "135": "SE",
+    "180": "S",
+    "225": "SW",
+    "270": "W",
+    "315": "NW"
+   },
+   "help": "Tap a landmark. Then pick a bearing to draw a chalk line.",
+   "pickBearing": "Pick a bearing from the {name}",
+   "erase": "Rub out lines",
+   "placePin": "Place the pin",
+   "pinHelp": "Tap a painted cache mark to place the pin.",
+   "needTwo": "Draw two lines first.",
+   "needPin": "Find the Brass Pin first.",
+   "notMark": "Pin only a painted cache mark.",
+   "noLine": "No line yet",
+   "lineFrom": "{name}: {deg} degrees",
+   "rules": "You can only place the pin on a painted cache mark, and only after both lines are drawn."
+  },
+  "tilt": {
+   "title": "Tilt Maze",
+   "n": 6,
+   "start": [
+    0,
+    5
+   ],
+   "exit": [
+    5,
+    4
+   ],
+   "pits": [
+    [
+     3,
+     2
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "vEdges": [
+    [
+     2,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "hEdges": [
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     4,
+     3
+    ],
+    [
+     4,
+     4
+    ],
+    [
+     5,
+     1
+    ],
+    [
+     5,
+     3
+    ]
+   ],
+   "solution": [
+    "up",
+    "right",
+    "down",
+    "left",
+    "down",
+    "right",
+    "up"
+   ],
+   "help": "Tilt the model. The ball rolls until a wall stops it.",
+   "tilts": "Tilts: {n}",
+   "reset": "Reset ball",
+   "pit": "Pit! The ball goes back to the start.",
+   "win": "The ball falls into the exit hole!",
+   "dirs": {
+    "up": "Up",
+    "down": "Down",
+    "left": "Left",
+    "right": "Right"
+   },
+   "rules": "You cannot stop the ball half way. It always rolls until a wall. Pits send it back to the start."
+  },
+  "pipes": {
+   "title": "Pipe Flow",
+   "n": 4,
+   "source": [
+    0,
+    0
+   ],
+   "sink": [
+    3,
+    3
+   ],
+   "tiles": [
+    "TSEX",
+    "SEEX",
+    "SSEE",
+    "ETEE"
+   ],
+   "solution": [
+    [
+     2,
+     1,
+     2,
+     0
+    ],
+    [
+     0,
+     1,
+     3,
+     0
+    ],
+    [
+     0,
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     0,
+     3,
+     0
+    ]
+   ],
+   "help": "Tap a pipe to turn it. Red glow = open end. Blue = water.",
+   "openValve": "Open valve",
+   "noValve": "The valve wheel is not on the pedestal yet.",
+   "sourceLabel": "Water in",
+   "sinkLabel": "Sluice",
+   "rules": "No pipe may have an open end (red glow). Do not open the valve until every pipe is joined, or the water leaks."
+  },
+  "river": {
+   "title": "River Crossing",
+   "help": "Step 1: tap one thing on Ren's bank to put it on the platform (or carry nothing). Step 2: press the Cross button.",
+   "cross": "Cross",
+   "reset": "Start over",
+   "crossings": "Crossings: {n}",
+   "near": "Near bank",
+   "far": "Far bank",
+   "ren": "Ren",
+   "tali": "Tali",
+   "wreck": "Oh no! Cog wrecked something. Start again.",
+   "things": [
+    {
+     "id": "cog",
+     "name": "Cog"
+    },
+    {
+     "id": "lamp",
+     "name": "Glow Lamp",
+     "item": "glow_lamp"
+    },
+    {
+     "id": "spool",
+     "name": "Rope Spool",
+     "item": "rope_spool"
+    }
+   ],
+   "unsafe": [
+    [
+     "cog",
+     "lamp"
+    ],
+    [
+     "cog",
+     "spool"
+    ]
+   ],
+   "loadEmpty": "Cross with nothing",
+   "loaded": "Carrying: {name}",
+   "rules": "The platform carries Ren and ONE thing only. Cog must never be left alone with the Glow Lamp or with the Rope Spool, or he wrecks it. The lamp and the spool are safe together.",
+   "warn": "Careful! {a} and {b} would be left alone together. That is not allowed.",
+   "crossWith": "Cross with {name}",
+   "crossAlone": "Cross with nothing",
+   "onPlat": "On the platform: Ren + {name}",
+   "onPlatAlone": "On the platform: Ren only",
+   "tapLoad": "Tap to load",
+   "loadedTag": "On platform ✓",
+   "renHere": "Ren is here",
+   "allDone": "All safe on the far bank!"
+  },
+  "seating": {
+   "title": "Seating Plan",
+   "names": [
+    "Iven",
+    "Marro",
+    "Sable",
+    "Quill",
+    "Tamsin",
+    "Orrel"
+   ],
+   "answer": [
+    "Tamsin",
+    "Iven",
+    "Quill",
+    "Orrel",
+    "Sable",
+    "Marro"
+   ],
+   "help": "Drag a name card to a seat. Or tap a card, then tap a seat. Seat 1 is under the skylight. Seats go clockwise.",
+   "check": "Check",
+   "needAll": "Seat all six names first.",
+   "skylight": "Skylight",
+   "reset": "Clear seats",
+   "ok": "The Wardens are seated. Now find the right drawer.",
+   "rules": "Each name sits in one seat only. All six seats must be filled before you press Check."
+  },
+  "drawer": {
+   "title": "The Vault",
+   "drawers": 6,
+   "answer": 4,
+   "help": "Which drawer holds the vault? Think about Orrel's seat.",
+   "pick": "Drawer {n}",
+   "rules": "Opening a wrong drawer costs Tallies and 10 seconds off the clock. Use the seat plates in your Journal first.",
+   "penaltySec": 10
+  },
+  "switch": {
+   "title": "The Switchboard",
+   "start": [
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0
+   ],
+   "target": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1
+   ],
+   "solution": [
+    2,
+    4,
+    5,
+    9
+   ],
+   "help": "Each switch flips its own lamp and the lamps above, below, left and right of it. The walls are closing!",
+   "lamps": "Lamps",
+   "switches": "Switches",
+   "walls": "The walls are closing!",
+   "matchRing": "match",
+   "rules": "You cannot flip one lamp alone. Every switch also flips the lamps next to it. If the walls close, you start again."
+  },
+  "choice": {
+   "title": "The Choice",
+   "help": "Both choices open the Door. Pick the one you believe in.",
+   "options": [
+    {
+     "id": "A",
+     "text": "Hold the lever. Every Runner goes free."
+    },
+    {
+     "id": "B",
+     "text": "Go through alone. Ren steps out and the lever lets go."
+    }
+   ]
+  }
+ },
+ "endings": {
+  "A": {
+   "title": "The Gate Holder",
+   "sequel": "Beyond the Door, Dessa waits. The real maze has barely begun.",
+   "lines": [
+    {
+     "who": "narrator",
+     "text": "Ren held the lever with both hands. The Door swung open.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endA_0.mp3"
+    },
+    {
+     "who": "narrator",
+     "text": "Far across the Labyrinth, gate after gate ground wide.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endA_1.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Listen. Runners. Dozens of them.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endA_2.mp3"
+    },
+    {
+     "who": "keeper",
+     "text": "Test one is complete.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endA_3.mp3"
+    },
+    {
+     "who": "dessa",
+     "text": "Ren? I knew you would hold it.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endA_4.mp3"
+    },
+    {
+     "who": "ren",
+     "text": "Dessa? Where are you?",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endA_5.mp3"
+    },
+    {
+     "who": "dessa",
+     "text": "Beyond the Door. The real maze is out here.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endA_6.mp3"
+    },
+    {
+     "who": "narrator",
+     "text": "Cog clicked and trotted ahead into a world with almost no walls in sight.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endA_7.mp3"
+    }
+   ]
+  },
+  "B": {
+   "title": "The Lone Runner",
+   "sequel": "Behind the Door, Tali is already planning. The walls out here turn too.",
+   "lines": [
+    {
+     "who": "narrator",
+     "text": "Ren let go of the lever. The Door opened for him alone.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endB_0.mp3"
+    },
+    {
+     "who": "tali",
+     "text": "Go. I will find a way.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endB_1.mp3"
+    },
+    {
+     "who": "keeper",
+     "text": "One has left. Many remain. Test one is complete.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endB_2.mp3"
+    },
+    {
+     "who": "narrator",
+     "text": "The Door closed behind Ren with a soft click.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endB_3.mp3"
+    },
+    {
+     "who": "narrator",
+     "text": "Daylight. A hundred stone corridors stretched ahead.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endB_4.mp3"
+    },
+    {
+     "who": "dessa",
+     "text": "Ren? You came. Quick, the walls out here turn too.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endB_5.mp3"
+    },
+    {
+     "who": "ren",
+     "text": "Then I will map them.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endB_6.mp3"
+    },
+    {
+     "who": "narrator",
+     "text": "Somewhere behind the Door, Tali was already planning.",
+     "pausesTimer": true,
+     "audioFile": "assets/audio/voice/endB_7.mp3"
+    }
+   ]
+  }
+ },
+ "map": {
+  "points": [
+   [
+    40,
+    262
+   ],
+   [
+    40,
+    200
+   ],
+   [
+    110,
+    200
+   ],
+   [
+    110,
+    140
+   ],
+   [
+    190,
+    140
+   ],
+   [
+    190,
+    80
+   ],
+   [
+    110,
+    80
+   ],
+   [
+    110,
+    28
+   ]
+  ],
+  "size": 300
+ }
+}

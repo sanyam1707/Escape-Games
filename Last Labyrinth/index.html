@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>The Last Labyrinth</title>
+<meta name="description" content="A 360 point-and-click escape game. Seven rooms, ten minutes, one Door.">
+<meta property="og:title" content="The Last Labyrinth">
+<meta property="og:description" content="Look around in 360, solve seven puzzles and reach the Last Door before the Turning.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#15171A">
+<link rel="stylesheet" href="vendor/pannellum/pannellum.css">
+<link rel="stylesheet" href="style.css?v=15">
+</head>
+<body>
+<div id="app">
+  <div id="pano"></div>
+  <div id="darkveil"></div>
+  <div id="hotspots"></div>
+  <canvas id="fxc"></canvas>
+  <div id="vignette"></div>
+
+  <div id="hud" class="hidden">
+    <button id="btnPause" class="hudbtn" aria-label="Pause"></button>
+    <div id="clockWrap">
+      <div id="clock">10:00</div>
+      <div id="objective"></div>
+      <div id="findStrip"></div>
+    </div>
+    <div id="tallies"><span class="ico" data-ico="tally"></span><b id="score">0</b></div>
+    <button id="btnJournal" class="hudbtn side" aria-label="Journal"></button>
+    <button id="btnHint" class="hudbtn side" aria-label="Hint"><i id="hintCount">3</i></button>
+    <div id="holdChip" class="hidden"></div>
+  </div>
+
+  <div id="roomBanner" class="hidden"></div>
+  <div id="panelLayer" class="hidden"></div>
+  <div id="wallL" class="wall"></div><div id="wallR" class="wall"></div>
+  <div id="cardLayer" class="hidden"></div>
+  <div id="journal" class="hidden"></div>
+  <div id="dlgCatch" class="hidden"></div>
+  <div id="dlg" class="hidden"></div>
+  <div id="toast"></div>
+  <div id="hintBox" class="hidden"></div>
+  <div id="fade"></div>
+  <div id="screens"></div>
+  <div id="pauseMenu" class="hidden"></div>
+  <div id="debugBar" class="hidden"></div>
+</div>
+<script src="vendor/pannellum/pannellum.js"></script>
+<script src="fx.js?v=15"></script>
+<script src="panels.js?v=15"></script>
+<script src="game.js?v=15"></script>
+</body>
+</html>
