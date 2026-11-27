@@ -1,0 +1,1487 @@
+{
+ "id": "compassofforgottenworlds",
+ "title": "Compass of Forgotten Worlds",
+ "tagline": "Four sealed rooms. One brass compass. Five minutes before the storm tide.",
+ "modules": [
+  "rose",
+  "mirror",
+  "gears",
+  "sweep",
+  "cowbull",
+  "stages"
+ ],
+ "config": {
+  "pickup": "ring",
+  "toast": "ribbon",
+  "timerSeconds": 300,
+  "hintsTotal": 3,
+  "lockoutMs": 3000,
+  "idleSec": 40,
+  "particleCap": {
+   "phone": 60,
+   "desktop": 120
+  }
+ },
+ "ui": {
+  "start": "Tap to Start",
+  "begin": "Begin",
+  "next": "Next",
+  "skip": "Skip",
+  "close": "Close",
+  "confirm": "Confirm",
+  "scoreName": "Bearings",
+  "hint": "Hint",
+  "casebook": "Logbook",
+  "pause": "Pause",
+  "paused": "Paused",
+  "resume": "Resume",
+  "restartPanel": "Restart this panel",
+  "soundOn": "Sound: On",
+  "soundOff": "Sound: Off",
+  "voiceOn": "Narration: On",
+  "voiceOff": "Narration: Off",
+  "tabItems": "Satchel",
+  "tabTruths": "Chart Notes",
+  "notes": "Notes from the Map House",
+  "noItems": "Nothing in your satchel yet. Look around the room.",
+  "noTruths": "No chart notes yet. Finish a room to learn one.",
+  "findStrip": "Find in this room",
+  "hold": "Hold to use",
+  "holding": "Holding",
+  "stopHolding": "Put away",
+  "holdHelp": "Now tap the right spot in the room.",
+  "useNothing": "Nothing happens. Try somewhere else.",
+  "needItem": "You need something for this. Check your Satchel.",
+  "savedItem": "Saved to your Satchel",
+  "savedNote": "Saved to your Logbook",
+  "secretFound": "Secret found!",
+  "reward": "Reward",
+  "objective": "Goal",
+  "hintNone": "No hints left.",
+  "hintDone": "Nothing left to solve here. Take the way out.",
+  "hintPoor": "Not enough {score} for a hint. You need {cost}.",
+  "hintUsed": "Hint used. -{cost} {score}",
+  "locked": "Wait {s}...",
+  "newTruth": "New chart note in the Logbook",
+  "takeExit": "The way is open. Go on.",
+  "usedUp": "Used up",
+  "inspectNext": "Next view",
+  "inspectPrev": "Back",
+  "tapSecret": "Something is hidden here. Tap the glowing spot.",
+  "pauseResumeHint": "",
+  "restarted": "Panel reset.",
+  "tapContinue": "Tap to continue",
+  "tabProgress": "Progress",
+  "newWay": "A new way is open.",
+  "progRooms": "Rooms cleared",
+  "progRoom": "Now in",
+  "progItems": "Items found",
+  "progClues": "Clues found",
+  "progHints": "Hints left"
+ },
+ "mission": {
+  "kicker": "The Map House, a stormy night",
+  "heading": "Compass of Forgotten Worlds",
+  "paras": [
+   "Cartographer Aurelio Vance has vanished, leaving only his Map House and a brass compass that points to worlds erased from every map.",
+   "You are Tamsin, his apprentice, and Corvin, the airship boy, is at your side. Four sealed rooms lie between you and the truth.",
+   "Open them before the storm tide floods the house. You have five minutes."
+  ],
+  "audioFile": "assets/audio/voice/mission.mp3"
+ },
+ "tutorial": [
+  {
+   "target": "stage",
+   "text": "Drag to look around. Glowing lights can be tapped.",
+   "audioFile": "assets/audio/voice/tutorial_0.mp3"
+  },
+  {
+   "target": "book",
+   "text": "Things you find go into your Satchel. Clues go into your Logbook. Open it any time.",
+   "audioFile": "assets/audio/voice/tutorial_1.mp3"
+  },
+  {
+   "target": "score",
+   "text": "Every room ends with one puzzle. Close it any time with the X. Wrong answers cost Bearings.",
+   "audioFile": "assets/audio/voice/tutorial_2.mp3"
+  },
+  {
+   "target": "hint",
+   "text": "You have 3 hints for the whole game, each costs 25 Bearings. Watch the clock: the tide rises in five minutes.",
+   "audioFile": "assets/audio/voice/tutorial_3.mp3"
+  }
+ ],
+ "speakers": {
+  "tamsin": {
+   "name": "Tamsin",
+   "pitch": 1.12,
+   "rate": 0.97,
+   "gender": "f",
+   "color": "#5FC2AE",
+   "initial": "T"
+  },
+  "corvin": {
+   "name": "Corvin",
+   "pitch": 0.9,
+   "rate": 1.04,
+   "gender": "m",
+   "color": "#E3803F",
+   "initial": "C"
+  },
+  "aurelio": {
+   "name": "Aurelio",
+   "pitch": 0.75,
+   "rate": 0.88,
+   "gender": "m",
+   "color": "#B9C6D8",
+   "initial": "A"
+  },
+  "narrator": {
+   "name": "Narrator",
+   "pitch": 0.9,
+   "rate": 0.9,
+   "gender": "m",
+   "color": "#9FB4D0",
+   "initial": "!"
+  }
+ },
+ "opening": [
+  "open.1",
+  "open.2",
+  "open.3"
+ ],
+ "idle": "idle.1",
+ "dialogue": [
+  {
+   "id": "open.1",
+   "speaker": "aurelio",
+   "text": "Tamsin, if you hear this, I could not stay. The compass is yours now. Open the four rooms before the tide rises, and learn what I hid from the maps.",
+   "pausesTimer": false,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/open.1.mp3"
+  },
+  {
+   "id": "open.2",
+   "speaker": "tamsin",
+   "text": "He is really gone. But he left the compass, and it points at nothing on any map.",
+   "pausesTimer": true,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/open.2.mp3"
+  },
+  {
+   "id": "open.3",
+   "speaker": "corvin",
+   "text": "Then we follow it. I will watch the storm, you watch the rooms. Let us go.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/open.3.mp3"
+  },
+  {
+   "id": "idle.1",
+   "speaker": "tamsin",
+   "text": "Let us look around again. Something is catching the light.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/idle.1.mp3"
+  },
+  {
+   "id": "r1.enter.1",
+   "speaker": "tamsin",
+   "text": "Master Aurelio's study. Every map here is blank, as if the names were rubbed out.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/r1.enter.1.mp3"
+  },
+  {
+   "id": "r1.enter.2",
+   "speaker": "corvin",
+   "text": "Blank maps and a storm outside. Let us see what he left on the desk.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r1.enter.2.mp3"
+  },
+  {
+   "id": "r1.right.1",
+   "speaker": "corvin",
+   "text": "The dial clicked! The bookcase is sliding open.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r1.right.1.mp3"
+  },
+  {
+   "id": "r1.discuss",
+   "speaker": "tamsin",
+   "text": "Aurelio wrote the bearings down: West, South, East. And he says the Eye and the Flame are not in the code.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/r1.discuss.mp3"
+  },
+  {
+   "id": "r1.hint.1",
+   "speaker": "tamsin",
+   "text": "The letter is written backwards. Aurelio's brass plate must show it the right way round.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.hint.1.mp3"
+  },
+  {
+   "id": "r1.hint.2",
+   "speaker": "corvin",
+   "text": "Slide the brass plate over the letter, read it, then tap the bearings on the dial in order.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.hint.2.mp3"
+  },
+  {
+   "id": "r1.wrong.1",
+   "speaker": "tamsin",
+   "text": "That is not what the letter says. Read it again through the plate.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/r1.wrong.1.mp3"
+  },
+  {
+   "id": "r1.wrong.2",
+   "speaker": "corvin",
+   "text": "Order matters on a compass dial. Check each bearing.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.wrong.2.mp3"
+  },
+  {
+   "id": "r1.find.key",
+   "speaker": "tamsin",
+   "text": "A brass key. Small enough to fit a drawer in his desk.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.find.key.mp3"
+  },
+  {
+   "id": "r1.find.lens",
+   "speaker": "corvin",
+   "text": "A spare lens. Aurelio loved looking closely at things.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.find.lens.mp3"
+  },
+  {
+   "id": "r1.find.scrap",
+   "speaker": "tamsin",
+   "text": "A folded scrap of map with only coastlines and no names at all.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.find.scrap.mp3"
+  },
+  {
+   "id": "r1.learn.globe",
+   "speaker": "corvin",
+   "text": "This globe has no names either. Every world here was erased on purpose.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.learn.globe.mp3"
+  },
+  {
+   "id": "r1.learn.map",
+   "speaker": "tamsin",
+   "text": "Faint pencil marks along the edge. Something was rubbed out here.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.learn.map.mp3"
+  },
+  {
+   "id": "r1.inspect.plate",
+   "speaker": "tamsin",
+   "text": "My reflection is backwards. Maybe the letter is meant to be read this way.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.inspect.plate.mp3"
+  },
+  {
+   "id": "r1.use.drawer",
+   "speaker": "corvin",
+   "text": "The key turned! There is a letter inside, but the writing is reversed.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.use.drawer.mp3"
+  },
+  {
+   "id": "r2.enter.1",
+   "speaker": "corvin",
+   "text": "The Sky Dock! My kind of place. That gear housing is a compass engine.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r2.enter.1.mp3"
+  },
+  {
+   "id": "r2.enter.2",
+   "speaker": "tamsin",
+   "text": "Then the crank must turn the compass gear. Some gears are missing from the pegs.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/r2.enter.2.mp3"
+  },
+  {
+   "id": "r2.right.1",
+   "speaker": "corvin",
+   "text": "The compass gear is turning! Right way, right speed, and the whole dock hums.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r2.right.1.mp3"
+  },
+  {
+   "id": "r2.discuss",
+   "speaker": "tamsin",
+   "text": "Aurelio left another clue: the Moon is never first or last. Into the Logbook it goes.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/r2.discuss.mp3"
+  },
+  {
+   "id": "r2.hint.1",
+   "speaker": "corvin",
+   "text": "Each number between pegs is the sum of the two gears' teeth. The crank has 12, and the compass gear must have 24.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.hint.1.mp3"
+  },
+  {
+   "id": "r2.hint.2",
+   "speaker": "tamsin",
+   "text": "Start at the compass: the number beside it minus 24 gives its neighbour. Work back along the links to the crank.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.hint.2.mp3"
+  },
+  {
+   "id": "r2.wrong.1",
+   "speaker": "tamsin",
+   "text": "That layout does not work yet. Look at which gears really touch.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/r2.wrong.1.mp3"
+  },
+  {
+   "id": "r2.wrong.2",
+   "speaker": "corvin",
+   "text": "Gears that overlap jam. Gears that do not touch do not turn.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.wrong.2.mp3"
+  },
+  {
+   "id": "r2.find.oil",
+   "speaker": "corvin",
+   "text": "Oil! Everything on an airship runs better with a little oil.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.find.oil.mp3"
+  },
+  {
+   "id": "r2.find.chart",
+   "speaker": "tamsin",
+   "text": "A mooring chart. It shows the dock, but the sea around it is blank.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.find.chart.mp3"
+  },
+  {
+   "id": "r2.find.flag",
+   "speaker": "corvin",
+   "text": "A storm flag, torn at the edge. The wind up here has stories.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.find.flag.mp3"
+  },
+  {
+   "id": "r2.learn.bench",
+   "speaker": "tamsin",
+   "text": "The note on the bench says gears touch only when their teeth add up to the number engraved on the link.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.learn.bench.mp3"
+  },
+  {
+   "id": "r2.learn.hull",
+   "speaker": "corvin",
+   "text": "The hull plate says a double-size gear turns half as fast, so the compass gear must have twice the crank's teeth.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.learn.hull.mp3"
+  },
+  {
+   "id": "r2.use.crank",
+   "speaker": "corvin",
+   "text": "Oiled! The crank spins smoothly now.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.use.crank.mp3"
+  },
+  {
+   "id": "r3.enter.1",
+   "speaker": "tamsin",
+   "text": "The observatory dome. It is dark, but the stars on the wall chart still wait.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/r3.enter.1.mp3"
+  },
+  {
+   "id": "r3.enter.2",
+   "speaker": "corvin",
+   "text": "We will need a light to find them. A real one, not just a flashlight.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/r3.enter.2.mp3"
+  },
+  {
+   "id": "r3.right.1",
+   "speaker": "tamsin",
+   "text": "The stars are joined! The dome opens a little, and a stair appears.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r3.right.1.mp3"
+  },
+  {
+   "id": "r3.discuss",
+   "speaker": "corvin",
+   "text": "Aurelio says the Key comes before the Anchor. Another page for the Logbook.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/r3.discuss.mp3"
+  },
+  {
+   "id": "r3.hint.1",
+   "speaker": "tamsin",
+   "text": "Light the lantern, then drag its glow around the dome until every star shows.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.hint.1.mp3"
+  },
+  {
+   "id": "r3.hint.2",
+   "speaker": "corvin",
+   "text": "The chart says brightest to faintest. The biggest stars are the brightest.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.hint.2.mp3"
+  },
+  {
+   "id": "r3.wrong.1",
+   "speaker": "tamsin",
+   "text": "Not that star. The next one should be a little smaller than the last.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/r3.wrong.1.mp3"
+  },
+  {
+   "id": "r3.wrong.2",
+   "speaker": "corvin",
+   "text": "Start at the biggest star and work down to the smallest.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.wrong.2.mp3"
+  },
+  {
+   "id": "r3.find.matches",
+   "speaker": "corvin",
+   "text": "A box of matches, still dry. The lantern will love these.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.find.matches.mp3"
+  },
+  {
+   "id": "r3.find.cap",
+   "speaker": "tamsin",
+   "text": "A lens cap from the telescope. Aurelio was careful with his things.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.find.cap.mp3"
+  },
+  {
+   "id": "r3.find.dividers",
+   "speaker": "corvin",
+   "text": "Brass dividers, for measuring the gaps between stars on a chart.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.find.dividers.mp3"
+  },
+  {
+   "id": "r3.learn.chart",
+   "speaker": "tamsin",
+   "text": "The chart says: join the stars from the brightest to the faintest.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.learn.chart.mp3"
+  },
+  {
+   "id": "r3.learn.globe",
+   "speaker": "corvin",
+   "text": "A star globe. The dots on it come in different sizes, just like in the sky.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.learn.globe.mp3"
+  },
+  {
+   "id": "r3.use.lantern",
+   "speaker": "tamsin",
+   "text": "The lantern is lit! Its glow can search the whole dome.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.use.lantern.mp3"
+  },
+  {
+   "id": "r3.inspect.scope",
+   "speaker": "corvin",
+   "text": "Through the eyepiece I can see the moon. Something is scratched on the rim.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.inspect.scope.mp3"
+  },
+  {
+   "id": "r4.enter.1",
+   "speaker": "tamsin",
+   "text": "The Heart Chamber. The compass floats, and the islands outside have no names.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/r4.enter.1.mp3"
+  },
+  {
+   "id": "r4.enter.2",
+   "speaker": "corvin",
+   "text": "Six stones, but seven glyphs on the lock. We must be careful.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/r4.enter.2.mp3"
+  },
+  {
+   "id": "r4.right.1",
+   "speaker": "tamsin",
+   "text": "The compass is awake! Every forgotten world is drifting closer to the windows.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r4.right.1.mp3"
+  },
+  {
+   "id": "r4.discuss",
+   "speaker": "corvin",
+   "text": "Aurelio left the choice to us. The worlds can return, or stay safe in the dark.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/r4.discuss.mp3"
+  },
+  {
+   "id": "r4.hint.1",
+   "speaker": "tamsin",
+   "text": "Use the three clues in the Logbook: what is left out, what is never first or last, what comes before what.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.hint.1.mp3"
+  },
+  {
+   "id": "r4.hint.2",
+   "speaker": "corvin",
+   "text": "After each try, a filled pip means the right place. A hollow pip means the right glyph, wrong place.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.hint.2.mp3"
+  },
+  {
+   "id": "r4.wrong.1",
+   "speaker": "tamsin",
+   "text": "The lock resets after six tries. Think about what we already know.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/r4.wrong.1.mp3"
+  },
+  {
+   "id": "r4.wrong.2",
+   "speaker": "corvin",
+   "text": "The rose wants the three bearings from Aurelio's letter. Check the Logbook.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.wrong.2.mp3"
+  },
+  {
+   "id": "r4.find.shard",
+   "speaker": "tamsin",
+   "text": "A silver shard from an island. It hums like a tuning fork.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.find.shard.mp3"
+  },
+  {
+   "id": "r4.find.signet",
+   "speaker": "corvin",
+   "text": "Aurelio's signet ring! He stood right here, at the heart of his house.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.find.signet.mp3"
+  },
+  {
+   "id": "r4.find.glass",
+   "speaker": "tamsin",
+   "text": "A drop of cloud glass. Inside, a tiny island turns slowly.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.find.glass.mp3"
+  },
+  {
+   "id": "r4.learn.rim",
+   "speaker": "tamsin",
+   "text": "The rim says: a filled pip for the right place, a hollow ring for the right glyph elsewhere.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.learn.rim.mp3"
+  },
+  {
+   "id": "r4.learn.windows",
+   "speaker": "corvin",
+   "text": "Aurelio wrote: keep the three bearings from my study letter. The rose will ask for them.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.learn.windows.mp3"
+  },
+  {
+   "id": "r4.inspect.eye",
+   "speaker": "tamsin",
+   "text": "The Eye stone is cracked. Something is hidden in the crack.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.inspect.eye.mp3"
+  },
+  {
+   "id": "end.aurelio",
+   "speaker": "aurelio",
+   "text": "Well done, my apprentice. The worlds are awake. A map is only ink; what you draw on it, you decide.",
+   "pausesTimer": false,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/end.aurelio.mp3"
+  },
+  {
+   "id": "end.restore.1",
+   "speaker": "tamsin",
+   "text": "Then let them be drawn again. Every one of them, with their own names.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/end.restore.1.mp3"
+  },
+  {
+   "id": "end.restore.2",
+   "speaker": "corvin",
+   "text": "Look at the needle! It is swinging toward a world with no name at all.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/end.restore.2.mp3"
+  },
+  {
+   "id": "end.keep.1",
+   "speaker": "tamsin",
+   "text": "Some worlds are safest when they sleep. We will keep their secret, Aurelio.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/end.keep.1.mp3"
+  },
+  {
+   "id": "end.keep.2",
+   "speaker": "corvin",
+   "text": "And the compass stays ours, ready if they ever call.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/end.keep.2.mp3"
+  }
+ ],
+ "items": {
+  "brasskey": {
+   "name": "Brass Key",
+   "material": "Brass",
+   "text": "A small brass key with a compass rose cut into its bow. It fits a drawer in the study desk.",
+   "icon": "box",
+   "usable": true
+  },
+  "lens": {
+   "name": "Spare Lens",
+   "material": "Glass",
+   "text": "A round lens in a brass ring. Aurelio kept one for every map he ever studied.",
+   "icon": "box"
+  },
+  "mapscrap": {
+   "name": "Folded Map Scrap",
+   "material": "Paper",
+   "text": "A scrap of coastline with every name scraped away. Only the compass rose survived.",
+   "icon": "box"
+  },
+  "oilcan": {
+   "name": "Oil Can",
+   "material": "Tin",
+   "text": "The label reads: \"Oil every mesh. Gears that touch turn opposite ways.\" A dented little can for a stiff crank.",
+   "icon": "box",
+   "usable": true
+  },
+  "moorchart": {
+   "name": "Mooring Chart",
+   "material": "Paper",
+   "text": "A sketch of the gear housing: the crank gear has 12 teeth and the compass gear needs 24. Along each link between pegs a number is written.",
+   "icon": "box"
+  },
+  "stormflag": {
+   "name": "Storm Flag",
+   "material": "Cloth",
+   "text": "A rust-orange flag with a note stitched on: \"A gear that touches nothing turns nothing.\" Torn by many winds.",
+   "icon": "box"
+  },
+  "matches": {
+   "name": "Matchbox",
+   "material": "Wood",
+   "text": "A box of long matches, still dry. Good for lighting a lantern.",
+   "icon": "box",
+   "usable": true
+  },
+  "lenscap": {
+   "name": "Lens Cap",
+   "material": "Brass",
+   "text": "The brass cap of the great telescope. Engraved with a tiny star.",
+   "icon": "box"
+  },
+  "dividers": {
+   "name": "Brass Dividers",
+   "material": "Brass",
+   "text": "Dividers for measuring the gaps between stars on a chart.",
+   "icon": "box"
+  },
+  "signet": {
+   "name": "Aurelio's Signet",
+   "material": "Silver",
+   "text": "A silver ring stamped with a compass rose. It is still warm, as if he only just left.",
+   "icon": "box"
+  },
+  "shard": {
+   "name": "Silver Island Shard",
+   "material": "Silver",
+   "text": "A sliver of floating island that hums softly, like a tuning fork.",
+   "icon": "box"
+  },
+  "cloudglass": {
+   "name": "Cloud Glass",
+   "material": "Glass",
+   "text": "A drop of glass with a tiny island turning slowly inside.",
+   "icon": "box"
+  }
+ },
+ "truths": [
+  "Aurelio's letter: set the rose to West, then South, then East.",
+  "The Eye and the Flame are not in the code.",
+  "The Moon is never first or last.",
+  "The Key comes before the Anchor.",
+  "The compass is awake. The forgotten worlds can be seen again."
+ ],
+ "puzzles": {
+  "r1": {
+   "help": "Slide the brass plate over Aurelio's letter to read it, then set the dial.",
+   "letter": [
+    "Set the rose",
+    "to West, then South,",
+    "then East."
+   ],
+   "from": "A. V.",
+   "dial": {
+    "answer": [
+     "West",
+     "South",
+     "East"
+    ],
+    "help": "Tap the bearings in the order the letter gives.",
+    "wrongText": "The dial does not move. Read the letter again."
+   }
+  },
+  "r2": {
+   "help": "Each number on the dashed links is the two gears' tooth counts added together. Tap a spare gear, then a peg. Tap a placed gear to take it off.",
+   "goal": "Crank = 12 teeth. The compass gear must turn the same way, once for every two crank turns.",
+   "pegs": [
+    [
+     0,
+     20.7
+    ],
+    [
+     19.6,
+     14.7
+    ],
+    [
+     6.8,
+     12.1
+    ],
+    [
+     30.3,
+     1.5
+    ],
+    [
+     51.3,
+     0
+    ]
+   ],
+   "crank": 12,
+   "spares": [
+    10,
+    12,
+    18,
+    24,
+    16
+   ],
+   "end": 4,
+   "target": {
+    "teeth": 24,
+    "dir": 1
+   },
+   "endLabel": "Compass",
+   "showSums": true,
+   "sumLinks": [
+    [
+     0,
+     2
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  "r3": {
+   "help": "Drag the lantern across the dark dome to light every star.",
+   "joinHelp": "All seven stars are lit. Join them from the brightest to the faintest.",
+   "radius": 16,
+   "stars": [
+    {
+     "x": 14,
+     "y": 14,
+     "s": 2.6
+    },
+    {
+     "x": 30,
+     "y": 40,
+     "s": 1.5
+    },
+    {
+     "x": 44,
+     "y": 16,
+     "s": 4.7
+    },
+    {
+     "x": 60,
+     "y": 44,
+     "s": 1.0
+    },
+    {
+     "x": 70,
+     "y": 15,
+     "s": 3.9
+    },
+    {
+     "x": 86,
+     "y": 34,
+     "s": 2.0
+    },
+    {
+     "x": 50,
+     "y": 30,
+     "s": 3.2
+    }
+   ]
+  },
+  "r4": {
+   "stages": [
+    {
+     "panel": "cowbull",
+     "title": "The glyph lock",
+     "help": "Choose four different glyphs. Use the three clues in your Logbook.",
+     "symbols": [
+      "Moon",
+      "Anchor",
+      "Key",
+      "Eye",
+      "Wave",
+      "Flame",
+      "Star"
+     ],
+     "answer": [
+      "Wave",
+      "Moon",
+      "Key",
+      "Anchor"
+     ],
+     "tries": 6
+    },
+    {
+     "panel": "rose",
+     "title": "The rose",
+     "help": "Set the compass rose to the three bearings from Aurelio's letter. Look in your Logbook.",
+     "answer": [
+      "West",
+      "South",
+      "East"
+     ],
+     "wrongText": "The rose does not turn. Check the Logbook."
+    }
+   ]
+  }
+ },
+ "rooms": [
+  {
+   "id": 1,
+   "name": "Map House Study",
+   "accent": "#d48349",
+   "pano": "assets/rooms/room1.webp",
+   "objective": "Find Aurelio's letter and set the compass dial.",
+   "objectiveReady": "Read the letter in the brass plate, then set the dial.",
+   "enter": [
+    "r1.enter.1",
+    "r1.enter.2"
+   ],
+   "right": [
+    "r1.right.1"
+   ],
+   "discuss": "r1.discuss",
+   "hint": [
+    "r1.hint.1",
+    "r1.hint.2"
+   ],
+   "wrong": [
+    "r1.wrong.1",
+    "r1.wrong.2"
+   ],
+   "reward": {
+    "truth": [
+     0,
+     1
+    ],
+    "toast": "The bookcase slides open."
+   },
+   "start": {
+    "yaw": -60,
+    "pitch": 6
+   },
+   "hotspots": [
+    {
+     "id": "r1.key",
+     "kind": "FIND",
+     "label": "Brass key",
+     "yaw": -127,
+     "pitch": -40,
+     "item": "brasskey",
+     "line": "r1.find.key"
+    },
+    {
+     "id": "r1.lens",
+     "kind": "FIND",
+     "label": "Spare lens",
+     "yaw": -139,
+     "pitch": -33,
+     "item": "lens",
+     "line": "r1.find.lens"
+    },
+    {
+     "id": "r1.scrap",
+     "kind": "FIND",
+     "label": "Folded map scrap",
+     "yaw": -148,
+     "pitch": -8,
+     "item": "mapscrap",
+     "line": "r1.find.scrap"
+    },
+    {
+     "id": "r1.globe",
+     "kind": "LEARN",
+     "label": "Blank globe",
+     "yaw": -101,
+     "pitch": 0,
+     "title": "The blank globe",
+     "text": "Every land is bare and every ocean is painted over in grey. Only a tiny compass rose is etched at the foot of the stand: Aurelio's mark.",
+     "line": "r1.learn.globe"
+    },
+    {
+     "id": "r1.map",
+     "kind": "LEARN",
+     "label": "Rubbed-out map",
+     "yaw": -98,
+     "pitch": 20,
+     "title": "Pencil marks on the map",
+     "text": "Along the edge, a row of rubbed-out names. Beside them Aurelio wrote: \"Erased from the maps, not from the world.\"",
+     "line": "r1.learn.map"
+    },
+    {
+     "id": "r1.plate",
+     "kind": "INSPECT",
+     "label": "Brass plate",
+     "yaw": -122,
+     "pitch": -14,
+     "title": "The brass plate",
+     "line": "r1.inspect.plate",
+     "views": [
+      "<div class=\"insp\">The plate is polished like a mirror. Your reflection looks back at you, with left and right swapped.</div>",
+      "<div class=\"insp\">Engraved around the rim:<br><b class=\"flip\">READ ME AS I AM IN THE PLATE.</b></div>"
+     ],
+     "secret": "Whatever is reversed in ink is true in brass."
+    },
+    {
+     "id": "r1.drawer",
+     "kind": "USE",
+     "label": "Locked desk drawer",
+     "yaw": -84,
+     "pitch": -48,
+     "needs": "brasskey",
+     "line": "r1.use.drawer"
+    },
+    {
+     "id": "r1.panel",
+     "kind": "PANEL",
+     "label": "Compass dial table",
+     "yaw": 1,
+     "pitch": -23,
+     "panel": "mirror",
+     "puzzle": "r1",
+     "after": [
+      "r1.key",
+      "r1.lens",
+      "r1.scrap",
+      "r1.globe",
+      "r1.map",
+      "r1.plate",
+      "r1.drawer"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": -48,
+    "pitch": 8,
+    "label": "Through the bookcase door"
+   }
+  },
+  {
+   "id": 2,
+   "name": "Sky Dock Loft",
+   "accent": "#d48349",
+   "pano": "assets/rooms/room2.webp",
+   "objective": "Wake the compass engine in the gear housing.",
+   "objectiveReady": "Place the spare gears so the crank turns the compass gear.",
+   "enter": [
+    "r2.enter.1",
+    "r2.enter.2"
+   ],
+   "right": [
+    "r2.right.1"
+   ],
+   "discuss": "r2.discuss",
+   "hint": [
+    "r2.hint.1",
+    "r2.hint.2"
+   ],
+   "wrong": [
+    "r2.wrong.1",
+    "r2.wrong.2"
+   ],
+   "reward": {
+    "truth": 2,
+    "toast": "The gangway lowers into the clouds."
+   },
+   "start": {
+    "yaw": -100,
+    "pitch": 8
+   },
+   "hotspots": [
+    {
+     "id": "r2.oil",
+     "kind": "FIND",
+     "label": "Oil can",
+     "yaw": -89,
+     "pitch": -33,
+     "item": "oilcan",
+     "line": "r2.find.oil"
+    },
+    {
+     "id": "r2.chart",
+     "kind": "FIND",
+     "label": "Mooring chart",
+     "yaw": -108,
+     "pitch": -18,
+     "item": "moorchart",
+     "line": "r2.find.chart"
+    },
+    {
+     "id": "r2.flag",
+     "kind": "FIND",
+     "label": "Storm flag",
+     "yaw": 95,
+     "pitch": 9,
+     "item": "stormflag",
+     "line": "r2.find.flag"
+    },
+    {
+     "id": "r2.bench",
+     "kind": "LEARN",
+     "label": "Gear bench",
+     "yaw": -134,
+     "pitch": -24,
+     "title": "The gear bench",
+     "text": "A note pinned among the cogs: \"Two gears touch only when their tooth counts add up to the number engraved on the link between their pegs. A gear that touches nothing turns nothing.\"",
+     "line": "r2.learn.bench"
+    },
+    {
+     "id": "r2.hull",
+     "kind": "LEARN",
+     "label": "Airship hull plate",
+     "yaw": 144,
+     "pitch": 14,
+     "title": "The hull plate",
+     "text": "Stamped on the hull plate: \"A gear twice as big turns half as fast. The compass gear must have DOUBLE the crank's teeth. Gears that touch turn opposite ways, so count the links: an even number keeps the turn the same.\"",
+     "line": "r2.learn.hull"
+    },
+    {
+     "id": "r2.crank",
+     "kind": "USE",
+     "label": "Stiff crank",
+     "yaw": -97,
+     "pitch": 9,
+     "needs": "oilcan",
+     "line": "r2.use.crank"
+    },
+    {
+     "id": "r2.panel",
+     "kind": "PANEL",
+     "label": "Gear housing",
+     "yaw": -129,
+     "pitch": 22,
+     "panel": "gears",
+     "puzzle": "r2",
+     "after": [
+      "r2.oil",
+      "r2.chart",
+      "r2.flag",
+      "r2.bench",
+      "r2.hull",
+      "r2.crank"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": 6,
+    "pitch": -26,
+    "label": "Take the gangway"
+   }
+  },
+  {
+   "id": 3,
+   "name": "Observatory Dome",
+   "accent": "#4983d4",
+   "pano": "assets/rooms/room3.webp",
+   "objective": "Light the dome and find the stars.",
+   "objectiveReady": "Sweep the dome with the lantern, then join the stars.",
+   "enter": [
+    "r3.enter.1",
+    "r3.enter.2"
+   ],
+   "right": [
+    "r3.right.1"
+   ],
+   "discuss": "r3.discuss",
+   "hint": [
+    "r3.hint.1",
+    "r3.hint.2"
+   ],
+   "wrong": [
+    "r3.wrong.1",
+    "r3.wrong.2"
+   ],
+   "reward": {
+    "truth": 3,
+    "toast": "A stair unfolds from the dome wall."
+   },
+   "start": {
+    "yaw": 0,
+    "pitch": 8
+   },
+   "hotspots": [
+    {
+     "id": "r3.matches",
+     "kind": "FIND",
+     "label": "Matchbox",
+     "yaw": 106,
+     "pitch": -33,
+     "item": "matches",
+     "line": "r3.find.matches"
+    },
+    {
+     "id": "r3.cap",
+     "kind": "FIND",
+     "label": "Lens cap",
+     "yaw": -16,
+     "pitch": -28,
+     "item": "lenscap",
+     "line": "r3.find.cap"
+    },
+    {
+     "id": "r3.dividers",
+     "kind": "FIND",
+     "label": "Brass dividers",
+     "yaw": -98,
+     "pitch": -24,
+     "item": "dividers",
+     "line": "r3.find.dividers"
+    },
+    {
+     "id": "r3.chart",
+     "kind": "LEARN",
+     "label": "Wall star chart",
+     "yaw": -124,
+     "pitch": 8,
+     "title": "The wall star chart",
+     "text": "Under the chart, in Aurelio's hand: \"Join the stars from the brightest to the faintest.\"",
+     "line": "r3.learn.chart"
+    },
+    {
+     "id": "r3.globe",
+     "kind": "LEARN",
+     "label": "Star globe",
+     "yaw": -60,
+     "pitch": -20,
+     "title": "The star globe",
+     "text": "The stars on this globe are dots of many sizes. Big dots are bright stars, small dots are faint ones.",
+     "line": "r3.learn.globe"
+    },
+    {
+     "id": "r3.scope",
+     "kind": "INSPECT",
+     "label": "Telescope eyepiece",
+     "yaw": 46,
+     "pitch": 10,
+     "title": "The eyepiece",
+     "line": "r3.inspect.scope",
+     "views": [
+      "<div class=\"insp\">Through the eyepiece: a pale moon, sharp as a coin, with storm clouds drifting across it.</div>",
+      "<div class=\"insp\">Scratched around the eyepiece rim, small and neat: a ring of tiny stars.</div>"
+     ],
+     "secret": "Light shows what the dark keeps. Bigger means brighter."
+    },
+    {
+     "id": "r3.lantern",
+     "kind": "USE",
+     "label": "Unlit lantern",
+     "yaw": 79,
+     "pitch": -8,
+     "needs": "matches",
+     "line": "r3.use.lantern"
+    },
+    {
+     "id": "r3.panel",
+     "kind": "PANEL",
+     "label": "Telescope mount",
+     "yaw": 6,
+     "pitch": 2,
+     "panel": "sweep",
+     "puzzle": "r3",
+     "after": [
+      "r3.matches",
+      "r3.cap",
+      "r3.dividers",
+      "r3.chart",
+      "r3.globe",
+      "r3.scope",
+      "r3.lantern"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": 42,
+    "pitch": -14,
+    "label": "Climb the dome stair"
+   }
+  },
+  {
+   "id": 4,
+   "name": "Heart Chamber",
+   "accent": "#d49a49",
+   "pano": "assets/rooms/room4.webp",
+   "objective": "Open the compass-dial lock.",
+   "objectiveReady": "Crack the glyph lock, then set the rose.",
+   "enter": [
+    "r4.enter.1",
+    "r4.enter.2"
+   ],
+   "right": [
+    "r4.right.1"
+   ],
+   "discuss": "r4.discuss",
+   "hint": [
+    "r4.hint.1",
+    "r4.hint.2"
+   ],
+   "wrong": [
+    "r4.wrong.1",
+    "r4.wrong.2"
+   ],
+   "reward": {
+    "truth": 4,
+    "toast": "The great compass wakes."
+   },
+   "start": {
+    "yaw": 0,
+    "pitch": 8
+   },
+   "hotspots": [
+    {
+     "id": "r4.shard",
+     "kind": "FIND",
+     "label": "Silver island shard",
+     "yaw": -146,
+     "pitch": -42,
+     "item": "shard",
+     "line": "r4.find.shard"
+    },
+    {
+     "id": "r4.signet",
+     "kind": "FIND",
+     "label": "Aurelio's signet",
+     "yaw": -4,
+     "pitch": -46,
+     "item": "signet",
+     "line": "r4.find.signet"
+    },
+    {
+     "id": "r4.glass",
+     "kind": "FIND",
+     "label": "Cloud glass",
+     "yaw": 148,
+     "pitch": -43,
+     "item": "cloudglass",
+     "line": "r4.find.glass"
+    },
+    {
+     "id": "r4.rim",
+     "kind": "LEARN",
+     "label": "Engraved floor rim",
+     "yaw": 0,
+     "pitch": -56,
+     "title": "The engraved rim",
+     "text": "Around the floor ring: \"A filled pip for the right place. A hollow ring for the right glyph in the wrong place. Six turns, then the lock forgets.\"",
+     "line": "r4.learn.rim"
+    },
+    {
+     "id": "r4.windows",
+     "kind": "LEARN",
+     "label": "Pillar note",
+     "yaw": -62,
+     "pitch": 12,
+     "title": "Aurelio's note on the pillar",
+     "text": "\"Keep the three bearings from my study letter. The rose will ask for them. Read them back from your Logbook.\"",
+     "line": "r4.learn.windows"
+    },
+    {
+     "id": "r4.eye",
+     "kind": "INSPECT",
+     "label": "Eye stone",
+     "yaw": 43,
+     "pitch": -18,
+     "title": "The Eye stone",
+     "line": "r4.inspect.eye",
+     "views": [
+      "<div class=\"insp\">The Eye stone stands cracked and mossy. Six stones circle the lock, but the lock knows seven glyphs.</div>",
+      "<div class=\"insp\">In the crack, under the moss: a tiny scratched glyph.</div>"
+     ],
+     "secret": "A small Star is scratched here. The seventh glyph has no stone."
+    },
+    {
+     "id": "r4.panel",
+     "kind": "PANEL",
+     "label": "Compass-dial lock",
+     "yaw": 0,
+     "pitch": 16,
+     "panel": "stages",
+     "puzzle": "r4",
+     "after": [
+      "r4.shard",
+      "r4.signet",
+      "r4.glass",
+      "r4.rim",
+      "r4.windows",
+      "r4.eye"
+     ]
+    }
+   ]
+  }
+ ],
+ "cinematic": [
+  "The last bearing is set. The great compass turns, and the windows of the Heart Chamber fill with islands no map has ever drawn.",
+  {
+   "say": [
+    "end.aurelio"
+   ]
+  },
+  {
+   "choose": {
+    "prompt": "What will Tamsin do with the forgotten worlds?",
+    "options": [
+     {
+      "label": "Restore the forgotten worlds to the map",
+      "cinematic": [
+       "Tamsin lays her pen on the great chart. Name by name, coast by coast, the erased worlds return to the paper.",
+       {
+        "say": [
+         "end.restore.1",
+         "end.restore.2"
+        ]
+       },
+       "The brass needle trembles, swings away from every known place, and settles on a world with no name at all. A new voyage waits."
+      ],
+      "win": {
+       "title": "The Map Remembers",
+       "text": "The forgotten worlds are back on the map. And the compass already points at one more, a world nobody has named yet.",
+       "button": "Play Again"
+      }
+     },
+     {
+      "label": "Leave them forgotten and safe",
+      "cinematic": [
+       "Tamsin folds the blank chart and closes the compass. Outside, the islands drift quietly back into the clouds.",
+       {
+        "say": [
+         "end.keep.1",
+         "end.keep.2"
+        ]
+       },
+       "Some worlds are kept best by those who know where they are, and say nothing."
+      ],
+      "win": {
+       "title": "The Quiet Map",
+       "text": "The forgotten worlds sleep on, safe and secret, and the Map House stands dry above the tide.",
+       "button": "Play Again"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "endScreens": {
+  "win": {
+   "title": "You Escaped",
+   "text": "The Map House is saved.",
+   "button": "Play Again"
+  },
+  "timeup": {
+   "title": "The Tide Rises",
+   "text": "The storm tide floods the Map House, and the compass goes dark. Aurelio's secret sinks with it.",
+   "button": "Try Again"
+  }
+ },
+ "assets": {
+  "sizes": {},
+  "title": "assets/sheets/title_key_art.jpg",
+  "briefing": "assets/sheets/briefing_bg.jpg",
+  "music": "assets/audio/bgm.mp3",
+  "cut": [
+   "tamsin_calm",
+   "tamsin_cheerful",
+   "tamsin_determined",
+   "tamsin_worried",
+   "corvin_calm",
+   "corvin_cheerful",
+   "corvin_determined",
+   "corvin_worried",
+   "aurelio",
+   "icon_score",
+   "icon_hint",
+   "icon_casebook",
+   "icon_pause",
+   "brasskey",
+   "lens",
+   "mapscrap",
+   "oilcan",
+   "moorchart",
+   "stormflag",
+   "matches",
+   "lenscap",
+   "dividers",
+   "signet",
+   "shard",
+   "cloudglass"
+  ],
+  "sheets": {
+   "tamsin_busts.png": "tamsin_calm tamsin_cheerful tamsin_determined tamsin_worried",
+   "corvin_busts.png": "corvin_calm corvin_cheerful corvin_determined corvin_worried",
+   "aurelio_bust.png": "aurelio",
+   "hud_icons.png": "icon_score icon_hint icon_casebook icon_pause",
+   "items1.png": "brasskey lens mapscrap oilcan",
+   "items2.png": "moorchart stormflag matches lenscap",
+   "items3.png": "dividers signet shard cloudglass"
+  }
+ },
+ "glyphs": {
+  "Moon": "<path d=\"M30 7a18 18 0 1 0 11 29A15 15 0 0 1 30 7z\"/>",
+  "Anchor": "<circle cx=\"24\" cy=\"9\" r=\"4\"/><path d=\"M24 13v28M15 21h18M8 29c1 8 8 12 16 12s15-4 16-12M8 29l4-4M40 29l-4-4\"/>",
+  "Key": "<circle cx=\"15\" cy=\"15\" r=\"8\"/><path d=\"M21 21l20 20M33 33l5-5M38 38l4-4\"/>",
+  "Eye": "<path d=\"M4 24C12 10 36 10 44 24C36 38 12 38 4 24z\"/><circle cx=\"24\" cy=\"24\" r=\"6\"/>",
+  "Wave": "<path d=\"M4 18c5-8 9-8 14 0s9 8 14 0 8-6 12-2M4 32c5-8 9-8 14 0s9 8 14 0 8-6 12-2\"/>",
+  "Flame": "<path d=\"M24 5c2 9 12 13 12 24a12 12 0 0 1-24 0c0-6 3-9 6-12 0 5 2 7 4 8-1-7-1-13 2-20z\"/>",
+  "Star": "<path d=\"M24 5l5.6 12 13 1.6-9.6 9 2.6 13L24 34.5 12.4 40.6l2.6-13-9.6-9 13-1.6z\"/>"
+ }
+}

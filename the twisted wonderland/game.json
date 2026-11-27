@@ -1,0 +1,2141 @@
+{
+  "config": {
+    "timerSec": 600,
+    "idleSec": 40,
+    "hintsTotal": 3,
+    "scoring": {
+      "find": 5,
+      "grin": 5,
+      "roomReward": 30,
+      "finalPuzzle": 50,
+      "wrong": -10,
+      "wrongCapPerPuzzle": -30,
+      "hint": -25,
+      "lockoutSec": 3
+    },
+    "lastMinuteSec": 60,
+    "unblurSec": 1.2
+  },
+  "ui": {
+    "gameTitle": "The Twisted Wonderland",
+    "tagline": "Escape the stopped clocks",
+    "tapStart": "Tap to Start",
+    "begin": "Begin",
+    "next": "Next",
+    "skip": "Skip",
+    "done": "Got it",
+    "tapContinue": "Tap to continue",
+    "close": "Close",
+    "pause": "Pause",
+    "paused": "Paused",
+    "resume": "Resume",
+    "restartRoom": "Restart room",
+    "soundOn": "Sound: On",
+    "soundOff": "Sound: Off",
+    "book": "Book",
+    "hint": "Hint",
+    "hintsLeft": "{n} left",
+    "wits": "Wits",
+    "goal": "Goal",
+    "findHere": "Find here",
+    "tabItems": "Items",
+    "tabClues": "Clues",
+    "tabGrin": "Grin Notes",
+    "tabRules": "Twisted Rules",
+    "tabProgress": "Progress",
+    "emptyItems": "Nothing found in this room yet. Tap things in the room to look.",
+    "emptyClues": "No clues yet. Tap glowing things to learn.",
+    "emptyGrin": "No Grin Notes yet. Look for a small grin mark in each room.",
+    "emptyRules": "No Twisted Rules yet. Each room has one to learn.",
+    "useItem": "Use this",
+    "holding": "Holding: {name}. Tap the glowing spot in the room.",
+    "putAway": "Put away",
+    "useHowTo": "Open your Book, pick the tool, then tap this spot again.",
+    "wrongTool": "That does not fit here.",
+    "savedNote": "Saved to your notes",
+    "foundTitle": "You found",
+    "foundSaved": "Added to your Book",
+    "grinTitle": "Grin Mark",
+    "grinTurn": "Turn it over",
+    "grinFound": "Grin Mark found!  +{n} Wits",
+    "findPlus": "+{n} Wits",
+    "rewardToast": "The way is open!  +{n} Wits",
+    "rewardToastFinal": "Time starts again!  +{n} Wits",
+    "hintNone": "No hints left.",
+    "hintCost": "A hint costs {n} Wits. The Cat will tell you what to do.",
+    "hintAsk": "Ask the Cat",
+    "hintCancel": "Not now",
+    "lockout": "Wait {n}s",
+    "progressRooms": "Rooms done: {a} of {b}",
+    "progressHints": "Hints left: {n}",
+    "progressGrin": "Grin Notes: {a} of {b}",
+    "progressItems": "Items found: {a} of {b}",
+    "roomWord": "Room",
+    "enterRoom": "Go through",
+    "twistedRuleLabel": "Twisted Rule",
+    "ruleNew": "New Twisted Rule",
+    "winTitle": "You won!",
+    "winWits": "Your Wits",
+    "winChoice": "Your choice",
+    "loseTitle": "Six o'clock, forever.",
+    "loseWits": "Wits so far",
+    "tryAgain": "Try Again",
+    "choiceHeading": "Your choice",
+    "choiceSub": "This is a choice, not a test. Pick the ending you like.",
+    "sequelLabel": "A card falls at your feet",
+    "gearTurn": "Turn the crank",
+    "gearResult": "{n} crank turns for one door turn.",
+    "gearSlotX": "Gear X",
+    "gearSlotY": "Gear Y",
+    "gearPinion": "Crank gear (10 teeth)",
+    "gearDoor": "Door gear (30 teeth)",
+    "gearTeeth": "{n} teeth",
+    "pourFill": "Fill",
+    "pourEmpty": "Empty",
+    "pourTo": "Pour",
+    "pourDrink": "Drink",
+    "pourMoves": "Moves: {n}",
+    "pourVial": "{n}-measure vial",
+    "pourJug": "Drink-Me jug (never empty)",
+    "seatServe": "Serve tea",
+    "seatEmpty": "Empty",
+    "seatPick": "Tap a guest, then tap a chair.",
+    "seatRules": "Table rules",
+    "seatHatCorner": "Seat 1",
+    "ladderCheck": "Check the ladder",
+    "ladderRung": "Rung {n}",
+    "mirrorLight": "Light the Lantern",
+    "mirrorOpen": "Open the Gate",
+    "mirrorReset": "Reset mirrors",
+    "mirrorGuide": "Mirror guide",
+    "poemReset": "Start again",
+    "poemPoem": "The poem",
+    "switchStrike": "Strike Twelve",
+    "switchLit": "{n} of 12 hours lit",
+    "debugFx": "FX test",
+    "ladderFill": "Fill every rung first.",
+    "placedMore": "{name} placed. {n} more tool needed.",
+    "kindFIND": "Find",
+    "kindLEARN": "Read",
+    "kindINSPECT": "Look closer",
+    "kindUSE": "Use a tool",
+    "kindPANEL": "Puzzle",
+    "kindAUTO": "Exit",
+    "hintNeed": "Not enough Wits for a hint. You need {n}.",
+    "pourTarget": "Target (measures)",
+    "gearHow": "Crank gear turns X. X and Y spin together. Y turns the door. Big pushes small: faster. Small pushes big: slower. The door must be slow: one turn per 12 crank turns.",
+    "gearLive": "With these gears: {n} crank turns for one door turn. You need {t}.",
+    "winSub": "Time restarts. Wonderland is safe.",
+    "optMusic": "Music",
+    "optVoice": "Narration",
+    "optSfx": "Sound effects",
+    "optOn": "On",
+    "optOff": "Off"
+  },
+  "characters": {
+    "ellis": {
+      "name": "Ellis",
+      "color": "#6C8FB8",
+      "initials": "E",
+      "pitch": 1.0,
+      "rate": 1.0,
+      "bust": "ellis_neutral"
+    },
+    "cat": {
+      "name": "Cheshire Cat",
+      "color": "#8A5BB0",
+      "initials": "C",
+      "pitch": 0.7,
+      "rate": 0.85,
+      "bust": "cat_smile"
+    },
+    "rabbit": {
+      "name": "White Rabbit",
+      "color": "#C9B8A8",
+      "initials": "R",
+      "pitch": 1.5,
+      "rate": 1.3,
+      "bust": "rabbit"
+    },
+    "hatter": {
+      "name": "Mad Hatter",
+      "color": "#7C8A3A",
+      "initials": "H",
+      "pitch": 1.1,
+      "rate": 1.2,
+      "bust": "hatter"
+    },
+    "hare": {
+      "name": "March Hare",
+      "color": "#B08A5A",
+      "initials": "M",
+      "pitch": 1.3,
+      "rate": 1.3,
+      "bust": "hare"
+    },
+    "dormouse": {
+      "name": "Dormouse",
+      "color": "#9C7A6A",
+      "initials": "D",
+      "pitch": 0.9,
+      "rate": 0.7,
+      "bust": "dormouse"
+    },
+    "caterpillar": {
+      "name": "Caterpillar",
+      "color": "#3F78B5",
+      "initials": "C",
+      "pitch": 0.5,
+      "rate": 0.7,
+      "bust": "caterpillar"
+    },
+    "queen": {
+      "name": "Red Queen",
+      "color": "#B3262F",
+      "initials": "Q",
+      "pitch": 0.8,
+      "rate": 1.1,
+      "volume": 1,
+      "bust": "queen"
+    },
+    "gardener": {
+      "name": "Card Gardener",
+      "color": "#D45B6A",
+      "initials": "G",
+      "pitch": 1.2,
+      "rate": 1.1,
+      "bust": "gardener"
+    },
+    "knave": {
+      "name": "Knave of Hearts",
+      "color": "#A8402F",
+      "initials": "K",
+      "pitch": 1.2,
+      "rate": 1.0,
+      "bust": "knave"
+    },
+    "narrator": {
+      "name": "Storyteller",
+      "color": "#B58B2A",
+      "initials": "S",
+      "pitch": 0.9,
+      "rate": 0.9
+    },
+    "dodo": {
+      "name": "Dodo",
+      "color": "#A98A5A",
+      "initials": "D",
+      "pitch": 0.9,
+      "rate": 1.0,
+      "bust": "dodo"
+    },
+    "duchess": {
+      "name": "Duchess",
+      "color": "#7C4F8A",
+      "initials": "D",
+      "pitch": 1.0,
+      "rate": 1.0,
+      "bust": "duchess"
+    }
+  },
+  "mission": {
+    "kicker": "THE TWISTED WONDERLAND",
+    "heading": "Wonderland, Stopped",
+    "paragraphs": [
+      "Wonderland stopped at six o'clock. Every clock shows the same hour, and the Looking-Glass at the heart of the land has cracked. Its Twisted Rules have flipped the world upside down.",
+      "You are Ellis, a clockmaker's apprentice who fell down a rabbit hole chasing a late White Rabbit.",
+      "Reach the Court of Hearts and restart time within ten minutes, with the Cheshire Cat at your side."
+    ],
+    "audioFile": "assets/audio/voice/mission_0.mp3"
+  },
+  "tutorial": [
+    {
+      "target": "pano",
+      "text": "Drag to look around the room. Pinch or scroll to zoom."
+    },
+    {
+      "target": "none",
+      "text": "Tap glowing things to find, read or open them."
+    },
+    {
+      "target": "book",
+      "text": "The Book keeps your tools, notes and Twisted Rules."
+    },
+    {
+      "target": "pause",
+      "text": "The X closes any panel. Pause stops the clock."
+    },
+    {
+      "target": "stats",
+      "text": "Wits are your score. Hints cost 25 Wits and you get 3 in the whole game. Wrong answers cost 10. You have 10:00."
+    }
+  ],
+  "opening": [
+    "open1",
+    "open2",
+    "open3",
+    "open4",
+    "open5",
+    "open6"
+  ],
+  "idle": [
+    "idle1",
+    "idle2",
+    "idle3"
+  ],
+  "rooms": [
+    {
+      "id": "room1",
+      "name": "Hall of Falling Clocks",
+      "panorama": "assets/rooms/room1.webp",
+      "accent": "#C9A227",
+      "startYaw": 0,
+      "startPitch": 0,
+      "objective": "Open the great door of the Hall.",
+      "twistedRuleTitle": "Clocks count the wrong way",
+      "twistedRule": "Clocks count the wrong way. The minute wheel turns 12 times for one turn of the hour wheel.",
+      "panel": "gearTrain",
+      "finalPuzzle": false,
+      "dialogue": {
+        "enter": [
+          "r1_enter1",
+          "r1_enter2",
+          "r1_enter3"
+        ],
+        "disc": [
+          "r1_disc1",
+          "r1_disc2"
+        ],
+        "wrong": [
+          "r1_wrong1",
+          "r1_wrong2",
+          "r1_wrong3"
+        ],
+        "hint": [
+          "r1_hint",
+          "r1_hint2"
+        ],
+        "right": [
+          "r1_right1",
+          "r1_right2",
+          "r1_right3"
+        ]
+      }
+    },
+    {
+      "id": "room2",
+      "name": "Drink-Me Pantry",
+      "panorama": "assets/rooms/room2.webp",
+      "accent": "#2AA6A0",
+      "startYaw": 0,
+      "startPitch": 0,
+      "objective": "Shrink through the tiny door.",
+      "twistedRuleTitle": "Small is big, big is small",
+      "twistedRule": "Small is big, big is small. Trust the number, not the glass.",
+      "panel": "pouring",
+      "finalPuzzle": false,
+      "dialogue": {
+        "enter": [
+          "r2_enter1",
+          "r2_enter2"
+        ],
+        "disc": [
+          "r2_disc1",
+          "r2_disc2"
+        ],
+        "wrong": [
+          "r2_wrong1",
+          "r2_wrong2",
+          "r2_wrong3"
+        ],
+        "hint": [
+          "r2_hint",
+          "r2_hint2"
+        ],
+        "right": [
+          "r2_right1",
+          "r2_right2"
+        ]
+      }
+    },
+    {
+      "id": "room3",
+      "name": "The Mad Tea Party",
+      "panorama": "assets/rooms/room3.webp",
+      "accent": "#E0679A",
+      "startYaw": 0,
+      "startPitch": 0,
+      "objective": "Seat the guests so tea can end.",
+      "twistedRuleTitle": "It is always six o'clock",
+      "twistedRule": "It is always six o'clock. Guests sit by the six house rules.",
+      "panel": "seating",
+      "finalPuzzle": false,
+      "dialogue": {
+        "enter": [
+          "r3_enter1",
+          "r3_enter2"
+        ],
+        "disc": [
+          "r3_disc1",
+          "r3_disc2"
+        ],
+        "wrong": [
+          "r3_wrong1",
+          "r3_wrong2",
+          "r3_wrong3"
+        ],
+        "hint": [
+          "r3_hint",
+          "r3_hint2"
+        ],
+        "right": [
+          "r3_right1",
+          "r3_right2",
+          "r3_right3"
+        ]
+      }
+    },
+    {
+      "id": "room4",
+      "name": "Mushroom Glade",
+      "panorama": "assets/rooms/room4.webp",
+      "accent": "#6FAE4A",
+      "startYaw": 0,
+      "startPitch": 0,
+      "objective": "Answer the Caterpillar's question.",
+      "twistedRuleTitle": "Answers come as questions",
+      "twistedRule": "Answers come as questions. The Caterpillar speaks only in questions.",
+      "panel": "wordLadder",
+      "finalPuzzle": false,
+      "dialogue": {
+        "enter": [
+          "r4_enter1",
+          "r4_enter2",
+          "r4_enter3",
+          "r4_enter4"
+        ],
+        "disc": [
+          "r4_disc1",
+          "r4_disc2"
+        ],
+        "wrong": [
+          "r4_wrong1",
+          "r4_wrong2",
+          "r4_wrong3"
+        ],
+        "hint": [
+          "r4_hint",
+          "r4_hint2"
+        ],
+        "right": [
+          "r4_right1",
+          "r4_right2",
+          "r4_right3"
+        ]
+      }
+    },
+    {
+      "id": "room5",
+      "name": "Looking Wood",
+      "panorama": "assets/rooms/room5.webp",
+      "accent": "#8FB4D9",
+      "startYaw": 0,
+      "startPitch": 0,
+      "objective": "Light the way to the Looking-Glass gate.",
+      "twistedRuleTitle": "Light goes where it likes",
+      "twistedRule": "Light goes where it likes. Living mirrors bend the beam.",
+      "panel": "mirrorRouting",
+      "finalPuzzle": false,
+      "dialogue": {
+        "enter": [
+          "r5_enter1",
+          "r5_enter2"
+        ],
+        "disc": [
+          "r5_disc1",
+          "r5_disc2"
+        ],
+        "wrong": [
+          "r5_wrong1",
+          "r5_wrong2",
+          "r5_wrong3"
+        ],
+        "hint": [
+          "r5_hint",
+          "r5_hint2"
+        ],
+        "right": [
+          "r5_right1",
+          "r5_right2"
+        ]
+      }
+    },
+    {
+      "id": "room6",
+      "name": "Croquet Garden",
+      "panorama": "assets/rooms/room6.webp",
+      "accent": "#C8323C",
+      "startYaw": 0,
+      "startPitch": 0,
+      "objective": "Cross the Queen's lawn to the heart gate.",
+      "twistedRuleTitle": "Left is right",
+      "twistedRule": "Left is right. Every sign says left and means right.",
+      "panel": "poemPath",
+      "finalPuzzle": false,
+      "dialogue": {
+        "enter": [
+          "r6_enter1",
+          "r6_enter2"
+        ],
+        "disc": [
+          "r6_disc1",
+          "r6_disc2"
+        ],
+        "wrong": [
+          "r6_wrong1",
+          "r6_wrong2",
+          "r6_wrong3"
+        ],
+        "hint": [
+          "r6_hint",
+          "r6_hint2"
+        ],
+        "right": [
+          "r6_right1",
+          "r6_right2",
+          "r6_right3"
+        ]
+      }
+    },
+    {
+      "id": "room7",
+      "name": "Court of Hearts",
+      "panorama": "assets/rooms/room7.webp",
+      "accent": "#6B3FA0",
+      "accent2": "#E2B640",
+      "startYaw": 0,
+      "startPitch": 0,
+      "objective": "Restart time in the Court of Hearts.",
+      "twistedRuleTitle": "Sentence first, verdict after",
+      "twistedRule": "Sentence first, verdict after. The trial reads backward.",
+      "panel": "switchboard",
+      "finalPuzzle": true,
+      "dialogue": {
+        "enter": [
+          "r7_enter1",
+          "r7_enter2"
+        ],
+        "disc": [
+          "r7_disc1",
+          "r7_disc2"
+        ],
+        "wrong": [
+          "r7_wrong1",
+          "r7_wrong2",
+          "r7_wrong3"
+        ],
+        "hint": [
+          "r7_hint",
+          "r7_hint2"
+        ],
+        "right": [
+          "r7_right1",
+          "r7_right2"
+        ]
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "gear_case",
+      "name": "Gear Case",
+      "text": "Six brass gears, all different sizes. They have 6, 8, 12, 16, 18 and 24 teeth."
+    },
+    {
+      "id": "crank",
+      "name": "Crank Handle",
+      "text": "A crank handle, worn smooth. It fits the peg on the great door."
+    },
+    {
+      "id": "vial5",
+      "name": "Small Vial",
+      "text": "A small vial marked 5. It holds 5 measures."
+    },
+    {
+      "id": "vial8",
+      "name": "Tall Vial",
+      "text": "A tall vial marked 8. It holds 8 measures."
+    },
+    {
+      "id": "name_cards",
+      "name": "Name Cards",
+      "text": "Six place cards for the table: Hatter, March Hare, Dormouse, White Rabbit, Dodo and Duchess."
+    },
+    {
+      "id": "house_rules",
+      "name": "House Rules",
+      "text": "Rules 1 to 3: the Hatter sits in seat 1. The March Hare sits in the next seat, going clockwise. The Dormouse sits straight across from the Hatter."
+    },
+    {
+      "id": "clue_slate",
+      "name": "Clue Slate",
+      "text": "Five clues for a ladder: a great height, a story, a bathroom wall square, the sea's pull, neat, and very small."
+    },
+    {
+      "id": "chalk",
+      "name": "Chalk",
+      "text": "A stub of white chalk. Good for writing on the flat mushroom."
+    },
+    {
+      "id": "lantern",
+      "name": "Silver Lantern",
+      "text": "A silver lantern, still warm. It shines a beam of light."
+    },
+    {
+      "id": "mirror_guide",
+      "name": "Mirror Guide",
+      "text": "A slash mirror / turns a beam: east goes north, north goes east, west goes south, south goes west. A backslash mirror \\ turns it: east goes south, south goes east, west goes north, north goes west."
+    },
+    {
+      "id": "mallet",
+      "name": "Flamingo Mallet",
+      "text": "A flamingo, used as a mallet. Rude. It lets you walk on the lawn."
+    },
+    {
+      "id": "poem_scroll",
+      "name": "Poem Scroll",
+      "text": "A poem about roses. It tells which colour bed to step on, one row at a time."
+    },
+    {
+      "id": "clock_key",
+      "name": "Clock Key",
+      "text": "A heavy brass key. It opens the great clock case."
+    },
+    {
+      "id": "verdict_slate",
+      "name": "Verdict Slate",
+      "text": "Pressing an hour card flips that hour and its next-door hours. Hours 1 and 12 have only one neighbour. Light all twelve."
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "r1_wallclock",
+      "room": "room1",
+      "kind": "LEARN",
+      "label": "Wall clock",
+      "yaw": -99,
+      "pitch": 2,
+      "after": [],
+      "title": "The Wall Clock",
+      "text": "The numbers run 12, 11, 10 the wrong way round. In this hall the minute wheel turns 12 times for one turn of the hour wheel.",
+      "writesRule": true
+    },
+    {
+      "id": "r1_cabinet",
+      "room": "room1",
+      "kind": "FIND",
+      "label": "Clock cabinet",
+      "yaw": 138,
+      "pitch": -14,
+      "after": [
+        "r1_wallclock"
+      ],
+      "item": "gear_case",
+      "text": "Six brass gears, all different sizes."
+    },
+    {
+      "id": "r1_desk",
+      "room": "room1",
+      "kind": "FIND",
+      "label": "Rabbit's desk",
+      "yaw": -94,
+      "pitch": -30,
+      "after": [
+        "r1_wallclock"
+      ],
+      "item": "crank",
+      "text": "A crank handle, worn smooth."
+    },
+    {
+      "id": "r1_glass",
+      "room": "room1",
+      "kind": "INSPECT",
+      "label": "Stopped clock",
+      "yaw": -147,
+      "pitch": 4,
+      "after": [
+        "r1_wallclock"
+      ],
+      "title": "A Stopped Clock",
+      "view1": "Tiny scratches cover the glass.",
+      "view2": "The scratches look like claw marks. Something climbed here.",
+      "grinNote": "Scratched from outside, by something that climbs.",
+      "art": "inspect_clockglass"
+    },
+    {
+      "id": "r1_note",
+      "room": "room1",
+      "kind": "LEARN",
+      "label": "Rabbit's note",
+      "yaw": 66,
+      "pitch": -30,
+      "after": [
+        "r1_wallclock"
+      ],
+      "title": "The Rabbit's Note",
+      "text": "The door wheel is the hour wheel. It must turn once for each twelve crank turns."
+    },
+    {
+      "id": "r1_pegs",
+      "room": "room1",
+      "kind": "USE",
+      "label": "Door crank peg",
+      "yaw": 22,
+      "pitch": -19,
+      "after": [
+        "r1_cabinet",
+        "r1_desk",
+        "r1_note"
+      ],
+      "use": [
+        "crank",
+        "gear_case"
+      ],
+      "panel": "gearTrain"
+    },
+    {
+      "id": "r1_gears",
+      "room": "room1",
+      "kind": "PANEL",
+      "label": "Gear frame",
+      "yaw": 0,
+      "pitch": 8,
+      "after": [
+        "r1_pegs"
+      ],
+      "panel": "gearTrain"
+    },
+    {
+      "id": "r1_exit",
+      "room": "room1",
+      "kind": "AUTO",
+      "label": "Great door",
+      "yaw": 0,
+      "pitch": -5,
+      "after": [
+        "r1_gears"
+      ],
+      "exit": true
+    },
+    {
+      "id": "r2_door",
+      "room": "room2",
+      "kind": "LEARN",
+      "label": "Tiny door",
+      "yaw": -110,
+      "pitch": -48,
+      "after": [],
+      "title": "The Tiny Door",
+      "text": "A small plate says: Fit for six measures only.",
+      "writesRule": true
+    },
+    {
+      "id": "r2_vial5",
+      "room": "room2",
+      "kind": "FIND",
+      "label": "Shelf",
+      "yaw": -125,
+      "pitch": -26,
+      "after": [
+        "r2_door"
+      ],
+      "item": "vial5",
+      "text": "A small vial marked 5."
+    },
+    {
+      "id": "r2_vial8",
+      "room": "room2",
+      "kind": "FIND",
+      "label": "Shelf",
+      "yaw": -110,
+      "pitch": -26,
+      "after": [
+        "r2_door"
+      ],
+      "item": "vial8",
+      "text": "A tall vial marked 8."
+    },
+    {
+      "id": "r2_label",
+      "room": "room2",
+      "kind": "INSPECT",
+      "label": "Drink-Me label",
+      "yaw": 20,
+      "pitch": 4,
+      "after": [
+        "r2_door"
+      ],
+      "title": "The Drink-Me Label",
+      "view1": "A big paper label hangs on the jug.",
+      "view2": "A curly tail is drawn where the name should be. The writer signs with a tail.",
+      "grinNote": "The writer signs with a tail, not a name.",
+      "art": "inspect_label"
+    },
+    {
+      "id": "r2_rule",
+      "room": "room2",
+      "kind": "LEARN",
+      "label": "Vial label",
+      "yaw": 168,
+      "pitch": 48,
+      "after": [
+        "r2_door"
+      ],
+      "title": "The Vial Label",
+      "text": "Small looks big and big looks small. Trust the number, not the glass."
+    },
+    {
+      "id": "r2_jug",
+      "room": "room2",
+      "kind": "USE",
+      "label": "Drink-Me jug",
+      "yaw": 8,
+      "pitch": -5,
+      "after": [
+        "r2_vial5",
+        "r2_vial8",
+        "r2_rule"
+      ],
+      "use": [
+        "vial5",
+        "vial8"
+      ],
+      "panel": "pouring"
+    },
+    {
+      "id": "r2_pour",
+      "room": "room2",
+      "kind": "PANEL",
+      "label": "Jug, vials and drain",
+      "yaw": 8,
+      "pitch": -5,
+      "after": [
+        "r2_jug"
+      ],
+      "panel": "pouring"
+    },
+    {
+      "id": "r2_exit",
+      "room": "room2",
+      "kind": "AUTO",
+      "label": "Tiny door",
+      "yaw": -110,
+      "pitch": -48,
+      "after": [
+        "r2_pour"
+      ],
+      "exit": true
+    },
+    {
+      "id": "r3_cloth",
+      "room": "room3",
+      "kind": "FIND",
+      "label": "Tablecloth",
+      "yaw": -68,
+      "pitch": -38,
+      "after": [],
+      "item": "name_cards",
+      "text": "Six place cards, all blank."
+    },
+    {
+      "id": "r3_hat",
+      "room": "room3",
+      "kind": "FIND",
+      "label": "Hat on the chair",
+      "yaw": 6,
+      "pitch": 8,
+      "after": [],
+      "item": "house_rules",
+      "text": "A scroll of tea table rules.",
+      "writesRule": true
+    },
+    {
+      "id": "r3_scroll",
+      "room": "room3",
+      "kind": "LEARN",
+      "label": "House Rules scroll",
+      "yaw": 6,
+      "pitch": 8,
+      "after": [
+        "r3_hat"
+      ],
+      "title": "House Rules 1 to 3",
+      "text": "Rule 1: the Hatter sits in seat 1. Rule 2: the March Hare sits in the next seat, going clockwise. Rule 3: the Dormouse sits straight across from the Hatter."
+    },
+    {
+      "id": "r3_dormouse",
+      "room": "room3",
+      "kind": "LEARN",
+      "label": "Dormouse's cup",
+      "yaw": 38,
+      "pitch": -21,
+      "after": [],
+      "title": "The Dormouse Mumbles",
+      "text": "Rule 4: the White Rabbit is not next to the March Hare. Rule 5: the Dodo is next to the Dormouse. Rule 6: the Duchess is not next to the Dormouse."
+    },
+    {
+      "id": "r3_steam",
+      "room": "room3",
+      "kind": "INSPECT",
+      "label": "Teapot steam",
+      "yaw": -16,
+      "pitch": -14,
+      "after": [],
+      "title": "The Teapot Steam",
+      "view1": "The steam looks like a grin.",
+      "view2": "The Hatter says a friend with a wide smile asked him to keep it six o'clock, for a game.",
+      "grinNote": "A friend asked the Hatter to keep it six, \"for a game\".",
+      "art": "inspect_steam"
+    },
+    {
+      "id": "r3_table",
+      "room": "room3",
+      "kind": "USE",
+      "label": "Table",
+      "yaw": 0,
+      "pitch": -30,
+      "after": [
+        "r3_cloth",
+        "r3_scroll",
+        "r3_dormouse"
+      ],
+      "use": [
+        "name_cards"
+      ],
+      "panel": "seating"
+    },
+    {
+      "id": "r3_seats",
+      "room": "room3",
+      "kind": "PANEL",
+      "label": "Table and chairs",
+      "yaw": 0,
+      "pitch": -30,
+      "after": [
+        "r3_table"
+      ],
+      "panel": "seating"
+    },
+    {
+      "id": "r3_exit",
+      "room": "room3",
+      "kind": "AUTO",
+      "label": "Teapot door",
+      "yaw": 88,
+      "pitch": 26,
+      "after": [
+        "r3_seats"
+      ],
+      "exit": true
+    },
+    {
+      "id": "r4_cater",
+      "room": "room4",
+      "kind": "LEARN",
+      "label": "Caterpillar",
+      "yaw": -52,
+      "pitch": 40,
+      "after": [],
+      "title": "The Caterpillar",
+      "text": "He only speaks in questions. Ask the right question back: the ladder on the flat mushroom goes from TALL to TINY.",
+      "writesRule": true
+    },
+    {
+      "id": "r4_stump",
+      "room": "room4",
+      "kind": "FIND",
+      "label": "Stump slate",
+      "yaw": 127,
+      "pitch": -8,
+      "after": [
+        "r4_cater"
+      ],
+      "item": "clue_slate",
+      "text": "Five clues for a ladder."
+    },
+    {
+      "id": "r4_chalk",
+      "room": "room4",
+      "kind": "FIND",
+      "label": "Under a cap",
+      "yaw": 95,
+      "pitch": -36,
+      "after": [
+        "r4_cater"
+      ],
+      "item": "chalk",
+      "text": "A stub of white chalk."
+    },
+    {
+      "id": "r4_smoke",
+      "room": "room4",
+      "kind": "INSPECT",
+      "label": "Smoke",
+      "yaw": 20,
+      "pitch": 50,
+      "after": [
+        "r4_cater"
+      ],
+      "title": "The Smoke",
+      "view1": "The smoke spells a word in the air.",
+      "view2": "It says STAY. Who wants someone to stay?",
+      "grinNote": "The smoke says STAY. Who wants someone to stay?",
+      "art": "inspect_smoke"
+    },
+    {
+      "id": "r4_cap",
+      "room": "room4",
+      "kind": "USE",
+      "label": "Flat mushroom",
+      "yaw": 50,
+      "pitch": -36,
+      "after": [
+        "r4_stump",
+        "r4_chalk"
+      ],
+      "use": [
+        "chalk"
+      ],
+      "panel": "wordLadder"
+    },
+    {
+      "id": "r4_ladder",
+      "room": "room4",
+      "kind": "PANEL",
+      "label": "Chalk ladder",
+      "yaw": 50,
+      "pitch": -36,
+      "after": [
+        "r4_cap"
+      ],
+      "panel": "wordLadder"
+    },
+    {
+      "id": "r4_exit",
+      "room": "room4",
+      "kind": "AUTO",
+      "label": "Path through the smoke",
+      "yaw": -36,
+      "pitch": -12,
+      "after": [
+        "r4_ladder"
+      ],
+      "exit": true
+    },
+    {
+      "id": "r5_trees",
+      "room": "room5",
+      "kind": "LEARN",
+      "label": "Mirror trees",
+      "yaw": 70,
+      "pitch": 50,
+      "after": [],
+      "title": "The Mirror Trees",
+      "text": "The leaves are tiny mirrors. In this wood, light goes where it likes, and living mirrors can be turned.",
+      "writesRule": true
+    },
+    {
+      "id": "r5_hollow",
+      "room": "room5",
+      "kind": "FIND",
+      "label": "Root hollow",
+      "yaw": -114,
+      "pitch": -46,
+      "after": [
+        "r5_trees"
+      ],
+      "item": "lantern",
+      "text": "A silver lantern, still warm."
+    },
+    {
+      "id": "r5_stump",
+      "room": "room5",
+      "kind": "FIND",
+      "label": "Carved stone",
+      "yaw": 50,
+      "pitch": 0,
+      "after": [
+        "r5_trees"
+      ],
+      "item": "mirror_guide",
+      "text": "A card showing how mirrors turn light."
+    },
+    {
+      "id": "r5_glass",
+      "room": "room5",
+      "kind": "INSPECT",
+      "label": "Standing glass",
+      "yaw": -76,
+      "pitch": 16,
+      "after": [
+        "r5_trees"
+      ],
+      "title": "The Standing Glass",
+      "view1": "A big mirror in a gold frame.",
+      "view2": "It shows a wide grin, but no cat. Whose grin is it?",
+      "grinNote": "The glass shows a grin with no cat. Whose grin?",
+      "art": "inspect_standing_glass"
+    },
+    {
+      "id": "r5_stand",
+      "room": "room5",
+      "kind": "USE",
+      "label": "Lantern stand",
+      "yaw": -150,
+      "pitch": -4,
+      "after": [
+        "r5_hollow",
+        "r5_stump"
+      ],
+      "use": [
+        "lantern"
+      ],
+      "panel": "mirrorRouting"
+    },
+    {
+      "id": "r5_grid",
+      "room": "room5",
+      "kind": "PANEL",
+      "label": "Mirror grid",
+      "yaw": 0,
+      "pitch": -30,
+      "after": [
+        "r5_stand"
+      ],
+      "panel": "mirrorRouting"
+    },
+    {
+      "id": "r5_exit",
+      "room": "room5",
+      "kind": "AUTO",
+      "label": "Looking-Glass gate",
+      "yaw": 128,
+      "pitch": 24,
+      "after": [
+        "r5_grid"
+      ],
+      "exit": true
+    },
+    {
+      "id": "r6_signs",
+      "room": "room6",
+      "kind": "LEARN",
+      "label": "Signposts",
+      "yaw": -154,
+      "pitch": -46,
+      "after": [],
+      "title": "The Signposts",
+      "text": "Every sign says LEFT, but the arrow points right. In this garden, left is right.",
+      "writesRule": true
+    },
+    {
+      "id": "r6_mallet",
+      "room": "room6",
+      "kind": "FIND",
+      "label": "Mallet stand",
+      "yaw": -140,
+      "pitch": 2,
+      "after": [
+        "r6_signs"
+      ],
+      "item": "mallet",
+      "text": "A flamingo, used as a mallet. Rude."
+    },
+    {
+      "id": "r6_pocket",
+      "room": "room6",
+      "kind": "FIND",
+      "label": "Card Gardener's pocket",
+      "yaw": -108,
+      "pitch": -22,
+      "after": [
+        "r6_signs"
+      ],
+      "item": "poem_scroll",
+      "text": "A poem about roses."
+    },
+    {
+      "id": "r6_hedge",
+      "room": "room6",
+      "kind": "INSPECT",
+      "label": "The hedge",
+      "yaw": 2,
+      "pitch": 24,
+      "after": [
+        "r6_signs"
+      ],
+      "title": "The Hedge",
+      "view1": "A gap in the leaves shaped like a smile.",
+      "view2": "A smiling voice from this hedge gave the Queen all her strange rules.",
+      "grinNote": "The Queen's rules came from a smiling voice in the hedge.",
+      "art": "inspect_hedge"
+    },
+    {
+      "id": "r6_lawn",
+      "room": "room6",
+      "kind": "USE",
+      "label": "The lawn",
+      "yaw": 0,
+      "pitch": -32,
+      "after": [
+        "r6_mallet",
+        "r6_pocket"
+      ],
+      "use": [
+        "mallet"
+      ],
+      "panel": "poemPath"
+    },
+    {
+      "id": "r6_path",
+      "room": "room6",
+      "kind": "PANEL",
+      "label": "Lawn beds",
+      "yaw": 0,
+      "pitch": -32,
+      "after": [
+        "r6_lawn"
+      ],
+      "panel": "poemPath"
+    },
+    {
+      "id": "r6_exit",
+      "room": "room6",
+      "kind": "AUTO",
+      "label": "Heart gate",
+      "yaw": -86,
+      "pitch": 26,
+      "after": [
+        "r6_path"
+      ],
+      "exit": true
+    },
+    {
+      "id": "r7_slate",
+      "room": "room7",
+      "kind": "LEARN",
+      "label": "Knave's slate",
+      "yaw": -98,
+      "pitch": -24,
+      "after": [],
+      "title": "The Knave's Slate",
+      "text": "The slate says: sentence first, verdict after. In this court the trial reads backward.",
+      "writesRule": true
+    },
+    {
+      "id": "r7_throne",
+      "room": "room7",
+      "kind": "FIND",
+      "label": "Under the throne",
+      "yaw": 2,
+      "pitch": 10,
+      "after": [
+        "r7_slate"
+      ],
+      "item": "clock_key",
+      "text": "A heavy brass key."
+    },
+    {
+      "id": "r7_bench",
+      "room": "room7",
+      "kind": "FIND",
+      "label": "Judge's bench",
+      "yaw": 110,
+      "pitch": -34,
+      "after": [
+        "r7_slate"
+      ],
+      "item": "verdict_slate",
+      "text": "The press rule is written here."
+    },
+    {
+      "id": "r7_crack",
+      "room": "room7",
+      "kind": "INSPECT",
+      "label": "Crack in the glass",
+      "yaw": 12,
+      "pitch": 52,
+      "after": [
+        "r7_slate"
+      ],
+      "title": "The Crack",
+      "view1": "A long crack runs across the Looking-Glass.",
+      "view2": "The crack is shaped like a wide smile.",
+      "grinNote": "A crack shaped like a wide smile.",
+      "art": "inspect_crack"
+    },
+    {
+      "id": "r7_case",
+      "room": "room7",
+      "kind": "USE",
+      "label": "Clock case",
+      "yaw": -156,
+      "pitch": -4,
+      "after": [
+        "r7_throne",
+        "r7_bench"
+      ],
+      "use": [
+        "clock_key"
+      ],
+      "panel": "switchboard"
+    },
+    {
+      "id": "r7_switch",
+      "room": "room7",
+      "kind": "PANEL",
+      "label": "Twelve hour cards",
+      "yaw": -156,
+      "pitch": 26,
+      "after": [
+        "r7_case"
+      ],
+      "panel": "switchboard"
+    },
+    {
+      "id": "r7_clock",
+      "room": "room7",
+      "kind": "AUTO",
+      "label": "Court clock",
+      "yaw": -156,
+      "pitch": 26,
+      "after": [
+        "r7_switch"
+      ],
+      "ending": true
+    }
+  ],
+  "dialogue": {
+    "open1": {
+      "speaker": "ellis",
+      "text": "A hole, a fall, and now every clock says six.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/open1.mp3"
+    },
+    "open2": {
+      "speaker": "cat",
+      "text": "Welcome, Ellis. Wonderland is a little twisted today.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/open2.mp3"
+    },
+    "open3": {
+      "speaker": "ellis",
+      "text": "Twisted how?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/open3.mp3"
+    },
+    "open4": {
+      "speaker": "cat",
+      "text": "Each place has a rule that flipped. Learn it and the place gives way.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/open4.mp3"
+    },
+    "open5": {
+      "speaker": "ellis",
+      "text": "And the way out?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/open5.mp3"
+    },
+    "open6": {
+      "speaker": "cat",
+      "text": "The Court of Hearts. Ten minutes, I'd say. Shall we?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/open6.mp3"
+    },
+    "idle1": {
+      "speaker": "cat",
+      "text": "Try turning around. Drag to look around.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/idle1.mp3"
+    },
+    "idle2": {
+      "speaker": "cat",
+      "text": "Something here wants a closer look.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/idle2.mp3"
+    },
+    "idle3": {
+      "speaker": "cat",
+      "text": "Tap the glowing things, dear.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/idle3.mp3"
+    },
+    "r1_enter1": {
+      "speaker": "rabbit",
+      "text": "Late, late! The door will not open and the clocks will not move!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_enter1.mp3"
+    },
+    "r1_enter2": {
+      "speaker": "ellis",
+      "text": "Every clock says six.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_enter2.mp3"
+    },
+    "r1_enter3": {
+      "speaker": "cat",
+      "text": "And the numbers run backward. Charming.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_enter3.mp3"
+    },
+    "r1_disc1": {
+      "speaker": "ellis",
+      "text": "A gear frame and a crank peg. It is just a clock.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1_disc1.mp3"
+    },
+    "r1_disc2": {
+      "speaker": "cat",
+      "text": "Gears like rules. Find the rule.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1_disc2.mp3"
+    },
+    "r1_wrong1": {
+      "speaker": "cat",
+      "text": "Close. Count the teeth. Bigger gears turn slower.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_wrong1.mp3"
+    },
+    "r1_wrong2": {
+      "speaker": "cat",
+      "text": "The door turns once for every twelve cranks. Check the Rabbit's note.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_wrong2.mp3"
+    },
+    "r1_wrong3": {
+      "speaker": "cat",
+      "text": "One of your two gears is four times the other.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_wrong3.mp3"
+    },
+    "r1_hint": {
+      "speaker": "cat",
+      "text": "Teeth tell you speed. Pair a big gear with a small one.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_hint.mp3"
+    },
+    "r1_hint2": {
+      "speaker": "cat",
+      "text": "Try the biggest gear first, then the smallest.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_hint2.mp3"
+    },
+    "r1_right1": {
+      "speaker": "ellis",
+      "text": "Twelve cranks, one door turn. Just like a clock.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1_right1.mp3"
+    },
+    "r1_right2": {
+      "speaker": "cat",
+      "text": "You read time the right way round. How rare.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1_right2.mp3"
+    },
+    "r1_right3": {
+      "speaker": "rabbit",
+      "text": "Go, go, go!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1_right3.mp3"
+    },
+    "r2_enter1": {
+      "speaker": "ellis",
+      "text": "Shelves of bottles, and a door the size of a mousehole.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_enter1.mp3"
+    },
+    "r2_enter2": {
+      "speaker": "cat",
+      "text": "Drink the right amount and you fit. The wrong amount, and you will regret it.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_enter2.mp3"
+    },
+    "r2_disc1": {
+      "speaker": "ellis",
+      "text": "Two vials, a jug and a drain. It is a measuring puzzle.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_disc1.mp3"
+    },
+    "r2_disc2": {
+      "speaker": "cat",
+      "text": "Small is big here. Trust the numbers.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_disc2.mp3"
+    },
+    "r2_wrong1": {
+      "speaker": "cat",
+      "text": "Not six. Empty a vial and pour again.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_wrong1.mp3"
+    },
+    "r2_wrong2": {
+      "speaker": "cat",
+      "text": "Fill the big vial, pour it into the small one, and see what is left.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_wrong2.mp3"
+    },
+    "r2_wrong3": {
+      "speaker": "cat",
+      "text": "You may empty a vial into the drain between pours.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_wrong3.mp3"
+    },
+    "r2_hint": {
+      "speaker": "cat",
+      "text": "Pour the big vial into the small one and look at what is left.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_hint.mp3"
+    },
+    "r2_hint2": {
+      "speaker": "cat",
+      "text": "Fill, pour, empty, pour, fill, pour. Six moves.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2_hint2.mp3"
+    },
+    "r2_right1": {
+      "speaker": "ellis",
+      "text": "Six measures, exactly the size of the door.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_right1.mp3"
+    },
+    "r2_right2": {
+      "speaker": "cat",
+      "text": "Small is big. Delicious, isn't it?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2_right2.mp3"
+    },
+    "r3_enter1": {
+      "speaker": "hatter",
+      "text": "A friend with a wide smile asked us to keep it six o'clock. For a game!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_enter1.mp3"
+    },
+    "r3_enter2": {
+      "speaker": "cat",
+      "text": "Tea? No, thank you. I never take sugar with a secret.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_enter2.mp3"
+    },
+    "r3_disc1": {
+      "speaker": "ellis",
+      "text": "Six guests, six chairs, six rules.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3_disc1.mp3"
+    },
+    "r3_disc2": {
+      "speaker": "cat",
+      "text": "At this table, it is always six. Do not be late.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3_disc2.mp3"
+    },
+    "r3_wrong1": {
+      "speaker": "hatter",
+      "text": "No, no! That puts someone beside the wrong neighbour.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_wrong1.mp3"
+    },
+    "r3_wrong2": {
+      "speaker": "cat",
+      "text": "Start at the Hatter's chair and go around clockwise.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_wrong2.mp3"
+    },
+    "r3_wrong3": {
+      "speaker": "cat",
+      "text": "Seat the Hare and the Dormouse first. The rest follow.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_wrong3.mp3"
+    },
+    "r3_hint": {
+      "speaker": "cat",
+      "text": "The Hare and the Dormouse are fixed by the first three rules.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_hint.mp3"
+    },
+    "r3_hint2": {
+      "speaker": "cat",
+      "text": "Seats 3, 5 and 6 are left for the Dodo, Rabbit and Duchess. Use rules 4 to 6.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_hint2.mp3"
+    },
+    "r3_right1": {
+      "speaker": "hatter",
+      "text": "Perfect! Time for tea. Again.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3_right1.mp3"
+    },
+    "r3_right2": {
+      "speaker": "ellis",
+      "text": "The teapot door is opening.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3_right2.mp3"
+    },
+    "r3_right3": {
+      "speaker": "cat",
+      "text": "It is always six o'clock. A lovely hour to leave.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3_right3.mp3"
+    },
+    "r4_enter1": {
+      "speaker": "caterpillar",
+      "text": "Who... are... you?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_enter1.mp3"
+    },
+    "r4_enter2": {
+      "speaker": "ellis",
+      "text": "A clockmaker's apprentice. Why?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_enter2.mp3"
+    },
+    "r4_enter3": {
+      "speaker": "caterpillar",
+      "text": "Why are you?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_enter3.mp3"
+    },
+    "r4_enter4": {
+      "speaker": "cat",
+      "text": "He only answers in questions. Do ask him back.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_enter4.mp3"
+    },
+    "r4_disc1": {
+      "speaker": "ellis",
+      "text": "Start tall, end tiny, one letter at a time.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4_disc1.mp3"
+    },
+    "r4_disc2": {
+      "speaker": "cat",
+      "text": "Like shrinking, but in spelling.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4_disc2.mp3"
+    },
+    "r4_wrong1": {
+      "speaker": "caterpillar",
+      "text": "Is that one letter? Is that a word?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_wrong1.mp3"
+    },
+    "r4_wrong2": {
+      "speaker": "cat",
+      "text": "Change only one letter each time, and match the clue.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_wrong2.mp3"
+    },
+    "r4_wrong3": {
+      "speaker": "cat",
+      "text": "Read the clue again. Does your word fit it?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_wrong3.mp3"
+    },
+    "r4_hint": {
+      "speaker": "cat",
+      "text": "The first rung is a story. TALL loses one letter and gains another.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_hint.mp3"
+    },
+    "r4_hint2": {
+      "speaker": "cat",
+      "text": "A story, a wall square, the sea's pull, then neat.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_hint2.mp3"
+    },
+    "r4_right1": {
+      "speaker": "caterpillar",
+      "text": "Is that who you are? Tiny?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4_right1.mp3"
+    },
+    "r4_right2": {
+      "speaker": "ellis",
+      "text": "Apparently so. The smoke is opening a path.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4_right2.mp3"
+    },
+    "r4_right3": {
+      "speaker": "cat",
+      "text": "He asked, you answered. Rare as a quiet clock.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4_right3.mp3"
+    },
+    "r5_enter1": {
+      "speaker": "ellis",
+      "text": "Trees with mirrors for leaves.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_enter1.mp3"
+    },
+    "r5_enter2": {
+      "speaker": "cat",
+      "text": "Delightful. They show everything. Almost.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_enter2.mp3"
+    },
+    "r5_disc1": {
+      "speaker": "ellis",
+      "text": "A lantern, a gate and two stones that must glow.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_disc1.mp3"
+    },
+    "r5_disc2": {
+      "speaker": "cat",
+      "text": "Light goes where it likes. Make it like where you like.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_disc2.mp3"
+    },
+    "r5_wrong1": {
+      "speaker": "cat",
+      "text": "The beam left by the wrong door. Follow it from the lantern.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_wrong1.mp3"
+    },
+    "r5_wrong2": {
+      "speaker": "cat",
+      "text": "A stone stayed dark. Both Grin Stones must glow.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_wrong2.mp3"
+    },
+    "r5_wrong3": {
+      "speaker": "cat",
+      "text": "Hedges swallow light. Keep the beam away from them.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_wrong3.mp3"
+    },
+    "r5_hint": {
+      "speaker": "cat",
+      "text": "The two mirrors by the lantern send the beam east along row 6.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_hint.mp3"
+    },
+    "r5_hint2": {
+      "speaker": "cat",
+      "text": "The beam goes up the right side, back down column G, then loops to the gate on row 8.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5_hint2.mp3"
+    },
+    "r5_right1": {
+      "speaker": "ellis",
+      "text": "The beam crossed itself and still found the gate.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_right1.mp3"
+    },
+    "r5_right2": {
+      "speaker": "cat",
+      "text": "Lovely. Now, which of us does the glass flatter?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5_right2.mp3"
+    },
+    "r6_enter1": {
+      "speaker": "queen",
+      "text": "Off with their... oh. A guest. Walk my garden wrong and I shall be cross!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_enter1.mp3"
+    },
+    "r6_enter2": {
+      "speaker": "cat",
+      "text": "She says that to everyone. She means it about half the time.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_enter2.mp3"
+    },
+    "r6_disc1": {
+      "speaker": "ellis",
+      "text": "Six beds to cross, one poem to follow.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_disc1.mp3"
+    },
+    "r6_disc2": {
+      "speaker": "cat",
+      "text": "Mind the signs. Everyone does, and everyone is wrong.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_disc2.mp3"
+    },
+    "r6_wrong1": {
+      "speaker": "gardener",
+      "text": "Oh dear! That is a guard card bed!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_wrong1.mp3"
+    },
+    "r6_wrong2": {
+      "speaker": "cat",
+      "text": "Check the colour of each bed against the poem, line by line.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_wrong2.mp3"
+    },
+    "r6_wrong3": {
+      "speaker": "cat",
+      "text": "The poem's left is the garden's right.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_wrong3.mp3"
+    },
+    "r6_hint": {
+      "speaker": "cat",
+      "text": "Left is right here. Turn right at the fourth bed.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_hint.mp3"
+    },
+    "r6_hint2": {
+      "speaker": "cat",
+      "text": "Start at the pink in the middle of the front row.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_hint2.mp3"
+    },
+    "r6_right1": {
+      "speaker": "queen",
+      "text": "How dare you walk it right! Carry on.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6_right1.mp3"
+    },
+    "r6_right2": {
+      "speaker": "ellis",
+      "text": "Left was right all along.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_right2.mp3"
+    },
+    "r6_right3": {
+      "speaker": "cat",
+      "text": "A clever rule, whoever made it.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6_right3.mp3"
+    },
+    "r7_enter1": {
+      "speaker": "ellis",
+      "text": "The glass, the clock, and no Queen.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_enter1.mp3"
+    },
+    "r7_enter2": {
+      "speaker": "cat",
+      "text": "She is busy being furious elsewhere. Shall we begin?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_enter2.mp3"
+    },
+    "r7_disc1": {
+      "speaker": "ellis",
+      "text": "Twelve hour cards. Each press changes its neighbours too.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_disc1.mp3"
+    },
+    "r7_disc2": {
+      "speaker": "cat",
+      "text": "Time is a chain. Pull one link, others follow.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_disc2.mp3"
+    },
+    "r7_wrong1": {
+      "speaker": "knave",
+      "text": "The hours are not all lit. The court objects.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_wrong1.mp3"
+    },
+    "r7_wrong2": {
+      "speaker": "cat",
+      "text": "Start at hour 1. It changes only if you press 1 or 2.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_wrong2.mp3"
+    },
+    "r7_wrong3": {
+      "speaker": "cat",
+      "text": "Work left to right. Fix one hour, then move on.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_wrong3.mp3"
+    },
+    "r7_hint": {
+      "speaker": "cat",
+      "text": "Hour 1 is lit. Press 1 and see what hour 2 does.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_hint.mp3"
+    },
+    "r7_hint2": {
+      "speaker": "cat",
+      "text": "The presses are 1, 2, 4, 6, 8 and 11. Do not tell the Knave.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7_hint2.mp3"
+    },
+    "r7_right1": {
+      "speaker": "ellis",
+      "text": "Twelve hours, all lit.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_right1.mp3"
+    },
+    "r7_right2": {
+      "speaker": "cat",
+      "text": "Splendid. And now, Ellis, the part I was dreading.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7_right2.mp3"
+    },
+    "end1": {
+      "speaker": "ellis",
+      "text": "Claw scratches. A curly tail. A friend with a wide smile. The word STAY.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/end1.mp3"
+    },
+    "end2": {
+      "speaker": "ellis",
+      "text": "A grin in the glass with no cat. It was always you.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/end2.mp3"
+    },
+    "end3": {
+      "speaker": "cat",
+      "text": "You found me out. I only wanted a friend who would stay.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/end3.mp3"
+    },
+    "end4": {
+      "speaker": "ellis",
+      "text": "Wonderland froze because of you, but I know why.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/end4.mp3"
+    },
+    "end5": {
+      "speaker": "cat",
+      "text": "The glass is yours to decide. I will not stop you.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/end5.mp3"
+    }
+  },
+  "panels": {
+    "gearTrain": {
+      "title": "The Door Gears",
+      "goal": "Pick two gears. The door must turn once for every 12 crank turns. Tap a gear to place it. Tap a placed gear to take it back.",
+      "pinion": 10,
+      "door": 30,
+      "target": 12,
+      "gears": [
+        6,
+        8,
+        12,
+        16,
+        18,
+        24
+      ],
+      "clue": "Rabbit's note: the door must turn once for each twelve crank turns."
+    },
+    "pouring": {
+      "title": "The Measuring Table",
+      "goal": "Get exactly 6 measures in one vial, then drink. Pouring and spilling are free. Drinking the wrong amount costs Wits.",
+      "a": 5,
+      "b": 8,
+      "goalAmount": 6,
+      "clue": "Door plate: fit for six measures only."
+    },
+    "seating": {
+      "title": "The Tea Table",
+      "goal": "Seat all six guests by the rules. Seats go clockwise from 1.",
+      "guests": [
+        {
+          "id": "hatter",
+          "name": "Hatter"
+        },
+        {
+          "id": "hare",
+          "name": "March Hare"
+        },
+        {
+          "id": "dormouse",
+          "name": "Dormouse"
+        },
+        {
+          "id": "rabbit",
+          "name": "White Rabbit"
+        },
+        {
+          "id": "dodo",
+          "name": "Dodo"
+        },
+        {
+          "id": "duchess",
+          "name": "Duchess"
+        }
+      ],
+      "rules": [
+        "The Hatter sits in seat 1.",
+        "The March Hare sits in the next seat, going clockwise.",
+        "The Dormouse sits straight across from the Hatter.",
+        "The White Rabbit is not next to the March Hare.",
+        "The Dodo is next to the Dormouse.",
+        "The Duchess is not next to the Dormouse."
+      ]
+    },
+    "wordLadder": {
+      "title": "The Chalk Ladder",
+      "goal": "Go from TALL to TINY. Change only one letter on each rung, and make a real word that fits the clue.",
+      "start": {
+        "word": "TALL",
+        "clue": "A great height"
+      },
+      "rungs": [
+        {
+          "word": "TALE",
+          "clue": "A story you tell"
+        },
+        {
+          "word": "TILE",
+          "clue": "A square on a bathroom wall"
+        },
+        {
+          "word": "TIDE",
+          "clue": "The sea pulls it in and out"
+        },
+        {
+          "word": "TIDY",
+          "clue": "Neat and not messy"
+        }
+      ],
+      "end": {
+        "word": "TINY",
+        "clue": "Very small"
+      }
+    },
+    "mirrorRouting": {
+      "title": "The Mirror Floor",
+      "goal": "Tap the living mirrors (shiny ones) to flip them. Make the beam light both Grin Stones and leave through the gate on row 8.",
+      "size": 9,
+      "lantern": {
+        "x": 0,
+        "y": 4,
+        "dir": "E"
+      },
+      "hedges": [
+        "B1",
+        "F4",
+        "C8",
+        "D9"
+      ],
+      "fixed": [
+        [
+          "B4",
+          "/"
+        ],
+        [
+          "H6",
+          "/"
+        ],
+        [
+          "G9",
+          "/"
+        ],
+        [
+          "D2",
+          "\\"
+        ],
+        [
+          "F5",
+          "\\"
+        ],
+        [
+          "I8",
+          "\\"
+        ]
+      ],
+      "living": [
+        "G2",
+        "H2",
+        "B5",
+        "B6",
+        "I6",
+        "G8",
+        "H9",
+        "I9"
+      ],
+      "start": "/",
+      "stones": [
+        "G3",
+        "H4"
+      ],
+      "gate": {
+        "dir": "E",
+        "row": 8
+      },
+      "tilesPerSec": 6,
+      "guide": "Mirror / : east goes north, north goes east, west goes south, south goes west. Mirror \\ : east goes south, south goes east, west goes north, north goes west."
+    },
+    "poemPath": {
+      "title": "The Rose Lawn",
+      "goal": "Follow the poem from the front row to the back row. Tap one bed per row, going up. You may step straight or one bed sideways. Never step on a guard card.",
+      "rows": [
+        "CWPWW",
+        "WWRWC",
+        "RWCWP",
+        "PPPPR",
+        "WPRPC",
+        "PCWPP"
+      ],
+      "colNames": "ABCDE",
+      "poemColors": [
+        "P",
+        "W",
+        "R",
+        "P",
+        "P",
+        "P"
+      ],
+      "turnStep": 3,
+      "poem": [
+        "Start on a rose that blushes pink.",
+        "Next, pearl-white, quick as a blink.",
+        "Then cherry red, the Queen's own pride.",
+        "Now turn to the left for a pink one beside.",
+        "Pink again, and pink once more:",
+        "The last pink rose is the Queen's front door."
+      ],
+      "legend": {
+        "P": "Pink",
+        "W": "White",
+        "R": "Red",
+        "C": "Guard card"
+      },
+      "twistNote": "Garden rule: LEFT is RIGHT. When the poem says left, step to the right. Start at the bottom row."
+    },
+    "switchboard": {
+      "title": "The Twelve Hours",
+      "goal": "Light all twelve hour cards. Pressing a card flips it and the cards next to it. Presses are free.",
+      "start": [
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "count": 12
+    }
+  },
+  "ending": {
+    "lines": [
+      "end1",
+      "end2",
+      "end3",
+      "end4",
+      "end5"
+    ],
+    "grinNotesDuring": [
+      "end1",
+      "end2"
+    ],
+    "choices": [
+      {
+        "id": "shatter",
+        "title": "Shatter the glass and go home.",
+        "summary": "The glass breaks into light. Wonderland ticks once and fades. Ellis wakes at the clockmaker's bench, and the shop clock shows a faint grin.",
+        "seed": "A playing card falls with your name on it: \"The Looking-Glass has a twin. Come before six.\""
+      },
+      {
+        "id": "mend",
+        "title": "Mend the glass and stay.",
+        "summary": "Ellis mends the crack with brass, and time starts again. The Cat becomes the Court's clock-keeper, right at Ellis's side.",
+        "seed": "A playing card falls with your name on it: \"The Looking-Glass has a twin. Come before six.\" The mended glass has a new small crack, shaped like a key."
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+/* cowbull: a compass-dial lock. Glyph slots in a brass rail, pips on the right (filled copper = right place, hollow silver = misplaced). */
+.cbhist{display:grid;gap:4px;margin:4px auto;max-width:360px;padding:6px;border-radius:10px;background:rgba(0,0,0,.35);border:2px solid var(--edge3)}
+.cbrow{display:flex;align-items:center;justify-content:center;gap:6px}.cbempty{opacity:.4;min-height:30px}.cbnum{font:700 12px var(--head);color:var(--mute)}
+.cbslot{width:44px;height:44px;border-radius:50%;border:2px solid var(--sand);background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--gold) 45%,var(--bg3)),var(--bg2));display:flex;align-items:center;justify-content:center;color:var(--gold2);padding:5px}
+.cbhist .cbslot{width:30px;height:30px;padding:3px}.cbslot svg{width:100%;height:100%}.cbsel.blank{border-style:dashed;background:rgba(0,0,0,.35)}
+.cbpips{display:inline-flex;gap:4px;margin-left:6px}.cbpips i{width:11px;height:11px;border-radius:50%;border:2px solid var(--sand);display:inline-block}
+.cbpips .pr{background:var(--gold);border-color:var(--gold)}.cbpips .pn{opacity:.25}
+.cblegend{text-align:center;font-size:14px;color:var(--sand);margin:4px 0}.cbleft{text-align:center;font:700 14px var(--head);color:var(--gold2);margin:2px 0 6px}
+.cbpad{display:grid;grid-template-columns:repeat(auto-fit,minmax(54px,1fr));gap:6px;max-width:520px;margin:10px auto 0}.cbkey{padding:6px 2px;gap:2px}.cbkey svg.g{width:32px;height:32px}.cbkey small{font:600 10px var(--head);color:var(--sand)}.cbkey.used{opacity:.35}

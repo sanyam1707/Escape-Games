@@ -1,0 +1,64 @@
+/* PER-GAME LOOK. Everything in the HUD, panels, dialogue and menus reads these tokens.
+   Pick a palette from the story's world (NOT sand/gold by default) and ONE hud shape preset below.
+   Fonts must be LOCAL (assets/fonts, @font-face here). No CDN. */
+:root{
+  /* palette */
+  --bg:#14100d; --bg2:#211a15; --bg3:#332821;      /* from the panoramas: shadow family */
+  --gold:#d48349; --gold2:#f1ccb1;                  /* brightest lamp light (rust copper) + light tint */
+  --edge:#744c2f; --edge2:#b06c3b; --edge3:#5b3e29; /* accent darkened */
+  --mute:#7e6858; --sand:#a2b0c3; --papyrus:#e8ecf3;/* muted / cold silver / main text */
+  --turq:#4d82cb; --accent:#4d82cb;                 /* storm-window blue (minor hue of the art) */
+  --bad2:#f69f8e; --good2:#b0e8d5; --fx1:#f1ccb1; --fx2:#a2b0c3;
+  --head:"Im Fell English Sc",Georgia,serif; --body:"Cormorant Garamond",Georgia,serif;
+
+  /* HUD + TAP-MARKER LOOK comes from a PRESET (engine/presets), applied with tools/set_preset.py <Game> --hud <name> --mark <name>.
+     Do not hand-write HUD shapes here; only tweak tokens below the presets block if needed. */
+  /* optional: --btn-bg:...; --bar-bg:...; --btn:46px (button size); --icon-pad:11px (art inset) */
+}
+/* add rules below only if the world needs them (panel textures, title screen tint, etc.) */
+
+/* ==BOOK== inspect = brass porthole lens (the book itself comes from the book-ribbon preset) */
+.view{border:4px solid var(--turq);border-radius:50%;aspect-ratio:1;width:min(300px,78vw);min-height:0;margin:6px auto 10px;padding:32px;background:radial-gradient(circle at 38% 32%,color-mix(in srgb,var(--gold) 30%,var(--bg3)),var(--bg) 78%);box-shadow:inset 0 0 0 5px var(--bg),inset 0 0 0 7px var(--gold),inset 0 0 32px #000,0 6px 18px rgba(0,0,0,.6);font-size:19px;line-height:1.25}
+.insp{font-style:italic}.flip{display:inline-block;transform:scaleX(-1);font-style:normal;color:var(--gold2)}
+.secretspot{right:18%;bottom:12%}
+/* ==/BOOK== */
+
+/* ==FONTS== */
+@font-face{font-family:"Im Fell English Sc";font-weight:400;font-style:normal;src:url(assets/fonts/im-fell-english-sc-latin-400-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Cormorant Garamond";font-weight:400;font-style:normal;src:url(assets/fonts/cormorant-garamond-latin-400-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Cormorant Garamond";font-weight:700;font-style:normal;src:url(assets/fonts/cormorant-garamond-latin-700-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Cormorant Garamond";font-weight:400;font-style:italic;src:url(assets/fonts/cormorant-garamond-latin-400-italic.woff2) format("woff2");font-display:swap}
+/* ==/FONTS== */
+
+/* ==PRESETS== */
+/* HUD: chart parchment (Seas). No boxes: the clock is big plain lettering on the top edge, score is a small scroll, buttons are brass coins. Good for: pirates, maps, old libraries, letters, journals. */
+:root{--r-btn:50%;--r-pill:10px;--r-timer:0;--btn:46px;--btn-bg:radial-gradient(circle at 35% 30%,#d9b268,#8a6a2c 75%);--btn-bd:2px solid #3a2a10;--btn-sh:0 3px 6px rgba(0,0,0,.6);--bar-bg:linear-gradient(rgba(0,0,0,.55),transparent);--bar-bd:0}
+#timer{background:none;border:0;box-shadow:none;font-size:34px;font-weight:700;color:var(--papyrus);text-shadow:0 2px 0 #000,0 0 12px rgba(0,0,0,.9);padding:0 10px 4px}
+.pill{background:linear-gradient(#e7d3a0,#c4a463);color:#3a2a10;border:2px solid #6b4a1e;box-shadow:0 2px 5px rgba(0,0,0,.5)}
+.pill .hudico{filter:none}
+
+/* TAPS: light orbs (Kingdom Beyond the Door). A small soft orb of light with a bright core; a little diamond for use, a halo ring for puzzles. Good for: magic, dreams, spirits, fairy worlds. */
+.hs.learn>i,.hs.inspect>i{width:22px;height:22px;left:-11px;top:-11px;border:0;border-radius:50%;background:radial-gradient(circle,#fff 0 20%,var(--gold2) 34%,color-mix(in srgb,var(--gold) 45%,transparent) 62%,transparent 74%);box-shadow:0 0 14px var(--gold);opacity:.95;animation:glow 2.8s ease-in-out infinite;color:transparent}
+.hs.learn>i .ico,.hs.inspect>i .ico,.hs.use>i .ico,.hs.panel>i .ico{display:none}
+.hs.use>i{width:20px;height:20px;left:-10px;top:-10px;border:2px solid var(--turq);background:color-mix(in srgb,var(--turq) 28%,transparent);border-radius:3px;transform:rotate(45deg) scale(var(--s,1));box-shadow:0 0 10px var(--turq)}
+.hs.panel>i{width:32px;height:32px;left:-16px;top:-16px;background:none;border:2px solid var(--gold2);border-radius:50%;transform:scale(var(--s,1));box-shadow:0 0 14px var(--gold),inset 0 0 10px var(--gold)}
+.hs.find>i{width:40px;height:40px;left:-20px;top:-20px}.hs.find>i .itemico{width:36px;height:36px}
+.hs.exit>i{width:42px;height:42px;left:-21px;top:-21px}
+
+/* DLG: NAME TAB + SKIP CHIP (Legacy of Olympus / Twisted Wonderland). The name sits on a dark square tab on the top edge of the box; Skip is a small square chip floating above the top-right corner; the "tap" hint pulses bottom-left. Good for: myth, storybook, parchment looks. */
+#dName{left:calc(var(--bw) + 10px);top:-27px;padding:4px 16px 3px;border-radius:4px 4px 0 0;background:var(--bg);color:var(--gold2);border:2px solid var(--gold);border-bottom:0;font:700 13px var(--head);letter-spacing:.14em;box-shadow:none}
+#dSkip{top:-38px;right:6px;min-height:30px;padding:2px 14px;border-radius:4px;background:color-mix(in srgb,var(--bg) 92%,transparent);border:1px solid var(--gold);color:var(--gold2);font:700 12px var(--head);letter-spacing:.1em;text-transform:uppercase}
+#dTap{text-align:left;animation:pulse 1.6s infinite}
+
+/* BOOK: RIBBON BOOKMARKS (new; voyage logbook). A chart-paper page with a graticule; the tabs are ribbon bookmarks that hang over the TOP edge of the page with a notched tail; items are tiles with big art; notes are numbered discs. Good for: maps, voyages, journals, libraries, explorers. */
+.book{overflow:visible;margin-top:30px;background:repeating-linear-gradient(0deg,transparent 0 31px,color-mix(in srgb,var(--sand) 9%,transparent) 31px 32px),repeating-linear-gradient(90deg,transparent 0 31px,color-mix(in srgb,var(--sand) 9%,transparent) 31px 32px),linear-gradient(180deg,var(--bg3),var(--bg2));border:3px solid var(--gold);border-radius:6px;box-shadow:0 0 0 4px var(--bg),0 0 0 6px var(--turq),0 14px 40px rgba(0,0,0,.75)}
+.tabs{border:0;padding:0 58px 0 18px;gap:10px;position:relative;top:-30px;height:0;align-items:flex-start;z-index:3}
+.tab{min-width:84px;min-height:64px;padding:10px 10px 22px;border:0;border-radius:3px 3px 0 0;clip-path:polygon(0 0,100% 0,100% 100%,50% 80%,0 100%);background:linear-gradient(180deg,var(--gold),color-mix(in srgb,var(--gold) 55%,var(--bg)));color:var(--bg);font-size:12px;letter-spacing:.06em;line-height:1.1}
+.tab.on{background:linear-gradient(180deg,var(--turq),color-mix(in srgb,var(--turq) 60%,var(--bg)));color:#fff;min-height:74px;box-shadow:none}
+.bk{padding-top:58px}
+.bk:has(.irow){display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:10px;align-content:start}.bk:has(.irow) h5,.bk:has(.irow) .empty{grid-column:1/-1}
+.irow{flex-direction:column;align-items:center;text-align:center;gap:4px;padding:10px 6px;border:1.5px solid var(--edge2);border-radius:4px;background:rgba(8,12,30,.55);box-shadow:inset 0 3px 0 var(--gold)}.irow .itemico{width:72px;height:72px}.irow h4{font-size:13px}.irow small{font-size:13px}.irow p{display:none}.irow.sel{border-color:var(--turq);box-shadow:inset 0 3px 0 var(--turq)}
+.truth{align-items:center;border:1.5px solid var(--edge2);border-left:1.5px solid var(--edge2);border-radius:4px;background:rgba(8,12,30,.55)}.truth b{flex:none;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;border:2px solid var(--turq);color:var(--turq);background:var(--bg);font-size:16px}
+.note{border-left:4px solid var(--turq);border-radius:2px 8px 8px 2px;background:rgba(8,12,30,.55)}.note b{color:var(--turq)}.bk h5{color:var(--gold2);border-bottom:1px dashed var(--edge2);padding-bottom:4px}
+
+/* ==/PRESETS== */

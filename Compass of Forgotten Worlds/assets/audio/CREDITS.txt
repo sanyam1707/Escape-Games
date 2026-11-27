@@ -1,0 +1,4 @@
+Music: "Floating Cities" by Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+Used as the single looping background track (assets/audio/bgm.mp3).

@@ -1,0 +1,1723 @@
+{
+ "id": "academyofeternaldestiny",
+ "title": "Academy of Eternal Destiny",
+ "tagline": "Two towers. One storybook. One sunset.",
+ "modules": [
+  "venn",
+  "code",
+  "order",
+  "pour",
+  "untangle",
+  "cipher",
+  "stars",
+  "story"
+ ],
+ "config": {
+  "timerSeconds": 300,
+  "hintsTotal": 3,
+  "lockoutMs": 3000,
+  "idleSec": 40,
+  "score": {
+   "item": 5,
+   "secret": 5,
+   "roomReward": 30,
+   "finalReward": 50,
+   "wrong": 10,
+   "hint": 25
+  },
+  "particleCap": {
+   "phone": 60,
+   "desktop": 120
+  }
+ },
+ "ui": {
+  "start": "Tap to Start",
+  "begin": "Begin",
+  "next": "Next",
+  "skip": "Skip",
+  "close": "Close",
+  "confirm": "Confirm",
+  "scoreName": "Story Points",
+  "hint": "Hint",
+  "casebook": "Storybook notes",
+  "pause": "Pause",
+  "paused": "Paused",
+  "resume": "Resume",
+  "restartPanel": "Restart this panel",
+  "soundOn": "Sound: On",
+  "soundOff": "Sound: Off",
+  "voiceOn": "Narration: On",
+  "voiceOff": "Narration: Off",
+  "tabItems": "Items",
+  "tabTruths": "Truths",
+  "notes": "Clues you found",
+  "noItems": "Nothing yet. Look around the room.",
+  "noTruths": "No truths yet. Finish a room to learn one.",
+  "findStrip": "Find in this room",
+  "hold": "Hold to use",
+  "holding": "Holding",
+  "stopHolding": "Put away",
+  "holdHelp": "Now tap the right spot in the room.",
+  "useNothing": "Nothing happens. Try somewhere else.",
+  "needItem": "You need something for this. Open the notebook and hold an item.",
+  "savedItem": "Saved to your Items",
+  "savedNote": "Saved to your notes",
+  "secretFound": "Secret found!",
+  "reward": "Reward",
+  "objective": "Goal",
+  "hintNone": "No hints left.",
+  "hintDone": "Nothing left to solve here. Take the way out.",
+  "hintPoor": "Not enough {score} for a hint. You need {cost}.",
+  "hintUsed": "Hint used. -{cost} {score}",
+  "locked": "Wait {s}...",
+  "newTruth": "New truth in the notebook",
+  "takeExit": "The way is open. Go on.",
+  "usedUp": "Used up",
+  "inspectNext": "Next view",
+  "inspectPrev": "Back",
+  "tapSecret": "Something is hidden here. Tap the glowing spot.",
+  "pauseResumeHint": "The clock is stopped.",
+  "restarted": "Panel reset.",
+  "tapContinue": "Tap to continue"
+ },
+ "mission": {
+  "kicker": "Lumen Spire and Umbral Spire, sunset",
+  "heading": "The Eternal Storybook Chose",
+  "paras": [
+   "You are Wren of Lumen Spire and Dax of Umbral Spire. One academy, two towers, and at sunset the Eternal Storybook rewrites two students' fates.",
+   "It picked you: best friends, one hero and one villain-in-training. The Storybook means to write you apart.",
+   "Collect the Quill's three Story Sigils and reach Destiny Tower within five minutes to write your own ending."
+  ],
+  "audioFile": "assets/audio/voice/mission_0.mp3"
+ },
+ "tutorial": [
+  {
+   "target": "stage",
+   "text": "Drag to look around the room. Tap anything that looks like it belongs to the story.",
+   "audioFile": "assets/audio/voice/tutorial_0.mp3"
+  },
+  {
+   "target": "book",
+   "text": "Items and clues you find go into your notes. Open them any time to read them or hold an item.",
+   "audioFile": "assets/audio/voice/tutorial_1.mp3"
+  },
+  {
+   "target": "score",
+   "text": "Finds and solved puzzles earn Story Points. A wrong answer costs 10 and locks the panel for 3 seconds. Close any puzzle with the X.",
+   "audioFile": "assets/audio/voice/tutorial_2.mp3"
+  },
+  {
+   "target": "hint",
+   "text": "You have 3 hints for the whole game, 25 Story Points each. The 5:00 clock runs while you puzzle; it only pauses when Wren and Dax talk alone.",
+   "audioFile": "assets/audio/voice/tutorial_3.mp3"
+  }
+ ],
+ "speakers": {
+  "wren": {
+   "name": "Wren",
+   "pitch": 1.15,
+   "rate": 1.0,
+   "gender": "f",
+   "color": "#e9a897",
+   "initial": "W"
+  },
+  "dax": {
+   "name": "Dax",
+   "pitch": 0.85,
+   "rate": 1.05,
+   "gender": "m",
+   "color": "#b6f23c",
+   "initial": "D"
+  },
+  "orrin": {
+   "name": "Warden Orrin",
+   "pitch": 0.6,
+   "rate": 0.88,
+   "gender": "m",
+   "color": "#a98bff",
+   "initial": "O"
+  },
+  "narrator": {
+   "name": "Narrator",
+   "pitch": 0.95,
+   "rate": 0.92,
+   "gender": "f",
+   "color": "#bfc0ee",
+   "initial": "!"
+  }
+ },
+ "opening": [
+  "open.1",
+  "open.2",
+  "open.3",
+  "open.4"
+ ],
+ "idle": "idle.1",
+ "dialogue": [
+  {
+   "id": "open.1",
+   "speaker": "wren",
+   "text": "Dax... did the Storybook just say our names?",
+   "pausesTimer": true,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dlg_0_open_1.mp3"
+  },
+  {
+   "id": "open.2",
+   "speaker": "dax",
+   "text": "Both of them. Hero and villain, best friends, and it wants to split us up. Hard pass.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dlg_1_open_2.mp3"
+  },
+  {
+   "id": "open.3",
+   "speaker": "orrin",
+   "text": "Five minutes, little fates. Then the Storybook inks you apart. I will be listening through the speaking-stone.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_2_open_3.mp3"
+  },
+  {
+   "id": "open.4",
+   "speaker": "wren",
+   "text": "Then we collect the Quill's three Sigils and write our own ending. Let's move.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dlg_3_open_4.mp3"
+  },
+  {
+   "id": "idle.1",
+   "speaker": "orrin",
+   "text": "Tick, tock, little fates. Even the speaking-stone is yawning.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_4_idle_1.mp3"
+  },
+  {
+   "id": "r1.enter.1",
+   "speaker": "wren",
+   "text": "The Hall of Two Gates. Lumen on the left, Umbral on the right, and the first Sigil hidden somewhere between.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dlg_5_r1_enter_1.mp3"
+  },
+  {
+   "id": "r1.enter.2",
+   "speaker": "dax",
+   "text": "The floor is split in two halves. I bet it wants us to sort something. Read every plaque first.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dlg_6_r1_enter_2.mp3"
+  },
+  {
+   "id": "r1.find.1",
+   "speaker": "wren",
+   "text": "A Lumen pin. Its little star is cold, like it needs a flame.",
+   "pausesTimer": false,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dlg_7_r1_find_1.mp3"
+  },
+  {
+   "id": "r1.find.2",
+   "speaker": "dax",
+   "text": "An Umbral pin. It hums like a bad idea. I like it already.",
+   "pausesTimer": false,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_8_r1_find_2.mp3"
+  },
+  {
+   "id": "r1.use.1",
+   "speaker": "wren",
+   "text": "The sconce flares pearl-white, and a plaque shines out of the wall.",
+   "pausesTimer": false,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_9_r1_use_1.mp3"
+  },
+  {
+   "id": "r1.use.2",
+   "speaker": "dax",
+   "text": "Green fire! And another plaque comes out of the dark.",
+   "pausesTimer": false,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_10_r1_use_2.mp3"
+  },
+  {
+   "id": "r1.right.1",
+   "speaker": "dax",
+   "text": "The floor split open and the first Sigil rose from the seam. One down, two to go.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_11_r1_right_1.mp3"
+  },
+  {
+   "id": "r1.discuss",
+   "speaker": "wren",
+   "text": "The plaques said both towers prize courage and loyalty. We were never that different, Dax.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dlg_12_r1_discuss.mp3"
+  },
+  {
+   "id": "r1.hint",
+   "speaker": "wren",
+   "text": "Light the Lumen sconce with the Lumen pin, and the Umbral brazier with the Umbral pin. Then read every plaque: only heroes, only villains, and both.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_13_r1_hint.mp3"
+  },
+  {
+   "id": "r1.wrong.1",
+   "speaker": "dax",
+   "text": "Not quite. Check the plaques again. What do both towers share?",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dlg_14_r1_wrong_1.mp3"
+  },
+  {
+   "id": "r1.wrong.2",
+   "speaker": "orrin",
+   "text": "Oh dear. Sorted wrong, and in front of the whole hall.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_15_r1_wrong_2.mp3"
+  },
+  {
+   "id": "r2.enter.1",
+   "speaker": "dax",
+   "text": "The Storybook Library. Every book in here has an opinion about us.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dlg_16_r2_enter_1.mp3"
+  },
+  {
+   "id": "r2.enter.2",
+   "speaker": "wren",
+   "text": "A wall spell, torn story cards and a huge mirror. Something here only reads true in the glass.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dlg_17_r2_enter_2.mp3"
+  },
+  {
+   "id": "r2.find.1",
+   "speaker": "dax",
+   "text": "Reading spectacles. Dust is this library's real guardian.",
+   "pausesTimer": false,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_18_r2_find_1.mp3"
+  },
+  {
+   "id": "r2.find.2",
+   "speaker": "wren",
+   "text": "A jar of glowmoths. They will light any dark corner.",
+   "pausesTimer": false,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_19_r2_find_2.mp3"
+  },
+  {
+   "id": "r2.use.1",
+   "speaker": "wren",
+   "text": "The dust is gone. The spell is written backwards. Mirror writing!",
+   "pausesTimer": false,
+   "mood": "surprised",
+   "audioFile": "assets/audio/voice/dlg_20_r2_use_1.mp3"
+  },
+  {
+   "id": "r2.use.2",
+   "speaker": "dax",
+   "text": "The alcove lit up and the torn story pages came fluttering down.",
+   "pausesTimer": false,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_21_r2_use_2.mp3"
+  },
+  {
+   "id": "r2.right.1",
+   "speaker": "wren",
+   "text": "The code clicked, the cards flew into order, and Sigil two slid out of the shelf.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_22_r2_right_1.mp3"
+  },
+  {
+   "id": "r2.discuss",
+   "speaker": "dax",
+   "text": "The spell only made sense once we read it the other way round. Maybe endings can be turned round too.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dlg_23_r2_discuss.mp3"
+  },
+  {
+   "id": "r2.hint",
+   "speaker": "wren",
+   "text": "Clean the tapestry with the spectacles. Its spell reads true only in the big mirror, so flip every line. For the cards: the key comes first, the happy ending last.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_24_r2_hint.mp3"
+  },
+  {
+   "id": "r2.wrong.1",
+   "speaker": "wren",
+   "text": "That is not it. Read the spell the way the mirror would show it.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dlg_25_r2_wrong_1.mp3"
+  },
+  {
+   "id": "r2.wrong.2",
+   "speaker": "orrin",
+   "text": "Mirrors never lie, little hero. Only you do.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_26_r2_wrong_2.mp3"
+  },
+  {
+   "id": "r3.enter.1",
+   "speaker": "wren",
+   "text": "The Potion and Beast Workshop. And that glow-wisp in the cage is crying.",
+   "pausesTimer": true,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dlg_27_r3_enter_1.mp3"
+  },
+  {
+   "id": "r3.enter.2",
+   "speaker": "dax",
+   "text": "Cauldrons, cages and tangled rope. Honestly my favourite room. But we free the wisp first.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dlg_28_r3_enter_2.mp3"
+  },
+  {
+   "id": "r3.find.1",
+   "speaker": "wren",
+   "text": "Fang-proof gloves. Handy around thorns.",
+   "pausesTimer": false,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dlg_29_r3_find_1.mp3"
+  },
+  {
+   "id": "r3.find.2",
+   "speaker": "dax",
+   "text": "Silver shears. For things that bite, or sparkle.",
+   "pausesTimer": false,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dlg_30_r3_find_2.mp3"
+  },
+  {
+   "id": "r3.use.1",
+   "speaker": "dax",
+   "text": "The thorns parted and a warden's note fell out.",
+   "pausesTimer": false,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_31_r3_use_1.mp3"
+  },
+  {
+   "id": "r3.use.2",
+   "speaker": "wren",
+   "text": "The cupboard clicked open. The vials are labelled!",
+   "pausesTimer": false,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_32_r3_use_2.mp3"
+  },
+  {
+   "id": "r3.right.1",
+   "speaker": "wren",
+   "text": "The ropes fell loose and the wisp swirled free. It left the third Sigil in my hands.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_33_r3_right_1.mp3"
+  },
+  {
+   "id": "r3.discuss",
+   "speaker": "dax",
+   "text": "It was never trapped, only tangled. We kept pulling when we should have looked.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dlg_34_r3_discuss.mp3"
+  },
+  {
+   "id": "r3.hint",
+   "speaker": "wren",
+   "text": "You need exactly four measures with the three and five vials: fill the big one, pour it into the small one. Then drag the cage pegs until no rope crosses.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_35_r3_hint.mp3"
+  },
+  {
+   "id": "r3.wrong.1",
+   "speaker": "dax",
+   "text": "Wrong measure. Count what stays behind in the big vial.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dlg_36_r3_wrong_1.mp3"
+  },
+  {
+   "id": "r3.wrong.2",
+   "speaker": "orrin",
+   "text": "Splash. That is the sound of a failing apprentice.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_37_r3_wrong_2.mp3"
+  },
+  {
+   "id": "r4.enter.1",
+   "speaker": "wren",
+   "text": "Destiny Tower. The Storybook is right there, and it is listening.",
+   "pausesTimer": true,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dlg_38_r4_enter_1.mp3"
+  },
+  {
+   "id": "r4.enter.2",
+   "speaker": "dax",
+   "text": "Three sockets for three Sigils. Then we open the book and draw our sign in the stars.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dlg_39_r4_enter_2.mp3"
+  },
+  {
+   "id": "r4.use.1",
+   "speaker": "wren",
+   "text": "The Sigil sinks in with a soft chime.",
+   "pausesTimer": false,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dlg_40_r4_use_1.mp3"
+  },
+  {
+   "id": "r4.right.1",
+   "speaker": "dax",
+   "text": "The page is ours. Whatever we write, we write it together.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_41_r4_right_1.mp3"
+  },
+  {
+   "id": "r4.discuss",
+   "speaker": "wren",
+   "text": "The Storybook never wanted to split us. It just never learned that friends can choose.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dlg_42_r4_discuss.mp3"
+  },
+  {
+   "id": "r4.hint",
+   "speaker": "wren",
+   "text": "Put each Sigil in its socket. The margin note says which true letter sits under L. Then draw the sign from the moon banner: two peaks joined by a bridge, with one star below.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_43_r4_hint.mp3"
+  },
+  {
+   "id": "r4.wrong.1",
+   "speaker": "dax",
+   "text": "Check the margin note. The wheel has to turn exactly right.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dlg_44_r4_wrong_1.mp3"
+  },
+  {
+   "id": "r4.wrong.2",
+   "speaker": "orrin",
+   "text": "Tut tut. The Storybook is losing patience, and so am I.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_45_r4_wrong_2.mp3"
+  },
+  {
+   "id": "end.1",
+   "speaker": "wren",
+   "text": "We did it, Dax. Our ending.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_46_end_1.mp3"
+  },
+  {
+   "id": "end.2",
+   "speaker": "dax",
+   "text": "Our ending. Together.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dlg_47_end_2.mp3"
+  },
+  {
+   "id": "end.3",
+   "speaker": "orrin",
+   "text": "The speaking-stone goes quiet. For the first time, so do I.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dlg_48_end_3.mp3"
+  }
+ ],
+ "items": {
+  "lumenpin": {
+   "name": "Lumen Pin",
+   "material": "Pearl and silver",
+   "text": "A pin from the Lumen tower. Its tiny star is cold and wants a flame.",
+   "icon": "gem",
+   "usable": true
+  },
+  "umbralpin": {
+   "name": "Umbral Pin",
+   "material": "Violet glass",
+   "text": "A pin from the Umbral tower. It hums softly and smells of green smoke.",
+   "icon": "gem",
+   "usable": true
+  },
+  "feather": {
+   "name": "Swan Feather",
+   "material": "Silver down",
+   "text": "Fell from the carved swans over the Lumen Gate. Heroes sign their oaths with feathers like this.",
+   "icon": "paper"
+  },
+  "ticket": {
+   "name": "Sealed Letter",
+   "material": "Wax and paper",
+   "text": "A letter sealed with the crests of both towers. It was meant for two friends who never opened it.",
+   "icon": "paper"
+  },
+  "spectacles": {
+   "name": "Reading Spectacles",
+   "material": "Brass and glass",
+   "text": "Wiped clean, they see through the dust of old tapestries.",
+   "icon": "coin",
+   "usable": true
+  },
+  "foxkey": {
+   "name": "Silver Fox Key",
+   "material": "Silver",
+   "text": "A key shaped like a fox cub. The very first page of a story has one just like it.",
+   "icon": "key"
+  },
+  "ribbon": {
+   "name": "Bookmark Ribbon",
+   "material": "Silk",
+   "text": "A violet ribbon, marked at the page where two friends meet in a garden.",
+   "icon": "paper"
+  },
+  "glowjar": {
+   "name": "Glowmoth Jar",
+   "material": "Glass",
+   "text": "Tiny moths that glow wherever the dark is thickest.",
+   "icon": "gem",
+   "usable": true
+  },
+  "ladle": {
+   "name": "Copper Ladle",
+   "material": "Copper",
+   "text": "Dented from stirring too many cauldrons. It is not for biting dragons.",
+   "icon": "box"
+  },
+  "phial": {
+   "name": "Moonwater Phial",
+   "material": "Glass",
+   "text": "Water caught under last night's full moon. The wisp loves its taste.",
+   "icon": "gem"
+  },
+  "gloves": {
+   "name": "Fang-proof Gloves",
+   "material": "Dragon hide",
+   "text": "Stitched thick enough to handle thorn-vines and cranky hatchlings.",
+   "icon": "box",
+   "usable": true
+  },
+  "tongs": {
+   "name": "Silver Shears",
+   "material": "Silver",
+   "text": "For snipping things that sparkle, sting or bite. They also pick odd cupboard locks.",
+   "icon": "key",
+   "usable": true
+  },
+  "locket": {
+   "name": "Friendship Locket",
+   "material": "Rose-gold",
+   "text": "Inside are two tiny sketches: a hero with a lantern, a villain with a raven.",
+   "icon": "coin"
+  },
+  "compass": {
+   "name": "Fate Compass",
+   "material": "Brass",
+   "text": "The needle ignores north. It points at whoever matters most to you.",
+   "icon": "coin"
+  },
+  "hourglass": {
+   "name": "Sunset Hourglass",
+   "material": "Glass and gold",
+   "text": "The sand inside never runs out, but it always runs slowly toward sunset.",
+   "icon": "box"
+  },
+  "starchart": {
+   "name": "Star Chart",
+   "material": "Folded vellum",
+   "text": "A chart of the Destiny Tower's ceiling. Someone has circled two peaks and a bridge.",
+   "icon": "paper"
+  },
+  "sigil1": {
+   "name": "Sigil of Light",
+   "material": "Pearl",
+   "text": "The first of the Quill's three Story Sigils. It glows warm, like a lantern in a window.",
+   "icon": "gem",
+   "usable": true
+  },
+  "sigil2": {
+   "name": "Sigil of Shadow",
+   "material": "Violet crystal",
+   "text": "The second Sigil. It sparkles acid-green when nobody is looking.",
+   "icon": "gem",
+   "usable": true
+  },
+  "sigil3": {
+   "name": "Sigil of Ink",
+   "material": "Rose-gold",
+   "text": "The third Sigil. It belongs to neither tower and both.",
+   "icon": "gem",
+   "usable": true
+  }
+ },
+ "truths": [
+  "Heroes and villains share more than the towers admit: courage and loyalty belong to both.",
+  "A story can be read backwards, and its ending can still be turned round.",
+  "What looks trapped is often only tangled. Patience frees what force cannot.",
+  "Friends write the best endings, because they write them together."
+ ],
+ "puzzles": {
+  "r1venn": {
+   "help": "Tap a trait, then tap Hero, Both or Villain. Tap a placed trait to pick it up again.",
+   "zones": [
+    {
+     "id": "hero",
+     "label": "Hero"
+    },
+    {
+     "id": "both",
+     "label": "Both"
+    },
+    {
+     "id": "villain",
+     "label": "Villain"
+    }
+   ],
+   "tokens": [
+    {
+     "id": "t1",
+     "label": "Keeps their word",
+     "zone": "hero"
+    },
+    {
+     "id": "t2",
+     "label": "Heals the wounded",
+     "zone": "hero"
+    },
+    {
+     "id": "t3",
+     "label": "Fights fair",
+     "zone": "hero"
+    },
+    {
+     "id": "t4",
+     "label": "Cunning",
+     "zone": "villain"
+    },
+    {
+     "id": "t5",
+     "label": "Ambitious",
+     "zone": "villain"
+    },
+    {
+     "id": "t6",
+     "label": "Bends the rules",
+     "zone": "villain"
+    },
+    {
+     "id": "t7",
+     "label": "Brave",
+     "zone": "both"
+    },
+    {
+     "id": "t8",
+     "label": "Loyal to a friend",
+     "zone": "both"
+    }
+   ],
+   "wrongText": "Some trait sits in the wrong circle. Reread the plaques."
+  },
+  "r2code": {
+   "help": "Tap a wheel to turn it. The wall spell gives the code in order, top to bottom.",
+   "length": 4,
+   "symbols": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "answer": [
+    "7",
+    "2",
+    "9",
+    "1"
+   ],
+   "wrongText": "The drawer stays shut."
+  },
+  "r2order": {
+   "help": "Tap the torn story cards in the order the story happens.",
+   "items": [
+    {
+     "id": "e",
+     "label": "The garden blooms for everyone"
+    },
+    {
+     "id": "c",
+     "label": "The rose sings a warning"
+    },
+    {
+     "id": "a",
+     "label": "The fox cub finds a silver key"
+    },
+    {
+     "id": "d",
+     "label": "The fox tames the thorn-dragon"
+    },
+    {
+     "id": "b",
+     "label": "The key opens a hidden garden"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+   ],
+   "wrongText": "The cards fly apart. Think about what must happen first."
+  },
+  "r3pour": {
+   "help": "Measure exactly 4 measures of moonwater. Fill, empty or pour between the two vials.",
+   "caps": [
+    3,
+    5
+   ],
+   "target": 4,
+   "names": [
+    "Small vial",
+    "Large vial"
+   ]
+  },
+  "r3untangle": {
+   "help": "Drag the pegs. Free the wisp by making sure no rope crosses another.",
+   "nodes": [
+    [
+     20,
+     20
+    ],
+    [
+     80,
+     80
+    ],
+    [
+     25,
+     80
+    ],
+    [
+     78,
+     22
+    ],
+    [
+     50,
+     50
+    ],
+    [
+     60,
+     92
+    ]
+   ],
+   "edges": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ]
+   ],
+   "solution": [
+    [
+     50,
+     12
+    ],
+    [
+     85,
+     31
+    ],
+    [
+     85,
+     69
+    ],
+    [
+     50,
+     88
+    ],
+    [
+     15,
+     69
+    ],
+    [
+     15,
+     31
+    ]
+   ]
+  },
+  "r4cipher": {
+   "help": "Turn the inner ring with the arrows until the runes match the margin note, then confirm.",
+   "shift": 3,
+   "word": "IULHQGV",
+   "wrongText": "The runes do not line up yet."
+  },
+  "r4stars": {
+   "help": "Tap two stars to draw a line between them. Tap them again to erase it. Draw the friends' sign.",
+   "stars": [
+    [
+     15,
+     78
+    ],
+    [
+     30,
+     28
+    ],
+    [
+     50,
+     52
+    ],
+    [
+     70,
+     28
+    ],
+    [
+     85,
+     78
+    ],
+    [
+     50,
+     86
+    ],
+    [
+     50,
+     15
+    ]
+   ],
+   "edges": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     2,
+     5
+    ]
+   ],
+   "wrongText": "The stars flicker out. That is not their sign."
+  },
+  "r4story": {
+   "help": "The Storybook is open at its last page. How does your story end?",
+   "options": [
+    {
+     "label": "Good",
+     "text": "A bright ending for both towers.",
+     "closing": "Wren wrote the Light ending: the two Spires opened their gates to each other, and Dax, grumbling, carried the first lantern across."
+    },
+    {
+     "label": "Evil",
+     "text": "A dark ending, full of cunning.",
+     "closing": "Dax wrote the Shadow ending: the Umbral Spire rose as the grandest tower of all, and Wren, its only hero, still outwitted everyone in it."
+    },
+    {
+     "label": "Write Your Own",
+     "text": "Neither tower decides it.",
+     "closing": "Together they wrote a brand new first line: \"Two friends, one academy, and no fate but their own.\" The Storybook closed softly, and for the first time, it smiled."
+    }
+   ]
+  }
+ },
+ "rooms": [
+  {
+   "id": 1,
+   "name": "Hall of Two Gates",
+   "accent": "#e9a897",
+   "pano": "assets/rooms/room1.webp",
+   "objective": "Find the first Sigil. Read the plaques and sort the traits.",
+   "objectiveReady": "Sort the traits on the floor.",
+   "enter": [
+    "r1.enter.1",
+    "r1.enter.2"
+   ],
+   "right": [
+    "r1.right.1"
+   ],
+   "discuss": "r1.discuss",
+   "hint": "r1.hint",
+   "wrong": [
+    "r1.wrong.1",
+    "r1.wrong.2"
+   ],
+   "reward": {
+    "item": "sigil1",
+    "truth": 0,
+    "toast": "The first Sigil rises from the floor."
+   },
+   "hotspots": [
+    {
+     "id": "r1.lumenpin",
+     "kind": "FIND",
+     "label": "Lumen pin",
+     "yaw": -166.5,
+     "pitch": -34.2,
+     "item": "lumenpin",
+     "line": "r1.find.1"
+    },
+    {
+     "id": "r1.umbralpin",
+     "kind": "FIND",
+     "label": "Umbral pin",
+     "yaw": 164.7,
+     "pitch": -34.2,
+     "item": "umbralpin",
+     "line": "r1.find.2"
+    },
+    {
+     "id": "r1.feather",
+     "kind": "FIND",
+     "label": "Swan feather",
+     "yaw": -139.5,
+     "pitch": 44.1,
+     "item": "feather"
+    },
+    {
+     "id": "r1.ticket",
+     "kind": "FIND",
+     "label": "Sealed letter",
+     "yaw": -79.2,
+     "pitch": -19.8,
+     "item": "ticket"
+    },
+    {
+     "id": "r1.sconce",
+     "kind": "USE",
+     "label": "Lumen sconce",
+     "yaw": -98.1,
+     "pitch": -8.1,
+     "needs": "lumenpin",
+     "line": "r1.use.1"
+    },
+    {
+     "id": "r1.brazier",
+     "kind": "USE",
+     "label": "Umbral brazier",
+     "yaw": 96.3,
+     "pitch": 32.4,
+     "needs": "umbralpin",
+     "line": "r1.use.2"
+    },
+    {
+     "id": "r1.plaque.l",
+     "kind": "LEARN",
+     "label": "Lumen plaque",
+     "yaw": -55.8,
+     "pitch": -11.7,
+     "after": [
+      "r1.sconce"
+     ],
+     "title": "Lumen Plaque",
+     "text": "Lumen heroes keep their word, heal the wounded and fight fair."
+    },
+    {
+     "id": "r1.plaque.u",
+     "kind": "LEARN",
+     "label": "Umbral plaque",
+     "yaw": 55.8,
+     "pitch": -7.2,
+     "after": [
+      "r1.brazier"
+     ],
+     "title": "Umbral Plaque",
+     "text": "Umbral villains are cunning, ambitious and happy to bend the rules."
+    },
+    {
+     "id": "r1.plaque.m",
+     "kind": "LEARN",
+     "label": "Plaque between the gates",
+     "yaw": 0.0,
+     "pitch": -19.8,
+     "title": "Plaque Between the Gates",
+     "text": "Hero or villain, every student in this hall is brave and loyal to a friend."
+    },
+    {
+     "id": "r1.note",
+     "kind": "LEARN",
+     "label": "Headmistress's note",
+     "yaw": -171.0,
+     "pitch": -7.2,
+     "title": "Headmistress's Note",
+     "text": "Do not sort students by tower colour. Sort by trait: what only heroes are, what only villains are, and what both are."
+    },
+    {
+     "id": "r1.witch",
+     "kind": "INSPECT",
+     "label": "Sorceress of Umbral",
+     "yaw": 59.4,
+     "pitch": 39.6,
+     "title": "Sorceress of Umbral",
+     "views": [
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">A stone sorceress, her staff tipped with acid-green flame. She smiles like she knows your secrets.</div>",
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">At her feet someone scratched: \"Even villains need a friend.\"</div>"
+     ],
+     "secret": "Every villain began as someone who just wanted to be chosen."
+    },
+    {
+     "id": "r1.panel",
+     "kind": "PANEL",
+     "label": "The Sorting Floor",
+     "yaw": 0.0,
+     "pitch": -52.2,
+     "panel": "venn",
+     "puzzle": "r1venn",
+     "after": [
+      "r1.plaque.l",
+      "r1.plaque.u",
+      "r1.plaque.m",
+      "r1.note"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": 0.0,
+    "pitch": 5.4,
+    "label": "To the Library"
+   }
+  },
+  {
+   "id": 2,
+   "name": "Storybook Library",
+   "accent": "#a98bff",
+   "pano": "assets/rooms/room2.webp",
+   "objective": "Find the second Sigil. Crack the mirror spell and put the story in order.",
+   "objectiveReady": "Use the spell and the pages.",
+   "enter": [
+    "r2.enter.1",
+    "r2.enter.2"
+   ],
+   "right": [
+    "r2.right.1"
+   ],
+   "discuss": "r2.discuss",
+   "hint": "r2.hint",
+   "wrong": [
+    "r2.wrong.1",
+    "r2.wrong.2"
+   ],
+   "reward": {
+    "item": "sigil2",
+    "truth": 1,
+    "toast": "The second Sigil slides out of the shelf."
+   },
+   "hotspots": [
+    {
+     "id": "r2.spectacles",
+     "kind": "FIND",
+     "label": "Spectacles",
+     "yaw": -162.9,
+     "pitch": -48.6,
+     "item": "spectacles",
+     "line": "r2.find.1"
+    },
+    {
+     "id": "r2.foxkey",
+     "kind": "FIND",
+     "label": "Fox key",
+     "yaw": -43.2,
+     "pitch": -47.7,
+     "item": "foxkey"
+    },
+    {
+     "id": "r2.ribbon",
+     "kind": "FIND",
+     "label": "Bookmark ribbon",
+     "yaw": 126.0,
+     "pitch": -48.6,
+     "item": "ribbon"
+    },
+    {
+     "id": "r2.glowjar",
+     "kind": "FIND",
+     "label": "Glowmoth jar",
+     "yaw": 144.9,
+     "pitch": -30.6,
+     "item": "glowjar",
+     "line": "r2.find.2"
+    },
+    {
+     "id": "r2.dusty",
+     "kind": "USE",
+     "label": "Dusty tapestry",
+     "yaw": 0.0,
+     "pitch": 27.0,
+     "needs": "spectacles",
+     "line": "r2.use.1"
+    },
+    {
+     "id": "r2.dark",
+     "kind": "USE",
+     "label": "Dark alcove",
+     "yaw": -61.2,
+     "pitch": 12.6,
+     "needs": "glowjar",
+     "line": "r2.use.2"
+    },
+    {
+     "id": "r2.frame",
+     "kind": "LEARN",
+     "label": "Mirror frame",
+     "yaw": -153.0,
+     "pitch": 30.6,
+     "title": "Frame Inscription",
+     "text": "The looking-glass tells what the wall cannot. Read every line of the wall spell the way it would look in this mirror."
+    },
+    {
+     "id": "r2.wallspell",
+     "kind": "LEARN",
+     "label": "Wall spell",
+     "yaw": 0.0,
+     "pitch": 27.0,
+     "after": [
+      "r2.dusty"
+     ],
+     "title": "Wall Spell",
+     "text": "The Raven counted its treasures and wrote them on the wall, line by line, top to bottom:<div class=\"mirror-wrap\"><div class=\"mirror\">SEVEN CROWS</div><br><div class=\"mirror\">TWO KEYS</div><br><div class=\"mirror\">NINE ROSES</div><br><div class=\"mirror\">ONE MOON</div></div>"
+    },
+    {
+     "id": "r2.c1",
+     "kind": "LEARN",
+     "label": "Floating book",
+     "yaw": -63.0,
+     "pitch": 63.0,
+     "title": "Torn Page: Beginning",
+     "text": "The silver key comes first of all. Every story starts with a key."
+    },
+    {
+     "id": "r2.c2",
+     "kind": "LEARN",
+     "label": "Floating page",
+     "yaw": 172.8,
+     "pitch": 47.7,
+     "after": [
+      "r2.dark"
+     ],
+     "title": "Torn Page: Middle",
+     "text": "The garden must be unlocked before the rose can sing, and the rose sings its warning before the dragon is tamed."
+    },
+    {
+     "id": "r2.c3",
+     "kind": "LEARN",
+     "label": "Floating book",
+     "yaw": 118.8,
+     "pitch": 30.6,
+     "after": [
+      "r2.dark"
+     ],
+     "title": "Torn Page: End",
+     "text": "The very last page: the garden blooms for everyone."
+    },
+    {
+     "id": "r2.mirror",
+     "kind": "INSPECT",
+     "label": "Gilt looking-glass",
+     "yaw": -126.0,
+     "pitch": 12.6,
+     "title": "The Looking-Glass",
+     "views": [
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">A tall gilt mirror. The library inside it is the same, but every book is turned the other way.</div>",
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">In the glass, Wren stands on Dax's side, and Dax on Wren's. From here, you cannot tell hero from villain.</div>"
+     ],
+     "secret": "In a mirror, left becomes right, and every story can be read the other way."
+    },
+    {
+     "id": "r2.codepanel",
+     "kind": "PANEL",
+     "label": "The Raven's Drawer",
+     "yaw": 0.0,
+     "pitch": -25.2,
+     "panel": "code",
+     "puzzle": "r2code",
+     "after": [
+      "r2.frame",
+      "r2.wallspell"
+     ]
+    },
+    {
+     "id": "r2.orderpanel",
+     "kind": "PANEL",
+     "label": "Story Cards",
+     "yaw": -108.0,
+     "pitch": -52.2,
+     "panel": "order",
+     "puzzle": "r2order",
+     "after": [
+      "r2.c1",
+      "r2.c2",
+      "r2.c3"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": 68.4,
+    "pitch": 5.4,
+    "label": "Up the stairs"
+   }
+  },
+  {
+   "id": 3,
+   "name": "Potion and Beast Workshop",
+   "accent": "#b6f23c",
+   "pano": "assets/rooms/room3.webp",
+   "objective": "Find the third Sigil. Calm the wisp and free it.",
+   "objectiveReady": "Measure the moonwater and free the wisp.",
+   "enter": [
+    "r3.enter.1",
+    "r3.enter.2"
+   ],
+   "right": [
+    "r3.right.1"
+   ],
+   "discuss": "r3.discuss",
+   "hint": "r3.hint",
+   "wrong": [
+    "r3.wrong.1",
+    "r3.wrong.2"
+   ],
+   "reward": {
+    "item": "sigil3",
+    "truth": 2,
+    "toast": "The wisp leaves the third Sigil behind."
+   },
+   "hotspots": [
+    {
+     "id": "r3.ladle",
+     "kind": "FIND",
+     "label": "Ladle",
+     "yaw": -62.1,
+     "pitch": -16.2,
+     "item": "ladle"
+    },
+    {
+     "id": "r3.phial",
+     "kind": "FIND",
+     "label": "Moonwater phial",
+     "yaw": 45.0,
+     "pitch": 3.6,
+     "item": "phial"
+    },
+    {
+     "id": "r3.gloves",
+     "kind": "FIND",
+     "label": "Gloves",
+     "yaw": -12.6,
+     "pitch": -48.6,
+     "item": "gloves",
+     "line": "r3.find.1"
+    },
+    {
+     "id": "r3.tongs",
+     "kind": "FIND",
+     "label": "Silver shears",
+     "yaw": 86.4,
+     "pitch": -16.2,
+     "item": "tongs",
+     "line": "r3.find.2"
+    },
+    {
+     "id": "r3.cabinet",
+     "kind": "USE",
+     "label": "Locked cupboard",
+     "yaw": -100.8,
+     "pitch": 10.8,
+     "needs": "tongs",
+     "line": "r3.use.2"
+    },
+    {
+     "id": "r3.thorns",
+     "kind": "USE",
+     "label": "Thorny chest",
+     "yaw": 172.8,
+     "pitch": -54.0,
+     "needs": "gloves",
+     "line": "r3.use.1"
+    },
+    {
+     "id": "r3.recipe",
+     "kind": "LEARN",
+     "label": "Open recipe book",
+     "yaw": -21.6,
+     "pitch": -17.1,
+     "title": "Wisp Calming Draught",
+     "text": "Exactly 4 measures of moonwater, no more and no less. Too much drowns the glow; too little leaves it sad."
+    },
+    {
+     "id": "r3.vials",
+     "kind": "LEARN",
+     "label": "Vial labels",
+     "yaw": -100.8,
+     "pitch": 10.8,
+     "after": [
+      "r3.cabinet"
+     ],
+     "title": "Measuring Vials",
+     "text": "The small vial holds 3 measures and the large vial holds 5. The cauldron can refill either one."
+    },
+    {
+     "id": "r3.chart",
+     "kind": "LEARN",
+     "label": "Feeding chart",
+     "yaw": 126.0,
+     "pitch": 3.6,
+     "title": "Beast Feeding Chart",
+     "text": "Wisps feed on moonlight, dragons on embers, and every tangle on patience."
+    },
+    {
+     "id": "r3.cagenote",
+     "kind": "LEARN",
+     "label": "Warden's note",
+     "yaw": 172.8,
+     "pitch": 19.8,
+     "after": [
+      "r3.thorns"
+     ],
+     "title": "Cage Warden's Note",
+     "text": "The cage ropes are not knotted, only tangled. Move the pegs until no rope crosses another."
+    },
+    {
+     "id": "r3.dragons",
+     "kind": "INSPECT",
+     "label": "Dragon cage",
+     "yaw": 100.8,
+     "pitch": 36.0,
+     "title": "The Hatchling Cage",
+     "views": [
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">Two sleepy hatchlings, one ember-red and one slate-grey, share a cage and a blanket.</div>",
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">Their cage is tied with the same rope pattern as the wisp's.</div>"
+     ],
+     "secret": "Their names are scratched on the bars: \"Wren\" and \"Dax\"."
+    },
+    {
+     "id": "r3.pourpanel",
+     "kind": "PANEL",
+     "label": "Vial Bench",
+     "yaw": 7.2,
+     "pitch": -9.9,
+     "panel": "pour",
+     "puzzle": "r3pour",
+     "after": [
+      "r3.recipe",
+      "r3.vials"
+     ]
+    },
+    {
+     "id": "r3.cagepanel",
+     "kind": "PANEL",
+     "label": "The Wisp Cage",
+     "yaw": -134.1,
+     "pitch": 42.3,
+     "panel": "untangle",
+     "puzzle": "r3untangle",
+     "after": [
+      "r3.pourpanel",
+      "r3.cagenote"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": 142.2,
+    "pitch": -10.8,
+    "label": "Up the stairs"
+   }
+  },
+  {
+   "id": 4,
+   "name": "Destiny Tower",
+   "accent": "#fbe3dc",
+   "pano": "assets/rooms/room4.webp",
+   "objective": "Set the three Sigils, open the Storybook and write your ending.",
+   "objectiveReady": "Open the Storybook and write your ending.",
+   "enter": [
+    "r4.enter.1",
+    "r4.enter.2"
+   ],
+   "right": [
+    "r4.right.1"
+   ],
+   "discuss": "r4.discuss",
+   "hint": "r4.hint",
+   "wrong": [
+    "r4.wrong.1",
+    "r4.wrong.2"
+   ],
+   "reward": {
+    "truth": 3
+   },
+   "hotspots": [
+    {
+     "id": "r4.locket",
+     "kind": "FIND",
+     "label": "Locket",
+     "yaw": -117.0,
+     "pitch": -25.2,
+     "item": "locket"
+    },
+    {
+     "id": "r4.compass",
+     "kind": "FIND",
+     "label": "Compass",
+     "yaw": 122.4,
+     "pitch": -18.0,
+     "item": "compass"
+    },
+    {
+     "id": "r4.hourglass",
+     "kind": "FIND",
+     "label": "Hourglass",
+     "yaw": 86.4,
+     "pitch": -10.8,
+     "item": "hourglass"
+    },
+    {
+     "id": "r4.starchart",
+     "kind": "FIND",
+     "label": "Star chart",
+     "yaw": 90.0,
+     "pitch": -69.3,
+     "item": "starchart"
+    },
+    {
+     "id": "r4.s1",
+     "kind": "USE",
+     "label": "Sun socket",
+     "yaw": -10.8,
+     "pitch": -43.2,
+     "needs": "sigil1",
+     "line": "r4.use.1"
+    },
+    {
+     "id": "r4.s2",
+     "kind": "USE",
+     "label": "Moon socket",
+     "yaw": 10.8,
+     "pitch": -42.3,
+     "needs": "sigil2",
+     "line": "r4.use.1"
+    },
+    {
+     "id": "r4.s3",
+     "kind": "USE",
+     "label": "Chain lock",
+     "yaw": 0.0,
+     "pitch": -27.9,
+     "needs": "sigil3",
+     "line": "r4.use.1"
+    },
+    {
+     "id": "r4.c1",
+     "kind": "LEARN",
+     "label": "Sun banner",
+     "yaw": -116.1,
+     "pitch": 36.0,
+     "title": "Quill's Margin Note",
+     "text": "In the Storybook's margin the Quill scribbled: \"Under the rune L, the true letter I waits.\" Turn the wheel until they line up."
+    },
+    {
+     "id": "r4.c2",
+     "kind": "LEARN",
+     "label": "Moon banner",
+     "yaw": 117.0,
+     "pitch": 36.0,
+     "title": "The Friends' Sign",
+     "text": "Wren and Dax scratched it on every desk: two peaks joined by a bridge, with one star below.<svg viewBox=\"0 0 100 100\" width=\"150\" height=\"150\" style=\"display:block;margin:8px auto;background:rgba(0,0,30,.4);border-radius:12px;border:1.5px solid var(--edge2)\"><g stroke=\"#fbe3dc\" stroke-width=\"2.4\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M15 78L30 28L50 52L70 28L85 78M50 52L50 86\"/></g><g fill=\"#e9a897\"><circle cx=\"15\" cy=\"78\" r=\"3.5\"/><circle cx=\"30\" cy=\"28\" r=\"3.5\"/><circle cx=\"50\" cy=\"52\" r=\"3.5\"/><circle cx=\"70\" cy=\"28\" r=\"3.5\"/><circle cx=\"85\" cy=\"78\" r=\"3.5\"/><circle cx=\"50\" cy=\"86\" r=\"3.5\"/></g></svg>"
+    },
+    {
+     "id": "r4.c3",
+     "kind": "LEARN",
+     "label": "Lumen tower",
+     "yaw": -162.0,
+     "pitch": 21.6,
+     "title": "Warden Orrin's Slip",
+     "text": "\"The Storybook may only be rewritten by two who agree to write it together.\""
+    },
+    {
+     "id": "r4.throne1",
+     "kind": "INSPECT",
+     "label": "White throne",
+     "yaw": -120.6,
+     "pitch": 10.8,
+     "title": "Throne of Light",
+     "views": [
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">A pearl-white throne with a golden sun on its back.</div>",
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">Under the cushion someone left a small drawing of a raven.</div>"
+     ],
+     "secret": "The raven has a little lantern tied to its leg."
+    },
+    {
+     "id": "r4.wheel",
+     "kind": "PANEL",
+     "label": "Storybook Lock",
+     "yaw": -21.6,
+     "pitch": -11.7,
+     "panel": "cipher",
+     "puzzle": "r4cipher",
+     "after": [
+      "r4.s1",
+      "r4.s2",
+      "r4.s3",
+      "r4.c1"
+     ]
+    },
+    {
+     "id": "r4.stars",
+     "kind": "PANEL",
+     "label": "Star Dome",
+     "yaw": 0.0,
+     "pitch": 64.8,
+     "panel": "stars",
+     "puzzle": "r4stars",
+     "after": [
+      "r4.wheel",
+      "r4.c2"
+     ]
+    },
+    {
+     "id": "r4.choice",
+     "kind": "PANEL",
+     "label": "The Last Page",
+     "yaw": 0.0,
+     "pitch": -39.6,
+     "panel": "story",
+     "puzzle": "r4story",
+     "after": [
+      "r4.stars"
+     ]
+    }
+   ]
+  }
+ ],
+ "cinematic": [
+  "The three Sigils blaze. The Eternal Storybook turns to its last blank page.",
+  {
+   "say": [
+    "end.1",
+    "end.2",
+    "end.3"
+   ]
+  },
+  {
+   "ending": true,
+   "fallback": "Together they wrote a brand new first line, and the Storybook closed softly."
+  },
+  "Sunset fades. In the Academy of Eternal Destiny both towers are quiet, and two friends walk down the stairs together."
+ ],
+ "endScreens": {
+  "win": {
+   "title": "Fate Rewritten",
+   "text": "Wren and Dax closed the Eternal Storybook on their own terms.",
+   "button": "Play Again"
+  },
+  "timeup": {
+   "title": "The Storybook Closed",
+   "text": "Sunset ended before the ending was written. The Storybook will try again. So can you.",
+   "button": "Try Again"
+  }
+ },
+ "assets": {
+  "sizes": {
+   "title_key_art": "1792x1024",
+   "briefing_bg": "1792x1024"
+  },
+  "title": "assets/sheets/title_key_art.jpg",
+  "briefing": "assets/sheets/briefing_bg.jpg",
+  "music": null,
+  "cut": [
+   "wren_calm",
+   "wren_cheerful",
+   "wren_determined",
+   "wren_worried",
+   "dax_calm",
+   "dax_cheerful",
+   "dax_determined",
+   "dax_worried",
+   "orrin",
+   "icon_score",
+   "icon_hint",
+   "icon_casebook",
+   "icon_pause",
+   "lumenpin",
+   "umbralpin",
+   "feather",
+   "ticket",
+   "spectacles",
+   "foxkey",
+   "ribbon",
+   "glowjar",
+   "ladle",
+   "phial",
+   "gloves",
+   "tongs",
+   "locket",
+   "compass",
+   "hourglass",
+   "starchart",
+   "sigil1",
+   "sigil2",
+   "sigil3"
+  ],
+  "sheets": {
+   "wren_busts.png": "wren_calm wren_cheerful wren_determined wren_worried",
+   "dax_busts.png": "dax_calm dax_cheerful dax_determined dax_worried",
+   "orrin_bust.png": "orrin",
+   "hud_icons.png": "icon_score icon_hint icon_casebook icon_pause",
+   "items1.png": "lumenpin umbralpin feather chalk ticket",
+   "items2.png": "spectacles inkwell foxkey ribbon glowjar",
+   "items3.png": "ladle phial gloves tongs whistle",
+   "items4.png": "locket compass candle hourglass starchart",
+   "sigils.png": "sigil1 sigil2 sigil3"
+  }
+ }
+}

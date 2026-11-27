@@ -1,0 +1,24 @@
+/* Secret of the Sacred Symbols: Renaissance museum + secret brotherhood. Candle gold, dark wood, parchment, brass. */
+:root{
+  --gold:#D9A441; --gold2:#F6DE9A; --edge:#7A5A22; --edge2:#B98A32; --edge3:#8F6A28; --mute:#6B5A3A;
+  --sand:#C8A46A; --papyrus:#EADBB4; --fx1:#F6DE9A; --fx2:#C8A46A; --accent:#D9A441;
+  --basalt:#1A120C; --stone:#2A1D12; --stone2:#3A2918;
+  --head:Cinzel,Georgia,serif; --body:"Cormorant Garamond",Georgia,serif;
+}
+/* dark wood panels with a brass edge */
+.card{background:linear-gradient(180deg,#34231381,#1f140b),repeating-linear-gradient(90deg,#2d1e11 0 6px,#33231419 6px 12px);border-color:var(--edge2);box-shadow:0 0 0 4px #120b06,0 14px 40px rgba(0,0,0,.75),inset 0 0 40px rgba(0,0,0,.5)}
+.card h2{font-family:var(--head);color:var(--gold2);letter-spacing:.06em}
+/* parchment text blocks */
+.papyrus{background:linear-gradient(180deg,#eadbb4,#d6c18c);color:#3b2a12;border-radius:6px;padding:14px;font-family:var(--body);font-weight:700;font-size:19px;box-shadow:inset 0 0 22px rgba(120,80,20,.35)}
+/* brass buttons */
+.btn{background:linear-gradient(180deg,#d9a441,#8a5f16);border-color:var(--gold2);color:#1d1100;text-shadow:0 1px 0 rgba(255,255,255,.25)}
+.ibtn,.pill{border-color:var(--edge2);background:linear-gradient(180deg,#46301a,#1d1209)}
+#dlg{border-color:var(--edge2)}
+/* symbol tiles on the vault floor: engraved gold on dark stone */
+.opt.sq{background:linear-gradient(180deg,#2b2218,#17110a);border-color:var(--edge)}
+.opt.sq svg.g{color:var(--gold)}
+/* HUD icons: same brass frame for every button, art sits inside it */
+.ibtn.art{border:2px solid var(--edge2);border-radius:12px;background:linear-gradient(180deg,#46301a,#1d1209);box-shadow:inset 0 0 8px rgba(0,0,0,.6),0 2px 0 #4d3a07;display:grid;place-items:center}
+.ibtn.art .hudico{width:66%;height:66%;object-fit:contain}
+.pill .hudico,.pill.art .hudico{width:22px;height:26px}
+@media (max-width:460px){.pill.art .hudico,.pill .hudico{width:20px;height:24px}}

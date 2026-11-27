@@ -1,0 +1,16 @@
+/* rose: engraved brass compass on the card (theme tokens: --turq = copper/rust, --gold = verdigris, --sand = silver). */
+.rosebox{position:relative;width:min(178px,46vw);aspect-ratio:1;margin:10px auto 2px}
+.rosesvg{width:100%;height:100%;filter:drop-shadow(0 4px 8px rgba(0,0,0,.6))}
+.rr1{fill:color-mix(in srgb,var(--gold) 38%,var(--bg));stroke:var(--gold);stroke-width:4}
+.rr2{fill:var(--bg2);stroke:var(--sand);stroke-width:1.5}
+.rt{stroke:var(--sand);stroke-width:1.6}
+.rstar{fill:color-mix(in srgb,var(--turq) 55%,var(--bg2));stroke:var(--gold2);stroke-width:1.4;opacity:.85}
+.rneedle{transition:transform .9s cubic-bezier(.3,1.4,.5,1);transform-origin:0 0}
+.rn1{fill:var(--gold);stroke:#fff3;stroke-width:1}.rn2{fill:var(--sand);stroke:#0006;stroke-width:1}.rhub{fill:var(--bg);stroke:var(--gold2);stroke-width:2}
+.rbtn{position:absolute;width:42px;height:42px;border-radius:50%;border:2px solid var(--gold2);background:radial-gradient(circle at 35% 30%,var(--turq),var(--edge));color:var(--bg);font:700 18px var(--head);box-shadow:0 3px 0 var(--bg3),0 5px 10px rgba(0,0,0,.55)}
+.rbtn:active{transform:translateY(2px)}
+.rN{left:calc(50% - 21px);top:-10px}.rS{left:calc(50% - 21px);bottom:-10px}.rE{right:-14px;top:calc(50% - 21px)}.rW{left:-14px;top:calc(50% - 21px)}
+.roseslots{display:flex;gap:8px;justify-content:center;margin-top:16px}
+.rslot{min-width:84px;min-height:40px;padding:2px 8px;border:2px dashed var(--edge);border-radius:8px;display:flex;align-items:center;justify-content:center;gap:6px;font:700 15px var(--head);color:var(--papyrus);background:rgba(0,0,0,.3)}
+.rslot b{font-size:12px;color:var(--mute)}.rslot.on{border-style:solid;border-color:var(--gold)}
+@media (max-height:480px){.rosebox{width:132px}}

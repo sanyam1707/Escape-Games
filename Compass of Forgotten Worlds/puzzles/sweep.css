@@ -1,0 +1,8 @@
+/* sweep: dark dome, a lantern's warm light, silver stars that appear under the light and stay lit. */
+.sweepsvg{display:block;width:100%;max-height:48vh;margin:6px auto;border:3px solid var(--edge2);border-radius:12px;touch-action:none;cursor:grab;background:#04060f;box-shadow:inset 0 0 26px #000}
+.swdome{fill:radial-gradient(circle,#0a1030,#04060f);fill:#070b1d}.swrib{stroke:#1a2550;stroke-width:.35}
+.stcore,.stglow{opacity:0;transition:opacity .5s}.stcore{fill:#eef4ff}.stglow{fill:color-mix(in srgb,var(--sand) 55%,transparent)}
+.swstars .lit .stcore{opacity:1}.swstars .lit .stglow{opacity:.45}.swstars .on .stcore{fill:var(--gold)}.swstars .on .stglow{fill:var(--gold);opacity:.6}
+.sthit{fill:transparent;cursor:default}.joining .lit .sthit{cursor:pointer}
+.swlines line{stroke:var(--sand);stroke-width:.7;stroke-linecap:round;opacity:.9;stroke-dasharray:1.5 1}
+.swlight{pointer-events:none}.lampbody{fill:var(--gold);stroke:var(--gold2);stroke-width:.5}.lampcap{fill:none;stroke:var(--sand);stroke-width:.7}.swlamp{pointer-events:none}

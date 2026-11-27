@@ -1,0 +1,6 @@
+Music (bgm.mp3, shortened to 2:30 with a fade-out, looped by the game):
+"Gymnopedie No. 1" by Kevin MacLeod (incompetech.com), after Erik Satie.
+Licensed under Creative Commons: By Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0/
+Source: https://incompetech.com/music/royalty-free/mp3-royaltyfree/Gymnopedie%20No%201.mp3
+
+Sound effects: generated in the browser by the engine (audio.js).

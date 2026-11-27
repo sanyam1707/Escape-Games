@@ -1,0 +1,2039 @@
+{
+  "title": "Secrets of the Pharaoh",
+  "tagline": "Escape the tomb before the sand wins.",
+  "config": {
+    "timerSeconds": 600,
+    "hintsTotal": 3,
+    "lockoutMs": 3000,
+    "idleSec": 40,
+    "score": {
+      "item": 5,
+      "secret": 5,
+      "roomReward": 30,
+      "finalReward": 50,
+      "wrong": 10,
+      "hint": 25,
+      "timeBonusPerSecond": 0
+    },
+    "chase": {
+      "startDistance": 6,
+      "graceSec": 5,
+      "seenFraction": 0.6,
+      "stepSec": 2.5,
+      "minJumpDeg": 90,
+      "pushSec": 3,
+      "crackMs": 1000,
+      "wrongLunge": 2
+    },
+    "alcoves": [
+      -165,
+      -145,
+      -127,
+      -96,
+      -49,
+      -25,
+      24,
+      48,
+      100,
+      129
+    ],
+    "particleCap": {
+      "phone": 60,
+      "desktop": 120
+    }
+  },
+  "ui": {
+    "start": "Tap to Start",
+    "begin": "Begin",
+    "next": "Next",
+    "skip": "Skip",
+    "close": "Close",
+    "confirm": "Confirm",
+    "ankhs": "Ankhs",
+    "hint": "Hint",
+    "casebook": "Casebook",
+    "pause": "Pause",
+    "paused": "Paused",
+    "resume": "Resume",
+    "restartPanel": "Restart this panel",
+    "soundOn": "Sound: On",
+    "soundOff": "Sound: Off",
+    "reduceOn": "Reduce Effects: On",
+    "reduceOff": "Reduce Effects: Off",
+    "tabItems": "Items",
+    "tabTruths": "Truths",
+    "notes": "Clues you found",
+    "noItems": "Nothing yet. Look around the room.",
+    "noTruths": "No truths yet. Finish a room to learn one.",
+    "findStrip": "Find in this room",
+    "hold": "Hold to use",
+    "holding": "Holding",
+    "stopHolding": "Put away",
+    "holdHelp": "Now tap the right spot in the room.",
+    "useNothing": "Nothing happens. Try somewhere else.",
+    "needItem": "You need something for this. Open the Casebook and hold an item.",
+    "savedItem": "Saved to your Items",
+    "savedNote": "Saved to your notes",
+    "secretFound": "Secret found!",
+    "reward": "Reward",
+    "objective": "Goal",
+    "hintNone": "No hints left.",
+    "hintDone": "Nothing left to solve here. Take the way out.",
+    "hintPoor": "Not enough Ankhs for a hint. You need 25.",
+    "hintUsed": "Hint used. -25 Ankhs",
+    "locked": "Wait {s}...",
+    "newTruth": "New truth in the Casebook",
+    "doorOpen": "A way out has opened.",
+    "exitLabel": "Go on",
+    "takeExit": "The way is open. Go on.",
+    "zoom": "Drag to look around",
+    "usedUp": "Used up",
+    "inspectNext": "Next view",
+    "inspectPrev": "Back",
+    "tapSecret": "Something is hidden here. Tap the glowing spot.",
+    "seal": "Seal",
+    "stepsBack": "Back to the entry",
+    "flagHelp": "Tap to step. Press and hold to mark a trap.",
+    "dialHelp": "Turn the statue and set the disc. Then confirm.",
+    "targetShape": "Wall carving (the goal)",
+    "liveShadow": "Your shadow",
+    "dirs": [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "heights": [
+      "Low",
+      "Middle",
+      "High"
+    ],
+    "chooseFare": "Choose ONE fare",
+    "chooseHeart": "Name the heart you carry",
+    "pickFirst": "Pick something first.",
+    "grid": "Drag each jar onto a plinth (or tap a jar, then a plinth). The rules below show what your row breaks.",
+    "doorsHelp": "Tap one door, then confirm.",
+    "platesHelp": "Tap one plate, then confirm.",
+    "pauseResumeHint": "The clock is stopped.",
+    "restarted": "Panel reset.",
+    "mission": "Mission",
+    "rustle": "He is behind you!",
+    "danger": "DANGER",
+    "inView": "He is in view",
+    "lookLeft": "LOOK LEFT",
+    "lookRight": "LOOK RIGHT",
+    "tapContinue": "Tap to continue"
+  },
+  "mission": {
+    "kicker": "Egypt, 1926",
+    "heading": "The Curse Beneath the Sand",
+    "paras": [
+      "Deep in the Valley of the Kings lies the lost tomb of Pharaoh Khenemet-Ra, sealed for three thousand years.",
+      "You are Nadia Rahman, a young epigrapher. With your friend Wren you broke the seal, and the door has locked behind you. The sand is rising.",
+      "Find the way to the burial chamber and end the curse before ten minutes run out."
+    ],
+    "audioFile": "assets/audio/voice/mission_0.mp3"
+  },
+  "tutorial": [
+    {
+      "target": "stage",
+      "text": "Drag to look around. Glowing things can be tapped.",
+      "audioFile": "assets/audio/voice/tutorial_0.mp3"
+    },
+    {
+      "target": "book",
+      "text": "Pick up items and read clues. Open the Casebook to see them.",
+      "audioFile": "assets/audio/voice/tutorial_1.mp3"
+    },
+    {
+      "target": "score",
+      "text": "Every room has a puzzle or a mystery to solve. Close it any time with the X. Wrong answers cost Ankhs.",
+      "audioFile": "assets/audio/voice/tutorial_2.mp3"
+    },
+    {
+      "target": "hint",
+      "text": "You have 3 hints for the whole game, each costs 25 Ankhs. Watch the clock: the sand rises while it runs.",
+      "audioFile": "assets/audio/voice/tutorial_3.mp3"
+    }
+  ],
+  "speakers": {
+    "nadia": {
+      "name": "Nadia",
+      "pitch": 1.05,
+      "rate": 0.95,
+      "gender": "f",
+      "color": "#C9A66B",
+      "initial": "N"
+    },
+    "wren": {
+      "name": "Wren",
+      "pitch": 0.85,
+      "rate": 1.05,
+      "gender": "m",
+      "color": "#3E8E6A",
+      "initial": "W"
+    },
+    "larkin": {
+      "name": "Dr. Larkin",
+      "pitch": 0.8,
+      "rate": 0.85,
+      "gender": "m",
+      "color": "#8a7a5a",
+      "initial": "L"
+    },
+    "ferryman": {
+      "name": "The Ferryman",
+      "pitch": 0.6,
+      "rate": 0.8,
+      "gender": "m",
+      "color": "#1FA3A0",
+      "initial": "F"
+    },
+    "seshkara": {
+      "name": "Seshkara",
+      "pitch": 0.7,
+      "rate": 0.8,
+      "gender": "m",
+      "color": "#8B1A2B",
+      "initial": "S"
+    },
+    "narrator": {
+      "name": "Narrator",
+      "pitch": 0.9,
+      "rate": 0.9,
+      "gender": "m",
+      "color": "#D4A017",
+      "initial": "!"
+    }
+  },
+  "dialogue": [
+    {
+      "id": "open.1",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "Well, that went nicely. The door just closed behind us.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/open.1.mp3"
+    },
+    {
+      "id": "open.2",
+      "speaker": "nadia",
+      "mood": "worried",
+      "text": "The seal is broken. Whatever they buried here is awake.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/open.2.mp3"
+    },
+    {
+      "id": "open.3",
+      "speaker": "wren",
+      "mood": "surprised",
+      "text": "Awake. Great. Do you have a plan, professor?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/open.3.mp3"
+    },
+    {
+      "id": "open.4",
+      "speaker": "nadia",
+      "mood": "determined",
+      "text": "Read everything. The tomb will tell us how to leave. Stay close, Wren.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/open.4.mp3"
+    },
+    {
+      "id": "idle.1",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Try turning around. Drag to look around.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/idle.1.mp3"
+    },
+    {
+      "id": "r1.enter.1",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "Someone camped here. Someone who didn't leave.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1.enter.1.mp3"
+    },
+    {
+      "id": "r1.enter.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Larkin's expedition. Three doors, and three notes to read.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1.enter.2.mp3"
+    },
+    {
+      "id": "r1.find.sketch",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "He gave the doors nicknames. We need the carvings to match them.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1.find.sketch.mp3"
+    },
+    {
+      "id": "r1.find.diary",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "\"Wears a priest's linen.\" Oh, lovely.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1.find.diary.mp3"
+    },
+    {
+      "id": "r1.find.ledger",
+      "speaker": "nadia",
+      "mood": "determined",
+      "text": "One door fell, one was a dead end. One is untried.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1.find.ledger.mp3"
+    },
+    {
+      "id": "r1.learn.carvings",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "A falcon, a jackal and a snake. Left, middle, right.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1.learn.carvings.mp3"
+    },
+    {
+      "id": "r1.inspect.lantern",
+      "speaker": "wren",
+      "mood": "cheerful",
+      "text": "He left the lamp lit for us. That's kind. Or grim.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1.inspect.lantern.mp3"
+    },
+    {
+      "id": "r1.wrong.1",
+      "speaker": "wren",
+      "mood": "worried",
+      "text": "Hmm. Check how Larkin names the doors.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1.wrong.1.mp3"
+    },
+    {
+      "id": "r1.wrong.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "The sketch gives nicknames. The diary and ledger say what happened behind two of them. Match them to the carvings.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1.wrong.2.mp3"
+    },
+    {
+      "id": "r1.wrong.3",
+      "speaker": "wren",
+      "mood": "determined",
+      "text": "So the Bird drops you and the Snake is a dead end. Which dog-faced door is left?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1.wrong.3.mp3"
+    },
+    {
+      "id": "r1.right.1",
+      "speaker": "nadia",
+      "mood": "determined",
+      "text": "The jackal door. A guide of the dead. It was never a trap.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1.right.1.mp3"
+    },
+    {
+      "id": "r1.right.2",
+      "speaker": "wren",
+      "mood": "cheerful",
+      "text": "Good. Because I am not jumping into a pit today.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1.right.2.mp3"
+    },
+    {
+      "id": "r1.discuss",
+      "speaker": "nadia",
+      "mood": "worried",
+      "text": "Larkin writes that the guardian only moves when no one is looking. Remember that.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r1.discuss.mp3"
+    },
+    {
+      "id": "r1.hint",
+      "speaker": "wren",
+      "mood": "determined",
+      "text": "Which door did nobody try?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r1.hint.mp3"
+    },
+    {
+      "id": "r2.enter.1",
+      "speaker": "nadia",
+      "mood": "surprised",
+      "text": "A hall of scribes. The door has three names and only one is true.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2.enter.1.mp3"
+    },
+    {
+      "id": "r2.enter.2",
+      "speaker": "wren",
+      "mood": "surprised",
+      "text": "And two are fakes? Who fakes a king's name?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2.enter.2.mp3"
+    },
+    {
+      "id": "r2.find.warning",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "\"Forgers love the serpent.\" Good to know.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2.find.warning.mp3"
+    },
+    {
+      "id": "r2.find.slate",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "A lesson for apprentices. How to erase a name. Creepy.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2.find.slate.mp3"
+    },
+    {
+      "id": "r2.learn.birth",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "The king was born beside a flood. The ripple sign is in his name.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2.learn.birth.mp3"
+    },
+    {
+      "id": "r2.learn.kings",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Every king here has the sun in his name.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2.learn.kings.mp3"
+    },
+    {
+      "id": "r2.learn.relief",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "Priests scraping a name off a wall. And one priest tied up.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2.learn.relief.mp3"
+    },
+    {
+      "id": "r2.inspect.scribe",
+      "speaker": "nadia",
+      "mood": "worried",
+      "text": "They scraped the names at night. Someone wanted this king forgotten.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2.inspect.scribe.mp3"
+    },
+    {
+      "id": "r2.wrong.1",
+      "speaker": "wren",
+      "mood": "worried",
+      "text": "They all look kingly to me.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2.wrong.1.mp3"
+    },
+    {
+      "id": "r2.wrong.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "A king's name carries the sun. This king was born in the flood. Forgers use the serpent.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2.wrong.2.mp3"
+    },
+    {
+      "id": "r2.wrong.3",
+      "speaker": "wren",
+      "mood": "determined",
+      "text": "Sun, water and no serpent. Only one plate matches all three.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2.wrong.3.mp3"
+    },
+    {
+      "id": "r2.right.1",
+      "speaker": "nadia",
+      "mood": "determined",
+      "text": "Khenemet-Ra. Someone scraped it off the walls and carved lies over it.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2.right.1.mp3"
+    },
+    {
+      "id": "r2.right.2",
+      "speaker": "wren",
+      "mood": "surprised",
+      "text": "So the curse isn't his? Then whose?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2.right.2.mp3"
+    },
+    {
+      "id": "r2.discuss",
+      "speaker": "nadia",
+      "mood": "worried",
+      "text": "The slate says how to unmake a name. Keep it. It might matter.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r2.discuss.mp3"
+    },
+    {
+      "id": "r2.hint",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Count the signs. Which ones must a true name carry?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r2.hint.mp3"
+    },
+    {
+      "id": "r3.enter.1",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "I'd like to leave this room as soon as possible.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3.enter.1.mp3"
+    },
+    {
+      "id": "r3.enter.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "The embalmers' workshop. Four jars, four guardians, and written rules.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3.enter.2.mp3"
+    },
+    {
+      "id": "r3.find.left",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Two rules about where the jars go.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3.find.left.mp3"
+    },
+    {
+      "id": "r3.find.right",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Two more. Together they should fix every jar.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3.find.right.mp3"
+    },
+    {
+      "id": "r3.learn.lids",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Each lid shows its organ: Stomach, Liver, Lungs and Gut.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3.learn.lids.mp3"
+    },
+    {
+      "id": "r3.inspect.table",
+      "speaker": "wren",
+      "mood": "surprised",
+      "text": "A fifth jar? Behind the true order? Now I'm curious.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3.inspect.table.mp3"
+    },
+    {
+      "id": "r3.wrong.1",
+      "speaker": "wren",
+      "mood": "worried",
+      "text": "They don't look right to me. Read the tablets again.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3.wrong.1.mp3"
+    },
+    {
+      "id": "r3.wrong.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "The Liver has a neighbour on each side: the Stomach and the Lungs. The Gut takes an end.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3.wrong.2.mp3"
+    },
+    {
+      "id": "r3.wrong.3",
+      "speaker": "wren",
+      "mood": "determined",
+      "text": "Stomach, Liver, Lungs in a row, Gut at an end. The Lungs sit right of the Stomach. The Falcon won't guard the Lungs.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3.wrong.3.mp3"
+    },
+    {
+      "id": "r3.right.1",
+      "speaker": "nadia",
+      "mood": "surprised",
+      "text": "Everything in its place. The shelf is moving.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3.right.1.mp3"
+    },
+    {
+      "id": "r3.right.2",
+      "speaker": "wren",
+      "mood": "surprised",
+      "text": "A fifth jar. It says \"the king\". The king's heart is here.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3.right.2.mp3"
+    },
+    {
+      "id": "r3.discuss",
+      "speaker": "nadia",
+      "mood": "determined",
+      "text": "His heart was never stolen. It was hidden. Someone guarded it.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r3.discuss.mp3"
+    },
+    {
+      "id": "r3.hint",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Begin with the jar that has a neighbour on both sides.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r3.hint.mp3"
+    },
+    {
+      "id": "r4.enter.1",
+      "speaker": "wren",
+      "mood": "cheerful",
+      "text": "Sun! Real sun! I could kiss the ceiling.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4.enter.1.mp3"
+    },
+    {
+      "id": "r4.enter.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "A hole in the roof, a statue and a stand with no disc. Something here casts a shadow on purpose.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4.enter.2.mp3"
+    },
+    {
+      "id": "r4.find.disc",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "A sun-disc. It should sit in the bronze stand.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.find.disc.mp3"
+    },
+    {
+      "id": "r4.find.handle",
+      "speaker": "wren",
+      "mood": "worried",
+      "text": "This turns the pedestal. Please don't turn it into a mess.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.find.handle.mp3"
+    },
+    {
+      "id": "r4.learn.hymn",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "\"Let the god face the rising sun. Raise the disc to the height of his heart.\"",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.learn.hymn.mp3"
+    },
+    {
+      "id": "r4.inspect.frame",
+      "speaker": "nadia",
+      "mood": "surprised",
+      "text": "\"Light unmasks what the sand hides.\" Remember that.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.inspect.frame.mp3"
+    },
+    {
+      "id": "r4.use.stand",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "The disc fits. The light catches it.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.use.stand.mp3"
+    },
+    {
+      "id": "r4.use.pedestal",
+      "speaker": "wren",
+      "mood": "cheerful",
+      "text": "It turns. Look at him go.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.use.pedestal.mp3"
+    },
+    {
+      "id": "r4.learn.mural",
+      "speaker": "nadia",
+      "mood": "surprised",
+      "text": "Four glyphs beside him. Learn them well. They are his four names.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.learn.mural.mp3"
+    },
+    {
+      "id": "r4.wrong.1",
+      "speaker": "wren",
+      "mood": "worried",
+      "text": "That shadow looks like a broken cross.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.wrong.1.mp3"
+    },
+    {
+      "id": "r4.wrong.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "The hymn gives a direction for the god and a height for the disc.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.wrong.2.mp3"
+    },
+    {
+      "id": "r4.wrong.3",
+      "speaker": "wren",
+      "mood": "determined",
+      "text": "East, where the sun rises. The disc at his heart.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.wrong.3.mp3"
+    },
+    {
+      "id": "r4.right.1",
+      "speaker": "nadia",
+      "mood": "surprised",
+      "text": "An Ankh made of shadow. And look, the wall is peeling.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4.right.1.mp3"
+    },
+    {
+      "id": "r4.right.2",
+      "speaker": "wren",
+      "mood": "surprised",
+      "text": "Is that a man in chains?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4.right.2.mp3"
+    },
+    {
+      "id": "r4.discuss",
+      "speaker": "nadia",
+      "mood": "determined",
+      "text": "Four glyphs beside him. They look like four names.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r4.discuss.mp3"
+    },
+    {
+      "id": "r4.hint",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Read the hymn on the far wall.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r4.hint.mp3"
+    },
+    {
+      "id": "r5.enter.1",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "A floor with numbers. I hate floors with numbers.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5.enter.1.mp3"
+    },
+    {
+      "id": "r5.enter.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Seven traps. The numbers tell us where.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5.enter.2.mp3"
+    },
+    {
+      "id": "r5.use.gate",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "The Ankh Key turns. The gate swings open.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5.use.gate.mp3"
+    },
+    {
+      "id": "r5.find.note",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Larkin crossed by counting. So can we.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5.find.note.mp3"
+    },
+    {
+      "id": "r5.learn.lintel",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Seven vultures. Seven traps. A number counts the traps touching its tile.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5.learn.lintel.mp3"
+    },
+    {
+      "id": "r5.inspect.skeleton",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "Seven notches. He knew. He still stepped wrong.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5.inspect.skeleton.mp3"
+    },
+    {
+      "id": "r5.learn.inscription",
+      "speaker": "nadia",
+      "mood": "worried",
+      "text": "\"Sealed the traitor alive with the king.\" That is the curse. Not the king.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5.learn.inscription.mp3"
+    },
+    {
+      "id": "r5.wrong.1",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "Ow. Trapped. Check the numbers again.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5.wrong.1.mp3"
+    },
+    {
+      "id": "r5.wrong.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "A number counts the traps touching that tile, corners too.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5.wrong.2.mp3"
+    },
+    {
+      "id": "r5.wrong.3",
+      "speaker": "wren",
+      "mood": "determined",
+      "text": "Start with the 2 in the bottom corner. It has only two unknown neighbours.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5.wrong.3.mp3"
+    },
+    {
+      "id": "r5.right.1",
+      "speaker": "nadia",
+      "mood": "surprised",
+      "text": "We're across. And the niche has a scarab.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5.right.1.mp3"
+    },
+    {
+      "id": "r5.right.2",
+      "speaker": "wren",
+      "mood": "surprised",
+      "text": "A blank stone scarab. A heart-scarab. It goes over the heart.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5.right.2.mp3"
+    },
+    {
+      "id": "r5.discuss",
+      "speaker": "nadia",
+      "mood": "worried",
+      "text": "The priest was sealed alive. So the thing waiting for us wears linen, not gold.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r5.discuss.mp3"
+    },
+    {
+      "id": "r5.hint",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Begin with the 2 in the bottom-left corner.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r5.hint.mp3"
+    },
+    {
+      "id": "r6.enter.1",
+      "speaker": "ferryman",
+      "mood": "calm",
+      "text": "None cross unjudged. Give me a fare and name the heart you carry.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6.enter.1.mp3"
+    },
+    {
+      "id": "r6.enter.2",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "I don't like being judged by a man with a pole.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6.enter.2.mp3"
+    },
+    {
+      "id": "r6.learn.prow",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Four rules carved on the prow. No ink, no carved words, no metal, and the king rides as a passenger.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6.learn.prow.mp3"
+    },
+    {
+      "id": "r6.find.page",
+      "speaker": "nadia",
+      "mood": "worried",
+      "text": "Larkin paid with ink. The river drank it.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6.find.page.mp3"
+    },
+    {
+      "id": "r6.inspect.pole",
+      "speaker": "wren",
+      "mood": "worried",
+      "text": "Three thousand notches and one deeper. I'd like to know what that means.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6.inspect.pole.mp3"
+    },
+    {
+      "id": "r6.wrong.1",
+      "speaker": "ferryman",
+      "mood": "calm",
+      "text": "The river refuses it.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6.wrong.1.mp3"
+    },
+    {
+      "id": "r6.wrong.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "The prow has four rules. Check what each of our items is made of.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6.wrong.2.mp3"
+    },
+    {
+      "id": "r6.wrong.3",
+      "speaker": "wren",
+      "mood": "determined",
+      "text": "No ink, no carved words, no metal and no king's body. What's left in your pockets? And whose heart is in the jar?",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6.wrong.3.mp3"
+    },
+    {
+      "id": "r6.right.1",
+      "speaker": "ferryman",
+      "mood": "calm",
+      "text": "A blank scarab. The heart cannot speak against its owner. Cross.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6.right.1.mp3"
+    },
+    {
+      "id": "r6.right.2",
+      "speaker": "ferryman",
+      "mood": "calm",
+      "text": "The river judges the liar, not the king.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6.right.2.mp3"
+    },
+    {
+      "id": "r6.discuss",
+      "speaker": "nadia",
+      "mood": "determined",
+      "text": "The liar. He means Seshkara.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r6.discuss.mp3"
+    },
+    {
+      "id": "r6.hint",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "Read the prow. Then check what each of our items is made of.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r6.hint.mp3"
+    },
+    {
+      "id": "r7.enter.1",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "That's him. The priest. He isn't moving.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7.enter.1.mp3"
+    },
+    {
+      "id": "r7.enter.2",
+      "speaker": "nadia",
+      "mood": "determined",
+      "text": "Not while we watch. Larkin was right. Keep your eyes on him.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/r7.enter.2.mp3"
+    },
+    {
+      "id": "r7.enter.3",
+      "speaker": "seshkara",
+      "mood": "calm",
+      "text": "You wear my king's name. You will wear my wrappings.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7.enter.3.mp3"
+    },
+    {
+      "id": "r7.d4",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "Eyes on him!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7.d4.mp3"
+    },
+    {
+      "id": "r7.d3",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "Don't blink!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7.d3.mp3"
+    },
+    {
+      "id": "r7.d2",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "He's too close!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7.d2.mp3"
+    },
+    {
+      "id": "r7.d1",
+      "speaker": "wren",
+      "mood": "scared",
+      "text": "Look at him!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7.d1.mp3"
+    },
+    {
+      "id": "r7.wrong",
+      "speaker": "nadia",
+      "mood": "worried",
+      "text": "Wrong name! Not that one!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7.wrong.mp3"
+    },
+    {
+      "id": "r7.right",
+      "speaker": "nadia",
+      "mood": "determined",
+      "text": "It's working!",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7.right.mp3"
+    },
+    {
+      "id": "r7.hint.1",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "He moves when we look away. Keep him in view to push him back.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7.hint.1.mp3"
+    },
+    {
+      "id": "r7.hint.2",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "The Lesson Slate gives the order: title, house, given name, secret name.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7.hint.2.mp3"
+    },
+    {
+      "id": "r7.hint.3",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "The mural gave his four names. Match each glyph on the stones.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/r7.hint.3.mp3"
+    },
+    {
+      "id": "end.4a",
+      "speaker": "nadia",
+      "mood": "calm",
+      "text": "He wasn't cursed. He was betrayed.",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/end.4a.mp3"
+    },
+    {
+      "id": "end.4b",
+      "speaker": "wren",
+      "mood": "cheerful",
+      "text": "Can we go home now?",
+      "pausesTimer": true,
+      "audioFile": "assets/audio/voice/end.4b.mp3"
+    }
+  ],
+  "items": {
+    "sketch": {
+      "name": "Larkin's Field Sketch",
+      "material": "Ink on paper",
+      "text": "Doors named by Larkin: left \"the Bird\", middle \"the Dog\", right \"the Snake\".",
+      "icon": "paper"
+    },
+    "diary": {
+      "name": "Larkin's Diary",
+      "material": "Ink on paper",
+      "text": "\"Pell went through the Bird door and the floor gave way. The thing in the dark wears a priest's linen, not gold. It moves only when no one looks at it.\"",
+      "icon": "paper"
+    },
+    "ledger": {
+      "name": "Supply Ledger",
+      "material": "Ink on paper",
+      "text": "\"Hess took the Snake door. Back coughing. A dead-end niche and bones. The Dog door was left untried.\"",
+      "icon": "paper"
+    },
+    "warning": {
+      "name": "Scribe's Warning",
+      "material": "Carved words on clay",
+      "text": "\"Forgers love the serpent. The true name never holds it.\"",
+      "icon": "stone"
+    },
+    "slate": {
+      "name": "Apprentice's Lesson Slate",
+      "material": "Carved words on stone",
+      "text": "\"To unmake a name, strike the title, then the house, then the given name, then the secret name.\"",
+      "icon": "stone"
+    },
+    "rule_left": {
+      "name": "Embalmer's Rule Tablet (left half)",
+      "material": "Carved words on clay",
+      "text": "Rule 1: the Liver jar stands directly between the Stomach jar and the Lungs jar. Rule 2: the Gut jar stands at one end of the row.",
+      "icon": "stone"
+    },
+    "rule_right": {
+      "name": "Embalmer's Rule Tablet (right half)",
+      "material": "Carved words on clay",
+      "text": "Rule 3: the Lungs jar stands to the right of the Stomach jar. Rule 4: the Falcon statue does not guard the Lungs jar.",
+      "icon": "stone"
+    },
+    "sun_disc": {
+      "name": "Bronze Sun-Disc",
+      "material": "Bronze",
+      "text": "Goes on the bronze stand in the Sun Temple.",
+      "icon": "bronze",
+      "usable": true
+    },
+    "dial_handle": {
+      "name": "Dial Handle",
+      "material": "Bronze",
+      "text": "Fits the statue's pedestal. It turns the god.",
+      "icon": "bronze",
+      "usable": true
+    },
+    "third_note": {
+      "name": "Larkin's Third Note",
+      "material": "Ink on paper",
+      "text": "\"I crossed by counting. The numbers do not lie.\"",
+      "icon": "paper"
+    },
+    "last_page": {
+      "name": "Larkin's Last Page",
+      "material": "Ink on paper",
+      "text": "\"I paid with ink. The river drank it and the ferryman turned away.\"",
+      "icon": "paper"
+    },
+    "name_tablet": {
+      "name": "Name Tablet",
+      "material": "Carved words on stone",
+      "text": "The true cartouche of Khenemet-Ra. Reward of the Hall of Scribes.",
+      "icon": "stone",
+      "reward": true
+    },
+    "heart_jar": {
+      "name": "Heart Jar",
+      "material": "The king's heart",
+      "text": "Sealed with the king's cartouche. Reward of the Workshop.",
+      "icon": "jar",
+      "reward": true
+    },
+    "ankh_key": {
+      "name": "Ankh Key",
+      "material": "Bronze",
+      "text": "A key shaped like an Ankh. It stays in your Casebook after use.",
+      "icon": "key",
+      "reward": true,
+      "usable": true
+    },
+    "heart_scarab": {
+      "name": "Heart-Scarab",
+      "material": "Blank stone",
+      "text": "A stone scarab with nothing carved on it. Reward of the Trapped Floor.",
+      "icon": "scarab",
+      "reward": true
+    }
+  },
+  "truths": [
+    "The guardian moves only when no one is looking at him.",
+    "A name is unmade in this order: title, house, given name, secret name.",
+    "The king's heart was hidden, not stolen.",
+    "Seshkara's four names and glyphs: Keeper of the Sealed Door (door-bolt), House of the Jackal (jackal head), Seshkara (reed and scarab), Ren-Ib the secret name (heart and eye).",
+    "The priest was wrapped alive and sealed with the king.",
+    "The river judges the liar, not the king."
+  ],
+  "puzzles": {
+    "doors": {
+      "doors": [
+        "falcon",
+        "jackal",
+        "serpent"
+      ],
+      "answer": 1,
+      "wrong": {
+        "falcon": "The floor drops away in a puff of sand! You scramble back.",
+        "serpent": "A dart puffs out of the wall. Harmless, but it stings."
+      }
+    },
+    "plates": {
+      "plates": [
+        [
+          "sun",
+          "ripple",
+          "heart"
+        ],
+        [
+          "sun",
+          "falcon",
+          "serpent"
+        ],
+        [
+          "ripple",
+          "heart",
+          "jackal"
+        ]
+      ],
+      "answer": 0
+    },
+    "canopic": {
+      "plinths": [
+        "Man",
+        "Ape",
+        "Jackal",
+        "Falcon"
+      ],
+      "jars": [
+        "Stomach",
+        "Liver",
+        "Lungs",
+        "Gut"
+      ],
+      "rulesHead": "Rules from the tablets",
+      "rules": [
+        "The Liver jar stands directly between the Stomach jar and the Lungs jar.",
+        "The Gut jar stands at one end of the row.",
+        "The Lungs jar stands to the right of the Stomach jar.",
+        "The Falcon statue does not guard the Lungs jar."
+      ],
+      "answer": [
+        "Stomach",
+        "Liver",
+        "Lungs",
+        "Gut"
+      ]
+    },
+    "dial": {
+      "answer": {
+        "dir": 2,
+        "height": 1
+      },
+      "bar": [
+        0.25,
+        0.55,
+        0.85
+      ]
+    },
+    "tiles": {
+      "size": 5,
+      "traps": [
+        "A1",
+        "C1",
+        "E2",
+        "E3",
+        "A4",
+        "D4",
+        "B5"
+      ],
+      "numbers": {
+        "E1": 1,
+        "B2": 2,
+        "C2": 1,
+        "D2": 3,
+        "A3": 1,
+        "C3": 1,
+        "B4": 2,
+        "A5": 2
+      }
+    },
+    "offering": {
+      "fare": "heart_scarab",
+      "heart": "khenemet",
+      "hearts": [
+        [
+          "khenemet",
+          "Khenemet-Ra"
+        ],
+        [
+          "seshkara",
+          "Seshkara"
+        ],
+        [
+          "larkin",
+          "Dr. Larkin"
+        ]
+      ],
+      "rules": [
+        "No ink.",
+        "No carved words.",
+        "No metal.",
+        "The king's heart rides as a passenger, never as the fare."
+      ],
+      "bad": {
+        "Ink on paper": "Ink. The prow forbids it.",
+        "Carved words on clay": "Carved words. The prow forbids them.",
+        "Carved words on stone": "Carved words. The prow forbids them.",
+        "Bronze": "Metal. The prow forbids it.",
+        "The king's heart": "The king rides as a passenger, not as the fare."
+      }
+    }
+  },
+  "glyphNames": {
+    "sun": "Sun",
+    "ripple": "Ripple",
+    "heart": "Heart",
+    "falcon": "Falcon",
+    "serpent": "Serpent",
+    "jackal": "Jackal"
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Corridor of Sand",
+      "accent": "#D9A441",
+      "pano": "assets/rooms/room1.webp",
+      "objective": "Find out which door is safe.",
+      "objectiveReady": "Open the doors and choose one.",
+      "enter": [
+        "r1.enter.1",
+        "r1.enter.2"
+      ],
+      "right": [
+        "r1.right.1",
+        "r1.right.2"
+      ],
+      "discuss": "r1.discuss",
+      "hint": "r1.hint",
+      "wrong": [
+        "r1.wrong.1",
+        "r1.wrong.2",
+        "r1.wrong.3"
+      ],
+      "reward": {
+        "truth": 0,
+        "toast": "The jackal door opens."
+      },
+      "exit": {
+        "yaw": 0,
+        "pitch": 0,
+        "label": "Jackal door"
+      },
+      "hotspots": [
+        {
+          "id": "r1.sketch",
+          "kind": "FIND",
+          "item": "sketch",
+          "label": "Field Sketch",
+          "yaw": -122,
+          "pitch": -28,
+          "line": "r1.find.sketch"
+        },
+        {
+          "id": "r1.diary",
+          "kind": "FIND",
+          "item": "diary",
+          "label": "Diary",
+          "yaw": -111,
+          "pitch": -46,
+          "line": "r1.find.diary"
+        },
+        {
+          "id": "r1.ledger",
+          "kind": "FIND",
+          "item": "ledger",
+          "label": "Supply Ledger",
+          "yaw": -52,
+          "pitch": -48,
+          "line": "r1.find.ledger"
+        },
+        {
+          "id": "r1.carvings",
+          "kind": "LEARN",
+          "label": "Door carvings",
+          "yaw": 0,
+          "pitch": 22,
+          "line": "r1.learn.carvings",
+          "title": "The three carvings",
+          "text": "Above the three doors: a falcon on the left, a jackal in the middle, a serpent on the right."
+        },
+        {
+          "id": "r1.lantern",
+          "kind": "INSPECT",
+          "label": "Brass lantern",
+          "yaw": -147,
+          "pitch": -25,
+          "after": [
+            "r1.sketch"
+          ],
+          "line": "r1.inspect.lantern",
+          "title": "Brass lantern",
+          "views": [
+            "A brass lantern, still half full of oil. Someone lit it not long ago.",
+            "A scratch mark under the base. Look closer."
+          ],
+          "secret": "To whoever follows: I was wrong about the curse. L."
+        },
+        {
+          "id": "r1.doors",
+          "kind": "PANEL",
+          "panel": "doors",
+          "label": "The three doors",
+          "yaw": 0,
+          "pitch": 0,
+          "after": [
+            "r1.sketch",
+            "r1.diary",
+            "r1.ledger",
+            "r1.carvings"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Hall of Scribes",
+      "accent": "#2E5BBA",
+      "pano": "assets/rooms/room2.webp",
+      "objective": "Find the king's true name.",
+      "objectiveReady": "Tap the three plates and pick the true name.",
+      "enter": [
+        "r2.enter.1",
+        "r2.enter.2"
+      ],
+      "right": [
+        "r2.right.1",
+        "r2.right.2"
+      ],
+      "discuss": "r2.discuss",
+      "hint": "r2.hint",
+      "wrong": [
+        "r2.wrong.1",
+        "r2.wrong.2",
+        "r2.wrong.3"
+      ],
+      "reward": {
+        "item": "name_tablet",
+        "truth": 1,
+        "toast": "The great door opens."
+      },
+      "exit": {
+        "yaw": 0,
+        "pitch": 0,
+        "label": "Great door"
+      },
+      "hotspots": [
+        {
+          "id": "r2.birth",
+          "kind": "LEARN",
+          "label": "Birth relief",
+          "yaw": -140,
+          "pitch": 26,
+          "line": "r2.learn.birth",
+          "title": "The birth relief",
+          "text": "A baby is born beside a flooding river. \"Born under the rising water.\" The ripple sign belongs in his name."
+        },
+        {
+          "id": "r2.kings",
+          "kind": "LEARN",
+          "label": "Wall of kings' names",
+          "yaw": -31,
+          "pitch": 30,
+          "line": "r2.learn.kings",
+          "title": "Kings' names",
+          "text": "Every king's name carries the sun sign."
+        },
+        {
+          "id": "r2.warning",
+          "kind": "FIND",
+          "item": "warning",
+          "label": "Scribe's Warning",
+          "yaw": 54,
+          "pitch": -15,
+          "line": "r2.find.warning"
+        },
+        {
+          "id": "r2.slate",
+          "kind": "FIND",
+          "item": "slate",
+          "label": "Lesson Slate",
+          "yaw": 108,
+          "pitch": -42,
+          "line": "r2.find.slate"
+        },
+        {
+          "id": "r2.relief",
+          "kind": "LEARN",
+          "label": "Scraping relief",
+          "yaw": 130,
+          "pitch": 26,
+          "line": "r2.learn.relief",
+          "title": "The scraping relief",
+          "text": "Priests chisel a name off the wall while another priest is tied up. Someone erased a king."
+        },
+        {
+          "id": "r2.scribe",
+          "kind": "INSPECT",
+          "label": "Scribe statue",
+          "yaw": -62,
+          "pitch": 0,
+          "after": [
+            "r2.slate"
+          ],
+          "line": "r2.inspect.scribe",
+          "title": "Scribe statue",
+          "views": [
+            "A seated scribe holds a clay tablet. The carving is worn.",
+            "Behind the tablet there is a line of tiny writing."
+          ],
+          "secret": "They scraped our king's name from the walls by night."
+        },
+        {
+          "id": "r2.plates",
+          "kind": "PANEL",
+          "panel": "plates",
+          "label": "Three cartouche plates",
+          "yaw": 0,
+          "pitch": 18,
+          "after": [
+            "r2.birth",
+            "r2.kings",
+            "r2.warning",
+            "r2.slate",
+            "r2.relief"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Embalmers' Workshop",
+      "accent": "#3E8E6A",
+      "pano": "assets/rooms/room3.webp",
+      "objective": "Learn where each jar belongs.",
+      "objectiveReady": "Open the plinths and place the four jars.",
+      "enter": [
+        "r3.enter.1",
+        "r3.enter.2"
+      ],
+      "right": [
+        "r3.right.1",
+        "r3.right.2"
+      ],
+      "discuss": "r3.discuss",
+      "hint": "r3.hint",
+      "wrong": [
+        "r3.wrong.1",
+        "r3.wrong.2",
+        "r3.wrong.3"
+      ],
+      "reward": {
+        "item": "heart_jar",
+        "truth": 2,
+        "toast": "A hidden shelf slid open."
+      },
+      "exit": {
+        "yaw": 108,
+        "pitch": 2,
+        "label": "Way onward"
+      },
+      "hotspots": [
+        {
+          "id": "r3.tab_left",
+          "kind": "FIND",
+          "item": "rule_left",
+          "label": "Rule Tablet (left)",
+          "yaw": -5,
+          "pitch": -50,
+          "line": "r3.find.left"
+        },
+        {
+          "id": "r3.tab_right",
+          "kind": "FIND",
+          "item": "rule_right",
+          "label": "Rule Tablet (right)",
+          "yaw": -36,
+          "pitch": -46,
+          "line": "r3.find.right"
+        },
+        {
+          "id": "r3.lids",
+          "kind": "LEARN",
+          "label": "Jar lids",
+          "yaw": -136,
+          "pitch": -28,
+          "line": "r3.learn.lids",
+          "title": "The jar lids",
+          "text": "Four jars. Each lid shows what it holds: Stomach, Liver, Lungs and Gut."
+        },
+        {
+          "id": "r3.table",
+          "kind": "INSPECT",
+          "label": "Embalming table",
+          "yaw": 40,
+          "pitch": -30,
+          "after": [
+            "r3.tab_left"
+          ],
+          "line": "r3.inspect.table",
+          "title": "Embalming table",
+          "views": [
+            "A long stone table with salt and old linen.",
+            "Under the edge there is a deep groove."
+          ],
+          "secret": "The fifth jar waits behind the true order."
+        },
+        {
+          "id": "r3.grid",
+          "kind": "PANEL",
+          "panel": "canopic",
+          "label": "Plinths and jars",
+          "yaw": 0,
+          "pitch": 6,
+          "after": [
+            "r3.tab_left",
+            "r3.tab_right",
+            "r3.lids"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sun Temple",
+      "accent": "#F2B134",
+      "pano": "assets/rooms/room4.webp",
+      "objective": "Wake the statue and the sun-disc.",
+      "objectiveReady": "Use the shadow dial. Read the hymn first.",
+      "enter": [
+        "r4.enter.1",
+        "r4.enter.2"
+      ],
+      "right": [
+        "r4.right.1",
+        "r4.right.2"
+      ],
+      "discuss": "r4.discuss",
+      "hint": "r4.hint",
+      "wrong": [
+        "r4.wrong.1",
+        "r4.wrong.2",
+        "r4.wrong.3"
+      ],
+      "reward": {
+        "item": "ankh_key",
+        "truth": 3,
+        "toast": "An Ankh Key dropped from the frame."
+      },
+      "exit": {
+        "yaw": 135,
+        "pitch": 4,
+        "label": "Way onward"
+      },
+      "hotspots": [
+        {
+          "id": "r4.disc",
+          "kind": "FIND",
+          "item": "sun_disc",
+          "label": "Sun-Disc",
+          "yaw": -137,
+          "pitch": -8,
+          "line": "r4.find.disc"
+        },
+        {
+          "id": "r4.stand",
+          "kind": "USE",
+          "needs": "sun_disc",
+          "label": "Bronze stand",
+          "yaw": 22,
+          "pitch": -6,
+          "after": [
+            "r4.disc"
+          ],
+          "line": "r4.use.stand"
+        },
+        {
+          "id": "r4.handle",
+          "kind": "FIND",
+          "item": "dial_handle",
+          "label": "Dial Handle",
+          "yaw": -158,
+          "pitch": -50,
+          "line": "r4.find.handle"
+        },
+        {
+          "id": "r4.pedestal",
+          "kind": "USE",
+          "needs": "dial_handle",
+          "label": "Statue pedestal",
+          "yaw": 0,
+          "pitch": -24,
+          "after": [
+            "r4.handle"
+          ],
+          "line": "r4.use.pedestal"
+        },
+        {
+          "id": "r4.hymn",
+          "kind": "LEARN",
+          "label": "Hymn",
+          "yaw": -49,
+          "pitch": 18,
+          "line": "r4.learn.hymn",
+          "title": "The hymn",
+          "text": "\"Let the god face the rising sun. Raise the disc to the height of his heart.\""
+        },
+        {
+          "id": "r4.frame",
+          "kind": "INSPECT",
+          "label": "Ankh frame",
+          "yaw": -1,
+          "pitch": 36,
+          "after": [
+            "r4.pedestal"
+          ],
+          "line": "r4.inspect.frame",
+          "title": "The Ankh frame",
+          "views": [
+            "The statue holds an empty Ankh-shaped frame.",
+            "Words are carved on the inner edge."
+          ],
+          "secret": "Light unmasks what the sand hides."
+        },
+        {
+          "id": "r4.dial",
+          "kind": "PANEL",
+          "panel": "dial",
+          "label": "Shadow Dial",
+          "yaw": 0,
+          "pitch": 4,
+          "after": [
+            "r4.stand",
+            "r4.pedestal",
+            "r4.hymn"
+          ]
+        },
+        {
+          "id": "r4.mural",
+          "kind": "LEARN",
+          "label": "Hidden mural",
+          "yaw": 84,
+          "pitch": 8,
+          "after": [
+            "r4.dial"
+          ],
+          "line": "r4.learn.mural",
+          "title": "The mural: four names",
+          "text": "A man in chains with four glyphs beside him. Keeper of the Sealed Door: door-bolt. House of the Jackal: jackal head. Seshkara: reed and scarab. Ren-Ib, the secret name: heart and eye.",
+          "glyphs": [
+            "bolt",
+            "jackal",
+            "reed",
+            "heart_eye"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Trapped Floor",
+      "accent": "#B3402F",
+      "pano": "assets/rooms/room5.webp",
+      "objective": "Open the gate with the Ankh Key.",
+      "objectiveReady": "Use the numbers to cross the floor.",
+      "enter": [
+        "r5.enter.1",
+        "r5.enter.2"
+      ],
+      "right": [
+        "r5.right.1",
+        "r5.right.2"
+      ],
+      "discuss": "r5.discuss",
+      "hint": "r5.hint",
+      "wrong": [
+        "r5.wrong.1",
+        "r5.wrong.2",
+        "r5.wrong.3"
+      ],
+      "reward": {
+        "item": "heart_scarab",
+        "truth": 4,
+        "toast": "A scarab sits in the niche."
+      },
+      "exit": {
+        "yaw": 0,
+        "pitch": -5,
+        "label": "Far door"
+      },
+      "hotspots": [
+        {
+          "id": "r5.gate",
+          "kind": "USE",
+          "needs": "ankh_key",
+          "keep": true,
+          "label": "Entry gate",
+          "yaw": -173,
+          "pitch": 0,
+          "line": "r5.use.gate"
+        },
+        {
+          "id": "r5.lintel",
+          "kind": "LEARN",
+          "label": "Lintel of vultures",
+          "yaw": 0,
+          "pitch": 45,
+          "after": [
+            "r5.gate"
+          ],
+          "line": "r5.learn.lintel",
+          "title": "Seven vultures",
+          "text": "Seven traps. A number on a tile counts the traps touching that tile, corners too. A numbered tile is safe."
+        },
+        {
+          "id": "r5.note",
+          "kind": "FIND",
+          "item": "third_note",
+          "label": "Larkin's note",
+          "yaw": 142,
+          "pitch": -32,
+          "after": [
+            "r5.gate"
+          ],
+          "line": "r5.find.note"
+        },
+        {
+          "id": "r5.skeleton",
+          "kind": "INSPECT",
+          "label": "Skeleton",
+          "yaw": 154,
+          "pitch": -18,
+          "after": [
+            "r5.gate"
+          ],
+          "line": "r5.inspect.skeleton",
+          "title": "The robber's skeleton",
+          "views": [
+            "A tomb robber, long dead, slumped by the gate.",
+            "Seven small notches are scratched on the wall beside him."
+          ],
+          "secret": "A tally of seven notches. He counted the traps."
+        },
+        {
+          "id": "r5.inscription",
+          "kind": "LEARN",
+          "label": "Far door inscription",
+          "yaw": 0,
+          "pitch": 16,
+          "after": [
+            "r5.gate"
+          ],
+          "line": "r5.learn.inscription",
+          "title": "The inscription",
+          "text": "\"Here the faithful sealed the traitor alive with the king he betrayed.\""
+        },
+        {
+          "id": "r5.floor",
+          "kind": "PANEL",
+          "panel": "tiles",
+          "label": "The tile floor",
+          "yaw": 0,
+          "pitch": -25,
+          "after": [
+            "r5.lintel",
+            "r5.note",
+            "r5.inscription"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "River of the Dead",
+      "accent": "#1FA3A0",
+      "pano": "assets/rooms/room6.webp",
+      "start": {
+        "yaw": -55,
+        "pitch": 4
+      },
+      "objective": "Learn the river's rules.",
+      "objectiveReady": "Give the Ferryman a fare and name a heart.",
+      "enter": [
+        "r6.enter.1",
+        "r6.enter.2"
+      ],
+      "right": [
+        "r6.right.1",
+        "r6.right.2"
+      ],
+      "discuss": "r6.discuss",
+      "hint": "r6.hint",
+      "wrong": [
+        "r6.wrong.1",
+        "r6.wrong.2",
+        "r6.wrong.3"
+      ],
+      "reward": {
+        "truth": 5,
+        "toast": "The boat is crossing."
+      },
+      "exit": null,
+      "hotspots": [
+        {
+          "id": "r6.prow",
+          "kind": "LEARN",
+          "label": "Carved prow",
+          "yaw": -24,
+          "pitch": 14,
+          "line": "r6.learn.prow",
+          "title": "The prow's four rules",
+          "text": "1. No ink. 2. No carved words. 3. No metal. 4. The king's heart rides as a passenger, never as the fare."
+        },
+        {
+          "id": "r6.page",
+          "kind": "FIND",
+          "item": "last_page",
+          "label": "Larkin's Last Page",
+          "yaw": -162,
+          "pitch": -32,
+          "line": "r6.find.page"
+        },
+        {
+          "id": "r6.pole",
+          "kind": "INSPECT",
+          "label": "Ferryman's pole",
+          "yaw": -80,
+          "pitch": 10,
+          "after": [
+            "r6.prow"
+          ],
+          "line": "r6.inspect.pole",
+          "title": "The long pole",
+          "views": [
+            "A long black pole worn smooth by hands.",
+            "Notches run up the whole pole. One is much deeper."
+          ],
+          "secret": "Three thousand notches and one deeper."
+        },
+        {
+          "id": "r6.offering",
+          "kind": "PANEL",
+          "panel": "offering",
+          "label": "The Offering",
+          "yaw": -56,
+          "pitch": -32,
+          "after": [
+            "r6.prow",
+            "r6.page"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Burial Chamber",
+      "accent": "#8B1A2B",
+      "pano": "assets/rooms/room7.webp",
+      "objective": "Keep him in sight. Break the four stones in order.",
+      "objectiveReady": "Keep him in sight. Break the four stones in order.",
+      "enter": [
+        "r7.enter.1",
+        "r7.enter.2"
+      ],
+      "wrong": [],
+      "hotspots": [],
+      "stones": [
+        {
+          "id": "r7.north",
+          "yaw": 0,
+          "pitch": 8,
+          "glyph": "bolt",
+          "name": "Keeper of the Sealed Door"
+        },
+        {
+          "id": "r7.south",
+          "yaw": 164,
+          "pitch": 14,
+          "glyph": "jackal",
+          "name": "House of the Jackal"
+        },
+        {
+          "id": "r7.east",
+          "yaw": 74,
+          "pitch": 8,
+          "glyph": "reed",
+          "name": "Seshkara"
+        },
+        {
+          "id": "r7.west",
+          "yaw": -73,
+          "pitch": 8,
+          "glyph": "heart_eye",
+          "name": "Ren-Ib"
+        }
+      ],
+      "order": [
+        "r7.north",
+        "r7.south",
+        "r7.east",
+        "r7.west"
+      ]
+    }
+  ],
+  "cinematic": [
+    "Seshkara cracks and crumbles to sand. The chamber goes quiet.",
+    "Nadia places the Heart Jar and the Heart-Scarab on the sarcophagus.",
+    "A golden light rises. The spirit of Khenemet-Ra bows to Nadia and Wren. The doors open and the sand drains away.",
+    {
+      "say": [
+        "end.4a",
+        "end.4b"
+      ]
+    },
+    "Dawn outside. The papyrus in the heart-case unrolls into a map to a second tomb. Wren's compass spins toward it."
+  ],
+  "endScreens": {
+    "win": {
+      "title": "The Curse Is Broken",
+      "text": "You ended the curse and walked out into the dawn.",
+      "button": "Play Again"
+    },
+    "death": {
+      "title": "The Wrappings Close",
+      "text": "Seshkara caught you. The tomb keeps another secret.",
+      "button": "Try Again"
+    },
+    "timeup": {
+      "title": "The Sand Wins",
+      "text": "The sand reached the ceiling. The tomb is sealed for good.",
+      "button": "Try Again"
+    }
+  },
+  "assets": {
+    "title": "assets/sheets/title_key_art.jpg",
+    "briefing": "assets/sheets/briefing_bg.jpg",
+    "cut": [
+      "nadia_calm",
+      "nadia_worried",
+      "nadia_determined",
+      "nadia_surprised",
+      "wren_cheerful",
+      "wren_scared",
+      "wren_determined",
+      "wren_surprised",
+      "larkin",
+      "ferryman",
+      "seshkara",
+      "icon_casebook",
+      "icon_hint",
+      "icon_pause",
+      "icon_sound",
+      "icon_ankh",
+      "sketch",
+      "diary",
+      "ledger",
+      "third_note",
+      "last_page",
+      "slate",
+      "warning",
+      "rule_left",
+      "rule_right",
+      "name_tablet",
+      "sun_disc",
+      "dial_handle",
+      "ankh_key",
+      "heart_jar",
+      "heart_scarab"
+    ],
+    "seshkara": "assets/sheets/seshkara_body.png"
+  }
+}

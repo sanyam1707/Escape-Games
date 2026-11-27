@@ -1,0 +1,1258 @@
+{
+ "id": "thegardenofhiddensecrets",
+ "title": "The Garden of Hidden Secrets",
+ "tagline": "Four sealed gardens. Four seeds. One secret.",
+ "modules": [
+  "choice",
+  "code",
+  "order",
+  "pour",
+  "lab",
+  "sight",
+  "square",
+  "custom_fx"
+ ],
+ "config": {
+  "timerSeconds": 300,
+  "hintsTotal": 3,
+  "lockoutMs": 3000,
+  "idleSec": 40,
+  "particleCap": {
+   "phone": 60,
+   "desktop": 120
+  }
+ },
+ "ui": {
+  "start": "Tap to Start",
+  "begin": "Begin",
+  "next": "Next",
+  "skip": "Skip",
+  "close": "Close",
+  "confirm": "Confirm",
+  "scoreName": "Blooms",
+  "hint": "Hint",
+  "casebook": "Journal",
+  "pause": "Pause",
+  "paused": "Paused",
+  "resume": "Resume",
+  "restartPanel": "Restart this panel",
+  "soundOn": "Sound: On",
+  "soundOff": "Sound: Off",
+  "voiceOn": "Narration: On",
+  "voiceOff": "Narration: Off",
+  "tabItems": "Satchel",
+  "tabTruths": "Her Words",
+  "notes": "Notes from the garden",
+  "noItems": "Nothing yet. Look around the garden.",
+  "noTruths": "Nothing yet. Open a garden to read what Odalys left.",
+  "findStrip": "Find in this room",
+  "hold": "Hold to use",
+  "holding": "Holding",
+  "stopHolding": "Put away",
+  "holdHelp": "Now tap the right spot in the room.",
+  "useNothing": "Nothing happens. Try somewhere else.",
+  "needItem": "You need something for this. Open the satchel.",
+  "savedItem": "Saved to your Items",
+  "savedNote": "Saved to your notes",
+  "secretFound": "Secret found!",
+  "reward": "Reward",
+  "objective": "Goal",
+  "hintNone": "No hints left.",
+  "hintDone": "Nothing left to solve here. Take the way out.",
+  "hintPoor": "Not enough {score} for a hint. You need {cost}.",
+  "hintUsed": "Hint used. -{cost} {score}",
+  "locked": "Wait {s}...",
+  "newTruth": "New words from Odalys in your journal",
+  "takeExit": "The way is open. Go on.",
+  "usedUp": "Used up",
+  "inspectNext": "Next view",
+  "inspectPrev": "Back",
+  "tapSecret": "Something is hidden here. Tap the glowing spot.",
+  "pauseResumeHint": "The clock is stopped.",
+  "restarted": "Panel reset.",
+  "tapContinue": "Tap to continue",
+  "tabProgress": "Progress",
+  "newWay": "A new way is open.",
+  "progRooms": "Rooms cleared",
+  "progRoom": "Now in",
+  "progItems": "Items found",
+  "progClues": "Clues found",
+  "progHints": "Hints left"
+ },
+ "mission": {
+  "kicker": "Thistlewick Manor, the walled garden",
+  "heading": "The Garden of Hidden Secrets",
+  "paras": [
+   "Thistlewick Manor kept one door locked for ten years: the walled garden of Great-Aunt Odalys. She is gone now, and she left Wren the key.",
+   "You are Wren, and Osric, the gardener's grandson, is with you. Odalys hid a secret somewhere inside, behind four sealed gardens, each guarded by a seed.",
+   "Find the secret before the light fades. You have five minutes."
+  ],
+  "audioFile": "assets/audio/voice/mission.mp3"
+ },
+ "tutorial": [
+  {
+   "target": "stage",
+   "text": "Drag to look around the garden. Soft rings can be tapped.",
+   "audioFile": "assets/audio/voice/tutorial_0.mp3"
+  },
+  {
+   "target": "book",
+   "text": "Tap things to save them. Your journal holds the seeds you carry and every clue you find.",
+   "audioFile": "assets/audio/voice/tutorial_1.mp3"
+  },
+  {
+   "target": "score",
+   "text": "Each garden ends with one puzzle. Close it any time with the X. Blooms are your score: finds earn Blooms, wrong answers cost some.",
+   "audioFile": "assets/audio/voice/tutorial_2.mp3"
+  },
+  {
+   "target": "hint",
+   "text": "You have 3 hints for the whole game, and each costs Blooms. Watch the clock: you have five minutes.",
+   "audioFile": "assets/audio/voice/tutorial_3.mp3"
+  }
+ ],
+ "speakers": {
+  "wren": {
+   "name": "Wren",
+   "pitch": 1.15,
+   "rate": 0.97,
+   "gender": "f",
+   "color": "#7FA36B",
+   "initial": "W"
+  },
+  "osric": {
+   "name": "Osric",
+   "pitch": 0.85,
+   "rate": 1.0,
+   "gender": "m",
+   "color": "#B98A5A",
+   "initial": "O"
+  },
+  "odalys": {
+   "name": "Odalys",
+   "pitch": 0.8,
+   "rate": 0.88,
+   "gender": "f",
+   "color": "#C98AA0",
+   "initial": "Od"
+  },
+  "narrator": {
+   "name": "Narrator",
+   "pitch": 0.9,
+   "rate": 0.9,
+   "gender": "m",
+   "color": "#D4A017",
+   "initial": "!"
+  }
+ },
+ "opening": [
+  "open.1",
+  "open.2",
+  "open.3"
+ ],
+ "idle": "idle.1",
+ "dialogue": [
+  {
+   "id": "open.1",
+   "speaker": "odalys",
+   "text": "Wren, if you can hear this, the key found you. Four gardens, four seeds. Be gentle with what grows.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/open.1.mp3"
+  },
+  {
+   "id": "open.2",
+   "speaker": "wren",
+   "text": "Her voice. Osric, she really did leave all of this for me.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/open.2.mp3"
+  },
+  {
+   "id": "open.3",
+   "speaker": "osric",
+   "text": "Then let's not waste the light. Four gardens, four seeds, and one secret.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/open.3.mp3"
+  },
+  {
+   "id": "idle.1",
+   "speaker": "wren",
+   "text": "Look around again. Something here is hiding in plain sight.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/idle.1.mp3"
+  },
+  {
+   "id": "r1.enter.1",
+   "speaker": "wren",
+   "text": "The ivy gate opened. Osric, that fountain is bone dry.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/r1.enter.1.mp3"
+  },
+  {
+   "id": "r1.enter.2",
+   "speaker": "osric",
+   "text": "It only wakes for the right amount of water. Look for her watering cans.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/r1.enter.2.mp3"
+  },
+  {
+   "id": "r1.find5",
+   "speaker": "wren",
+   "text": "A big can with a five painted on it. It holds five buckets.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.find5.mp3"
+  },
+  {
+   "id": "r1.find3",
+   "speaker": "osric",
+   "text": "And a small one with a three. Two cans, two different sizes.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.find3.mp3"
+  },
+  {
+   "id": "r1.rim",
+   "speaker": "wren",
+   "text": "'Four buckets wake the fountain.' The rim shows the two sizes, three and five.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.rim.mp3"
+  },
+  {
+   "id": "r1.barrow",
+   "speaker": "osric",
+   "text": "Pouring one can into the other leaves something behind. That's her trick.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.barrow.mp3"
+  },
+  {
+   "id": "r1.gate",
+   "speaker": "wren",
+   "text": "A tag on the gate says four seeds, four gardens. Let us start here.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.gate.mp3"
+  },
+  {
+   "id": "r1.right.1",
+   "speaker": "osric",
+   "text": "Exactly four buckets! Listen, the fountain is waking up.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r1.right.1.mp3"
+  },
+  {
+   "id": "r1.discuss",
+   "speaker": "wren",
+   "text": "Odalys loved a puzzle that taught patience. I think the daisy was her first.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/r1.discuss.mp3"
+  },
+  {
+   "id": "r1.hint.1",
+   "speaker": "osric",
+   "text": "Fill the big can, then pour it into the small one. See what stays behind.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.hint.1.mp3"
+  },
+  {
+   "id": "r1.hint.2",
+   "speaker": "osric",
+   "text": "Empty the small can, pour the leftover across, refill the big can, then top up the small one.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.hint.2.mp3"
+  },
+  {
+   "id": "r1.wrong.1",
+   "speaker": "wren",
+   "text": "Not quite. Think about pouring one can into the other.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/r1.wrong.1.mp3"
+  },
+  {
+   "id": "r1.wrong.2",
+   "speaker": "osric",
+   "text": "Read the fountain rim again. Exactly four buckets. Not three, not five.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.wrong.2.mp3"
+  },
+  {
+   "id": "r1.wrong.3",
+   "speaker": "wren",
+   "text": "Fill the big can, pour into the small, empty the small, then pour the rest across.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r1.wrong.3.mp3"
+  },
+  {
+   "id": "r2.enter.1",
+   "speaker": "wren",
+   "text": "A glasshouse! Look at the orchids. They are wilting.",
+   "pausesTimer": true,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/r2.enter.1.mp3"
+  },
+  {
+   "id": "r2.enter.2",
+   "speaker": "osric",
+   "text": "They're thirsty. The rain barrel is full, but all the pipes are turned wrong.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/r2.enter.2.mp3"
+  },
+  {
+   "id": "r2.note",
+   "speaker": "wren",
+   "text": "A pipe diagram. Rain must travel from the barrel to the orchid bed.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.note.mp3"
+  },
+  {
+   "id": "r2.barrel",
+   "speaker": "osric",
+   "text": "The barrel is full of rain, but the water has nowhere to go.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.barrel.mp3"
+  },
+  {
+   "id": "r2.bed",
+   "speaker": "wren",
+   "text": "The bed is dry, but one orchid still holds a tiny bud.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.bed.mp3"
+  },
+  {
+   "id": "r2.right.1",
+   "speaker": "wren",
+   "text": "Listen! The water is running down the clay pipes.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r2.right.1.mp3"
+  },
+  {
+   "id": "r2.discuss",
+   "speaker": "osric",
+   "text": "She built this to keep her orchids alive all winter. She planned everything.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/r2.discuss.mp3"
+  },
+  {
+   "id": "r2.hint.1",
+   "speaker": "osric",
+   "text": "Start at the barrel. Which way must the first pipe face?",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.hint.1.mp3"
+  },
+  {
+   "id": "r2.hint.2",
+   "speaker": "osric",
+   "text": "The rusted pipe can't turn, so the whole route must pass through it as it is.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.hint.2.mp3"
+  },
+  {
+   "id": "r2.wrong.1",
+   "speaker": "wren",
+   "text": "A leak! Every open end must meet another pipe.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/r2.wrong.1.mp3"
+  },
+  {
+   "id": "r2.wrong.2",
+   "speaker": "osric",
+   "text": "Check the diagram. Water must travel from the barrel to the orchid bed.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.wrong.2.mp3"
+  },
+  {
+   "id": "r2.wrong.3",
+   "speaker": "wren",
+   "text": "Turn the pipes until no red glow is left, then open the tap.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r2.wrong.3.mp3"
+  },
+  {
+   "id": "r3.enter.1",
+   "speaker": "osric",
+   "text": "The statue lawn. The sun is low. We have not much light left.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/r3.enter.1.mp3"
+  },
+  {
+   "id": "r3.enter.2",
+   "speaker": "wren",
+   "text": "That statue is pointing at something. Odalys never did anything by accident.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/r3.enter.2.mp3"
+  },
+  {
+   "id": "r3.plinth",
+   "speaker": "wren",
+   "text": "Where he points, the dial answers. Then the chimney keeps a number.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.plinth.mp3"
+  },
+  {
+   "id": "r3.dial",
+   "speaker": "osric",
+   "text": "There's a tiny notch cut into the dial's blade. That works like a sight.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.dial.mp3"
+  },
+  {
+   "id": "r3.arch",
+   "speaker": "wren",
+   "text": "Finger, notch, chimney. We have to find the spot where they line up.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.arch.mp3"
+  },
+  {
+   "id": "r3.right.1",
+   "speaker": "osric",
+   "text": "Got it! The number was painted right on the chimney.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r3.right.1.mp3"
+  },
+  {
+   "id": "r3.discuss",
+   "speaker": "wren",
+   "text": "She hid it in plain sight. You only had to stand in the right place.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/r3.discuss.mp3"
+  },
+  {
+   "id": "r3.hint.1",
+   "speaker": "osric",
+   "text": "Slowly turn the view. Watch the three marks drift apart and come together.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.hint.1.mp3"
+  },
+  {
+   "id": "r3.hint.2",
+   "speaker": "osric",
+   "text": "Stop where one green line crosses the finger, the notch and the chimney.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.hint.2.mp3"
+  },
+  {
+   "id": "r3.wrong.1",
+   "speaker": "osric",
+   "text": "That isn't the number. Read the chimney again.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/r3.wrong.1.mp3"
+  },
+  {
+   "id": "r3.wrong.2",
+   "speaker": "wren",
+   "text": "The chimney only shows its number when the three marks line up.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.wrong.2.mp3"
+  },
+  {
+   "id": "r3.wrong.3",
+   "speaker": "osric",
+   "text": "Line them up first. Then copy the painted number onto the lock, digit by digit.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r3.wrong.3.mp3"
+  },
+  {
+   "id": "r4.enter.1",
+   "speaker": "wren",
+   "text": "The secret garden. It's even lovelier than I imagined.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r4.enter.1.mp3"
+  },
+  {
+   "id": "r4.enter.2",
+   "speaker": "osric",
+   "text": "A raised bed, four kinds of seed, and it is only half planted.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/r4.enter.2.mp3"
+  },
+  {
+   "id": "r4.tulip",
+   "speaker": "wren",
+   "text": "Tulips! This must be Odalys's own seed. She saved it for the end.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.tulip.mp3"
+  },
+  {
+   "id": "r4.rhyme",
+   "speaker": "osric",
+   "text": "No flower twice in any row or column. That's her planting rule.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.rhyme.mp3"
+  },
+  {
+   "id": "r4.door",
+   "speaker": "wren",
+   "text": "Four hollows in the door, shaped like seeds. The bed must be planted first.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.door.mp3"
+  },
+  {
+   "id": "r4.right.1",
+   "speaker": "osric",
+   "text": "Every flower in its place. The whole garden is humming.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/r4.right.1.mp3"
+  },
+  {
+   "id": "r4.discuss",
+   "speaker": "wren",
+   "text": "She wasn't hiding a treasure, Osric. She was hiding a home.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/r4.discuss.mp3"
+  },
+  {
+   "id": "r4.hint.1",
+   "speaker": "osric",
+   "text": "Start in the top row. An Orchid can't go in column three, one already grows there.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.hint.1.mp3"
+  },
+  {
+   "id": "r4.hint.2",
+   "speaker": "osric",
+   "text": "The top row is Daisy, Orchid, Rose, Tulip. Now row two needs a Rose and an Orchid.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.hint.2.mp3"
+  },
+  {
+   "id": "r4.wrong.1",
+   "speaker": "wren",
+   "text": "Something repeats. Check each row and column for a flower that grows twice.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/r4.wrong.1.mp3"
+  },
+  {
+   "id": "r4.wrong.2",
+   "speaker": "osric",
+   "text": "Read the planting rhyme again. No flower twice in any line.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.wrong.2.mp3"
+  },
+  {
+   "id": "r4.wrong.3",
+   "speaker": "wren",
+   "text": "The top row is forced first. Then work down, one column at a time.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/r4.wrong.3.mp3"
+  },
+  {
+   "id": "end.odalys",
+   "speaker": "odalys",
+   "text": "Wren, you found all four. I never hid a treasure. I hid my favourite place in the world. What becomes of it is yours to choose.",
+   "pausesTimer": true,
+   "audioFile": "assets/audio/voice/end.odalys.mp3"
+  },
+  {
+   "id": "end.keep.1",
+   "speaker": "wren",
+   "text": "It was hers, Osric. And she asked us to keep it safe.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/end.keep.1.mp3"
+  },
+  {
+   "id": "end.keep.2",
+   "speaker": "osric",
+   "text": "Then we'll keep it. And water the daisies every Sunday.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/end.keep.2.mp3"
+  },
+  {
+   "id": "end.open.1",
+   "speaker": "wren",
+   "text": "It's too beautiful to hide. Odalys wanted it to grow.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/end.open.1.mp3"
+  },
+  {
+   "id": "end.open.2",
+   "speaker": "osric",
+   "text": "Wren... look at the door. There is another key hanging there.",
+   "pausesTimer": true,
+   "mood": "surprised",
+   "audioFile": "assets/audio/voice/end.open.2.mp3"
+  }
+ ],
+ "items": {
+  "can5": {
+   "name": "Big Watering Can",
+   "material": "Zinc",
+   "text": "Holds five buckets. A 5 is painted on its side.",
+   "icon": "can"
+  },
+  "can3": {
+   "name": "Small Watering Can",
+   "material": "Zinc",
+   "text": "Holds three buckets. A 3 is painted on its side.",
+   "icon": "can"
+  },
+  "daisy": {
+   "name": "Daisy Seed",
+   "material": "Seed",
+   "text": "The first seed. Daisies open for anyone patient enough to wait.",
+   "icon": "seedDaisy"
+  },
+  "orchid": {
+   "name": "Orchid Seed",
+   "material": "Seed",
+   "text": "The hardest seed to keep alive. Odalys kept it through every winter.",
+   "icon": "seedOrchid"
+  },
+  "rose": {
+   "name": "Rose Seed",
+   "material": "Seed",
+   "text": "She planted roses where she could see the manor from the garden.",
+   "icon": "seedRose"
+  },
+  "tulip": {
+   "name": "Odalys's Tulip Seed",
+   "material": "Seed",
+   "text": "Her own flower. She saved it for the very end.",
+   "icon": "seedTulip"
+  }
+ },
+ "truths": [
+  "Odalys grew the Daisy first, because daisies open for anyone who is patient.",
+  "The Orchid was her hardest bloom. She watered it all winter through a glasshouse of clay pipes.",
+  "She planted her Roses where she could see the manor, so the house was always watched over.",
+  "Her own flower was the Tulip. The garden was never a secret. It was a gift waiting for the right Wren."
+ ],
+ "puzzles": {
+  "r1": {
+   "help": "Fill, pour and empty the cans until one holds exactly four buckets. Then pour it into the fountain.",
+   "caps": [
+    3,
+    5
+   ],
+   "target": 4,
+   "names": [
+    "Small can",
+    "Big can"
+   ],
+   "movesLabel": "Pours",
+   "confirm": "Pour into the fountain",
+   "wrongText": "Neither can holds exactly four buckets yet."
+  },
+  "r2": {
+   "title": "Pipe Flow",
+   "n": 4,
+   "source": [
+    0,
+    0
+   ],
+   "sink": [
+    3,
+    3
+   ],
+   "tiles": [
+    "SEXX",
+    "XESE",
+    "EEXS",
+    "EEXE"
+   ],
+   "start": [
+    "0000",
+    "0001",
+    "3001",
+    "2103"
+   ],
+   "locked": [
+    [
+     1,
+     1,
+     0
+    ]
+   ],
+   "help": "Tap a clay pipe to turn it. Water must flow from the barrel to the orchid bed. Every pipe on the board must be joined: no red glow anywhere, even on the loose pipes. The rusted pipe cannot turn.",
+   "openValve": "Open the barrel tap",
+   "noValve": "",
+   "sourceLabel": "Rain barrel",
+   "sinkLabel": "Orchid bed",
+   "wrongText": "The water leaks. Every pipe must join the next one.",
+   "rules": "No pipe may have an open end (red glow). The rusted pipe is stuck, so build the route around it."
+  },
+  "r3": {
+   "help": "Turn the view until the statue's finger, the sundial notch and the far chimney all line up. Then read the chimney.",
+   "start": -70,
+   "min": -100,
+   "max": 100,
+   "finger": {
+    "x": 64,
+    "depth": 1
+   },
+   "notch": {
+    "x": 50,
+    "depth": 0.6
+   },
+   "chimney": {
+    "x": 36,
+    "depth": 0.2
+   },
+   "tol": 2,
+   "number": "618",
+   "turn": "Turn the view",
+   "lined": "They line up. Read the number on the chimney.",
+   "notYet": "The chimney's number is hidden behind the ivy.",
+   "confirm": "Try the lock",
+   "wrongText": "That is not the number painted on the chimney."
+  },
+  "r4": {
+   "help": "Plant the bed. Each flower grows once in every row and every column. Tap a square to change its flower.",
+   "symbols": [
+    "Daisy",
+    "Orchid",
+    "Rose",
+    "Tulip"
+   ],
+   "answer": [
+    [
+     "Daisy",
+     "Orchid",
+     "Rose",
+     "Tulip"
+    ],
+    [
+     "Rose",
+     "Tulip",
+     "Daisy",
+     "Orchid"
+    ],
+    [
+     "Orchid",
+     "Daisy",
+     "Tulip",
+     "Rose"
+    ],
+    [
+     "Tulip",
+     "Rose",
+     "Orchid",
+     "Daisy"
+    ]
+   ],
+   "givens": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     3,
+     3
+    ]
+   ],
+   "confirm": "Plant the bed",
+   "wrongText": "Some flower grows twice in a row or a column."
+  }
+ },
+ "rooms": [
+  {
+   "id": 1,
+   "name": "Ivy Gate and Fountain Court",
+   "accent": "#7FA36B",
+   "pano": "assets/rooms/room1.webp",
+   "objective": "Wake the fountain: find two watering cans and measure exactly four buckets.",
+   "objectiveReady": "Pour the water into the fountain.",
+   "enter": [
+    "r1.enter.1",
+    "r1.enter.2"
+   ],
+   "right": [
+    "r1.right.1"
+   ],
+   "discuss": "r1.discuss",
+   "hint": [
+    "r1.hint.1",
+    "r1.hint.2"
+   ],
+   "wrong": [
+    "r1.wrong.1",
+    "r1.wrong.2",
+    "r1.wrong.3"
+   ],
+   "reward": {
+    "item": "daisy",
+    "truth": 0,
+    "toast": "The fountain wakes. A daisy seed rises from the water."
+   },
+   "hotspots": [
+    {
+     "id": "r1.can5",
+     "kind": "FIND",
+     "label": "Big watering can",
+     "yaw": -72.0,
+     "pitch": -27.0,
+     "item": "can5",
+     "line": "r1.find5"
+    },
+    {
+     "id": "r1.can3",
+     "kind": "FIND",
+     "label": "Small watering can",
+     "yaw": -55.8,
+     "pitch": -40.1,
+     "item": "can3",
+     "line": "r1.find3"
+    },
+    {
+     "id": "r1.rim",
+     "kind": "LEARN",
+     "label": "Fountain rim",
+     "yaw": -24.8,
+     "pitch": -33.3,
+     "title": "The fountain rim",
+     "text": "Carved into the rim: 'Four buckets wake the fountain.' Two sizes are painted beside it, 3 and 5.",
+     "line": "r1.rim"
+    },
+    {
+     "id": "r1.barrow",
+     "kind": "LEARN",
+     "label": "Wheelbarrow tag",
+     "yaw": 141.3,
+     "pitch": -9.0,
+     "title": "Odalys's tag",
+     "text": "A tag tied to the barrow: 'Pour one can into the other. What stays behind is the answer.'",
+     "line": "r1.barrow"
+    },
+    {
+     "id": "r1.gate",
+     "kind": "INSPECT",
+     "label": "Ivy gate",
+     "yaw": -112.5,
+     "pitch": 22.5,
+     "title": "The ivy gate",
+     "views": [
+      "<div style=\"padding:22px;text-align:center\"><b style=\"font:700 20px var(--head)\">The ivy gate</b><br><span style=\"font-size:19px\">Iron, old and tangled in green.</span></div>",
+      "<div style=\"padding:22px;text-align:center\"><b style=\"font:700 20px var(--head)\">A hanging tag</b><br><span style=\"font-size:19px\">'Four seeds, four gardens.'</span></div>"
+     ],
+     "secret": "Hidden in the ironwork, a tiny daisy is carved into the latch.",
+     "line": "r1.gate"
+    },
+    {
+     "id": "r1.panel",
+     "kind": "PANEL",
+     "label": "Pour the water",
+     "yaw": 0.0,
+     "pitch": -9.0,
+     "panel": "pour",
+     "puzzle": "r1",
+     "after": [
+      "r1.can5",
+      "r1.can3",
+      "r1.rim",
+      "r1.barrow",
+      "r1.gate"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": 159.8,
+    "pitch": 9.0,
+    "label": "Go through the garden door"
+   },
+   "start": {
+    "yaw": 0,
+    "pitch": 6
+   }
+  },
+  {
+   "id": 2,
+   "name": "The Glasshouse",
+   "accent": "#7FA36B",
+   "pano": "assets/rooms/room2.webp",
+   "objective": "Bring rain from the barrel to the orchid bed.",
+   "objectiveReady": "Open the barrel tap.",
+   "enter": [
+    "r2.enter.1",
+    "r2.enter.2"
+   ],
+   "right": [
+    "r2.right.1"
+   ],
+   "discuss": "r2.discuss",
+   "hint": [
+    "r2.hint.1",
+    "r2.hint.2"
+   ],
+   "wrong": [
+    "r2.wrong.1",
+    "r2.wrong.2",
+    "r2.wrong.3"
+   ],
+   "reward": {
+    "item": "orchid",
+    "truth": 1,
+    "toast": "The orchids lift their heads. An orchid seed drops into your palm."
+   },
+   "hotspots": [
+    {
+     "id": "r2.note",
+     "kind": "LEARN",
+     "label": "Pipe diagram",
+     "yaw": -75.4,
+     "pitch": -20.3,
+     "title": "Pipe diagram",
+     "text": "Odalys's sketch: rain runs from the barrel on the left, along clay pipes, to the orchid bed on the right. Every pipe must join the next. No open ends. One old pipe is rusted fixed, so build around it.",
+     "line": "r2.note"
+    },
+    {
+     "id": "r2.barrel",
+     "kind": "LEARN",
+     "label": "Rain barrel",
+     "yaw": -148.5,
+     "pitch": -9.0,
+     "title": "The rain barrel",
+     "text": "The barrel is full of rain, but its tap is shut. A scratched note says: 'Water the orchids first.'",
+     "line": "r2.barrel"
+    },
+    {
+     "id": "r2.bed",
+     "kind": "INSPECT",
+     "label": "Orchid bed",
+     "yaw": 78.8,
+     "pitch": -9.0,
+     "title": "The orchid bed",
+     "views": [
+      "<div style=\"padding:22px;text-align:center\"><b style=\"font:700 20px var(--head)\">The orchid bed</b><br><span style=\"font-size:19px\">Dry soil and drooping leaves.</span></div>",
+      "<div style=\"padding:22px;text-align:center\"><b style=\"font:700 20px var(--head)\">One bud</b><br><span style=\"font-size:19px\">A single orchid still holds a tiny bud.</span></div>"
+     ],
+     "secret": "Under the leaves, a small clay tag: Odalys wrote that orchids forgive a late friend.",
+     "line": "r2.bed"
+    },
+    {
+     "id": "r2.panel",
+     "kind": "PANEL",
+     "label": "The clay pipes",
+     "yaw": -75.4,
+     "pitch": 22.5,
+     "panel": "pipes",
+     "puzzle": "r2",
+     "after": [
+      "r2.note",
+      "r2.barrel",
+      "r2.bed"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": 0,
+    "pitch": 4,
+    "label": "Go to the far door"
+   },
+   "start": {
+    "yaw": -50,
+    "pitch": 4
+   }
+  },
+  {
+   "id": 3,
+   "name": "The Statue Lawn",
+   "accent": "#7FA36B",
+   "pano": "assets/rooms/room3.webp",
+   "objective": "Find the spot where the statue's finger, the sundial and the chimney line up.",
+   "objectiveReady": "Try the lock.",
+   "enter": [
+    "r3.enter.1",
+    "r3.enter.2"
+   ],
+   "right": [
+    "r3.right.1"
+   ],
+   "discuss": "r3.discuss",
+   "hint": [
+    "r3.hint.1",
+    "r3.hint.2"
+   ],
+   "wrong": [
+    "r3.wrong.1",
+    "r3.wrong.2",
+    "r3.wrong.3"
+   ],
+   "reward": {
+    "item": "rose",
+    "truth": 2,
+    "toast": "The roses open. A rose seed falls into your hand."
+   },
+   "hotspots": [
+    {
+     "id": "r3.plinth",
+     "kind": "LEARN",
+     "label": "Statue plinth",
+     "yaw": -96.8,
+     "pitch": -22.5,
+     "title": "The statue plinth",
+     "text": "On the plinth: 'Where I point, the dial answers. Where the dial answers, the chimney keeps a number.'",
+     "line": "r3.plinth"
+    },
+    {
+     "id": "r3.dial",
+     "kind": "INSPECT",
+     "label": "Sundial",
+     "yaw": 32.6,
+     "pitch": -11.2,
+     "title": "The sundial",
+     "views": [
+      "<div style=\"padding:22px;text-align:center\"><b style=\"font:700 20px var(--head)\">The sundial</b><br><span style=\"font-size:19px\">Worn bronze on a mossy pedestal.</span></div>",
+      "<div style=\"padding:22px;text-align:center\"><b style=\"font:700 20px var(--head)\">The blade</b><br><span style=\"font-size:19px\">A tiny notch is cut into the top of the blade.</span></div>"
+     ],
+     "secret": "Scratched on the dial's edge: 'Stand low and look along.'",
+     "line": "r3.dial"
+    },
+    {
+     "id": "r3.arch",
+     "kind": "LEARN",
+     "label": "Rose arch tag",
+     "yaw": 83.2,
+     "pitch": 15.8,
+     "title": "The rose arch tag",
+     "text": "A tag on the arch: 'Finger, notch and chimney become one line. Only one place on the lawn shows it.'",
+     "line": "r3.arch"
+    },
+    {
+     "id": "r3.panel",
+     "kind": "PANEL",
+     "label": "The statue's finger",
+     "yaw": -69.3,
+     "pitch": 55.1,
+     "panel": "sight",
+     "puzzle": "r3",
+     "after": [
+      "r3.plinth",
+      "r3.dial",
+      "r3.arch"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": 109.1,
+    "pitch": -15.8,
+    "label": "Go through the rose arch"
+   },
+   "start": {
+    "yaw": -20,
+    "pitch": 4
+   }
+  },
+  {
+   "id": 4,
+   "name": "The Secret Garden",
+   "accent": "#7FA36B",
+   "pano": "assets/rooms/room4.webp",
+   "objective": "Plant the raised bed, then decide what becomes of the garden.",
+   "objectiveReady": "Plant the bed.",
+   "enter": [
+    "r4.enter.1",
+    "r4.enter.2"
+   ],
+   "right": [
+    "r4.right.1"
+   ],
+   "discuss": "r4.discuss",
+   "hint": [
+    "r4.hint.1",
+    "r4.hint.2"
+   ],
+   "wrong": [
+    "r4.wrong.1",
+    "r4.wrong.2",
+    "r4.wrong.3"
+   ],
+   "reward": {
+    "truth": 3
+   },
+   "hotspots": [
+    {
+     "id": "r4.tulip",
+     "kind": "FIND",
+     "label": "Odalys's tulip seed",
+     "yaw": -123.8,
+     "pitch": -11.2,
+     "item": "tulip",
+     "line": "r4.tulip"
+    },
+    {
+     "id": "r4.rhyme",
+     "kind": "LEARN",
+     "label": "Planting rhyme",
+     "yaw": -96.8,
+     "pitch": -5.6,
+     "title": "The planting rhyme",
+     "text": "On the bench: 'Four flowers, four rows, four columns. In every row and every column, no flower grows twice.'",
+     "line": "r4.rhyme"
+    },
+    {
+     "id": "r4.door",
+     "kind": "LEARN",
+     "label": "Arched door",
+     "yaw": -13.5,
+     "pitch": 15.8,
+     "title": "The arched door",
+     "text": "The door has four seed-shaped hollows. Seeds belong in the bed, not the door. Plant the bed first.",
+     "line": "r4.door"
+    },
+    {
+     "id": "r4.panel",
+     "kind": "PANEL",
+     "label": "The raised bed",
+     "yaw": -22.5,
+     "pitch": -22.5,
+     "panel": "square",
+     "puzzle": "r4",
+     "after": [
+      "r4.tulip",
+      "r4.rhyme",
+      "r4.door"
+     ]
+    }
+   ],
+   "start": {
+    "yaw": -20,
+    "pitch": 4
+   }
+  }
+ ],
+ "cinematic": [
+  "The last flower goes in, and the four seeds sink into the soil. The whole garden holds its breath.",
+  {
+   "say": [
+    "end.odalys"
+   ]
+  },
+  {
+   "choose": {
+    "prompt": "What will Wren do with the garden?",
+    "options": [
+     {
+      "label": "Keep the garden hidden as Odalys wished",
+      "cinematic": [
+       "Wren closes the gate gently. The ivy folds back, and Thistlewick keeps its quiet secret.",
+       {
+        "say": [
+         "end.keep.1",
+         "end.keep.2"
+        ]
+       },
+       "Some gardens bloom best when only a few know the way in."
+      ],
+      "win": {
+       "title": "The Garden Sleeps",
+       "text": "You found the secret of Thistlewick and kept it safe, just as Odalys wished.",
+       "button": "Play Again"
+      }
+     },
+     {
+      "label": "Open it to the village",
+      "cinematic": [
+       "Wren swings the gate wide. By evening the whole village is walking among the roses.",
+       {
+        "say": [
+         "end.open.1",
+         "end.open.2"
+        ]
+       },
+       "On the inside of the old door, a second keyhole glints. Beside it hangs another key on a ribbon, tagged: 'The Orchard Gate.'"
+      ],
+      "win": {
+       "title": "The Garden Opens",
+       "text": "The village has a garden again. But the old door still holds one more key...",
+       "button": "Play Again"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "endScreens": {
+  "win": {
+   "title": "The Secret Is Found",
+   "text": "Odalys left her garden to someone who would care for it.",
+   "button": "Play Again"
+  },
+  "timeup": {
+   "title": "The Garden Closes",
+   "text": "The light fades. Petals fall, and the garden closes its gate again.",
+   "button": "Try Again"
+  }
+ },
+ "assets": {
+  "sizes": {},
+  "title": "assets/sheets/title_key_art.jpg",
+  "briefing": "assets/sheets/briefing_bg.jpg",
+  "music": "assets/audio/bgm.mp3",
+  "cut": [
+   "wren_calm",
+   "wren_cheerful",
+   "wren_determined",
+   "wren_worried",
+   "osric_calm",
+   "osric_cheerful",
+   "osric_determined",
+   "osric_worried",
+   "odalys",
+   "icon_score",
+   "icon_hint",
+   "icon_casebook",
+   "can5",
+   "can3",
+   "daisy",
+   "orchid",
+   "rose",
+   "tulip"
+  ],
+  "sheets": {
+   "wren_busts.png": "wren_calm wren_cheerful wren_determined wren_worried",
+   "osric_busts.png": "osric_calm osric_cheerful osric_determined osric_worried",
+   "odalys_bust.png": "odalys",
+   "hud_icons.png": "icon_score icon_hint icon_casebook icon_pause",
+   "items1.png": "can5 can3 daisy orchid",
+   "items2.png": "rose tulip"
+  }
+ },
+ "iconSvg": {
+  "can": "<path d=\"M12 22h20v16a3 3 0 0 1-3 3H15a3 3 0 0 1-3-3z\" fill=\"#b8c2c0\" stroke=\"#4c5755\" stroke-width=\"2\"/><path d=\"M32 26L42 14\" stroke=\"#4c5755\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M12 24c-6 0-6 10 0 10M16 22c0-8 12-8 12 0\" fill=\"none\" stroke=\"#4c5755\" stroke-width=\"2.5\"/>",
+  "seedDaisy": "<path d=\"M24 8c8 8 10 18 0 30-10-12-8-22 0-30z\" fill=\"#e9d98a\" stroke=\"#3b2a14\" stroke-width=\"2\"/><path d=\"M24 14v20\" stroke=\"#3b2a14\" stroke-width=\"1.5\"/>",
+  "seedOrchid": "<path d=\"M24 8c8 8 10 18 0 30-10-12-8-22 0-30z\" fill=\"#c77fbe\" stroke=\"#3b2a14\" stroke-width=\"2\"/><path d=\"M24 14v20\" stroke=\"#3b2a14\" stroke-width=\"1.5\"/>",
+  "seedRose": "<path d=\"M24 8c8 8 10 18 0 30-10-12-8-22 0-30z\" fill=\"#d9566a\" stroke=\"#3b2a14\" stroke-width=\"2\"/><path d=\"M24 14v20\" stroke=\"#3b2a14\" stroke-width=\"1.5\"/>",
+  "seedTulip": "<path d=\"M24 8c8 8 10 18 0 30-10-12-8-22 0-30z\" fill=\"#eba23a\" stroke=\"#3b2a14\" stroke-width=\"2\"/><path d=\"M24 14v20\" stroke=\"#3b2a14\" stroke-width=\"1.5\"/>"
+ },
+ "glyphs": {
+  "Daisy": "<ellipse cx=\"24\" cy=\"11\" rx=\"3.2\" ry=\"7\" transform=\"rotate(0 24 24)\"/><ellipse cx=\"24\" cy=\"11\" rx=\"3.2\" ry=\"7\" transform=\"rotate(45 24 24)\"/><ellipse cx=\"24\" cy=\"11\" rx=\"3.2\" ry=\"7\" transform=\"rotate(90 24 24)\"/><ellipse cx=\"24\" cy=\"11\" rx=\"3.2\" ry=\"7\" transform=\"rotate(135 24 24)\"/><ellipse cx=\"24\" cy=\"11\" rx=\"3.2\" ry=\"7\" transform=\"rotate(180 24 24)\"/><ellipse cx=\"24\" cy=\"11\" rx=\"3.2\" ry=\"7\" transform=\"rotate(225 24 24)\"/><ellipse cx=\"24\" cy=\"11\" rx=\"3.2\" ry=\"7\" transform=\"rotate(270 24 24)\"/><ellipse cx=\"24\" cy=\"11\" rx=\"3.2\" ry=\"7\" transform=\"rotate(315 24 24)\"/><circle cx=\"24\" cy=\"24\" r=\"4.5\"/>",
+  "Orchid": "<ellipse cx=\"13\" cy=\"17\" rx=\"9\" ry=\"5.5\" transform=\"rotate(-25 13 17)\"/><ellipse cx=\"35\" cy=\"17\" rx=\"9\" ry=\"5.5\" transform=\"rotate(25 35 17)\"/><ellipse cx=\"24\" cy=\"10\" rx=\"4.5\" ry=\"7\"/><ellipse cx=\"15\" cy=\"33\" rx=\"4\" ry=\"8\" transform=\"rotate(35 15 33)\"/><ellipse cx=\"33\" cy=\"33\" rx=\"4\" ry=\"8\" transform=\"rotate(-35 33 33)\"/><path d=\"M24 22c-5 4-4 12 0 14 4-2 5-10 0-14z\"/>",
+  "Rose": "<circle cx=\"24\" cy=\"19\" r=\"10\"/><circle cx=\"16\" cy=\"29\" r=\"9\"/><circle cx=\"32\" cy=\"29\" r=\"9\"/><path d=\"M24 15c-4 0-5 4-2 5s5-1 4-3\"/><path d=\"M24 38v7\"/>",
+  "Tulip": "<path d=\"M13 14q0 17 11 19 11-2 11-19l-6 6-5-10-5 10z\"/><path d=\"M24 33v11M24 41q-8-1-10-8\"/>"
+ }
+}

@@ -1,0 +1,2 @@
+.stagebar{display:flex;gap:6px;justify-content:center;margin:0 0 8px;font:700 12px var(--head);letter-spacing:.05em}
+.stagebar span{padding:4px 10px;border-radius:999px;border:1px solid var(--edge);color:var(--mute)}.stagebar .now{color:var(--bg);background:var(--gold);border-color:var(--gold)}.stagebar .done{color:var(--gold2);border-color:var(--turq)}

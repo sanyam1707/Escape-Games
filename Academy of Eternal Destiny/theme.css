@@ -1,0 +1,36 @@
+/* Academy of Eternal Destiny: storybook night. Deep indigo, pearl and rose-gold (Good), violet and acid-green (Evil). HUD preset B (round buttons). */
+@font-face{font-family:Almendra;font-weight:400;src:url(assets/fonts/almendra-latin-400-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Almendra;font-weight:700;src:url(assets/fonts/almendra-latin-700-normal.woff2) format("woff2");font-display:swap}
+:root{
+  --bg:#0c0e2b; --bg2:#151946; --bg3:#232868;
+  --gold:#e9a897; --gold2:#fbe3dc;                  /* rose-gold + pearl blush: the Good tower */
+  --edge:#454aa0; --edge2:#7e84dc; --edge3:#5a3fa8; /* indigo borders, violet frame: the Evil tower */
+  --mute:#6a6fb0; --sand:#bfc0ee; --papyrus:#f4efff;
+  --turq:#b6f23c; --accent:#e9a897;                 /* acid-green secondary */
+  --bad2:#ff9cc0; --good2:#c8f78a; --fx1:#fbe3dc; --fx2:#b6f23c;
+  --head:Almendra,"Cormorant Garamond",Georgia,serif; --body:"Cormorant Garamond",Georgia,serif;
+  /* HUD preset B: round buttons */
+  --r-btn:50%; --r-pill:999px; --r-timer:999px;
+  --icon-pad:9px;
+}
+body{background:#05061a}
+.card{background:linear-gradient(180deg,#252a6e,#121540 70%);border:2px solid var(--gold);box-shadow:0 0 0 4px var(--bg),0 0 0 6px var(--edge3),0 14px 40px rgba(0,0,0,.75),inset 0 0 50px rgba(20,10,60,.55);border-radius:20px}
+.card::before,.card::after{border-color:var(--turq);opacity:.9}
+.card h2{font-weight:700;letter-spacing:.04em}
+.card p,.papyrus{font-family:var(--body);font-weight:500}
+.btn{background:linear-gradient(180deg,var(--gold2),var(--gold));border:2px solid var(--gold2);color:#1a1450;border-radius:999px;box-shadow:0 3px 0 #4a2c78,0 6px 14px rgba(0,0,0,.5);letter-spacing:.05em}
+.btn.ghost{background:rgba(10,8,50,.55);color:var(--sand);border-color:var(--edge2);box-shadow:none}
+.opt{background:rgba(10,8,60,.5);border-color:var(--edge2);border-radius:16px;font-family:var(--head)}
+.opt.sel{border-color:var(--turq);background:color-mix(in srgb,var(--turq) 16%,transparent);box-shadow:0 0 14px color-mix(in srgb,var(--turq) 40%,transparent)}
+#dlg{background:linear-gradient(180deg,#1b2066,#0d1038);border-color:var(--gold);border-radius:22px}
+#dlg::before,#dlg::after{border-color:var(--turq)}
+.scr.title h1{font-family:var(--head);color:var(--gold2);text-shadow:0 0 26px color-mix(in srgb,var(--gold) 65%,transparent),0 3px 0 #2a1470}
+.scr.title .tag{color:var(--sand)}
+.scr.end.win h1{color:var(--turq)}
+.scr.cine .box{border-color:var(--gold)}
+.secretspot{border-color:var(--turq);color:var(--turq);background:color-mix(in srgb,var(--turq) 22%,transparent)}
+.hs.learn>i,.hs.inspect>i{border-color:var(--gold2);color:var(--gold2)}
+.hs.use>i{border-color:var(--turq);color:var(--turq)}
+.hs.panel>i{background:linear-gradient(135deg,#6a3fd0,var(--turq));border-color:var(--gold2);color:#120a40}
+.mirror{display:inline-block;transform:scaleX(-1);letter-spacing:.12em;font-family:var(--head);font-size:1.18em;color:var(--gold2);text-shadow:0 0 8px color-mix(in srgb,var(--edge2) 70%,transparent)}
+.mirror-wrap{text-align:center;padding:10px 4px;border:1.5px dashed var(--edge2);border-radius:14px;background:rgba(0,0,30,.35);margin:6px 0}

@@ -1,0 +1,1397 @@
+{
+ "id": "parallelworlds",
+ "title": "Parallel Worlds",
+ "tagline": "Four worlds. Four Anchor Stars. One gate that is about to close.",
+ "modules": [
+  "lab"
+ ],
+ "config": {
+  "timerSeconds": 300,
+  "hintsTotal": 3,
+  "lockoutMs": 3000,
+  "idleSec": 40,
+  "particleCap": {
+   "phone": 60,
+   "desktop": 120
+  }
+ },
+ "ui": {
+  "start": "Tap to Start",
+  "begin": "Begin",
+  "next": "Next",
+  "skip": "Skip",
+  "close": "Close",
+  "confirm": "Confirm",
+  "scoreName": "Wonder",
+  "hint": "Hint",
+  "casebook": "Notebook",
+  "pause": "Pause",
+  "paused": "Paused",
+  "resume": "Resume",
+  "restartPanel": "Restart this panel",
+  "soundOn": "Sound: On",
+  "soundOff": "Sound: Off",
+  "voiceOn": "Narration: On",
+  "voiceOff": "Narration: Off",
+  "tabItems": "Satchel",
+  "tabTruths": "Notes",
+  "notes": "Clues you found",
+  "noItems": "Nothing yet. Look around the room.",
+  "noTruths": "No truths yet. Finish a world to learn one.",
+  "findStrip": "Find in this room",
+  "hold": "Hold to use",
+  "holding": "Holding",
+  "stopHolding": "Put away",
+  "holdHelp": "Now tap the right spot in the room.",
+  "useNothing": "Nothing happens. Try somewhere else.",
+  "needItem": "You need something for this. Open the notebook and hold an item.",
+  "savedItem": "Saved to your Items",
+  "savedNote": "Saved to your notes",
+  "secretFound": "Secret found!",
+  "reward": "Reward",
+  "objective": "Goal",
+  "hintNone": "No hints left.",
+  "hintDone": "Nothing left to solve here. Take the way out.",
+  "hintPoor": "Not enough {score} for a hint. You need {cost}.",
+  "hintUsed": "Hint used. -{cost} {score}",
+  "locked": "Wait {s}...",
+  "newTruth": "New truth in the notebook",
+  "takeExit": "The way is open. Go on.",
+  "usedUp": "Used up",
+  "inspectNext": "Next view",
+  "inspectPrev": "Back",
+  "tapSecret": "Something is hidden here. Tap the glowing spot.",
+  "pauseResumeHint": "The clock is stopped.",
+  "restarted": "Panel reset.",
+  "tapContinue": "Tap to continue",
+  "tabProgress": "Progress",
+  "newWay": "A new way is open.",
+  "progRooms": "Rooms cleared",
+  "progRoom": "Now in",
+  "progItems": "Items found",
+  "progClues": "Clues found",
+  "progHints": "Hints left"
+ },
+ "mission": {
+  "kicker": "The Cartographer's Study, 6:02 pm",
+  "heading": "The Seam",
+  "paras": [
+   "You are Mara Quill, a cartographer, and Jonas Reeve, an instrument maker. Your mentor, Professor Ilsa Venn, has just stepped into a glowing slit in her study wall, the Seam.",
+   "Four Anchor Stars, one hidden in each world beyond it, can hold the gate open. Orrin, her small clockwork owl, will guide you.",
+   "Find all four stars and bring Ilsa home before the gate closes in five minutes."
+  ],
+  "audioFile": "assets/audio/voice/mission_0.mp3"
+ },
+ "tutorial": [
+  {
+   "target": "stage",
+   "text": "Drag to look around. Glowing things can be tapped.",
+   "audioFile": "assets/audio/voice/tutorial_0.mp3"
+  },
+  {
+   "target": "book",
+   "text": "Pick up items and read clues. Open the notebook to see them.",
+   "audioFile": "assets/audio/voice/tutorial_1.mp3"
+  },
+  {
+   "target": "score",
+   "text": "Every room has one puzzle. Close it any time with the X. Wrong answers cost 10 Wonder.",
+   "audioFile": "assets/audio/voice/tutorial_2.mp3"
+  },
+  {
+   "target": "hint",
+   "text": "You have 3 hints for the whole game, each costs 25 Wonder. Watch the clock.",
+   "audioFile": "assets/audio/voice/tutorial_3.mp3"
+  }
+ ],
+ "speakers": {
+  "mara": {
+   "name": "Mara",
+   "pitch": 1.1,
+   "rate": 0.97,
+   "gender": "f",
+   "color": "#e0b45a",
+   "initial": "M"
+  },
+  "jonas": {
+   "name": "Jonas",
+   "pitch": 0.85,
+   "rate": 1.03,
+   "gender": "m",
+   "color": "#62d6d0",
+   "initial": "J"
+  },
+  "orrin": {
+   "name": "Orrin",
+   "pitch": 1.45,
+   "rate": 1.1,
+   "gender": "m",
+   "color": "#f6dc9c",
+   "initial": "O"
+  },
+  "narrator": {
+   "name": "Narrator",
+   "pitch": 0.9,
+   "rate": 0.92,
+   "gender": "m",
+   "color": "#b7c0d6",
+   "initial": "!"
+  }
+ },
+ "opening": [
+  "open.1",
+  "open.2",
+  "open.3"
+ ],
+ "idle": "idle.1",
+ "dialogue": [
+  {
+   "id": "open.1",
+   "speaker": "mara",
+   "text": "Ilsa stepped into the Seam, and the wall closed over her light.",
+   "pausesTimer": true,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_open.1.mp3"
+  },
+  {
+   "id": "open.2",
+   "speaker": "jonas",
+   "text": "Then we follow. Four Anchor Stars will hold the gate open, Mara.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dialogue_open.2.mp3"
+  },
+  {
+   "id": "open.3",
+   "speaker": "orrin",
+   "text": "Tick, tock. Five minutes before the Seam seals. I know the way.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_open.3.mp3"
+  },
+  {
+   "id": "idle.1",
+   "speaker": "orrin",
+   "text": "Hoo. Look again. Brass hides what lamplight loves.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_idle.1.mp3"
+  },
+  {
+   "id": "r1.enter.1",
+   "speaker": "mara",
+   "text": "Her study. Everything is where she left it, except her.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dialogue_r1.enter.1.mp3"
+  },
+  {
+   "id": "r1.enter.2",
+   "speaker": "jonas",
+   "text": "Her map table. A star must be hidden near here.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dialogue_r1.enter.2.mp3"
+  },
+  {
+   "id": "r1.pin",
+   "speaker": "jonas",
+   "text": "A brass pin. Ilsa marked every cache with these.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r1.pin.mp3"
+  },
+  {
+   "id": "r1.compass",
+   "speaker": "mara",
+   "text": "Her folding compass. Bearings never lied to her.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r1.compass.mp3"
+  },
+  {
+   "id": "r1.lens",
+   "speaker": "jonas",
+   "text": "The telescope's lens, loose. She watched something far away.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r1.lens.mp3"
+  },
+  {
+   "id": "r1.banner",
+   "speaker": "mara",
+   "text": "The compass rose banner. Her first bearing is stitched underneath.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r1.banner.mp3"
+  },
+  {
+   "id": "r1.wallmap",
+   "speaker": "orrin",
+   "text": "Hoo. The wall map has a second mark, from the windmill.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r1.wallmap.mp3"
+  },
+  {
+   "id": "r1.right.1",
+   "speaker": "jonas",
+   "text": "There! The first Anchor Star, glowing right in the map!",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dialogue_r1.right.1.mp3"
+  },
+  {
+   "id": "r1.discuss",
+   "speaker": "mara",
+   "text": "One world held. She meant us to find these in order.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dialogue_r1.discuss.mp3"
+  },
+  {
+   "id": "r1.hint.1",
+   "speaker": "orrin",
+   "text": "Two landmarks, two bearings. The banner and the wall map hold both.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r1.hint.1.mp3"
+  },
+  {
+   "id": "r1.hint.2",
+   "speaker": "orrin",
+   "text": "Draw 135 from the Lamp Tower and 180 from the Windmill. Pin where they cross.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r1.hint.2.mp3"
+  },
+  {
+   "id": "r1.wrong.1",
+   "speaker": "jonas",
+   "text": "That spot touches only one line. The pin belongs where both cross.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_r1.wrong.1.mp3"
+  },
+  {
+   "id": "r1.wrong.2",
+   "speaker": "mara",
+   "text": "Check both bearings, then pin the crossing.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_r1.wrong.2.mp3"
+  },
+  {
+   "id": "r2.enter.1",
+   "speaker": "mara",
+   "text": "Snow, brass and aurora. We are far from the study.",
+   "pausesTimer": true,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_r2.enter.1.mp3"
+  },
+  {
+   "id": "r2.enter.2",
+   "speaker": "jonas",
+   "text": "The airship mast is frozen high. The winch must lower it.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dialogue_r2.enter.2.mp3"
+  },
+  {
+   "id": "r2.valve",
+   "speaker": "jonas",
+   "text": "A valve wheel, frosted over. The winch is missing exactly this.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r2.valve.mp3"
+  },
+  {
+   "id": "r2.mittens",
+   "speaker": "mara",
+   "text": "Fur mittens. Small enough to be Ilsa's.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r2.mittens.mp3"
+  },
+  {
+   "id": "r2.pass",
+   "speaker": "orrin",
+   "text": "Hoo. A dock pass signed I. Venn. She came this way.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r2.pass.mp3"
+  },
+  {
+   "id": "r2.vault",
+   "speaker": "orrin",
+   "text": "Flame, bend, wheel. The vault door lists the order.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r2.vault.mp3"
+  },
+  {
+   "id": "r2.logbook",
+   "speaker": "mara",
+   "text": "The dockmaster's note. Steam must never leak before the valve.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r2.logbook.mp3"
+  },
+  {
+   "id": "r2.use",
+   "speaker": "jonas",
+   "text": "It fits. Now the steam needs a clear road.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r2.use.mp3"
+  },
+  {
+   "id": "r2.right.1",
+   "speaker": "jonas",
+   "text": "The winch groans! The mast lowers and a star drops down.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dialogue_r2.right.1.mp3"
+  },
+  {
+   "id": "r2.discuss",
+   "speaker": "mara",
+   "text": "Each star keeps one world steady. Ilsa knew that.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dialogue_r2.discuss.mp3"
+  },
+  {
+   "id": "r2.hint.1",
+   "speaker": "orrin",
+   "text": "Turn the pipes so steam runs from the boiler to the winch.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r2.hint.1.mp3"
+  },
+  {
+   "id": "r2.hint.2",
+   "speaker": "orrin",
+   "text": "Red glow means an open end. Join every pipe, then open the valve.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r2.hint.2.mp3"
+  },
+  {
+   "id": "r2.wrong.1",
+   "speaker": "mara",
+   "text": "Steam is leaking. Every pipe end must meet another.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_r2.wrong.1.mp3"
+  },
+  {
+   "id": "r2.wrong.2",
+   "speaker": "jonas",
+   "text": "Find the red glows and turn those pipes.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_r2.wrong.2.mp3"
+  },
+  {
+   "id": "r3.enter.1",
+   "speaker": "mara",
+   "text": "Glass trees under two moons. It is perfectly silent.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dialogue_r3.enter.1.mp3"
+  },
+  {
+   "id": "r3.enter.2",
+   "speaker": "jonas",
+   "text": "The five lamp posts are dark. Light them and something wakes.",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dialogue_r3.enter.2.mp3"
+  },
+  {
+   "id": "r3.lotus",
+   "speaker": "mara",
+   "text": "A glass lotus. It hums when moonlight touches it.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r3.lotus.mp3"
+  },
+  {
+   "id": "r3.phial",
+   "speaker": "jonas",
+   "text": "Moonwater, still glowing. Lamps would love this.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r3.phial.mp3"
+  },
+  {
+   "id": "r3.shard",
+   "speaker": "orrin",
+   "text": "Hoo. A mirror shard. Mind your fingers, and your reflection.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r3.shard.mp3"
+  },
+  {
+   "id": "r3.moons",
+   "speaker": "orrin",
+   "text": "Two moons, two lights. Three things must cross the lake.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r3.moons.mp3"
+  },
+  {
+   "id": "r3.globe",
+   "speaker": "mara",
+   "text": "The big globe maps the five posts. It is fragile.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r3.globe.mp3"
+  },
+  {
+   "id": "r3.right.1",
+   "speaker": "mara",
+   "text": "All five lamps blaze! The third star floats free.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dialogue_r3.right.1.mp3"
+  },
+  {
+   "id": "r3.discuss",
+   "speaker": "jonas",
+   "text": "Light carried carefully, never left alone. Like Ilsa's advice.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dialogue_r3.discuss.mp3"
+  },
+  {
+   "id": "r3.hint.1",
+   "speaker": "orrin",
+   "text": "The wisp cracks glass. Never leave it alone with the globe or the lamp.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r3.hint.1.mp3"
+  },
+  {
+   "id": "r3.hint.2",
+   "speaker": "orrin",
+   "text": "Wisp over, back alone, globe over, wisp back, lamp over, back alone, wisp over.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r3.hint.2.mp3"
+  },
+  {
+   "id": "r3.wrong.1",
+   "speaker": "jonas",
+   "text": "The wisp shattered something. Keep it apart from the glass.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_r3.wrong.1.mp3"
+  },
+  {
+   "id": "r3.wrong.2",
+   "speaker": "mara",
+   "text": "Only one thing fits on the skiff with me.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_r3.wrong.2.mp3"
+  },
+  {
+   "id": "r4.enter.1",
+   "speaker": "mara",
+   "text": "The Gate of Worlds. Every bridge ends here.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dialogue_r4.enter.1.mp3"
+  },
+  {
+   "id": "r4.enter.2",
+   "speaker": "jonas",
+   "text": "Ilsa is somewhere beyond that arch. The gate is humming.",
+   "pausesTimer": true,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_r4.enter.2.mp3"
+  },
+  {
+   "id": "r4.page1",
+   "speaker": "mara",
+   "text": "A drifting map page. The ink is still wet.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r4.page1.mp3"
+  },
+  {
+   "id": "r4.page2",
+   "speaker": "jonas",
+   "text": "Another page. A coast I have never seen drawn.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r4.page2.mp3"
+  },
+  {
+   "id": "r4.page3",
+   "speaker": "orrin",
+   "text": "Hoo. Pages escape when a map wants adding to.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r4.page3.mp3"
+  },
+  {
+   "id": "r4.banner1",
+   "speaker": "mara",
+   "text": "A banner with a moon and compass. It names runes one and five.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r4.banner1.mp3"
+  },
+  {
+   "id": "r4.banner2",
+   "speaker": "jonas",
+   "text": "This banner shows a lamp. Rune nine finishes the path.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r4.banner2.mp3"
+  },
+  {
+   "id": "r4.right.1",
+   "speaker": "mara",
+   "text": "The light reaches the gate! The last Anchor Star is in my hands.",
+   "pausesTimer": true,
+   "mood": "cheerful",
+   "audioFile": "assets/audio/voice/dialogue_r4.right.1.mp3"
+  },
+  {
+   "id": "r4.discuss",
+   "speaker": "jonas",
+   "text": "Four stars. The Seam is wide open. Let us bring her home.",
+   "pausesTimer": true,
+   "mood": "calm",
+   "audioFile": "assets/audio/voice/dialogue_r4.discuss.mp3"
+  },
+  {
+   "id": "r4.hint.1",
+   "speaker": "orrin",
+   "text": "The banners name the runes to press. Each switch also flips its neighbours.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r4.hint.1.mp3"
+  },
+  {
+   "id": "r4.hint.2",
+   "speaker": "orrin",
+   "text": "Press runes 1, 5 and 9 once each.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_r4.hint.2.mp3"
+  },
+  {
+   "id": "r4.wrong.1",
+   "speaker": "jonas",
+   "text": "The light stops short. Try the runes the banners name.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_r4.wrong.1.mp3"
+  },
+  {
+   "id": "r4.wrong.2",
+   "speaker": "mara",
+   "text": "Each rune flips its neighbours too. Count carefully.",
+   "pausesTimer": false,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_r4.wrong.2.mp3"
+  },
+  {
+   "id": "end.1",
+   "speaker": "mara",
+   "text": "Then stay with us. We will find another way, Ilsa.",
+   "pausesTimer": true,
+   "mood": "worried",
+   "audioFile": "assets/audio/voice/dialogue_end.1.mp3"
+  },
+  {
+   "id": "end.2",
+   "speaker": "jonas",
+   "text": "You walked into the Seam on purpose. That is the truth, isn't it?",
+   "pausesTimer": true,
+   "mood": "determined",
+   "audioFile": "assets/audio/voice/dialogue_end.2.mp3"
+  },
+  {
+   "id": "end.3",
+   "speaker": "orrin",
+   "text": "Hoo. A gate needs a keeper. She decided long before we arrived.",
+   "pausesTimer": false,
+   "audioFile": "assets/audio/voice/dialogue_end.3.mp3"
+  }
+ ],
+ "items": {
+  "pin": {
+   "name": "Brass Pin",
+   "material": "Brass",
+   "text": "One of Ilsa's cache pins, for marking a place on a map.",
+   "icon": "gem"
+  },
+  "compass": {
+   "name": "Folding Compass",
+   "material": "Brass",
+   "text": "Ilsa's pocket compass. North is marked with a tiny star.",
+   "icon": "coin"
+  },
+  "lens": {
+   "name": "Telescope Lens",
+   "material": "Glass",
+   "text": "A loose lens from the study telescope, warm from lamplight.",
+   "icon": "gem"
+  },
+  "valve": {
+   "name": "Valve Wheel",
+   "material": "Iron",
+   "text": "A frosted brass valve wheel. It belongs on the winch.",
+   "icon": "box",
+   "usable": true
+  },
+  "mittens": {
+   "name": "Fur Mittens",
+   "material": "Fur",
+   "text": "Small fur mittens, left on a crate in a hurry.",
+   "icon": "box"
+  },
+  "pass": {
+   "name": "Dock Pass",
+   "material": "Paper",
+   "text": "A Skyport pass signed I. Venn, dated tonight.",
+   "icon": "paper"
+  },
+  "lotus": {
+   "name": "Glass Lotus",
+   "material": "Crystal",
+   "text": "A crystal flower that hums softly under moonlight.",
+   "icon": "gem"
+  },
+  "phial": {
+   "name": "Moonwater Phial",
+   "material": "Glass",
+   "text": "A phial of glowing water from the mirror lake.",
+   "icon": "gem"
+  },
+  "shard": {
+   "name": "Mirror Shard",
+   "material": "Mirror",
+   "text": "A shard of the mirror lake. It shows a tall figure walking away.",
+   "icon": "gem"
+  },
+  "page1": {
+   "name": "Map Page: Snow",
+   "material": "Paper",
+   "text": "A drifting page showing a snow harbour that is not on any map.",
+   "icon": "paper"
+  },
+  "page2": {
+   "name": "Map Page: Glass",
+   "material": "Paper",
+   "text": "A drifting page showing a glass forest under two moons.",
+   "icon": "paper"
+  },
+  "page3": {
+   "name": "Map Page: Gold",
+   "material": "Paper",
+   "text": "A drifting page with a golden desert and a ruined arch.",
+   "icon": "paper"
+  },
+  "star1": {
+   "name": "Anchor Star 1",
+   "material": "Starlight",
+   "text": "The Anchor Star of the Study. It holds the gate steady.",
+   "icon": "gem"
+  },
+  "star2": {
+   "name": "Anchor Star 2",
+   "material": "Starlight",
+   "text": "The Anchor Star of the Skyport. It holds the gate steady.",
+   "icon": "gem"
+  },
+  "star3": {
+   "name": "Anchor Star 3",
+   "material": "Starlight",
+   "text": "The Anchor Star of the Glass Forest. It holds the gate steady.",
+   "icon": "gem"
+  },
+  "star4": {
+   "name": "Anchor Star 4",
+   "material": "Starlight",
+   "text": "The Anchor Star of the Gate. It holds the gate steady.",
+   "icon": "gem"
+  }
+ },
+ "truths": [
+  "The Seam opens only for someone who chooses to cross.",
+  "Each Anchor Star holds one world's edge steady.",
+  "A gate held open by force tears the worlds apart. It needs a keeper.",
+  "Ilsa left on purpose. She chose to become the gate's keeper."
+ ],
+ "puzzles": {
+  "r1": {
+   "title": "Bearings on the Map",
+   "cols": 9,
+   "rows": 9,
+   "landmarks": [
+    {
+     "id": "spire",
+     "name": "Lamp Tower",
+     "cell": "C7"
+    },
+    {
+     "id": "mill",
+     "name": "Windmill",
+     "cell": "F8"
+    }
+   ],
+   "marks": [
+    "F4",
+    "E5",
+    "F6",
+    "H3",
+    "D3"
+   ],
+   "answer": "F4",
+   "bearings": [
+    0,
+    45,
+    90,
+    135,
+    180,
+    225,
+    270,
+    315
+   ],
+   "compassNames": {
+    "0": "N",
+    "45": "NE",
+    "90": "E",
+    "135": "SE",
+    "180": "S",
+    "225": "SW",
+    "270": "W",
+    "315": "NW"
+   },
+   "help": "Columns A-I run left to right, rows 1-9 from the bottom. Tap a landmark, pick a bearing to draw a line, then pin the place where both lines cross.",
+   "pickBearing": "Pick a bearing from the {name}",
+   "erase": "Rub out lines",
+   "placePin": "Place the pin",
+   "pinHelp": "Tap the marked spot where both lines cross.",
+   "needTwo": "Draw two lines first.",
+   "needPin": "Find the Brass Pin first.",
+   "notMark": "Pin only a marked spot.",
+   "noLine": "No line yet",
+   "lineFrom": "{name}: {deg} degrees",
+   "rules": "The pin can only go on a marked spot, and only after both lines are drawn.",
+   "needItem": "pin"
+  },
+  "r2": {
+   "title": "Steam Pipes",
+   "n": 4,
+   "source": [
+    0,
+    0
+   ],
+   "sink": [
+    3,
+    3
+   ],
+   "tiles": [
+    "TSEX",
+    "SEEX",
+    "SSEE",
+    "ETEE"
+   ],
+   "solution": [
+    [
+     2,
+     1,
+     2,
+     0
+    ],
+    [
+     0,
+     1,
+     3,
+     0
+    ],
+    [
+     0,
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     0,
+     3,
+     0
+    ]
+   ],
+   "help": "Tap a pipe to turn it. Red glow = open end. Blue = steam.",
+   "openValve": "Open the valve",
+   "noValve": "The valve wheel is not on the winch yet.",
+   "sourceLabel": "Boiler",
+   "sinkLabel": "Winch",
+   "rules": "No pipe may have an open end (red glow). Do not open the valve until every pipe is joined.",
+   "valveWhen": "r2.use"
+  },
+  "r3": {
+   "title": "The Mirror Skiff",
+   "help": "Carry the lamp parts across the mirror lake to the posts. Step 1: tap one thing on Mara's bank to load it (or carry nothing). Step 2: press Cross.",
+   "cross": "Cross",
+   "reset": "Start over",
+   "crossings": "Crossings: {n}",
+   "near": "Near shore",
+   "far": "Lamp post shore",
+   "ren": "Mara",
+   "tali": "Jonas",
+   "wreck": "Crack! The wisp shattered something. Start again.",
+   "things": [
+    {
+     "id": "wisp",
+     "name": "Shard Wisp"
+    },
+    {
+     "id": "globe",
+     "name": "Moon Globe"
+    },
+    {
+     "id": "lamp",
+     "name": "Star Lamp"
+    }
+   ],
+   "unsafe": [
+    [
+     "wisp",
+     "globe"
+    ],
+    [
+     "wisp",
+     "lamp"
+    ]
+   ],
+   "loadEmpty": "Cross with nothing",
+   "loaded": "Carrying: {name}",
+   "rules": "The skiff carries Mara and ONE thing. The Shard Wisp must never be left alone with the Moon Globe or the Star Lamp. The globe and lamp are safe together.",
+   "warn": "Careful! {a} and {b} would be left alone together.",
+   "crossWith": "Cross with {name}",
+   "crossAlone": "Cross with nothing",
+   "onPlat": "On the platform: Ren + {name}",
+   "onPlatAlone": "On the platform: Ren only",
+   "tapLoad": "Tap to load",
+   "loadedTag": "On platform ✓",
+   "renHere": "Ren is here",
+   "allDone": "All safe at the lamp posts!"
+  },
+  "r4": {
+   "title": "Rune Switches",
+   "start": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "target": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "solution": [
+    0,
+    4,
+    8
+   ],
+   "help": "Each rune flips its own light and the lights next to it. Match the glowing path to the gate.",
+   "lamps": "Light path",
+   "switches": "Runes",
+   "matchRing": "match",
+   "rules": "You cannot flip one light alone. Every rune also flips its neighbours."
+  }
+ },
+ "rooms": [
+  {
+   "id": 1,
+   "name": "The Cartographer's Study",
+   "accent": "#e0b45a",
+   "pano": "assets/rooms/room1.webp",
+   "objective": "Fix the place marked X on the table map.",
+   "objectiveReady": "Use the bearings you found on the table map.",
+   "enter": [
+    "r1.enter.1",
+    "r1.enter.2"
+   ],
+   "right": [
+    "r1.right.1"
+   ],
+   "discuss": "r1.discuss",
+   "hint": [
+    "r1.hint.1",
+    "r1.hint.2"
+   ],
+   "wrong": [
+    "r1.wrong.1",
+    "r1.wrong.2"
+   ],
+   "reward": {
+    "item": "star1",
+    "truth": 0,
+    "toast": "Anchor Star 1 rises from the map."
+   },
+   "hotspots": [
+    {
+     "id": "r1.pin",
+     "kind": "FIND",
+     "label": "Brass pin",
+     "yaw": 51,
+     "pitch": -21,
+     "item": "pin",
+     "line": "r1.pin"
+    },
+    {
+     "id": "r1.compass",
+     "kind": "FIND",
+     "label": "Folding compass",
+     "yaw": -42,
+     "pitch": -10,
+     "item": "compass",
+     "line": "r1.compass"
+    },
+    {
+     "id": "r1.lens",
+     "kind": "FIND",
+     "label": "Telescope lens",
+     "yaw": 134,
+     "pitch": 2,
+     "item": "lens",
+     "line": "r1.lens"
+    },
+    {
+     "id": "r1.banner",
+     "kind": "LEARN",
+     "label": "Compass rose banner",
+     "yaw": -44,
+     "pitch": 28,
+     "title": "Compass Rose Banner",
+     "text": "Stitched under the rose: \"From the Lamp Tower (C7), the cache lies on bearing 135, south-east.\"",
+     "line": "r1.banner"
+    },
+    {
+     "id": "r1.wallmap",
+     "kind": "LEARN",
+     "label": "World map",
+     "yaw": 2,
+     "pitch": 24,
+     "title": "Pencilled World Map",
+     "text": "Pencilled on the wall map: \"From the Windmill (F8), the cache lies due south, bearing 180. Where both lines cross, the cache is.\"",
+     "line": "r1.wallmap"
+    },
+    {
+     "id": "r1.globe",
+     "kind": "INSPECT",
+     "label": "Old globe",
+     "yaw": 103,
+     "pitch": -10,
+     "title": "The Old Globe",
+     "views": [
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">A brass-ringed globe. One side has no ocean at all, only blank paper.</div>",
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">Tiny letters near the pole: \"Every world is a page. Mind the edges.\"</div>"
+     ],
+     "secret": "Ilsa wrote \"Sequel\" in pencil, then rubbed it out."
+    },
+    {
+     "id": "r1.panel",
+     "kind": "PANEL",
+     "label": "Table map",
+     "yaw": 0,
+     "pitch": -22,
+     "panel": "triangulation",
+     "puzzle": "r1",
+     "after": [
+      "r1.banner",
+      "r1.wallmap"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": -76,
+    "pitch": 10,
+    "label": "Step into the Seam"
+   }
+  },
+  {
+   "id": 2,
+   "name": "The Skyport Dock",
+   "accent": "#e0b45a",
+   "pano": "assets/rooms/room2.webp",
+   "objective": "Fit the valve wheel on the winch, then lower the mast.",
+   "objectiveReady": "Now fix the steam pipes at the gear works.",
+   "enter": [
+    "r2.enter.1",
+    "r2.enter.2"
+   ],
+   "right": [
+    "r2.right.1"
+   ],
+   "discuss": "r2.discuss",
+   "hint": [
+    "r2.hint.1",
+    "r2.hint.2"
+   ],
+   "wrong": [
+    "r2.wrong.1",
+    "r2.wrong.2"
+   ],
+   "reward": {
+    "item": "star2",
+    "truth": 1,
+    "toast": "The mast lowers. Anchor Star 2 is yours."
+   },
+   "hotspots": [
+    {
+     "id": "r2.valve",
+     "kind": "FIND",
+     "label": "Valve wheel",
+     "yaw": -104,
+     "pitch": -28,
+     "item": "valve",
+     "line": "r2.valve"
+    },
+    {
+     "id": "r2.mittens",
+     "kind": "FIND",
+     "label": "Fur coats",
+     "yaw": -116,
+     "pitch": 4,
+     "item": "mittens",
+     "line": "r2.mittens"
+    },
+    {
+     "id": "r2.pass",
+     "kind": "FIND",
+     "label": "Sled",
+     "yaw": 110,
+     "pitch": -24,
+     "item": "pass",
+     "line": "r2.pass"
+    },
+    {
+     "id": "r2.vault",
+     "kind": "LEARN",
+     "label": "Vault door symbols",
+     "yaw": 156,
+     "pitch": 8,
+     "title": "Vault Door Symbols",
+     "text": "Three dials on the vault door show a flame, a pipe bend and a wheel. Heat first, then pipes, then the wheel turns.",
+     "line": "r2.vault"
+    },
+    {
+     "id": "r2.logbook",
+     "kind": "LEARN",
+     "label": "Dock desk",
+     "yaw": -166,
+     "pitch": -14,
+     "title": "Dockmaster's Note",
+     "text": "Never open the valve until every pipe is joined. A pipe with a red glow is leaking steam.",
+     "line": "r2.logbook"
+    },
+    {
+     "id": "r2.use",
+     "kind": "USE",
+     "label": "Winch drum",
+     "yaw": -52,
+     "pitch": -10,
+     "needs": "valve",
+     "line": "r2.use"
+    },
+    {
+     "id": "r2.panel",
+     "kind": "PANEL",
+     "label": "Boiler pipes",
+     "yaw": -94,
+     "pitch": -11,
+     "panel": "pipes",
+     "puzzle": "r2",
+     "after": [
+      "r2.use",
+      "r2.vault",
+      "r2.logbook"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": 80,
+    "pitch": 30,
+    "label": "Board the airship"
+   }
+  },
+  {
+   "id": 3,
+   "name": "The Glass Forest",
+   "accent": "#e0b45a",
+   "pano": "assets/rooms/room3.webp",
+   "objective": "Light the five lamp posts.",
+   "objectiveReady": "Carry the lamp parts across the mirror lake.",
+   "enter": [
+    "r3.enter.1",
+    "r3.enter.2"
+   ],
+   "right": [
+    "r3.right.1"
+   ],
+   "discuss": "r3.discuss",
+   "hint": [
+    "r3.hint.1",
+    "r3.hint.2"
+   ],
+   "wrong": [
+    "r3.wrong.1",
+    "r3.wrong.2"
+   ],
+   "reward": {
+    "item": "star3",
+    "truth": 2,
+    "toast": "The lamps blaze. Anchor Star 3 floats free."
+   },
+   "hotspots": [
+    {
+     "id": "r3.lotus",
+     "kind": "FIND",
+     "label": "Glass lotus",
+     "yaw": 74,
+     "pitch": -11,
+     "item": "lotus",
+     "line": "r3.lotus"
+    },
+    {
+     "id": "r3.phial",
+     "kind": "FIND",
+     "label": "Moonwater",
+     "yaw": -44,
+     "pitch": -20,
+     "item": "phial",
+     "line": "r3.phial"
+    },
+    {
+     "id": "r3.shard",
+     "kind": "FIND",
+     "label": "Crystal shard",
+     "yaw": -152,
+     "pitch": -10,
+     "item": "shard",
+     "line": "r3.shard"
+    },
+    {
+     "id": "r3.moons",
+     "kind": "LEARN",
+     "label": "Two moons",
+     "yaw": -12,
+     "pitch": 40,
+     "title": "Two Moons",
+     "text": "Three things must cross the mirror lake to the lamp posts: a Moon Globe, a Star Lamp and a Shard Wisp. The wisp cracks any glass left alone with it.",
+     "line": "r3.moons"
+    },
+    {
+     "id": "r3.globe",
+     "kind": "LEARN",
+     "label": "Glass globe",
+     "yaw": -130,
+     "pitch": 8,
+     "title": "The Great Globe",
+     "text": "The skiff carries Mara and one thing at a time. The globe and the lamp are safe together.",
+     "line": "r3.globe"
+    },
+    {
+     "id": "r3.lake",
+     "kind": "INSPECT",
+     "label": "Mirror lake",
+     "yaw": 6,
+     "pitch": -20,
+     "title": "The Mirror Lake",
+     "views": [
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">The still water shows the moons twice, and a tall figure far away.</div>",
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">The figure raises a hand to the lamp posts, then turns away.</div>"
+     ],
+     "secret": "In the reflection the posts are already lit."
+    },
+    {
+     "id": "r3.panel",
+     "kind": "PANEL",
+     "label": "Lamp posts",
+     "yaw": 136,
+     "pitch": -12,
+     "panel": "river",
+     "puzzle": "r3",
+     "after": [
+      "r3.moons",
+      "r3.globe"
+     ]
+    }
+   ],
+   "exit": {
+    "yaw": 54,
+    "pitch": 17,
+    "label": "Through the ruined arch"
+   }
+  },
+  {
+   "id": 4,
+   "name": "The Gate of Worlds",
+   "accent": "#e0b45a",
+   "pano": "assets/rooms/room4.webp",
+   "objective": "Light the path to the great gate.",
+   "objectiveReady": "Set the rune switches on the bridge.",
+   "enter": [
+    "r4.enter.1",
+    "r4.enter.2"
+   ],
+   "right": [
+    "r4.right.1"
+   ],
+   "discuss": "r4.discuss",
+   "hint": [
+    "r4.hint.1",
+    "r4.hint.2"
+   ],
+   "wrong": [
+    "r4.wrong.1",
+    "r4.wrong.2"
+   ],
+   "reward": {
+    "item": "star4",
+    "truth": 3
+   },
+   "hotspots": [
+    {
+     "id": "r4.page1",
+     "kind": "FIND",
+     "label": "Drifting page",
+     "yaw": -112,
+     "pitch": 1,
+     "item": "page1",
+     "line": "r4.page1"
+    },
+    {
+     "id": "r4.page2",
+     "kind": "FIND",
+     "label": "Drifting page",
+     "yaw": -80,
+     "pitch": -32,
+     "item": "page2",
+     "line": "r4.page2"
+    },
+    {
+     "id": "r4.page3",
+     "kind": "FIND",
+     "label": "Drifting page",
+     "yaw": 82,
+     "pitch": -44,
+     "item": "page3",
+     "line": "r4.page3"
+    },
+    {
+     "id": "r4.banner1",
+     "kind": "LEARN",
+     "label": "Left banner",
+     "yaw": -167,
+     "pitch": -42,
+     "title": "Moon Banner",
+     "text": "The moon-and-compass banner marks rune 1 and rune 5 on the bridge rails.",
+     "line": "r4.banner1"
+    },
+    {
+     "id": "r4.banner2",
+     "kind": "LEARN",
+     "label": "Right banner",
+     "yaw": 166,
+     "pitch": -40,
+     "title": "Lamp Banner",
+     "text": "The lamp banner marks rune 9. Together the three runes light the path.",
+     "line": "r4.banner2"
+    },
+    {
+     "id": "r4.arch",
+     "kind": "INSPECT",
+     "label": "Great arch",
+     "yaw": 0,
+     "pitch": 24,
+     "title": "The Great Arch",
+     "views": [
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">The arch is empty, but light pours out of it like a door left ajar.</div>",
+      "<div style=\"padding:18px;text-align:center;font-size:19px;line-height:1.3\">Low on the stone: \"I.V.\" and the mark of a keeper.</div>"
+     ],
+     "secret": "A keeper stays so the gate can hold."
+    },
+    {
+     "id": "r4.panel",
+     "kind": "PANEL",
+     "label": "Rune rail",
+     "yaw": 116,
+     "pitch": -19,
+     "panel": "switch",
+     "puzzle": "r4",
+     "after": [
+      "r4.banner1",
+      "r4.banner2"
+     ]
+    }
+   ]
+  }
+ ],
+ "cinematic": [
+  "The four Anchor Stars lock into the arch. The Gate of Worlds opens with a sound like a thousand pages turning.",
+  "Ilsa Venn stands in the light, calm and smiling. She does not step through.",
+  {
+   "say": [
+    "end.1",
+    "end.2",
+    "end.3"
+   ]
+  },
+  "\"A gate held open by force tears the worlds apart,\" Ilsa says. \"It needs a keeper. I chose to be one.\"",
+  "Ilsa smiles, presses her folded map into Mara's hands, and steps back into the light as keeper of the gate.",
+  "Back in the study, the map unrolls on the table. One blank page begins to draw itself, line by line."
+ ],
+ "endScreens": {
+  "win": {
+   "title": "The Gate Holds",
+   "text": "Four stars, four worlds, one keeper. Ilsa guards the gate, and the map is yours now.",
+   "button": "Play Again"
+  },
+  "timeup": {
+   "title": "The Seam Closes",
+   "text": "The gate slips shut before the last star. The worlds are still waiting.",
+   "button": "Try Again"
+  }
+ },
+ "assets": {
+  "sizes": {},
+  "title": "assets/sheets/title_key_art.jpg",
+  "briefing": "assets/sheets/briefing_bg.jpg",
+  "music": null,
+  "cut": [
+   "mara_calm",
+   "mara_cheerful",
+   "mara_determined",
+   "mara_worried",
+   "jonas_calm",
+   "jonas_cheerful",
+   "jonas_determined",
+   "jonas_worried",
+   "orrin",
+   "icon_score",
+   "icon_hint",
+   "icon_casebook",
+   "icon_pause",
+   "pin",
+   "compass",
+   "lens",
+   "valve",
+   "mittens",
+   "pass",
+   "lotus",
+   "phial",
+   "shard",
+   "page1",
+   "page2",
+   "page3",
+   "star1",
+   "star2",
+   "star3",
+   "star4"
+  ],
+  "sheets": {
+   "mara_busts.png": "mara_calm mara_cheerful mara_determined mara_worried",
+   "jonas_busts.png": "jonas_calm jonas_cheerful jonas_determined jonas_worried",
+   "orrin_bust.png": "orrin",
+   "hud_icons.png": "icon_score icon_hint icon_casebook icon_pause",
+   "items1.png": "pin compass lens valve",
+   "items2.png": "mittens pass lotus phial",
+   "items3.png": "shard page1 page2 page3",
+   "stars.png": "star1 star2 star3 star4"
+  }
+ }
+}

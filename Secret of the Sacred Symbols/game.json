@@ -1,0 +1,966 @@
+{
+  "id": "secretofthesacredsymbols",
+  "title": "Secret of the Sacred Symbols",
+  "tagline": "Four sacred symbols. One night. Five minutes.",
+  "modules": [
+    "choice",
+    "code",
+    "order",
+    "square"
+  ],
+  "config": {
+    "timerSeconds": 300,
+    "hintsTotal": 3,
+    "lockoutMs": 3000,
+    "idleSec": 40,
+    "score": {
+      "item": 5,
+      "secret": 5,
+      "roomReward": 30,
+      "finalReward": 50,
+      "wrong": 10,
+      "hint": 25
+    },
+    "particleCap": {
+      "phone": 60,
+      "desktop": 120
+    }
+  },
+  "ui": {
+    "start": "Tap to Start",
+    "begin": "Begin",
+    "next": "Next",
+    "skip": "Skip",
+    "close": "Close",
+    "confirm": "Confirm",
+    "scoreName": "Insight",
+    "hint": "Hint",
+    "casebook": "Maestro's Notebook",
+    "pause": "Pause",
+    "paused": "Paused",
+    "resume": "Resume",
+    "restartPanel": "Restart this panel",
+    "soundOn": "Sound: On",
+    "soundOff": "Sound: Off",
+    "voiceOn": "Narration: On",
+    "voiceOff": "Narration: Off",
+    "reduceOn": "Reduce Effects: On",
+    "reduceOff": "Reduce Effects: Off",
+    "tabItems": "Items",
+    "tabTruths": "Truths",
+    "notes": "Clues you found",
+    "noItems": "Nothing yet. Look around the room.",
+    "noTruths": "No truths yet. Finish a room to learn one.",
+    "findStrip": "Find in this room",
+    "hold": "Hold to use",
+    "holding": "Holding",
+    "stopHolding": "Put away",
+    "holdHelp": "Now tap the right spot in the room.",
+    "useNothing": "Nothing happens. Try somewhere else.",
+    "needItem": "You need something for this. Open the notebook and hold an item.",
+    "savedItem": "Saved to your Items",
+    "savedNote": "Saved to your notes",
+    "secretFound": "Secret found!",
+    "reward": "Reward",
+    "objective": "Goal",
+    "hintNone": "No hints left.",
+    "hintDone": "Nothing left to solve here. Take the way out.",
+    "hintPoor": "Not enough {score} for a hint. You need {cost}.",
+    "hintUsed": "Hint used. -{cost} {score}",
+    "locked": "Wait {s}...",
+    "newTruth": "New truth in the notebook",
+    "takeExit": "The way is open. Go on.",
+    "usedUp": "Used up",
+    "inspectNext": "Next view",
+    "inspectPrev": "Back",
+    "tapSecret": "Something is hidden here. Tap the glowing spot.",
+    "pauseResumeHint": "The clock is stopped.",
+    "restarted": "Panel reset.",
+    "tapContinue": "Tap to continue"
+  },
+  "mission": {
+    "kicker": "Paris, tonight",
+    "heading": "The Sealed Wing",
+    "paras": [
+      "The curator of the Musée Valmont has vanished. His last message sends you, a symbologist and a codebreaker, into the sealed wing after dark.",
+      "Once every hundred years the night-lock opens the old vault, and only for five minutes. The Brotherhood of the Open Eye hid its secret behind four sacred symbols: the Rose, the Chalice, the Key and the Eye.",
+      "Follow the Maestro's trail through four rooms before the lock closes again."
+    ],
+    "audioFile": "assets/audio/voice/mission_0.mp3"
+  },
+  "tutorial": [
+    {
+      "target": "stage",
+      "text": "Drag to look around. Glowing things can be tapped."
+    },
+    {
+      "target": "book",
+      "text": "Pick up items and read clues. Open the Maestro's Notebook to see them."
+    },
+    {
+      "target": "score",
+      "text": "Every room has a puzzle. Close it any time with the X. Wrong answers cost Insight."
+    },
+    {
+      "target": "hint",
+      "text": "Your Insight is your score. You have 3 hints for the whole game, each costs 25 Insight. Watch the clock: five minutes."
+    }
+  ],
+  "speakers": {
+    "hero1": {
+      "name": "Dr. Nora Valen",
+      "pitch": 1.05,
+      "rate": 0.95,
+      "gender": "f",
+      "color": "#C9A66B",
+      "initial": "N"
+    },
+    "hero2": {
+      "name": "Inspector Luc Verne",
+      "pitch": 0.85,
+      "rate": 1.05,
+      "gender": "m",
+      "color": "#7A3B2E",
+      "initial": "L"
+    },
+    "narrator": {
+      "name": "The Maestro",
+      "pitch": 0.8,
+      "rate": 0.9,
+      "gender": "m",
+      "color": "#D4A017",
+      "initial": "M"
+    }
+  },
+  "opening": [
+    "open.1",
+    "open.2"
+  ],
+  "idle": "idle.1",
+  "dialogue": [
+    {
+      "id": "open.1",
+      "speaker": "hero1",
+      "text": "The night-lock has opened. A hundred years of dust, and five minutes to read it.",
+      "pausesTimer": true,
+      "mood": "calm",
+      "audioFile": "assets/audio/voice/dialogue_0.mp3"
+    },
+    {
+      "id": "open.2",
+      "speaker": "hero2",
+      "text": "Five minutes. I have waited longer for coffee. Let us find the curator.",
+      "pausesTimer": true,
+      "mood": "determined",
+      "audioFile": "assets/audio/voice/dialogue_1.mp3"
+    },
+    {
+      "id": "idle.1",
+      "speaker": "hero1",
+      "text": "Look around again. Something glints in the candlelight.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/dialogue_2.mp3"
+    },
+    {
+      "id": "r1.find",
+      "speaker": "hero1",
+      "text": "A hand mirror. Odd thing to leave beside a visitor book.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/dialogue_3.mp3"
+    },
+    {
+      "id": "r1.use",
+      "speaker": "hero2",
+      "text": "Mirror-writing! The Maestro hid his words from anyone who only looks once.",
+      "pausesTimer": false,
+      "mood": "surprised",
+      "audioFile": "assets/audio/voice/dialogue_4.mp3"
+    },
+    {
+      "id": "r1.enter.1",
+      "speaker": "hero1",
+      "text": "The Moonlit Gallery. The curator's note was left on the table.",
+      "pausesTimer": true,
+      "mood": "calm",
+      "audioFile": "assets/audio/voice/dialogue_5.mp3"
+    },
+    {
+      "id": "r1.right.1",
+      "speaker": "hero2",
+      "text": "The woman and the flame. Of course. Eyes that watch, and a light that burns.",
+      "pausesTimer": true,
+      "mood": "cheerful",
+      "audioFile": "assets/audio/voice/dialogue_6.mp3"
+    },
+    {
+      "id": "r1.discuss",
+      "speaker": "hero1",
+      "text": "A hidden door behind her portrait. The Maestro loved to make us look twice.",
+      "pausesTimer": true,
+      "mood": "calm",
+      "audioFile": "assets/audio/voice/dialogue_7.mp3"
+    },
+    {
+      "id": "r1.hint",
+      "speaker": "hero1",
+      "text": "Read the red scrawl in a mirror, then find the portrait where the eyes meet the flame.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/dialogue_8.mp3"
+    },
+    {
+      "id": "r1.wrong.1",
+      "speaker": "hero1",
+      "text": "Look at where each person is looking, not at what they hold.",
+      "pausesTimer": false,
+      "mood": "worried",
+      "audioFile": "assets/audio/voice/dialogue_9.mp3"
+    },
+    {
+      "id": "r1.wrong.2",
+      "speaker": "hero2",
+      "text": "Eyes on the flame. Only one painting does that.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/dialogue_10.mp3"
+    },
+    {
+      "id": "r2.enter.1",
+      "speaker": "hero1",
+      "text": "The Hidden Studio. This is where the Maestro worked.",
+      "pausesTimer": true,
+      "mood": "calm",
+      "audioFile": "assets/audio/voice/dialogue_11.mp3"
+    },
+    {
+      "id": "r2.right.1",
+      "speaker": "hero2",
+      "text": "Lumen. It clicks open like a clock that has waited a century.",
+      "pausesTimer": true,
+      "mood": "cheerful",
+      "audioFile": "assets/audio/voice/dialogue_12.mp3"
+    },
+    {
+      "id": "r2.discuss",
+      "speaker": "hero1",
+      "text": "A brass key inside. And the Maestro's creed: guard the secret, and share it wisely.",
+      "pausesTimer": true,
+      "mood": "calm",
+      "audioFile": "assets/audio/voice/dialogue_13.mp3"
+    },
+    {
+      "id": "r2.hint",
+      "speaker": "hero1",
+      "text": "The sketch hides a word. The notebook says the cryptex answers to the word for light.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/dialogue_14.mp3"
+    },
+    {
+      "id": "r2.wrong.1",
+      "speaker": "hero2",
+      "text": "The wheels refuse. Check the letters again.",
+      "pausesTimer": false,
+      "mood": "worried",
+      "audioFile": "assets/audio/voice/dialogue_15.mp3"
+    },
+    {
+      "id": "r2.wrong.2",
+      "speaker": "hero1",
+      "text": "Five wheels, five letters. The sketch scrambled them, we just have to unscramble.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/dialogue_16.mp3"
+    },
+    {
+      "id": "r3.enter.1",
+      "speaker": "hero1",
+      "text": "The Chapter Room. Four figures, four symbols, and somebody has shuffled them.",
+      "pausesTimer": true,
+      "mood": "calm",
+      "audioFile": "assets/audio/voice/dialogue_17.mp3"
+    },
+    {
+      "id": "r3.right.1",
+      "speaker": "hero2",
+      "text": "Rose, Eye, Key, Chalice. Now the fresco makes sense.",
+      "pausesTimer": true,
+      "mood": "cheerful",
+      "audioFile": "assets/audio/voice/dialogue_18.mp3"
+    },
+    {
+      "id": "r3.discuss",
+      "speaker": "hero1",
+      "text": "The brotherhood's true order. The vault floor will follow it.",
+      "pausesTimer": true,
+      "mood": "determined",
+      "audioFile": "assets/audio/voice/dialogue_19.mp3"
+    },
+    {
+      "id": "r3.hint",
+      "speaker": "hero1",
+      "text": "Use the four plaques. The Chalice sits at an end, so start there.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/dialogue_20.mp3"
+    },
+    {
+      "id": "r3.wrong.1",
+      "speaker": "hero2",
+      "text": "Not quite. Check the plaques again, one by one.",
+      "pausesTimer": false,
+      "mood": "worried",
+      "audioFile": "assets/audio/voice/dialogue_21.mp3"
+    },
+    {
+      "id": "r3.wrong.2",
+      "speaker": "hero1",
+      "text": "The Eye is never at an end. That helps.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/dialogue_22.mp3"
+    },
+    {
+      "id": "r4.enter.1",
+      "speaker": "hero1",
+      "text": "The Vault. The floor is a puzzle, and the casket waits beyond it.",
+      "pausesTimer": true,
+      "mood": "calm",
+      "audioFile": "assets/audio/voice/dialogue_23.mp3"
+    },
+    {
+      "id": "r4.right.1",
+      "speaker": "hero2",
+      "text": "The tiles sink into place. The casket is unlocked.",
+      "pausesTimer": true,
+      "mood": "cheerful",
+      "audioFile": "assets/audio/voice/dialogue_24.mp3"
+    },
+    {
+      "id": "r4.discuss",
+      "speaker": "hero1",
+      "text": "Now the real question. What do we do with a secret this old?",
+      "pausesTimer": true,
+      "mood": "calm",
+      "audioFile": "assets/audio/voice/dialogue_25.mp3"
+    },
+    {
+      "id": "r4.hint",
+      "speaker": "hero1",
+      "text": "Row one follows the fresco. Each symbol appears once in every row and column.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/dialogue_26.mp3"
+    },
+    {
+      "id": "r4.wrong.1",
+      "speaker": "hero2",
+      "text": "No. The Maestro did not teach us that.",
+      "pausesTimer": false,
+      "mood": "worried",
+      "audioFile": "assets/audio/voice/dialogue_27.mp3"
+    },
+    {
+      "id": "r4.wrong.2",
+      "speaker": "hero1",
+      "text": "Remember his creed from the studio.",
+      "pausesTimer": false,
+      "audioFile": "assets/audio/voice/dialogue_28.mp3"
+    },
+    {
+      "id": "end.1",
+      "speaker": "hero1",
+      "text": "The map shows a second vault. The Maestro wanted us to keep going.",
+      "pausesTimer": true,
+      "mood": "surprised",
+      "audioFile": "assets/audio/voice/dialogue_29.mp3"
+    },
+    {
+      "id": "end.2",
+      "speaker": "hero2",
+      "text": "Of course he did. We have only one lock's worth of luck. Let us call it a night.",
+      "pausesTimer": true,
+      "mood": "cheerful",
+      "audioFile": "assets/audio/voice/dialogue_30.mp3"
+    }
+  ],
+  "items": {
+    "mirror": {
+      "name": "Hand Mirror",
+      "material": "Silvered glass, brass frame",
+      "text": "A small brass hand mirror. It was left on the table beside the visitor book.",
+      "icon": "mirror",
+      "usable": true
+    },
+    "brasskey": {
+      "name": "Brass Key",
+      "material": "Brass",
+      "text": "A heavy brass key with an open eye engraved in its bow. It opens the Chapter Room.",
+      "icon": "key"
+    }
+  },
+  "truths": [
+    "The Maestro wrote in mirror-script. A hidden message needs the right way of looking.",
+    "Lumen, the old word for light, opens what the Brotherhood sealed.",
+    "The Brotherhood's order, left to right: Rose, Eye, Key, Chalice.",
+    "A secret is guarded and shared wisely, never hoarded."
+  ],
+  "puzzles": {
+    "r1": {
+      "help": "Which painting does the message point to? Tap one, then confirm.",
+      "cols": 2,
+      "options": [
+        {
+          "label": "The Lute Player",
+          "text": "A young man tunes his lute, eyes on the strings."
+        },
+        {
+          "label": "Girl with a Lantern",
+          "text": "A girl holds a lantern and stares out at the viewer."
+        },
+        {
+          "label": "Lady and the Flame",
+          "text": "A woman gazes at a candle flame."
+        },
+        {
+          "label": "The Sleeping Scholar",
+          "text": "A scholar dozes over his book, eyes closed."
+        }
+      ],
+      "answer": 2,
+      "wrong": {
+        "0": "His eyes are on the lute, and there is no flame.",
+        "1": "There is a flame, but her eyes meet yours, not the flame.",
+        "3": "His eyes are closed. He cannot watch anything."
+      }
+    },
+    "r2": {
+      "help": "Tap a wheel to turn it. Set the word for light, then confirm.",
+      "length": 5,
+      "symbols": [
+        "L",
+        "U",
+        "M",
+        "E",
+        "N",
+        "A",
+        "S",
+        "O",
+        "R",
+        "T"
+      ],
+      "answer": [
+        "L",
+        "U",
+        "M",
+        "E",
+        "N"
+      ],
+      "wrongText": "The cryptex does not open."
+    },
+    "r3": {
+      "help": "Tap the symbols in order, left to right across the fresco.",
+      "items": [
+        {
+          "id": "chalice",
+          "label": "Chalice",
+          "glyph": "chalice"
+        },
+        {
+          "id": "key",
+          "label": "Key",
+          "glyph": "key"
+        },
+        {
+          "id": "rose",
+          "label": "Rose",
+          "glyph": "rose"
+        },
+        {
+          "id": "eye",
+          "label": "Eye",
+          "glyph": "eye"
+        }
+      ],
+      "answer": [
+        "rose",
+        "eye",
+        "key",
+        "chalice"
+      ],
+      "wrongText": "That is not the order the plaques describe."
+    },
+    "r4a": {
+      "help": "Tap an empty tile to cycle its symbol. Every symbol appears once in each row and column.",
+      "symbols": [
+        "rose",
+        "eye",
+        "key",
+        "chalice"
+      ],
+      "answer": [
+        [
+          "rose",
+          "eye",
+          "key",
+          "chalice"
+        ],
+        [
+          "key",
+          "chalice",
+          "rose",
+          "eye"
+        ],
+        [
+          "chalice",
+          "rose",
+          "eye",
+          "key"
+        ],
+        [
+          "eye",
+          "key",
+          "chalice",
+          "rose"
+        ]
+      ],
+      "givens": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "wrongText": "The tiles stay dark."
+    },
+    "r4b": {
+      "help": "The casket is open. What will you do with the secret?",
+      "cols": 1,
+      "noPenalty": true,
+      "options": [
+        {
+          "label": "Keep it all for myself"
+        },
+        {
+          "label": "Seal the vault and forget it"
+        },
+        {
+          "label": "Guard it and share it wisely"
+        },
+        {
+          "label": "Sell it to the highest bidder"
+        }
+      ],
+      "answer": 2,
+      "wrong": {
+        "0": "A secret kept by one is a tomb, the Maestro wrote.",
+        "1": "Forgotten, it helps nobody. Remember his creed.",
+        "3": "The Maestro would never trade it for gold."
+      }
+    }
+  },
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Moonlit Gallery",
+      "accent": "#D9A441",
+      "pano": "assets/rooms/room1.webp",
+      "objective": "Read the curator's note, then decode the red scrawl on the glass.",
+      "objectiveReady": "The message names a painting. Choose it.",
+      "enter": [
+        "r1.enter.1"
+      ],
+      "right": [
+        "r1.right.1"
+      ],
+      "discuss": "r1.discuss",
+      "hint": "r1.hint",
+      "wrong": [
+        "r1.wrong.1",
+        "r1.wrong.2"
+      ],
+      "reward": {
+        "truth": 0,
+        "toast": "A hidden door opens behind the portrait."
+      },
+      "hotspots": [
+        {
+          "id": "r1.note",
+          "kind": "LEARN",
+          "label": "Visitor Book",
+          "yaw": 136,
+          "pitch": -40,
+          "title": "The Curator's Note",
+          "text": "\"To whoever follows me: read me as the Maestro wrote. His hand ran backwards, and so does his warning. The glass panel will speak to you, if you have the right way of looking.\""
+        },
+        {
+          "id": "r1.mirror",
+          "kind": "FIND",
+          "label": "Hand Mirror",
+          "yaw": 115,
+          "pitch": -22,
+          "item": "mirror",
+          "line": "r1.find"
+        },
+        {
+          "id": "r1.glass",
+          "kind": "USE",
+          "label": "Glass Panel",
+          "yaw": 62,
+          "pitch": 16,
+          "needs": "mirror",
+          "line": "r1.use"
+        },
+        {
+          "id": "r1.decoded",
+          "kind": "LEARN",
+          "label": "The Red Scrawl",
+          "yaw": 64,
+          "pitch": -12,
+          "title": "The Message, Decoded",
+          "text": "Held to the mirror, the red scrawl reads: \"Seek the portrait where the watcher's eyes meet the flame.\"",
+          "after": [
+            "r1.glass"
+          ]
+        },
+        {
+          "id": "r1.panel",
+          "kind": "PANEL",
+          "label": "The Portraits",
+          "yaw": 98,
+          "pitch": 20,
+          "panel": "choice",
+          "puzzle": "r1",
+          "after": [
+            "r1.decoded"
+          ]
+        }
+      ],
+      "exit": {
+        "yaw": 1,
+        "pitch": -1,
+        "label": "Go through the hidden door"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Hidden Studio",
+      "accent": "#D9A441",
+      "pano": "assets/rooms/room2.webp",
+      "objective": "Study the lantern sketch and the notebook page, then open the cryptex.",
+      "objectiveReady": "You know the word. Set the cryptex.",
+      "enter": [
+        "r2.enter.1"
+      ],
+      "right": [
+        "r2.right.1"
+      ],
+      "discuss": "r2.discuss",
+      "hint": "r2.hint",
+      "wrong": [
+        "r2.wrong.1",
+        "r2.wrong.2"
+      ],
+      "reward": {
+        "truth": 1,
+        "item": "brasskey",
+        "toast": "The cryptex clicks open."
+      },
+      "hotspots": [
+        {
+          "id": "r2.sketch",
+          "kind": "INSPECT",
+          "label": "Lantern Sketch",
+          "yaw": 14,
+          "pitch": 14,
+          "title": "Lantern Sketch",
+          "views": [
+            "<svg viewBox=\"0 0 240 150\" width=\"100%\" style=\"display:block;max-height:200px;color:#6b5420\"><path d=\"M120 20c-14 0-22 10-22 24 0 10 6 18 12 22v10h20V66c6-4 12-12 12-22 0-14-8-24-22-24z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"/><path d=\"M110 76h20M112 84h16M120 4v10M96 12l6 8M144 12l-6 8M90 44h-8M150 44h8\" stroke=\"currentColor\" stroke-width=\"3\" fill=\"none\"/><path d=\"M104 110h32\" stroke=\"currentColor\" stroke-width=\"3\"/></svg>",
+            "<div style=\"padding:34px;text-align:center;font:700 40px Cinzel,serif;letter-spacing:.35em;color:#6b5420\">E L M U N</div>"
+          ],
+          "secret": "Lumen, the old word for light"
+        },
+        {
+          "id": "r2.note",
+          "kind": "LEARN",
+          "label": "Drafting Table",
+          "yaw": 126,
+          "pitch": -3,
+          "title": "The Maestro's Page",
+          "text": "\"My cryptex answers to the word for light, in the old tongue. Remember my creed: a secret kept by one is a tomb; a secret shared by all is a rumour. Guard it, and share it wisely.\""
+        },
+        {
+          "id": "r2.panel",
+          "kind": "PANEL",
+          "label": "Brass Cryptex",
+          "yaw": -53,
+          "pitch": -15,
+          "panel": "code",
+          "puzzle": "r2",
+          "after": [
+            "r2.sketch",
+            "r2.note"
+          ]
+        }
+      ],
+      "exit": {
+        "yaw": -168,
+        "pitch": 5,
+        "label": "Unlock the chapter door"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Chapter Room",
+      "accent": "#D9A441",
+      "pano": "assets/rooms/room3.webp",
+      "objective": "Read the fresco and the four plaques below it.",
+      "objectiveReady": "Put the four symbols in order.",
+      "enter": [
+        "r3.enter.1"
+      ],
+      "right": [
+        "r3.right.1"
+      ],
+      "discuss": "r3.discuss",
+      "hint": "r3.hint",
+      "wrong": [
+        "r3.wrong.1",
+        "r3.wrong.2"
+      ],
+      "reward": {
+        "truth": 2,
+        "toast": "The fresco slides open."
+      },
+      "hotspots": [
+        {
+          "id": "r3.fresco",
+          "kind": "INSPECT",
+          "label": "Fresco",
+          "yaw": -1,
+          "pitch": 19,
+          "title": "The Fresco",
+          "views": [
+            "<div style=\"padding:26px;text-align:center;font-size:19px;line-height:1.4\">Four hooded figures sit side by side, each holding a sacred symbol. But a forger has shuffled them: this is not the order of the Brotherhood.</div>",
+            "<div style=\"padding:26px;text-align:center;font-size:19px;line-height:1.4\">Four plaques below the fresco still carry the Brotherhood's own words. Read them all.</div>"
+          ],
+          "secret": "Left to right, as seated at the Maestro's table."
+        },
+        {
+          "id": "r3.p1",
+          "kind": "LEARN",
+          "label": "Plaque",
+          "yaw": -66,
+          "pitch": -13,
+          "title": "Plaque of the Rose",
+          "text": "The Rose sits left of the Chalice."
+        },
+        {
+          "id": "r3.p2",
+          "kind": "LEARN",
+          "label": "Plaque",
+          "yaw": -23,
+          "pitch": -13,
+          "title": "Plaque of the Chalice",
+          "text": "The Chalice sits at an end."
+        },
+        {
+          "id": "r3.p3",
+          "kind": "LEARN",
+          "label": "Plaque",
+          "yaw": 23,
+          "pitch": -13,
+          "title": "Plaque of the Key",
+          "text": "The Eye sits directly left of the Key."
+        },
+        {
+          "id": "r3.p4",
+          "kind": "LEARN",
+          "label": "Plaque",
+          "yaw": 66,
+          "pitch": -13,
+          "title": "Plaque of the Eye",
+          "text": "The Eye is not at either end."
+        },
+        {
+          "id": "r3.panel",
+          "kind": "PANEL",
+          "label": "The Four Seats",
+          "yaw": -1,
+          "pitch": -37,
+          "panel": "order",
+          "puzzle": "r3",
+          "after": [
+            "r3.fresco",
+            "r3.p1",
+            "r3.p2",
+            "r3.p3",
+            "r3.p4"
+          ]
+        }
+      ],
+      "exit": {
+        "yaw": 135,
+        "pitch": 12,
+        "label": "Descend to the vault"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Vault",
+      "accent": "#D9A441",
+      "pano": "assets/rooms/room4.webp",
+      "objective": "Read the banners, then solve the engraved floor.",
+      "objectiveReady": "The floor is solved. Open the casket.",
+      "enter": [
+        "r4.enter.1"
+      ],
+      "right": [
+        "r4.right.1"
+      ],
+      "discuss": "r4.discuss",
+      "hint": "r4.hint",
+      "wrong": [
+        "r4.wrong.1",
+        "r4.wrong.2"
+      ],
+      "reward": {
+        "truth": 3
+      },
+      "hotspots": [
+        {
+          "id": "r4.c1",
+          "kind": "LEARN",
+          "label": "Rose Banner",
+          "yaw": -100,
+          "pitch": 23,
+          "title": "Floor Clue I",
+          "text": "Row one of the floor must follow the fresco's order. The Brotherhood carved it first, so the rest can be known."
+        },
+        {
+          "id": "r4.c2",
+          "kind": "LEARN",
+          "label": "Chalice Banner",
+          "yaw": -47,
+          "pitch": 23,
+          "title": "Floor Clue II",
+          "text": "No symbol may stand twice in the same row or the same column. The Maestro's oldest rule."
+        },
+        {
+          "id": "r4.c3",
+          "kind": "LEARN",
+          "label": "Key Banner",
+          "yaw": 47,
+          "pitch": 23,
+          "title": "Floor Clue III",
+          "text": "Start where a row or column has only one empty tile. Each solved tile makes the next one easier."
+        },
+        {
+          "id": "r4.p1",
+          "kind": "PANEL",
+          "label": "The Symbol Floor",
+          "yaw": -1,
+          "pitch": -32,
+          "panel": "square",
+          "puzzle": "r4a",
+          "after": [
+            "r4.c1",
+            "r4.c2",
+            "r4.c3"
+          ]
+        },
+        {
+          "id": "r4.p2",
+          "kind": "PANEL",
+          "label": "The Bronze Casket",
+          "yaw": -1,
+          "pitch": 13,
+          "panel": "choice",
+          "puzzle": "r4b",
+          "after": [
+            "r4.p1"
+          ]
+        }
+      ]
+    }
+  ],
+  "cinematic": [
+    "The casket opens without a sound. Inside lies no gold, only a map on old parchment.",
+    {
+      "say": [
+        "end.1",
+        "end.2"
+      ]
+    },
+    "At the bottom, in the Maestro's own hand: \"The first vault is only the door. The second holds what the Brotherhood truly guarded.\""
+  ],
+  "endScreens": {
+    "win": {
+      "title": "The Secret Is Safe",
+      "text": "You solved the four symbols and chose wisely. Maestro Lorenzo Vantelli's map points to a second vault, and the story is not over.",
+      "button": "Play Again"
+    },
+    "timeup": {
+      "title": "The Lock Closes",
+      "text": "The night-lock sealed the vault again. The Brotherhood's secret waits another hundred years.",
+      "button": "Try Again"
+    }
+  },
+  "assets": {
+    "title": "assets/sheets/title_key_art.jpg",
+    "briefing": "assets/sheets/briefing_bg.jpg",
+    "music": "assets/audio/bgm.ogg",
+    "cut": [
+      "hero1_calm",
+      "hero1_cheerful",
+      "hero1_worried",
+      "hero2_calm",
+      "hero2_determined",
+      "hero2_surprised",
+      "mirror",
+      "brasskey",
+      "icon_score",
+      "icon_hint",
+      "icon_casebook",
+      "icon_pause"
+    ],
+    "sheets": {
+      "heroes_sheet.png": "hero1_calm hero1_cheerful hero1_worried hero2_calm hero2_determined hero2_surprised",
+      "items_sheet.png": "mirror brasskey",
+      "hud_icons_sheet.png": "icon_score icon_hint icon_casebook icon_pause"
+    },
+    "sizes": {
+      "title_key_art": "1024x1792",
+      "heroes_sheet": "1792x1024"
+    }
+  },
+  "iconSvg": {
+    "mirror": "<circle cx=\"24\" cy=\"18\" r=\"12\" fill=\"#cfd8dc\" stroke=\"#8a6c22\" stroke-width=\"3\"/><path d=\"M24 30v14M20 44h8\" stroke=\"#b8902c\" stroke-width=\"4\" stroke-linecap=\"round\"/>"
+  },
+  "glyphs": {
+    "rose": "<path d=\"M24 8c-6 0-10 4-10 9s4 8 10 8 10-3 10-8-4-9-10-9z\"/><path d=\"M24 13c-3 0-5 2-5 4s2 4 5 4 5-2 5-4\"/><path d=\"M24 25v17M24 34c-4-1-7-3-8-6M24 37c4-1 7-3 8-6\"/>",
+    "chalice": "<path d=\"M12 8h24c0 10-4 16-12 16S12 18 12 8z\"/><path d=\"M24 24v13M16 41h16M18 41c0-3 3-4 6-4s6 1 6 4\"/>",
+    "key": "<circle cx=\"17\" cy=\"17\" r=\"9\"/><circle cx=\"17\" cy=\"17\" r=\"3\"/><path d=\"M24 24l17 17M33 33l5-5M38 38l4-4\"/>",
+    "eye": "<path d=\"M4 24c6-10 14-14 20-14s14 4 20 14c-6 10-14 14-20 14S10 34 4 24z\"/><circle cx=\"24\" cy=\"24\" r=\"6\"/><path d=\"M24 3v4M10 8l2 3M38 8l-2 3\"/>"
+  }
+}
